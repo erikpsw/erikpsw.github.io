@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/psw.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="解析几何椭圆第一定义  \frac{x^2}{a^2} + \frac{y^2}{b^2} &#x3D; 1(c^2 &#x3D; a^2 - {b^2} ) e &#x3D;\frac ca&#x3D; \sqrt {1 - \frac{b^2}{a^2}  }  \in (0,1)第二定义  准线\\\left\{ \begin{gathered}   {l_1} &#x3D; \frac{a^2}{c} &gt; a \hfill \\   {l">
+<meta property="og:type" content="article">
+<meta property="og:title" content="高中&#x2F;数学&#x2F;解析几何">
+<meta property="og:url" content="http://yoursite.com/2021/05/22/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/index.html">
+<meta property="og:site_name" content="BLOG">
+<meta property="og:description" content="解析几何椭圆第一定义  \frac{x^2}{a^2} + \frac{y^2}{b^2} &#x3D; 1(c^2 &#x3D; a^2 - {b^2} ) e &#x3D;\frac ca&#x3D; \sqrt {1 - \frac{b^2}{a^2}  }  \in (0,1)第二定义  准线\\\left\{ \begin{gathered}   {l_1} &#x3D; \frac{a^2}{c} &gt; a \hfill \\   {l">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2021/05/22/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20210502193634623.png">
+<meta property="og:image" content="http://yoursite.com/2021/05/22/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20210502194228256.png">
+<meta property="og:image" content="http://yoursite.com/2021/05/22/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20210502204527908.png">
+<meta property="og:image" content="http://yoursite.com/2021/05/22/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20210502210517126.png">
+<meta property="og:image" content="http://yoursite.com/2021/05/22/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20210502211159686.png">
+<meta property="og:image" content="http://yoursite.com/2021/05/22/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20210502212920546.png">
+<meta property="og:image" content="http://yoursite.com/2021/05/22/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20210502213816508.png">
+<meta property="og:image" content="http://yoursite.com/2021/05/22/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20210503130126114.png">
+<meta property="og:image" content="http://yoursite.com/2021/05/22/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20210503130404060.png">
+<meta property="og:image" content="http://yoursite.com/2021/05/22/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20210503131123023.png">
+<meta property="og:image" content="http://yoursite.com/2021/05/22/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20210503133216240.png">
+<meta property="og:image" content="http://yoursite.com/2021/05/22/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20210503133825973.png">
+<meta property="og:image" content="http://yoursite.com/2021/05/22/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20210503134706118.png">
+<meta property="og:image" content="http://yoursite.com/2021/05/22/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20210503135208783.png">
+<meta property="og:image" content="http://yoursite.com/2021/05/22/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20210503141125198.png">
+<meta property="og:image" content="http://yoursite.com/2021/05/22/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20210503182403952.png">
+<meta property="article:published_time" content="2021-05-22T14:54:12.412Z">
+<meta property="article:modified_time" content="2022-06-08T12:23:37.381Z">
+<meta property="article:author" content="Shiwei Pan">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2021/05/22/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20210502193634623.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2021/05/22/高中/数学/解析几何/"/>
+
+
+
+
+
+  <title>高中/数学/解析几何 | BLOG</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+<script src="/live2d-widget/autoload.js"></script>
+
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">BLOG</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-mine">
+          <a href="/mine/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Mine
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-new">
+          <a href="/new/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            menu.new
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/05/22/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">高中/数学/解析几何</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-05-22T22:54:12+08:00">
+                2021-05-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="解析几何"><a href="#解析几何" class="headerlink" title="解析几何"></a>解析几何</h1><h2 id="椭圆"><a href="#椭圆" class="headerlink" title="椭圆"></a>椭圆</h2><h3 id="第一定义"><a href="#第一定义" class="headerlink" title="第一定义"></a>第一定义</h3><p><img src="/2021/05/22/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20210502193634623.png" alt="image-20210502193634623"></p>
+<script type="math/tex; mode=display">
+\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1(c^2 = a^2 - {b^2} )</script><script type="math/tex; mode=display">
+e =\frac ca= \sqrt {1 - \frac{b^2}{a^2}  }  \in (0,1)</script><h3 id="第二定义"><a href="#第二定义" class="headerlink" title="第二定义"></a>第二定义</h3><p><img src="/2021/05/22/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20210502194228256.png" alt="image-20210502194228256"></p>
+<script type="math/tex; mode=display">
+准线\\\left\{ \begin{gathered}
+  {l_1} = \frac{a^2}{c} > a \hfill \\
+  {l_2} =  - \frac{a^2}{c} <  - a \hfill \\ 
+\end{gathered}  \right.</script><script type="math/tex; mode=display">
+\left\{ \begin{gathered}
+  \left| {P{F_1}  } \right| = a - e \cdot {x_P} \hfill \\
+  \left| {P{F_2}  } \right| = a + e \cdot {x_P} \hfill \\ 
+\end{gathered}  \right.</script><script type="math/tex; mode=display">
+通径H=\frac{2b^2}{a^2}</script><p><img src="/2021/05/22/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20210502204527908.png" alt="image-20210502204527908"></p>
+<script type="math/tex; mode=display">
+S_{\Delta P{F_1}{F_2}  } = {b^2} \cdot \tan \frac{\ang F_1PF_2}{2}</script><script type="math/tex; mode=display">
+\Delta P{F_1}{F_2}的外切圆B切x轴于顶点A</script><h3 id="第三定义"><a href="#第三定义" class="headerlink" title="第三定义"></a>第三定义</h3><script type="math/tex; mode=display">
+k_{PF_1} \cdot k_{PF_2} =  - \frac{b^2}{a^2}</script><p><img src="/2021/05/22/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20210502210517126.png" alt="image-20210502210517126"></p>
+<script type="math/tex; mode=display">
+中点弦\\
+k_{OM} \cdot k_{PB}=k_{PA} \cdot k_{PB} =  - \frac{b^2}{a^2}</script><p><img src="/2021/05/22/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20210502211159686.png" alt="image-20210502211159686"></p>
+<script type="math/tex; mode=display">
+e\cos \theta  = \left| \frac{1 - \lambda }{1 + \lambda } \right|,(\lambda  = \frac{AF_1}{BF_1})</script><h3 id="极坐标"><a href="#极坐标" class="headerlink" title="极坐标"></a>极坐标</h3><p><img src="/2021/05/22/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20210502212920546.png" alt="image-20210502212920546"></p>
+<script type="math/tex; mode=display">
+\rho  = \frac{ep}{1 - e\cos \theta },(焦准距p =  \frac{b^2}{c})</script><script type="math/tex; mode=display">
+L =  \left| \frac{H}{ {1 - {e^2}\cos ^2}\theta } \right|,(H=\frac{2b^2}{a}=2ep)</script><h3 id="参数方程"><a href="#参数方程" class="headerlink" title="参数方程"></a>参数方程</h3><p><img src="/2021/05/22/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20210502213816508.png" alt="image-20210502213816508"></p>
+<script type="math/tex; mode=display">
+\left\{ \begin{gathered}
+  x = a\cos t \hfill \\
+  y = b\sin t \hfill \\ 
+\end{gathered}  \right.</script><h2 id="双曲线"><a href="#双曲线" class="headerlink" title="双曲线"></a>双曲线</h2><h3 id="第一定义-1"><a href="#第一定义-1" class="headerlink" title="第一定义"></a>第一定义</h3><p><img src="/2021/05/22/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20210503130126114.png" alt="image-20210503130126114"></p>
+<script type="math/tex; mode=display">
+\frac{ {  {x^2} }  } { { {a^2 } } }- \frac{ { {y^2} } }{ { {b^2} } } = 1(c = \sqrt { {a^2} + {b^2 } } )</script><script type="math/tex; mode=display">
+\left| \left| {P{F_2}  } \right| - \left| {P{F_1}  } \right| \right| = 2a \Leftrightarrow \left| {P{F_2}  } \right| - \left| {P{F_1}  } \right| =  \pm 2a</script><h3 id="第二定义-1"><a href="#第二定义-1" class="headerlink" title="第二定义"></a>第二定义</h3><p><img src="/2021/05/22/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20210503130404060.png" alt="image-20210503130404060"></p>
+<script type="math/tex; mode=display">
+e = \frac{c}{a} = \sqrt {1 + \frac{b^2}{a^2} }   > 1</script><script type="math/tex; mode=display">
+\left\{ \begin{gathered}
+  \left| {P{F_1}  } \right| = e{x_P} - a \hfill \\
+  \left| {P{F_2}  } \right| = e{x_P} + a \hfill \\ 
+\end{gathered}  \right.</script><h3 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h3><p><img src="/2021/05/22/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20210503131123023.png" alt="image-20210503131123023"></p>
+<script type="math/tex; mode=display">
+渐近线\\
+k =  \pm \frac{b}{a},O{E_1} \bot {E_1}{F_1}</script><script type="math/tex; mode=display">
+O{E_1} = a,{E_1}{F_1} = b</script><p><img src="/2021/05/22/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20210503133216240.png" alt="image-20210503133216240"></p>
+<script type="math/tex; mode=display">
+{b^2} = (c - a)(c + a) = {c^2} - {a^2}</script><p><img src="/2021/05/22/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20210503133825973.png" alt="image-20210503133825973"></p>
+<script type="math/tex; mode=display">
+\Delta P{F_1}{F_2}的内切圆M切x轴于顶点A</script><script type="math/tex; mode=display">
+S_\Delta P{F_1}{F_2}    = \frac{  {b^2}  }{ \tan \frac{ \angle {F_1}P{F_2}  }{2} }</script><p><img src="/2021/05/22/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20210503134706118.png" alt="image-20210503134706118"></p>
+<script type="math/tex; mode=display">
+|P\overline P | = |Q\overline Q |,{k_{OM} } \cdot {k_{PQ } } = \frac{ { {b^2} } }{ { {a^2} } }\\\left\{ {\begin{array}{*{20}{l} }
+  {x = \frac{a}{ {\cos t} } = a\sec t,} \\ 
+  {y =  \pm b\tan t} 
+\end{array} } \right.</script><h2 id="抛物线"><a href="#抛物线" class="headerlink" title="抛物线"></a>抛物线</h2><p><img src="/2021/05/22/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20210503135208783.png" alt="image-20210503135208783"></p>
+<script type="math/tex; mode=display">
+\left\{ {\begin{array}{*{20}{l} }
+  { {y^2} = 2px,(x为对称轴)} \\ 
+  { {x^2} = 2py,(y为对称轴)} 
+\end{array}  } \right.</script><script type="math/tex; mode=display">
+|PF|=|Pl|</script><h3 id="焦点弦"><a href="#焦点弦" class="headerlink" title="焦点弦"></a>焦点弦</h3><p><img src="/2021/05/22/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20210503141125198.png" alt="image-20210503141125198"></p>
+<script type="math/tex; mode=display">
+\left\{ \begin{gathered}
+  \left| {FP} \right| = \frac{p}{ {1 - \cos \theta } } \hfill \\
+  \left| {FQ} \right| = \frac{p}{ {1 + \cos \theta } } \hfill \\ 
+\end{gathered}  \right. \Rightarrow \left| {PQ} \right| = \frac{ {2p}  }{ { { {\sin }^2}\theta } }</script><script type="math/tex; mode=display">
+{S_{\Delta PFQ}  } = \frac{ { {p^2}  }  }{ {2\sin \theta } }</script><script type="math/tex; mode=display">
+\left\{ \begin{gathered}
+  {x_p} \cdot {x_Q} = \frac{ { {p^2}  }  }{4} \hfill \\
+  {y_P} \cdot {y_Q} =  - {p^2} \hfill \\ 
+\end{gathered}  \right.</script><script type="math/tex; mode=display">
+\frac{1}{ {\left| {FP} \right|} } + \frac{1}{ {\left| {FQ} \right|} } = \frac{2}{p}</script><script type="math/tex; mode=display">
+{k_{PQ}  } \cdot {y_M} = p</script><p><img src="/2021/05/22/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20210503182403952.png" alt="image-20210503182403952"></p>
+<script type="math/tex; mode=display">
+\begin{gathered}
+  MN = NP = NQ \hfill \\
+  AM = AN \hfill \\
+  \left\{ \begin{gathered}
+  \left| {PF} \right| = \left| {AP} \right| = {x_P} + \frac{p}{2} \hfill \\
+  \left| {QF} \right| = \left| {BQ} \right| = {x_Q} + \frac{p}{2} \hfill \\ 
+\end{gathered}  \right. \hfill \\ 
+\end{gathered}</script><script type="math/tex; mode=display">
+MP,MQ为切线</script><h3 id="参数方程-1"><a href="#参数方程-1" class="headerlink" title="参数方程"></a>参数方程</h3><script type="math/tex; mode=display">
+\left\{ \begin{gathered}
+  x = 2p{t^2} \hfill \\
+  y = 2pt \hfill \\ 
+\end{gathered}  \right.</script><h2 id="切线"><a href="#切线" class="headerlink" title="切线"></a>切线</h2><script type="math/tex; mode=display">
+\frac {x^2} {a^2}\pm \frac {y^2} {b^2}=1\\
+\frac{ {2{x_0}  }  }{ { {a^2}  }  } + \frac{ {2{y_0}  }  }{ { {b^2}  }  } \cdot \frac{ { {\text{d}  }y}  }{ { {\text{d}  }x}  } = 0 \Rightarrow \frac{ { {\text{d}  }y}  }{ { {\text{d}  }x}  } =  - \frac{ { {b^2}{x_0}  }  }{ { {a^2}{y_0}  }  }</script><p>切线方程为</p>
+<script type="math/tex; mode=display">
+\frac{  {x_0}x }{ {a^2}    } + \frac{  {y_0}y  }{  {b^2}    } = 1</script><script type="math/tex; mode=display">
+y=kx\pm\sqrt{a^2k^2+b^2}</script><p>抛物线</p>
+<script type="math/tex; mode=display">
+\begin{gathered}
+  {y^2} = 2px \hfill \\
+  2{y_0} \cdot \frac{ { {\text{d}  }y}  }{ { {\text{d}  }x}  } = 2p \Rightarrow \frac{ { {\text{d}  }y}  }{ { {\text{d}  }x}  } = \frac{p}{ { {y_0}  }  } \hfill \\ 
+\end{gathered}</script><p>双曲线</p>
+<script type="math/tex; mode=display">
+\frac{  {x_0}x }{ {a^2}    } - \frac{  {y_0}y  }{  {b^2}    } = 1</script><script type="math/tex; mode=display">
+k=\frac{ { {b^2}{x_0}  }  }{ { {a^2}{y_0}  }  }\Rightarrow x_0=\frac{ak}{\sqrt{k^2-1}}</script><script type="math/tex; mode=display">
+y=kx\pm\sqrt{a^2k^2-b^2}</script><script type="math/tex; mode=display">
+\frac{  {x_0}x }{ {a^2}    } \pm \frac{  {y_0}y  }{  {b^2}    } = 1\\
+y=kx\pm\sqrt{a^2k^2\pm b^2}</script><p>椭圆切线</p>
+<script type="math/tex; mode=display">
+y=kx\pm\sqrt{a^2k^2+ b^2}</script><p>双曲线切线</p>
+<script type="math/tex; mode=display">
+y=kx\pm\sqrt{a^2k^2- b^2}\textcolor{red} {(|k| > \frac{b}{a} )}</script><p>不包括斜率不存在时</p>
+<p>$P({x_0},{y_0})$在切线上，解出$k$</p>
+<script type="math/tex; mode=display">
+{y_0} - k{x_0} =  \pm \sqrt {a^2k^2 - b^2}\\
+({x_0}^2 - {a^2}){k^2} - 2{x_0}{y_0}k + ({y_0}^2 - {b^2}) = 0</script><p>若$k^2$前系数为$0$，则为一次方程，有一条斜率存在的切线，还有一条不存在的切线</p>
+<p>若$k^2$前的系数不为$0$，则该方程是一个关于$k$的一元二次方程，可能有$0$个，$1$个，$2$个解</p>
+<script type="math/tex; mode=display">
+\begin{array}{l}
+\Delta &= 4x_0y_0 - 4(x_0^2 - a^2)(y_0^2 + b^2)\\
+&=4{a^2}{b^2}\left[\textcolor{red}{ 1 - \left(\frac{x_0^2}{a^2} - \frac{y_0^2}{b^2} \right)}\right]
+\end{array}</script><p>若$\frac{x_0^2}{a^2} - \frac{y_0^2}{b^2}=0$，有一根为$k=\frac{b}{a}/ - \frac{b}{a}$，故舍去</p>
+<p>​                                                                                                      </p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/05/22/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E7%BB%9F%E8%AE%A1/" rel="next" title="高中/数学/统计">
+                <i class="fa fa-chevron-left"></i> 高中/数学/统计
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2021/05/22/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E8%B6%A3%E9%A2%98/" rel="prev" title="高中/数学/趣题">
+                高中/数学/趣题 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/mount.png"
+               alt="Shiwei Pan" />
+          <p class="site-author-name" itemprop="name">Shiwei Pan</p>
+           
+              <p class="site-description motion-element" itemprop="description">Open your eyes,look up to the skies</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">41</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/erikpsw" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/pan-shi-wei-91" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                    
+                      知乎
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#解析几何"><span class="nav-number">1.</span> <span class="nav-text">解析几何</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#椭圆"><span class="nav-number">1.1.</span> <span class="nav-text">椭圆</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一定义"><span class="nav-number">1.1.1.</span> <span class="nav-text">第一定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二定义"><span class="nav-number">1.1.2.</span> <span class="nav-text">第二定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三定义"><span class="nav-number">1.1.3.</span> <span class="nav-text">第三定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#极坐标"><span class="nav-number">1.1.4.</span> <span class="nav-text">极坐标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参数方程"><span class="nav-number">1.1.5.</span> <span class="nav-text">参数方程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#双曲线"><span class="nav-number">1.2.</span> <span class="nav-text">双曲线</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一定义-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">第一定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二定义-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">第二定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性质"><span class="nav-number">1.2.3.</span> <span class="nav-text">性质</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#抛物线"><span class="nav-number">1.3.</span> <span class="nav-text">抛物线</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#焦点弦"><span class="nav-number">1.3.1.</span> <span class="nav-text">焦点弦</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参数方程-1"><span class="nav-number">1.3.2.</span> <span class="nav-text">参数方程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#切线"><span class="nav-number">1.4.</span> <span class="nav-text">切线</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2020 - 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Shiwei Pan</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>

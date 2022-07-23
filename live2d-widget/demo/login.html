@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/psw.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="看板娘登陆平台     html, body { 	height: 100%; } body { 	display: flex; 	align-items: center; 	justify-content: center; 	padding-top: 40px; 	padding-bottom: 40px; 	background-color: #f5f5f5; } .form-sig">
+<meta property="og:type" content="website">
+<meta property="og:title" content="BLOG">
+<meta property="og:url" content="http://yoursite.com/live2d-widget/demo/login.html">
+<meta property="og:site_name" content="BLOG">
+<meta property="og:description" content="看板娘登陆平台     html, body { 	height: 100%; } body { 	display: flex; 	align-items: center; 	justify-content: center; 	padding-top: 40px; 	padding-bottom: 40px; 	background-color: #f5f5f5; } .form-sig">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/live2d-widget/assets/screenshot-1.png">
+<meta property="article:published_time" content="2021-05-16T04:50:51.994Z">
+<meta property="article:modified_time" content="2021-05-16T04:50:51.994Z">
+<meta property="article:author" content="Shiwei Pan">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/live2d-widget/assets/screenshot-1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/live2d-widget/demo/login.html"/>
+
+
+
+
+
+  <title> | BLOG</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+<script src="/live2d-widget/autoload.js"></script>
+
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">BLOG</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-mine">
+          <a href="/mine/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Mine
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-new">
+          <a href="/new/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            menu.new
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+    
+    
+    <div class="post-block page">
+      <header class="post-header">
+
+	<h1 class="post-title" itemprop="name headline"></h1>
+
+
+
+</header>
+
+      
+      
+      
+      <div class="post-body">
+        
+        
+          <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>看板娘登陆平台</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+<script src="../live2d.min.js"></script>
+<style>
+html, body {
+	height: 100%;
+}
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background-color: #f5f5f5;
+}
+.form-signin {
+	width: 100%;
+	max-width: 330px;
+	padding: 15px;
+	margin: 0 auto;
+}
+.form-signin .checkbox {
+	font-weight: 400;
+}
+.form-signin .form-control {
+	position: relative;
+	box-sizing: border-box;
+	height: auto;
+	padding: 10px;
+	font-size: 16px;
+}
+.form-signin .form-control:focus {
+	z-index: 2;
+}
+.form-signin input[type=text] {
+	margin-bottom: -1px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+.form-signin input[type=password] {
+	margin-bottom: 10px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+#stage {
+	position: relative;
+}
+#stage img {
+	width: 100%;
+	margin-bottom: 20px;
+	border-radius: 20px;
+}
+#stage a {
+	position: absolute;
+	width: 2em;
+	height: 2em;
+	border-radius: 50%;
+}
+#inner {
+	position: relative;
+	background-color: #999;
+	clip-path: circle(120px at center);
+}
+#cover {
+	position: absolute;
+	background-color: #CB3837;
+	width: 100%;
+	height: 100%;
+	bottom: 10%;
+	transition: all 1s;
+	box-shadow: 0 0 0 5px rgba(0, 0, 0, .1);
+}
+#text {
+	position: absolute;
+	bottom: 30%;
+	font-size: 2em;
+	left: 50%;
+	transform: translateX(-50%);
+	opacity: 0.4;
+	font-weight: bold;
+}
+#detail {
+	position: absolute;
+	background: rgba(255, 255, 255, .1);
+	width: 100%;
+	height: 10px;
+	bottom: 0;
+}
+#handle {
+	position: absolute;
+	background: #ccc;
+	bottom: -2px;
+	box-shadow: 0 1px 0 1px rgba(0, 0, 0, .1);
+	height: 8px;
+	left: 50%;
+	margin-left: -15px;
+	width: 30px;
+	cursor: pointer;
+}
+#info {
+	left: 40px;
+	bottom: 20px;
+}
+#refresh {
+	right: 40px;
+	bottom: 20px;
+}
+#live2d {
+	cursor: grab;
+	height: 300px;
+	width: 300px;
+}
+#live2d:active {
+	cursor: grabbing;
+}
+</style>
+<meta name="generator" content="Hexo 4.2.1"></head>
+<body class="text-center">
+<form class="form-signin" action="login.php" method="post">
+	<div id="stage">
+		<div id="inner">
+			<div id="cover">
+				<div id="text">
+					<span style="color: cyan;">MIMI</span><span style="color: white;">POWERED</span>
+				</div>
+				<div id="detail"></div>
+				<div id="handle"></div>
+			</div>
+			<canvas class="mb-4" id="live2d" width="800" height="800"></canvas>
+		</div>
+		<a id="info" href="javascript:info()"><i class="fa fa-lg fa-info"></i></a>
+		<a id="refresh" href="javascript:refresh()"><i class="fa fa-lg fa-refresh"></i></a>
+	</div>
+	<h1 class="h3 mb-3 fw-normal">看板娘登陆平台</h1>
+	<label for="room" class="sr-only">用户名</label>
+	<input type="text" name="room" class="form-control" placeholder="用户名" required autofocus>
+	<label for="pass" class="sr-only">密码</label>
+	<input type="password" name="pass" class="form-control" placeholder="密码" required>
+	<div class="checkbox mb-4">
+		<label>
+			<input type="checkbox" value="remember-me"> 记住我
+		</label>
+	</div>
+	<div class="d-grid">
+		<button class="btn btn-lg btn-primary" type="submit">登录</button>
+	</div>
+	<p class="mt-5 mb-3 text-muted">Copyleft &copy; Mimi 2019</p>
+</form>
+<script>
+/*
+ * _(:з」∠)_
+ * Created by Shuqiao Zhang in 2019.
+ * https://zhangshuqiao.org
+ */
+
+/*
+ * This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ */
+window.addEventListener("load", () => {
+	"use strict";
+
+	if (!CSS.supports("clip-path", "circle(120px at center)")) {
+		document.getElementById("stage").innerHTML = '<img src="../assets/screenshot-1.png">';
+		return;
+	}
+
+	let apiPath = "https://live2d.fghrsh.net/api", state = 0,
+		modelId = localStorage.getItem("modelId"),
+		modelTexturesId = localStorage.getItem("modelTexturesId");
+	if (modelId === null) {
+		modelId = 1;
+		modelTexturesId = 53;
+	}
+	loadModel(modelId, modelTexturesId);
+
+	function loadModel(modelId, modelTexturesId) {
+		localStorage.setItem("modelId", modelId);
+		if (modelTexturesId === undefined) modelTexturesId = 0;
+		localStorage.setItem("modelTexturesId", modelTexturesId);
+		loadlive2d("live2d", `${apiPath}/get/?id=${modelId}-${modelTexturesId}`, null);
+		console.log("live2d", `模型 ${modelId}-${modelTexturesId} 加载完成`);
+		setTimeout(() => {
+			coverPosition("80%");
+			state = 2;
+		}, 2000);
+	}
+
+	function loadRandModel() {
+		const modelId = localStorage.getItem("modelId"),
+			modelTexturesId = localStorage.getItem("modelTexturesId");
+		fetch(`${apiPath}/rand_textures/?id=${modelId}-${modelTexturesId}`)
+			.then(response => response.json())
+			.then(result => {
+				loadModel(modelId, result.textures.id);
+				setTimeout(() => {
+					state = 2;
+					coverPosition("80%");
+					document.getElementById("refresh").setAttribute("href", "javascript:refresh()");
+				}, 1000);
+			});
+	}
+
+	function loadOtherModel() {
+		const modelId = localStorage.getItem("modelId");
+		fetch(`${apiPath}/switch/?id=${modelId}`)
+			.then(response => response.json())
+			.then(result => {
+				loadModel(result.model.id);
+			});
+	}
+
+	function coverPosition(pos) {
+		document.getElementById("cover").style.bottom = pos;
+	}
+
+	window.info = function() {
+		fetch("https://v1.hitokoto.cn")
+			.then(response => response.json())
+			.then(result => {
+				alert("「" + result.hitokoto + "」——" + result.from);
+			});
+	};
+
+	window.refresh = function() {
+		state = 0;
+		coverPosition("10%");
+		document.getElementById("refresh").setAttribute("href", "javascript:void(0)");
+		setTimeout(loadRandModel, 1000);
+	};
+
+	document.getElementById("handle").addEventListener("click", () => {
+		if (state === 1) {
+			state = 2;
+			coverPosition("80%");
+		}
+		else if (state === 2) {
+			state = 1;
+			coverPosition("20%");
+		}
+	});
+
+	document.querySelector("input[type=password]").addEventListener("focus", () => {
+		if (state === 2) {
+			state = 1;
+			coverPosition("20%");
+		}
+	});
+	document.querySelector("input[type=password]").addEventListener("blur", () => {
+		if (state === 1) {
+			state = 2;
+			coverPosition("80%");
+		}
+	});
+});
+</script>
+</body>
+</html>
+
+        
+      </div>
+      
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/mount.png"
+               alt="Shiwei Pan" />
+          <p class="site-author-name" itemprop="name">Shiwei Pan</p>
+           
+              <p class="site-description motion-element" itemprop="description">Open your eyes,look up to the skies</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">41</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/erikpsw" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/pan-shi-wei-91" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                    
+                      知乎
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text">看板娘登陆平台</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2020 - 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Shiwei Pan</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>

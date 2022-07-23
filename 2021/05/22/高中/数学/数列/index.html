@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/psw.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="数列等差数列 a_n&#x3D;a_1+(n-1)d \\S_n&#x3D;\frac{n(a_1+a_n)}2&#x3D;na_1+\frac{n(n-1)}2d等比数列 a_n&#x3D;a_1q^{n-1} S_n&#x3D;\begin{cases}\frac{a_1(1-q^n )}{1-q },(q\ne1)\\na_1,(q&#x3D;1)\end{cases}\\ \lim_{x \to \infty} S_n&#x3D;\frac{a_1}{1-q">
+<meta property="og:type" content="article">
+<meta property="og:title" content="高中&#x2F;数学&#x2F;数列">
+<meta property="og:url" content="http://yoursite.com/2021/05/22/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E6%95%B0%E5%88%97/index.html">
+<meta property="og:site_name" content="BLOG">
+<meta property="og:description" content="数列等差数列 a_n&#x3D;a_1+(n-1)d \\S_n&#x3D;\frac{n(a_1+a_n)}2&#x3D;na_1+\frac{n(n-1)}2d等比数列 a_n&#x3D;a_1q^{n-1} S_n&#x3D;\begin{cases}\frac{a_1(1-q^n )}{1-q },(q\ne1)\\na_1,(q&#x3D;1)\end{cases}\\ \lim_{x \to \infty} S_n&#x3D;\frac{a_1}{1-q">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-05-22T14:54:12.401Z">
+<meta property="article:modified_time" content="2022-03-16T13:15:24.833Z">
+<meta property="article:author" content="Shiwei Pan">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2021/05/22/高中/数学/数列/"/>
+
+
+
+
+
+  <title>高中/数学/数列 | BLOG</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+<script src="/live2d-widget/autoload.js"></script>
+
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">BLOG</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-mine">
+          <a href="/mine/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Mine
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-new">
+          <a href="/new/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            menu.new
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/05/22/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E6%95%B0%E5%88%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">高中/数学/数列</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-05-22T22:54:12+08:00">
+                2021-05-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="数列"><a href="#数列" class="headerlink" title="数列"></a>数列</h1><h2 id="等差数列"><a href="#等差数列" class="headerlink" title="等差数列"></a>等差数列</h2><script type="math/tex; mode=display">
+a_n=a_1+(n-1)d
+\\S_n=\frac{n(a_1+a_n)}2=na_1+\frac{n(n-1)}2d</script><h2 id="等比数列"><a href="#等比数列" class="headerlink" title="等比数列"></a>等比数列</h2><script type="math/tex; mode=display">
+a_n=a_1q^{n-1}</script><script type="math/tex; mode=display">
+S_n=\begin{cases}\frac{a_1(1-q^n )}{1-q },(q\ne1)\\na_1,(q=1)\end{cases}\\
+\lim_{x \to \infty} S_n=\frac{a_1}{1-q}</script><h2 id="通项"><a href="#通项" class="headerlink" title="通项"></a>通项</h2><h3 id="不动点"><a href="#不动点" class="headerlink" title="不动点"></a>不动点</h3><script type="math/tex; mode=display">
+a_{n+1}=pa_n+q \Rightarrow x_0=px_0+q \Rightarrow a_{n+1}-x_0=p(a_n-x_0)</script><h3 id="待定系数"><a href="#待定系数" class="headerlink" title="待定系数"></a>待定系数</h3><script type="math/tex; mode=display">
+a_{n+2}=pa_{n+1}+qa_{n}\\ \Rightarrow a_{n+2}+\lambda a_{n+1}=(p+\lambda)(a_{n+1}+\lambda a_n)</script><h2 id="求和"><a href="#求和" class="headerlink" title="求和"></a>求和</h2><h3 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h3><script type="math/tex; mode=display">
+\sum_{k=1}^nk^2=\frac{n(n+1)(2n+1)}6\\
+\sum_{k=1}^nk^3=\left [ \frac{n(n+1)}{2}\right ]^2</script><h3 id="裂项"><a href="#裂项" class="headerlink" title="裂项"></a>裂项</h3><script type="math/tex; mode=display">
+\frac1{n^2}>\frac1{n(n+1)}=\frac{(n+1)-n}{n(n+1)}=\frac1n-\frac1{n+1}</script><script type="math/tex; mode=display">
+\frac{1}{\sqrt {n + 1}  + \sqrt n } = \sqrt {n + 1}  - \sqrt n</script><h3 id="错位相减"><a href="#错位相减" class="headerlink" title="错位相减"></a>错位相减</h3><script type="math/tex; mode=display">
+a_n=a_1+(n-1)d\quad\quad b_n=b_1q^{n-1}</script><script type="math/tex; mode=display">
+\begin{cases}T_{n}=a_{1} b_{1}+a_{2} b_{2}+a_{3} b_{3}+\cdots+a_{n-1} b_{n-1}+a_{n} b_{n}\\
+q T_{n}=a_{1} b_{2}+a_{2} b_{3}+a_{3} b_{4}+\cdots+a_{n-1} b_{n}+q a_{n} b_{n}\end{cases}</script><script type="math/tex; mode=display">
+\begin{aligned}
+T_{n}-q T_{n} &=a_{1} b_{1}+d\left(b_{2}+b_{2}+\cdots+b_{n}\right)-q a_{n} b_{n} \\
+&=a_{1} b_{1}+d\left(\frac{b_{1}\left(1-q^{n}\right)}{1-q}-b_{1}\right)-q a_{n} b_{n} \\
+&=a_{1} b_{1}+d\left(S_{n}-b_{1}\right)-q a_{n} b_{n} \\
+&=\left(a_{1}-d\right) b_{1}+d S_{n}-q a_{n} b_{n}
+\end{aligned}</script><script type="math/tex; mode=display">
+T_{n}=\frac{\left(a_{1}-d\right) b_{1}+d S_{n}-q a_{n} b_{n}}{1-q}</script>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/05/22/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E5%AF%BC%E6%95%B0/" rel="next" title="高中/数学/导数">
+                <i class="fa fa-chevron-left"></i> 高中/数学/导数
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2021/05/22/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E7%AB%8B%E4%BD%93%E5%87%A0%E4%BD%95/" rel="prev" title="高中/数学/立体几何">
+                高中/数学/立体几何 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/mount.png"
+               alt="Shiwei Pan" />
+          <p class="site-author-name" itemprop="name">Shiwei Pan</p>
+           
+              <p class="site-description motion-element" itemprop="description">Open your eyes,look up to the skies</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">41</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/erikpsw" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/pan-shi-wei-91" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                    
+                      知乎
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数列"><span class="nav-number">1.</span> <span class="nav-text">数列</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#等差数列"><span class="nav-number">1.1.</span> <span class="nav-text">等差数列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#等比数列"><span class="nav-number">1.2.</span> <span class="nav-text">等比数列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通项"><span class="nav-number">1.3.</span> <span class="nav-text">通项</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#不动点"><span class="nav-number">1.3.1.</span> <span class="nav-text">不动点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#待定系数"><span class="nav-number">1.3.2.</span> <span class="nav-text">待定系数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#求和"><span class="nav-number">1.4.</span> <span class="nav-text">求和</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#公式"><span class="nav-number">1.4.1.</span> <span class="nav-text">公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#裂项"><span class="nav-number">1.4.2.</span> <span class="nav-text">裂项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#错位相减"><span class="nav-number">1.4.3.</span> <span class="nav-text">错位相减</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2020 - 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Shiwei Pan</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
