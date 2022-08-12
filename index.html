@@ -277,6 +277,1237 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/10/%E5%A4%A7%E4%B8%80/python/taichi/%E6%93%8D%E4%BD%9C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/08/10/%E5%A4%A7%E4%B8%80/python/taichi/%E6%93%8D%E4%BD%9C/" itemprop="url">大一/python/taichi/操作</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-08-10T13:25:32+08:00">
+                2022-08-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="For"><a href="#For" class="headerlink" title="For"></a>For</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i,j <span class="keyword">in</span> field:</span><br><span class="line">	fielf[i,j]=<span class="number">1</span></span><br><span class="line">    <span class="comment">#二维遍历</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(vx:ti.f32,vy:f64)</span> -&gt; ti.i32#int32</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">ti.func#只能在ti.kernel</span></span><br><span class="line"><span class="function">#无需声明类型(inline)</span></span><br></pre></td></tr></table></figure>
+<h1 id="print"><a href="#print" class="headerlink" title="print"></a>print</h1><script type="math/tex; mode=display">
+\rm print(arg1,sep=\text{' '},end=\text{'\n'})</script><h1 id="GUI"><a href="#GUI" class="headerlink" title="GUI"></a>GUI</h1><script type="math/tex; mode=display">
+\rm gui=ti.GUI(\text{my title},(512,512))</script>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/10/%E5%A4%A7%E4%B8%80/python/taichi/%E6%95%B0%E6%8D%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/08/10/%E5%A4%A7%E4%B8%80/python/taichi/%E6%95%B0%E6%8D%AE/" itemprop="url">大一/python/taichi/数据</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-08-10T12:53:53+08:00">
+                2022-08-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> taichi <span class="keyword">as</span> ti</span><br><span class="line">ti.init(arch=ti.gpu)</span><br></pre></td></tr></table></figure>
+<h2 id="修饰"><a href="#修饰" class="headerlink" title="修饰"></a>修饰</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@ti.kernel#某个函数</span></span><br><span class="line"><span class="comment">#最外层才会并行</span></span><br></pre></td></tr></table></figure>
+<h2 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">cast<span class="comment">#i32/i64/f32/f64</span></span><br><span class="line">b=ti.cast(a,ti.i32)<span class="comment">#转换</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#大写</span></span><br><span class="line">a=ti.Vector([<span class="number">0.0</span>,<span class="number">0.0</span>,<span class="number">0.0</span>])</span><br><span class="line">B=ti.Matrix([<span class="number">1.5</span>,<span class="number">1.4</span>],[<span class="number">1.3</span>,<span class="number">1.2</span>])</span><br><span class="line">B[<span class="number">1</span>,<span class="number">0</span>] </span><br><span class="line">r=ti.Struct(v1=a,v2=<span class="number">0</span>)<span class="comment">#结构体</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#N-d array(global)</span></span><br><span class="line">c=ti.field(dtype=ti.f32,shape=(<span class="number">256</span>,<span class="number">256</span>))</span><br><span class="line"><span class="comment">#shape=4 -vector</span></span><br><span class="line"><span class="comment">#shape=() [None]</span></span><br><span class="line">vf=ti.Vector.field(n=<span class="number">3</span>,shape=<span class="number">4</span>)<span class="comment">#m每个元素为(3*1)的小向量</span></span><br><span class="line"><span class="comment">#m=2(3*2)</span></span><br></pre></td></tr></table></figure>
+<h2 id="计算"><a href="#计算" class="headerlink" title="计算"></a>计算</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">+=/ti.atomic_add(a,b)</span><br><span class="line"><span class="comment">#防止数据征用</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">import taichi as ti</span><br><span class="line">ti.init(ti.gpu)</span><br><span class="line"></span><br><span class="line">N&#x3D;2</span><br><span class="line">vol&#x3D;ti.Vector.field(2,ti.f32,N)#二维向量</span><br><span class="line">acc&#x3D;ti.Vector.field(2,ti.f32,N)</span><br><span class="line">pos&#x3D;ti.Vector.field(2,ti.f32,N)</span><br><span class="line">substepping&#x3D;10</span><br><span class="line"></span><br><span class="line">@ti.kernel</span><br><span class="line">def initialize():</span><br><span class="line">    for i in range(N):</span><br><span class="line">        pos[i]&#x3D;[ti.random(),ti.random()]</span><br><span class="line">        vol[i]&#x3D;[ti.random(),ti.random()]</span><br><span class="line"></span><br><span class="line">gui&#x3D;ti.GUI(&quot;n body problem&quot;,(512,512))</span><br><span class="line">           </span><br><span class="line">while(gui.running):</span><br><span class="line">    # for i in range(substepping):</span><br><span class="line">    gui.circle(pos.to_numpy(),color&#x3D;0xFFFFFF,radius&#x3D;2)</span><br><span class="line">    gui.show()</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/07/%E5%A4%A7%E4%B8%80/%E6%9D%82/%E7%89%A9%E7%90%86%E7%B3%BB%E7%BB%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/08/07/%E5%A4%A7%E4%B8%80/%E6%9D%82/%E7%89%A9%E7%90%86%E7%B3%BB%E7%BB%9F/" itemprop="url">大一/杂/物理系统</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-08-07T17:33:32+08:00">
+                2022-08-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="欧拉方法"><a href="#欧拉方法" class="headerlink" title="欧拉方法"></a>欧拉方法</h1><h2 id="显式欧拉方法"><a href="#显式欧拉方法" class="headerlink" title="显式欧拉方法"></a>显式欧拉方法</h2><script type="math/tex; mode=display">
+\begin{cases}\vec{v}\left(t_{1}\right)=\vec{v}\left(t_{0}\right)+M^{-1} \vec{F}\left(t_{0}\right)\Delta t \\
+\vec{x}\left(t_{1}\right)=\vec{x}\left(t_{0}\right)+\vec{v}\left(t_{0}\right) \Delta t\end{cases}</script><p>用当前的状态计算速度和加速度$(\text{Forward} )$</p>
+<p>能量增加，开放的系统</p>
+<h2 id="隐式欧拉方法"><a href="#隐式欧拉方法" class="headerlink" title="隐式欧拉方法"></a>隐式欧拉方法</h2><script type="math/tex; mode=display">
+\vec{v}\left(t_{1}\right)=\lambda(\vec{v}\left(t_{0}\right)+M^{-1} \vec{F}\left(t_{1}\right)\Delta t) \\
+\vec{x}\left(t_{1}\right)=\vec{x}\left(t_{0}\right)+\vec{v}\left(t_{1}\right) \Delta t</script><p>用未来的状态去计算速度和加速度再来更新$(\text{Backward} )$</p>
+<h2 id="半隐式欧拉方法"><a href="#半隐式欧拉方法" class="headerlink" title="半隐式欧拉方法"></a>半隐式欧拉方法</h2><script type="math/tex; mode=display">
+\vec{v}\left(t_{1}\right)=\vec{v}\left(t_{0}\right)+M^{-1} \vec{F}\left(t_{0}\right)\Delta t \\
+\vec{x}\left(t_{1}\right)=\vec{x}\left(t_{0}\right)+\vec{v}\left(t_{1}\right) \Delta t</script><p>本质上为显式方法</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/07/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E5%90%91%E9%87%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/08/07/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E5%90%91%E9%87%8F/" itemprop="url">大一/线性代数/向量</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-08-07T12:24:39+08:00">
+                2022-08-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="向量"><a href="#向量" class="headerlink" title="向量"></a>向量</h1><p>$\rm vector$ 表示</p>
+<script type="math/tex; mode=display">
+\vec{a}/\mathbf{a}</script><p>$||\vec{a}||$为向量的长度</p>
+<p>在直角坐标系中</p>
+<script type="math/tex; mode=display">
+||\vec{a}||=\sqrt{x^2+y^2}\\
+单位向量\hat{a}=\vec{a}/||\vec{a}||</script><h2 id="点乘"><a href="#点乘" class="headerlink" title="点乘"></a>点乘</h2><p>$\rm Dot\;Product$</p>
+<script type="math/tex; mode=display">
+\vec{a} \cdot \vec{b}=\|\vec{a}\|\|\vec{b}\| \cos \theta 
+=x_1x_2+y_1y_2
+\\
+\cos \theta=\frac{\vec{a} \cdot \vec{b}}{\|\vec{a}\|\|\vec{b}\|}\\
+\theta=\arccos (\hat{a}\cdot\hat{b})</script><p>运算性质</p>
+<script type="math/tex; mode=display">
+交换律：\vec{a} \cdot \vec{b}=\vec{b} \cdot \vec{a} \\
+分配律：\vec{a} \cdot(\vec{b}+\vec{c})=\vec{a} \cdot \vec{b}+\vec{a} \cdot \vec{c} \\
+(k \vec{a}) \cdot \vec{b}=\vec{a} \cdot(k \vec{b})=k(\vec{a} \cdot \vec{b})</script><h2 id="叉乘"><a href="#叉乘" class="headerlink" title="叉乘"></a>叉乘</h2><p>$\rm Cross \;Product$</p>
+<script type="math/tex; mode=display">
+||\vec{a}\times\vec{b}||=||\vec{a}||||\vec{b}||\sin\theta</script><p>运算性质</p>
+<script type="math/tex; mode=display">
+\vec{a}\times\vec{b}=-\vec{b}\times\vec{a}\\
+\vec{k}=\vec{i}\times \vec{j}</script><script type="math/tex; mode=display">
+\vec{a} \times \vec{b}=\left(\begin{array}{c}
+y_{a} z_{b}-y_{b} z_{a} \\
+z_{a} x_{b}-x_{a} z_{b} \\
+x_{a} y_{b}-y_{a} x_{b}
+\end{array}\right)</script><h2 id="范数"><a href="#范数" class="headerlink" title="范数"></a>范数</h2><script type="math/tex; mode=display">
+||\vec{x}||_p=\sqrt[p]{\sum_{i=1}^n|x_i|}</script><script type="math/tex; mode=display">
+\|x\|_{1}=\left|x_{1}\right|+\cdots+\left|x_{n}\right| \\
+\|x\|_{2}=\sqrt{\left|x_{1}\right|^{2}+\cdots+\left|x_{n}\right|^{2}}=\sqrt{x^{H} x} \\
+\|x\|_{\infty}= \underset{1 \leq i \leq n}\max|x_{i}|</script>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/06/%E5%A4%A7%E4%B8%80/python/manim/updater/updater/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/08/06/%E5%A4%A7%E4%B8%80/python/manim/updater/updater/" itemprop="url">大一/python/manim/updater/updater</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-08-06T18:34:41+08:00">
+                2022-08-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>,</p>
+<p>updater(迭代，更新器)</p>
+<p>语法：$\rm mobject.add_updater(anim)$</p>
+<p>anim 为更新的规则</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">anim</span><span class="params">(obj)</span>:</span></span><br><span class="line">    obj.next_to(obj_2,RIGHT)</span><br><span class="line">    <span class="comment">#将obj放在obj_2的右侧</span></span><br></pre></td></tr></table></figure>
+<p>可以合二为一</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mobject.add_updater(<span class="keyword">lambda</span> m:m.next_to(obj,RIGHT))</span><br><span class="line"><span class="comment">#使用匿名函数</span></span><br></pre></td></tr></table></figure>
+<p>删除updater:</p>
+<script type="math/tex; mode=display">
+\rm case\;1:mobject.remove\_updater(anim)\\移除某个updater\\
+case\;2:mobject.clear\_updater()\\移除全部updater</script><h1 id="UpdateFromFunc"><a href="#UpdateFromFunc" class="headerlink" title="UpdateFromFunc"></a>UpdateFromFunc</h1><p>直接更新，不用添加updater：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">self.play(</span><br><span class="line">    UpdateFromFunc(</span><br><span class="line">        obj,</span><br><span class="line">        <span class="keyword">lambda</span> m:m.next_to(obj_2,RIGHT)</span><br><span class="line">    )</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>拓展</p>
+<h2 id="UpdateFromAlphaFunc"><a href="#UpdateFromAlphaFunc" class="headerlink" title="UpdateFromAlphaFunc"></a>UpdateFromAlphaFunc</h2><p>传入一个含有参数==$\rm alpha$==的函数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">move</span><span class="params">(obj,alpha)</span>:</span></span><br><span class="line">    obj.shift(alpha*RIGHT)</span><br><span class="line">    obj.rotate(alpha*TAU)<span class="comment">#TAU=2*PI</span></span><br><span class="line">   </span><br><span class="line">self.play(UpdateFromAlphaFunc(t,move))</span><br></pre></td></tr></table></figure>
+<p>不太推荐使用此方法</p>
+<h1 id="dt"><a href="#dt" class="headerlink" title="dt"></a>dt</h1><p>根据时间进行迭代</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">anim</span><span class="params">(obj,dt)</span>:</span></span><br><span class="line">            obj.shift(dt*RIGHT)</span><br><span class="line">        </span><br><span class="line">mobject.add_updater(anim)</span><br><span class="line">self.wait(time)<span class="comment">#基于时间进行更新</span></span><br></pre></td></tr></table></figure>
+<h1 id="ValueTracker"><a href="#ValueTracker" class="headerlink" title="ValueTracker"></a>ValueTracker</h1><p>初始化设为$-1$</p>
+<script type="math/tex; mode=display">
+\rm t=ValueTracker(-1)</script><p>接着可以生成目标</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">self.play(t.set_value,<span class="number">1</span>,rate_func=,run_time=<span class="number">3</span>)</span><br><span class="line"><span class="comment">#目标值为1</span></span><br></pre></td></tr></table></figure>
+<p><img src="/2022/08/06/%E5%A4%A7%E4%B8%80/python/manim/updater/updater/image-20220806210411711.png" alt="image-20220806210411711"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x1=ValueTracker(<span class="number">0</span>)</span><br><span class="line">        n2=Tex(<span class="string">"0"</span>)</span><br><span class="line">        n2.add_updater(<span class="keyword">lambda</span> t:t.become(Tex(str(round(x1.get_value(),<span class="number">1</span>)))))</span><br><span class="line">        self.play(ShowCreation(n2))</span><br><span class="line">        self.play(x1.set_value,<span class="number">1</span>,rate_func=smooth,run_time=<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/" itemprop="url">大一/线性代数/矩阵</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-08-04T16:41:35+08:00">
+                2022-08-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><p>矩形的数组，如</p>
+<script type="math/tex; mode=display">
+A=\left[\begin{array}{l} a_{11} &a_{12}&a_{13}\\a_{21} &a_{22}&a_{23}\end{array}\right]
+=\left[\begin{array}{l} 1 &2&3\\4&5&6\end{array}\right]</script><p>是一个$2\times3$的矩阵$A=(a_{ij})$其中$i=1,2;j=1,2,3$</p>
+<p>矩阵中第$i$行第$j$列的元素表示为$a_{ij}$(大写矩阵，小写元素)</p>
+<h2 id="转置"><a href="#转置" class="headerlink" title="转置"></a>转置</h2><p>交换$A$行和列获得的矩阵为$A$的转置$A^{\text T}$(第几行变为第几列)</p>
+<script type="math/tex; mode=display">
+A^{\text T}=\left[\begin{array}l 1&4\\2&5\\3&6\end{array}\right]</script><h2 id="向量"><a href="#向量" class="headerlink" title="向量"></a>向量</h2><p>向量是一维数组(1D ,如只有一行或一列)，如</p>
+<script type="math/tex; mode=display">
+x=\left(\begin{array}l 1\\2\\3\end{array}\right)</script><p>把长度为$n$的向量称为$n$向量，通常用小写字母来表示向量</p>
+<p>$x_i$表示向量中第$i$个元素</p>
+<p>向量的标准形式为列向量($n\times1$)</p>
+<script type="math/tex; mode=display">
+x^{\text T}=(1,2,3)</script><h2 id="特殊的矩阵"><a href="#特殊的矩阵" class="headerlink" title="特殊的矩阵"></a>特殊的矩阵</h2><h3 id="零矩阵"><a href="#零矩阵" class="headerlink" title="零矩阵"></a>零矩阵</h3><p>所有元素均为$0$的矩阵，矩阵大小需要从上下文中推测</p>
+<h3 id="方阵"><a href="#方阵" class="headerlink" title="方阵"></a>方阵</h3><p>方阵为$n\times n$矩阵</p>
+<h4 id="对角矩阵"><a href="#对角矩阵" class="headerlink" title="对角矩阵"></a>对角矩阵</h4><p>对角线($\text {diagnoal}$)，其中对于任意$i\ne j,a_{ij}=0$，故只需列出对角线上的元素就可以表示出这个矩阵</p>
+<script type="math/tex; mode=display">
+\text{diag}(a_{11},a_{22},\cdots,a_{nn})=\begin{bmatrix}  
+  a_{11} &0& \cdots & 0\\  
+  0 &a_{22}&\cdots&0
+  \\ \vdots &\vdots& \ddots & \vdots\\
+ 0 & 0&\cdots & a_{nn}  
+\end{bmatrix}</script><h4 id="单位矩阵"><a href="#单位矩阵" class="headerlink" title="单位矩阵"></a>单位矩阵</h4><script type="math/tex; mode=display">
+I_n=\text{diag}(1,1,\cdots,1)</script><h4 id="三对角矩阵"><a href="#三对角矩阵" class="headerlink" title="三对角矩阵"></a>三对角矩阵</h4><p>对$|i-j|&gt;1,a_{ij}=0$，即矩阵中不为$0$的项只出现在对角线或上下，$i-j$相当于偏移量，类似八皇后问题</p>
+<h4 id="上三角矩阵"><a href="#上三角矩阵" class="headerlink" title="上三角矩阵"></a>上三角矩阵</h4><p>若$i&gt;j,a_{ij}=0$，其对角线以下的元素为$0$</p>
+<script type="math/tex; mode=display">
+U=\left[\begin{array}{ccccc}
+u_{11} & u_{12} & u_{13} & \cdots & u_{1n} \\
+& u_{22} & u_{23} & \cdots & u_{2n} \\
+& & \ddots & \ddots & \vdots \\
+& & & \ddots & u_{n-1}n \\
+& & & & u_{nn}
+\end{array}\right]</script><p>同理下三角矩阵$L$对角线以上的元素为$0$</p>
+<p>若非零项均为$1$，则为单位三角矩阵</p>
+<h4 id="排列矩阵"><a href="#排列矩阵" class="headerlink" title="排列矩阵"></a>排列矩阵</h4><p>每行每列只有一个1，其余都为0，可以重新排列向量中的元素</p>
+<script type="math/tex; mode=display">
+P=\begin{bmatrix}1&0&0\\0&0&1\\0&1&0\end{bmatrix}</script><h4 id="对称矩阵"><a href="#对称矩阵" class="headerlink" title="对称矩阵"></a>对称矩阵</h4><p>若矩阵$A$满足$A=A^{\text  T}$，则矩阵的元素关于对角线对称</p>
+<script type="math/tex; mode=display">
+\begin{bmatrix}1&2&3\\2&4&5\\3&5&6\end{bmatrix}</script><h2 id="矩阵的基本操作"><a href="#矩阵的基本操作" class="headerlink" title="矩阵的基本操作"></a>矩阵的基本操作</h2><h3 id="加法"><a href="#加法" class="headerlink" title="加法"></a>加法</h3><p>若矩阵$A,B$大小相同，则$C=A+B$为相同大小</p>
+<script type="math/tex; mode=display">
+c_{ij}=a_{ij}+b_{ij}</script><h4 id="数乘"><a href="#数乘" class="headerlink" title="数乘"></a>数乘</h4><script type="math/tex; mode=display">
+\lambda A=(\lambda a_{ij})</script><p>$\lambda$称为矩阵的一个标量倍数，矩阵的负为$-A(\lambda=-1)$</p>
+<p>故减法$A-B=A+(-B)$</p>
+<h3 id="乘法"><a href="#乘法" class="headerlink" title="==乘法=="></a>==乘法==</h3><p>给定两个相容的矩阵$A,B(A的列数=B的行数)$</p>
+<p>设$A$为$m\times p$的矩阵，$B$为$p\times n$的矩阵</p>
+<p>则 $C=AB$为$m\times n$的矩阵 </p>
+<script type="math/tex; mode=display">
+c_{ij}=\sum_{k=1}^pa_{ik}b_{kj}(i=1,\cdots,m;j=1,\cdots,n)</script><p>矩阵乘法满足结合律，分配律</p>
+<script type="math/tex; mode=display">
+A(BC)=(AB)C\\
+A(B+C)=AB+AC</script><p>==$A,B,C$必须是相容的==</p>
+<h3 id="逆"><a href="#逆" class="headerlink" title="逆"></a>逆</h3><p>定义</p>
+<script type="math/tex; mode=display">
+AA^{-1}=I_n</script><p>若没有逆矩阵则称为奇异的</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/" itemprop="url">大一/高数/函数</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-08-03T22:24:00+08:00">
+                2022-08-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><p>例​：$f(x)=x^2$</p>
+<p>定义了一个函数 $f$ ，法则为将一个数转变为它的平方</p>
+<p>未指定，故定义域为$\R$(实数集)</p>
+<p>意义：$f(2)=4$，通过法则$f$将数字$2$转变为$4$</p>
+<blockquote>
+<p>By the way, $f$ is the transformation rule, while $f(x)$ is the result of applying the transformation rule to the variable $x$. So it’s technically not correct to say “$f(x)$ is a function”; it should be “$f$ is a function.”</p>
+</blockquote>
+<h2 id="区间"><a href="#区间" class="headerlink" title="区间"></a>区间</h2><script type="math/tex; mode=display">
+[a, b) \quad\{x: a \leq x<b\}</script><p><img src="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20220803230718705.png" alt="image-20220803230718705"></p>
+<script type="math/tex; mode=display">
+ (−8, 13]\backslash
+
+ \{2\}(\text{not including 2})</script><p>15</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/07/31/%E5%A4%A7%E4%B8%80/c%E8%AF%AD%E8%A8%80/%E5%BE%AA%E7%8E%AF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/07/31/%E5%A4%A7%E4%B8%80/c%E8%AF%AD%E8%A8%80/%E5%BE%AA%E7%8E%AF/" itemprop="url">大一/c语言/循环</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-07-31T20:41:09+08:00">
+                2022-07-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="for"><a href="#for" class="headerlink" title="for"></a>for</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(initalize;<span class="built_in">end</span> statement;forward)&#123;   </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">10</span>;i++) <span class="built_in">cout</span>&lt;&lt;i;</span><br><span class="line"><span class="comment">//simplest case</span></span><br><span class="line"><span class="comment">//最重要的三要素(起点 更新 终点)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>, j = <span class="number">100</span>; i &lt; j; i++)<span class="comment">//可有多个变量</span></span><br></pre></td></tr></table></figure>
+<p>for 比while循环更加紧凑</p>
+<h2 id="STL容器的迭代"><a href="#STL容器的迭代" class="headerlink" title="STL容器的迭代"></a>STL容器的迭代</h2><p>$\rm iterator$可直接迭代元素(类似指针)</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; nums=&#123;<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">9</span>&#125;;</span><br><span class="line">    <span class="keyword">for</span>(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;:: iterator iter=nums.<span class="built_in">begin</span>();iter!=nums.<span class="built_in">end</span>();iter++)</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;*iter&lt;&lt;<span class="string">" "</span>;<span class="comment">//访问元素</span></span><br><span class="line"><span class="number">1</span> <span class="number">3</span> <span class="number">5</span> <span class="number">7</span> <span class="number">9</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">//使用auto iter替换</span></span><br></pre></td></tr></table></figure>
+<h1 id="while"><a href="#while" class="headerlink" title="while"></a>while</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(A)&#123;</span><br><span class="line">	<span class="comment">//若A为真,则执行</span></span><br><span class="line">    <span class="comment">//注意A要在循环体中更新,否则为infinite loop</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> i=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span>(i&lt;=<span class="number">10</span>)&#123;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;i;</span><br><span class="line">    i++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//simplest case</span></span><br></pre></td></tr></table></figure>
+<p>while循环为top-checking loop，先检查表达式(A)</p>
+<h2 id="do-while"><a href="#do-while" class="headerlink" title="do-while"></a>do-while</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span></span><br><span class="line">    stetament</span><br><span class="line"><span class="keyword">while</span>(condition);</span><br><span class="line"></span><br><span class="line">如先输入变量再计算</span><br></pre></td></tr></table></figure>
+<p> break 跳出本层循环(不循环了)</p>
+<p>continue 跳出本次循环(不执行后面的语句)</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/07/31/%E5%A4%A7%E4%B8%80/c%E8%AF%AD%E8%A8%80/%E9%80%89%E6%8B%A9/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/07/31/%E5%A4%A7%E4%B8%80/c%E8%AF%AD%E8%A8%80/%E9%80%89%E6%8B%A9/" itemprop="url">大一/c语言/选择</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-07-31T19:15:01+08:00">
+                2022-07-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="if"><a href="#if" class="headerlink" title="if"></a>if</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">类型<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(<span class="keyword">case</span> A)&#123;</span><br><span class="line">    <span class="comment">//一条语句不用括号</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(<span class="keyword">case</span> B)&#123;</span><br><span class="line">   <span class="comment">//若一条符合则不会看后面的语句</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">类型<span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(<span class="keyword">case</span> <span class="number">1</span>)</span><br><span class="line"><span class="keyword">if</span>(<span class="keyword">case</span> <span class="number">2</span>)<span class="comment">//每条都会看</span></span><br></pre></td></tr></table></figure>
+<h3 id="判断条件"><a href="#判断条件" class="headerlink" title="判断条件"></a>判断条件</h3><script type="math/tex; mode=display">
+==\quad 等于\\
+!=\quad  不等于\\
+>/</>=/<= 比较大小\\
+
+关系运算\\
+逻辑与\;\;\&\& \rm= and\\
+逻辑或\;\;||=or\\
+逻辑非\;\; !=not</script><p>表达式复杂勤用括号</p>
+<h4 id="三目运算符"><a href="#三目运算符" class="headerlink" title="三目运算符"></a>三目运算符</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">if</span>(A) B</span><br><span class="line"> <span class="keyword">else</span> C</span><br><span class="line"> </span><br><span class="line"> 可写成</span><br><span class="line"> A?B:C<span class="comment">//c++中唯一一个三目运算符</span></span><br><span class="line">     <span class="comment">//conditional expression</span></span><br><span class="line">     </span><br><span class="line"><span class="built_in">abs</span>(<span class="keyword">int</span> a)</span><br><span class="line">=&gt;(n &lt; <span class="number">0</span>) ? -n : n</span><br></pre></td></tr></table></figure>
+<h2 id="switch"><a href="#switch" class="headerlink" title="switch"></a>switch</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span>(expression)&#123;<span class="comment">//A 为一个常量表达式</span></span><br><span class="line">    <span class="keyword">case</span> A: ~~~(<span class="keyword">break</span>);</span><br><span class="line">    <span class="keyword">case</span> B: ~~~(<span class="keyword">break</span>);</span><br><span class="line">    <span class="keyword">default</span>:<span class="comment">//都不符合</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> a;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;a;</span><br><span class="line">    <span class="keyword">switch</span> (a)</span><br><span class="line">    &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">'a'</span>:</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"is a\n"</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"not a"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;<span class="comment">//A 为一个常量表达式</span></span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/07/24/%E5%A4%A7%E4%B8%80/c%E8%AF%AD%E8%A8%80/%E6%95%B0%E6%8D%AE%E7%9A%84%E5%AD%98%E5%82%A8%E4%B8%8E%E8%AF%BB%E5%85%A5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -352,1228 +1583,26 @@
 \rm \begin{array}{|c|c|}\hline \rm  \text{data type}  &\rm explain  \\ \hline \rm int&-2^{31}\sim2^{31}-1\\ \hline
 \rm short&-2^{15}\sim2^{15}-1\\ \hline
 \text{long long}&-2^{63}\sim2^{63}-1\\ \hline
-\text{float}&7位有效数字\\ \hline
-\text{double}&15位有效数字\\ \hline
+\text{float}& 7位有效数字\\ \hline
+\text{double}& 15位有效数字\\ \hline
 \text{char []}&字符数组(\rm c)\\ \hline
 \text{string}&字符串(\rm c++)\\ \hline
 \text{bool}&布尔类型(0/1)
 \\  \hline \end{array}</script><p>用$\rm sizeof(element)$来显示字节数</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(<span class="keyword">int</span>)a;</span><br><span class="line">(<span class="keyword">int</span>)(x+y); 强制类型转换,运算必须同类型</span><br></pre></td></tr></table></figure>
 <h2 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">\f 换页</span><br><span class="line">\n 换行,下一行首</span><br><span class="line">\r 回车,留在当前行首</span><br><span class="line">\t Tab</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"shiwei\rpsw"</span>);</span><br><span class="line">result: pswwei </span><br><span class="line">\\ 代表<span class="string">'\'</span></span><br><span class="line">同理\",\?,\'</span><br></pre></td></tr></table></figure>
-<h2 id="流"><a href="#流" class="headerlink" title="流"></a>流</h2><h3 id="c"><a href="#c" class="headerlink" title="c"></a>c</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line">f(format)格式</span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"sss%d"</span>,<span class="number">5.0</span>/<span class="number">3.0</span>)</span><br><span class="line">sss1<span class="number">.666667</span></span><br><span class="line">   %d 十进制有符号整数</span><br><span class="line">　　%u 十进制无符号整数</span><br><span class="line">　　%f 浮点数</span><br><span class="line">　　%s 字符串</span><br><span class="line">　　%c 单个字符</span><br><span class="line">　　%p 指针的值</span><br><span class="line">　　%e 指数形式的浮点数</span><br><span class="line">　　%x, %X 无符号以十六进制表示的整数</span><br><span class="line"></span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;a,&amp;b)</span><br><span class="line">    &amp;是取址运算符,告诉变量存在哪里</span><br></pre></td></tr></table></figure>
+<h2 id="流"><a href="#流" class="headerlink" title="流"></a>流</h2><h3 id="c"><a href="#c" class="headerlink" title="c"></a>c</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line">f(format)格式</span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"s ss%f"</span>,<span class="number">5.0</span>/<span class="number">3.0</span>)</span><br><span class="line">s ss1<span class="number">.666667</span><span class="comment">//空格也算</span></span><br><span class="line">   %d 十进制有符号整数</span><br><span class="line">　　%u 十进制无符号整数</span><br><span class="line">　　%f 浮点数</span><br><span class="line">　　%s 字符串</span><br><span class="line">　　%c 单个字符</span><br><span class="line">　　%p 指针的值</span><br><span class="line">　　%e 指数形式的浮点数</span><br><span class="line">　　%x, %X 无符号以十六进制表示的整数</span><br><span class="line"></span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;a,&amp;b)</span><br><span class="line">    &amp;是取址运算符,告诉变量存在哪里</span><br></pre></td></tr></table></figure>
 <h3 id="c-1"><a href="#c-1" class="headerlink" title="c++"></a>c++</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> a;</span><br><span class="line"><span class="built_in">cin</span>&gt;&gt;a;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;a;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">cin</span>,<span class="built_in">cout</span>输入输出流</span><br><span class="line">	&gt;&gt;提取 &lt;&lt;插入</span><br><span class="line">   	\<span class="built_in">endl</span>换行</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E7%A6%BB%E6%95%A3%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E7%A6%BB%E6%95%A3%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/" itemprop="url">大一/概率论/离散随机变量</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-07-23T21:09:55+08:00">
-                2022-07-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>随机变量$X$是有限或无限可数样本空间$S$到实数的函数</p>
-<p>对于随机变量$X$和实数$x$，定义事件$X=x$为$\{s\in S,X(s)=x\}$，因此</p>
+<h2 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="number">8</span>/<span class="number">3</span>;</span><br><span class="line">	<span class="number">5</span></span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="number">8.0</span>/<span class="number">3</span></span><br><span class="line">    <span class="number">2.66667</span></span><br><span class="line">stream manipulator操作器,操纵符</span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iomanip&gt;	</span></span></span><br><span class="line">        setbase(n)	 设置整数为n进制(n=<span class="number">8</span>,<span class="number">10</span>,<span class="number">16</span>)</span><br><span class="line">        </span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;setprecision(<span class="number">8</span>)&lt;&lt;<span class="number">8.0</span>/<span class="number">3</span>;</span><br><span class="line"><span class="number">2.6666667</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;fixed&lt;&lt;setprecision(<span class="number">8</span>)&lt;&lt;<span class="number">8.0</span>/<span class="number">3</span>;</span><br><span class="line"><span class="number">2.66666667</span>\\八位小数</span><br><span class="line"></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="built_in">std</span>::setw(<span class="number">3</span>) &lt;&lt; x &lt;&lt; <span class="string">'\n'</span>;<span class="comment">//set width</span></span><br><span class="line"><span class="built_in">cout</span>.imbue(locale(<span class="string">""</span>));<span class="comment">//1,000,000,000</span></span><br><span class="line"><span class="comment">//括号内的为国家(按国家习惯输出)</span></span><br><span class="line">%取模</span><br></pre></td></tr></table></figure>
 <script type="math/tex; mode=display">
-\Pr\{X=x\}=\sum_{s\in S,X(s)=x}\Pr\{s\}</script><p> 函数$f(x)=\Pr\{X=x\}$为$X$的概率密度函数</p>
-<p>若有若干个随机变量，则函数</p>
-<script type="math/tex; mode=display">
-f(x,y)=\Pr\{X=x且Y=y\}</script><p>为$X$与$Y$的联合概率密度函数，性质同理，如</p>
-<script type="math/tex; mode=display">
-\Pr\{Y=y\}=\sum_x\Pr\{X=x且Y=y\}(y为定值)</script><h3 id="随机变量的期望值"><a href="#随机变量的期望值" class="headerlink" title="随机变量的期望值"></a>随机变量的期望值</h3><script type="math/tex; mode=display">
-\text E[X]=\sum_xx\cdot\Pr\{X=x\}\\
-\text E[g(X)]=\sum_xg(x)\cdot\Pr\{X=x\}\\</script><p>期望的线性性质</p>
-<script type="math/tex; mode=display">
-\text E\left[\sum_{i=1}^nX_i\right]=\sum_{i=1}^n\text E[X_i]\\\text E[aX+b]=a\text E[X]+b</script><h3 id="方差"><a href="#方差" class="headerlink" title="方差"></a>方差</h3><script type="math/tex; mode=display">
-\text{Var}[X]=\text{E}[(X-\text{E}[X])^2]=\text{E}[X^2]-\text{E}^2[X]</script><h3 id="几何分布"><a href="#几何分布" class="headerlink" title="几何分布"></a>几何分布</h3><script type="math/tex; mode=display">
-\Pr\{X=k\}=(1-p)^{n-1}p\\
-\text E[x]=\sum_{k=1}^\infty(1-p)^{k-1}pk=1/p</script><h3 id="二项分布"><a href="#二项分布" class="headerlink" title="二项分布"></a>二项分布</h3><script type="math/tex; mode=display">
-\Pr\{X=k\}=\left(\begin{array}{l}n\\k\end{array}\right)p^k(1-p)^{n-k}\\
-\text E[X]=np\\
-\text{Var}[X]=np(1-p)</script>
-          
-        
-      
-    </div>
-    
-    
-    
+\rm << 左移(二进制表示)=\times 2\\
+>>右移=/2(floor)\\
+\sim    按位非\quad        遇1则0,遇0则1\\
+\& :  按位与  \quad      全1才1，否则为0\\
+|:按位或\quad 有1就为1\\
+^\wedge :按位异或\quad 相同为1</script><p>位运算可和数字和bool一起，而逻辑运算只有bool</p>
+<h2 id="赋值"><a href="#赋值" class="headerlink" title="赋值"></a>赋值</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a,b;</span><br><span class="line">a=b=<span class="number">3</span>;;简单赋值</span><br><span class="line"></span><br><span class="line">+= -= *= /=(复合算术赋值)</span><br><span class="line">&amp;= |= ^\ &gt;&gt;= &lt;&lt;=(复合位运算赋值)</span><br><span class="line">i++/++i(先自增再运算)</span><br><span class="line"></span><br><span class="line">常量</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> X=<span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">char</span> i1=<span class="string">'i'</span>;</span><br><span class="line">    i1-=<span class="number">32</span>;</span><br><span class="line">    i=<span class="string">'i'</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;i&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;i1;</span><br><span class="line"><span class="number">-32</span>变大写</span><br><span class="line">输出ASCII码(哈希表)</span><br></pre></td></tr></table></figure>
 
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/07/15/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E5%9F%BA%E6%9C%AC/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/07/15/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E5%9F%BA%E6%9C%AC/" itemprop="url">大一/概率论/基本</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-07-15T21:05:14+08:00">
-                2022-07-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="概率论公理"><a href="#概率论公理" class="headerlink" title="概率论公理"></a>概率论公理</h1><p>样本空间$S$上的概率分布$\rm {Pr\{\}}$是一个从事件到实数的映射</p>
-<ol>
-<li><p>$\forall  事件A,\text {Pr}\{A\}\ge0$</p>
-</li>
-<li><p>$\text {Pr}\{S\}=1$</p>
-</li>
-<li><p>对两两互斥的事件，有</p>
-<script type="math/tex; mode=display">
-\text {Pr}\left\{\bigcup_{i}A_i\right\}=\sum_i\text {Pr}\{A\}</script></li>
-</ol>
-<h3 id="容斥"><a href="#容斥" class="headerlink" title="容斥"></a>容斥</h3><script type="math/tex; mode=display">
-\begin{aligned}\text {Pr}\{A\cup B\}&=\text {Pr}\{A\}+\text {Pr}\{B\}-\text {Pr}\{A\cap B\}\\&\le\text {Pr}\{A\}+\text {Pr}\{B\}\end{aligned}</script><h2 id="离散概率分布"><a href="#离散概率分布" class="headerlink" title="离散概率分布"></a>离散概率分布</h2><p>概率分布在有限或无限可数的样本空间，则该概率分布是离散的</p>
-<script type="math/tex; mode=display">
-\text {Pr}\{A\}=\sum_{s\in A}\text {Pr}\{s\}</script><p>若基本事件$s\in S$的概率为</p>
-<script type="math/tex; mode=display">
-\text {Pr}\{s\}=1/|S|</script><p>则称为$S$上的的均匀概率分布</p>
-<h3 id="条件概率和独立"><a href="#条件概率和独立" class="headerlink" title="条件概率和独立"></a>条件概率和独立</h3><p>已知事件 $B$发生$\text {Pr}\{B\}\ne 0$，事件$A$的条件概率定义为</p>
-<script type="math/tex; mode=display">
-\text {Pr}\{A|B\}=\frac{\text {Pr}\{A\cap B\}}{\text {Pr}\{B\}}</script><p>若</p>
-<script type="math/tex; mode=display">
-\text {Pr}\{A\cap B\}=\text {Pr}\{A\}\text {Pr}\{B\}</script><p>则称事件$A$和$B$是独立的，若$\text {Pr}\{B\}\ne 0$，则等价于</p>
-<script type="math/tex; mode=display">
-\text {Pr}\{A|B\}=\Pr\{A\}(与B无关)</script><p>若对于所有$1\le i &lt; j\le n$，有</p>
-<script type="math/tex; mode=display">
-\text {Pr}\{A_i\cap A_j\}=\Pr\{A_i\}\Pr\{A_j\}</script><p>则称事件$A_1,A_2,\cdots,A_n$两两独立</p>
-<p>若对这些事件的每一个$k$子集$\{ A_{i_1},A_{i_2},\cdots,A_{i_k}\}$，其中$2\le k\le n$且$1\le {i_1}&lt; {i_2}&lt; \cdots&lt; {i_k}\le n $，有</p>
-<script type="math/tex; mode=display">
-\Pr\{ A_{i_1}\cap A_{i_2}\cap \cdots\cap A_{i_k}\}=\Pr\{ A_{i_1}\}\Pr\{ A_{i_2}\}\cdots\Pr\{ A_{i_k}\}</script><p>则称这些事件相互独立</p>
-<h3 id="全概率公式"><a href="#全概率公式" class="headerlink" title="全概率公式"></a>全概率公式</h3><p>将样本空间$\Omega$划分为两两独立的$n$个事件，且</p>
-<script type="math/tex; mode=display">
-\bigcup_iA_i=\Omega</script><p>则</p>
-<script type="math/tex; mode=display">
-\Pr\{B\}=\sum_{i=1}^n\Pr\{B|A_i\}\Pr\{A_i\}</script><h3 id="贝叶斯定理"><a href="#贝叶斯定理" class="headerlink" title="贝叶斯定理"></a>贝叶斯定理</h3><p>由</p>
-<script type="math/tex; mode=display">
-\Pr\{A\cap B\}=\Pr\{A|B\}\Pr\{B\}=\Pr\{B|A\}\Pr\{A\}</script><p>得</p>
-<script type="math/tex; mode=display">
-\Pr\{A|B\}=\frac{\Pr\{B|A\}\Pr\{A\}}{\Pr\{B\}}</script><p>对于$\Pr\{B\}$，因为可以划分，故</p>
-<script type="math/tex; mode=display">
-\Pr\{B\}=\Pr\{B|A\}\Pr\{A\}+\Pr\{B|\overline{A} \}\Pr\{\overline{A} \}</script><p>所</p>
-<script type="math/tex; mode=display">
-\Pr\{A|B\}=\frac{\Pr\{B|A\}\Pr\{A\}}{\Pr\{B|A\}\Pr\{A\}+\Pr\{B|\overline{A} \}\Pr\{\overline{A} \}}</script>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/07/14/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E6%9B%B2%E7%8E%87/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/07/14/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E6%9B%B2%E7%8E%87/" itemprop="url">大一/高数/曲率</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-07-14T22:18:04+08:00">
-                2022-07-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>弧微分公式</p>
-<script type="math/tex; mode=display">
-\text ds=\sqrt{1+y'^2}\text dx</script><h3 id="曲率"><a href="#曲率" class="headerlink" title="曲率"></a>曲率</h3><p>平均曲率</p>
-<script type="math/tex; mode=display">
-K=\left|\frac{\Delta \alpha}{\Delta s}\right|</script><p>曲线$C$在$M$处的曲率</p>
-<script type="math/tex; mode=display">
-K=\lim_{\Delta s \rightarrow0}\left|\frac{\Delta \alpha}{\Delta s}\right|=\left|\frac{\text d\alpha}{\text d s}\right|</script><script type="math/tex; mode=display">
-K=\frac{|y''|}{(1+y'^2)^{3/2}}\approx |y''|</script><p>​                                                             </p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/07/14/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E7%A7%AF%E5%88%86%E8%A1%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/07/14/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E7%A7%AF%E5%88%86%E8%A1%A8/" itemprop="url">大一/高数/积分表</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-07-14T20:54:56+08:00">
-                2022-07-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <script type="math/tex; mode=display">
-\text{Newton-Leibniz formula}   \\ \int_a^bf(x)\mathrm dx =\left[F(x)\right]^b_a=F(b)-F(a)</script><script type="math/tex; mode=display">
-\int k\text dx=kx+C\\
-\int x^\mu\text dx=\frac{x^{\mu+1}}{\mu+1}+C(\mu\ne-1)\\ 
-\int \frac{\text dx}{x}=\ln|x|+C\\
-\int \frac{\text dx}{1+x^2}=\arctan x+C\\
-\int \frac{\text dx}{\sqrt{1-x^2}}= \arcsin x+C</script><script type="math/tex; mode=display">
-\int \cos x\text dx=\sin x +C\\
-\int \sin x\text dx=-\cos x+C\\
-\\\int \frac{\text dx}{\cos^2x}=\int\sec^2x=\tan x+C\\
-\int \frac{\text dx}{\sin^2x}=\int\csc^2x=-\cot x+C\\
-\\ \int \sec x\tan x\text dx=\sec x+C</script><script type="math/tex; mode=display">
-\int \csc x \cot x\text dx=-\csc x+C\\
-\int e^x=e^x+C\\\int a^x\text dx=\frac{a^x}{\ln a}+C\\
-\int \frac{\text dx}{a^2+x^2}=\frac1a \arctan \frac xa+C\\
-\int \frac{\text dx}{x^2-a^2}=\frac1{2a}\ln\left|\frac{x-a}{x+a}\right|+C</script><script type="math/tex; mode=display">
-\int \frac{\text dx}{\sqrt{a^2-x^2}}= \arcsin \frac xa +C\\
-\int \frac{\text dx}{\sqrt{a^2+x^2}}=\ln (x+\sqrt{x^2+a^2})+C\\
-\int \frac{\text dx}{\sqrt{x^2-a^2}}=\ln |x+\sqrt{x^2-a^2}|+C\\</script>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/06/08/%E9%AB%98%E4%B8%AD/%E9%AB%98%E8%80%83%E7%BB%93%E6%9D%9F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/06/08/%E9%AB%98%E4%B8%AD/%E9%AB%98%E8%80%83%E7%BB%93%E6%9D%9F/" itemprop="url">高中/高考结束</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-06-08T19:37:49+08:00">
-                2022-06-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="高考结束啦啦啦"><a href="#高考结束啦啦啦" class="headerlink" title="高考结束啦啦啦"></a>高考结束啦啦啦</h1><p>爷的青春结束了，本以为会有什么波澜，但当我在英语试卷上写上最后一个$\text{classroom}$时，我的内心很平静，看着窗外陪伴了我三年的校园，我有些伤不舍，但更多的是一种释然，三年的学习告一段落，我走出考场，看着外面全是考生欢呼号叫，天空是蔚蓝色，窗外有千纸鹤，我在我的考场高二九班的黑板上写上了我的名字，我将永远铭记这永恒的一刻，伴着歌声我踏出校园，和老郑打了个招呼，然后慢慢走出了校园，那过去了的，就会成为永恒的怀念，青春无悔！</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/04/22/%E9%AB%98%E4%B8%AD/%E9%80%89%E6%8B%A9%E9%A2%98/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/04/22/%E9%AB%98%E4%B8%AD/%E9%80%89%E6%8B%A9%E9%A2%98/" itemprop="url">高中/选择题</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-04-22T19:21:51+08:00">
-                2022-04-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>首先厘清题意明确情形</p>
-<p>对图形进行全面有序的分析</p>
-<p>找出所求目标(正确或错误)</p>
-<p>分析问题将题给条件进行转换</p>
-<p>在空白处写出关键条件</p>
-<p>对照原题标出数据</p>
-<p>在草稿纸上进行化简计算</p>
-<p>对照选项进行验证</p>
-<p>若非常有把握就直接过</p>
-<p>有困难就排除分析</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/03/21/%E9%AB%98%E4%B8%AD/%E8%80%83%E7%BA%B2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/03/21/%E9%AB%98%E4%B8%AD/%E8%80%83%E7%BA%B2/" itemprop="url">高中/考纲</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-03-21T19:04:11+08:00">
-                2022-03-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="数学"><a href="#数学" class="headerlink" title="数学"></a>数学</h1><p>能力要求</p>
-<p>能力是指空间想象能力、抽象概括能力、推理论证能力、运算求解能力、数据处理能力<br>以及应用意识和创新意识.<br>1.空间想象能力:能根据条件作出正确的图形根据图形想象出直观形象;能正确地分析<br>出图形中的基本元素及其相互关系;能对图形进行分解、组合;会运用图形与图表等手段形<br>象地揭示问题的本质.<br>空间想象能力是对空间形式的观察、分析、抽象的能力,主要表现为识图、画图和对图<br>形的想象能力.识图是指观察研究所给图形中几何元素之间的相互关系;画图是指将文字语<br>言和符号语言转化为图形语言以及对图形添加辅助图形或对图形进行各种变换;对图形的想<br>象主要包括有图想图和无图想图两种,是空间想象能力高层次的标志.<br>2.抽象概括能力:抽象是指舍弃事物非本质的属性揭示其本质的属性;概括是指把仅仅<br>属于某一类对象的共同属性区分出来的思维过程.抽象和概括是相互联系的，没有抽象就不可</p>
-<p>能有概括，而概括必须在抽象的基础上得出某种观点或某个结论.<br>抽象概括能力是对具体的、生动的实例,经过分析提炼,发现研究对象的本质;从给定的<br>大量信息材料中概括出—些结论，并能将其应用于解决问题或做出新的判断.<br>3.推理论证能力:推理是思维的基本形式之一，它由前提和结论两部分组成;论证是由已<br>有的正确的前提到被论证的结论的一连串的推理过程.推理既包括演绎推理,也包括合情推理;<br>论证方法既包括按形式划分的演绎法和归纳法，也包括按思考方法划分的直接证法和间接证<br>法.一般运用合情推理进行猜想，再运用演绎推理进行证明.<br>中学数学的推理论证能力是根据已知的事实和已获得的正确数学命题,论证某一数学命<br>题真实性的初步的推理能力.<br>4.运算求解能力:会根据法则、公式进行正确运算、变形和数据处理,能根据问题的条件<br>寻找与设计合理、简捷的运算途径，能根据要求对数据进行估计和近似计算.<br>运算求解能力是思维能力和运算技能的结合.运算包括对数字的计算、估值和近似计算,<br>对式子的组合变形与分解变形，对几何图形各几何量的计算求解等.运算能力包括分析运算条<br>件、探究运算方向、选择运算公式、确定运算程序等一系列过程中的思维能力,也包括在实<br>施运算过程中遇到障碍而调整运算的能力.<br>5.数据处理能力:会收集、整理、分析数据,能从大量数据中抽取对研究问题有用的信息，<br>并做出判断.<br>数据处理能力主要是指针对研究对象的特殊性，选择合理的收集数据的方法，根据问题<br>的具体情况，选择合适的统计方法整理数据，并构建模型对数据进行分析、推断，获得结论.</p>
-<p>6.应用意识:能综合应用所学数学知识、思想和方法解决问题，包括解决相关学科、生产、<br>生活中简单的数学问题;能理解对问题陈述的材料，并对所提供的信息资料进行归纳、整理<br>和分类,将实际问题抽象为数学问题;能应用相关的数学方法解决问题进而加以验证，并能用<br>数学语言正确地表达和说明.应用的主要过程是依据现实的生活背景提炼相关的数量关系，<br>将现实问题转化为数学问题，构造数学模型,并加以解决.<br>7.创新意识:能发现问题、提出问题,综合与灵活地应用所学的数学知识、思想方法，选<br>择有效的方法和手段分析信息，进行独立的思考、探索和研究,提出解决问题的思路，创造性地<br>解决问题.<br>创新意识是理性思维的高层次表现.对数学问题的“观察、猜测、抽象、概括、证明”，是<br>发现问题和解决问题的重要途径，对数学知识的迁移、组合、融会的程度越高,显示出的创新<br>意识也就越强.</p>
-<p>个性品质要求.<br>个性品质是指考生个体的情感、态度和价值观.要求考生具有一定的数学视野，认识数学<br>的科学价值和人文价值，崇尚数学的理性精神,形成审慎的思维习惯,体会数学的美学意义.<br>要求考生克服紧张情绪，以平和的心态参加考试,合理支配考试时间，以实事求是的科学<br>态度解答试题,树立战胜困难的信心,体现锲而不舍的精神.</p>
-<p>考查要求<br>数学学科的系统性和严密性决定了数学知识之间深刻的内在联系,包括各部分知识的纵<br>向联系和横向联系，要善于从本质上抓住这些联系，进而通过分类、梳理、综合,构建数学试卷<br>的框架结构.<br>1.对数学基础知识的考查,既要全面又要突出重点对于支撑学科知识体系的重点内容，要<br>占有较大的比例,构成数学试卷的主体.注重学科的内在联系和知识的综合性,不刻意追求知<br>识的覆盖面.从学科的整体高度和思维价值的高度考虑问题,在知识网络的交汇点处设计试题，<br>使对数学基础知识的考查达到必要的深度.<br>2.对数学思想方法的考查是对数学知识在更高层次上的抽象和概括的考查，考查时必须<br>要与数学知识相结合，通过对数学知识的考查，反映考生对数学思想方法的掌握程度.<br>3.对数学能力的考查,强调“以能力立意”,就是以数学知识为载体，从问题入手，把握学科<br>的整体意义，用统一的数学观点组织材料,侧重体现对知识的理解和应用，尤其是综合和灵活<br>的应用，以此来检测考生将知识迁移到不同情境中去的能力,从而检测出考生个体理性思维的<br>广度和深度以及进- 步学习的潜能.<br>对能力的考查要全面,强调综合性、应用性，并要切合考生实际对推理论证能力和抽象概<br>括能力的考查贯穿于全卷,是考查的重点,强调其科学性、严谨性、抽象性;对空间想象能力<br>的考查主要体现在对文字语言、符号语言及图形语言的互相转化上;对运算求解能力的考查<br>主要是对算法和推理的考查,考查以代数运算为主;对数据处理能力的考查主要是考查运用<br>概率统计的基本方法和思想解决实际问题的能力.<br>4.对应用意识的考查主要采用解决应用问题的形式.命题时要坚持“贴近生活，背景公平，<br>控制难度”的原则,试题设计要切合中学数学教学的实际和考生的年龄特点，并结合实践经验,<br>使数学应用问题的难度符合考生的水平.<br>5.对创新意识的考查是对高层次理性思维的考查.在考试中创设新颖的问题情境,构造有<br>一定深度和厂度的数学 问题时，要注重问题的多样化，体现思维的发散性;精心设计考查数学<br>主体内容、体现数学素质的试题;也要有反映数、形运动变化的试题以及研究型、探索型、<br>开放型等类型的试题.<br>数学科的命题,在考查基础知识的基础上，注重对数学思想方法的考查,注重对数学能力<br>的考查,展现数学的科学价值和人文价值，同时兼顾试题的基础性、综合性和应用性，重视试题<br>间的层次性,合理调控综合程度,坚持多角度、多层次的考查,努力实现全面考查综合数学素<br>养的要求,促进学生德智体美劳全面发展.</p>
-<h1 id="语文"><a href="#语文" class="headerlink" title="语文"></a>语文</h1><h1 id="化学"><a href="#化学" class="headerlink" title="化学"></a>化学</h1><p>1.接受、吸收、整合化学信息的能力<br>(1)对中学化学基础知识能正确复述、再现、辨认，并能融会贯通。<br>(2)通过对自然界、生产和生活中的化学现象的观察，以及实验现象、实物、模型的<br>观察，对图形、图表的阅读，获取有关的感性知识和印象，并进行初步加工、吸收、有序存<br>储。<br>(3)从提供的新信息中，准确地提取实质性内容，并与已有知识整合，重组为新知识<br>块。<br>2.分析和解决化学问题的能力<br>(1)将实际问题分解，通过运用相关知识，采用分析、综合的方法，解决简单化学问<br>题。<br>(2)将分析和解决问题的过程及成果，能正确地运用化学术语及文字、图表、模型、<br>图形等进行表达，并做出合理解释。<br>3.化学实验与探究的能力<br>(1)掌握化学实验的基本方法和技能，并初步实践化学实验的- -般过程。<br>(2)在解决化学问题的过程中，运用化学原理和科学方法，能设计合理方案，初步实<br>践科学探究。</p>
-<h1 id="生物"><a href="#生物" class="headerlink" title="生物"></a>生物</h1><p>1.理解能力<br>(1)能理解所学知识的要点，把握知识间的内在联系，形成知识的网络结构。<br>(2)能用文字、图表以及数学方式等多种表达形式准确地描述生物学方面的内容。<br>(3)能运用所学知识与观点，通过比较、分析与综合等方法对某些生物学问题进行解<br>释、推理，做出合理的判断或得出正确的结论。<br>2.实验与探究能力<br>(1)能独立完成“生物知识内容表”所列的生物实验，包括理解实验目的、原理、方<br>法和操作步骤，掌握相关的操作技能，并能将这些实验涉及的方法和技能等进行运用。<br>(2)具备验证简单生物学事实的能力，能对实验现象和结果进行分析、解释，并能对<br>收集到的数据进行处理。<br>(3)具有对一些生物学问题进行初步探究的能力，包括运用观察、实验与调查、假说<br>演绎、建立模型与系统分析等科学研究方法。<br>(4)能对一些简单的实验方案做出恰当的评价和修订。<br>3.获取信息的能力<br>(1)能从提供的材料中获取相关的生物学信息，并能运用这些信息，结合所学知识解<br>决相关的生物学问题。<br>(2)关注对科学、技术和社会发展有重大影响的、与生命科学相关的突出成就及热点问<br>题。</p>
-<p>4.综合运用能力<br>理论联系实际，综合运用所学知识解决自然界和社会生活中的一些生物学问题。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/03/19/%E9%AB%98%E4%B8%AD/%E7%94%9F%E7%89%A9/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/03/19/%E9%AB%98%E4%B8%AD/%E7%94%9F%E7%89%A9/" itemprop="url">高中/生物</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-03-19T18:58:16+08:00">
-                2022-03-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><img src="/2022/03/19/%E9%AB%98%E4%B8%AD/%E7%94%9F%E7%89%A9/image-20220608210354206.png" alt="image-20220608210354206"></p>
-<p><img src="/2022/03/19/%E9%AB%98%E4%B8%AD/%E7%94%9F%E7%89%A9/image-20220608210411594.png" alt="image-20220608210411594"></p>
-<p>遗传题(基因型,比例,形状)以下可逆推</p>
-<p>看是什么遗传方式常,细胞质,$\rm XY$,$\rm ZW$</p>
-<p>明确性状:常$\left\{ \begin{gathered}<br>  {\text{Ts:}同株} \hfill \\<br>  {\text{ts:}雌株} \hfill \ <br>\end{gathered}  \right.,\text{X}\left\{ \begin{gathered}<br>  {\text{A:}黑} \hfill \\<br>  {\text{a:}白} \hfill \ <br>\end{gathered}  \right.$</p>
-<p>看这几对是否遵循自由组合(可乘)</p>
-<p>看特殊比,找出基因与性状的关联</p>
-<p>$2:1:5 \Rightarrow 2:(1 + 5) = 2 \times (1:3)$</p>
-<p>$(3:1) = {(1:1)^2},(9:7) = {(3:1)^2}$</p>
-<p>了解特殊致死异常不育等条件</p>
-<p>通过乘法加法原理，配子法计算</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/09/19/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E5%BE%85%E5%AE%9A%E7%B3%BB%E6%95%B0%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2021/09/19/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E5%BE%85%E5%AE%9A%E7%B3%BB%E6%95%B0%E6%B3%95/" itemprop="url">高中/数学/待定系数法</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-09-19T21:22:24+08:00">
-                2021-09-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>楼梯有$n$阶，上楼可以一步上$1$阶，也可以一步上$2$阶，</p>
-<p>求上$n$阶台阶的方法数$F_n$</p>
-<p>分析：要上$n$阶台阶，可以上了$n-2$阶后再上$2$阶，</p>
-<p>也可以上$n-1$阶后再上$1$阶</p>
-<p>写成数学语言</p>
-<script type="math/tex; mode=display">
-\color{red}F_n=F_{n-1}+F_{n-2}</script><script type="math/tex; mode=display">
-F_{n}+\lambda F_{n-1}=(1+\lambda)(F_{n-1}+\lambda F_{n-2})\\
-F_{n}=F_{n-1}+(1+\lambda)\lambda F_{n-2}\\</script><script type="math/tex; mode=display">
-\lambda^2+\lambda=1</script><script type="math/tex; mode=display">
-\begin{cases}\lambda_1=\frac{\sqrt{5}-1}{2}\\\lambda_2=\frac{-\sqrt{5}-1}{2} \end{cases}\Rightarrow \{ {F_n} + \lambda {F_{n - 1}}\}</script><p>是公比为$1+\lambda $的等比数列</p>
-<script type="math/tex; mode=display">
-F_{n}=\frac{1}{\sqrt{5}}\left[\left(\frac{1+\sqrt{5}}{2}\right)^{n}-\left(\frac{1-\sqrt{5}}{2}\right)^{n}\right]</script><p>某班级在一次植树种花活动中负责对一片圆环区域栽植鲜花,该圆环区域被等分$ n$个部分$(n\geqslant 4  )$,每个部分从红,黄,蓝三种颜色的鲜花中选取一种进行栽植,要求相邻区域不能用同种颜色的鲜花。将总的栽植方案数用$  a_{n}  $表示,则 $ a_{4}=\underline{\quad\quad}$;$ a_{n}=\underline{\quad\quad}$ </p>
-<p>$1$和$n$颜色不同$\rightarrow a_n$</p>
-<p>$1$和$n$颜色相同，把$1$和$n$看成一个部分$\rightarrow a_{n-1}$</p>
-<script type="math/tex; mode=display">
-a_n+a_{n-1}=3\times(-2)^{n-1}(n>1)</script><script type="math/tex; mode=display">
-\begin{gathered}
-  {a_n} + \lambda  \cdot {2^n} =  - ({a_{n - 1}} + \lambda  \cdot {2^{n - 1}}) \hfill \\
-   - (\lambda  + 2\lambda ) = 3 \Rightarrow \lambda  =  - 1 \hfill \\ 
-\end{gathered}</script><p>$\{ {a_n} - {2^n}\}$是公比为$-1$的等比数列，$a_2=6$</p>
-<script type="math/tex; mode=display">
-\begin{gathered}
-  {a_n} - {2^n} = ({a_2} - {2^2}) \cdot {( - 1)^{n - 2}} \hfill \\
-  {a_n} = {2^n} + 2 \times {( - 1)^{n - 2}} = {2^n} + 2 \times {( - 1)^n} \hfill \\ 
-\end{gathered}</script><script type="math/tex; mode=display">
-a_{n+1}=p a_{n}+a n^{2}+b n+c(p \neq 1,0)\\ \Rightarrow a_{n+1}+x(n+1)^{2}+y(n+1)+z=p\left(a_{n}+x n^{2}+y n+z\right)</script>
           
         
       
@@ -1612,7 +1641,7 @@ a_{n+1}=p a_{n}+a n^{2}+b n+c(p \neq 1,0)\\ \Rightarrow a_{n+1}+x(n+1)^{2}+y(n+1
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">&gt;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">&gt;</a>
   </nav>
 
 
@@ -1658,7 +1687,7 @@ a_{n+1}=p a_{n}+a n^{2}+b n+c(p \neq 1,0)\\ \Rightarrow a_{n+1}+x(n+1)^{2}+y(n+1
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">42</span>
+                <span class="site-state-item-count">51</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
