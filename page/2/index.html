@@ -277,6 +277,283 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/07/31/%E5%A4%A7%E4%B8%80/c%E8%AF%AD%E8%A8%80/%E9%80%89%E6%8B%A9/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/07/31/%E5%A4%A7%E4%B8%80/c%E8%AF%AD%E8%A8%80/%E9%80%89%E6%8B%A9/" itemprop="url">大一/c语言/选择</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-07-31T19:15:01+08:00">
+                2022-07-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="if"><a href="#if" class="headerlink" title="if"></a>if</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">类型<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(<span class="keyword">case</span> A)&#123;</span><br><span class="line">    <span class="comment">//一条语句不用括号</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(<span class="keyword">case</span> B)&#123;</span><br><span class="line">   <span class="comment">//若一条符合则不会看后面的语句</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">类型<span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(<span class="keyword">case</span> <span class="number">1</span>)</span><br><span class="line"><span class="keyword">if</span>(<span class="keyword">case</span> <span class="number">2</span>)<span class="comment">//每条都会看</span></span><br></pre></td></tr></table></figure>
+<h3 id="判断条件"><a href="#判断条件" class="headerlink" title="判断条件"></a>判断条件</h3><script type="math/tex; mode=display">
+==\quad 等于\\
+!=\quad  不等于\\
+>/</>=/<= 比较大小\\
+
+关系运算\\
+逻辑与\;\;\&\& \rm= and\\
+逻辑或\;\;||=or\\
+逻辑非\;\; !=not</script><p>表达式复杂勤用括号</p>
+<h4 id="三目运算符"><a href="#三目运算符" class="headerlink" title="三目运算符"></a>三目运算符</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">if</span>(A) B</span><br><span class="line"> <span class="keyword">else</span> C</span><br><span class="line"> </span><br><span class="line"> 可写成</span><br><span class="line"> A?B:C<span class="comment">//c++中唯一一个三目运算符</span></span><br><span class="line">     <span class="comment">//conditional expression</span></span><br><span class="line">     </span><br><span class="line"><span class="built_in">abs</span>(<span class="keyword">int</span> a)</span><br><span class="line">=&gt;(n &lt; <span class="number">0</span>) ? -n : n</span><br></pre></td></tr></table></figure>
+<h2 id="switch"><a href="#switch" class="headerlink" title="switch"></a>switch</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span>(expression)&#123;<span class="comment">//A 为一个常量表达式</span></span><br><span class="line">    <span class="keyword">case</span> A: ~~~(<span class="keyword">break</span>);</span><br><span class="line">    <span class="keyword">case</span> B: ~~~(<span class="keyword">break</span>);</span><br><span class="line">    <span class="keyword">default</span>:<span class="comment">//都不符合</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> a;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;a;</span><br><span class="line">    <span class="keyword">switch</span> (a)</span><br><span class="line">    &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">'a'</span>:</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"is a\n"</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"not a"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;<span class="comment">//A 为一个常量表达式</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>If the case label matches the switch’s expression, then the statements that follow that label are executed up until the break statement is encountered. </p>
+</blockquote>
+<p>若没有break，一直执行，直到break</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/07/24/%E5%A4%A7%E4%B8%80/c%E8%AF%AD%E8%A8%80/%E6%95%B0%E6%8D%AE%E7%9A%84%E5%AD%98%E5%82%A8%E4%B8%8E%E8%AF%BB%E5%85%A5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/07/24/%E5%A4%A7%E4%B8%80/c%E8%AF%AD%E8%A8%80/%E6%95%B0%E6%8D%AE%E7%9A%84%E5%AD%98%E5%82%A8%E4%B8%8E%E8%AF%BB%E5%85%A5/" itemprop="url">大一/c语言/数据的存储与读入</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-07-24T17:38:18+08:00">
+                2022-07-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><script type="math/tex; mode=display">
+\rm \begin{array}{|c|c|}\hline \rm  \text{data type}  &\rm explain  \\ \hline \rm int&-2^{31}\sim2^{31}-1\\ \hline
+\rm short&-2^{15}\sim2^{15}-1\\ \hline
+\text{long long}&-2^{63}\sim2^{63}-1\\ \hline
+\text{float}& 7位有效数字\\ \hline
+\text{double}& 15位有效数字\\ \hline
+\text{char []}&字符数组(\rm c)\\ \hline
+\text{string}&字符串(\rm c++)\\ \hline
+\text{bool}&布尔类型(0/1)
+\\  \hline \end{array}</script><p>用$\rm sizeof(element)$来显示字节数</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(<span class="keyword">int</span>)a;</span><br><span class="line">(<span class="keyword">int</span>)(x+y); 强制类型转换,运算必须同类型</span><br></pre></td></tr></table></figure>
+<h2 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">\f 换页</span><br><span class="line">\n 换行,下一行首</span><br><span class="line">\r 回车,留在当前行首</span><br><span class="line">\t Tab</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"shiwei\rpsw"</span>);</span><br><span class="line">result: pswwei </span><br><span class="line">\\ 代表<span class="string">'\'</span></span><br><span class="line">同理\",\?,\'</span><br></pre></td></tr></table></figure>
+<h2 id="流"><a href="#流" class="headerlink" title="流"></a>流</h2><h3 id="c"><a href="#c" class="headerlink" title="c"></a>c</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line">f(format)格式</span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"s ss%f"</span>,<span class="number">5.0</span>/<span class="number">3.0</span>)</span><br><span class="line">s ss1<span class="number">.666667</span><span class="comment">//空格也算</span></span><br><span class="line">   %d 十进制有符号整数</span><br><span class="line">　　%u 十进制无符号整数</span><br><span class="line">　　%f 浮点数</span><br><span class="line">　　%s 字符串</span><br><span class="line">　　%c 单个字符</span><br><span class="line">　　%p 指针的值</span><br><span class="line">　　%e 指数形式的浮点数</span><br><span class="line">　　%x, %X 无符号以十六进制表示的整数</span><br><span class="line"></span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;a,&amp;b)</span><br><span class="line">    &amp;是取址运算符,告诉变量存在哪里</span><br></pre></td></tr></table></figure>
+<h3 id="c-1"><a href="#c-1" class="headerlink" title="c++"></a>c++</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> a;</span><br><span class="line"><span class="built_in">cin</span>&gt;&gt;a;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;a;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">cin</span>,<span class="built_in">cout</span>输入输出流</span><br><span class="line">	&gt;&gt;提取 &lt;&lt;插入</span><br><span class="line">   	\<span class="built_in">endl</span>换行</span><br></pre></td></tr></table></figure>
+<h2 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="number">8</span>/<span class="number">3</span>;</span><br><span class="line">	<span class="number">5</span></span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="number">8.0</span>/<span class="number">3</span></span><br><span class="line">    <span class="number">2.66667</span></span><br><span class="line">stream manipulator操作器,操纵符</span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iomanip&gt;	</span></span></span><br><span class="line">        setbase(n)	 设置整数为n进制(n=<span class="number">8</span>,<span class="number">10</span>,<span class="number">16</span>)</span><br><span class="line">        </span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;setprecision(<span class="number">8</span>)&lt;&lt;<span class="number">8.0</span>/<span class="number">3</span>;</span><br><span class="line"><span class="number">2.6666667</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;fixed&lt;&lt;setprecision(<span class="number">8</span>)&lt;&lt;<span class="number">8.0</span>/<span class="number">3</span>;</span><br><span class="line"><span class="number">2.66666667</span>\\八位小数</span><br><span class="line"></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="built_in">std</span>::setw(<span class="number">3</span>) &lt;&lt; x &lt;&lt; <span class="string">'\n'</span>;<span class="comment">//set width</span></span><br><span class="line"><span class="built_in">cout</span>.imbue(locale(<span class="string">""</span>));<span class="comment">//1,000,000,000</span></span><br><span class="line"><span class="comment">//括号内的为国家(按国家习惯输出)</span></span><br><span class="line">%取模</span><br></pre></td></tr></table></figure>
+<script type="math/tex; mode=display">
+\rm << 左移(二进制表示)=\times 2\\
+>>右移=/2(floor)\\
+\sim    按位非\quad        遇1则0,遇0则1\\
+\& :  按位与  \quad      全1才1，否则为0\\
+|:按位或\quad 有1就为1\\
+^\wedge :按位异或\quad 相同为1</script><p>位运算可和数字和bool一起，而逻辑运算只有bool</p>
+<h2 id="赋值"><a href="#赋值" class="headerlink" title="赋值"></a>赋值</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a,b;</span><br><span class="line">a=b=<span class="number">3</span>;;简单赋值</span><br><span class="line"></span><br><span class="line">+= -= *= /=(复合算术赋值)</span><br><span class="line">&amp;= |= ^\ &gt;&gt;= &lt;&lt;=(复合位运算赋值)</span><br><span class="line">i++/++i(先自增再运算)</span><br><span class="line"></span><br><span class="line">常量</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> X=<span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">char</span> i1=<span class="string">'i'</span>;</span><br><span class="line">    i1-=<span class="number">32</span>;</span><br><span class="line">    i=<span class="string">'i'</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;i&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;i1;</span><br><span class="line"><span class="number">-32</span>变大写</span><br><span class="line">输出ASCII码(哈希表)</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E7%A6%BB%E6%95%A3%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1331,287 +1608,6 @@ K=\frac{|y''|}{(1+y'^2)^{3/2}}\approx |y''|</script><p>​                      
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/09/19/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E5%BE%85%E5%AE%9A%E7%B3%BB%E6%95%B0%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2021/09/19/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E5%BE%85%E5%AE%9A%E7%B3%BB%E6%95%B0%E6%B3%95/" itemprop="url">高中/数学/待定系数法</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-09-19T21:22:24+08:00">
-                2021-09-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>楼梯有$n$阶，上楼可以一步上$1$阶，也可以一步上$2$阶，</p>
-<p>求上$n$阶台阶的方法数$F_n$</p>
-<p>分析：要上$n$阶台阶，可以上了$n-2$阶后再上$2$阶，</p>
-<p>也可以上$n-1$阶后再上$1$阶</p>
-<p>写成数学语言</p>
-<script type="math/tex; mode=display">
-\color{red}F_n=F_{n-1}+F_{n-2}</script><script type="math/tex; mode=display">
-F_{n}+\lambda F_{n-1}=(1+\lambda)(F_{n-1}+\lambda F_{n-2})\\
-F_{n}=F_{n-1}+(1+\lambda)\lambda F_{n-2}\\</script><script type="math/tex; mode=display">
-\lambda^2+\lambda=1</script><script type="math/tex; mode=display">
-\begin{cases}\lambda_1=\frac{\sqrt{5}-1}{2}\\\lambda_2=\frac{-\sqrt{5}-1}{2} \end{cases}\Rightarrow \{ {F_n} + \lambda {F_{n - 1}}\}</script><p>是公比为$1+\lambda $的等比数列</p>
-<script type="math/tex; mode=display">
-F_{n}=\frac{1}{\sqrt{5}}\left[\left(\frac{1+\sqrt{5}}{2}\right)^{n}-\left(\frac{1-\sqrt{5}}{2}\right)^{n}\right]</script><p>某班级在一次植树种花活动中负责对一片圆环区域栽植鲜花,该圆环区域被等分$ n$个部分$(n\geqslant 4  )$,每个部分从红,黄,蓝三种颜色的鲜花中选取一种进行栽植,要求相邻区域不能用同种颜色的鲜花。将总的栽植方案数用$  a_{n}  $表示,则 $ a_{4}=\underline{\quad\quad}$;$ a_{n}=\underline{\quad\quad}$ </p>
-<p>$1$和$n$颜色不同$\rightarrow a_n$</p>
-<p>$1$和$n$颜色相同，把$1$和$n$看成一个部分$\rightarrow a_{n-1}$</p>
-<script type="math/tex; mode=display">
-a_n+a_{n-1}=3\times(-2)^{n-1}(n>1)</script><script type="math/tex; mode=display">
-\begin{gathered}
-  {a_n} + \lambda  \cdot {2^n} =  - ({a_{n - 1}} + \lambda  \cdot {2^{n - 1}}) \hfill \\
-   - (\lambda  + 2\lambda ) = 3 \Rightarrow \lambda  =  - 1 \hfill \\ 
-\end{gathered}</script><p>$\{ {a_n} - {2^n}\}$是公比为$-1$的等比数列，$a_2=6$</p>
-<script type="math/tex; mode=display">
-\begin{gathered}
-  {a_n} - {2^n} = ({a_2} - {2^2}) \cdot {( - 1)^{n - 2}} \hfill \\
-  {a_n} = {2^n} + 2 \times {( - 1)^{n - 2}} = {2^n} + 2 \times {( - 1)^n} \hfill \\ 
-\end{gathered}</script><script type="math/tex; mode=display">
-a_{n+1}=p a_{n}+a n^{2}+b n+c(p \neq 1,0)\\ \Rightarrow a_{n+1}+x(n+1)^{2}+y(n+1)+z=p\left(a_{n}+x n^{2}+y n+z\right)</script>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/06/06/%E9%AB%98%E4%B8%AD/%E7%89%A9%E7%90%86/%E5%8A%9B%E5%AD%A6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2021/06/06/%E9%AB%98%E4%B8%AD/%E7%89%A9%E7%90%86/%E5%8A%9B%E5%AD%A6/" itemprop="url">高中/物理/力学</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-06-06T21:58:00+08:00">
-                2021-06-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <script type="math/tex; mode=display">
-\sum_{i=1}^n m_iv_i=\sum_{i=1}^n m_iv'_i\\
-
-\sum F\triangle t=\sum_{i=1}^n m_i\triangle v_i\Rightarrow F=\frac{\text{d}(mv)}{\text{d}t}</script><script type="math/tex; mode=display">
-\sum F\triangle x=\frac12mv^2-\frac12mv_0^2</script><script type="math/tex; mode=display">
-v_1=\frac{m_1-m_2}{m_1+m_2}v_0\\v_2=\frac{2m_1}{m_1+m_2}v_0</script><script type="math/tex; mode=display">
-x_{重心}=\frac{\sum G_ix_i}{\sum G_i}\\x_{质心}=\frac{\sum m_ix_i}{\sum m_i}</script><script type="math/tex; mode=display">
-\begin{align}
-\text{E}_p&=\int_0^{\Delta  x} kx\text{d}x
-\\&=\left.\frac12kx^2\right|_0^{\Delta  x}
-\\&=\frac12k{\Delta  x}^2
-\end{align}</script><script type="math/tex; mode=display">
-F = G\frac{m_1m_2}{r^2}\\
- \begin{cases}
-  r \to 距离 \\
-  R \to 半径  \\
-  h = r - R \hfill \\ 
-\end{cases}</script>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1662,7 +1658,7 @@ F = G\frac{m_1m_2}{r^2}\\
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">51</span>
+                <span class="site-state-item-count">53</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

@@ -1,0 +1,57 @@
+#input{
+    border: 2px solid rgb(22, 23, 23); 
+    color: black; 
+    caret-color: rgb(0, 0, 0);
+    resize: none;
+    height: 13em;
+    width: 99.5%;
+    font-size: 2em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+hr{
+    background-image: linear-gradient(to right,rgb(233, 231, 231),#333,rgb(233, 231, 231));
+    margin-bottom: 1em;
+}
+
+#out-text{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2em ;
+    margin-right: 1em;
+}
+
+#output{
+    width: 99.5%;
+    height: 5em;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+}
+
+.btn{
+
+    border: 0;
+    display: block;
+    padding: 0;
+    outline: none;
+    height: 30px;
+    border-radius: 50%;
+    width: 30px;
+    font-size: 24px;
+    font-family: Helvetica;
+    font-weight: normal;
+    color: #999;
+    background: linear-gradient(135deg, rgba(230, 230, 230, 1) 0%, rgba(246, 246, 246, 1) 100%);
+    box-shadow: -4px -4px 10px -8px rgba(255, 255, 255, 1), 4px 4px 10px -8px rgba(0, 0, 0, .3);
+}
+
+.btn:active {
+    box-shadow: -4px -4px 10px -8px rgba(255, 255, 255, 1) inset, 4px 4px 10px -8px rgba(0, 0, 0, .3) inset;
+  }
+
+
+#btn1{
+    margin-right: 1em;
+}

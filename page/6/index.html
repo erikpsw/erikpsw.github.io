@@ -277,6 +277,337 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/13/%E9%AB%98%E4%B8%AD/%E8%8A%B3%E8%B4%BA%E5%AE%9A%E7%90%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/08/13/%E9%AB%98%E4%B8%AD/%E8%8A%B3%E8%B4%BA%E5%AE%9A%E7%90%86/" itemprop="url">高中/芳贺定理</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-13T12:40:49+08:00">
+                2020-08-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="1-芳贺第一定理"><a href="#1-芳贺第一定理" class="headerlink" title="1.芳贺第一定理"></a>1.芳贺第一定理</h2><p>日本筑波大学生物学教授芳贺和夫（Kazuo Haga），在等待实 验结果的时候喜欢用摺纸打发时间。他发现了以下的有趣结果。</p>
+<p><img src="/2020/08/13/%E9%AB%98%E4%B8%AD/%E8%8A%B3%E8%B4%BA%E5%AE%9A%E7%90%86/image-20200813124235857.png" alt></p>
+<p>$Claim:F$为$AB$的三等分点</p>
+<p>$proof:$</p>
+<p>设正方形边长为1，将$C$折到$AD$的中点$E$处，由图</p>
+<script type="math/tex; mode=display">
+x^{2}+\left(\frac{1}{2}\right)^{2}=(1-x)^{2}</script><p>解得$x=\frac{3}{8}$</p>
+<p>又$\triangle FAR \sim \triangle EDH$</p>
+<script type="math/tex; mode=display">
+\frac{y}{\frac{1}{2}}=\frac{\frac{1}{2}}{x}</script><p>解得$y=\frac{2}{3}$</p>
+<p>$Property:$</p>
+<h3 id="推广："><a href="#推广：" class="headerlink" title="推广："></a>推广：</h3><p><img src="/2020/08/13/%E9%AB%98%E4%B8%AD/%E8%8A%B3%E8%B4%BA%E5%AE%9A%E7%90%86/image-20200813134225211.png" alt="image-20200813134225211"></p>
+<script type="math/tex; mode=display">
+x^{2}+k^{2}=(1-x)^{2}</script><script type="math/tex; mode=display">
+\frac{y}{1-k}=\frac{k}{x}</script><p>通过相似三角形和勾股定理，联立两个方程</p>
+<script type="math/tex; mode=display">
+\frac{y}{1-k}=\frac{k}{\left(1-k^{2}\right) / 2}</script><script type="math/tex; mode=display">
+\frac{y}{2}=\frac{k}{1+k}</script><p>若正方形边长为1，有$k=\frac{1}{N}$，带入得到</p>
+<script type="math/tex; mode=display">
+\frac{y}{2}=\frac{1 / N}{1+1 / N}=\frac{1}{N+1}</script><p><img src="/2020/08/13/%E9%AB%98%E4%B8%AD/%E8%8A%B3%E8%B4%BA%E5%AE%9A%E7%90%86/image-20200813135158277.png" alt="image-20200813135158277"></p>
+<p>如果一直按此方法重复，就可以由$n$等分得到$n+1$等分，于是便得到了任意等分 <del>有点麻烦</del></p>
+<p><img src="/2020/08/13/%E9%AB%98%E4%B8%AD/%E8%8A%B3%E8%B4%BA%E5%AE%9A%E7%90%86/image-20200813195253772.png" alt="image-20200813195253772">注意左上角的直角三角形，它是一个$3:4:5$的直角三角形，难道这只是巧合吗</p>
+<p><img src="/2020/08/13/%E9%AB%98%E4%B8%AD/%E8%8A%B3%E8%B4%BA%E5%AE%9A%E7%90%86/image-20200813201010031.png" alt="image-20200813201010031"></p>
+<p>$A B=1, A N=x  $及$A M=\frac{p}{q}  $其 中 $p, q \in \mathbb{N},  M N=1-x $</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\left(\frac{p}{q}\right)^{2}+x^{2} &=(1-x)^{2} \\
+\frac{p^{2}}{q^{2}}+x^{2} &=1-2 x+x^{2} \\
+x &=\frac{q^{2}-p^{2}}{2 q^{2}}
+\end{aligned}</script><p>所以，</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+A N: A M: M N &=\frac{q^{2}-p^{2}}{2 q^{2}}: \frac{p}{q}: 1-\frac{q^{2}-p^{2}}{2 q^{2}} \\
+&=q^{2}-p^{2}: 2 p q: p^{2}+q^{2}
+\end{aligned}</script><p>所以只要$p$和$q$是整数，那么这三条边的比就一定是勾股数</p>
+<script type="math/tex; mode=display">
+\begin{array}{|l|l|}
+\hline p / q & A N: A M: M N \\
+\hline 1 / 2 & 3: 4: 5 \\
+\hline 2 / 3 & 5: 12: 13 \\
+\hline 1 / 4 & 15: 8: 17 \\
+\hline
+\end{array}</script><h2 id="2-芳贺第二定理"><a href="#2-芳贺第二定理" class="headerlink" title="2.芳贺第二定理"></a>2.芳贺第二定理</h2><p><img src="/2020/08/13/%E9%AB%98%E4%B8%AD/%E8%8A%B3%E8%B4%BA%E5%AE%9A%E7%90%86/image-20200813124422672.png" alt="image-20200813124422672"></p>
+<p>将$AB$沿$CF$折叠，延长$FG$交$AD$于$E$</p>
+<p>在$\triangle AEF$中，有</p>
+<script type="math/tex; mode=display">
+(1-x)^{2}+(\frac{1}{2})^{2}=(x+\frac{1}{2})^2</script><p>解得$x=\frac{1}{3}$，即$E$是$AD$的三等分点</p>
+<h2 id="3-芳贺第三定理"><a href="#3-芳贺第三定理" class="headerlink" title="3.芳贺第三定理"></a>3.芳贺第三定理</h2><p><img src="/2020/08/13/%E9%AB%98%E4%B8%AD/%E8%8A%B3%E8%B4%BA%E5%AE%9A%E7%90%86/image-20200813124308393.png" alt="image-20200813124308393"></p>
+<p>设正方形 $ABCD$的边长为1,$ C M$=$x$, $C G$=$y$</p>
+<p>将$AB$边折到$AD$中点$E$上，并让$B$点落在$CD$上</p>
+<p>由  $\triangle E D M \sim \triangle C M G$,  可得</p>
+<script type="math/tex; mode=display">
+\frac{D E}{D M}=\frac{C M}{C G}</script><p>在$\triangle  C M G$  中, $G M<script type="math/tex">=</script>1-CG=1-y$，有</p>
+<script type="math/tex; mode=display">
+x^{2}+y^{2}=(1-y)^{2}</script><p>解之得</p>
+<script type="math/tex; mode=display">
+y=\frac{1-x^{2}}{2}</script><p>带入得$x=\frac{1}{3}$，即点$M$是$  C D  $的三等分点.</p>
+<h2 id="4-再谈n等分"><a href="#4-再谈n等分" class="headerlink" title="4.再谈n等分"></a>4.再谈n等分</h2><p><img src="/2020/08/13/%E9%AB%98%E4%B8%AD/%E8%8A%B3%E8%B4%BA%E5%AE%9A%E7%90%86/image-20200813191319434.png" alt="image-20200813191319434"></p>
+<p> 如果我们得到了$n-1$等分，在图中不难看出</p>
+<script type="math/tex; mode=display">
+\frac{\frac{1}{n-1}}{1}=\frac{x}{y}</script><p>消去$y$可以得到$x=\frac{1}{n}$</p>
+<p>这样我们又有一种n等分的方式</p>
+<p>$tip:$如果要得到7等分，我们可以先折3等分再对折，从而由6等分得到7等分</p>
+<h3 id="References"><a href="#References" class="headerlink" title="References:"></a>References:</h3><ol>
+<li><a href="https://plus.maths.org/content/folding-numbers" target="_blank" rel="noopener">https://plus.maths.org/content/folding-numbers</a></li>
+<li><a href="https://www.bilibili.com/read/cv5270753/" target="_blank" rel="noopener">https://www.bilibili.com/read/cv5270753/</a></li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/12/%E9%AB%98%E4%B8%AD/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/08/12/%E9%AB%98%E4%B8%AD/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/" itemprop="url">高中/等边三角形</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-12T12:33:19+08:00">
+                2020-08-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="1-在正方形中折出等边三角形"><a href="#1-在正方形中折出等边三角形" class="headerlink" title="1.在正方形中折出等边三角形"></a>1.在正方形中折出等边三角形</h1><p><img src="/2020/08/12/%E9%AB%98%E4%B8%AD/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/image-20200812191310620.png" alt="image-20200812191310620"></p>
+<p>要折等边三角形，首先要折出$60{\circ}$的角，以下是最容易的一种方法</p>
+<p>如何让三角形最大呢</p>
+<p><img src="/2020/08/12/%E9%AB%98%E4%B8%AD/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/image-20200812191310620.png" alt="image-20200812191310620"></p>
+<ul>
+<li>如果等边三角形的三个顶点没有落在正方形的四条边上，那么可以放大三角形让它落在边上</li>
+<li>如果有顶点落在边上，可以平移，旋转该三角形，使其某一顶点落在正方形的任意顶点上</li>
+</ul>
+<p>所以我们只需要研究某一个顶点和正方形的顶点重合的等边三角形</p>
+<p><img src="/2020/08/12/%E9%AB%98%E4%B8%AD/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/image-20210430220255705.png" alt="image-20210430220255705"></p>
+<p>画出图形，由几何关系，三角形的边长$l$可以用$\theta$表达<br>$<br>l=1 / \cos \theta=\sec \theta<br>$<br>故面积$S$为<br>$<br>S(\theta)=\frac{\sqrt{3}}{4} \sec ^{2} \theta<br>$<br>根据对称性，我们只需要考虑$0^{\circ} \leq \theta \leq 15^{\circ}$的情况</p>
+<p>因为$\cos \theta $在$0^{\circ} \leq \theta \leq 15^{\circ}$单调递减</p>
+<p>所以$\sec\theta=\frac{1}{ {\cos \theta } }$在$0^{\circ} \leq \theta \leq 15^{\circ}$单调递增</p>
+<p>或对面积求导<br>$<br>\frac{\mathrm{d}S}{\mathrm{d} \theta } =2\cdot \frac{\sqrt{3}}{4} \cdot \frac{1}{\cos\theta  } \cdot -\frac{1}{\cos ^{2} \theta}\cdot<br>-\sin \theta  =\frac{\sqrt[]{3}\sin \theta  }{2\cos^{3} \theta }<br>$<br>当$\theta=15^{\circ}$时有最大值</p>
+<p>故此时$l=\sqrt{6}-\sqrt{2}=1.035$</p>
+<p><img src="/2020/08/12/%E9%AB%98%E4%B8%AD/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/untitled.png" alt="untitled"></p>
+<p>或者用几何方法分析<br>$\begin{array}{l}l &amp;=\sqrt{AB^2+BE^2} \\&amp;=\sqrt{1+BE^2}\end{array}$<br>当$BE$最大时边长有最大值</p>
+<p>$\therefore\begin{array}{l}S &amp;=\frac12l^2\sin60^\circ \\&amp;=\frac{\sqrt{3}}{4}\times(\frac{AB}{\cos15^\circ})^2\end{array}\\$</p>
+<p>由半角公式得</p>
+<p>$\begin{array}{l}\sin15^\circ &amp;=\sqrt{\frac{1-\sin30^\circ}{2}}\\&amp;=\frac12\sqrt{2-\sqrt3} \\&amp;=\frac12\sqrt{(\frac{\sqrt6}{2})^2-2\cdot\frac{\sqrt6}{2}\cdot\frac{\sqrt2}{2}+(\frac{\sqrt2}{2})^2} \\&amp;=\frac12\sqrt{(\frac{\sqrt6}{2}-\frac{\sqrt2}{2})^2} \\&amp;=\frac{\sqrt6-\sqrt2}{4}\end{array}$</p>
+<p>$\begin{array}{l}\cos15^\circ &amp;=\sqrt{\frac{1+\cos30^\circ}{2}} \\&amp;=\frac{\sqrt6+\sqrt2}{4}\end{array}$</p>
+<p>或使用两角和与差公式$\sin(\theta\pm\phi)=\sin\theta\cos\phi\pm\cos\theta\sin\phi$有</p>
+<p>$\begin{array}{l}\sin15^\circ &amp;=\sin(60^\circ-45^\circ)\\&amp;=\sin60^\circ\cos45^\circ-\cos60^\circ\sin45^\circ\\&amp;=\frac{\sqrt6-\sqrt2}{4}\end{array}$</p>
+<p>$\begin{array}{l}\cos15^\circ &amp;=\sqrt{1-\sin15^\circ} \\&amp;=\frac{\sqrt6+\sqrt2}{4}\end{array}$</p>
+<p>故$S=\frac{\sqrt{3}}{4}(\frac{4}{\sqrt6+\sqrt2})^2=2\sqrt3-3$</p>
+<p><img src="/2020/08/12/%E9%AB%98%E4%B8%AD/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/triangle.gif" alt="triangle"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/14/%E9%AB%98%E4%B8%AD/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -518,7 +849,7 @@ x=A \mathrm{e}^{-n t} \sin (\omega t+\varphi)</script><p>物体的运动是周�
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">51</span>
+                <span class="site-state-item-count">53</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

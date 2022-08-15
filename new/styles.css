@@ -59,9 +59,10 @@
 }   
 
 #name2{
-    font-family: STZhongsong; 
-    font-size: 3em;
+    font-family: SimSun; 
+    font-size: 3.5em;
     margin: 2%;
+    font-weight: bolder
 } 
 
 .network_icon{
@@ -108,9 +109,37 @@
     display: none;
 }
 
-#end{
-    padding-left: 35%;
+
+#quote{
+    display: grid;
+    place-items: center;
+    padding-top: 0em;
 }
+
+.hline{
+    background-image: linear-gradient(to right,rgb(233, 231, 231),#333,rgb(233, 231, 231));
+}
+
+#line1{
+    margin-top: 200px;
+}
+#work-title{
+    font-size: 3em;
+    padding-left: 0.5em;
+}
+#line2{
+    margin-top: 100em;
+}
+
+#work-list{
+    margin-left: 1em;
+}
+#work1{
+    font-size: 3em;
+    font-family: 'Courier New';
+    font-weight: bolder;
+    text-decoration:none;
+    color:black
 
 }
 
@@ -179,9 +208,10 @@
     }   
     
     #name2{
-        font-family: STZhongsong; 
-        font-size: 3em;
+        font-family: SimSun; 
+        font-size: 3.5em;
         margin: 2%;
+        font-weight: bolder
     } 
     
     .network_icon{
@@ -215,6 +245,7 @@
         padding-top: 3em;
         box-sizing: border-box;
         float: left;
+        
     }
     
     .text{
@@ -241,11 +272,12 @@
         display: none;
     }
 
-    #end{
-        padding-left: 20%;
-    }
-}
-
 #quote{
-    font-family: Times New Roman;
-}
+    display: grid;
+    place-items: center;
+    padding-top: 0em;
+}}}
+
+
+
+
