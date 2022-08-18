@@ -215,6 +215,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
@@ -277,7 +287,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/14/%E9%AB%98%E4%B8%AD/%E5%89%8D%E5%B7%9D%E5%AE%9A%E7%90%86/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E5%9F%BA%E6%9C%AC/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Shiwei Pan">
@@ -296,7 +306,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/08/14/%E9%AB%98%E4%B8%AD/%E5%89%8D%E5%B7%9D%E5%AE%9A%E7%90%86/" itemprop="url">高中/前川定理</a></h1>
+                <a class="post-title-link" href="/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E5%9F%BA%E6%9C%AC/" itemprop="url">大一/概率论/基本</a></h1>
         
 
         <div class="post-meta">
@@ -308,8 +318,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-14T12:47:21+08:00">
-                2020-08-14
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-07-23T21:09:55+08:00">
+                2022-07-23
               </time>
             
 
@@ -348,576 +358,448 @@
       
         
           
-            <h2 id="前川定理-The-Maekawa-Justin-Theorem"><a href="#前川定理-The-Maekawa-Justin-Theorem" class="headerlink" title="前川定理(The Maekawa-Justin Theorem)"></a>前川定理(The Maekawa-Justin Theorem)</h2><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><img src="/2020/08/14/%E9%AB%98%E4%B8%AD/%E5%89%8D%E5%B7%9D%E5%AE%9A%E7%90%86/artist_jun_maekawa.jpg" alt="artist_jun_maekawa"></p>
-<p>MAEKAWA Jun (前川淳)，日本的软件工程师，数学家，折纸艺术家。</p>
-<p>平顶点折叠的例子</p>
-<p><img src="/2020/08/14/%E9%AB%98%E4%B8%AD/%E5%89%8D%E5%B7%9D%E5%AE%9A%E7%90%86/image-20200814130413151.png" alt="image-20200814130413151"></p>
-<p><img src="/2020/08/14/%E9%AB%98%E4%B8%AD/%E5%89%8D%E5%B7%9D%E5%AE%9A%E7%90%86/image-20200814130404199.png" alt="image-20200814130404199"></p>
-<p><img src="/2020/08/14/%E9%AB%98%E4%B8%AD/%E5%89%8D%E5%B7%9D%E5%AE%9A%E7%90%86/image-20200814130423490.png" alt="image-20200814130423490"></p>
-<p>让$M(\text{Mountain})$和$V(\text{Valley})$分别代表平顶点折叠中山折和谷折的数量，则前川定理可以表示为</p>
-<p>$M = V +2 \quad \text{or}\quad V = M + 2$</p>
-<p>即$|M-V|=2$</p>
-<p>$\text{Proof}\;1:$</p>
-<p><img src="/2020/08/14/%E9%AB%98%E4%B8%AD/%E5%89%8D%E5%B7%9D%E5%AE%9A%E7%90%86/image-20200814124909047.png" alt="image-20200814124909047"></p>
-<p>由于我们只关心顶点$x$和周围的折痕，所以可以以$x$为圆心做一个圆$(a)$，按折痕折叠后形成$(b)$</p>
-<p><img src="/2020/08/14/%E9%AB%98%E4%B8%AD/%E5%89%8D%E5%B7%9D%E5%AE%9A%E7%90%86/image-20200814125047016.png" alt="image-20200814125047016"></p>
-<p>从下往上看向顶点x，可以发现圆环形成了一个闭合回路$(c)$</p>
-<p><img src="/2020/08/14/%E9%AB%98%E4%B8%AD/%E5%89%8D%E5%B7%9D%E5%AE%9A%E7%90%86/image-20200814125056916.png" alt="image-20200814125056916"></p>
-<p>想象有一个蚂蚁从$p$点出发在这个闭合回路上爬行，遇到山折便逆时针旋转$180^{\circ}$，遇到谷折便顺时针旋转$180^{\circ}$，最后回到原点，方向和开始一样，由于沿着闭合回路走了一周，相当于旋转了$360^{\circ}$度，即</p>
-<p>$M · 180^{\circ} +V ·(−180^{\circ}) = 360^{\circ}$</p>
-<p>$M − V = 2$</p>
-<p>因为纸有两面，如果从另一面看，原来的山折变成了谷折，原来的谷折变成了山折，所以有</p>
-<p>$V − M = 2$</p>
-<p>这样便证明了前川定理</p>
-<p>$\text{Proof}\;2:$</p>
-<p>这个证明是由$\text{Jan Siwanowicz}$在他还是个高中生的时候提出的</p>
-<p><img src="/2020/08/14/%E9%AB%98%E4%B8%AD/%E5%89%8D%E5%B7%9D%E5%AE%9A%E7%90%86/image-20200814130533821.png" alt="image-20200814130533821"></p>
-<p>将此前的闭合回路看作一个多边形，把山折看成内角等于$0$，谷折看成内角等于$360^{\circ}$</p>
-<p>由多边形内角和定理</p>
-<p>$\sum\limits_{i=1}^n\theta_i=(n-2)×180^{\circ}$</p>
-<p>推得在这个多边形中，内角和为</p>
-<p>$M · 0^{\circ} +V · 360^{\circ}$</p>
-<p>所以$V · 360^{\circ} = (M +V-2)180^{\circ}$</p>
-<p>$\therefore M = V +2 \quad \text{or}\quad V = M + 2$</p>
-<p><img src="/2020/08/14/%E9%AB%98%E4%B8%AD/%E5%89%8D%E5%B7%9D%E5%AE%9A%E7%90%86/image-20200814191350681.png" alt="image-20200814191350681"></p>
-<h3 id="推广："><a href="#推广：" class="headerlink" title="推广："></a>推广：</h3><p>$M + V = 2(V+1) \quad \text{or} \quad2(V − 1)$</p>
-<p>得到偶数定理：单顶点折叠中折痕总数必为偶数，角的总数也必为偶数</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/13/%E9%AB%98%E4%B8%AD/%E8%8A%B3%E8%B4%BA%E5%AE%9A%E7%90%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/08/13/%E9%AB%98%E4%B8%AD/%E8%8A%B3%E8%B4%BA%E5%AE%9A%E7%90%86/" itemprop="url">高中/芳贺定理</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-13T12:40:49+08:00">
-                2020-08-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="1-芳贺第一定理"><a href="#1-芳贺第一定理" class="headerlink" title="1.芳贺第一定理"></a>1.芳贺第一定理</h2><p>日本筑波大学生物学教授芳贺和夫（Kazuo Haga），在等待实 验结果的时候喜欢用摺纸打发时间。他发现了以下的有趣结果。</p>
-<p><img src="/2020/08/13/%E9%AB%98%E4%B8%AD/%E8%8A%B3%E8%B4%BA%E5%AE%9A%E7%90%86/image-20200813124235857.png" alt></p>
-<p>$Claim:F$为$AB$的三等分点</p>
-<p>$proof:$</p>
-<p>设正方形边长为1，将$C$折到$AD$的中点$E$处，由图</p>
-<script type="math/tex; mode=display">
-x^{2}+\left(\frac{1}{2}\right)^{2}=(1-x)^{2}</script><p>解得$x=\frac{3}{8}$</p>
-<p>又$\triangle FAR \sim \triangle EDH$</p>
-<script type="math/tex; mode=display">
-\frac{y}{\frac{1}{2}}=\frac{\frac{1}{2}}{x}</script><p>解得$y=\frac{2}{3}$</p>
-<p>$Property:$</p>
-<h3 id="推广："><a href="#推广：" class="headerlink" title="推广："></a>推广：</h3><p><img src="/2020/08/13/%E9%AB%98%E4%B8%AD/%E8%8A%B3%E8%B4%BA%E5%AE%9A%E7%90%86/image-20200813134225211.png" alt="image-20200813134225211"></p>
-<script type="math/tex; mode=display">
-x^{2}+k^{2}=(1-x)^{2}</script><script type="math/tex; mode=display">
-\frac{y}{1-k}=\frac{k}{x}</script><p>通过相似三角形和勾股定理，联立两个方程</p>
-<script type="math/tex; mode=display">
-\frac{y}{1-k}=\frac{k}{\left(1-k^{2}\right) / 2}</script><script type="math/tex; mode=display">
-\frac{y}{2}=\frac{k}{1+k}</script><p>若正方形边长为1，有$k=\frac{1}{N}$，带入得到</p>
-<script type="math/tex; mode=display">
-\frac{y}{2}=\frac{1 / N}{1+1 / N}=\frac{1}{N+1}</script><p><img src="/2020/08/13/%E9%AB%98%E4%B8%AD/%E8%8A%B3%E8%B4%BA%E5%AE%9A%E7%90%86/image-20200813135158277.png" alt="image-20200813135158277"></p>
-<p>如果一直按此方法重复，就可以由$n$等分得到$n+1$等分，于是便得到了任意等分 <del>有点麻烦</del></p>
-<p><img src="/2020/08/13/%E9%AB%98%E4%B8%AD/%E8%8A%B3%E8%B4%BA%E5%AE%9A%E7%90%86/image-20200813195253772.png" alt="image-20200813195253772">注意左上角的直角三角形，它是一个$3:4:5$的直角三角形，难道这只是巧合吗</p>
-<p><img src="/2020/08/13/%E9%AB%98%E4%B8%AD/%E8%8A%B3%E8%B4%BA%E5%AE%9A%E7%90%86/image-20200813201010031.png" alt="image-20200813201010031"></p>
-<p>$A B=1, A N=x  $及$A M=\frac{p}{q}  $其 中 $p, q \in \mathbb{N},  M N=1-x $</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-\left(\frac{p}{q}\right)^{2}+x^{2} &=(1-x)^{2} \\
-\frac{p^{2}}{q^{2}}+x^{2} &=1-2 x+x^{2} \\
-x &=\frac{q^{2}-p^{2}}{2 q^{2}}
-\end{aligned}</script><p>所以，</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-A N: A M: M N &=\frac{q^{2}-p^{2}}{2 q^{2}}: \frac{p}{q}: 1-\frac{q^{2}-p^{2}}{2 q^{2}} \\
-&=q^{2}-p^{2}: 2 p q: p^{2}+q^{2}
-\end{aligned}</script><p>所以只要$p$和$q$是整数，那么这三条边的比就一定是勾股数</p>
-<script type="math/tex; mode=display">
-\begin{array}{|l|l|}
-\hline p / q & A N: A M: M N \\
-\hline 1 / 2 & 3: 4: 5 \\
-\hline 2 / 3 & 5: 12: 13 \\
-\hline 1 / 4 & 15: 8: 17 \\
-\hline
-\end{array}</script><h2 id="2-芳贺第二定理"><a href="#2-芳贺第二定理" class="headerlink" title="2.芳贺第二定理"></a>2.芳贺第二定理</h2><p><img src="/2020/08/13/%E9%AB%98%E4%B8%AD/%E8%8A%B3%E8%B4%BA%E5%AE%9A%E7%90%86/image-20200813124422672.png" alt="image-20200813124422672"></p>
-<p>将$AB$沿$CF$折叠，延长$FG$交$AD$于$E$</p>
-<p>在$\triangle AEF$中，有</p>
-<script type="math/tex; mode=display">
-(1-x)^{2}+(\frac{1}{2})^{2}=(x+\frac{1}{2})^2</script><p>解得$x=\frac{1}{3}$，即$E$是$AD$的三等分点</p>
-<h2 id="3-芳贺第三定理"><a href="#3-芳贺第三定理" class="headerlink" title="3.芳贺第三定理"></a>3.芳贺第三定理</h2><p><img src="/2020/08/13/%E9%AB%98%E4%B8%AD/%E8%8A%B3%E8%B4%BA%E5%AE%9A%E7%90%86/image-20200813124308393.png" alt="image-20200813124308393"></p>
-<p>设正方形 $ABCD$的边长为1,$ C M$=$x$, $C G$=$y$</p>
-<p>将$AB$边折到$AD$中点$E$上，并让$B$点落在$CD$上</p>
-<p>由  $\triangle E D M \sim \triangle C M G$,  可得</p>
-<script type="math/tex; mode=display">
-\frac{D E}{D M}=\frac{C M}{C G}</script><p>在$\triangle  C M G$  中, $G M<script type="math/tex">=</script>1-CG=1-y$，有</p>
-<script type="math/tex; mode=display">
-x^{2}+y^{2}=(1-y)^{2}</script><p>解之得</p>
-<script type="math/tex; mode=display">
-y=\frac{1-x^{2}}{2}</script><p>带入得$x=\frac{1}{3}$，即点$M$是$  C D  $的三等分点.</p>
-<h2 id="4-再谈n等分"><a href="#4-再谈n等分" class="headerlink" title="4.再谈n等分"></a>4.再谈n等分</h2><p><img src="/2020/08/13/%E9%AB%98%E4%B8%AD/%E8%8A%B3%E8%B4%BA%E5%AE%9A%E7%90%86/image-20200813191319434.png" alt="image-20200813191319434"></p>
-<p> 如果我们得到了$n-1$等分，在图中不难看出</p>
-<script type="math/tex; mode=display">
-\frac{\frac{1}{n-1}}{1}=\frac{x}{y}</script><p>消去$y$可以得到$x=\frac{1}{n}$</p>
-<p>这样我们又有一种n等分的方式</p>
-<p>$tip:$如果要得到7等分，我们可以先折3等分再对折，从而由6等分得到7等分</p>
-<h3 id="References"><a href="#References" class="headerlink" title="References:"></a>References:</h3><ol>
-<li><a href="https://plus.maths.org/content/folding-numbers" target="_blank" rel="noopener">https://plus.maths.org/content/folding-numbers</a></li>
-<li><a href="https://www.bilibili.com/read/cv5270753/" target="_blank" rel="noopener">https://www.bilibili.com/read/cv5270753/</a></li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/12/%E9%AB%98%E4%B8%AD/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/08/12/%E9%AB%98%E4%B8%AD/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/" itemprop="url">高中/等边三角形</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-12T12:33:19+08:00">
-                2020-08-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="1-在正方形中折出等边三角形"><a href="#1-在正方形中折出等边三角形" class="headerlink" title="1.在正方形中折出等边三角形"></a>1.在正方形中折出等边三角形</h1><p><img src="/2020/08/12/%E9%AB%98%E4%B8%AD/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/image-20200812191310620.png" alt="image-20200812191310620"></p>
-<p>要折等边三角形，首先要折出$60{\circ}$的角，以下是最容易的一种方法</p>
-<p>如何让三角形最大呢</p>
-<p><img src="/2020/08/12/%E9%AB%98%E4%B8%AD/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/image-20200812191310620.png" alt="image-20200812191310620"></p>
-<ul>
-<li>如果等边三角形的三个顶点没有落在正方形的四条边上，那么可以放大三角形让它落在边上</li>
-<li>如果有顶点落在边上，可以平移，旋转该三角形，使其某一顶点落在正方形的任意顶点上</li>
-</ul>
-<p>所以我们只需要研究某一个顶点和正方形的顶点重合的等边三角形</p>
-<p><img src="/2020/08/12/%E9%AB%98%E4%B8%AD/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/image-20210430220255705.png" alt="image-20210430220255705"></p>
-<p>画出图形，由几何关系，三角形的边长$l$可以用$\theta$表达<br>$<br>l=1 / \cos \theta=\sec \theta<br>$<br>故面积$S$为<br>$<br>S(\theta)=\frac{\sqrt{3}}{4} \sec ^{2} \theta<br>$<br>根据对称性，我们只需要考虑$0^{\circ} \leq \theta \leq 15^{\circ}$的情况</p>
-<p>因为$\cos \theta $在$0^{\circ} \leq \theta \leq 15^{\circ}$单调递减</p>
-<p>所以$\sec\theta=\frac{1}{ {\cos \theta } }$在$0^{\circ} \leq \theta \leq 15^{\circ}$单调递增</p>
-<p>或对面积求导<br>$<br>\frac{\mathrm{d}S}{\mathrm{d} \theta } =2\cdot \frac{\sqrt{3}}{4} \cdot \frac{1}{\cos\theta  } \cdot -\frac{1}{\cos ^{2} \theta}\cdot<br>-\sin \theta  =\frac{\sqrt[]{3}\sin \theta  }{2\cos^{3} \theta }<br>$<br>当$\theta=15^{\circ}$时有最大值</p>
-<p>故此时$l=\sqrt{6}-\sqrt{2}=1.035$</p>
-<p><img src="/2020/08/12/%E9%AB%98%E4%B8%AD/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/untitled.png" alt="untitled"></p>
-<p>或者用几何方法分析<br>$\begin{array}{l}l &amp;=\sqrt{AB^2+BE^2} \\&amp;=\sqrt{1+BE^2}\end{array}$<br>当$BE$最大时边长有最大值</p>
-<p>$\therefore\begin{array}{l}S &amp;=\frac12l^2\sin60^\circ \\&amp;=\frac{\sqrt{3}}{4}\times(\frac{AB}{\cos15^\circ})^2\end{array}\\$</p>
-<p>由半角公式得</p>
-<p>$\begin{array}{l}\sin15^\circ &amp;=\sqrt{\frac{1-\sin30^\circ}{2}}\\&amp;=\frac12\sqrt{2-\sqrt3} \\&amp;=\frac12\sqrt{(\frac{\sqrt6}{2})^2-2\cdot\frac{\sqrt6}{2}\cdot\frac{\sqrt2}{2}+(\frac{\sqrt2}{2})^2} \\&amp;=\frac12\sqrt{(\frac{\sqrt6}{2}-\frac{\sqrt2}{2})^2} \\&amp;=\frac{\sqrt6-\sqrt2}{4}\end{array}$</p>
-<p>$\begin{array}{l}\cos15^\circ &amp;=\sqrt{\frac{1+\cos30^\circ}{2}} \\&amp;=\frac{\sqrt6+\sqrt2}{4}\end{array}$</p>
-<p>或使用两角和与差公式$\sin(\theta\pm\phi)=\sin\theta\cos\phi\pm\cos\theta\sin\phi$有</p>
-<p>$\begin{array}{l}\sin15^\circ &amp;=\sin(60^\circ-45^\circ)\\&amp;=\sin60^\circ\cos45^\circ-\cos60^\circ\sin45^\circ\\&amp;=\frac{\sqrt6-\sqrt2}{4}\end{array}$</p>
-<p>$\begin{array}{l}\cos15^\circ &amp;=\sqrt{1-\sin15^\circ} \\&amp;=\frac{\sqrt6+\sqrt2}{4}\end{array}$</p>
-<p>故$S=\frac{\sqrt{3}}{4}(\frac{4}{\sqrt6+\sqrt2})^2=2\sqrt3-3$</p>
-<p><img src="/2020/08/12/%E9%AB%98%E4%B8%AD/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/triangle.gif" alt="triangle"></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/14/%E9%AB%98%E4%B8%AD/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/06/14/%E9%AB%98%E4%B8%AD/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/" itemprop="url">高中/微分方程</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-06-14T14:10:33+08:00">
-                2020-06-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="微分方程"><a href="#微分方程" class="headerlink" title="微分方程"></a>微分方程</h1><p>通过某些变量的变化率来求出原始函数的表达式 <em>变化率比较好表达</em></p>
-<p>例如</p>
+            <h1 id="概率论公理"><a href="#概率论公理" class="headerlink" title="概率论公理"></a>概率论公理</h1><p>样本空间$S$上的概率分布$\rm {Pr\{\}}$是一个从事件到实数的映射</p>
 <ol>
-<li><p>例如自由落体，物体始终受重力，加速度为$g$</p>
-<script type="math/tex; mode=display">
-\begin{array}{c}
-\ddot{y}(t)=-g \quad \dot{y}(t)=-g t+v_{0} \\
-y(t)=-(1 / 2) g t^{2}+v_{0} t+y_{0}
-\end{array}</script><p>如已知位移对时间的二阶导数，则可以对两边积分，得到一阶导数和原始函数</p>
+<li><p>$\forall  事件A,\text {Pr}\{A\}\ge0$</p>
 </li>
-<li><p>天体运动，引力大小和方向都在变化，用如下微分方程来描述</p>
+<li><p>$\text {Pr}\{S\}=1$</p>
+</li>
+<li><p>对两两互斥的事件，有</p>
 <script type="math/tex; mode=display">
-{F_{1}=m_{1} \overrightarrow{\mathbf{a}}_{1}}=G m_{1} m_{2}\left(\frac{\overrightarrow{\mathbf{x}}_{2}-\overrightarrow{\mathbf{x}}_{1}}{\left\|\overrightarrow{\mathrm{x}}_{2}-\overrightarrow{\mathbf{x}}_{1}\right\|}\right)\left(\frac{1}{\left\|\overrightarrow{\mathbf{x}}_{2}-\overrightarrow{\mathbf{x}}_{1}\right\|^{2}}\right)</script></li>
+\text {Pr}\left\{\bigcup_{i}A_i\right\}=\sum_i\text {Pr}\{A\}</script></li>
 </ol>
-<p>如何求解微分方程</p>
-<p>$example:$有阻尼的简谐运动</p>
-<p><img src="https://img-blog.csdnimg.cn/20200811092050660.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xvc2FuZ2VsZXM2NjY=,size_16,color_FFFFFF,t_70" alt></p>
-<p>定义弹簧的回复力$f$</p>
+<h3 id="容斥"><a href="#容斥" class="headerlink" title="容斥"></a>容斥</h3><script type="math/tex; mode=display">
+\begin{aligned}\text {Pr}\{A\cup B\}&=\text {Pr}\{A\}+\text {Pr}\{B\}-\text {Pr}\{A\cap B\}\\&\le\text {Pr}\{A\}+\text {Pr}\{B\}\end{aligned}</script><h2 id="离散概率分布"><a href="#离散概率分布" class="headerlink" title="离散概率分布"></a>离散概率分布</h2><p>概率分布在有限或无限可数的样本空间，则该概率分布是离散的</p>
 <script type="math/tex; mode=display">
-f=-c x</script><p>定义阻力$R$,阻力大小和速度大小成正比，方向与速度方向相反</p>
+\text {Pr}\{A\}=\sum_{s\in A}\text {Pr}\{s\}</script><p>若基本事件$s\in S$的概率为</p>
 <script type="math/tex; mode=display">
-R=-\mu \frac{\mathrm{d} x}{\mathrm{d} t}</script><p>由牛顿第二定律得</p>
+\text {Pr}\{s\}=1/|S|</script><p>则称为$S$上的的均匀概率分布</p>
+<h3 id="条件概率和独立"><a href="#条件概率和独立" class="headerlink" title="条件概率和独立"></a>条件概率和独立</h3><p>已知事件 $B$发生$\text {Pr}\{B\}\ne 0$，事件$A$的条件概率定义为</p>
 <script type="math/tex; mode=display">
-m \frac{\mathrm{d}^{2} x}{\mathrm{d} t^{2}}=-c x-\mu \frac{\mathrm{d} x}{\mathrm{d} t}</script><p>为了将二阶导数前的系数归一化，令</p>
+\text {Pr}\{A|B\}=\frac{\text {Pr}\{A\cap B\}}{\text {Pr}\{B\}}</script><p>若</p>
 <script type="math/tex; mode=display">
-2 n=\frac{\mu}{m}, k^{2}=\frac{c}{m}</script><p>化简得</p>
+\text {Pr}\{A\cap B\}=\text {Pr}\{A\}\text {Pr}\{B\}</script><p>则称事件$A$和$B$是独立的，若$\text {Pr}\{B\}\ne 0$，则等价于</p>
 <script type="math/tex; mode=display">
-\frac{\mathrm{d}^{2} x}{\mathrm{d} t^{2}}+2 n \frac{\mathrm{d} x}{\mathrm{d} t}+k^{2} x=0</script><p>这就是在有阻尼的情况下,物体自由振动的微分方程</p>
-<p>$lemma1:$</p>
+\text {Pr}\{A|B\}=\Pr\{A\}(与B无关)</script><p>若对于所有$1\le i &lt; j\le n$，有</p>
 <script type="math/tex; mode=display">
-y^{\prime \prime}+p y^{\prime}+q y=0</script><p>如果函数$  y_{1}(x)  与  y_{2}(x)  $是方程的两个解,那么$y=C_{1} y_{1}(x)+C_{2} y_{2}(x)$也是方程的解,其中 $ C_{1}, C_{2}  $是任意常数.</p>
-<p>$proof:$</p>
-<p>暴力带入</p>
+\text {Pr}\{A_i\cap A_j\}=\Pr\{A_i\}\Pr\{A_j\}</script><p>则称事件$A_1,A_2,\cdots,A_n$两两独立</p>
+<p>若对这些事件的每一个$k$子集$\{ A_{i_1},A_{i_2},\cdots,A_{i_k}\}$，其中$2\le k\le n$且$1\le {i_1}&lt; {i_2}&lt; \cdots&lt; {i_k}\le n $，有</p>
 <script type="math/tex; mode=display">
-\begin{aligned}
-&\left[C_{1} y_{1}^{\prime \prime}+C_{2} y_{2}^{\prime \prime}\right]+P(x)\left[C_{1} y_{1}^{\prime}+C_{2} y_{2}^{\prime}\right]+Q(x)\left[C_{1} y_{1}+C_{2} y_{2}\right] \\
-=& C_{1}\left[y_{1}^{\prime \prime}+P(x) y_{1}^{\prime}+Q(x) y_{1}\right]+C_{2}\left[y_{2}^{\prime \prime}+P(x) y_{2}^{\prime}+Q(x) y_{2}\right]\equiv 0
-\end{aligned}</script><p>$lemma2:$</p>
-<p>对二阶常系数齐次线性微分方程</p>
+\Pr\{ A_{i_1}\cap A_{i_2}\cap \cdots\cap A_{i_k}\}=\Pr\{ A_{i_1}\}\Pr\{ A_{i_2}\}\cdots\Pr\{ A_{i_k}\}</script><p>则称这些事件相互独立</p>
+<h3 id="全概率公式"><a href="#全概率公式" class="headerlink" title="全概率公式"></a>全概率公式</h3><p>将样本空间$\Omega$划分为两两独立的$n$个事件，且</p>
 <script type="math/tex; mode=display">
-y^{\prime \prime}+p y^{\prime}+q y=0</script><p>其特征方程为</p>
+\bigcup_iA_i=\Omega</script><p>则</p>
 <script type="math/tex; mode=display">
-r^{2}+p r+q=0</script><p>当</p>
+\Pr\{B\}=\sum_{i=1}^n\Pr\{B|A_i\}\Pr\{A_i\}</script><h3 id="贝叶斯定理"><a href="#贝叶斯定理" class="headerlink" title="贝叶斯定理"></a>贝叶斯定理</h3><p>由</p>
 <script type="math/tex; mode=display">
-p^{2}-4 q<0</script><p>其两解为</p>
+\Pr\{A\cap B\}=\Pr\{A|B\}\Pr\{B\}=\Pr\{B|A\}\Pr\{A\}</script><p>得</p>
 <script type="math/tex; mode=display">
-\begin{array}{c}
-r_{1}=\alpha+\beta i, \quad r_{2}=\alpha-\beta i \\
-\alpha=-\frac{p}{2}, \quad \beta=\frac{\sqrt{4 q-p^{2}}}{2}
-\end{array}</script><p>故微分方程两解为</p>
+\Pr\{A|B\}=\frac{\Pr\{B|A\}\Pr\{A\}}{\Pr\{B\}}</script><p>对于$\Pr\{B\}$，因为可以划分，故</p>
 <script type="math/tex; mode=display">
-y_{1}=\mathrm{e}^{(\alpha+\beta i) x}, y_{2}=\mathrm{e}^{(\alpha-\beta i) x}</script><p>利用欧拉公式</p>
+\Pr\{B\}=\Pr\{B|A\}\Pr\{A\}+\Pr\{B|\overline{A} \}\Pr\{\overline{A} \}</script><p>所</p>
 <script type="math/tex; mode=display">
-\mathrm{e}^{\mathrm{i} \theta}=\cos \theta+\mathrm{i} \sin \theta</script><p>得</p>
-<script type="math/tex; mode=display">
-\begin{array}{l}
-y_{1}=\mathrm{e}^{(\alpha+\beta i) x}=\mathrm{e}^{\alpha x} \cdot \mathrm{e}^{\beta x i}=e^{\alpha x}(\cos \beta x+i \sin \beta x) \\
-y_{2}=\mathrm{e}^{(\alpha-\beta i) x}=\mathrm{e}^{\alpha x} \cdot \mathrm{e}^{-\beta x i}=\mathrm{e}^{\alpha x}(\cos \beta x-\mathrm{i} \sin \beta x)
-\end{array}</script><p>由$lemma1$</p>
-<script type="math/tex; mode=display">
-\begin{array}{l}
-\bar{y}_{1}=\frac{1}{2}\left(y_{1}+y_{2}\right)=\mathrm{e}^{\alpha x} \cos \beta x \\
-\bar{y}_{2}=\frac{1}{2 \mathrm{i}}\left(y_{1}-y_{2}\right)=\mathrm{e}^{\alpha x} \sin \beta x
-\end{array}</script><p>$\bar{y}_{1},\bar{y}_{2}$都是方程的解</p>
-<script type="math/tex; mode=display">
-\frac{\bar{y}_{1}}{\bar{y}_{2}}=\frac{e^{\alpha x} \cos \beta x}{e^{\alpha x} \sin \beta x}=\cot \beta x</script><p>表明两解线性无关</p>
-<p>故方程的通解为</p>
-<script type="math/tex; mode=display">
-y=\mathrm{e}^{\alpha x}\left(C_{1} \cos \beta x+C_{2} \sin \beta x\right)</script><p>$\rm start:$</p>
-<script type="math/tex; mode=display">
-\frac{\mathrm{d}^{2} x}{\mathrm{d} t^{2}}+2 n \frac{\mathrm{d} x}{\mathrm{d} t}+k^{2} x=0</script><p>初值条件</p>
-<script type="math/tex; mode=display">
-\left.x\right|_{t=0}=x_{0},\left.\frac{\mathrm{d} x}{\mathrm{d} t}\right|_{t=0}=v_{0}</script><p>特征方程</p>
-<script type="math/tex; mode=display">
-r=\frac{-2 n \pm \sqrt{4 n^{2}-4 k^{2}}}{2}=-n \pm \sqrt{n^{2}-k^{2}}</script><p>本文只讨论小阻尼情况$n&lt;k$</p>
-<p>由$lemma2$</p>
-<script type="math/tex; mode=display">
-x=\mathrm{e}^{-n t}\left(C_{1} \cos \omega t+C_{2} \sin \omega t\right)</script><p>带入初值条件</p>
-<script type="math/tex; mode=display">
-x=\mathrm{e}^{-n t}\left(x_{0} \cos \omega t+\frac{v_{0}+n x_{0}}{\omega} \sin \omega t\right)</script><p>辅助角</p>
-<script type="math/tex; mode=display">
-\omega=\sqrt{k^{2}-n^{2}}, \quad A=\sqrt{x_{0}^{2}+\frac{\left(v_{0}+n x_{0}\right)^{2}}{\omega^{2}}}, \quad \tan \varphi=\frac{x_{0} \omega}{v_{0}+n x_{0}}</script><script type="math/tex; mode=display">
-x=A \mathrm{e}^{-n t} \sin (\omega t+\varphi)</script><p>物体的运动是周期为$T=\frac{2 \pi}{\omega} $ 的振动。但与简谐振动不同它的振幅  $A \mathrm{e}^{-n t}  $随时间  $t$ 的增大而逐渐域小,因此,物体随时间  $t$ 的增大而趋于平衡位置</p>
-<p>图像</p>
-<p><img src="https://img-blog.csdnimg.cn/20200811092119304.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xvc2FuZ2VsZXM2NjY=,size_16,color_FFFFFF,t_70" alt></p>
+\Pr\{A|B\}=\frac{\Pr\{B|A\}\Pr\{A\}}{\Pr\{B|A\}\Pr\{A\}+\Pr\{B|\overline{A} \}\Pr\{\overline{A} \}}</script>
+          
+        
+      
+    </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E7%A6%BB%E6%95%A3%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E7%A6%BB%E6%95%A3%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/" itemprop="url">大一/概率论/离散随机变量</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-07-23T21:09:55+08:00">
+                2022-07-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>随机变量$X$是有限或无限可数样本空间$S$到实数的函数</p>
+<p>对于随机变量$X$和实数$x$，定义事件$X=x$为$\{s\in S,X(s)=x\}$，因此</p>
+<script type="math/tex; mode=display">
+\Pr\{X=x\}=\sum_{s\in S,X(s)=x}\Pr\{s\}</script><p> 函数$f(x)=\Pr\{X=x\}$为$X$的概率密度函数</p>
+<p>若有若干个随机变量，则函数</p>
+<script type="math/tex; mode=display">
+f(x,y)=\Pr\{X=x且Y=y\}</script><p>为$X$与$Y$的联合概率密度函数，性质同理，如</p>
+<script type="math/tex; mode=display">
+\Pr\{Y=y\}=\sum_x\Pr\{X=x且Y=y\}(y为定值)</script><h3 id="随机变量的期望值"><a href="#随机变量的期望值" class="headerlink" title="随机变量的期望值"></a>随机变量的期望值</h3><script type="math/tex; mode=display">
+\text E[X]=\sum_xx\cdot\Pr\{X=x\}\\
+\text E[g(X)]=\sum_xg(x)\cdot\Pr\{X=x\}\\</script><p>期望的线性性质</p>
+<script type="math/tex; mode=display">
+\text E\left[\sum_{i=1}^nX_i\right]=\sum_{i=1}^n\text E[X_i]\\\text E[aX+b]=a\text E[X]+b</script><h3 id="方差"><a href="#方差" class="headerlink" title="方差"></a>方差</h3><script type="math/tex; mode=display">
+\text{Var}[X]=\text{E}[(X-\text{E}[X])^2]=\text{E}[X^2]-\text{E}^2[X]</script><h3 id="几何分布"><a href="#几何分布" class="headerlink" title="几何分布"></a>几何分布</h3><script type="math/tex; mode=display">
+\Pr\{X=k\}=(1-p)^{n-1}p\\
+\text E[x]=\sum_{k=1}^\infty(1-p)^{k-1}pk=1/p</script><h3 id="二项分布"><a href="#二项分布" class="headerlink" title="二项分布"></a>二项分布</h3><script type="math/tex; mode=display">
+\Pr\{X=k\}=\left(\begin{array}{l}n\\k\end{array}\right)p^k(1-p)^{n-k}\\
+\text E[X]=np\\
+\text{Var}[X]=np(1-p)</script>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/07/23/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E6%9B%B2%E7%8E%87/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/07/23/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E6%9B%B2%E7%8E%87/" itemprop="url">大一/高数/曲率</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-07-23T21:09:55+08:00">
+                2022-07-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>弧微分公式</p>
+<script type="math/tex; mode=display">
+\text ds=\sqrt{1+y'^2}\text dx</script><h3 id="曲率"><a href="#曲率" class="headerlink" title="曲率"></a>曲率</h3><p>平均曲率</p>
+<script type="math/tex; mode=display">
+K=\left|\frac{\Delta \alpha}{\Delta s}\right|</script><p>曲线$C$在$M$处的曲率</p>
+<script type="math/tex; mode=display">
+K=\lim_{\Delta s \rightarrow0}\left|\frac{\Delta \alpha}{\Delta s}\right|=\left|\frac{\text d\alpha}{\text d s}\right|</script><script type="math/tex; mode=display">
+K=\frac{|y''|}{(1+y'^2)^{3/2}}\approx |y''|</script><p>​                                                             </p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/07/23/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E7%A7%AF%E5%88%86%E8%A1%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/07/23/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E7%A7%AF%E5%88%86%E8%A1%A8/" itemprop="url">大一/高数/积分表</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-07-23T21:09:55+08:00">
+                2022-07-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <script type="math/tex; mode=display">
+\text{Newton-Leibniz formula}   \\ \int_a^bf(x)\mathrm dx =\left[F(x)\right]^b_a=F(b)-F(a)</script><script type="math/tex; mode=display">
+\int k\text dx=kx+C\\
+\int x^\mu\text dx=\frac{x^{\mu+1}}{\mu+1}+C(\mu\ne-1)\\ 
+\int \frac{\text dx}{x}=\ln|x|+C\\
+\int \frac{\text dx}{1+x^2}=\arctan x+C\\
+\int \frac{\text dx}{\sqrt{1-x^2}}= \arcsin x+C</script><script type="math/tex; mode=display">
+\int \cos x\text dx=\sin x +C\\
+\int \sin x\text dx=-\cos x+C\\
+\\\int \frac{\text dx}{\cos^2x}=\int\sec^2x=\tan x+C\\
+\int \frac{\text dx}{\sin^2x}=\int\csc^2x=-\cot x+C\\
+\\ \int \sec x\tan x\text dx=\sec x+C</script><script type="math/tex; mode=display">
+\int \csc x \cot x\text dx=-\csc x+C\\
+\int e^x=e^x+C\\\int a^x\text dx=\frac{a^x}{\ln a}+C\\
+\int \frac{\text dx}{a^2+x^2}=\frac1a \arctan \frac xa+C\\
+\int \frac{\text dx}{x^2-a^2}=\frac1{2a}\ln\left|\frac{x-a}{x+a}\right|+C</script><script type="math/tex; mode=display">
+\int \frac{\text dx}{\sqrt{a^2-x^2}}= \arcsin \frac xa +C\\
+\int \frac{\text dx}{\sqrt{a^2+x^2}}=\ln (x+\sqrt{x^2+a^2})+C\\
+\int \frac{\text dx}{\sqrt{x^2-a^2}}=\ln |x+\sqrt{x^2-a^2}|+C\\</script>
           
         
       

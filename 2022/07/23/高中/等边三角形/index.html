@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/psw.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="1.在正方形中折出等边三角形 要折等边三角形，首先要折出$60{\circ}$的角，以下是最容易的一种方法 如何让三角形最大呢   如果等边三角形的三个顶点没有落在正方形的四条边上，那么可以放大三角形让它落在边上 如果有顶点落在边上，可以平移，旋转该三角形，使其某一顶点落在正方形的任意顶点上  所以我们只需要研究某一个顶点和正方形的顶点重合的等边三角形  画出图形，由几何关系，三角形的边长$l$可">
+<meta property="og:type" content="article">
+<meta property="og:title" content="高中&#x2F;等边三角形">
+<meta property="og:url" content="http://yoursite.com/2022/07/23/%E9%AB%98%E4%B8%AD/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/index.html">
+<meta property="og:site_name" content="BLOG">
+<meta property="og:description" content="1.在正方形中折出等边三角形 要折等边三角形，首先要折出$60{\circ}$的角，以下是最容易的一种方法 如何让三角形最大呢   如果等边三角形的三个顶点没有落在正方形的四条边上，那么可以放大三角形让它落在边上 如果有顶点落在边上，可以平移，旋转该三角形，使其某一顶点落在正方形的任意顶点上  所以我们只需要研究某一个顶点和正方形的顶点重合的等边三角形  画出图形，由几何关系，三角形的边长$l$可">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2022/07/23/%E9%AB%98%E4%B8%AD/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/image-20200812191310620.png">
+<meta property="og:image" content="http://yoursite.com/2022/07/23/%E9%AB%98%E4%B8%AD/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/image-20200812191310620.png">
+<meta property="og:image" content="http://yoursite.com/2022/07/23/%E9%AB%98%E4%B8%AD/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/image-20210430220255705.png">
+<meta property="og:image" content="http://yoursite.com/2022/07/23/%E9%AB%98%E4%B8%AD/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/untitled.png">
+<meta property="og:image" content="http://yoursite.com/2022/07/23/%E9%AB%98%E4%B8%AD/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/triangle.gif">
+<meta property="article:published_time" content="2022-07-23T13:09:59.308Z">
+<meta property="article:modified_time" content="2022-07-23T13:09:59.308Z">
+<meta property="article:author" content="Shiwei Pan">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2022/07/23/%E9%AB%98%E4%B8%AD/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/image-20200812191310620.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2022/07/23/高中/等边三角形/"/>
+
+
+
+
+
+  <title>高中/等边三角形 | BLOG</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+<script src="/live2d-widget/autoload.js"></script>
+
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">BLOG</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-mine">
+          <a href="/mine/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Mine
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-new">
+          <a href="/new/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            menu.new
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/07/23/%E9%AB%98%E4%B8%AD/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">高中/等边三角形</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-07-23T21:09:59+08:00">
+                2022-07-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="1-在正方形中折出等边三角形"><a href="#1-在正方形中折出等边三角形" class="headerlink" title="1.在正方形中折出等边三角形"></a>1.在正方形中折出等边三角形</h1><p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/image-20200812191310620.png" alt="image-20200812191310620"></p>
+<p>要折等边三角形，首先要折出$60{\circ}$的角，以下是最容易的一种方法</p>
+<p>如何让三角形最大呢</p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/image-20200812191310620.png" alt="image-20200812191310620"></p>
+<ul>
+<li>如果等边三角形的三个顶点没有落在正方形的四条边上，那么可以放大三角形让它落在边上</li>
+<li>如果有顶点落在边上，可以平移，旋转该三角形，使其某一顶点落在正方形的任意顶点上</li>
+</ul>
+<p>所以我们只需要研究某一个顶点和正方形的顶点重合的等边三角形</p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/image-20210430220255705.png" alt="image-20210430220255705"></p>
+<p>画出图形，由几何关系，三角形的边长$l$可以用$\theta$表达<br>$<br>l=1 / \cos \theta=\sec \theta<br>$<br>故面积$S$为<br>$<br>S(\theta)=\frac{\sqrt{3}}{4} \sec ^{2} \theta<br>$<br>根据对称性，我们只需要考虑$0^{\circ} \leq \theta \leq 15^{\circ}$的情况</p>
+<p>因为$\cos \theta $在$0^{\circ} \leq \theta \leq 15^{\circ}$单调递减</p>
+<p>所以$\sec\theta=\frac{1}{ {\cos \theta } }$在$0^{\circ} \leq \theta \leq 15^{\circ}$单调递增</p>
+<p>或对面积求导<br>$<br>\frac{\mathrm{d}S}{\mathrm{d} \theta } =2\cdot \frac{\sqrt{3}}{4} \cdot \frac{1}{\cos\theta  } \cdot -\frac{1}{\cos ^{2} \theta}\cdot<br>-\sin \theta  =\frac{\sqrt[]{3}\sin \theta  }{2\cos^{3} \theta }<br>$<br>当$\theta=15^{\circ}$时有最大值</p>
+<p>故此时$l=\sqrt{6}-\sqrt{2}=1.035$</p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/untitled.png" alt="untitled"></p>
+<p>或者用几何方法分析<br>$\begin{array}{l}l &amp;=\sqrt{AB^2+BE^2} \\&amp;=\sqrt{1+BE^2}\end{array}$<br>当$BE$最大时边长有最大值</p>
+<p>$\therefore\begin{array}{l}S &amp;=\frac12l^2\sin60^\circ \\&amp;=\frac{\sqrt{3}}{4}\times(\frac{AB}{\cos15^\circ})^2\end{array}\\$</p>
+<p>由半角公式得</p>
+<p>$\begin{array}{l}\sin15^\circ &amp;=\sqrt{\frac{1-\sin30^\circ}{2}}\\&amp;=\frac12\sqrt{2-\sqrt3} \\&amp;=\frac12\sqrt{(\frac{\sqrt6}{2})^2-2\cdot\frac{\sqrt6}{2}\cdot\frac{\sqrt2}{2}+(\frac{\sqrt2}{2})^2} \\&amp;=\frac12\sqrt{(\frac{\sqrt6}{2}-\frac{\sqrt2}{2})^2} \\&amp;=\frac{\sqrt6-\sqrt2}{4}\end{array}$</p>
+<p>$\begin{array}{l}\cos15^\circ &amp;=\sqrt{\frac{1+\cos30^\circ}{2}} \\&amp;=\frac{\sqrt6+\sqrt2}{4}\end{array}$</p>
+<p>或使用两角和与差公式$\sin(\theta\pm\phi)=\sin\theta\cos\phi\pm\cos\theta\sin\phi$有</p>
+<p>$\begin{array}{l}\sin15^\circ &amp;=\sin(60^\circ-45^\circ)\\&amp;=\sin60^\circ\cos45^\circ-\cos60^\circ\sin45^\circ\\&amp;=\frac{\sqrt6-\sqrt2}{4}\end{array}$</p>
+<p>$\begin{array}{l}\cos15^\circ &amp;=\sqrt{1-\sin15^\circ} \\&amp;=\frac{\sqrt6+\sqrt2}{4}\end{array}$</p>
+<p>故$S=\frac{\sqrt{3}}{4}(\frac{4}{\sqrt6+\sqrt2})^2=2\sqrt3-3$</p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E7%AD%89%E8%BE%B9%E4%B8%89%E8%A7%92%E5%BD%A2/triangle.gif" alt="triangle"></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2022/07/23/%E9%AB%98%E4%B8%AD/%E8%80%83%E7%BA%B2/" rel="next" title="高中/考纲">
+                <i class="fa fa-chevron-left"></i> 高中/考纲
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2022/07/23/%E9%AB%98%E4%B8%AD/%E7%AC%94%E8%AE%B0/" rel="prev" title="高中/笔记">
+                高中/笔记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/mount.png"
+               alt="Shiwei Pan" />
+          <p class="site-author-name" itemprop="name">Shiwei Pan</p>
+           
+              <p class="site-description motion-element" itemprop="description">Open your eyes,look up to the skies</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">54</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/erikpsw" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/pan-shi-wei-91" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                    
+                      知乎
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-在正方形中折出等边三角形"><span class="nav-number">1.</span> <span class="nav-text">1.在正方形中折出等边三角形</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2020 - 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Shiwei Pan</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>

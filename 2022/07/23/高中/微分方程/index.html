@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/psw.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="微分方程通过某些变量的变化率来求出原始函数的表达式 变化率比较好表达 例如  例如自由落体，物体始终受重力，加速度为$g$  \begin{array}{c} \ddot{y}(t)&#x3D;-g \quad \dot{y}(t)&#x3D;-g t+v_{0} \\ y(t)&#x3D;-(1 &#x2F; 2) g t^{2}+v_{0} t+y_{0} \end{array}如已知位移对时间的二阶导数，则可以对两边积分，得到一阶">
+<meta property="og:type" content="article">
+<meta property="og:title" content="高中&#x2F;微分方程">
+<meta property="og:url" content="http://yoursite.com/2022/07/23/%E9%AB%98%E4%B8%AD/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/index.html">
+<meta property="og:site_name" content="BLOG">
+<meta property="og:description" content="微分方程通过某些变量的变化率来求出原始函数的表达式 变化率比较好表达 例如  例如自由落体，物体始终受重力，加速度为$g$  \begin{array}{c} \ddot{y}(t)&#x3D;-g \quad \dot{y}(t)&#x3D;-g t+v_{0} \\ y(t)&#x3D;-(1 &#x2F; 2) g t^{2}+v_{0} t+y_{0} \end{array}如已知位移对时间的二阶导数，则可以对两边积分，得到一阶">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200811092050660.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xvc2FuZ2VsZXM2NjY=,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200811092119304.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xvc2FuZ2VsZXM2NjY=,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2022-07-23T13:09:59.564Z">
+<meta property="article:modified_time" content="2022-07-23T13:09:59.565Z">
+<meta property="article:author" content="Shiwei Pan">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200811092050660.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xvc2FuZ2VsZXM2NjY=,size_16,color_FFFFFF,t_70">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2022/07/23/高中/微分方程/"/>
+
+
+
+
+
+  <title>高中/微分方程 | BLOG</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+<script src="/live2d-widget/autoload.js"></script>
+
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">BLOG</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-mine">
+          <a href="/mine/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Mine
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-new">
+          <a href="/new/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            menu.new
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/07/23/%E9%AB%98%E4%B8%AD/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">高中/微分方程</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-07-23T21:09:59+08:00">
+                2022-07-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="微分方程"><a href="#微分方程" class="headerlink" title="微分方程"></a>微分方程</h1><p>通过某些变量的变化率来求出原始函数的表达式 <em>变化率比较好表达</em></p>
+<p>例如</p>
+<ol>
+<li><p>例如自由落体，物体始终受重力，加速度为$g$</p>
+<script type="math/tex; mode=display">
+\begin{array}{c}
+\ddot{y}(t)=-g \quad \dot{y}(t)=-g t+v_{0} \\
+y(t)=-(1 / 2) g t^{2}+v_{0} t+y_{0}
+\end{array}</script><p>如已知位移对时间的二阶导数，则可以对两边积分，得到一阶导数和原始函数</p>
+</li>
+<li><p>天体运动，引力大小和方向都在变化，用如下微分方程来描述</p>
+<script type="math/tex; mode=display">
+{F_{1}=m_{1} \overrightarrow{\mathbf{a}}_{1}}=G m_{1} m_{2}\left(\frac{\overrightarrow{\mathbf{x}}_{2}-\overrightarrow{\mathbf{x}}_{1}}{\left\|\overrightarrow{\mathrm{x}}_{2}-\overrightarrow{\mathbf{x}}_{1}\right\|}\right)\left(\frac{1}{\left\|\overrightarrow{\mathbf{x}}_{2}-\overrightarrow{\mathbf{x}}_{1}\right\|^{2}}\right)</script></li>
+</ol>
+<p>如何求解微分方程</p>
+<p>$example:$有阻尼的简谐运动</p>
+<p><img src="https://img-blog.csdnimg.cn/20200811092050660.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xvc2FuZ2VsZXM2NjY=,size_16,color_FFFFFF,t_70" alt></p>
+<p>定义弹簧的回复力$f$</p>
+<script type="math/tex; mode=display">
+f=-c x</script><p>定义阻力$R$,阻力大小和速度大小成正比，方向与速度方向相反</p>
+<script type="math/tex; mode=display">
+R=-\mu \frac{\mathrm{d} x}{\mathrm{d} t}</script><p>由牛顿第二定律得</p>
+<script type="math/tex; mode=display">
+m \frac{\mathrm{d}^{2} x}{\mathrm{d} t^{2}}=-c x-\mu \frac{\mathrm{d} x}{\mathrm{d} t}</script><p>为了将二阶导数前的系数归一化，令</p>
+<script type="math/tex; mode=display">
+2 n=\frac{\mu}{m}, k^{2}=\frac{c}{m}</script><p>化简得</p>
+<script type="math/tex; mode=display">
+\frac{\mathrm{d}^{2} x}{\mathrm{d} t^{2}}+2 n \frac{\mathrm{d} x}{\mathrm{d} t}+k^{2} x=0</script><p>这就是在有阻尼的情况下,物体自由振动的微分方程</p>
+<p>$lemma1:$</p>
+<script type="math/tex; mode=display">
+y^{\prime \prime}+p y^{\prime}+q y=0</script><p>如果函数$  y_{1}(x)  与  y_{2}(x)  $是方程的两个解,那么$y=C_{1} y_{1}(x)+C_{2} y_{2}(x)$也是方程的解,其中 $ C_{1}, C_{2}  $是任意常数.</p>
+<p>$proof:$</p>
+<p>暴力带入</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\left[C_{1} y_{1}^{\prime \prime}+C_{2} y_{2}^{\prime \prime}\right]+P(x)\left[C_{1} y_{1}^{\prime}+C_{2} y_{2}^{\prime}\right]+Q(x)\left[C_{1} y_{1}+C_{2} y_{2}\right] \\
+=& C_{1}\left[y_{1}^{\prime \prime}+P(x) y_{1}^{\prime}+Q(x) y_{1}\right]+C_{2}\left[y_{2}^{\prime \prime}+P(x) y_{2}^{\prime}+Q(x) y_{2}\right]\equiv 0
+\end{aligned}</script><p>$lemma2:$</p>
+<p>对二阶常系数齐次线性微分方程</p>
+<script type="math/tex; mode=display">
+y^{\prime \prime}+p y^{\prime}+q y=0</script><p>其特征方程为</p>
+<script type="math/tex; mode=display">
+r^{2}+p r+q=0</script><p>当</p>
+<script type="math/tex; mode=display">
+p^{2}-4 q<0</script><p>其两解为</p>
+<script type="math/tex; mode=display">
+\begin{array}{c}
+r_{1}=\alpha+\beta i, \quad r_{2}=\alpha-\beta i \\
+\alpha=-\frac{p}{2}, \quad \beta=\frac{\sqrt{4 q-p^{2}}}{2}
+\end{array}</script><p>故微分方程两解为</p>
+<script type="math/tex; mode=display">
+y_{1}=\mathrm{e}^{(\alpha+\beta i) x}, y_{2}=\mathrm{e}^{(\alpha-\beta i) x}</script><p>利用欧拉公式</p>
+<script type="math/tex; mode=display">
+\mathrm{e}^{\mathrm{i} \theta}=\cos \theta+\mathrm{i} \sin \theta</script><p>得</p>
+<script type="math/tex; mode=display">
+\begin{array}{l}
+y_{1}=\mathrm{e}^{(\alpha+\beta i) x}=\mathrm{e}^{\alpha x} \cdot \mathrm{e}^{\beta x i}=e^{\alpha x}(\cos \beta x+i \sin \beta x) \\
+y_{2}=\mathrm{e}^{(\alpha-\beta i) x}=\mathrm{e}^{\alpha x} \cdot \mathrm{e}^{-\beta x i}=\mathrm{e}^{\alpha x}(\cos \beta x-\mathrm{i} \sin \beta x)
+\end{array}</script><p>由$lemma1$</p>
+<script type="math/tex; mode=display">
+\begin{array}{l}
+\bar{y}_{1}=\frac{1}{2}\left(y_{1}+y_{2}\right)=\mathrm{e}^{\alpha x} \cos \beta x \\
+\bar{y}_{2}=\frac{1}{2 \mathrm{i}}\left(y_{1}-y_{2}\right)=\mathrm{e}^{\alpha x} \sin \beta x
+\end{array}</script><p>$\bar{y}_{1},\bar{y}_{2}$都是方程的解</p>
+<script type="math/tex; mode=display">
+\frac{\bar{y}_{1}}{\bar{y}_{2}}=\frac{e^{\alpha x} \cos \beta x}{e^{\alpha x} \sin \beta x}=\cot \beta x</script><p>表明两解线性无关</p>
+<p>故方程的通解为</p>
+<script type="math/tex; mode=display">
+y=\mathrm{e}^{\alpha x}\left(C_{1} \cos \beta x+C_{2} \sin \beta x\right)</script><p>$\rm start:$</p>
+<script type="math/tex; mode=display">
+\frac{\mathrm{d}^{2} x}{\mathrm{d} t^{2}}+2 n \frac{\mathrm{d} x}{\mathrm{d} t}+k^{2} x=0</script><p>初值条件</p>
+<script type="math/tex; mode=display">
+\left.x\right|_{t=0}=x_{0},\left.\frac{\mathrm{d} x}{\mathrm{d} t}\right|_{t=0}=v_{0}</script><p>特征方程</p>
+<script type="math/tex; mode=display">
+r=\frac{-2 n \pm \sqrt{4 n^{2}-4 k^{2}}}{2}=-n \pm \sqrt{n^{2}-k^{2}}</script><p>本文只讨论小阻尼情况$n&lt;k$</p>
+<p>由$lemma2$</p>
+<script type="math/tex; mode=display">
+x=\mathrm{e}^{-n t}\left(C_{1} \cos \omega t+C_{2} \sin \omega t\right)</script><p>带入初值条件</p>
+<script type="math/tex; mode=display">
+x=\mathrm{e}^{-n t}\left(x_{0} \cos \omega t+\frac{v_{0}+n x_{0}}{\omega} \sin \omega t\right)</script><p>辅助角</p>
+<script type="math/tex; mode=display">
+\omega=\sqrt{k^{2}-n^{2}}, \quad A=\sqrt{x_{0}^{2}+\frac{\left(v_{0}+n x_{0}\right)^{2}}{\omega^{2}}}, \quad \tan \varphi=\frac{x_{0} \omega}{v_{0}+n x_{0}}</script><script type="math/tex; mode=display">
+x=A \mathrm{e}^{-n t} \sin (\omega t+\varphi)</script><p>物体的运动是周期为$T=\frac{2 \pi}{\omega} $ 的振动。但与简谐振动不同它的振幅  $A \mathrm{e}^{-n t}  $随时间  $t$ 的增大而逐渐域小,因此,物体随时间  $t$ 的增大而趋于平衡位置</p>
+<p>图像</p>
+<p><img src="https://img-blog.csdnimg.cn/20200811092119304.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xvc2FuZ2VsZXM2NjY=,size_16,color_FFFFFF,t_70" alt></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2022/07/23/%E9%AB%98%E4%B8%AD/%E5%AF%92%E5%81%87%E8%AE%BA%E6%96%87/" rel="next" title="高中/寒假论文">
+                <i class="fa fa-chevron-left"></i> 高中/寒假论文
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2022/07/23/%E9%AB%98%E4%B8%AD/%E4%B8%89%E6%AC%A1%E6%96%B9%E7%A8%8B/" rel="prev" title="高中/三次方程">
+                高中/三次方程 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/mount.png"
+               alt="Shiwei Pan" />
+          <p class="site-author-name" itemprop="name">Shiwei Pan</p>
+           
+              <p class="site-description motion-element" itemprop="description">Open your eyes,look up to the skies</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">54</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/erikpsw" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/pan-shi-wei-91" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                    
+                      知乎
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#微分方程"><span class="nav-number">1.</span> <span class="nav-text">微分方程</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2020 - 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Shiwei Pan</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>

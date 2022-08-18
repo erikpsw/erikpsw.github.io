@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/psw.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="折叠三次曲线取一张纸，选取一个定点$p_1$并在纸的下边上任选一点$p_1^ { \prime }$  折叠，使$p_1$和$p_1^ { \prime }$重合，标注$p_2$所对应的位置  展开，便得到了$p_2$关于折线的对称点$p_2^ { \prime }$  我们可以借助$GeoGebra$去研究$p_2’$的轨迹  看起来很有意思，那么这个轨迹的方程是什么呢？ 分析像抛物线折叠建立坐">
+<meta property="og:type" content="article">
+<meta property="og:title" content="高中&#x2F;三次曲线">
+<meta property="og:url" content="http://yoursite.com/2022/07/23/%E9%AB%98%E4%B8%AD/%E4%B8%89%E6%AC%A1%E6%9B%B2%E7%BA%BF/index.html">
+<meta property="og:site_name" content="BLOG">
+<meta property="og:description" content="折叠三次曲线取一张纸，选取一个定点$p_1$并在纸的下边上任选一点$p_1^ { \prime }$  折叠，使$p_1$和$p_1^ { \prime }$重合，标注$p_2$所对应的位置  展开，便得到了$p_2$关于折线的对称点$p_2^ { \prime }$  我们可以借助$GeoGebra$去研究$p_2’$的轨迹  看起来很有意思，那么这个轨迹的方程是什么呢？ 分析像抛物线折叠建立坐">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2022/07/23/%E9%AB%98%E4%B8%AD/%E4%B8%89%E6%AC%A1%E6%9B%B2%E7%BA%BF/image-20200912192632706.png">
+<meta property="og:image" content="http://yoursite.com/2022/07/23/%E9%AB%98%E4%B8%AD/%E4%B8%89%E6%AC%A1%E6%9B%B2%E7%BA%BF/image-20200912192647190.png">
+<meta property="og:image" content="http://yoursite.com/2022/07/23/%E9%AB%98%E4%B8%AD/%E4%B8%89%E6%AC%A1%E6%9B%B2%E7%BA%BF/image-20200912192713270.png">
+<meta property="og:image" content="http://yoursite.com/2022/07/23/%E9%AB%98%E4%B8%AD/%E4%B8%89%E6%AC%A1%E6%9B%B2%E7%BA%BF/res.gif">
+<meta property="og:image" content="http://yoursite.com/2022/07/23/%E9%AB%98%E4%B8%AD/%E4%B8%89%E6%AC%A1%E6%9B%B2%E7%BA%BF/20200912193811295.png">
+<meta property="og:image" content="http://yoursite.com/2022/07/23/%E9%AB%98%E4%B8%AD/%E4%B8%89%E6%AC%A1%E6%9B%B2%E7%BA%BF/image-20200913141232700.png">
+<meta property="og:image" content="http://yoursite.com/2022/07/23/%E9%AB%98%E4%B8%AD/%E4%B8%89%E6%AC%A1%E6%9B%B2%E7%BA%BF/image-20200913141149407.png">
+<meta property="og:image" content="http://yoursite.com/2022/07/23/%E9%AB%98%E4%B8%AD/%E4%B8%89%E6%AC%A1%E6%9B%B2%E7%BA%BF/image-20200913141027461.png">
+<meta property="article:published_time" content="2022-07-23T13:09:59.511Z">
+<meta property="article:modified_time" content="2022-07-23T13:09:59.511Z">
+<meta property="article:author" content="Shiwei Pan">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2022/07/23/%E9%AB%98%E4%B8%AD/%E4%B8%89%E6%AC%A1%E6%9B%B2%E7%BA%BF/image-20200912192632706.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2022/07/23/高中/三次曲线/"/>
+
+
+
+
+
+  <title>高中/三次曲线 | BLOG</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+<script src="/live2d-widget/autoload.js"></script>
+
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">BLOG</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-mine">
+          <a href="/mine/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Mine
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-new">
+          <a href="/new/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            menu.new
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/07/23/%E9%AB%98%E4%B8%AD/%E4%B8%89%E6%AC%A1%E6%9B%B2%E7%BA%BF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">高中/三次曲线</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-07-23T21:09:59+08:00">
+                2022-07-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="折叠三次曲线"><a href="#折叠三次曲线" class="headerlink" title="折叠三次曲线"></a>折叠三次曲线</h1><p>取一张纸，选取一个定点$p_1$并在纸的下边上任选一点$p_1^ { \prime }$</p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E4%B8%89%E6%AC%A1%E6%9B%B2%E7%BA%BF/image-20200912192632706.png" alt="image-20200912192632706"></p>
+<p>折叠，使$p_1$和$p_1^ { \prime }$重合，标注$p_2$所对应的位置</p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E4%B8%89%E6%AC%A1%E6%9B%B2%E7%BA%BF/image-20200912192647190.png" alt="image-20200912192647190"></p>
+<p>展开，便得到了$p_2$关于折线的对称点$p_2^ { \prime }$</p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E4%B8%89%E6%AC%A1%E6%9B%B2%E7%BA%BF/image-20200912192713270.png" alt="image-20200912192713270"></p>
+<p>我们可以借助$GeoGebra$去研究$p_2’$的轨迹</p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E4%B8%89%E6%AC%A1%E6%9B%B2%E7%BA%BF/res.gif" alt="res"></p>
+<p>看起来很有意思，那么这个轨迹的方程是什么呢？</p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>像抛物线折叠建立坐标系</p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E4%B8%89%E6%AC%A1%E6%9B%B2%E7%BA%BF/20200912193811295.png" alt="20200912193811295"></p>
+<p>折线的方程和抛物线折叠一模一样，为</p>
+<p>${ y = \frac { t } { 2 } x - \frac { t ^ { 2 } } { 4 } }$</p>
+<p>又$ p p _ { 1 } ^ { \prime }$和$p _ { 2 } p _ { 2 } ^ { \prime }$都垂直于折线，所以</p>
+<p>$ { k _ { p p _ { 1 } ^ { \prime } } = k _ { p _ { 2 } p _ { 2 } ^ { \prime } } } $</p>
+<p>$ { \frac { - 1 - 1 } { t } = \frac { y - b } { x - a } \Rightarrow - \frac { 2 } { t } = \frac { y - b } { x - a } } $</p>
+<p>解出$t$</p>
+<p>$ { t = - \frac { 2 ( x - a ) } { y - b } = \frac { 2 ( a - x ) } { y - b } } $</p>
+<p>设$p_2^{\prime}$坐标为$(x,y)$，则$p _ { 2 } p _ { 2 } ^ { \prime }$中点坐标为</p>
+<p>$ { ( \frac { x + a } { 2 } , \frac { y + b } { 2 } ) } $</p>
+<p>因为这两点关于折线对称，故中点在折线上，带入得</p>
+<p>$ { \frac { a - x } { y - b } \cdot ( \frac { x + a } { 2 } ) - ( \frac { a - x } { y - b } ) ^ { 2 } = \frac { y + b } { 2 } } $</p>
+<p>化简得</p>
+<p>$ { ( a ^ { 2 } - x ^ { 2 } ) \cdot ( y - b ) - 2 ( a - x ) ^ { 2 } = ( y + b ) ( y - b ) ^ { 2 } } $</p>
+<p>$ y ^ { 3 } + x ^ { 2 } y - b y ^ { 2 } + ( 2 - b )  x ^ { 2 } - b y ^ { 2 } - 4 a x - ( a ^ { 2 } + b ^ { 2 } )  y  + a ^ { 2 } b + 2 a ^ { 2 } + b ^ { 3 } = 0$</p>
+<p>这显然是一个三次曲线的方程</p>
+<h2 id="斜率与三次方程的解"><a href="#斜率与三次方程的解" class="headerlink" title="斜率与三次方程的解"></a>斜率与三次方程的解</h2><p>对任意三次方程$x^{3}+a x^{2}+b x+c=0$，我们可以令$z=x-\frac{1}{3}  a$，于是方程便转换为</p>
+<p>$z^{3}+\frac{3 b-a^{2}}{3} z-\frac{9 a b-27 c-2 a^{3}}{27}=0$</p>
+<p>从而从$x^{3}+a x^{2}+b x+c=0$转化到了$x^{3}+ ax+b=0$</p>
+<p>考虑两条抛物线</p>
+<p>$l_1:\,\left(y-\frac{1}{2} a\right)^{2}=2 bx \quad  and \quad l_2:\,y=\frac{1}{2} x^{2}$</p>
+<p>设$\ell$为这两个抛物线的共同切线，斜率为$m$，且与$l_1$相切与$\left(x_{1}, y_{1}\right)$，与$l_2$相切与$\left(x_{2}, y_{2}\right)$</p>
+<p>对$l_1$两边同时求导</p>
+<p>$ { y ^ { 2 } - a y + \frac { 1 } { 4 } a ^ { 2 } = 2 b x } $</p>
+<p>$ { 2 y \cdot \frac{\mathrm{d} y}{\mathrm{d} x}  - a \frac{\mathrm{d} y}{\mathrm{d} x}  + 0 = 2 b } $</p>
+<p>整理得</p>
+<p>$ { \frac{\mathrm{d} y}{\mathrm{d} x}  = \frac { 2 b } { 2 y - a } = \frac { b } { y - \frac { 1 } { 2 } a } } $</p>
+<p>带入$y_1$</p>
+<p>$y_{1}-\frac{1}{2} a=\frac{b}{m}$</p>
+<p>所以我们可以用$m$表示$x_1$和$y_1$</p>
+<p>$x_{1}=\frac{\left(y_{1}-\frac{1}{2} a\right)^{2}}{2 b}=\frac{\left(\frac{b}{m}\right)^{2}}{2 b}=\frac{b}{2 m^{2}}$</p>
+<p>$y_{1}=\frac{b}{m}+\frac{a}{2}$</p>
+<p>同理，对$l_2$求导得</p>
+<p>$x_{2}=m$</p>
+<p>$y_{2}=\frac{m^{2}}{2}$</p>
+<p>我们知道，过$\left(x_{1}, y_{1}\right)$和$\left(x_{2}, y_{2}\right)$的直线斜率为</p>
+<p>$m=\frac{y_{2}-y_{1}}{x_{2}-x_{1}}$</p>
+<p>带入得</p>
+<p>$m=\frac{y_{2}-y_{1}}{x_{2}-x_{1}}=\frac{\frac{m^{2}}{2}-\left(\frac{b}{m}+\frac{a}{2}\right)}{m-\frac{b}{2 m^{2}}}=\frac{m^{4}-2 b m-a m^{2}}{2 m^{3}-b}$</p>
+<p>即</p>
+<p>$m^{3}+a m+b=0$</p>
+<p>说明$m$为方程$x^{3}+ ax+b=0$的解</p>
+<p>尝试求解$x^3-7x-6=0$，先构造两个抛物线</p>
+<p>注意$g$的斜率</p>
+<p>$x=-2$</p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E4%B8%89%E6%AC%A1%E6%9B%B2%E7%BA%BF/image-20200913141232700.png" alt="image-20200913141232700"></p>
+<p>$x=-1$</p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E4%B8%89%E6%AC%A1%E6%9B%B2%E7%BA%BF/image-20200913141149407.png" alt="image-20200913141149407"></p>
+<p>$x=3$</p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E4%B8%89%E6%AC%A1%E6%9B%B2%E7%BA%BF/image-20200913141027461.png" alt="image-20200913141027461"></p>
+<p>于是我们便获得了这个三次方程的三个解$x=-2,-1,3$</p>
+<p>那么，怎么用折纸的方法构造呢？</p>
+<p>容易看出，$l_1$的焦点为$(\frac b 2,\frac a 2)$，准线为$x=-\frac b 2$，$l_2$的焦点为$(0,\frac{1}{2})$，准线为$y=-\frac{1}{2}$</p>
+<p>根据上一节的抛物线折叠的性质，我们同时分别将点$(\frac b 2,\frac a 2)$折到$x=-\frac b 2$上，将点$(0,\frac{1}{2})$折到$y=-\frac{1}{2}$上，所形成的折现即为两条抛物线的共同切线，至于为什么可以做到，我们将在下一节讨论折纸公理六时详细阐述。</p>
+<p>三次函数</p>
+<script type="math/tex; mode=display">
+f(x) = a{x^3} + b{x^2} + cx + d(a \ne 0)\\f'(x) = 3a{x^2} + 2bx + c\\\Delta  = 4{b^2} - 12ac = 4({b^2} - 3ac)</script><p>拐点</p>
+<script type="math/tex; mode=display">
+P\left( { - \frac{b},f\left( { - \frac{b}} \right)} \right)</script><script type="math/tex; mode=display">
+方程\sum\limits_{i = 0}^n {a_i}{x^i}  = 0 的根为  x_{1}, x_{2}, \cdots, x_{n}  \\
+
+
+x_{1}+x_{2}+\cdots+x_{n}=\sum_{i=1}^{n} x_{i}=-\frac{a_{n-1}}{a_{n}} \\
+x_{1} x_{2} \cdots x_{n}=\prod_{i=1}^{n} x_{i}=(-1)^{n} \frac{a_{0}}{a_{n}}</script>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2022/07/23/%E9%AB%98%E4%B8%AD/%E5%B7%9D%E5%B4%8E%E5%AE%9A%E7%90%86/" rel="next" title="高中/川崎定理">
+                <i class="fa fa-chevron-left"></i> 高中/川崎定理
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2022/07/23/%E9%AB%98%E4%B8%AD/%E5%AF%92%E5%81%87%E8%AE%BA%E6%96%87/" rel="prev" title="高中/寒假论文">
+                高中/寒假论文 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/mount.png"
+               alt="Shiwei Pan" />
+          <p class="site-author-name" itemprop="name">Shiwei Pan</p>
+           
+              <p class="site-description motion-element" itemprop="description">Open your eyes,look up to the skies</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">54</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/erikpsw" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/pan-shi-wei-91" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                    
+                      知乎
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#折叠三次曲线"><span class="nav-number">1.</span> <span class="nav-text">折叠三次曲线</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#分析"><span class="nav-number">1.1.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#斜率与三次方程的解"><span class="nav-number">1.2.</span> <span class="nav-text">斜率与三次方程的解</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2020 - 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Shiwei Pan</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
