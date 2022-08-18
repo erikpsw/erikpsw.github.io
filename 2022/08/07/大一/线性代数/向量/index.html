@@ -102,7 +102,7 @@
 <meta property="og:description" content="向量$\rm vector$ 表示  \vec{a}&#x2F;\mathbf{a}$||\vec{a}||$为向量的长度 在直角坐标系中  ||\vec{a}||&#x3D;\sqrt{x^2+y^2}\\ 单位向量\hat{a}&#x3D;\vec{a}&#x2F;||\vec{a}||点乘$\rm Dot\;Product$  \vec{a} \cdot \vec{b}&#x3D;\|\vec{a}\|\|\vec{b}\| \cos \t">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-08-07T04:24:39.416Z">
-<meta property="article:modified_time" content="2022-08-15T11:57:49.126Z">
+<meta property="article:modified_time" content="2022-08-15T14:53:20.521Z">
 <meta property="article:author" content="Shiwei Pan">
 <meta name="twitter:card" content="summary">
 
@@ -375,7 +375,39 @@ x_{a} y_{b}-y_{a} x_{b}
 \|x\|_{1}=\left|x_{1}\right|+\cdots+\left|x_{n}\right| \\
 \|x\|_{2}=\sqrt{\left|x_{1}\right|^{2}+\cdots+\left|x_{n}\right|^{2}}=\sqrt{x^{H} x} \\
 \|x\|_{\infty}= \underset{1 \leq i \leq n}\max|x_{i}|</script><h2 id="导数"><a href="#导数" class="headerlink" title="导数"></a>导数</h2><script type="math/tex; mode=display">
-\frac{\partial y}{\partial \bf{x}}</script>
+\mathbf{x}=\begin{bmatrix}x_1\\x_2\\ \vdots \\x_n\end{bmatrix}
+\\\frac{\partial y}{\partial \mathbf{x}}=\begin{bmatrix}\frac{\partial y}{\partial x_1}
+\frac{\partial y}{\partial x_2}
+\cdots
+\frac{\partial y}{\partial x_n}
+\end{bmatrix}</script><p>方向导数，定义的shape，例</p>
+<script type="math/tex; mode=display">
+\frac{\partial}{\partial \mathbf{x}}(x_1^2+2x_2^2)=[2x_1,4x_2]</script><script type="math/tex; mode=display">
+\mathbf{y}=\left[\begin{array}{c}
+y_{1} \\
+y_{2} \\
+\vdots \\
+y_{m}
+\end{array}\right] \quad \frac{\partial \mathbf{y}}{\partial x}=\left[\begin{array}{c}
+\frac{\partial y_{1}}{\partial x} \\
+\frac{\partial y_{2}}{\partial x} \\
+\vdots \\
+\frac{\partial y_{m}}{\partial x}
+\end{array}\right]</script><h3 id="雅可比矩阵"><a href="#雅可比矩阵" class="headerlink" title="雅可比矩阵"></a>雅可比矩阵</h3><script type="math/tex; mode=display">
+\text{jacobi matrix}
+\\\frac{\partial \mathbf{y}}{\partial \mathbf{x}}=\left[\begin{array}{c}
+\frac{\partial y_{1}}{\partial \mathbf{x}} \\
+\frac{\partial y_{2}}{\partial \mathbf{x}} \\
+\vdots \\
+\frac{\partial y_{m}}{\partial \mathbf{x}}
+\end{array}\right]=\left[\begin{array}{c}
+\frac{\partial y_{1}}{\partial x_{1}}, \frac{\partial y_{1}}{\partial x_{2}}, \ldots, \frac{\partial y_{1}}{\partial x_{n}} \\
+\frac{\partial y_{2}}{\partial x_{1}}, \frac{\partial y_{2}}{\partial x_{2}}, \ldots, \frac{\partial y_{2}}{\partial x_{n}} \\
+\vdots \\
+\frac{\partial y_{m}}{\partial x_{1}}, \frac{\partial y_{m}}{\partial x_{2}}, \ldots, \frac{\partial y_{m}}{\partial x_{n}}
+\end{array}\right]</script><h3 id="线性回归"><a href="#线性回归" class="headerlink" title="线性回归"></a>线性回归</h3><script type="math/tex; mode=display">
+x , w \in \R ^ { n } , y \in \R  \\  z = (\left \langle  \mathbf{x}  ,\mathbf{w} \right \rangle - y ) ^ { 2 }</script><script type="math/tex; mode=display">
+\begin{aligned}\frac{\partial z}{\partial \mathbf{w}}\end{aligned}=2(\left \langle  \mathbf{x}  ,\mathbf{w} \right \rangle - y )\mathbf{w}^{\rm T}</script>
       
     </div>
     
@@ -488,7 +520,7 @@ x_{a} y_{b}-y_{a} x_{b}
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">53</span>
+                <span class="site-state-item-count">54</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -551,7 +583,7 @@ x_{a} y_{b}-y_{a} x_{b}
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#向量"><span class="nav-number">1.</span> <span class="nav-text">向量</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#点乘"><span class="nav-number">1.1.</span> <span class="nav-text">点乘</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#叉乘"><span class="nav-number">1.2.</span> <span class="nav-text">叉乘</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#范数"><span class="nav-number">1.3.</span> <span class="nav-text">范数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#导数"><span class="nav-number">1.4.</span> <span class="nav-text">导数</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#向量"><span class="nav-number">1.</span> <span class="nav-text">向量</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#点乘"><span class="nav-number">1.1.</span> <span class="nav-text">点乘</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#叉乘"><span class="nav-number">1.2.</span> <span class="nav-text">叉乘</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#范数"><span class="nav-number">1.3.</span> <span class="nav-text">范数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#导数"><span class="nav-number">1.4.</span> <span class="nav-text">导数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#雅可比矩阵"><span class="nav-number">1.4.1.</span> <span class="nav-text">雅可比矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线性回归"><span class="nav-number">1.4.2.</span> <span class="nav-text">线性回归</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

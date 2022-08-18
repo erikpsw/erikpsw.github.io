@@ -277,6 +277,131 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/17/%E5%A4%A7%E4%B8%80/python/DL/api/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/08/17/%E5%A4%A7%E4%B8%80/python/DL/api/" itemprop="url">大一/python/DL/api</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-08-17T18:20:11+08:00">
+                2022-08-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> torch.utils <span class="keyword">import</span> data</span><br><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">from</span> torch <span class="keyword">import</span> nn<span class="comment">#neural network</span></span><br></pre></td></tr></table></figure>
+<h1 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">load_array</span><span class="params">(data_array,batch_size,is_train=True)</span>:</span></span><br><span class="line">    dataset=data.TensorDataset(*data_array)<span class="comment">#给元组解包</span></span><br><span class="line">    <span class="keyword">return</span> data.DataLoader(dataset,batch_size,shuffle=is_train)</span><br><span class="line"><span class="comment">#随机挑选batch_size个</span></span><br></pre></td></tr></table></figure>
+<p>注意labels的形状为$m\times 1$而非$m$</p>
+<p>返回一个迭代器，用$\rm next(iter(data))$来访问</p>
+<h1 id="网络结构"><a href="#网络结构" class="headerlink" title="网络结构"></a>网络结构</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">net=nn.Sequential(nn.Linear(<span class="number">2</span>,<span class="number">1</span>))</span><br><span class="line">net[<span class="number">0</span>].weight.data.normal_(<span class="number">0</span>,<span class="number">0.01</span>)</span><br><span class="line">net[<span class="number">0</span>].bias.data.fill_(<span class="number">0</span>)<span class="comment">#访问模型参数,用_来原址修改</span></span><br></pre></td></tr></table></figure>
+<h1 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">loss=nn.MSELoss()<span class="comment">#损失函数</span></span><br><span class="line">trainer=torch.optim.SGD(net.parameters(),lr=<span class="number">0.03</span>)</span><br><span class="line"><span class="comment">#实例化优化器</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> epoch <span class="keyword">in</span> range(epochs):</span><br><span class="line">    <span class="keyword">for</span> X, y <span class="keyword">in</span> data_iter:<span class="comment">#迭代器每次返回X和y</span></span><br><span class="line">        l = loss(net(X) ,y)</span><br><span class="line">        trainer.zero_grad()<span class="comment">#清零梯度</span></span><br><span class="line">        l.backward()</span><br><span class="line">        trainer.step()<span class="comment">#自动前进</span></span><br><span class="line">    l = loss(net(feature), lables)<span class="comment">#每轮再计算loss</span></span><br><span class="line">    print(<span class="string">f'epoch <span class="subst">&#123;epoch + <span class="number">1</span>&#125;</span>, loss <span class="subst">&#123;l:f&#125;</span>'</span>)</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/15/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%AF%BC%E6%95%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -485,6 +610,12 @@ a & \text { if } x=0,
 <h2 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h2><h3 id="三种类型"><a href="#三种类型" class="headerlink" title="三种类型"></a>三种类型</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"button"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">   $(<span class="string">"p"</span>).hide();<span class="comment">//据html元素类型</span></span><br><span class="line">   $(<span class="string">"#test"</span>).hide();<span class="comment">//据id</span></span><br><span class="line">   $(<span class="string">".test"</span>).hide();<span class="comment">//据class</span></span><br><span class="line"> &#125;);</span><br></pre></td></tr></table></figure>
 <h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><h3 id="hover"><a href="#hover" class="headerlink" title="hover"></a>hover</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"p"</span>).hover(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    $(<span class="string">"p"</span>).css(<span class="string">"background-color"</span>,<span class="string">"yellow"</span>);<span class="comment">//移动在上面</span></span><br><span class="line">&#125;,<span class="comment">// mouseenter</span></span><br><span class="line">             <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    $(<span class="string">"p"</span>).css(<span class="string">"background-color"</span>,<span class="string">"pink"</span>);<span class="comment">//移开</span></span><br><span class="line">    <span class="comment">// mouseleave</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <h3 id="which"><a href="#which" class="headerlink" title="which"></a>which</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//keydown - 键按下的过程</span></span><br><span class="line"><span class="comment">//keypress - 键被按下</span></span><br><span class="line"><span class="comment">//keyup - 键被松开</span></span><br><span class="line"></span><br><span class="line">$(<span class="string">"input"</span>).keydown(<span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(event.which);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h1 id="Grid"><a href="#Grid" class="headerlink" title="Grid"></a>Grid</h1><p>2D排版方式定义</p>
+<script type="math/tex; mode=display">
+\text{display: grid}</script><p>分割</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">grid-template-rows</span>: 100<span class="selector-tag">px</span> 100<span class="selector-tag">px</span> 50<span class="selector-tag">px</span>;#水平</span><br><span class="line"><span class="selector-tag">grid-template-columns</span>: 100<span class="selector-tag">px</span> 100<span class="selector-tag">px</span> 50<span class="selector-tag">px</span>;#垂直</span><br><span class="line"></span><br><span class="line">居中元素</span><br><span class="line"><span class="selector-tag">align-items</span>: <span class="selector-tag">center</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="子对象"><a href="#子对象" class="headerlink" title="子对象"></a>子对象</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#起始为1</span><br><span class="line">grid-area:1/1/4/3</span><br><span class="line"></span><br><span class="line">行首/列首/行尾/列尾</span><br><span class="line">grid-row/grid-cloumn</span><br></pre></td></tr></table></figure>
+
           
         
       
@@ -1009,7 +1140,39 @@ x_{a} y_{b}-y_{a} x_{b}
 \|x\|_{1}=\left|x_{1}\right|+\cdots+\left|x_{n}\right| \\
 \|x\|_{2}=\sqrt{\left|x_{1}\right|^{2}+\cdots+\left|x_{n}\right|^{2}}=\sqrt{x^{H} x} \\
 \|x\|_{\infty}= \underset{1 \leq i \leq n}\max|x_{i}|</script><h2 id="导数"><a href="#导数" class="headerlink" title="导数"></a>导数</h2><script type="math/tex; mode=display">
-\frac{\partial y}{\partial \bf{x}}</script>
+\mathbf{x}=\begin{bmatrix}x_1\\x_2\\ \vdots \\x_n\end{bmatrix}
+\\\frac{\partial y}{\partial \mathbf{x}}=\begin{bmatrix}\frac{\partial y}{\partial x_1}
+\frac{\partial y}{\partial x_2}
+\cdots
+\frac{\partial y}{\partial x_n}
+\end{bmatrix}</script><p>方向导数，定义的shape，例</p>
+<script type="math/tex; mode=display">
+\frac{\partial}{\partial \mathbf{x}}(x_1^2+2x_2^2)=[2x_1,4x_2]</script><script type="math/tex; mode=display">
+\mathbf{y}=\left[\begin{array}{c}
+y_{1} \\
+y_{2} \\
+\vdots \\
+y_{m}
+\end{array}\right] \quad \frac{\partial \mathbf{y}}{\partial x}=\left[\begin{array}{c}
+\frac{\partial y_{1}}{\partial x} \\
+\frac{\partial y_{2}}{\partial x} \\
+\vdots \\
+\frac{\partial y_{m}}{\partial x}
+\end{array}\right]</script><h3 id="雅可比矩阵"><a href="#雅可比矩阵" class="headerlink" title="雅可比矩阵"></a>雅可比矩阵</h3><script type="math/tex; mode=display">
+\text{jacobi matrix}
+\\\frac{\partial \mathbf{y}}{\partial \mathbf{x}}=\left[\begin{array}{c}
+\frac{\partial y_{1}}{\partial \mathbf{x}} \\
+\frac{\partial y_{2}}{\partial \mathbf{x}} \\
+\vdots \\
+\frac{\partial y_{m}}{\partial \mathbf{x}}
+\end{array}\right]=\left[\begin{array}{c}
+\frac{\partial y_{1}}{\partial x_{1}}, \frac{\partial y_{1}}{\partial x_{2}}, \ldots, \frac{\partial y_{1}}{\partial x_{n}} \\
+\frac{\partial y_{2}}{\partial x_{1}}, \frac{\partial y_{2}}{\partial x_{2}}, \ldots, \frac{\partial y_{2}}{\partial x_{n}} \\
+\vdots \\
+\frac{\partial y_{m}}{\partial x_{1}}, \frac{\partial y_{m}}{\partial x_{2}}, \ldots, \frac{\partial y_{m}}{\partial x_{n}}
+\end{array}\right]</script><h3 id="线性回归"><a href="#线性回归" class="headerlink" title="线性回归"></a>线性回归</h3><script type="math/tex; mode=display">
+x , w \in \R ^ { n } , y \in \R  \\  z = (\left \langle  \mathbf{x}  ,\mathbf{w} \right \rangle - y ) ^ { 2 }</script><script type="math/tex; mode=display">
+\begin{aligned}\frac{\partial z}{\partial \mathbf{w}}\end{aligned}=2(\left \langle  \mathbf{x}  ,\mathbf{w} \right \rangle - y )\mathbf{w}^{\rm T}</script>
           
         
       
@@ -1511,134 +1674,6 @@ Ax=\lambda x(x\ne\vec{0})</script><p>对称矩阵总可以找到特征向量</p>
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/07/31/%E5%A4%A7%E4%B8%80/c%E8%AF%AD%E8%A8%80/%E5%BE%AA%E7%8E%AF/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/07/31/%E5%A4%A7%E4%B8%80/c%E8%AF%AD%E8%A8%80/%E5%BE%AA%E7%8E%AF/" itemprop="url">大一/c语言/循环</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-07-31T20:41:09+08:00">
-                2022-07-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="for"><a href="#for" class="headerlink" title="for"></a>for</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(initalize;<span class="built_in">end</span> statement;forward)&#123;   </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">10</span>;i++) <span class="built_in">cout</span>&lt;&lt;i;</span><br><span class="line"><span class="comment">//simplest case</span></span><br><span class="line"><span class="comment">//最重要的三要素(起点 更新 终点)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>, j = <span class="number">100</span>; i &lt; j; i++)<span class="comment">//可有多个变量</span></span><br></pre></td></tr></table></figure>
-<p>for 比while循环更加紧凑</p>
-<h2 id="STL容器的迭代"><a href="#STL容器的迭代" class="headerlink" title="STL容器的迭代"></a>STL容器的迭代</h2><p>$\rm iterator$可直接迭代元素(类似指针)</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; nums=&#123;<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">9</span>&#125;;</span><br><span class="line">    <span class="keyword">for</span>(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;:: iterator iter=nums.<span class="built_in">begin</span>();iter!=nums.<span class="built_in">end</span>();iter++)</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;*iter&lt;&lt;<span class="string">" "</span>;<span class="comment">//访问元素</span></span><br><span class="line"><span class="number">1</span> <span class="number">3</span> <span class="number">5</span> <span class="number">7</span> <span class="number">9</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">//使用auto iter替换</span></span><br></pre></td></tr></table></figure>
-<h1 id="while"><a href="#while" class="headerlink" title="while"></a>while</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(A)&#123;</span><br><span class="line">	<span class="comment">//若A为真,则执行</span></span><br><span class="line">    <span class="comment">//注意A要在循环体中更新,否则为infinite loop</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">int</span> i=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span>(i&lt;=<span class="number">10</span>)&#123;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;i;</span><br><span class="line">    i++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//simplest case</span></span><br></pre></td></tr></table></figure>
-<p>while循环为top-checking loop，先检查表达式(A)</p>
-<h2 id="do-while"><a href="#do-while" class="headerlink" title="do-while"></a>do-while</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span></span><br><span class="line">    stetament</span><br><span class="line"><span class="keyword">while</span>(condition);</span><br><span class="line"></span><br><span class="line">如先输入变量再计算</span><br></pre></td></tr></table></figure>
-<p> break 跳出本层循环(不循环了)</p>
-<p>continue 跳出本次循环(不执行后面的语句)</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1689,7 +1724,7 @@ Ax=\lambda x(x\ne\vec{0})</script><p>对称矩阵总可以找到特征向量</p>
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">53</span>
+                <span class="site-state-item-count">54</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
