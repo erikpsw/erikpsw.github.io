@@ -613,7 +613,7 @@ a & \text { if } x=0,
 <h1 id="Grid"><a href="#Grid" class="headerlink" title="Grid"></a>Grid</h1><p>2D排版方式定义</p>
 <script type="math/tex; mode=display">
 \text{display: grid}</script><p>分割</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">grid-template-rows</span>: 100<span class="selector-tag">px</span> 100<span class="selector-tag">px</span> 50<span class="selector-tag">px</span>;#水平</span><br><span class="line"><span class="selector-tag">grid-template-columns</span>: 100<span class="selector-tag">px</span> 100<span class="selector-tag">px</span> 50<span class="selector-tag">px</span>;#垂直</span><br><span class="line"></span><br><span class="line">居中元素</span><br><span class="line"><span class="selector-tag">align-items</span>: <span class="selector-tag">center</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">grid-template-rows</span>: 100<span class="selector-tag">px</span> 100<span class="selector-tag">px</span> 50<span class="selector-tag">px</span>;#垂直,分割行</span><br><span class="line"><span class="selector-tag">grid-te</span>#水平</span><br><span class="line"></span><br><span class="line">居中元素</span><br><span class="line"><span class="selector-tag">align-items</span>: <span class="selector-tag">center</span>;</span><br></pre></td></tr></table></figure>
 <h2 id="子对象"><a href="#子对象" class="headerlink" title="子对象"></a>子对象</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#起始为1</span><br><span class="line">grid-area:1/1/4/3</span><br><span class="line"></span><br><span class="line">行首/列首/行尾/列尾</span><br><span class="line">grid-row/grid-cloumn</span><br></pre></td></tr></table></figure>
 
           
@@ -1171,7 +1171,7 @@ y_{m}
 \vdots \\
 \frac{\partial y_{m}}{\partial x_{1}}, \frac{\partial y_{m}}{\partial x_{2}}, \ldots, \frac{\partial y_{m}}{\partial x_{n}}
 \end{array}\right]</script><h3 id="线性回归"><a href="#线性回归" class="headerlink" title="线性回归"></a>线性回归</h3><script type="math/tex; mode=display">
-x , w \in \R ^ { n } , y \in \R  \\  z = (\left \langle  \mathbf{x}  ,\mathbf{w} \right \rangle - y ) ^ { 2 }</script><script type="math/tex; mode=display">
+x , w \in \mathbf{R }^ { n } , y \in \mathbf{R }  \\  z = (\left \langle  \mathbf{x}  ,\mathbf{w} \right \rangle - y ) ^ { 2 }</script><script type="math/tex; mode=display">
 \begin{aligned}\frac{\partial z}{\partial \mathbf{w}}\end{aligned}=2(\left \langle  \mathbf{x}  ,\mathbf{w} \right \rangle - y )\mathbf{w}^{\rm T}</script>
           
         
@@ -1629,7 +1629,7 @@ Ax=\lambda x(x\ne\vec{0})</script><p>对称矩阵总可以找到特征向量</p>
           
             <h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><p>例​：$f(x)=x^2$</p>
 <p>定义了一个函数 $f$ ，法则为将一个数转变为它的平方</p>
-<p>未指定，故定义域为$\R$(实数集)</p>
+<p>未指定，故定义域为$\mathbf{R }$(实数集)</p>
 <p>意义：$f(2)=4$，通过法则$f$将数字$2$转变为$4$</p>
 <blockquote>
 <p>By the way, $f$ is the transformation rule, while $f(x)$ is the result of applying the transformation rule to the variable $x$. So it’s technically not correct to say “$f(x)$ is a function”; it should be “$f$ is a function.”</p>

@@ -127,13 +127,15 @@
 #work-title{
     font-size: 3em;
     padding-left: 0.5em;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
 }
 #line2{
-    margin-top: 100em;
+    margin-top: 20em;
 }
 
 #work-list{
-    margin-left: 1em;
+    margin-left: 2.5em;
 }
 #work1{
     font-size: 3em;
@@ -143,6 +145,21 @@
     color:black
 
 }
+#box1{
+    display: grid;
+    grid-template-columns: 50% 50%;
+} 
+#education{
+    font-size: 3em;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+}   
+.school{
+    font-size: 1.8em;
+    padding-left: 0.5em;
+    font-family:'Times New Roman', Times, serif;
+}
+
 
 }
 
@@ -168,7 +185,7 @@
         font-family:"Times New Roman",Georgia,Serif;
         padding:5px 30px 5px;
         color:black;
-        font-size: 3em;
+        font-size: 5em;
         margin: auto;
     }
     
@@ -208,13 +225,13 @@
     
     #name1{
         font-family: Georgia,Serif;
-        font-size: 2em;
+        font-size: 5em;
         margin: 2%;
     }   
     
     #name2{
         font-family: SimSun; 
-        font-size: 3.5em;
+        font-size: 7.5em;
         margin: 2%;
         font-weight: bolder
     } 
@@ -227,12 +244,12 @@
     }
     
     #github{
-        height: 30px;
+        height: 70px;
     }
     #wechat{
-        height: 30px;
-        margin-top: 2px;
-        margin-left: 1em;
+        height: 70px;
+        margin-top: 4px;
+        margin-left: 3em;
     }
      
     #intro{
@@ -256,6 +273,7 @@
     .text{
         margin-top:0.2em;
         margin-bottom: 0.2em;
+        font-size: 2em;
         font-family: Times New Roman;
     }
     
@@ -295,6 +313,9 @@
     #work-title{
         font-size: 3em;
         padding-left: 0.5em;
+        font-family:'Times New Roman', Times, serif;
+        font-weight: bold;
+
     }
     #line2{
         margin-top: 100em;
@@ -302,6 +323,7 @@
     
     #work-list{
         margin-left: 1em;
+        margin-bottom: 10em;
     }
     #work1{
         font-size: 3em;
@@ -311,7 +333,18 @@
         color:black
     
     }
-
+    #education{
+        margin-top: 3em;
+        padding-left: 0.5em;
+        font-size: 3em;
+        font-family:'Times New Roman', Times, serif;
+        font-weight: bold;
+    }   
+    .school{
+        font-size: 1.8em;
+        padding-left: 0.5em;
+        font-family:'Times New Roman', Times, serif;
+    }
 }
 
 
