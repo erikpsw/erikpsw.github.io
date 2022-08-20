@@ -94,15 +94,15 @@
 
 
 
-<meta name="description" content="导入123from torch.utils import dataimport torchfrom torch import nn#neural network 数据1234def load_array(data_array,batch_size,is_train&#x3D;True):    dataset&#x3D;data.TensorDataset(*data_array)#给元组解包    return d">
+<meta name="description" content="JQuery$\rm jQuery $是一个$\rm JavaScript $库。 导入所有 jQuery 函数位于一个 document.ready 函数中，防止未加载完全就运行 123456789101112$(document).ready(function()&amp;#123;    &#x2F;&#x2F; 开始写 jQuery 代码... &amp;#125;);&#x2F;&#x2F;简洁写法$(function()&amp;#123;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="大一&#x2F;python&#x2F;DL&#x2F;api">
-<meta property="og:url" content="http://yoursite.com/2022/08/17/%E5%A4%A7%E4%B8%80/python/DL/api/index.html">
+<meta property="og:title" content="大一&#x2F;web&#x2F;jQuery">
+<meta property="og:url" content="http://yoursite.com/2022/08/12/%E5%A4%A7%E4%B8%80/web/jQuery/index.html">
 <meta property="og:site_name" content="BLOG">
-<meta property="og:description" content="导入123from torch.utils import dataimport torchfrom torch import nn#neural network 数据1234def load_array(data_array,batch_size,is_train&#x3D;True):    dataset&#x3D;data.TensorDataset(*data_array)#给元组解包    return d">
+<meta property="og:description" content="JQuery$\rm jQuery $是一个$\rm JavaScript $库。 导入所有 jQuery 函数位于一个 document.ready 函数中，防止未加载完全就运行 123456789101112$(document).ready(function()&amp;#123;    &#x2F;&#x2F; 开始写 jQuery 代码... &amp;#125;);&#x2F;&#x2F;简洁写法$(function()&amp;#123;">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-08-17T10:20:11.566Z">
-<meta property="article:modified_time" content="2022-08-17T10:38:42.242Z">
+<meta property="article:published_time" content="2022-08-12T05:17:08.277Z">
+<meta property="article:modified_time" content="2022-08-20T04:48:13.132Z">
 <meta property="article:author" content="Shiwei Pan">
 <meta name="twitter:card" content="summary">
 
@@ -133,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2022/08/17/大一/python/DL/api/"/>
+  <link rel="canonical" href="http://yoursite.com/2022/08/12/大一/web/jQuery/"/>
 
 
 
 
 
-  <title>大一/python/DL/api | BLOG</title>
+  <title>大一/web/jQuery | BLOG</title>
   
 
 
@@ -277,7 +277,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/17/%E5%A4%A7%E4%B8%80/python/DL/api/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/12/%E5%A4%A7%E4%B8%80/web/jQuery/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Shiwei Pan">
@@ -294,7 +294,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">大一/python/DL/api</h1>
+          <h1 class="post-title" itemprop="name headline">大一/web/jQuery</h1>
         
 
         <div class="post-meta">
@@ -306,8 +306,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-08-17T18:20:11+08:00">
-                2022-08-17
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-08-12T13:17:08+08:00">
+                2022-08-12
               </time>
             
 
@@ -344,12 +344,12 @@
       
 
       
-        <h1 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> torch.utils <span class="keyword">import</span> data</span><br><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">from</span> torch <span class="keyword">import</span> nn<span class="comment">#neural network</span></span><br></pre></td></tr></table></figure>
-<h1 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">load_array</span><span class="params">(data_array,batch_size,is_train=True)</span>:</span></span><br><span class="line">    dataset=data.TensorDataset(*data_array)<span class="comment">#给元组解包</span></span><br><span class="line">    <span class="keyword">return</span> data.DataLoader(dataset,batch_size,shuffle=is_train)</span><br><span class="line"><span class="comment">#随机挑选batch_size个</span></span><br></pre></td></tr></table></figure>
-<p>注意labels的形状为$m\times 1$而非$m$</p>
-<p>返回一个迭代器，用$\rm next(iter(data))$来访问</p>
-<h1 id="网络结构"><a href="#网络结构" class="headerlink" title="网络结构"></a>网络结构</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">net=nn.Sequential(nn.Linear(<span class="number">2</span>,<span class="number">1</span>))</span><br><span class="line">net[<span class="number">0</span>].weight.data.normal_(<span class="number">0</span>,<span class="number">0.01</span>)</span><br><span class="line">net[<span class="number">0</span>].bias.data.fill_(<span class="number">0</span>)<span class="comment">#访问模型参数,用_来原址修改</span></span><br></pre></td></tr></table></figure>
-<h1 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">loss=nn.MSELoss()<span class="comment">#损失函数</span></span><br><span class="line">trainer=torch.optim.SGD(net.parameters(),lr=<span class="number">0.03</span>)</span><br><span class="line"><span class="comment">#实例化优化器</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> epoch <span class="keyword">in</span> range(epochs):</span><br><span class="line">    <span class="keyword">for</span> X, y <span class="keyword">in</span> data_iter:<span class="comment">#迭代器每次返回X和y</span></span><br><span class="line">        l = loss(net(X) ,y)</span><br><span class="line">        trainer.zero_grad()<span class="comment">#清零梯度</span></span><br><span class="line">        l.backward()</span><br><span class="line">        trainer.step()<span class="comment">#自动前进</span></span><br><span class="line">    l = loss(net(feature), lables)<span class="comment">#每轮再计算loss</span></span><br><span class="line">    print(<span class="string">f'epoch <span class="subst">&#123;epoch + <span class="number">1</span>&#125;</span>, loss <span class="subst">&#123;l:f&#125;</span>'</span>)</span><br></pre></td></tr></table></figure>
+        <h1 id="JQuery"><a href="#JQuery" class="headerlink" title="JQuery"></a>JQuery</h1><p>$\rm jQuery $是一个$\rm JavaScript $库。</p>
+<h2 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h2><p>所有 jQuery 函数位于一个 document.ready 函数中，防止未加载完全就运行</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"> </span><br><span class="line">   <span class="comment">// 开始写 jQuery 代码...</span></span><br><span class="line"> </span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//简洁写法</span></span><br><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"> </span><br><span class="line">   <span class="comment">// 开始写 jQuery 代码...</span></span><br><span class="line"> </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h2><h3 id="三种类型"><a href="#三种类型" class="headerlink" title="三种类型"></a>三种类型</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"button"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">   $(<span class="string">"p"</span>).hide();<span class="comment">//据html元素类型</span></span><br><span class="line">   $(<span class="string">"#test"</span>).hide();<span class="comment">//据id</span></span><br><span class="line">   $(<span class="string">".test"</span>).hide();<span class="comment">//据class</span></span><br><span class="line"> &#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><h3 id="hover"><a href="#hover" class="headerlink" title="hover"></a>hover</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"p"</span>).hover(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    $(<span class="string">"p"</span>).css(<span class="string">"background-color"</span>,<span class="string">"yellow"</span>);<span class="comment">//移动在上面</span></span><br><span class="line">&#125;,<span class="comment">// mouseenter</span></span><br><span class="line">             <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    $(<span class="string">"p"</span>).css(<span class="string">"background-color"</span>,<span class="string">"pink"</span>);<span class="comment">//移开</span></span><br><span class="line">    <span class="comment">// mouseleave</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="which"><a href="#which" class="headerlink" title="which"></a>which</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//keydown - 键按下的过程</span></span><br><span class="line"><span class="comment">//keypress - 键被按下</span></span><br><span class="line"><span class="comment">//keyup - 键被松开</span></span><br><span class="line"></span><br><span class="line">$(<span class="string">"input"</span>).keydown(<span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(event.which);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -374,8 +374,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2022/08/15/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%AF%BC%E6%95%B0/" rel="next" title="大一/高数/导数">
-                <i class="fa fa-chevron-left"></i> 大一/高数/导数
+              <a href="/2022/08/10/%E5%A4%A7%E4%B8%80/python/taichi/%E6%93%8D%E4%BD%9C/" rel="next" title="大一/python/taichi/操作">
+                <i class="fa fa-chevron-left"></i> 大一/python/taichi/操作
               </a>
             
           </div>
@@ -384,8 +384,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2022/08/20/%E5%A4%A7%E4%B8%80/web/css/" rel="prev" title="大一/web/css">
-                大一/web/css <i class="fa fa-chevron-right"></i>
+              <a href="/2022/08/12/%E5%A4%A7%E4%B8%80/web/js/" rel="prev" title="大一/web/js">
+                大一/web/js <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -526,7 +526,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#导入"><span class="nav-number">1.</span> <span class="nav-text">导入</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据"><span class="nav-number">2.</span> <span class="nav-text">数据</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#网络结构"><span class="nav-number">3.</span> <span class="nav-text">网络结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#优化"><span class="nav-number">4.</span> <span class="nav-text">优化</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JQuery"><span class="nav-number">1.</span> <span class="nav-text">JQuery</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#导入"><span class="nav-number">1.1.</span> <span class="nav-text">导入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择器"><span class="nav-number">1.2.</span> <span class="nav-text">选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#三种类型"><span class="nav-number">1.2.1.</span> <span class="nav-text">三种类型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件"><span class="nav-number">1.3.</span> <span class="nav-text">事件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hover"><span class="nav-number">1.3.1.</span> <span class="nav-text">hover</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#which"><span class="nav-number">1.3.2.</span> <span class="nav-text">which</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

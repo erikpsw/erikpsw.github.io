@@ -297,7 +297,7 @@
 
     #quote{
         display: grid;
-        font-size: 1.5em;
+        font-size: 1em;
         place-items: center;
         padding-top: 0em;
         font-family: 'Times New Roman', Times, serif;
