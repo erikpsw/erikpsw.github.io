@@ -358,7 +358,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">child_class</span><span class="params">(parent_class)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,attributes)</span>:</span></span><br><span class="line">        super().__init__(attributes)</span><br><span class="line">        self.other_attri=<span class="number">1</span></span><br></pre></td></tr></table></figure>
 <p>$\rm super$代表superclass即父类，子类称为subclass</p>
 <h2 id="覆盖原方法"><a href="#覆盖原方法" class="headerlink" title="覆盖原方法"></a>覆盖原方法</h2><p>直接重写，python会忽略父类中的方法</p>
-<h1 id="魔法方法"><a href="#魔法方法" class="headerlink" title="魔法方法"></a>魔法方法</h1><p>$\rm __sub__,__mul__$等方法用于重载运算符</p>
+<h1 id="魔法方法"><a href="#魔法方法" class="headerlink" title="魔法方法"></a>魔法方法</h1><p>sub,mul等方法用于重载运算符</p>
 
           
         
@@ -787,6 +787,131 @@ a & \text { if } x=0,
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/12/%E5%A4%A7%E4%B8%80/web/jQuery/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/08/12/%E5%A4%A7%E4%B8%80/web/jQuery/" itemprop="url">大一/web/jQuery</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-08-12T13:17:08+08:00">
+                2022-08-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="JQuery"><a href="#JQuery" class="headerlink" title="JQuery"></a>JQuery</h1><p>$\rm jQuery $是一个$\rm JavaScript $库。</p>
+<h2 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h2><p>所有 jQuery 函数位于一个 document.ready 函数中，防止未加载完全就运行</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"> </span><br><span class="line">   <span class="comment">// 开始写 jQuery 代码...</span></span><br><span class="line"> </span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//简洁写法</span></span><br><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"> </span><br><span class="line">   <span class="comment">// 开始写 jQuery 代码...</span></span><br><span class="line"> </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h2><h3 id="三种类型"><a href="#三种类型" class="headerlink" title="三种类型"></a>三种类型</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"button"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">   $(<span class="string">"p"</span>).hide();<span class="comment">//据html元素类型</span></span><br><span class="line">   $(<span class="string">"#test"</span>).hide();<span class="comment">//据id</span></span><br><span class="line">   $(<span class="string">".test"</span>).hide();<span class="comment">//据class</span></span><br><span class="line"> &#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><h3 id="hover"><a href="#hover" class="headerlink" title="hover"></a>hover</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"p"</span>).hover(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    $(<span class="string">"p"</span>).css(<span class="string">"background-color"</span>,<span class="string">"yellow"</span>);<span class="comment">//移动在上面</span></span><br><span class="line">&#125;,<span class="comment">// mouseenter</span></span><br><span class="line">             <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    $(<span class="string">"p"</span>).css(<span class="string">"background-color"</span>,<span class="string">"pink"</span>);<span class="comment">//移开</span></span><br><span class="line">    <span class="comment">// mouseleave</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="which"><a href="#which" class="headerlink" title="which"></a>which</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//keydown - 键按下的过程</span></span><br><span class="line"><span class="comment">//keypress - 键被按下</span></span><br><span class="line"><span class="comment">//keyup - 键被松开</span></span><br><span class="line"></span><br><span class="line">$(<span class="string">"input"</span>).keydown(<span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(event.which);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/12/%E5%A4%A7%E4%B8%80/web/js/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -873,131 +998,6 @@ a & \text { if } x=0,
 <blockquote>
 <p>除了作为普通字符串，还可以用来定义多行字符串，还可以在字符串中加入变量和表达式。</p>
 </blockquote>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/12/%E5%A4%A7%E4%B8%80/web/jQuery/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/08/12/%E5%A4%A7%E4%B8%80/web/jQuery/" itemprop="url">大一/web/jQuery</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-08-12T13:17:08+08:00">
-                2022-08-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="JQuery"><a href="#JQuery" class="headerlink" title="JQuery"></a>JQuery</h1><p>$\rm jQuery $是一个$\rm JavaScript $库。</p>
-<h2 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h2><p>所有 jQuery 函数位于一个 document.ready 函数中，防止未加载完全就运行</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"> </span><br><span class="line">   <span class="comment">// 开始写 jQuery 代码...</span></span><br><span class="line"> </span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//简洁写法</span></span><br><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"> </span><br><span class="line">   <span class="comment">// 开始写 jQuery 代码...</span></span><br><span class="line"> </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h2 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h2><h3 id="三种类型"><a href="#三种类型" class="headerlink" title="三种类型"></a>三种类型</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"button"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">   $(<span class="string">"p"</span>).hide();<span class="comment">//据html元素类型</span></span><br><span class="line">   $(<span class="string">"#test"</span>).hide();<span class="comment">//据id</span></span><br><span class="line">   $(<span class="string">".test"</span>).hide();<span class="comment">//据class</span></span><br><span class="line"> &#125;);</span><br></pre></td></tr></table></figure>
-<h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><h3 id="hover"><a href="#hover" class="headerlink" title="hover"></a>hover</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"p"</span>).hover(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    $(<span class="string">"p"</span>).css(<span class="string">"background-color"</span>,<span class="string">"yellow"</span>);<span class="comment">//移动在上面</span></span><br><span class="line">&#125;,<span class="comment">// mouseenter</span></span><br><span class="line">             <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    $(<span class="string">"p"</span>).css(<span class="string">"background-color"</span>,<span class="string">"pink"</span>);<span class="comment">//移开</span></span><br><span class="line">    <span class="comment">// mouseleave</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h3 id="which"><a href="#which" class="headerlink" title="which"></a>which</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//keydown - 键按下的过程</span></span><br><span class="line"><span class="comment">//keypress - 键被按下</span></span><br><span class="line"><span class="comment">//keyup - 键被松开</span></span><br><span class="line"></span><br><span class="line">$(<span class="string">"input"</span>).keydown(<span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(event.which);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
           
         

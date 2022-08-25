@@ -609,6 +609,171 @@ x_{1} x_{2} \cdots x_{n}=\prod_{i=1}^{n} x_{i}=(-1)^{n} \frac{a_{0}}{a_{n}}</scr
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/" itemprop="url">高中/抛物线折叠</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-07-23T21:09:59+08:00">
+                2022-07-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="5-抛物线折叠"><a href="#5-抛物线折叠" class="headerlink" title="5.抛物线折叠"></a>5.抛物线折叠</h1><p>取一张纸，将边线当做线$L$，在纸上取点$P$，将$P$折叠到$L$上，对应点为$P’$，压出折痕，如下图所示</p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/image-20200905125312126.png" alt="image-20200905125312126"></p>
+<p>观察折痕所形成的图形</p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/image-20200905125843676.png" alt="image-20200905125843676"></p>
+<p>看上去像是一条抛物线，但我们需要严格证明</p>
+<h3 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h3><p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/20200905131930.png" alt="20200905131930"></p>
+<p>以$O$为原点建立坐标系，使得$p$点坐标为$(0,1)$，$p’$点的坐标为$(t,1)$，下面求折线的方程</p>
+<p>因为折线$l$是$pp’$的中垂线</p>
+<p>$\left. { k_{pp^ { \prime }} = \frac { 2 } { t } } \ { k _ { l } = \frac { t } { 2 } } \ { y - 0 = \frac { t } { 2 } ( x - \frac { t } { 2 } ) } \ { y = \frac { t } { 2 } x - \frac { t ^ { 2 } } { 4 } } \right.$</p>
+<p>这就是折线的方程</p>
+<h2 id="求解抛物线方程"><a href="#求解抛物线方程" class="headerlink" title="求解抛物线方程"></a>求解抛物线方程</h2><h3 id="带入法："><a href="#带入法：" class="headerlink" title="带入法："></a>带入法：</h3><p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/image-20200905135205746.png" alt="image-20200905135205746"></p>
+<p>考虑折线上横坐标为$t$的一点$M$</p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/20200905135547462.png" alt="20200905135547462"></p>
+<p>将$t=x$代入折线方程</p>
+<p>$y = \frac { x } { 2 } \cdot x - \frac { x ^ { 2 } } { 4 } = \frac { x ^ { 2 } } { 4 }$</p>
+<p>这就是当$p’$在$L$上运动时，点$M$的轨迹方程</p>
+<h3 id="切线法："><a href="#切线法：" class="headerlink" title="切线法："></a>切线法：</h3><p>折线即为抛物线的切线</p>
+<p>$\frac{d y}{d x}=\frac{x}{2}$</p>
+<p>两边积分得</p>
+<p>$y=\frac{x^{2}}{4}+C$</p>
+<p>又当$p’=(0,-1)$时，函数过$O=(0,0)$，故$C=0$，即</p>
+<p>$y=\frac{x^{2}}{4}$</p>
+<h3 id="包络线法："><a href="#包络线法：" class="headerlink" title="包络线法："></a>包络线法：</h3><p>将折线方程化成有三个变量的隐式方程</p>
+<p>$\left. { 4 y = 2 t x - t ^ { 2 } } \ { t ^ { 2 } - 2 t x + 4 y = 0 } \ { F ( x , y , t ) = t ^ { 2 } - 2 t x + 4 y }  \right.$</p>
+<p>带入包络线线上方一点$(0,1)$</p>
+<p>$F ( 0,1 , t ) = t ^ { 2 } - 0 + 4 &gt; 0$</p>
+<p>故图像被分为两个区域</p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/x2.png" alt="x2"></p>
+<p>这个关系是对任意的$t$都成立</p>
+<p>考虑包络线上一点$(x_0,y_0)$，仅存在一个$t$使得$F(x_0,y_0, t)=0$，对其余$t$的题都有$F(x_0,y_0, t)&gt;0$</p>
+<p>所以$F(x_0,y_0, t)$对$t$有极值，又因为$(x_0,y_0)$必须在折线上，故</p>
+<p>$\left\{  \begin{array}{<strong>lr</strong>}    F(x, y, t)=0 \ \frac{\partial}{\partial t} F(x, y, t)=0\end{array} \right.$</p>
+<p>$\frac{\partial}{\partial t} F(x, y, t)=2 t - 2 x=0$</p>
+<p>解得</p>
+<p>$t=x$</p>
+<p>将$t=x$代入隐式方程，同样得到</p>
+<p>$y = \frac { x } { 2 } \cdot x - \frac { x ^ { 2 } } { 4 } = \frac { x ^ { 2 } } { 4 }$</p>
+<h2 id="More-examples"><a href="#More-examples" class="headerlink" title="More examples"></a>More examples</h2><p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/image-20200905191017432.png" alt="image-20200905191017432"></p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/image-20200905191224070.png" alt="image-20200905191224070"></p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/image-20200905191320876.png" alt="image-20200905191320876"></p>
+<h2 id="斜抛运动包络线："><a href="#斜抛运动包络线：" class="headerlink" title="斜抛运动包络线："></a>斜抛运动包络线：</h2><p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/image-20200905191604321.png" alt="image-20200905191604321"></p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/image-20200905192011346.png" alt="image-20200905192011346"></p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/pic.png" alt="pic"></p>
+<h2 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h2><p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/20200905135547462.png" alt="20200905135547462"></p>
+<p>重新观察这张图，$\frac{Mp}{Mp^{\prime}}=e=1$，根据抛物线的第二定义</p>
+<p>将$p$到$L$上所形成的折线便是以$p$为焦点，以$L$为准线的抛物线的一条切线，这个性质将在下一节中起到非常重要的作用。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%98%E5%8F%A0%E8%9E%BA%E7%BA%BF/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -769,171 +934,6 @@ x_{1} x_{2} \cdots x_{n}=\prod_{i=1}^{n} x_{i}=(-1)^{n} \frac{a_{0}}{a_{n}}</scr
 <p>这种折法在折纸艺术中非常常见，以下是几个折纸作品</p>
 <p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%98%E5%8F%A0%E8%9E%BA%E7%BA%BF/image-20200920185728281.png" alt="image-20200920185728281"></p>
 <h3 id="镶嵌折纸作品欣赏"><a href="#镶嵌折纸作品欣赏" class="headerlink" title="镶嵌折纸作品欣赏"></a>镶嵌折纸作品欣赏</h3><p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%98%E5%8F%A0%E8%9E%BA%E7%BA%BF/折纸镶嵌1.png" alt="折纸镶嵌1"><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%98%E5%8F%A0%E8%9E%BA%E7%BA%BF/折纸镶嵌.png" alt="折纸镶嵌"></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/" itemprop="url">高中/抛物线折叠</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-07-23T21:09:59+08:00">
-                2022-07-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="5-抛物线折叠"><a href="#5-抛物线折叠" class="headerlink" title="5.抛物线折叠"></a>5.抛物线折叠</h1><p>取一张纸，将边线当做线$L$，在纸上取点$P$，将$P$折叠到$L$上，对应点为$P’$，压出折痕，如下图所示</p>
-<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/image-20200905125312126.png" alt="image-20200905125312126"></p>
-<p>观察折痕所形成的图形</p>
-<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/image-20200905125843676.png" alt="image-20200905125843676"></p>
-<p>看上去像是一条抛物线，但我们需要严格证明</p>
-<h3 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h3><p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/20200905131930.png" alt="20200905131930"></p>
-<p>以$O$为原点建立坐标系，使得$p$点坐标为$(0,1)$，$p’$点的坐标为$(t,1)$，下面求折线的方程</p>
-<p>因为折线$l$是$pp’$的中垂线</p>
-<p>$\left. { k_{pp^ { \prime }} = \frac { 2 } { t } } \ { k _ { l } = \frac { t } { 2 } } \ { y - 0 = \frac { t } { 2 } ( x - \frac { t } { 2 } ) } \ { y = \frac { t } { 2 } x - \frac { t ^ { 2 } } { 4 } } \right.$</p>
-<p>这就是折线的方程</p>
-<h2 id="求解抛物线方程"><a href="#求解抛物线方程" class="headerlink" title="求解抛物线方程"></a>求解抛物线方程</h2><h3 id="带入法："><a href="#带入法：" class="headerlink" title="带入法："></a>带入法：</h3><p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/image-20200905135205746.png" alt="image-20200905135205746"></p>
-<p>考虑折线上横坐标为$t$的一点$M$</p>
-<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/20200905135547462.png" alt="20200905135547462"></p>
-<p>将$t=x$代入折线方程</p>
-<p>$y = \frac { x } { 2 } \cdot x - \frac { x ^ { 2 } } { 4 } = \frac { x ^ { 2 } } { 4 }$</p>
-<p>这就是当$p’$在$L$上运动时，点$M$的轨迹方程</p>
-<h3 id="切线法："><a href="#切线法：" class="headerlink" title="切线法："></a>切线法：</h3><p>折线即为抛物线的切线</p>
-<p>$\frac{d y}{d x}=\frac{x}{2}$</p>
-<p>两边积分得</p>
-<p>$y=\frac{x^{2}}{4}+C$</p>
-<p>又当$p’=(0,-1)$时，函数过$O=(0,0)$，故$C=0$，即</p>
-<p>$y=\frac{x^{2}}{4}$</p>
-<h3 id="包络线法："><a href="#包络线法：" class="headerlink" title="包络线法："></a>包络线法：</h3><p>将折线方程化成有三个变量的隐式方程</p>
-<p>$\left. { 4 y = 2 t x - t ^ { 2 } } \ { t ^ { 2 } - 2 t x + 4 y = 0 } \ { F ( x , y , t ) = t ^ { 2 } - 2 t x + 4 y }  \right.$</p>
-<p>带入包络线线上方一点$(0,1)$</p>
-<p>$F ( 0,1 , t ) = t ^ { 2 } - 0 + 4 &gt; 0$</p>
-<p>故图像被分为两个区域</p>
-<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/x2.png" alt="x2"></p>
-<p>这个关系是对任意的$t$都成立</p>
-<p>考虑包络线上一点$(x_0,y_0)$，仅存在一个$t$使得$F(x_0,y_0, t)=0$，对其余$t$的题都有$F(x_0,y_0, t)&gt;0$</p>
-<p>所以$F(x_0,y_0, t)$对$t$有极值，又因为$(x_0,y_0)$必须在折线上，故</p>
-<p>$\left\{  \begin{array}{<strong>lr</strong>}    F(x, y, t)=0 \ \frac{\partial}{\partial t} F(x, y, t)=0\end{array} \right.$</p>
-<p>$\frac{\partial}{\partial t} F(x, y, t)=2 t - 2 x=0$</p>
-<p>解得</p>
-<p>$t=x$</p>
-<p>将$t=x$代入隐式方程，同样得到</p>
-<p>$y = \frac { x } { 2 } \cdot x - \frac { x ^ { 2 } } { 4 } = \frac { x ^ { 2 } } { 4 }$</p>
-<h2 id="More-examples"><a href="#More-examples" class="headerlink" title="More examples"></a>More examples</h2><p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/image-20200905191017432.png" alt="image-20200905191017432"></p>
-<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/image-20200905191224070.png" alt="image-20200905191224070"></p>
-<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/image-20200905191320876.png" alt="image-20200905191320876"></p>
-<h2 id="斜抛运动包络线："><a href="#斜抛运动包络线：" class="headerlink" title="斜抛运动包络线："></a>斜抛运动包络线：</h2><p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/image-20200905191604321.png" alt="image-20200905191604321"></p>
-<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/image-20200905192011346.png" alt="image-20200905192011346"></p>
-<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/pic.png" alt="pic"></p>
-<h2 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h2><p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/20200905135547462.png" alt="20200905135547462"></p>
-<p>重新观察这张图，$\frac{Mp}{Mp^{\prime}}=e=1$，根据抛物线的第二定义</p>
-<p>将$p$到$L$上所形成的折线便是以$p$为焦点，以$L$为准线的抛物线的一条切线，这个性质将在下一节中起到非常重要的作用。</p>
 
           
         
