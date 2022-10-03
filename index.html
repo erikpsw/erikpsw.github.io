@@ -364,6 +364,60 @@
 <p>也可$\sum F_{\text{external}}\ll\sum F_{\text{internal}}$</p>
 <script type="math/tex; mode=display">
 \boldsymbol{p}_1+\boldsymbol{p}_2=\boldsymbol{p}'_1+\boldsymbol{p}'_2</script><p>由牛顿第三定律也可推出</p>
+<h2 id="动量定理"><a href="#动量定理" class="headerlink" title="动量定理"></a>动量定理</h2><p>冲量等于动量变化量</p>
+<script type="math/tex; mode=display">
+\int_{t_1}^{t_2}\boldsymbol{F}\text{d}t=\boldsymbol{p}_2-\boldsymbol{p}_1</script><p>由积分中值公式</p>
+<script type="math/tex; mode=display">
+\overline{\boldsymbol{F}}=\frac{\displaystyle\int_{t_1}^{t_2}\boldsymbol{F}\text{d}t}{t_2-t_1}=\frac{\boldsymbol{p}_2-\boldsymbol{p}_1}{t_2-t_1}\\
+\Rightarrow \boldsymbol{I}=\int_{t_1}^{t_2}\boldsymbol{F}\text{d}t=\overline{\boldsymbol{F}}(t_2-t_1)</script><p>对于质点组，我们可以对每一个物体运用再求和</p>
+<p>容易看出合外力的冲量等于总动量的变化量</p>
+<p>并且$\sum F_{\text{internal}}=0$，故内力不能改变总动量</p>
+<h1 id="质心"><a href="#质心" class="headerlink" title="质心"></a>质心</h1><script type="math/tex; mode=display">
+\boldsymbol{r}_c=\frac{ \sum m_i\boldsymbol{r}_i}{\sum m_i}</script><p>一般我们为了计算，将其分解到三个轴的方向上</p>
+<p>对于连续的物体，</p>
+<script type="math/tex; mode=display">
+\boldsymbol{r}_c=\frac{ \displaystyle\int_V \boldsymbol{r}_i\text{d}m}{M}</script><p>对两边求导得</p>
+<script type="math/tex; mode=display">
+\boldsymbol{p}=\sum m_iv_i\\
+\sum\boldsymbol{F}=\frac{\text{d}\boldsymbol{p}}{\text{d}t}=M\boldsymbol{a}_c</script><p>利用等效替代的思想可以很容易理解质心</p>
+<h1 id="能量守恒定律"><a href="#能量守恒定律" class="headerlink" title="能量守恒定律"></a>能量守恒定律</h1><h2 id="动能定理"><a href="#动能定理" class="headerlink" title="动能定理"></a>动能定理</h2><p>对某一个质点来说</p>
+<script type="math/tex; mode=display">
+\sum F=m\frac{\text{d}v}{\text{d}t}=m\frac{\text{d}v}{\text{d}x}v</script><p>两端积分得到</p>
+<script type="math/tex; mode=display">
+\int _{x_1}^{x_2}\sum F\text{d}x=\frac12mv_2^2-\frac12mv_1^2</script><p>由此，我们定义$\frac12mv^2$为动能$E_k(\text{kinetic})$</p>
+<p>而$\displaystyle \int _{x_1}^{x_2}\sum F\text{d}x$称为合外力的功$(\text{work})$</p>
+<p>若力和位移有夹角，则乘上$\cos \theta$</p>
+<p>对于能量，我们考察重力所做的功</p>
+<p><img src="/2022/10/02/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E5%8A%9B%E5%AD%A6/image-20221003172928452.png" alt="image-20221003172928452"></p>
+<p>重力做了$Mgh$的功从而存在着重力势能，由此我们定义</p>
+<p>物体在地球表面上方$h$处的重力势能为$Mgh$</p>
+<p>势能即为物体能获得动能的能力</p>
+<p>对与某一个过程来说，$W_G=-\Delta E_p=E_1-E_2$</p>
+<p>若$E_2=0$则场力做的功为势能，反之</p>
+<p>从势能零点用外力匀速移动物体所做的功为势能</p>
+<p>注意，势能零点可以随意选取，原则上方便为主</p>
+<p>因此不指定零点的势能是无意义的</p>
+<h2 id="功能原理"><a href="#功能原理" class="headerlink" title="功能原理"></a>功能原理</h2><p>首先引入保守力的概念</p>
+<p>若一个力为保守力，则它满足以下条件</p>
+<script type="math/tex; mode=display">
+\oint F\text{d}x=0</script><p>即保守力做功与路径无关</p>
+<p>我们引入机械能的概念</p>
+<script type="math/tex; mode=display">
+E_k+E_p=E</script><p>由动能定理和势能和功的关系移项可知</p>
+<p>若一个系统只有保守力做功，则机械能守恒</p>
+<p>对质点组求和，易得</p>
+<script type="math/tex; mode=display">
+W_外+W_{内非保守}=\Delta E</script><h1 id="角动量守恒"><a href="#角动量守恒" class="headerlink" title="角动量守恒"></a>角动量守恒</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>角动量指位矢和动量的叉乘</p>
+<p><img src="/2022/10/02/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E5%8A%9B%E5%AD%A6/image-20221003191058254.png" alt="image-20221003191058254"></p>
+<script type="math/tex; mode=display">
+\boldsymbol{L}=\boldsymbol{r}\times\boldsymbol{p}=
+m\boldsymbol{r}\times\boldsymbol{v}</script><h3 id="力矩"><a href="#力矩" class="headerlink" title="力矩"></a>力矩</h3><p><img src="/2022/10/02/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E5%8A%9B%E5%AD%A6/image-20221003191112784.png" alt="image-20221003191112784"></p>
+<script type="math/tex; mode=display">
+\boldsymbol{M}=\boldsymbol{r}\times\boldsymbol{F}</script><p>对$\boldsymbol{L}$</p>
+<script type="math/tex; mode=display">
+\boldsymbol{M}=\frac{\text{d}\boldsymbol{L}}{\text{d}t}</script><p>对$\boldsymbol{M}=0$，有角动量为一常量，即角动量守恒</p>
+<p>对于有心力，$\sin \theta=0$，故也有角动量守恒</p>
+<p>同时对系统来说内力所产生的力矩之和为$0$</p>
 
           
         
