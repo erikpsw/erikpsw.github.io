@@ -102,7 +102,7 @@
 <meta property="og:description" content="$\varepsilon -N$定义描述性定义：要多接近，有多接近 用$|a-b|$来描述距离 设$\{a_n\}$为一个数列，$A$为某一常数，若对任意$\varepsilon&gt;$0，都存在$N,N\in\mathrm{N}^+$使得当$n&gt;N$时  |a_n-A|&#x2F;">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-09-02T00:51:13.918Z">
-<meta property="article:modified_time" content="2022-09-26T04:52:21.553Z">
+<meta property="article:modified_time" content="2022-10-07T12:04:56.422Z">
 <meta property="article:author" content="Shiwei Pan">
 <meta name="twitter:card" content="summary">
 
@@ -384,7 +384,30 @@ a_n>/<0</script><h3 id="加强形式"><a href="#加强形式" class="headerlink"
 \therefore1\le \frac x{\sin x}\le \frac1{\cos x}\\
 \because\lim_{x\to0}\frac1{\cos x}=1\\
 \therefore\lim_{x\to0}\frac x{\sin x}=1</script><script type="math/tex; mode=display">
-\lim_{x\to \infty}\left(1+\frac1x\right)^x=e</script>
+\lim_{x\to \infty}\left(1+\frac1x\right)^x=e</script><h2 id="无穷小"><a href="#无穷小" class="headerlink" title="无穷小"></a>无穷小</h2><p>在某一个极限过程中$(x\to x_0/\infty)$，$ \lim\alpha (x)=0$</p>
+<p>则称$\alpha (x)$为$(x\to x_0/\infty)$的无穷小</p>
+<p>无穷小可以与极限相互转化</p>
+<script type="math/tex; mode=display">
+\lim f(x)=A\Leftrightarrow \lim(f(x)-A)=\alpha</script><h3 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h3><p>有限个无穷小之和是无穷小，有界函数与无穷小之积是无穷小</p>
+<h3 id="等价无穷小"><a href="#等价无穷小" class="headerlink" title="等价无穷小"></a>等价无穷小</h3><p>若$\alpha,\beta$为同一变化过程的两个无穷小，$\lim\frac\beta \alpha$为这个过程的极限</p>
+<ul>
+<li>$\lim\frac\beta \alpha=0$，则$\beta$为$\alpha$的高阶无穷小，记为$\beta=o(\alpha)$</li>
+<li>$\lim\frac\beta \alpha=c$为同阶无穷小$c\ne 0$</li>
+<li>$\lim\frac\beta \alpha=1$则为等价无穷小，记为$\beta\sim\alpha$</li>
+<li>$\lim\frac\beta {\alpha^k}=c(c\ne 0)$则称$\beta$为关于$\alpha$的$k$阶无穷小</li>
+</ul>
+<p>特别的，对于等价无穷小$\beta\sim\alpha$，有</p>
+<script type="math/tex; mode=display">
+\beta=\alpha+o(\alpha)</script><p>代换原则，乘积可代换，加减若上下同阶可代换</p>
+<script type="math/tex; mode=display">
+\sin x \sim x  \sim \tan x  \sim\arcsin x  \sim \arctan x\\ 1-\cos ^mx \sim \frac{mx^{2}}{2}, \ln (1+x) \sim x\\
+e^x-1\sim x,\frac{a^x-1}x\sim\ln a\\
+\tan x-x\sim\frac13x^3\sim x-\arctan x\\
+x-\sin x\sim\frac16x^3\sim\arcsin x-x\\
+x-\ln(x+1)\sim\frac12x^2\\(1+x)^\alpha\sim 1+\alpha x</script><h2 id="渐近线"><a href="#渐近线" class="headerlink" title="渐近线"></a>渐近线</h2><script type="math/tex; mode=display">
+\lim_{x\to \infty}f(x)=A\Rightarrow y=A为水平渐近线\\
+\lim_{x\to x_0^+/x_0^-}f(x)=\infty\Rightarrow x=x_0为铅直渐近线\\
+k=\lim_{x\to \infty}\frac{f(x)}x,b=\lim_{x\to \infty}[f(x)-kx]</script>
       
     </div>
     
@@ -497,7 +520,7 @@ a_n>/<0</script><h3 id="加强形式"><a href="#加强形式" class="headerlink"
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">63</span>
+                <span class="site-state-item-count">66</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -560,7 +583,7 @@ a_n>/<0</script><h3 id="加强形式"><a href="#加强形式" class="headerlink"
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#varepsilon-N-定义"><span class="nav-number">1.</span> <span class="nav-text">$\varepsilon -N$定义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#性质"><span class="nav-number">2.</span> <span class="nav-text">性质</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#唯一性"><span class="nav-number">2.1.</span> <span class="nav-text">唯一性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子数列的性质"><span class="nav-number">2.2.</span> <span class="nav-text">子数列的性质</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#逆否命题"><span class="nav-number">2.2.1.</span> <span class="nav-text">逆否命题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#有界性"><span class="nav-number">2.3.</span> <span class="nav-text">有界性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#关系"><span class="nav-number">2.3.1.</span> <span class="nav-text">关系</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#保号性"><span class="nav-number">2.4.</span> <span class="nav-text">保号性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#加强形式"><span class="nav-number">2.4.1.</span> <span class="nav-text">加强形式</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#审敛准则"><span class="nav-number">3.</span> <span class="nav-text">审敛准则</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#夹逼定理"><span class="nav-number">3.1.</span> <span class="nav-text">夹逼定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单调有界准则"><span class="nav-number">3.2.</span> <span class="nav-text">单调有界准则</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#运算法则"><span class="nav-number">4.</span> <span class="nav-text">运算法则</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#重要极限"><span class="nav-number">5.</span> <span class="nav-text">重要极限</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#varepsilon-N-定义"><span class="nav-number">1.</span> <span class="nav-text">$\varepsilon -N$定义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#性质"><span class="nav-number">2.</span> <span class="nav-text">性质</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#唯一性"><span class="nav-number">2.1.</span> <span class="nav-text">唯一性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子数列的性质"><span class="nav-number">2.2.</span> <span class="nav-text">子数列的性质</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#逆否命题"><span class="nav-number">2.2.1.</span> <span class="nav-text">逆否命题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#有界性"><span class="nav-number">2.3.</span> <span class="nav-text">有界性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#关系"><span class="nav-number">2.3.1.</span> <span class="nav-text">关系</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#保号性"><span class="nav-number">2.4.</span> <span class="nav-text">保号性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#加强形式"><span class="nav-number">2.4.1.</span> <span class="nav-text">加强形式</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#审敛准则"><span class="nav-number">3.</span> <span class="nav-text">审敛准则</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#夹逼定理"><span class="nav-number">3.1.</span> <span class="nav-text">夹逼定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单调有界准则"><span class="nav-number">3.2.</span> <span class="nav-text">单调有界准则</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#运算法则"><span class="nav-number">4.</span> <span class="nav-text">运算法则</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#重要极限"><span class="nav-number">5.</span> <span class="nav-text">重要极限</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#无穷小"><span class="nav-number">5.1.</span> <span class="nav-text">无穷小</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定理"><span class="nav-number">5.1.1.</span> <span class="nav-text">定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#等价无穷小"><span class="nav-number">5.1.2.</span> <span class="nav-text">等价无穷小</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#渐近线"><span class="nav-number">5.2.</span> <span class="nav-text">渐近线</span></a></li></ol></li></ol></div>
             
 
           </div>
