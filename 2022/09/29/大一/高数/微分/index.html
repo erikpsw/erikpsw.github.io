@@ -102,7 +102,7 @@
 <meta property="og:description" content="微分的概念函数值的变化量  \Delta y&#x3D;f(x_0+\Delta x)-f(x_0)对于复杂函数，$\Delta y$比较复杂 故我们将变化量线性化，定义为微分 若函数在某邻域有定义 $\Delta y&#x3D;A\Delta x+o(\Delta x),\Delta x\to0$ 则称$f(x)$在该领域可微，$\Delta y$的线性主部$A\Delta x$ 为函数的微分，记为$\text{d">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-09-29T08:25:30.512Z">
-<meta property="article:modified_time" content="2022-10-09T02:06:56.514Z">
+<meta property="article:modified_time" content="2022-10-13T13:44:53.151Z">
 <meta property="article:author" content="Shiwei Pan">
 <meta name="twitter:card" content="summary">
 
@@ -371,13 +371,66 @@
 <p>则有</p>
 <script type="math/tex; mode=display">
 \exists \xi\in(a,b)\\ \text{s.t.} 
-\frac{f'(\xi)}{g'(\xi)}=\frac {f(b)-f(a)}{g(b)-g(a)}</script><h1 id="泰勒公式"><a href="#泰勒公式" class="headerlink" title="泰勒公式"></a>泰勒公式</h1><p>若函数$f(x)$在$x=x_0$处有$n(n\ge1)$阶导数，则</p>
+\frac{f'(\xi)}{g'(\xi)}=\frac {f(b)-f(a)}{g(b)-g(a)}</script><h3 id="达布中值定理"><a href="#达布中值定理" class="headerlink" title="达布中值定理"></a>达布中值定理</h3><p>$f(x)$在$[a,b]$上连续</p>
+<p>则导函数具有介值性，即可以取到$f’(a)$和$f’(b)$之间的一切值</p>
+<p>同时导函数不具有第一类间断点3</p>
+<h1 id="泰勒公式"><a href="#泰勒公式" class="headerlink" title="泰勒公式"></a>泰勒公式</h1><p>若函数$f(x)$在$I=(a,b),x_0\in I$处有$n(n\ge1)$阶导数，则</p>
 <script type="math/tex; mode=display">
 \begin{aligned}
 f(x)&= f\left(x_{0}\right)+\frac{f^{\prime}\left(x_{0}\right)}{1 !}\left(x-x_{0}\right)+\frac{f^{\prime \prime}\left(x_{0}\right)}{2 !}\left(x-x_{0}\right)^{2}+\cdots \\
 &+\frac{f^{(n)}\left(x_{0}\right)}{n !}\left(x-x_{0}\right)^{n}+o\left(\left(x-x_{0}\right)^{n}\right)\\
 &=\sum_{i=0}^n\frac{f^{(n)}\left(x_{0}\right)}{n !}\left(x-x_{0}\right)^{n}+o\left(\left(x-x_{0}\right)^{n}\right)
-\end{aligned}</script>
+\end{aligned}</script><p>$ o\left(\left(x-x_{0}\right)^{n}\right) $为佩亚诺余项</p>
+<h2 id="泰勒中值定理"><a href="#泰勒中值定理" class="headerlink" title="泰勒中值定理"></a>泰勒中值定理</h2><p>若函数$f(x)$在$I=(a,b),x_0\in I$处有$n+4(n\ge1)$阶导数，则</p>
+<script type="math/tex; mode=display">
+f(x)=\sum_{i=0}^n\frac{f^{(n)}\left(x_{0}\right)}{n !}\left(x-x_{0}\right)^{n}+R_n(x)\\
+R_n(x)=\frac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)^{n+1}\\
+\xi \in(x_0,x)</script><p> $R_n(x)$称为拉格朗日余项</p>
+<h3 id="麦克劳林公式"><a href="#麦克劳林公式" class="headerlink" title="麦克劳林公式"></a>麦克劳林公式</h3><p>若$x_0=0,\xi =\theta x$</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+f(x)&=f(0)+f^{\prime}(0) x+\frac{f^{\prime \prime}(0)}{2 !} x^{2}+ \\
+\quad &\cdots+\frac{f^{(n)}(0)}{n !} x^{n}+\frac{f^{(n+1)}(\theta x)}{(n+1) !} x^{n+1} \quad(0<\theta<1) .
+\end{aligned}</script><p>$|f^{(n+1)}(\xi)|\le M$则有</p>
+<script type="math/tex; mode=display">
+|R_n(x)|\le\frac{M}{(n+1)!}|x|^{n+1}</script><p>例</p>
+<script type="math/tex; mode=display">
+e^x=1+x+\frac1{2!}x^2+\cdots+\frac{e^{\theta x}}{(n+1)!}|x|^{n+1}</script><h3 id="常用"><a href="#常用" class="headerlink" title="常用"></a>常用</h3><script type="math/tex; mode=display">
+\sin x = x - \frac{1}{3!} x^3 + \frac{1}{5!} x^5 - \frac{1}{7!} x^7 \ldots
+\qquad (x \in \mathbb R)\\
+\cos x = 1 - \frac{1}{2!} x^2 + \frac{1}{4!} x^4 -\frac{1}{6!} x^6 \ldots
+\qquad (x \in \mathbb R)\\
+\mathrm{e} ^x =1 + x + \frac{1}{2!} x^2 + \frac{1}{3!} x^3  \ldots
+\qquad (x \in \mathbb R)\\
+\ln\left(1+x\right)  = x - \frac12 x^2 + \frac13 x^3 - \frac14 x^4 \ldots
+\qquad (-1 < x < 1)\\
+\frac{1}{1 \pm x} = 1 \mp x + x^2 \mp x^3 + x^4 \ldots
+\qquad (-1 < x < 1)\\
+\sqrt{1\pm x} = 1 \pm \frac12 x - \frac18 x^2 \pm \frac{1}{16} x^3 - \frac{5}{128}x^4 \ldots
+\qquad (-1 < x < 1)\\
+(1+x)^\alpha=1+\alpha x+\frac{\alpha(\alpha-1)}2 x^2+\cdots+\frac{\alpha(\alpha-1)\cdots(\alpha-n+1)}{n!}x^n\ldots</script><p>泰勒展开没有普遍规律，但关键看余项的阶数，能够消掉余项就行</p>
+<p>分式先看哪个好确定阶数，再上下同阶</p>
+<h1 id="洛必达法则"><a href="#洛必达法则" class="headerlink" title="洛必达法则"></a>洛必达法则</h1><h2 id="frac00-型"><a href="#frac00-型" class="headerlink" title="$\frac00$型"></a>$\frac00$型</h2><ul>
+<li><script type="math/tex; mode=display">
+\lim _{x \rightarrow a} f(x)=\lim _{x \rightarrow a} g(x)=0</script></li>
+<li><script type="math/tex; mode=display">
+g^{\prime}(x) \neq 0, \forall x \in \mathring{U}(a, \delta),f(x),g(x)可导</script></li>
+<li><script type="math/tex; mode=display">
+\lim _{x \rightarrow a} \frac{f^{\prime}(x)}{g^{\prime}(x)}=l(l \text { 为有限数或 } \pm \infty)</script></li>
+</ul>
+<script type="math/tex; mode=display">
+\lim _{x \rightarrow a} \frac{f(x)}{g(x)}=\lim _{x \rightarrow a} \frac{f^{\prime}(x)}{g^{\prime}(x)}=l</script><p> 洛必达法则为后验的，上下求导极限不存在而不能说明原极限不存在</p>
+<h2 id="frac-infty-infty-型"><a href="#frac-infty-infty-型" class="headerlink" title="$\frac\infty\infty$型"></a>$\frac\infty\infty$型</h2><ul>
+<li><script type="math/tex; mode=display">
+\lim _{x \rightarrow a} f(x)=\lim _{x \rightarrow a} g(x)=\infty</script></li>
+<li><script type="math/tex; mode=display">
+g^{\prime}(x) \neq 0,\forall x \in \mathring{U}(a, \delta),f(x),g(x)可导</script></li>
+<li><script type="math/tex; mode=display">
+\lim _{x \rightarrow a} \frac{f^{\prime}(x)}{g^{\prime}(x)}=l(l \text { 为有限数或 } \pm \infty)</script><script type="math/tex; mode=display">
+\lim _{x \rightarrow a} \frac{f(x)}{g(x)}=\lim _{x \rightarrow a} \frac{f^{\prime}(x)}{g^{\prime}(x)}=l</script></li>
+</ul>
+<p>其他类型同样可以通过化简变形可转化为上面两类</p>
+
       
     </div>
     
@@ -553,7 +606,7 @@ f(x)&= f\left(x_{0}\right)+\frac{f^{\prime}\left(x_{0}\right)}{1 !}\left(x-x_{0}
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#微分的概念"><span class="nav-number">1.</span> <span class="nav-text">微分的概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#与导数的关系"><span class="nav-number">1.1.</span> <span class="nav-text">与导数的关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微分形式不变性"><span class="nav-number">1.2.</span> <span class="nav-text">微分形式不变性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#微分中值定理"><span class="nav-number">2.</span> <span class="nav-text">微分中值定理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#费马引理"><span class="nav-number">2.1.</span> <span class="nav-text">费马引理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#罗尔定理"><span class="nav-number">2.2.</span> <span class="nav-text">罗尔定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#拉格朗日中值定理"><span class="nav-number">2.3.</span> <span class="nav-text">拉格朗日中值定理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#有限增量定理"><span class="nav-number">2.3.1.</span> <span class="nav-text">有限增量定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#推论"><span class="nav-number">2.3.2.</span> <span class="nav-text">推论</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#柯西中值定理"><span class="nav-number">2.4.</span> <span class="nav-text">柯西中值定理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#泰勒公式"><span class="nav-number">3.</span> <span class="nav-text">泰勒公式</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#微分的概念"><span class="nav-number">1.</span> <span class="nav-text">微分的概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#与导数的关系"><span class="nav-number">1.1.</span> <span class="nav-text">与导数的关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微分形式不变性"><span class="nav-number">1.2.</span> <span class="nav-text">微分形式不变性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#微分中值定理"><span class="nav-number">2.</span> <span class="nav-text">微分中值定理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#费马引理"><span class="nav-number">2.1.</span> <span class="nav-text">费马引理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#罗尔定理"><span class="nav-number">2.2.</span> <span class="nav-text">罗尔定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#拉格朗日中值定理"><span class="nav-number">2.3.</span> <span class="nav-text">拉格朗日中值定理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#有限增量定理"><span class="nav-number">2.3.1.</span> <span class="nav-text">有限增量定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#推论"><span class="nav-number">2.3.2.</span> <span class="nav-text">推论</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#柯西中值定理"><span class="nav-number">2.4.</span> <span class="nav-text">柯西中值定理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#达布中值定理"><span class="nav-number">2.4.1.</span> <span class="nav-text">达布中值定理</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#泰勒公式"><span class="nav-number">3.</span> <span class="nav-text">泰勒公式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#泰勒中值定理"><span class="nav-number">3.1.</span> <span class="nav-text">泰勒中值定理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#麦克劳林公式"><span class="nav-number">3.1.1.</span> <span class="nav-text">麦克劳林公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用"><span class="nav-number">3.1.2.</span> <span class="nav-text">常用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#洛必达法则"><span class="nav-number">4.</span> <span class="nav-text">洛必达法则</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#frac00-型"><span class="nav-number">4.1.</span> <span class="nav-text">$\frac00$型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#frac-infty-infty-型"><span class="nav-number">4.2.</span> <span class="nav-text">$\frac\infty\infty$型</span></a></li></ol></li></ol></div>
             
 
           </div>

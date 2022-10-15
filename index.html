@@ -387,7 +387,27 @@ J&=\int_V r^2\rho_0\text{d}V\\
 &=\rho_0\int_0^R\rho^4\int_0^{2\pi}\int_0^\pi\sin^3\mathrm{d}\theta\mathrm{d}\phi\mathrm{d}{\rho} \\
 &=\rho_0\int_0^R\rho^42\pi\frac43\mathrm{d}{\rho}=\frac{2mR^2}5
 
-\end{aligned}</script>
+\end{aligned}</script><h1 id="角动量守恒"><a href="#角动量守恒" class="headerlink" title="角动量守恒"></a>角动量守恒</h1><p>若$M=0$</p>
+<script type="math/tex; mode=display">
+J\omega=C</script><p>对于转轴来说</p>
+<ul>
+<li>外力与轴平行</li>
+<li>外力与力臂平行(有心力)</li>
+</ul>
+<p>则都有动量守恒</p>
+<p>外力矩(只考虑外力)</p>
+<script type="math/tex; mode=display">
+\boldsymbol{M}=\boldsymbol{r}\times\boldsymbol{F}_{外}</script><p>对于系统，角动量守恒的表达式为</p>
+<script type="math/tex; mode=display">
+\boldsymbol{M}\text{d}t=J\text{d}\boldsymbol{\omega}\\
+J_1\boldsymbol{\omega}_1+J_2\boldsymbol{\omega}_2=J_1\boldsymbol{\omega}_1'+J_2\boldsymbol{\omega}_2'</script><h1 id="刚体的能量"><a href="#刚体的能量" class="headerlink" title="刚体的能量"></a>刚体的能量</h1><p>力矩的功</p>
+<script type="math/tex; mode=display">
+\text{d}W=M\text{d}\theta</script><p>转动动能</p>
+<script type="math/tex; mode=display">
+E_k=\frac12J\omega^2</script><p>动能定理</p>
+<script type="math/tex; mode=display">
+\int_{\theta_1}^{\theta_2}(M_{外}+M_{G})\text{d}\theta=\frac12J\omega_2^2-\frac12J\omega_1^2</script><p>和平动类似，故含刚体的系统需加上转动动能</p>
+
           
         
       
@@ -1203,13 +1223,66 @@ T=\frac1f\\
 <p>则有</p>
 <script type="math/tex; mode=display">
 \exists \xi\in(a,b)\\ \text{s.t.} 
-\frac{f'(\xi)}{g'(\xi)}=\frac {f(b)-f(a)}{g(b)-g(a)}</script><h1 id="泰勒公式"><a href="#泰勒公式" class="headerlink" title="泰勒公式"></a>泰勒公式</h1><p>若函数$f(x)$在$x=x_0$处有$n(n\ge1)$阶导数，则</p>
+\frac{f'(\xi)}{g'(\xi)}=\frac {f(b)-f(a)}{g(b)-g(a)}</script><h3 id="达布中值定理"><a href="#达布中值定理" class="headerlink" title="达布中值定理"></a>达布中值定理</h3><p>$f(x)$在$[a,b]$上连续</p>
+<p>则导函数具有介值性，即可以取到$f’(a)$和$f’(b)$之间的一切值</p>
+<p>同时导函数不具有第一类间断点3</p>
+<h1 id="泰勒公式"><a href="#泰勒公式" class="headerlink" title="泰勒公式"></a>泰勒公式</h1><p>若函数$f(x)$在$I=(a,b),x_0\in I$处有$n(n\ge1)$阶导数，则</p>
 <script type="math/tex; mode=display">
 \begin{aligned}
 f(x)&= f\left(x_{0}\right)+\frac{f^{\prime}\left(x_{0}\right)}{1 !}\left(x-x_{0}\right)+\frac{f^{\prime \prime}\left(x_{0}\right)}{2 !}\left(x-x_{0}\right)^{2}+\cdots \\
 &+\frac{f^{(n)}\left(x_{0}\right)}{n !}\left(x-x_{0}\right)^{n}+o\left(\left(x-x_{0}\right)^{n}\right)\\
 &=\sum_{i=0}^n\frac{f^{(n)}\left(x_{0}\right)}{n !}\left(x-x_{0}\right)^{n}+o\left(\left(x-x_{0}\right)^{n}\right)
-\end{aligned}</script>
+\end{aligned}</script><p>$ o\left(\left(x-x_{0}\right)^{n}\right) $为佩亚诺余项</p>
+<h2 id="泰勒中值定理"><a href="#泰勒中值定理" class="headerlink" title="泰勒中值定理"></a>泰勒中值定理</h2><p>若函数$f(x)$在$I=(a,b),x_0\in I$处有$n+4(n\ge1)$阶导数，则</p>
+<script type="math/tex; mode=display">
+f(x)=\sum_{i=0}^n\frac{f^{(n)}\left(x_{0}\right)}{n !}\left(x-x_{0}\right)^{n}+R_n(x)\\
+R_n(x)=\frac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)^{n+1}\\
+\xi \in(x_0,x)</script><p> $R_n(x)$称为拉格朗日余项</p>
+<h3 id="麦克劳林公式"><a href="#麦克劳林公式" class="headerlink" title="麦克劳林公式"></a>麦克劳林公式</h3><p>若$x_0=0,\xi =\theta x$</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+f(x)&=f(0)+f^{\prime}(0) x+\frac{f^{\prime \prime}(0)}{2 !} x^{2}+ \\
+\quad &\cdots+\frac{f^{(n)}(0)}{n !} x^{n}+\frac{f^{(n+1)}(\theta x)}{(n+1) !} x^{n+1} \quad(0<\theta<1) .
+\end{aligned}</script><p>$|f^{(n+1)}(\xi)|\le M$则有</p>
+<script type="math/tex; mode=display">
+|R_n(x)|\le\frac{M}{(n+1)!}|x|^{n+1}</script><p>例</p>
+<script type="math/tex; mode=display">
+e^x=1+x+\frac1{2!}x^2+\cdots+\frac{e^{\theta x}}{(n+1)!}|x|^{n+1}</script><h3 id="常用"><a href="#常用" class="headerlink" title="常用"></a>常用</h3><script type="math/tex; mode=display">
+\sin x = x - \frac{1}{3!} x^3 + \frac{1}{5!} x^5 - \frac{1}{7!} x^7 \ldots
+\qquad (x \in \mathbb R)\\
+\cos x = 1 - \frac{1}{2!} x^2 + \frac{1}{4!} x^4 -\frac{1}{6!} x^6 \ldots
+\qquad (x \in \mathbb R)\\
+\mathrm{e} ^x =1 + x + \frac{1}{2!} x^2 + \frac{1}{3!} x^3  \ldots
+\qquad (x \in \mathbb R)\\
+\ln\left(1+x\right)  = x - \frac12 x^2 + \frac13 x^3 - \frac14 x^4 \ldots
+\qquad (-1 < x < 1)\\
+\frac{1}{1 \pm x} = 1 \mp x + x^2 \mp x^3 + x^4 \ldots
+\qquad (-1 < x < 1)\\
+\sqrt{1\pm x} = 1 \pm \frac12 x - \frac18 x^2 \pm \frac{1}{16} x^3 - \frac{5}{128}x^4 \ldots
+\qquad (-1 < x < 1)\\
+(1+x)^\alpha=1+\alpha x+\frac{\alpha(\alpha-1)}2 x^2+\cdots+\frac{\alpha(\alpha-1)\cdots(\alpha-n+1)}{n!}x^n\ldots</script><p>泰勒展开没有普遍规律，但关键看余项的阶数，能够消掉余项就行</p>
+<p>分式先看哪个好确定阶数，再上下同阶</p>
+<h1 id="洛必达法则"><a href="#洛必达法则" class="headerlink" title="洛必达法则"></a>洛必达法则</h1><h2 id="frac00-型"><a href="#frac00-型" class="headerlink" title="$\frac00$型"></a>$\frac00$型</h2><ul>
+<li><script type="math/tex; mode=display">
+\lim _{x \rightarrow a} f(x)=\lim _{x \rightarrow a} g(x)=0</script></li>
+<li><script type="math/tex; mode=display">
+g^{\prime}(x) \neq 0, \forall x \in \mathring{U}(a, \delta),f(x),g(x)可导</script></li>
+<li><script type="math/tex; mode=display">
+\lim _{x \rightarrow a} \frac{f^{\prime}(x)}{g^{\prime}(x)}=l(l \text { 为有限数或 } \pm \infty)</script></li>
+</ul>
+<script type="math/tex; mode=display">
+\lim _{x \rightarrow a} \frac{f(x)}{g(x)}=\lim _{x \rightarrow a} \frac{f^{\prime}(x)}{g^{\prime}(x)}=l</script><p> 洛必达法则为后验的，上下求导极限不存在而不能说明原极限不存在</p>
+<h2 id="frac-infty-infty-型"><a href="#frac-infty-infty-型" class="headerlink" title="$\frac\infty\infty$型"></a>$\frac\infty\infty$型</h2><ul>
+<li><script type="math/tex; mode=display">
+\lim _{x \rightarrow a} f(x)=\lim _{x \rightarrow a} g(x)=\infty</script></li>
+<li><script type="math/tex; mode=display">
+g^{\prime}(x) \neq 0,\forall x \in \mathring{U}(a, \delta),f(x),g(x)可导</script></li>
+<li><script type="math/tex; mode=display">
+\lim _{x \rightarrow a} \frac{f^{\prime}(x)}{g^{\prime}(x)}=l(l \text { 为有限数或 } \pm \infty)</script><script type="math/tex; mode=display">
+\lim _{x \rightarrow a} \frac{f(x)}{g(x)}=\lim _{x \rightarrow a} \frac{f^{\prime}(x)}{g^{\prime}(x)}=l</script></li>
+</ul>
+<p>其他类型同样可以通过化简变形可转化为上面两类</p>
+
           
         
       
