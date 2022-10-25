@@ -277,6 +277,149 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/06/%E5%A4%A7%E4%B8%80/python/manim/updater/updater/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/08/06/%E5%A4%A7%E4%B8%80/python/manim/updater/updater/" itemprop="url">大一/python/manim/updater/updater</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-08-06T18:34:41+08:00">
+                2022-08-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>,</p>
+<p>updater(迭代，更新器)</p>
+<p>语法：$\rm mobject.add_updater(anim)$</p>
+<p>anim 为更新的规则</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">anim</span><span class="params">(obj)</span>:</span></span><br><span class="line">    obj.next_to(obj_2,RIGHT)</span><br><span class="line">    <span class="comment">#将obj放在obj_2的右侧</span></span><br></pre></td></tr></table></figure>
+<p>可以合二为一</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mobject.add_updater(<span class="keyword">lambda</span> m:m.next_to(obj,RIGHT))</span><br><span class="line"><span class="comment">#使用匿名函数</span></span><br></pre></td></tr></table></figure>
+<p>删除updater:</p>
+<script type="math/tex; mode=display">
+\rm case\;1:mobject.remove\_updater(anim)\\移除某个updater\\
+case\;2:mobject.clear\_updater()\\移除全部updater</script><h1 id="UpdateFromFunc"><a href="#UpdateFromFunc" class="headerlink" title="UpdateFromFunc"></a>UpdateFromFunc</h1><p>直接更新，不用添加updater：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">self.play(</span><br><span class="line">    UpdateFromFunc(</span><br><span class="line">        obj,</span><br><span class="line">        <span class="keyword">lambda</span> m:m.next_to(obj_2,RIGHT)</span><br><span class="line">    )</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>拓展</p>
+<h2 id="UpdateFromAlphaFunc"><a href="#UpdateFromAlphaFunc" class="headerlink" title="UpdateFromAlphaFunc"></a>UpdateFromAlphaFunc</h2><p>传入一个含有参数==$\rm alpha$==的函数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">move</span><span class="params">(obj,alpha)</span>:</span></span><br><span class="line">    obj.shift(alpha*RIGHT)</span><br><span class="line">    obj.rotate(alpha*TAU)<span class="comment">#TAU=2*PI</span></span><br><span class="line">   </span><br><span class="line">self.play(UpdateFromAlphaFunc(t,move))</span><br></pre></td></tr></table></figure>
+<p>不太推荐使用此方法</p>
+<h1 id="dt"><a href="#dt" class="headerlink" title="dt"></a>dt</h1><p>根据时间进行迭代</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">anim</span><span class="params">(obj,dt)</span>:</span></span><br><span class="line">            obj.shift(dt*RIGHT)</span><br><span class="line">        </span><br><span class="line">mobject.add_updater(anim)</span><br><span class="line">self.wait(time)<span class="comment">#基于时间进行更新</span></span><br></pre></td></tr></table></figure>
+<h1 id="ValueTracker"><a href="#ValueTracker" class="headerlink" title="ValueTracker"></a>ValueTracker</h1><p>初始化设为$-1$</p>
+<script type="math/tex; mode=display">
+\rm t=ValueTracker(-1)</script><p>接着可以生成目标</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">self.play(t.set_value,<span class="number">1</span>,rate_func=,run_time=<span class="number">3</span>)</span><br><span class="line"><span class="comment">#目标值为1</span></span><br></pre></td></tr></table></figure>
+<p><img src="/2022/08/06/%E5%A4%A7%E4%B8%80/python/manim/updater/updater/image-20220806210411711.png" alt="image-20220806210411711"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x1=ValueTracker(<span class="number">0</span>)</span><br><span class="line">        n2=Tex(<span class="string">"0"</span>)</span><br><span class="line">        n2.add_updater(<span class="keyword">lambda</span> t:t.become(Tex(str(round(x1.get_value(),<span class="number">1</span>)))))</span><br><span class="line">        self.play(ShowCreation(n2))</span><br><span class="line">        self.play(x1.set_value,<span class="number">1</span>,rate_func=smooth,run_time=<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -566,7 +709,18 @@ x\in[-1,1],y\in\left[0,\pi\right]</script><p>重要关系</p>
 \\ \arcsin x+\arccos x=\frac\pi2</script><p><img src="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20220903184550875.png" alt="image-20220903184550875"></p>
 <p><img src="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20220903184848430.png" alt="image-20220903184848430"></p>
 <script type="math/tex; mode=display">
-x\in\mathbf{R},y\in\left(-\frac\pi2,\frac\pi2\right)</script><h2 id="双曲函数"><a href="#双曲函数" class="headerlink" title="双曲函数"></a>双曲函数</h2><p><img src="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20221004215400105.png" alt="image-20221004215400105"></p>
+x\in\mathbf{R},y\in\left(-\frac\pi2,\frac\pi2\right)</script><script type="math/tex; mode=display">
+\arctan A-\arctan B=\arctan \frac{A-B}{1+A B}</script><script type="math/tex; mode=display">
+A=\tan \alpha \Leftrightarrow \alpha=k\pi+ \arctan A</script><p><img src="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20221024164637553.png" alt="image-20221024164637553"></p>
+<p>例</p>
+<script type="math/tex; mode=display">
+f(x)=\cot x(x\in(\pi,2\pi))\\
+f_{\text{std}}=\cot(x-\pi),x-\pi=\text{arccot}(x-\pi)\\
+f^{-1}(x)=\pi+\text{arccot}(x)</script><p><img src="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20221024165718816.png" alt="image-20221024165718816"></p>
+<p><img src="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20221024165731926.png" alt="image-20221024165731926"></p>
+<p><img src="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20221024170051034.png" alt="image-20221024170051034"></p>
+<p><img src="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20221024170150305.png" alt="image-20221024170150305"></p>
+<h2 id="双曲函数"><a href="#双曲函数" class="headerlink" title="双曲函数"></a>双曲函数</h2><p><img src="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20221004215400105.png" alt="image-20221004215400105"></p>
 <script type="math/tex; mode=display">
 \sinh x=\frac{e^x-e^{-x}}2\\
 \cosh x=\frac{e^x+e^{-x}}2</script><script type="math/tex; mode=display">
@@ -637,7 +791,36 @@ f(x)\le K_1</script><p>则称$f(x)$在X上有上界，其中$K_1$为$f(x)$在$X$
 <h4 id="离散形式"><a href="#离散形式" class="headerlink" title="离散形式"></a>离散形式</h4><p>数列满足$|a_{n+1}-a_{n}|\le1$则类比介值定理</p>
 <h3 id="零点定理"><a href="#零点定理" class="headerlink" title="零点定理"></a>零点定理</h3><p>$f(x)$在$[a,b]$上连续，则若$f(a)f(b)&lt;0$，$\exists \xi\in(a,b),\text{s.t.}f(\xi)=0$</p>
 <p>实际上为零点定理的特殊形式</p>
-
+<h1 id="特殊函数"><a href="#特殊函数" class="headerlink" title="特殊函数"></a>特殊函数</h1><p>绝对值$|x|$，$0$处连续但不可导</p>
+<script type="math/tex; mode=display">
+\lim_{x\to0}\frac{f(x+h)-f(x-h)}h=0</script><ul>
+<li><p>曲线光滑不一定可导</p>
+<p>$y=x^{\frac13},y’=\frac{1}{3x^{\frac23}},x\to0,y’=\infty$</p>
+</li>
+<li><p>导数存在不一定连续可导(导函数连续)</p>
+<script type="math/tex; mode=display">
+f(x)=\begin{cases}x^2\sin \frac1x,x\ne0\\
+0,x=0\end{cases}</script></li>
+</ul>
+<p>符号函数</p>
+<p><img src="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/Signum_function.svg.png" alt="Signum_function.svg"></p>
+<script type="math/tex; mode=display">
+x=|x|\text{sgn}x \\
+|x|=x\text{sgn}x</script><script type="math/tex; mode=display">
+f(x)=\begin{cases}1,x\ge0\\
+-1,x<0\end{cases}</script><p>$|f(x)|$连续</p>
+<p><img src="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/Signum_function.svg-1666608110047.png" alt="Signum_function.svg"></p>
+<script type="math/tex; mode=display">
+[x]\le x<[x]+1</script><p>定义域为$\mathbf R$，值域为$\mathbf Z$</p>
+<script type="math/tex; mode=display">
+[x]+[y]\le[x+y]\le[x]+[y]+1</script><p><strong>Dirichlet function</strong></p>
+<script type="math/tex; mode=display">
+\textbf{1}_{\mathbb{Q}}(x)=\begin{cases}1,x\in \mathbb{Q}\\
+0,x\notin \mathbb{Q}\end{cases}</script><p>处处无极限，处处不连续，处处不可导</p>
+<p>任意有理数都为其周期，无最小正周期，偶函数</p>
+<script type="math/tex; mode=display">
+f(x)=\begin{cases}\frac1x,x\ne0\\
+0,x=0\end{cases},f(f(x))=x</script>
           
         
       
@@ -1630,145 +1813,6 @@ e^{x-1-\ln x}=\frac{e^{x-1}}{x} \geq x-\ln x\Leftrightarrow e^{x-1} \geq x^{2}-x
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E5%AF%BC%E6%95%B0%E4%B8%8E%E7%A7%AF%E5%88%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E5%AF%BC%E6%95%B0%E4%B8%8E%E7%A7%AF%E5%88%86/" itemprop="url">高中/数学/导数与积分</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-07-23T21:10:03+08:00">
-                2022-07-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="导数"><a href="#导数" class="headerlink" title="导数"></a>导数</h1><h2 id="基本公式"><a href="#基本公式" class="headerlink" title="基本公式"></a>基本公式</h2><script type="math/tex; mode=display">
-(x^a)'=ax^{a-1}\\
-(a^x)'=\ln a \cdot a^x
-\\(\log_ax)'=\frac{1}{\ln a\cdot x }\\
-(\sin x)'=\cos x\\
-(\cos x)'=-\sin x</script><script type="math/tex; mode=display">
-[f(x)\pm g(x)]'=f'(x)\pm g'(x) \\
-[f(x)\cdot g(x)]'=f'(x)g(x)+f(x)g'(x)\\
-\left (\frac{f(x)}{g(x)}\right)'=\frac{f'(x)g(x)-f(x)g'(x)}{g^2(x)}</script><script type="math/tex; mode=display">
-[f(g(x))]'=f'(g(x))\cdot g'(x)</script><h2 id="放缩"><a href="#放缩" class="headerlink" title="放缩"></a>放缩</h2><script type="math/tex; mode=display">
-1-\frac1x\le\ln x\le x-1\\
-\ln x\le \frac xe
-\\e^x\ge x+1\\e^x\ge ex
-\\
-x=\ln e^x=e^{\ln x}</script><h1 id="积分"><a href="#积分" class="headerlink" title="积分"></a>积分</h1><script type="math/tex; mode=display">
-\int k \mathrm{~d} x=k x+\mathrm{C}</script><script type="math/tex; mode=display">
-\int x^{k} \mathrm{~d} x=\frac{x^{k+1}}{k+1}+\mathrm{C}</script><script type="math/tex; mode=display">
-\int \frac{1}{x} \mathrm{~d} x=\ln |x|+\mathrm{C}(x \neq 0) \\
-\int \sin x \mathrm{~d} x=-\cos x+\mathrm{C} \\
-\int \cos x \mathrm{~d} x=\sin x+\mathrm{C} \\
-\int \mathrm{e}^{x} \mathrm{~d} x=\mathrm{e}^{x}+\mathrm{C}</script>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1819,7 +1863,7 @@ x=\ln e^x=e^{\ln x}</script><h1 id="积分"><a href="#积分" class="headerlink"
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">66</span>
+                <span class="site-state-item-count">67</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

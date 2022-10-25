@@ -277,6 +277,198 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/07/23/%E9%AB%98%E4%B8%AD/%E4%B8%89%E6%AC%A1%E6%9B%B2%E7%BA%BF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/07/23/%E9%AB%98%E4%B8%AD/%E4%B8%89%E6%AC%A1%E6%9B%B2%E7%BA%BF/" itemprop="url">高中/三次曲线</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-07-23T21:09:59+08:00">
+                2022-07-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="折叠三次曲线"><a href="#折叠三次曲线" class="headerlink" title="折叠三次曲线"></a>折叠三次曲线</h1><p>取一张纸，选取一个定点$p_1$并在纸的下边上任选一点$p_1^ { \prime }$</p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E4%B8%89%E6%AC%A1%E6%9B%B2%E7%BA%BF/image-20200912192632706.png" alt="image-20200912192632706"></p>
+<p>折叠，使$p_1$和$p_1^ { \prime }$重合，标注$p_2$所对应的位置</p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E4%B8%89%E6%AC%A1%E6%9B%B2%E7%BA%BF/image-20200912192647190.png" alt="image-20200912192647190"></p>
+<p>展开，便得到了$p_2$关于折线的对称点$p_2^ { \prime }$</p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E4%B8%89%E6%AC%A1%E6%9B%B2%E7%BA%BF/image-20200912192713270.png" alt="image-20200912192713270"></p>
+<p>我们可以借助$GeoGebra$去研究$p_2’$的轨迹</p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E4%B8%89%E6%AC%A1%E6%9B%B2%E7%BA%BF/res.gif" alt="res"></p>
+<p>看起来很有意思，那么这个轨迹的方程是什么呢？</p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>像抛物线折叠建立坐标系</p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E4%B8%89%E6%AC%A1%E6%9B%B2%E7%BA%BF/20200912193811295.png" alt="20200912193811295"></p>
+<p>折线的方程和抛物线折叠一模一样，为</p>
+<p>${ y = \frac { t } { 2 } x - \frac { t ^ { 2 } } { 4 } }$</p>
+<p>又$ p p _ { 1 } ^ { \prime }$和$p _ { 2 } p _ { 2 } ^ { \prime }$都垂直于折线，所以</p>
+<p>$ { k _ { p p _ { 1 } ^ { \prime } } = k _ { p _ { 2 } p _ { 2 } ^ { \prime } } } $</p>
+<p>$ { \frac { - 1 - 1 } { t } = \frac { y - b } { x - a } \Rightarrow - \frac { 2 } { t } = \frac { y - b } { x - a } } $</p>
+<p>解出$t$</p>
+<p>$ { t = - \frac { 2 ( x - a ) } { y - b } = \frac { 2 ( a - x ) } { y - b } } $</p>
+<p>设$p_2^{\prime}$坐标为$(x,y)$，则$p _ { 2 } p _ { 2 } ^ { \prime }$中点坐标为</p>
+<p>$ { ( \frac { x + a } { 2 } , \frac { y + b } { 2 } ) } $</p>
+<p>因为这两点关于折线对称，故中点在折线上，带入得</p>
+<p>$ { \frac { a - x } { y - b } \cdot ( \frac { x + a } { 2 } ) - ( \frac { a - x } { y - b } ) ^ { 2 } = \frac { y + b } { 2 } } $</p>
+<p>化简得</p>
+<p>$ { ( a ^ { 2 } - x ^ { 2 } ) \cdot ( y - b ) - 2 ( a - x ) ^ { 2 } = ( y + b ) ( y - b ) ^ { 2 } } $</p>
+<p>$ y ^ { 3 } + x ^ { 2 } y - b y ^ { 2 } + ( 2 - b )  x ^ { 2 } - b y ^ { 2 } - 4 a x - ( a ^ { 2 } + b ^ { 2 } )  y  + a ^ { 2 } b + 2 a ^ { 2 } + b ^ { 3 } = 0$</p>
+<p>这显然是一个三次曲线的方程</p>
+<h2 id="斜率与三次方程的解"><a href="#斜率与三次方程的解" class="headerlink" title="斜率与三次方程的解"></a>斜率与三次方程的解</h2><p>对任意三次方程$x^{3}+a x^{2}+b x+c=0$，我们可以令$z=x-\frac{1}{3}  a$，于是方程便转换为</p>
+<p>$z^{3}+\frac{3 b-a^{2}}{3} z-\frac{9 a b-27 c-2 a^{3}}{27}=0$</p>
+<p>从而从$x^{3}+a x^{2}+b x+c=0$转化到了$x^{3}+ ax+b=0$</p>
+<p>考虑两条抛物线</p>
+<p>$l_1:\,\left(y-\frac{1}{2} a\right)^{2}=2 bx \quad  and \quad l_2:\,y=\frac{1}{2} x^{2}$</p>
+<p>设$\ell$为这两个抛物线的共同切线，斜率为$m$，且与$l_1$相切与$\left(x_{1}, y_{1}\right)$，与$l_2$相切与$\left(x_{2}, y_{2}\right)$</p>
+<p>对$l_1$两边同时求导</p>
+<p>$ { y ^ { 2 } - a y + \frac { 1 } { 4 } a ^ { 2 } = 2 b x } $</p>
+<p>$ { 2 y \cdot \frac{\mathrm{d} y}{\mathrm{d} x}  - a \frac{\mathrm{d} y}{\mathrm{d} x}  + 0 = 2 b } $</p>
+<p>整理得</p>
+<p>$ { \frac{\mathrm{d} y}{\mathrm{d} x}  = \frac { 2 b } { 2 y - a } = \frac { b } { y - \frac { 1 } { 2 } a } } $</p>
+<p>带入$y_1$</p>
+<p>$y_{1}-\frac{1}{2} a=\frac{b}{m}$</p>
+<p>所以我们可以用$m$表示$x_1$和$y_1$</p>
+<p>$x_{1}=\frac{\left(y_{1}-\frac{1}{2} a\right)^{2}}{2 b}=\frac{\left(\frac{b}{m}\right)^{2}}{2 b}=\frac{b}{2 m^{2}}$</p>
+<p>$y_{1}=\frac{b}{m}+\frac{a}{2}$</p>
+<p>同理，对$l_2$求导得</p>
+<p>$x_{2}=m$</p>
+<p>$y_{2}=\frac{m^{2}}{2}$</p>
+<p>我们知道，过$\left(x_{1}, y_{1}\right)$和$\left(x_{2}, y_{2}\right)$的直线斜率为</p>
+<p>$m=\frac{y_{2}-y_{1}}{x_{2}-x_{1}}$</p>
+<p>带入得</p>
+<p>$m=\frac{y_{2}-y_{1}}{x_{2}-x_{1}}=\frac{\frac{m^{2}}{2}-\left(\frac{b}{m}+\frac{a}{2}\right)}{m-\frac{b}{2 m^{2}}}=\frac{m^{4}-2 b m-a m^{2}}{2 m^{3}-b}$</p>
+<p>即</p>
+<p>$m^{3}+a m+b=0$</p>
+<p>说明$m$为方程$x^{3}+ ax+b=0$的解</p>
+<p>尝试求解$x^3-7x-6=0$，先构造两个抛物线</p>
+<p>注意$g$的斜率</p>
+<p>$x=-2$</p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E4%B8%89%E6%AC%A1%E6%9B%B2%E7%BA%BF/image-20200913141232700.png" alt="image-20200913141232700"></p>
+<p>$x=-1$</p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E4%B8%89%E6%AC%A1%E6%9B%B2%E7%BA%BF/image-20200913141149407.png" alt="image-20200913141149407"></p>
+<p>$x=3$</p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E4%B8%89%E6%AC%A1%E6%9B%B2%E7%BA%BF/image-20200913141027461.png" alt="image-20200913141027461"></p>
+<p>于是我们便获得了这个三次方程的三个解$x=-2,-1,3$</p>
+<p>那么，怎么用折纸的方法构造呢？</p>
+<p>容易看出，$l_1$的焦点为$(\frac b 2,\frac a 2)$，准线为$x=-\frac b 2$，$l_2$的焦点为$(0,\frac{1}{2})$，准线为$y=-\frac{1}{2}$</p>
+<p>根据上一节的抛物线折叠的性质，我们同时分别将点$(\frac b 2,\frac a 2)$折到$x=-\frac b 2$上，将点$(0,\frac{1}{2})$折到$y=-\frac{1}{2}$上，所形成的折现即为两条抛物线的共同切线，至于为什么可以做到，我们将在下一节讨论折纸公理六时详细阐述。</p>
+<p>三次函数</p>
+<script type="math/tex; mode=display">
+f(x) = a{x^3} + b{x^2} + cx + d(a \ne 0)\\f'(x) = 3a{x^2} + 2bx + c\\\Delta  = 4{b^2} - 12ac = 4({b^2} - 3ac)</script><p>拐点</p>
+<script type="math/tex; mode=display">
+P\left( { - \frac{b},f\left( { - \frac{b}} \right)} \right)</script><script type="math/tex; mode=display">
+方程\sum\limits_{i = 0}^n {a_i}{x^i}  = 0 的根为  x_{1}, x_{2}, \cdots, x_{n}  \\
+
+
+x_{1}+x_{2}+\cdots+x_{n}=\sum_{i=1}^{n} x_{i}=-\frac{a_{n-1}}{a_{n}} \\
+x_{1} x_{2} \cdots x_{n}=\prod_{i=1}^{n} x_{i}=(-1)^{n} \frac{a_{0}}{a_{n}}</script>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/07/23/%E9%AB%98%E4%B8%AD/%E5%B7%9D%E5%B4%8E%E5%AE%9A%E7%90%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1592,192 +1784,6 @@ p=n_0kTe^{-\frac{m_0gh}{kT}}</script><script type="math/tex; mode=display">
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/07/23/%E9%AB%98%E4%B8%AD/%E8%8A%B3%E8%B4%BA%E5%AE%9A%E7%90%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/07/23/%E9%AB%98%E4%B8%AD/%E8%8A%B3%E8%B4%BA%E5%AE%9A%E7%90%86/" itemprop="url">高中/芳贺定理</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-07-23T21:09:59+08:00">
-                2022-07-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="1-芳贺第一定理"><a href="#1-芳贺第一定理" class="headerlink" title="1.芳贺第一定理"></a>1.芳贺第一定理</h2><p>日本筑波大学生物学教授芳贺和夫（Kazuo Haga），在等待实 验结果的时候喜欢用摺纸打发时间。他发现了以下的有趣结果。</p>
-<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E8%8A%B3%E8%B4%BA%E5%AE%9A%E7%90%86/image-20200813124235857.png" alt></p>
-<p>$Claim:F$为$AB$的三等分点</p>
-<p>$proof:$</p>
-<p>设正方形边长为1，将$C$折到$AD$的中点$E$处，由图</p>
-<script type="math/tex; mode=display">
-x^{2}+\left(\frac{1}{2}\right)^{2}=(1-x)^{2}</script><p>解得$x=\frac{3}{8}$</p>
-<p>又$\triangle FAR \sim \triangle EDH$</p>
-<script type="math/tex; mode=display">
-\frac{y}{\frac{1}{2}}=\frac{\frac{1}{2}}{x}</script><p>解得$y=\frac{2}{3}$</p>
-<p>$Property:$</p>
-<h3 id="推广："><a href="#推广：" class="headerlink" title="推广："></a>推广：</h3><p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E8%8A%B3%E8%B4%BA%E5%AE%9A%E7%90%86/image-20200813134225211.png" alt="image-20200813134225211"></p>
-<script type="math/tex; mode=display">
-x^{2}+k^{2}=(1-x)^{2}</script><script type="math/tex; mode=display">
-\frac{y}{1-k}=\frac{k}{x}</script><p>通过相似三角形和勾股定理，联立两个方程</p>
-<script type="math/tex; mode=display">
-\frac{y}{1-k}=\frac{k}{\left(1-k^{2}\right) / 2}</script><script type="math/tex; mode=display">
-\frac{y}{2}=\frac{k}{1+k}</script><p>若正方形边长为1，有$k=\frac{1}{N}$，带入得到</p>
-<script type="math/tex; mode=display">
-\frac{y}{2}=\frac{1 / N}{1+1 / N}=\frac{1}{N+1}</script><p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E8%8A%B3%E8%B4%BA%E5%AE%9A%E7%90%86/image-20200813135158277.png" alt="image-20200813135158277"></p>
-<p>如果一直按此方法重复，就可以由$n$等分得到$n+1$等分，于是便得到了任意等分 <del>有点麻烦</del></p>
-<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E8%8A%B3%E8%B4%BA%E5%AE%9A%E7%90%86/image-20200813195253772.png" alt="image-20200813195253772">注意左上角的直角三角形，它是一个$3:4:5$的直角三角形，难道这只是巧合吗</p>
-<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E8%8A%B3%E8%B4%BA%E5%AE%9A%E7%90%86/image-20200813201010031.png" alt="image-20200813201010031"></p>
-<p>$A B=1, A N=x  $及$A M=\frac{p}{q}  $其 中 $p, q \in \mathbb{N},  M N=1-x $</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-\left(\frac{p}{q}\right)^{2}+x^{2} &=(1-x)^{2} \\
-\frac{p^{2}}{q^{2}}+x^{2} &=1-2 x+x^{2} \\
-x &=\frac{q^{2}-p^{2}}{2 q^{2}}
-\end{aligned}</script><p>所以，</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-A N: A M: M N &=\frac{q^{2}-p^{2}}{2 q^{2}}: \frac{p}{q}: 1-\frac{q^{2}-p^{2}}{2 q^{2}} \\
-&=q^{2}-p^{2}: 2 p q: p^{2}+q^{2}
-\end{aligned}</script><p>所以只要$p$和$q$是整数，那么这三条边的比就一定是勾股数</p>
-<script type="math/tex; mode=display">
-\begin{array}{|l|l|}
-\hline p / q & A N: A M: M N \\
-\hline 1 / 2 & 3: 4: 5 \\
-\hline 2 / 3 & 5: 12: 13 \\
-\hline 1 / 4 & 15: 8: 17 \\
-\hline
-\end{array}</script><h2 id="2-芳贺第二定理"><a href="#2-芳贺第二定理" class="headerlink" title="2.芳贺第二定理"></a>2.芳贺第二定理</h2><p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E8%8A%B3%E8%B4%BA%E5%AE%9A%E7%90%86/image-20200813124422672.png" alt="image-20200813124422672"></p>
-<p>将$AB$沿$CF$折叠，延长$FG$交$AD$于$E$</p>
-<p>在$\triangle AEF$中，有</p>
-<script type="math/tex; mode=display">
-(1-x)^{2}+(\frac{1}{2})^{2}=(x+\frac{1}{2})^2</script><p>解得$x=\frac{1}{3}$，即$E$是$AD$的三等分点</p>
-<h2 id="3-芳贺第三定理"><a href="#3-芳贺第三定理" class="headerlink" title="3.芳贺第三定理"></a>3.芳贺第三定理</h2><p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E8%8A%B3%E8%B4%BA%E5%AE%9A%E7%90%86/image-20200813124308393.png" alt="image-20200813124308393"></p>
-<p>设正方形 $ABCD$的边长为1,$ C M$=$x$, $C G$=$y$</p>
-<p>将$AB$边折到$AD$中点$E$上，并让$B$点落在$CD$上</p>
-<p>由  $\triangle E D M \sim \triangle C M G$,  可得</p>
-<script type="math/tex; mode=display">
-\frac{D E}{D M}=\frac{C M}{C G}</script><p>在$\triangle  C M G$  中, $G M<script type="math/tex">=</script>1-CG=1-y$，有</p>
-<script type="math/tex; mode=display">
-x^{2}+y^{2}=(1-y)^{2}</script><p>解之得</p>
-<script type="math/tex; mode=display">
-y=\frac{1-x^{2}}{2}</script><p>带入得$x=\frac{1}{3}$，即点$M$是$  C D  $的三等分点.</p>
-<h2 id="4-再谈n等分"><a href="#4-再谈n等分" class="headerlink" title="4.再谈n等分"></a>4.再谈n等分</h2><p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E8%8A%B3%E8%B4%BA%E5%AE%9A%E7%90%86/image-20200813191319434.png" alt="image-20200813191319434"></p>
-<p> 如果我们得到了$n-1$等分，在图中不难看出</p>
-<script type="math/tex; mode=display">
-\frac{\frac{1}{n-1}}{1}=\frac{x}{y}</script><p>消去$y$可以得到$x=\frac{1}{n}$</p>
-<p>这样我们又有一种n等分的方式</p>
-<p>$tip:$如果要得到7等分，我们可以先折3等分再对折，从而由6等分得到7等分</p>
-<h3 id="References"><a href="#References" class="headerlink" title="References:"></a>References:</h3><ol>
-<li><a href="https://plus.maths.org/content/folding-numbers" target="_blank" rel="noopener">https://plus.maths.org/content/folding-numbers</a></li>
-<li><a href="https://www.bilibili.com/read/cv5270753/" target="_blank" rel="noopener">https://www.bilibili.com/read/cv5270753/</a></li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1828,7 +1834,7 @@ y=\frac{1-x^{2}}{2}</script><p>带入得$x=\frac{1}{3}$，即点$M$是$  C D  $�
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">66</span>
+                <span class="site-state-item-count">67</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

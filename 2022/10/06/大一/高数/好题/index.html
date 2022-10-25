@@ -94,15 +94,15 @@
 
 
 
-<meta name="description" content="\lim_{x\to\frac\pi2}(\sin x)^{\tan x} \begin{aligned}\lim_{x\to\frac\pi2}(\sin x)^{\tan x} &amp;&#x3D;\lim_{x\to\frac\pi2}e^{\tan x\ln\sin x}\\&amp;&#x3D;\lim_{t\to1^-} e^{\tan x\ln t}\end{aligned} \begin{aligned}\bec">
+<meta name="description" content="\lim_{x\to\frac\pi2}(\sin x)^{\tan x} \begin{aligned}\lim_{x\to\frac\pi2}(\sin x)^{\tan x} &amp;&#x3D;\lim_{x\to\frac\pi2}e^{\tan x\ln\sin x}\\&amp;&#x3D;\lim_{t\to1^-} e^{\tan x\ln t}\end{aligned}法1  \begin{aligned}\">
 <meta property="og:type" content="article">
 <meta property="og:title" content="大一&#x2F;高数&#x2F;好题">
 <meta property="og:url" content="http://yoursite.com/2022/10/06/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%A5%BD%E9%A2%98/index.html">
 <meta property="og:site_name" content="BLOG">
-<meta property="og:description" content="\lim_{x\to\frac\pi2}(\sin x)^{\tan x} \begin{aligned}\lim_{x\to\frac\pi2}(\sin x)^{\tan x} &amp;&#x3D;\lim_{x\to\frac\pi2}e^{\tan x\ln\sin x}\\&amp;&#x3D;\lim_{t\to1^-} e^{\tan x\ln t}\end{aligned} \begin{aligned}\bec">
+<meta property="og:description" content="\lim_{x\to\frac\pi2}(\sin x)^{\tan x} \begin{aligned}\lim_{x\to\frac\pi2}(\sin x)^{\tan x} &amp;&#x3D;\lim_{x\to\frac\pi2}e^{\tan x\ln\sin x}\\&amp;&#x3D;\lim_{t\to1^-} e^{\tan x\ln t}\end{aligned}法1  \begin{aligned}\">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-10-06T07:32:36.157Z">
-<meta property="article:modified_time" content="2022-10-06T09:01:45.864Z">
+<meta property="article:modified_time" content="2022-10-25T02:17:12.115Z">
 <meta property="article:author" content="Shiwei Pan">
 <meta name="twitter:card" content="summary">
 
@@ -347,7 +347,8 @@
         <script type="math/tex; mode=display">
 \lim_{x\to\frac\pi2}(\sin x)^{\tan x}</script><script type="math/tex; mode=display">
 \begin{aligned}\lim_{x\to\frac\pi2}(\sin x)^{\tan x}
-&=\lim_{x\to\frac\pi2}e^{\tan x\ln\sin x}\\&=\lim_{t\to1^-} e^{\tan x\ln t}\end{aligned}</script><script type="math/tex; mode=display">
+&=\lim_{x\to\frac\pi2}e^{\tan x\ln\sin x}\\&=\lim_{t\to1^-} e^{\tan x\ln t}\end{aligned}</script><p>法1</p>
+<script type="math/tex; mode=display">
 \begin{aligned}\because\lim_{t\to1^-} {\tan x\ln t}&=\lim_{t\to1^-}\frac{t}{\sqrt{1-t^2}}\ln t \\
 &=\lim_{t\to1^-}t\cdot\lim_{t\to1^-}\frac{t-1}{\sqrt{1-t^2}}\\
 &=1\cdot \lim_{t\to1^-}\sqrt{\frac{(t-1)^2}{1-t^2}}\\
@@ -355,7 +356,50 @@
 &=0
 \end{aligned}\\
 \therefore 由复合函数的极限运算法则知\\
-\lim_{t\to1^-} e^{\tan x\ln t}=e^{\lim_{t\to1^-} {\tan x\ln t}}=e^0=1</script>
+\lim_{t\to1^-} e^{\tan x\ln t}=e^{\lim_{t\to1^-} {\tan x\ln t}}=e^0=1</script><p>法2</p>
+<script type="math/tex; mode=display">
+t=x-\frac\pi2\to0,x=\frac\pi2+t\\
+\begin{aligned}\lim_{x\to\frac\pi2}(\sin x)^{\tan x}
+&=\lim_{x\to\frac\pi2}e^{\tan x\ln\sin x}
+
+\\&=\lim_{t\to0} \exp \left \{   
+\frac{\sin \left(\frac\pi2+t \right)\ln\left[\sin \left(\frac\pi2+t \right)\right] }{\cos \left(\frac\pi2+t \right)}\right\}
+
+\\&=\lim_{t\to0} \exp \left \{   
+\frac{\sin \left(\frac\pi2+t \right)\left[\sin \left(\frac\pi2+t \right)-1\right] }{\cos \left(\frac\pi2+t \right)}\right\}
+
+\\&=\lim_{t\to0} \exp \left \{   
+\frac{\cos t (\cos t-1)     }{-\sin t}\right\}
+
+\\&=\lim_{t\to0} \exp \left \{   
+\frac{1\cdot(-\frac12t^2)     }{-t}\right\}
+\\&=\lim_{t\to0} e^{\frac12t}=e^0=1
+\end{aligned}</script><p>简化</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\lim _{x \rightarrow \frac{\pi}{2}}(\sin x)^{\tan x} &=\lim _{x \rightarrow 0}\left[\sin \left(\frac{\pi}{2}-x\right)\right]^{\tan \left(\frac{\pi}{2}-x\right)} \\
+&=\lim _{x \rightarrow 0}(\cos x)^{\frac{1}{\tan x}} \\
+&=\exp \lim _{x \rightarrow 0} \frac{\cos x-1}{\tan x} \\
+& = \exp \lim _{x \rightarrow 0} \frac{-x^{2} / 2}{x}=e^{0}=1
+\end{aligned}</script><script type="math/tex; mode=display">
+\lim_{x\to0}\frac{\cos(\tan x)-\cos x}{x^3\sin x}</script><p>法1</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\quad\,\lim_{x\to0}\frac{\cos(\tan x)-\cos x}{x^4}\\&=
+\lim_{x\to0}\frac{\cos(\tan x)-\cos x}{x^3\sin x}\\
+&=\lim_{x\to0}\frac
+{\frac12(x^2-\tan^2x)+\frac1{24}(\tan^4x-x^4)+o(x^4)}{x^4}\\
+&=\lim_{x\to0}\frac{(x-\tan x)2x[\frac12+\frac1{24} (\tan^2x+x^2)]+o(x^4)}{x^4}
+\\&=\frac{x(-\frac13x^3)}{x^4}=-\frac13
+\end{aligned}</script><p>法2</p>
+<script type="math/tex; mode=display">
+f(x)=\cos x,\frac{\cos (\tan x)-\cos x}{\tan x-x}=f'(\xi),\xi\in(x,\tan  x)\\
+\begin{aligned}
+&\quad\,\lim_{x\to0}\frac{\cos(\tan x)-\cos x}{x^4}\\
+&=\lim_{x\to0}\frac{(\tan x-x)f'(\xi)}{x^3\sin x}\\
+&=\lim_{x\to0}\frac{(\tan x-x)(-\sin \xi)}{x^3\sin x}\\
+&=\lim_{x\to0}-\frac{1}{3}\frac{\sin \xi}{\sin x}=-\frac 13\\
+\end{aligned}</script>
       
     </div>
     
@@ -459,7 +503,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">66</span>
+                <span class="site-state-item-count">67</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
