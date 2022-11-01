@@ -94,15 +94,15 @@
 
 
 
-<meta name="description" content="弧微分公式  \text ds&#x3D;\sqrt{1+y&#39;^2}\text dx曲率平均曲率  K&#x3D;\left|\frac{\Delta \alpha}{\Delta s}\right|曲线$C$在$M$处的曲率  K&#x3D;\lim_{\Delta s \rightarrow0}\left|\frac{\Delta \alpha}{\Delta s}\right|&#x3D;\left|\frac{\text d\a">
+<meta name="description" content="预备知识曲线光滑，有连续转动的切线  f(x)&#x3D;\begin{cases}x&#x3D;x(t),\\y&#x3D;y(t)\end{cases}\\ \exists x&#39;(t),y&#39;(t)\in C(\alpha,\beta)\\ x&#39;(t)^2+y&#39;(t)^2\ne0充分条件：导函数连续 弧微分公式 s&#x3D;\int_{\alpha}^{\beta}\sqrt{x&#39;(t)^2+y&#39;(t)^2}\text{d}t \\">
 <meta property="og:type" content="article">
 <meta property="og:title" content="大一&#x2F;高数&#x2F;曲率">
 <meta property="og:url" content="http://yoursite.com/2022/07/23/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E6%9B%B2%E7%8E%87/index.html">
 <meta property="og:site_name" content="BLOG">
-<meta property="og:description" content="弧微分公式  \text ds&#x3D;\sqrt{1+y&#39;^2}\text dx曲率平均曲率  K&#x3D;\left|\frac{\Delta \alpha}{\Delta s}\right|曲线$C$在$M$处的曲率  K&#x3D;\lim_{\Delta s \rightarrow0}\left|\frac{\Delta \alpha}{\Delta s}\right|&#x3D;\left|\frac{\text d\a">
+<meta property="og:description" content="预备知识曲线光滑，有连续转动的切线  f(x)&#x3D;\begin{cases}x&#x3D;x(t),\\y&#x3D;y(t)\end{cases}\\ \exists x&#39;(t),y&#39;(t)\in C(\alpha,\beta)\\ x&#39;(t)^2+y&#39;(t)^2\ne0充分条件：导函数连续 弧微分公式 s&#x3D;\int_{\alpha}^{\beta}\sqrt{x&#39;(t)^2+y&#39;(t)^2}\text{d}t \\">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-07-23T13:09:55.941Z">
-<meta property="article:modified_time" content="2022-08-04T05:54:36.065Z">
+<meta property="article:modified_time" content="2022-10-26T14:38:39.993Z">
 <meta property="article:author" content="Shiwei Pan">
 <meta name="twitter:card" content="summary">
 
@@ -344,14 +344,21 @@
       
 
       
-        <p>弧微分公式</p>
+        <h1 id="预备知识"><a href="#预备知识" class="headerlink" title="预备知识"></a>预备知识</h1><p>曲线光滑，有连续转动的切线</p>
 <script type="math/tex; mode=display">
-\text ds=\sqrt{1+y'^2}\text dx</script><h3 id="曲率"><a href="#曲率" class="headerlink" title="曲率"></a>曲率</h3><p>平均曲率</p>
+f(x)=\begin{cases}x=x(t),\\y=y(t)\end{cases}\\
+\exists x'(t),y'(t)\in C(\alpha,\beta)\\
+x'(t)^2+y'(t)^2\ne0</script><p>充分条件：导函数连续</p>
+<h2 id="弧微分公式"><a href="#弧微分公式" class="headerlink" title="弧微分公式"></a>弧微分公式</h2><script type="math/tex; mode=display">
+s=\int_{\alpha}^{\beta}\sqrt{x'(t)^2+y'(t)^2}\text{d}t</script><script type="math/tex; mode=display">
+\\ \text ds=\sqrt{1+y'^2}\text dx</script><h1 id="曲率"><a href="#曲率" class="headerlink" title="曲率"></a>曲率</h1><p>平均曲率</p>
 <script type="math/tex; mode=display">
-K=\left|\frac{\Delta \alpha}{\Delta s}\right|</script><p>曲线$C$在$M$处的曲率</p>
+\overline{K}=\left|\frac{\Delta \alpha}{\Delta s}\right|</script><p>曲线$C$在$M$处的曲率</p>
 <script type="math/tex; mode=display">
 K=\lim_{\Delta s \rightarrow0}\left|\frac{\Delta \alpha}{\Delta s}\right|=\left|\frac{\text d\alpha}{\text d s}\right|</script><script type="math/tex; mode=display">
-K=\frac{|y''|}{(1+y'^2)^{3/2}}\approx |y''|</script><p>​                                                             </p>
+K=\frac{|y''|}{(1+y'^2)^{3/2}}\approx |y''|</script><h2 id="曲率圆"><a href="#曲率圆" class="headerlink" title="曲率圆"></a>曲率圆</h2><script type="math/tex; mode=display">
+\rho=\frac1K</script><p>则$\rho$为曲线在该点处的曲率半径</p>
+<p>曲率圆的中心为该点处的曲率中心</p>
 
       
     </div>
@@ -465,7 +472,7 @@ K=\frac{|y''|}{(1+y'^2)^{3/2}}\approx |y''|</script><p>​                      
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">67</span>
+                <span class="site-state-item-count">69</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -528,7 +535,7 @@ K=\frac{|y''|}{(1+y'^2)^{3/2}}\approx |y''|</script><p>​                      
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#曲率"><span class="nav-number">1.</span> <span class="nav-text">曲率</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#预备知识"><span class="nav-number">1.</span> <span class="nav-text">预备知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#弧微分公式"><span class="nav-number">1.1.</span> <span class="nav-text">弧微分公式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#曲率"><span class="nav-number">2.</span> <span class="nav-text">曲率</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#曲率圆"><span class="nav-number">2.1.</span> <span class="nav-text">曲率圆</span></a></li></ol></li></ol></div>
             
 
           </div>
