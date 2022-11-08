@@ -354,7 +354,13 @@ v=\frac{\sqrt 3}2c\\
 p_1=\sqrt{2m_eUe}\\
 
 p_2=\frac{\sqrt{2m_eeUc^2+e^2U^2}}c</script><script type="math/tex; mode=display">
-E=\frac{\varepsilon _0m_0c^2}{m_0c^2+\varepsilon _0(1-\cos\theta)}</script>
+E=\frac{\varepsilon _0m_0c^2}{m_0c^2+\varepsilon _0(1-\cos\theta)}</script><script type="math/tex; mode=display">
+\overline{E_k}=\frac14kA^2,\overline{E_p}=\frac14kA^2</script><script type="math/tex; mode=display">
+a:0,b:\frac{\pi}3,c:\pi\\
+d:\frac{2\pi}3,e:-\frac{2\pi}3\\
+x=5\cos\left(\frac{\pi}{1.2}t-\frac{\pi}3\right)</script><script type="math/tex; mode=display">
+A=\sqrt{\frac8{125}},E_p=0.2\text{J}</script><script type="math/tex; mode=display">
+\frac{\pi}8</script>
           
         
       
@@ -482,7 +488,28 @@ E=\frac{\varepsilon _0m_0c^2}{m_0c^2+\varepsilon _0(1-\cos\theta)}</script>
 <script type="math/tex; mode=display">
 F(x)+\boxed{C}=\int f(x)\text{d}x</script><p>其中$x$为积分变量，$\displaystyle \int$为积分号，$f(x)$为被积函数</p>
 <p>$f(x)\text{d}x$为被积表达式</p>
-
+<h1 id="第一类换元法"><a href="#第一类换元法" class="headerlink" title="第一类换元法"></a>第一类换元法</h1><script type="math/tex; mode=display">
+\int f(\varphi(x))\varphi'(x)\text{d}x=\int f(\varphi(x))\text{d}\varphi(x)=\left. \int f(u)\text{d}u\right|_{u=\varphi(x)}</script><p>凑微分法，将表达式中的一个式子换元为$t$</p>
+<script type="math/tex; mode=display">
+\text{d}x=\frac1a\text{d}(ax)
+\\ x\text{d}x=\frac12\text{d}x^2</script><h2 id="根式有理函数"><a href="#根式有理函数" class="headerlink" title="根式有理函数"></a>根式有理函数</h2><p>用于升高次数</p>
+<script type="math/tex; mode=display">
+R(x,\sqrt[m]{ax+b},\sqrt[n]{ax+b})\rightarrow t=\sqrt[mn]{ax+b}\\
+R(x,\sqrt[n]\frac{ax+b}{cx+d})\rightarrow t=\sqrt[n]\frac{ax+b}{cx+d}</script><h2 id="欧拉代换"><a href="#欧拉代换" class="headerlink" title="欧拉代换"></a>欧拉代换</h2><script type="math/tex; mode=display">
+\int R(x,\sqrt{ax^2+bx+c})\text dx</script><script type="math/tex; mode=display">
+a>0\rightarrow\sqrt{ax^2+bx+c}=t\pm \sqrt{a}x\\
+c>0\rightarrow\sqrt{ax^2+bx+c}=xt\pm \sqrt{c}\\
+\Delta>0\rightarrow \sqrt{ax^2+bx+c}=t(x-\alpha)</script><h1 id="第二类换元法"><a href="#第二类换元法" class="headerlink" title="第二类换元法"></a>第二类换元法</h1><script type="math/tex; mode=display">
+x=\varphi(t)\\
+\int f(x)\text{d}x=\int f(\varphi(t))\varphi'(t)\text{d}x</script><p>类似于参数方程，用于化简表达式</p>
+<h2 id="常用代换"><a href="#常用代换" class="headerlink" title="常用代换"></a>常用代换</h2><script type="math/tex; mode=display">
+\sqrt{a^2-x^2}\rightarrow x=a\sin t\rightarrow a\cos t
+\\\sqrt{a^2+x^2}\rightarrow x=a\tan  t\rightarrow a\sec  t\\
+\sqrt{x^2-a^2}\rightarrow x=a\sec  t\rightarrow a\tan  t</script><h3 id="万能代换"><a href="#万能代换" class="headerlink" title="万能代换"></a>万能代换</h3><script type="math/tex; mode=display">
+t=\tan \frac x2\\
+\sin x=\frac{2t}{1+t^2}\\
+\cos x=\frac{1-t^2}{1+t^2}\\
+\tan x=\frac{2t}{1-t^2}</script>
           
         
       
