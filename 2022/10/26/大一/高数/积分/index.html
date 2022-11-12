@@ -101,10 +101,12 @@
 <meta property="og:site_name" content="BLOG">
 <meta property="og:description" content="原函数和不定积分 \text{d}F(x)&#x3D;F&#39;(x)\text{d}x&#x3D;f(x)\text{d}x原函数若函数在区间$I$上连续，一定有原函数 显然这只是一个充分条件 反例有$x^2\sin \frac1x$，同时$e^{x^2}$的原函数不为初等函数  [F(x)+C]&#39;&#x3D;f(x)不定积分带有任意常数项的原函数为不定积分  F(x)+\boxed{C}&#x3D;\int f(x)\text{d}x其中">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2022/10/26/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E7%A7%AF%E5%88%86/v2-d973f58ff2f40755701eafa41902b221_r.png">
 <meta property="article:published_time" content="2022-10-26T06:38:53.793Z">
-<meta property="article:modified_time" content="2022-11-07T06:54:52.521Z">
+<meta property="article:modified_time" content="2022-11-12T08:33:12.377Z">
 <meta property="article:author" content="Shiwei Pan">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2022/10/26/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E7%A7%AF%E5%88%86/v2-d973f58ff2f40755701eafa41902b221_r.png">
 
 
 
@@ -364,17 +366,40 @@ R(x,\sqrt[n]\frac{ax+b}{cx+d})\rightarrow t=\sqrt[n]\frac{ax+b}{cx+d}</script><h
 \int R(x,\sqrt{ax^2+bx+c})\text dx</script><script type="math/tex; mode=display">
 a>0\rightarrow\sqrt{ax^2+bx+c}=t\pm \sqrt{a}x\\
 c>0\rightarrow\sqrt{ax^2+bx+c}=xt\pm \sqrt{c}\\
-\Delta>0\rightarrow \sqrt{ax^2+bx+c}=t(x-\alpha)</script><h1 id="第二类换元法"><a href="#第二类换元法" class="headerlink" title="第二类换元法"></a>第二类换元法</h1><script type="math/tex; mode=display">
+\Delta>0\rightarrow \sqrt{ax^2+bx+c}=t(x-\alpha)</script><h2 id="组合积分法"><a href="#组合积分法" class="headerlink" title="组合积分法"></a>组合积分法</h2><script type="math/tex; mode=display">
+分子=A分母+B分母'</script><h1 id="第二类换元法"><a href="#第二类换元法" class="headerlink" title="第二类换元法"></a>第二类换元法</h1><script type="math/tex; mode=display">
 x=\varphi(t)\\
 \int f(x)\text{d}x=\int f(\varphi(t))\varphi'(t)\text{d}x</script><p>类似于参数方程，用于化简表达式</p>
 <h2 id="常用代换"><a href="#常用代换" class="headerlink" title="常用代换"></a>常用代换</h2><script type="math/tex; mode=display">
 \sqrt{a^2-x^2}\rightarrow x=a\sin t\rightarrow a\cos t
 \\\sqrt{a^2+x^2}\rightarrow x=a\tan  t\rightarrow a\sec  t\\
-\sqrt{x^2-a^2}\rightarrow x=a\sec  t\rightarrow a\tan  t</script><h3 id="万能代换"><a href="#万能代换" class="headerlink" title="万能代换"></a>万能代换</h3><script type="math/tex; mode=display">
+\sqrt{x^2-a^2}\rightarrow x=a\sec  t\rightarrow a\tan  t</script><p>熟练运用半角公式，倍角公式，积化和差</p>
+<h3 id="万能代换"><a href="#万能代换" class="headerlink" title="万能代换"></a>万能代换</h3><script type="math/tex; mode=display">
 t=\tan \frac x2\\
 \sin x=\frac{2t}{1+t^2}\\
 \cos x=\frac{1-t^2}{1+t^2}\\
-\tan x=\frac{2t}{1-t^2}</script>
+\tan x=\frac{2t}{1-t^2}</script><h1 id="分部积分法"><a href="#分部积分法" class="headerlink" title="分部积分法"></a>分部积分法</h1><script type="math/tex; mode=display">
+\int uv'\text{d}x=uv-\int vu'\text{d}x\\
+\int u\text{d}v=uv-\int v\text{d}u</script><p>反对幂三指$=u$</p>
+<h2 id="表格法"><a href="#表格法" class="headerlink" title="表格法"></a>表格法</h2><p><img src="/2022/10/26/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E7%A7%AF%E5%88%86/v2-d973f58ff2f40755701eafa41902b221_r.png" alt="v2-d973f58ff2f40755701eafa41902b221_r"></p>
+<p>上方为$u$下方为$v$，上方求导下方积分</p>
+<h1 id="有理函数的积分"><a href="#有理函数的积分" class="headerlink" title="有理函数的积分"></a>有理函数的积分</h1><p>利用多项式除法，总可以将一个假分式改写成一个多项式和一个真分式之和</p>
+<p>对于真分式，讨论分母</p>
+<p>如果分母中有因式$(x-a)^k$</p>
+<script type="math/tex; mode=display">
+
+\frac{A_{1}}{(x-a)^{k}}+\frac{A_{2}}{(x-a)^{k-1}}+\cdots+\frac{A_{k}}{x-a}</script><p>如果分母中有因式$(x^2+px+q)^k$</p>
+<script type="math/tex; mode=display">
+\frac{M_{1} x+N_{1}}{\left(x^{2}+p x+q\right)^{k}}+\frac{M_{2} x+N_{2}}{\left(x^{2}+p x+q\right)^{k-1}}+\cdots+\frac{M_{k} x+N_{k}}{x^{2}+p x+q}</script><p>具体计算时使用极限法和特殊值带入法</p>
+<p>还可将分母高次项换为$t$，使用多项式除法</p>
+<script type="math/tex; mode=display">
+\frac{x^{2}}{(x-1)^{3}(x+1)}=\frac{(1+y)^{2}}{y^{3}(2+y)}=\frac{1+2 y+y^{2}}{y^{3}(2+y)}</script><h1 id="解题细节"><a href="#解题细节" class="headerlink" title="解题细节"></a>解题细节</h1><ul>
+<li>先需要写出微分关系</li>
+<li>步骤无需太细微，在草稿纸上完成</li>
+<li>结果一定要用$x$来表示</li>
+<li>不定积分一定需要加常数$C$</li>
+</ul>
+
       
     </div>
     
@@ -487,7 +512,7 @@ t=\tan \frac x2\\
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">69</span>
+                <span class="site-state-item-count">70</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -550,7 +575,7 @@ t=\tan \frac x2\\
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#原函数和不定积分"><span class="nav-number">1.</span> <span class="nav-text">原函数和不定积分</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#原函数"><span class="nav-number">1.1.</span> <span class="nav-text">原函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不定积分"><span class="nav-number">1.2.</span> <span class="nav-text">不定积分</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第一类换元法"><span class="nav-number">2.</span> <span class="nav-text">第一类换元法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#根式有理函数"><span class="nav-number">2.1.</span> <span class="nav-text">根式有理函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#欧拉代换"><span class="nav-number">2.2.</span> <span class="nav-text">欧拉代换</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第二类换元法"><span class="nav-number">3.</span> <span class="nav-text">第二类换元法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用代换"><span class="nav-number">3.1.</span> <span class="nav-text">常用代换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#万能代换"><span class="nav-number">3.1.1.</span> <span class="nav-text">万能代换</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#原函数和不定积分"><span class="nav-number">1.</span> <span class="nav-text">原函数和不定积分</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#原函数"><span class="nav-number">1.1.</span> <span class="nav-text">原函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不定积分"><span class="nav-number">1.2.</span> <span class="nav-text">不定积分</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第一类换元法"><span class="nav-number">2.</span> <span class="nav-text">第一类换元法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#根式有理函数"><span class="nav-number">2.1.</span> <span class="nav-text">根式有理函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#欧拉代换"><span class="nav-number">2.2.</span> <span class="nav-text">欧拉代换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组合积分法"><span class="nav-number">2.3.</span> <span class="nav-text">组合积分法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第二类换元法"><span class="nav-number">3.</span> <span class="nav-text">第二类换元法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用代换"><span class="nav-number">3.1.</span> <span class="nav-text">常用代换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#万能代换"><span class="nav-number">3.1.1.</span> <span class="nav-text">万能代换</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分部积分法"><span class="nav-number">4.</span> <span class="nav-text">分部积分法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#表格法"><span class="nav-number">4.1.</span> <span class="nav-text">表格法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#有理函数的积分"><span class="nav-number">5.</span> <span class="nav-text">有理函数的积分</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解题细节"><span class="nav-number">6.</span> <span class="nav-text">解题细节</span></a></li></ol></div>
             
 
           </div>

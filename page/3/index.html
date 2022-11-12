@@ -277,6 +277,130 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/10/%E5%A4%A7%E4%B8%80/python/taichi/%E6%95%B0%E6%8D%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/08/10/%E5%A4%A7%E4%B8%80/python/taichi/%E6%95%B0%E6%8D%AE/" itemprop="url">大一/python/taichi/数据</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-08-10T12:53:53+08:00">
+                2022-08-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> taichi <span class="keyword">as</span> ti</span><br><span class="line">ti.init(arch=ti.gpu)</span><br></pre></td></tr></table></figure>
+<h2 id="修饰"><a href="#修饰" class="headerlink" title="修饰"></a>修饰</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@ti.kernel#某个函数</span></span><br><span class="line"><span class="comment">#最外层才会并行</span></span><br></pre></td></tr></table></figure>
+<h2 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">cast<span class="comment">#i32/i64/f32/f64</span></span><br><span class="line">b=ti.cast(a,ti.i32)<span class="comment">#转换</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#大写</span></span><br><span class="line">a=ti.Vector([<span class="number">0.0</span>,<span class="number">0.0</span>,<span class="number">0.0</span>])</span><br><span class="line">B=ti.Matrix([<span class="number">1.5</span>,<span class="number">1.4</span>],[<span class="number">1.3</span>,<span class="number">1.2</span>])</span><br><span class="line">B[<span class="number">1</span>,<span class="number">0</span>] </span><br><span class="line">r=ti.Struct(v1=a,v2=<span class="number">0</span>)<span class="comment">#结构体</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#N-d array(global)</span></span><br><span class="line">c=ti.field(dtype=ti.f32,shape=(<span class="number">256</span>,<span class="number">256</span>))</span><br><span class="line"><span class="comment">#shape=4 -vector</span></span><br><span class="line"><span class="comment">#shape=() [None]</span></span><br><span class="line">vf=ti.Vector.field(n=<span class="number">3</span>,shape=<span class="number">4</span>)<span class="comment">#m每个元素为(3*1)的小向量</span></span><br><span class="line"><span class="comment">#m=2(3*2)</span></span><br></pre></td></tr></table></figure>
+<h2 id="计算"><a href="#计算" class="headerlink" title="计算"></a>计算</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">+=/ti.atomic_add(a,b)</span><br><span class="line"><span class="comment">#防止数据征用</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">import taichi as ti</span><br><span class="line">ti.init(ti.gpu)</span><br><span class="line"></span><br><span class="line">N&#x3D;2</span><br><span class="line">vol&#x3D;ti.Vector.field(2,ti.f32,N)#二维向量</span><br><span class="line">acc&#x3D;ti.Vector.field(2,ti.f32,N)</span><br><span class="line">pos&#x3D;ti.Vector.field(2,ti.f32,N)</span><br><span class="line">substepping&#x3D;10</span><br><span class="line"></span><br><span class="line">@ti.kernel</span><br><span class="line">def initialize():</span><br><span class="line">    for i in range(N):</span><br><span class="line">        pos[i]&#x3D;[ti.random(),ti.random()]</span><br><span class="line">        vol[i]&#x3D;[ti.random(),ti.random()]</span><br><span class="line"></span><br><span class="line">gui&#x3D;ti.GUI(&quot;n body problem&quot;,(512,512))</span><br><span class="line">           </span><br><span class="line">while(gui.running):</span><br><span class="line">    # for i in range(substepping):</span><br><span class="line">    gui.circle(pos.to_numpy(),color&#x3D;0xFFFFFF,radius&#x3D;2)</span><br><span class="line">    gui.show()</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/07/%E5%A4%A7%E4%B8%80/%E6%9D%82/%E7%89%A9%E7%90%86%E7%B3%BB%E7%BB%9F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1740,135 +1864,6 @@ a \sin \alpha \pm b \cos \alpha=\sqrt{a^{2}+b^{2}} \sin (\alpha \pm \varphi) \te
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E5%90%91%E9%87%8F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E5%90%91%E9%87%8F/" itemprop="url">高中/数学/向量</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-07-23T21:10:03+08:00">
-                2022-07-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="向量"><a href="#向量" class="headerlink" title="向量"></a>向量</h1><p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E5%90%91%E9%87%8F/image-20220316213112284.png" alt="image-20220316213112284"></p>
-<script type="math/tex; mode=display">
-\vec {AB}=(x,y),\displaystyle |{\overrightarrow {AB}}|=\sqrt {x^2 + y^2}\\
-\overrightarrow a  \pm \overrightarrow b  = ({x_1} \pm {x_2},{y_1} \pm {y_2})\\
-\begin{aligned}
-\overrightarrow a  \cdot \overrightarrow b  &= {x_1}{x_2} + {y_1}{y_2}\\&=\left| {\overrightarrow a } \right| \cdot \left| {\overrightarrow b } \right| \cdot \cos \left\langle {\overrightarrow a ,\overrightarrow b } \right\rangle \\&=\left| {\overrightarrow a } \right| \cdot l_{a在b上的投影}
-\end{aligned}\\
-\begin{aligned}
-\overrightarrow a   \times  \overrightarrow b  &= {x_1}{y_2} - {x_2}{y_1}\\&=\left| {\overrightarrow a } \right| \cdot \left| {\overrightarrow b } \right| \cdot \sin \left\langle {\overrightarrow a ,\overrightarrow b } \right\rangle \\&=S_{平行四边形}
-\end{aligned}\\</script><h2 id="奔驰定理"><a href="#奔驰定理" class="headerlink" title="奔驰定理"></a>奔驰定理</h2><p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E5%90%91%E9%87%8F/image-20210508203433526.png" alt="image-20210508203433526"></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1919,7 +1914,7 @@ a \sin \alpha \pm b \cos \alpha=\sqrt{a^{2}+b^{2}} \sin (\alpha \pm \varphi) \te
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">69</span>
+                <span class="site-state-item-count">70</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
