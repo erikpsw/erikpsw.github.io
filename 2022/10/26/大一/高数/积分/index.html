@@ -102,8 +102,9 @@
 <meta property="og:description" content="原函数和不定积分 \text{d}F(x)&#x3D;F&#39;(x)\text{d}x&#x3D;f(x)\text{d}x原函数若函数在区间$I$上连续，一定有原函数 显然这只是一个充分条件 反例有$x^2\sin \frac1x$，同时$e^{x^2}$的原函数不为初等函数  [F(x)+C]&#39;&#x3D;f(x)不定积分带有任意常数项的原函数为不定积分  F(x)+\boxed{C}&#x3D;\int f(x)\text{d}x其中">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://yoursite.com/2022/10/26/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E7%A7%AF%E5%88%86/v2-d973f58ff2f40755701eafa41902b221_r.png">
+<meta property="og:image" content="http://yoursite.com/2022/10/26/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E7%A7%AF%E5%88%86/image-20221113205224794.png">
 <meta property="article:published_time" content="2022-10-26T06:38:53.793Z">
-<meta property="article:modified_time" content="2022-11-12T08:33:12.377Z">
+<meta property="article:modified_time" content="2022-11-13T13:14:14.880Z">
 <meta property="article:author" content="Shiwei Pan">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/2022/10/26/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E7%A7%AF%E5%88%86/v2-d973f58ff2f40755701eafa41902b221_r.png">
@@ -383,17 +384,45 @@ t=\tan \frac x2\\
 \int u\text{d}v=uv-\int v\text{d}u</script><p>反对幂三指$=u$</p>
 <h2 id="表格法"><a href="#表格法" class="headerlink" title="表格法"></a>表格法</h2><p><img src="/2022/10/26/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E7%A7%AF%E5%88%86/v2-d973f58ff2f40755701eafa41902b221_r.png" alt="v2-d973f58ff2f40755701eafa41902b221_r"></p>
 <p>上方为$u$下方为$v$，上方求导下方积分</p>
+<p>分部积分的$\displaystyle\int v\text{d}u$部分可保留后续可消去</p>
+<p>对于反三角函数或$\ln^2(x)$我们令$\text{d}x=\text{d}v$</p>
 <h1 id="有理函数的积分"><a href="#有理函数的积分" class="headerlink" title="有理函数的积分"></a>有理函数的积分</h1><p>利用多项式除法，总可以将一个假分式改写成一个多项式和一个真分式之和</p>
 <p>对于真分式，讨论分母</p>
 <p>如果分母中有因式$(x-a)^k$</p>
 <script type="math/tex; mode=display">
-
 \frac{A_{1}}{(x-a)^{k}}+\frac{A_{2}}{(x-a)^{k-1}}+\cdots+\frac{A_{k}}{x-a}</script><p>如果分母中有因式$(x^2+px+q)^k$</p>
 <script type="math/tex; mode=display">
 \frac{M_{1} x+N_{1}}{\left(x^{2}+p x+q\right)^{k}}+\frac{M_{2} x+N_{2}}{\left(x^{2}+p x+q\right)^{k-1}}+\cdots+\frac{M_{k} x+N_{k}}{x^{2}+p x+q}</script><p>具体计算时使用极限法和特殊值带入法</p>
-<p>还可将分母高次项换为$t$，使用多项式除法</p>
 <script type="math/tex; mode=display">
-\frac{x^{2}}{(x-1)^{3}(x+1)}=\frac{(1+y)^{2}}{y^{3}(2+y)}=\frac{1+2 y+y^{2}}{y^{3}(2+y)}</script><h1 id="解题细节"><a href="#解题细节" class="headerlink" title="解题细节"></a>解题细节</h1><ul>
+\frac{x^{2}}{(x-1)^{3}(x+1)}=\frac{(1+y)^{2}}{y^{3}(2+y)}=\frac{1+2 y+y^{2}}{y^{3}(2+y)}</script><h2 id="例"><a href="#例" class="headerlink" title="例"></a>例</h2><script type="math/tex; mode=display">
+\int \frac{x^{5}-7 x^{4}+19 x^{3}-10 x^{2}-19 x+18}{x^{4}-5 x^{3}+9 x^{2}}  \text {d}x</script><p><img src="/2022/10/26/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E7%A7%AF%E5%88%86/image-20221113205224794.png" alt="image-20221113205224794"></p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\text{LHS}&=\int\left(x-2+\frac{8 x^{2}-19 x+18}{x^{4}-5 x^{3}+9 x^{2}}\right) \text {d}x\\
+&=\int\left(x-2-\frac8{x^2}+\frac{21x-54}{x^{4}-5 x^{3}+9 x^{2}}\right) \text {d}x\\
+
+\end{aligned}</script><script type="math/tex; mode=display">
+\frac{21x-54}{x^2(x^{2}-5 x+9 )}=\frac Cx
++\frac D{x^2}+\frac{Ax+B}{x^{2}-5 x+9 }\\
+\begin{aligned}
+&1.\times x^2,x\to0,D=-6\\
+&2.\times x,x\to \infty,A=-C\\
+&3.x=1,5C+5D+A+B=-33\\
+&4.x=-1,15D-15C+B-A=-75\\
+\end{aligned}\\
+\Rightarrow\begin{cases}
+A=1\\
+B=1\\C=-1\\D=-6
+\end{cases}\\
+\begin{aligned}
+\int\frac{21x-54}{x^{4}-5 x^{3}+9 x^{2}}\text {d}x=\int\left(\frac{x+1}{x^{2}-5 x+9}-\frac 1x
+-\frac 6{x^2}\right)\text{d}x
+
+\end{aligned}\\
+\frac{x+1}{x^{2}-5 x+9}=\frac12\left(\frac{2x-5+7}{x^{2}-5 x+9}\right)</script><script type="math/tex; mode=display">
+\int\frac{x+1}{x^{2}-5 x+9}\text{d}x=\frac12\left(\int\frac{\text{d}(x^{2}-5 x+9)}{x^{2}-5 x+9}+\int\frac{7\text{d}{\left(x-\frac52\right)}}{\left(x-\frac52\right)^2+\frac{11}4}\right)</script><p>所以答案为</p>
+<script type="math/tex; mode=display">
+\frac{x^{2}}{2}-2 x-\frac{2}{x}-\ln |x|+\frac{1}{2} \ln \left(x^{2}-5 x+9\right)+\frac{7}{\sqrt{11}} \tan ^{-1}\left(\frac{2 x-5}{\sqrt{11}}\right)+C</script><h1 id="解题细节"><a href="#解题细节" class="headerlink" title="解题细节"></a>解题细节</h1><ul>
 <li>先需要写出微分关系</li>
 <li>步骤无需太细微，在草稿纸上完成</li>
 <li>结果一定要用$x$来表示</li>
@@ -575,7 +604,7 @@ t=\tan \frac x2\\
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#原函数和不定积分"><span class="nav-number">1.</span> <span class="nav-text">原函数和不定积分</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#原函数"><span class="nav-number">1.1.</span> <span class="nav-text">原函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不定积分"><span class="nav-number">1.2.</span> <span class="nav-text">不定积分</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第一类换元法"><span class="nav-number">2.</span> <span class="nav-text">第一类换元法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#根式有理函数"><span class="nav-number">2.1.</span> <span class="nav-text">根式有理函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#欧拉代换"><span class="nav-number">2.2.</span> <span class="nav-text">欧拉代换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组合积分法"><span class="nav-number">2.3.</span> <span class="nav-text">组合积分法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第二类换元法"><span class="nav-number">3.</span> <span class="nav-text">第二类换元法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用代换"><span class="nav-number">3.1.</span> <span class="nav-text">常用代换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#万能代换"><span class="nav-number">3.1.1.</span> <span class="nav-text">万能代换</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分部积分法"><span class="nav-number">4.</span> <span class="nav-text">分部积分法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#表格法"><span class="nav-number">4.1.</span> <span class="nav-text">表格法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#有理函数的积分"><span class="nav-number">5.</span> <span class="nav-text">有理函数的积分</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解题细节"><span class="nav-number">6.</span> <span class="nav-text">解题细节</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#原函数和不定积分"><span class="nav-number">1.</span> <span class="nav-text">原函数和不定积分</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#原函数"><span class="nav-number">1.1.</span> <span class="nav-text">原函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不定积分"><span class="nav-number">1.2.</span> <span class="nav-text">不定积分</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第一类换元法"><span class="nav-number">2.</span> <span class="nav-text">第一类换元法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#根式有理函数"><span class="nav-number">2.1.</span> <span class="nav-text">根式有理函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#欧拉代换"><span class="nav-number">2.2.</span> <span class="nav-text">欧拉代换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组合积分法"><span class="nav-number">2.3.</span> <span class="nav-text">组合积分法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第二类换元法"><span class="nav-number">3.</span> <span class="nav-text">第二类换元法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用代换"><span class="nav-number">3.1.</span> <span class="nav-text">常用代换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#万能代换"><span class="nav-number">3.1.1.</span> <span class="nav-text">万能代换</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分部积分法"><span class="nav-number">4.</span> <span class="nav-text">分部积分法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#表格法"><span class="nav-number">4.1.</span> <span class="nav-text">表格法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#有理函数的积分"><span class="nav-number">5.</span> <span class="nav-text">有理函数的积分</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#例"><span class="nav-number">5.1.</span> <span class="nav-text">例</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解题细节"><span class="nav-number">6.</span> <span class="nav-text">解题细节</span></a></li></ol></div>
             
 
           </div>

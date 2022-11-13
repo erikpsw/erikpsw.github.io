@@ -362,7 +362,31 @@ a=-A\omega_0^2\cos(\omega_0t+\varphi)=-\omega_0^2x</script><p>其中$\omega_0$�
 <script type="math/tex; mode=display">
 \frac{\text{d}^2\theta}{\text{d}t^2}=-\frac{g}{L}\theta</script><p>由于$\theta\approx 0$</p>
 <script type="math/tex; mode=display">
-\frac{\text{d}^2x}{\text{d}t^2}=-\frac gL x</script>
+\frac{\text{d}^2x}{\text{d}t^2}=-\frac gL x</script><p>结果为</p>
+<script type="math/tex; mode=display">
+\theta =\theta_0\cos(\omega_0t+\varphi)\\
+\omega_0=\sqrt{\frac gL}\\
+T_0=2\pi\sqrt{\frac Lg}</script><h2 id="重要物理量"><a href="#重要物理量" class="headerlink" title="重要物理量"></a>重要物理量</h2><script type="math/tex; mode=display">
+A=\sqrt{x_0^2+\left(\frac{v_0}{\omega_0}\right)^2}\\
+\varphi=\arctan\left(-\frac{v_0}{\omega_0x_0}\right)</script><p>利用选择矢量法可以方便地求出各物理量</p>
+<h3 id="能量"><a href="#能量" class="headerlink" title="能量"></a>能量</h3><script type="math/tex; mode=display">
+E_p=\frac12kx^2\\
+E=E_p+E_k=\frac12kA^2\\
+\overline{E_k}=\overline{E_p}=\frac14kA^2</script><h1 id="振动的合成"><a href="#振动的合成" class="headerlink" title="振动的合成"></a>振动的合成</h1><h2 id="同频率"><a href="#同频率" class="headerlink" title="同频率"></a>同频率</h2><p>对于两个同频率的简谐振动，运动具有相对静止性</p>
+<script type="math/tex; mode=display">
+\Delta\varphi=\varphi_2-\varphi_1</script><p>若$\Delta\varphi=2k\pi$则为同相，振动加强，振幅最大</p>
+<script type="math/tex; mode=display">
+A=A_1+A_2</script><p>$\Delta\varphi=(2k+1)\pi$则振动削弱，合振幅最小</p>
+<script type="math/tex; mode=display">
+A=|A_1-A_2|</script><p>一般的</p>
+<script type="math/tex; mode=display">
+A=\sqrt{A_1^2+A_2^2+2A_1A_2\cos\Delta\varphi}\\
+\tan\varphi=\frac{A_1\sin\varphi_1+A_2\sin\varphi_2}{A_1\cos\varphi_1+A_2\cos\varphi_2}</script><h2 id="不同频率"><a href="#不同频率" class="headerlink" title="不同频率"></a>不同频率</h2><p>若频率相差不大，则振幅会出现时大时小的现象，称为拍</p>
+<p>若两次重合则为合拍</p>
+<script type="math/tex; mode=display">
+T=\frac{2\pi}{\omega_{\text{raletive}}}=\frac{2\pi}{\omega_2-\omega_1}\\
+\nu=\frac1T=\nu_2-\nu_1</script><p>其中$\nu$称为拍频</p>
+
           
         
       
@@ -649,17 +673,45 @@ t=\tan \frac x2\\
 \int u\text{d}v=uv-\int v\text{d}u</script><p>反对幂三指$=u$</p>
 <h2 id="表格法"><a href="#表格法" class="headerlink" title="表格法"></a>表格法</h2><p><img src="/2022/10/26/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E7%A7%AF%E5%88%86/v2-d973f58ff2f40755701eafa41902b221_r.png" alt="v2-d973f58ff2f40755701eafa41902b221_r"></p>
 <p>上方为$u$下方为$v$，上方求导下方积分</p>
+<p>分部积分的$\displaystyle\int v\text{d}u$部分可保留后续可消去</p>
+<p>对于反三角函数或$\ln^2(x)$我们令$\text{d}x=\text{d}v$</p>
 <h1 id="有理函数的积分"><a href="#有理函数的积分" class="headerlink" title="有理函数的积分"></a>有理函数的积分</h1><p>利用多项式除法，总可以将一个假分式改写成一个多项式和一个真分式之和</p>
 <p>对于真分式，讨论分母</p>
 <p>如果分母中有因式$(x-a)^k$</p>
 <script type="math/tex; mode=display">
-
 \frac{A_{1}}{(x-a)^{k}}+\frac{A_{2}}{(x-a)^{k-1}}+\cdots+\frac{A_{k}}{x-a}</script><p>如果分母中有因式$(x^2+px+q)^k$</p>
 <script type="math/tex; mode=display">
 \frac{M_{1} x+N_{1}}{\left(x^{2}+p x+q\right)^{k}}+\frac{M_{2} x+N_{2}}{\left(x^{2}+p x+q\right)^{k-1}}+\cdots+\frac{M_{k} x+N_{k}}{x^{2}+p x+q}</script><p>具体计算时使用极限法和特殊值带入法</p>
-<p>还可将分母高次项换为$t$，使用多项式除法</p>
 <script type="math/tex; mode=display">
-\frac{x^{2}}{(x-1)^{3}(x+1)}=\frac{(1+y)^{2}}{y^{3}(2+y)}=\frac{1+2 y+y^{2}}{y^{3}(2+y)}</script><h1 id="解题细节"><a href="#解题细节" class="headerlink" title="解题细节"></a>解题细节</h1><ul>
+\frac{x^{2}}{(x-1)^{3}(x+1)}=\frac{(1+y)^{2}}{y^{3}(2+y)}=\frac{1+2 y+y^{2}}{y^{3}(2+y)}</script><h2 id="例"><a href="#例" class="headerlink" title="例"></a>例</h2><script type="math/tex; mode=display">
+\int \frac{x^{5}-7 x^{4}+19 x^{3}-10 x^{2}-19 x+18}{x^{4}-5 x^{3}+9 x^{2}}  \text {d}x</script><p><img src="/2022/10/26/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E7%A7%AF%E5%88%86/image-20221113205224794.png" alt="image-20221113205224794"></p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\text{LHS}&=\int\left(x-2+\frac{8 x^{2}-19 x+18}{x^{4}-5 x^{3}+9 x^{2}}\right) \text {d}x\\
+&=\int\left(x-2-\frac8{x^2}+\frac{21x-54}{x^{4}-5 x^{3}+9 x^{2}}\right) \text {d}x\\
+
+\end{aligned}</script><script type="math/tex; mode=display">
+\frac{21x-54}{x^2(x^{2}-5 x+9 )}=\frac Cx
++\frac D{x^2}+\frac{Ax+B}{x^{2}-5 x+9 }\\
+\begin{aligned}
+&1.\times x^2,x\to0,D=-6\\
+&2.\times x,x\to \infty,A=-C\\
+&3.x=1,5C+5D+A+B=-33\\
+&4.x=-1,15D-15C+B-A=-75\\
+\end{aligned}\\
+\Rightarrow\begin{cases}
+A=1\\
+B=1\\C=-1\\D=-6
+\end{cases}\\
+\begin{aligned}
+\int\frac{21x-54}{x^{4}-5 x^{3}+9 x^{2}}\text {d}x=\int\left(\frac{x+1}{x^{2}-5 x+9}-\frac 1x
+-\frac 6{x^2}\right)\text{d}x
+
+\end{aligned}\\
+\frac{x+1}{x^{2}-5 x+9}=\frac12\left(\frac{2x-5+7}{x^{2}-5 x+9}\right)</script><script type="math/tex; mode=display">
+\int\frac{x+1}{x^{2}-5 x+9}\text{d}x=\frac12\left(\int\frac{\text{d}(x^{2}-5 x+9)}{x^{2}-5 x+9}+\int\frac{7\text{d}{\left(x-\frac52\right)}}{\left(x-\frac52\right)^2+\frac{11}4}\right)</script><p>所以答案为</p>
+<script type="math/tex; mode=display">
+\frac{x^{2}}{2}-2 x-\frac{2}{x}-\ln |x|+\frac{1}{2} \ln \left(x^{2}-5 x+9\right)+\frac{7}{\sqrt{11}} \tan ^{-1}\left(\frac{2 x-5}{\sqrt{11}}\right)+C</script><h1 id="解题细节"><a href="#解题细节" class="headerlink" title="解题细节"></a>解题细节</h1><ul>
 <li>先需要写出微分关系</li>
 <li>步骤无需太细微，在草稿纸上完成</li>
 <li>结果一定要用$x$来表示</li>
@@ -992,7 +1044,10 @@ J&=\int_V r^2\rho_0\text{d}V\\
 &=\rho_0\int_0^R\rho^4\int_0^{2\pi}\int_0^\pi\sin^3\mathrm{d}\theta\mathrm{d}\phi\mathrm{d}{\rho} \\
 &=\rho_0\int_0^R\rho^42\pi\frac43\mathrm{d}{\rho}=\frac{2mR^2}5
 
-\end{aligned}</script><h1 id="角动量守恒"><a href="#角动量守恒" class="headerlink" title="角动量守恒"></a>角动量守恒</h1><p>若$M=0$</p>
+\end{aligned}</script><h3 id="平行轴定理"><a href="#平行轴定理" class="headerlink" title="平行轴定理"></a>平行轴定理</h3><script type="math/tex; mode=display">
+J=J_c+md^2</script><h3 id="垂直轴定理"><a href="#垂直轴定理" class="headerlink" title="垂直轴定理"></a>垂直轴定理</h3><script type="math/tex; mode=display">
+I_z=I_x+I_y</script><p>利用对称性$(I_x=I_y)$，可以快速得到转动惯量</p>
+<h1 id="角动量守恒"><a href="#角动量守恒" class="headerlink" title="角动量守恒"></a>角动量守恒</h1><p>若$M=0$</p>
 <script type="math/tex; mode=display">
 J\omega=C</script><p>对于转轴来说</p>
 <ul>
