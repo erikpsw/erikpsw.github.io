@@ -1163,9 +1163,7 @@ f(x)=\cos x,\frac{\cos (\tan x)-\cos x}{\tan x-x}=f'(\xi),\xi\in(x,\tan  x)\\
 A=\left[\begin{array}{l} a_{11} &a_{12}&a_{13}\\a_{21} &a_{22}&a_{23}\end{array}\right]
 =\left[\begin{array}{l} 1 &2&3\\4&5&6\end{array}\right]</script><p>是一个$2\times3$的矩阵$A=(a_{ij})$其中$i=1,2;j=1,2,3$</p>
 <p>矩阵中第$i$行第$j$列的元素表示为$a_{ij}$(大写矩阵，小写元素)</p>
-<h2 id="转置"><a href="#转置" class="headerlink" title="转置"></a>转置</h2><p>交换$A$行和列获得的矩阵为$A$的转置$A^{\text T}$(第几行变为第几列)</p>
-<script type="math/tex; mode=display">
-A^{\text T}=\left[\begin{array}l 1&4\\2&5\\3&6\end{array}\right]</script><h2 id="向量"><a href="#向量" class="headerlink" title="向量"></a>向量</h2><p>向量是一维数组(1D ,如只有一行或一列)，如</p>
+<h2 id="向量"><a href="#向量" class="headerlink" title="向量"></a>向量</h2><p>向量是一维数组(1D ,如只有一行或一列)，如</p>
 <script type="math/tex; mode=display">
 x=\left(\begin{array}l 1\\2\\3\end{array}\right)</script><p>把长度为$n$的向量称为$n$向量，通常用小写字母来表示向量</p>
 <p>$x_i$表示向量中第$i$个元素</p>
@@ -1196,8 +1194,8 @@ u_{11} & u_{12} & u_{13} & \cdots & u_{1n} \\
 <script type="math/tex; mode=display">
 P=\begin{bmatrix}1&0&0\\0&0&1\\0&1&0\end{bmatrix}</script><h4 id="对称矩阵"><a href="#对称矩阵" class="headerlink" title="对称矩阵"></a>对称矩阵</h4><p>若矩阵$A$满足$A=A^{\text  T}$，则矩阵的元素关于对角线对称</p>
 <script type="math/tex; mode=display">
-\begin{bmatrix}1&2&3\\2&4&5\\3&5&6\end{bmatrix}</script><p>性质$a_{ij}=a_{ji}$</p>
-<p>反对称$a_{ij}=-a_{ji}$</p>
+\begin{bmatrix}1&2&3\\2&4&5\\3&5&6\end{bmatrix}</script><p>性质$a<em>{ij}=a</em>{ji}$</p>
+<p>反对称$a<em>{ij}=-a</em>{ji}$</p>
 <h2 id="矩阵的基本操作"><a href="#矩阵的基本操作" class="headerlink" title="矩阵的基本操作"></a>矩阵的基本操作</h2><h3 id="加法"><a href="#加法" class="headerlink" title="加法"></a>加法</h3><p>若矩阵$A,B$大小相同，则$C=A+B$为相同大小</p>
 <script type="math/tex; mode=display">
 c_{ij}=a_{ij}+b_{ij}</script><h4 id="数乘"><a href="#数乘" class="headerlink" title="数乘"></a>数乘</h4><script type="math/tex; mode=display">
@@ -1211,12 +1209,17 @@ c_{ij}=\sum_{k=1}^pa_{ik}b_{kj}(i=1,\cdots,m;j=1,\cdots,n)</script><p>矩阵乘�
 <script type="math/tex; mode=display">
 A(BC)=(AB)C\\
 A(B+C)=AB+AC</script><p>==$A,B,C$必须是相容的==</p>
-<h3 id="逆"><a href="#逆" class="headerlink" title="逆"></a>逆</h3><p>定义</p>
+<h3 id="转置"><a href="#转置" class="headerlink" title="转置"></a>转置</h3><p>交换$A$行和列获得的矩阵为$A$的转置$A^{\text T}$(第几行变为第几列)</p>
+<script type="math/tex; mode=display">
+A=\left[\begin{array}{l} 1 &2&3\\4&5&6\end{array}\right]
+\\
+A^{\text T}=\left[\begin{array}l 1&4\\2&5\\3&6\end{array}\right]</script><script type="math/tex; mode=display">
+(AB)^{\text T}=B^{\text T}A^{\text T}</script><h3 id="逆"><a href="#逆" class="headerlink" title="逆"></a>逆</h3><p>定义</p>
 <script type="math/tex; mode=display">
 AA^{-1}=I_n</script><p>若没有逆矩阵则称为奇异的</p>
 <p>对线性方程组$Mx=\alpha$，得</p>
 <script type="math/tex; mode=display">
-x=\alpha M^{-1}</script><p>对$M=\begin{bmatrix}a&amp;b\\c&amp;d\end{bmatrix}$</p>
+x=\alpha M^{-1}</script><p>对$M=\begin{bmatrix}a&amp;b\c&amp;d\end{bmatrix}$</p>
 <script type="math/tex; mode=display">
 \det M\ne0\\
 \Rightarrow M^{-1}=\begin{bmatrix}\frac d{ad-bc}&\frac {-b}{ad-bc}\\\frac {-c}{ad-bc}&\frac a{ad-bc}\end{bmatrix}</script><h1 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h1><h2 id="范数"><a href="#范数" class="headerlink" title="范数"></a>范数</h2><p>frobennius范数</p>
