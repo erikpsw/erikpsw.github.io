@@ -2815,7 +2815,13 @@ t=\tan \frac x2\\
 <p>上方为$u$下方为$v$，上方求导下方积分</p>
 <p>分部积分的$\displaystyle\int v\text{d}u$部分可保留后续可消去</p>
 <p>对于反三角函数或$\ln^2(x)$我们令$\text{d}x=\text{d}v$</p>
-<h1 id="有理函数的积分"><a href="#有理函数的积分" class="headerlink" title="有理函数的积分"></a>有理函数的积分</h1><p>利用多项式除法，总可以将一个假分式改写成一个多项式和一个真分式之和</p>
+<h2 id="积分的递推公式"><a href="#积分的递推公式" class="headerlink" title="积分的递推公式"></a>积分的递推公式</h2><p>我们可以通过分部积分来获得递推关系</p>
+<script type="math/tex; mode=display">
+I_n=\int\tan^nx\text{d}x
+\\
+I_{n}=\frac{1}{n-1} \tan ^{n-1}(x)-I_{n-2}</script><script type="math/tex; mode=display">
+I_n=\int\cos^nx\text{d}x\\
+I_{n}=\frac{n-1}nI_{n-2}</script><h1 id="有理函数的积分"><a href="#有理函数的积分" class="headerlink" title="有理函数的积分"></a>有理函数的积分</h1><p>利用多项式除法，总可以将一个假分式改写成一个多项式和一个真分式之和</p>
 <p>对于真分式，讨论分母</p>
 <p>如果分母中有因式$(x-a)^k$</p>
 <script type="math/tex; mode=display">
@@ -2900,6 +2906,119 @@ A=\sqrt{A_1^2+A_2^2+2A_1A_2\cos\Delta\varphi}\\
 <script type="math/tex; mode=display">
 T=\frac{2\pi}{\omega_{\text{raletive}}}=\frac{2\pi}{\omega_2-\omega_1}\\
 \nu=\frac1T=\nu_2-\nu_1</script><p>其中$\nu$称为拍频</p>
+<h2 id="相互垂直的简谐振动"><a href="#相互垂直的简谐振动" class="headerlink" title="相互垂直的简谐振动"></a>相互垂直的简谐振动</h2><p>振动$1$与$x$轴上，振动$2$于$y$轴上</p>
+<p>若$\varphi_2-\varphi_1=2k\pi$</p>
+<p>则$y=\frac{A_2}{A_1}x$为线振动</p>
+<p>若$\varphi_2-\varphi_1=(2k+1)\pi$</p>
+<p>则$y=-\frac{A_2}{A_1}x$为线振动</p>
+<p>若$\varphi_2-\varphi_1=\pm\frac\pi2$</p>
+<script type="math/tex; mode=display">
+\frac{x^2}{A_1^2}+\frac{x^2}{A_1^2}=1</script><h1 id="振动的分解"><a href="#振动的分解" class="headerlink" title="振动的分解"></a>振动的分解</h1><p>利用傅里叶变换可将一个角频率为$\omega$的振动分解为</p>
+<script type="math/tex; mode=display">
+f(t)=A_0+\sum_{n=1}^\infty{A_n\cos(n\omega t+\varphi_n)}</script><p>$\omega$称为基频，$n\omega$称为$n$次谐频</p>
+<h1 id="阻尼振动"><a href="#阻尼振动" class="headerlink" title="阻尼振动"></a>阻尼振动</h1><script type="math/tex; mode=display">
+m\frac{\text{d}^2x}{\text{d}t^2}=-kx-\gamma\frac{\text{d}x}{\text{d}t}</script><p> 令$\omega_0^2=\frac km,2\beta=\frac\gamma m$</p>
+<script type="math/tex; mode=display">
+\frac{\text{d}^2x}{\text{d}t^2}+2\beta\frac{\text{d}x}{\text{d}t}+\omega_0^2x=0</script><p>则为阻尼振动</p>
+<h2 id="小阻尼"><a href="#小阻尼" class="headerlink" title="小阻尼"></a>小阻尼</h2><p><img src="/2022/11/12/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E6%8C%AF%E5%8A%A8/Damped_Free_Vibration.png" alt="Damped_Free_Vibration"></p>
+<script type="math/tex; mode=display">
+x=A_0e^{-\beta t}\cos(\sqrt{\omega_0^2-\beta^2}t+\varphi_0)</script><p>阻尼振动的周期比固有周期要长</p>
+<h2 id="大阻尼"><a href="#大阻尼" class="headerlink" title="大阻尼"></a>大阻尼</h2><script type="math/tex; mode=display">
+\beta>\omega_0</script><p>不能完成一个周期运动，将缓慢移到平衡位置</p>
+<h2 id="临界阻尼"><a href="#临界阻尼" class="headerlink" title="临界阻尼"></a>临界阻尼</h2><p>物体从运动到静止在平衡位置所需时间最短</p>
+<h1 id="受迫振动"><a href="#受迫振动" class="headerlink" title="受迫振动"></a>受迫振动</h1><script type="math/tex; mode=display">
+F=F_0\cos\omega t</script><p>小阻尼下受迫振动为阻尼振动和简谐振动的叠加</p>
+<p>稳定后振动的表达式为</p>
+<script type="math/tex; mode=display">
+x=A\cos(\omega t+\varphi)</script><p>角频率和驱动力频率相等</p>
+<h2 id="共振"><a href="#共振" class="headerlink" title="共振"></a>共振</h2><p><img src="/2022/11/12/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E6%8C%AF%E5%8A%A8/Resonance.png" alt="Resonance"></p>
+<p>当驱动力频率为共振频率时，受迫振动的振幅达到峰值</p>
+<script type="math/tex; mode=display">
+\omega_r=\sqrt{\omega_0^2-2\beta^2}\\
+A_r=\frac{f_0}{2\beta\sqrt{\omega_0^2-\beta^2}}</script><p>若阻尼很小，则振幅趋于无穷大</p>
+<p>当$\omega=\omega_0$时，速度振幅达到最大，称为速度共振</p>
+<h1 id="机械波"><a href="#机械波" class="headerlink" title="机械波"></a>机械波</h1><p>自然界存在两种波</p>
+<p>机械波只有在弹性介质中才能传播，如声波，水波</p>
+<p>电磁波可在真空中传播</p>
+<p>产生波一要有波源，二要有弹性介质</p>
+<h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><p>横波振动方向和波传播方向垂直</p>
+<p>纵波振动方向和波传播方向平行</p>
+<p><img src="振动/src=http___www.51wendang.com_pic_598f43df01d675224be5eb02_2-810-jpg_6-1080-0-0-1080.jpg&amp;refer=http___www.51wendang.webp" alt="src=http___www.51wendang.com_pic_598f43df01d675224be5eb02_2-810-jpg_6-1080-0-0-1080.jpg&amp;refer=http___www.51wendang"></p>
+<p>波速时振动在介质中的传播速度</p>
+<script type="math/tex; mode=display">
+u=\frac{\lambda}T</script><h2 id="平面简谐波"><a href="#平面简谐波" class="headerlink" title="平面简谐波"></a>平面简谐波</h2><script type="math/tex; mode=display">
+\begin{aligned}y(x,t)&=A\cos\left[\omega\left(t-\frac x u\right)+\varphi_0\right]\\
+&=A\cos\left(\omega t-\frac{2\pi x }\lambda +\varphi_0\right)\\
+&=A\cos\left[2\pi\left(\frac tT-\frac x u\right)+\varphi_0\right]\\
+\end{aligned}</script><p>$\Delta t$时间内，整个波向传播方向移动了$u\Delta t$的距离</p>
+<p>这种在空间内行进的波称为行波</p>
+<p>若不在原点，将$x$换为$x-x_0$</p>
+<p>若沿反方向则对称，$x$换为$-x$</p>
+<h2 id="波的能量"><a href="#波的能量" class="headerlink" title="波的能量"></a>波的能量</h2><script type="math/tex; mode=display">
+\text{d}E_k=\text{d}E_p=\frac12\rho A^2\omega^2\sin^2\omega\left(t-\frac x u\right)\text{d}V\\
+\text{d}E=\rho A^2\omega^2\sin^2\omega\left(t-\frac x u\right)\text{d}V</script><p>波的传播过程中，动能和势能变化完全同步</p>
+<p>引入能量密度</p>
+<script type="math/tex; mode=display">
+w=\frac{\text{d}E}{\text{d}V}=\rho A^2\omega^2\sin^2\omega\left(t-\frac x u\right)\\
+\overline{w}=\frac12\rho A^2\omega^2\propto  A^2</script><p>平均能流为单位时间内垂直通过某一面积的平均能量</p>
+<script type="math/tex; mode=display">
+\overline{P}=\overline{w}uS=\frac12\rho A^2\omega^2uS</script><p>单位时间内垂直通过单位面积的平均能量称为流能密度或波的强度</p>
+<script type="math/tex; mode=display">
+I=\frac{\overline{P}}S=\frac12\rho A^2\omega^2u</script><h2 id="声波"><a href="#声波" class="headerlink" title="声波"></a>声波</h2><h3 id="声压"><a href="#声压" class="headerlink" title="声压"></a>声压</h3><script type="math/tex; mode=display">
+p=\rho uv</script><p>声压和速度成正比，故和时间空间作周期性变化</p>
+<p>我们把$Z=\rho u$称为特征阻抗</p>
+<p>阻抗大的为波密介质，反之为波疏介质</p>
+<h3 id="声强"><a href="#声强" class="headerlink" title="声强"></a>声强</h3><script type="math/tex; mode=display">
+I=\frac{\overline{P}}S=\frac12\rho A^2\omega^2u</script><p>又因为$p<em>\text{m}=\rho uv</em>{\text{m}}=\rho u\omega A$所以</p>
+<script type="math/tex; mode=display">
+I=\frac12\frac{p_\text{m}}{\rho u}</script><p>对于人耳对声音的主观感受，引入声强级的概念</p>
+<script type="math/tex; mode=display">
+L=\lg \frac I{I_0}</script><p>其中$I_0$为标准声强，单位为贝尔、</p>
+<p>贝尔单位较大，用常用分贝来表示</p>
+<script type="math/tex; mode=display">
+L=10\lg \frac I{I_0}\quad (\text{dB})</script><h1 id="波的干涉"><a href="#波的干涉" class="headerlink" title="波的干涉"></a>波的干涉</h1><p>波有叠加原理，可以单独看每一个波，波之间不会相互影响</p>
+<p>但任一质元的振动是叠加之后的结果</p>
+<p>对于频率，振动方向相同的两列波，称之为相干波</p>
+<p>对于一点$P$距离两个波源的距离分别为$r_1,r_2$</p>
+<script type="math/tex; mode=display">
+y_{1P}=A_1\cos\left(\omega t+\varphi_1-\frac{2\pi r_1}\lambda\right)\\
+y_{2P}=A_2\cos\left(\omega t+\varphi_2-\frac{2\pi r_2}\lambda\right)</script><p>由简谐振动的合成规律知</p>
+<script type="math/tex; mode=display">
+A=\sqrt{A_1^2+A_2^2+2A_1A_2\cos\left[(\varphi_2-\varphi_1)-\frac{2\pi (r_2-r_1)}\lambda\right]}\\
+\tan\varphi=\frac{A_1\sin\left(\varphi_1-\frac{2\pi r_1}\lambda\right)+A_2\sin\left(\varphi_2-\frac{2\pi r_2}\lambda\right)}{A_1\cos\left(\varphi_1-\frac{2\pi r_1}\lambda\right)+A_2\cos\left(\varphi_2-\frac{2\pi r_2}\lambda\right)}</script><p>又因为$I\propto  A^2$</p>
+<script type="math/tex; mode=display">
+I=I_1+I_2+2\sqrt{I_1I_2}\cos\Delta\varphi</script><p>相位差</p>
+<script type="math/tex; mode=display">
+\Delta\varphi=(\varphi_2-\varphi_1)-\frac{2\pi (r_2-r_1)}\lambda</script><p>若</p>
+<script type="math/tex; mode=display">
+\Delta\varphi=2k\pi</script><p>则称这些点为干涉相长点</p>
+<script type="math/tex; mode=display">
+A_{\text{max}}=A_1+A_2\\
+I_{\text{max}}=I_1+I_2+2\sqrt{I_1I_2}</script><p>因为干涉相消而引起振幅和强度减小</p>
+<script type="math/tex; mode=display">
+\Delta\varphi=(2k+1)\pi</script><p>若$\varphi_2=\varphi_1$</p>
+<p>则干涉条件可简化为</p>
+<script type="math/tex; mode=display">
+\delta=r_2-r_1=\begin{cases}\pm k\lambda,A_{\text{max}}=A_1+A_2\\
+\pm \frac12(2k+1)\lambda,A_{\text{max}}=|A_1-A_2|\end{cases}</script><h1 id="驻波"><a href="#驻波" class="headerlink" title="驻波"></a>驻波</h1><p>两列相干波在同一直线上沿相反方向传播时叠加形成的</p>
+<script type="math/tex; mode=display">
+y_{1}=A\cos\left(\omega t-\frac{2\pi x}\lambda\right)\\
+y_{2}=A\cos\left(\omega t+\frac{2\pi x}\lambda\right)</script><p>由和差化积公式</p>
+<script type="math/tex; mode=display">
+\cos\alpha+\cos\beta=2\cos\frac{\alpha+\beta}2\cos\frac{\alpha-\beta}2</script><p>有</p>
+<script type="math/tex; mode=display">
+y=y_1+y_2=2A\cos\left(\frac{2\pi x}\lambda\right)\cos\omega t</script><p>上式被称为驻波方程</p>
+<h2 id="特殊位置"><a href="#特殊位置" class="headerlink" title="特殊位置"></a>特殊位置</h2><script type="math/tex; mode=display">
+\left|\cos\frac{2\pi x}\lambda\right|=1\Rightarrow x= k\frac\lambda2</script><p>振幅最大，称为波腹</p>
+<script type="math/tex; mode=display">
+\left|\cos\frac{2\pi x}\lambda\right|=0\Rightarrow x= (2k+1)\frac\lambda4</script><p>振幅为$0$，称为波节</p>
+<h1 id="惠更斯原理"><a href="#惠更斯原理" class="headerlink" title="惠更斯原理"></a>惠更斯原理</h1><p>波面上任意一点都可看作子波的波源</p>
+<p><img src="/2022/11/12/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E6%8C%AF%E5%8A%A8/Resonance-1668694783853.png" alt="Resonance"></p>
+<h1 id="多普勒效应"><a href="#多普勒效应" class="headerlink" title="多普勒效应"></a>多普勒效应</h1><script type="math/tex; mode=display">
+\nu'=\frac{u+v_o}{u-v_s}\nu</script><p> 其中$v_o$为观察者的速度，$v_s$为波源的速度，相向为正</p>
+<h2 id="马赫锥"><a href="#马赫锥" class="headerlink" title="马赫锥"></a>马赫锥</h2><p><img src="/2022/11/12/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E6%8C%AF%E5%8A%A8/machang.png" alt="machang"></p>
+<script type="math/tex; mode=display">
+\sin\theta=\frac{ut}{v_st}=\frac1{Ma}</script><p>马赫数即为几倍声速</p>
 ]]></content>
   </entry>
 </search>
