@@ -2969,8 +2969,8 @@ p=\rho uv</script><p>声压和速度成正比，故和时间空间作周期性�
 <p>我们把$Z=\rho u$称为特征阻抗</p>
 <p>阻抗大的为波密介质，反之为波疏介质</p>
 <h3 id="声强"><a href="#声强" class="headerlink" title="声强"></a>声强</h3><script type="math/tex; mode=display">
-I=\frac{\overline{P}}S=\frac12\rho A^2\omega^2u</script><p>又因为$p<em>\text{m}=\rho uv</em>{\text{m}}=\rho u\omega A$所以</p>
-<script type="math/tex; mode=display">
+I=\frac{\overline{P}}S=\frac12\rho A^2\omega^2u</script><script type="math/tex; mode=display">
+p_{\text{m}}=\rho uv_{\text{m}}=\rho u\omega A\\
 I=\frac12\frac{p_\text{m}}{\rho u}</script><p>对于人耳对声音的主观感受，引入声强级的概念</p>
 <script type="math/tex; mode=display">
 L=\lg \frac I{I_0}</script><p>其中$I_0$为标准声强，单位为贝尔、</p>
