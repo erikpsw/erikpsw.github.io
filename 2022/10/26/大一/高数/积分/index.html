@@ -104,7 +104,7 @@
 <meta property="og:image" content="http://yoursite.com/2022/10/26/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E7%A7%AF%E5%88%86/v2-d973f58ff2f40755701eafa41902b221_r.png">
 <meta property="og:image" content="http://yoursite.com/2022/10/26/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E7%A7%AF%E5%88%86/image-20221113205224794.png">
 <meta property="article:published_time" content="2022-10-26T06:38:53.793Z">
-<meta property="article:modified_time" content="2022-11-14T06:17:34.573Z">
+<meta property="article:modified_time" content="2022-11-19T12:49:25.241Z">
 <meta property="article:author" content="Shiwei Pan">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/2022/10/26/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E7%A7%AF%E5%88%86/v2-d973f58ff2f40755701eafa41902b221_r.png">
@@ -468,6 +468,61 @@ B=1\\C=-1\\D=-6
 <li>结果一定要用$x$来表示</li>
 <li>不定积分一定需要加常数$C$</li>
 </ul>
+<h1 id="定积分"><a href="#定积分" class="headerlink" title="定积分"></a>定积分</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><script type="math/tex; mode=display">
+\int_{a}^{b} f(x) \text{d} x=\lim _{\text {mesh } \rightarrow 0} \sum_{j=1}^{n} f\left(\xi_{j}\right)\left(x_{j}-x_{j-1}\right)\\
+a=x_0<x_1<\cdots<x_{n-1}<x_n=b,\\
+\xi_j\in[x_{j-1},x_{j}]</script><p>特别的，若对于$[0,1]$上的积分，有</p>
+<script type="math/tex; mode=display">
+\int_0^1f(x)\text{d} x=\lim _{n \rightarrow +\infty} \sum_{j=1}^{n} f\left(\frac{j}n\right)\frac1n</script><p>此公式常用于求极限</p>
+<p>定积分的几何意义是图线围成的有向面积$(\text{signed area})$</p>
+<p>连续必可积，若有界且只有有限个间断点也可积</p>
+<h2 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h2><script type="math/tex; mode=display">
+\int_{b}^{a} f(x) \text{d} x=-\int_{a}^{b} f(x) \text{d}x\\</script><p> 交换上下限，结果相反</p>
+<script type="math/tex; mode=display">
+\int_{a}^{b} f(x) \text{d} x=\int_{a}^{c} f(x) \text{d} x+\int_{c}^{b} f(x) \text{d} x</script><p>定积分的可加性</p>
+<script type="math/tex; mode=display">
+\int_a^af(x)\text{d}x=0</script><p>一条线的面积为$0$</p>
+<script type="math/tex; mode=display">
+\int_{a}^{b}(\lambda f(x)+\mu g(x)) \text{d} x=\lambda\int_{a}^{b} f(x) \text{d} x+\mu\int_{a}^{b} g(x) \text{d} x</script><p>定积分的线性性质</p>
+<script type="math/tex; mode=display">
+S=\int_{a}^{b}| f(x)- g(x)| \text{d} x</script><p>$f(x)$和$g(x)$之间围成的面积</p>
+<script type="math/tex; mode=display">
+f(x)\le g(x)(x\in[a,b])\Rightarrow
+\int_{b}^{a} f(x) \text{d} x\le\int_{a}^{b} g(x) \text{d}x\\</script><p>定积分的估值定理</p>
+<script type="math/tex; mode=display">
+m\le f(x)\le M(x\in[a,b])\Rightarrow\\
+m(b-a)\le\int_{b}^{a} f(x) \text{d} x\le M(b-a)</script><p>积分中值定理</p>
+<script type="math/tex; mode=display">
+\exists \xi\in(a,b )\quad \text{s.t.}\quad \int_{b}^{a} f(x) \text{d} x=f(\xi)(b-a)</script><p>保号性</p>
+<script type="math/tex; mode=display">
+\text{if} \quad f(x)\ge0,\exists\xi\in[a,b],f(\xi)\ne0\\
+\Rightarrow\int_{b}^{a} f(x) \text{d} x>0</script><p>绝对值不等式</p>
+<script type="math/tex; mode=display">
+\left|\int_{b}^{a} f(x) \text{d} x\right|\le\int_{b}^{a} |f(x)| \text{d} x(a<b)</script><h2 id="第一基本定理"><a href="#第一基本定理" class="headerlink" title="第一基本定理"></a>第一基本定理</h2><script type="math/tex; mode=display">
+f\in C[a,b]\\
+F(x)=\int_{x}^{a} f(t) \text{d} t</script><p>则函数$F(x)$可导且满足</p>
+<script type="math/tex; mode=display">
+F'(x)=f(x)</script><p>我们称$F(x)$为积分上限函数(原函数中的一个)</p>
+<h2 id="第二基本定理"><a href="#第二基本定理" class="headerlink" title="第二基本定理"></a>第二基本定理</h2><script type="math/tex; mode=display">
+\text{Newto n-Leibniz formula}   \\ \int_a^bf(x)\mathrm dx =\left[F(x)\right]^b_a=F(b)-F(a)</script><p>这个公式给出了定积分的一般计算方法，具有普遍意义</p>
+<p>由此我们知道定积分和不定积分有着密切联系</p>
+<script type="math/tex; mode=display">
+\frac{\text{d}}{\text{d}x}F(x)=f(x)\Leftrightarrow\int f(x)\text{d}x=F(x)+C</script><p>从而推知分部积分和换元积分在定积分中都可以使用</p>
+<h2 id="特殊性质"><a href="#特殊性质" class="headerlink" title="特殊性质"></a>特殊性质</h2><p>奇函数</p>
+<script type="math/tex; mode=display">
+f(x)=-f(-x)\Rightarrow\\
+\int_{-a}^af(x)\mathrm dx=0</script><p>奇函数在对称区间上的积分为$0$</p>
+<p>偶函数</p>
+<script type="math/tex; mode=display">
+f(x)=f(-x)\Rightarrow\\
+\int_{-a}^af(x)\mathrm dx=2\int_{0}^af(x)\mathrm dx</script><h3 id="三角函数"><a href="#三角函数" class="headerlink" title="三角函数"></a>三角函数</h3><script type="math/tex; mode=display">
+\int_{0}^{\frac\pi2}\sin x\mathrm dx=\int_{0}^{\frac\pi2}\cos x\mathrm dx=1</script><script type="math/tex; mode=display">
+\int_{0}^{\frac\pi2}f(\sin x)\mathrm dx=\int_{0}^{\frac\pi2}f(\cos x)\mathrm dx</script><script type="math/tex; mode=display">
+\int_{0}^{\pi}xf(\sin x)\mathrm dx=\pi\int_{0}^{\frac\pi2}f(\sin x)\mathrm dx=\frac\pi2\int_{0}^{\pi}f(\sin x)\mathrm dx</script><script type="math/tex; mode=display">
+\int_{0}^{\frac\pi2}\sin^n x\mathrm dx=\int_{0}^{\frac\pi2}\cos^n x\mathrm dx\\=\begin{cases}\frac{(n-1)\cdot (n-3)\cdots3\cdot1}{n(n-2)\cdots4\cdot2}\times\frac\pi2,n=2k\\
+\frac{(n-1)\cdot (n-3)\cdots4\cdot2}{n(n-2)\cdots5\cdot3}\times1,n=2k+1
+\end{cases}</script><h3 id="周期函数"><a href="#周期函数" class="headerlink" title="周期函数"></a>周期函数</h3><script type="math/tex; mode=display">
+\int_{a}^{a+T}f(x)\mathrm dx=\int_{0}^Tf(x)\mathrm dx</script><p>积分值和$a$的选取无关</p>
 
       
     </div>
@@ -675,7 +730,7 @@ B=1\\C=-1\\D=-6
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#原函数和不定积分"><span class="nav-number">1.</span> <span class="nav-text">原函数和不定积分</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#原函数"><span class="nav-number">1.1.</span> <span class="nav-text">原函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不定积分"><span class="nav-number">1.2.</span> <span class="nav-text">不定积分</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第一类换元法"><span class="nav-number">2.</span> <span class="nav-text">第一类换元法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#根式有理函数"><span class="nav-number">2.1.</span> <span class="nav-text">根式有理函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#欧拉代换"><span class="nav-number">2.2.</span> <span class="nav-text">欧拉代换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组合积分法"><span class="nav-number">2.3.</span> <span class="nav-text">组合积分法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第二类换元法"><span class="nav-number">3.</span> <span class="nav-text">第二类换元法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用代换"><span class="nav-number">3.1.</span> <span class="nav-text">常用代换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#万能代换"><span class="nav-number">3.1.1.</span> <span class="nav-text">万能代换</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分部积分法"><span class="nav-number">4.</span> <span class="nav-text">分部积分法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#表格法"><span class="nav-number">4.1.</span> <span class="nav-text">表格法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#积分的递推公式"><span class="nav-number">4.2.</span> <span class="nav-text">积分的递推公式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#有理函数的积分"><span class="nav-number">5.</span> <span class="nav-text">有理函数的积分</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#例"><span class="nav-number">5.1.</span> <span class="nav-text">例</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解题细节"><span class="nav-number">6.</span> <span class="nav-text">解题细节</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#原函数和不定积分"><span class="nav-number">1.</span> <span class="nav-text">原函数和不定积分</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#原函数"><span class="nav-number">1.1.</span> <span class="nav-text">原函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不定积分"><span class="nav-number">1.2.</span> <span class="nav-text">不定积分</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第一类换元法"><span class="nav-number">2.</span> <span class="nav-text">第一类换元法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#根式有理函数"><span class="nav-number">2.1.</span> <span class="nav-text">根式有理函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#欧拉代换"><span class="nav-number">2.2.</span> <span class="nav-text">欧拉代换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组合积分法"><span class="nav-number">2.3.</span> <span class="nav-text">组合积分法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第二类换元法"><span class="nav-number">3.</span> <span class="nav-text">第二类换元法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用代换"><span class="nav-number">3.1.</span> <span class="nav-text">常用代换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#万能代换"><span class="nav-number">3.1.1.</span> <span class="nav-text">万能代换</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分部积分法"><span class="nav-number">4.</span> <span class="nav-text">分部积分法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#表格法"><span class="nav-number">4.1.</span> <span class="nav-text">表格法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#积分的递推公式"><span class="nav-number">4.2.</span> <span class="nav-text">积分的递推公式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#有理函数的积分"><span class="nav-number">5.</span> <span class="nav-text">有理函数的积分</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#例"><span class="nav-number">5.1.</span> <span class="nav-text">例</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解题细节"><span class="nav-number">6.</span> <span class="nav-text">解题细节</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#定积分"><span class="nav-number">7.</span> <span class="nav-text">定积分</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义"><span class="nav-number">7.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#性质"><span class="nav-number">7.2.</span> <span class="nav-text">性质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第一基本定理"><span class="nav-number">7.3.</span> <span class="nav-text">第一基本定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二基本定理"><span class="nav-number">7.4.</span> <span class="nav-text">第二基本定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特殊性质"><span class="nav-number">7.5.</span> <span class="nav-text">特殊性质</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#三角函数"><span class="nav-number">7.5.1.</span> <span class="nav-text">三角函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#周期函数"><span class="nav-number">7.5.2.</span> <span class="nav-text">周期函数</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
