@@ -311,6 +311,218 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/09/29/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%BE%AE%E5%88%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/09/29/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%BE%AE%E5%88%86/" itemprop="url">大一/高数/微分</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-09-29T16:25:30+08:00">
+                2022-09-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="微分的概念"><a href="#微分的概念" class="headerlink" title="微分的概念"></a>微分的概念</h1><p>函数值的变化量</p>
+<script type="math/tex; mode=display">
+\Delta y=f(x_0+\Delta x)-f(x_0)</script><p>对于复杂函数，$\Delta y$比较复杂</p>
+<p>故我们将变化量线性化，定义为微分</p>
+<p>若函数在某邻域有定义</p>
+<p>$\Delta y=A\Delta x+o(\Delta x),\Delta x\to0$</p>
+<p>则称$f(x)$在该领域可微，$\Delta y$的线性主部$A\Delta x$</p>
+<p>为函数的微分，记为$\text{d} y|_{x=x_0}(\Delta x=\text{d} x)$</p>
+<h2 id="与导数的关系"><a href="#与导数的关系" class="headerlink" title="与导数的关系"></a>与导数的关系</h2><p>可导$\Leftrightarrow$可微$\Rightarrow A=f’(x_0)$</p>
+<h2 id="微分形式不变性"><a href="#微分形式不变性" class="headerlink" title="微分形式不变性"></a>微分形式不变性</h2><script type="math/tex; mode=display">
+\text{d} y=f'(u)\text{d} u</script><p>不论$u$是自变量还是函数都成立</p>
+<h1 id="微分中值定理"><a href="#微分中值定理" class="headerlink" title="微分中值定理"></a>微分中值定理</h1><h2 id="费马引理"><a href="#费马引理" class="headerlink" title="费马引理"></a>费马引理</h2><p>若函数在某邻域$U(x_0)$有定义，且在$x_0$处可导，则若对于任意$x\in U(x_0)$，有 $f(x)\le f(x_0)$</p>
+<script type="math/tex; mode=display">
+\Rightarrow f'(x_0)=0</script><p>利用极限的保号性和夹逼</p>
+<h2 id="罗尔定理"><a href="#罗尔定理" class="headerlink" title="罗尔定理"></a>罗尔定理</h2><p>若函数在闭区间$[a,b]$上连续，在开区间$(a,b)$上可导</p>
+<p>若有$f(a)=f(b)$则</p>
+<script type="math/tex; mode=display">
+\exists \xi\in(a,b)\quad\text{s.t.}f(\xi)=0</script><h2 id="拉格朗日中值定理"><a href="#拉格朗日中值定理" class="headerlink" title="拉格朗日中值定理"></a>拉格朗日中值定理</h2><p>若函数在闭区间$[a,b]$上连续，在开区间$(a,b)$上可导</p>
+<p>则有</p>
+<script type="math/tex; mode=display">
+\exists \xi\in(a,b)\quad\text{s.t.}f'(\xi)=\frac {f(b)-f(a)}{b-a}</script><h3 id="有限增量定理"><a href="#有限增量定理" class="headerlink" title="有限增量定理"></a>有限增量定理</h3><p>若函数在闭区间$[x,x+\Delta x]$上连续，在开区间$(x,x+\Delta x)$上可导，则</p>
+<script type="math/tex; mode=display">
+\exists \xi\in(a,b)\\ \text{s.t.}f'(x+\theta \Delta x)\Delta x=f(x+\Delta x)-f(x)</script><h3 id="推论"><a href="#推论" class="headerlink" title="推论"></a>推论</h3><p>若$f(x)$在区间$I$上的导数恒为$0$，则在该区间上为常函数</p>
+<h2 id="柯西中值定理"><a href="#柯西中值定理" class="headerlink" title="柯西中值定理"></a>柯西中值定理</h2><p>若函数$f(x),g(x)$在闭区间$[a,b]$上连续，在开区间$(a,b)$上可导，且$g’(x)\ne0$</p>
+<p>则有</p>
+<script type="math/tex; mode=display">
+\exists \xi\in(a,b)\\ \text{s.t.} 
+\frac{f'(\xi)}{g'(\xi)}=\frac {f(b)-f(a)}{g(b)-g(a)}</script><h3 id="达布中值定理"><a href="#达布中值定理" class="headerlink" title="达布中值定理"></a>达布中值定理</h3><p>$f(x)$在$[a,b]$上连续</p>
+<p>则导函数具有介值性，即可以取到$f’(a)$和$f’(b)$之间的一切值</p>
+<p>同时导函数不具有第一类间断点3</p>
+<h1 id="泰勒公式"><a href="#泰勒公式" class="headerlink" title="泰勒公式"></a>泰勒公式</h1><p>若函数$f(x)$在$I=(a,b),x_0\in I$处有$n(n\ge1)$阶导数，则</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+f(x)&= f\left(x_{0}\right)+\frac{f^{\prime}\left(x_{0}\right)}{1 !}\left(x-x_{0}\right)+\frac{f^{\prime \prime}\left(x_{0}\right)}{2 !}\left(x-x_{0}\right)^{2}+\cdots \\
+&+\frac{f^{(n)}\left(x_{0}\right)}{n !}\left(x-x_{0}\right)^{n}+o\left(\left(x-x_{0}\right)^{n}\right)\\
+&=\sum_{i=0}^n\frac{f^{(n)}\left(x_{0}\right)}{n !}\left(x-x_{0}\right)^{n}+o\left(\left(x-x_{0}\right)^{n}\right)
+\end{aligned}</script><p>$ o\left(\left(x-x_{0}\right)^{n}\right) $为佩亚诺余项，在某邻域上使用</p>
+<h2 id="泰勒中值定理"><a href="#泰勒中值定理" class="headerlink" title="泰勒中值定理"></a>泰勒中值定理</h2><p>若函数$f(x)$在$I=(a,b),x_0\in I$处有$n+4(n\ge1)$阶导数，则</p>
+<script type="math/tex; mode=display">
+f(x)=\sum_{i=0}^n\frac{f^{(n)}\left(x_{0}\right)}{n !}\left(x-x_{0}\right)^{n}+R_n(x)\\
+R_n(x)=\frac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)^{n+1}\\
+\xi \in(x_0,x)</script><p> $R_n(x)$称为拉格朗日余项，在区间上使用</p>
+<h3 id="麦克劳林公式"><a href="#麦克劳林公式" class="headerlink" title="麦克劳林公式"></a>麦克劳林公式</h3><p>若$x_0=0,\xi =\theta x$</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+f(x)&=f(0)+f^{\prime}(0) x+\frac{f^{\prime \prime}(0)}{2 !} x^{2}+ \\
+\quad &\cdots+\frac{f^{(n)}(0)}{n !} x^{n}+\frac{f^{(n+1)}(\theta x)}{(n+1) !} x^{n+1} \quad(0<\theta<1) .
+\end{aligned}</script><p>$|f^{(n+1)}(\xi)|\le M$则有</p>
+<script type="math/tex; mode=display">
+|R_n(x)|\le\frac{M}{(n+1)!}|x|^{n+1}</script><p>例</p>
+<script type="math/tex; mode=display">
+e^x=1+x+\frac1{2!}x^2+\cdots+\frac{e^{\theta x}}{(n+1)!}|x|^{n+1}</script><h3 id="常用"><a href="#常用" class="headerlink" title="常用"></a>常用</h3><script type="math/tex; mode=display">
+\sin x = x - \frac{1}{3!} x^3 + \frac{1}{5!} x^5 - \frac{1}{7!} x^7 \ldots
+\qquad (x \in \mathbb R)\\
+\cos x = 1 - \frac{1}{2!} x^2 + \frac{1}{4!} x^4 -\frac{1}{6!} x^6 \ldots
+\qquad (x \in \mathbb R)\\
+\mathrm{e} ^x =1 + x + \frac{1}{2!} x^2 + \frac{1}{3!} x^3  \ldots
+\qquad (x \in \mathbb R)\\
+\ln\left(1+x\right)  = x - \frac12 x^2 + \frac13 x^3 - \frac14 x^4 \ldots
+\qquad (-1 < x < 1)\\
+\frac{1}{1 \pm x} = 1 \mp x + x^2 \mp x^3 + x^4 \ldots
+\qquad (-1 < x < 1)\\
+\sqrt{1\pm x} = 1 \pm \frac12 x - \frac18 x^2 \pm \frac{1}{16} x^3 - \frac{5}{128}x^4 \ldots
+\qquad (-1 < x < 1)\\
+(1+x)^\alpha=1+\alpha x+\frac{\alpha(\alpha-1)}2 x^2+\cdots+\frac{\alpha(\alpha-1)\cdots(\alpha-n+1)}{n!}x^n\ldots</script><p>拓展</p>
+<script type="math/tex; mode=display">
+\frac1{1+x^2}=\sum_{i=0}^n(-1)^ix^{2i}+o(x^{2n+1})\\
+\begin{aligned}
+\arctan x&=\sum_{i=0}^{2n}\frac{f ^{(i)}(0)}
+{i!}x^{i}\\&=\sum_{i=0}^n\frac{1}{(2i+1)!}\left.\left(\frac1{x^2+1}\right)^{(2i)}\right|_{x=0}x^{2i+1}\\
+\\&=\int \frac1{1+x^2}\text{d}x\\
+&=\sum_{i=0}^n\frac{(-1)^i}{2i+1} x^{2i+1}+ o(x^{2n+1})\end{aligned}</script><p>泰勒展开没有普遍规律，但关键看余项的阶数，能够消掉余项就行</p>
+<p>分式先看哪个好确定阶数，再上下同阶x</p>
+<h1 id="洛必达法则"><a href="#洛必达法则" class="headerlink" title="洛必达法则"></a>洛必达法则</h1><h2 id="frac00-型"><a href="#frac00-型" class="headerlink" title="$\frac00$型"></a>$\frac00$型</h2><ul>
+<li><script type="math/tex; mode=display">
+\lim _{x \rightarrow a} f(x)=\lim _{x \rightarrow a} g(x)=0</script></li>
+<li><script type="math/tex; mode=display">
+g^{\prime}(x) \neq 0, \forall x \in \mathring{U}(a, \delta),f(x),g(x)可导</script></li>
+<li><script type="math/tex; mode=display">
+\lim _{x \rightarrow a} \frac{f^{\prime}(x)}{g^{\prime}(x)}=l(l \text { 为有限数或 } \pm \infty)</script></li>
+</ul>
+<script type="math/tex; mode=display">
+\lim _{x \rightarrow a} \frac{f(x)}{g(x)}=\lim _{x \rightarrow a} \frac{f^{\prime}(x)}{g^{\prime}(x)}=l</script><p> 洛必达法则为后验的，上下求导极限不存在而不能说明原极限不存在</p>
+<h2 id="frac-infty-infty-型"><a href="#frac-infty-infty-型" class="headerlink" title="$\frac\infty\infty$型"></a>$\frac\infty\infty$型</h2><ul>
+<li><script type="math/tex; mode=display">
+\lim _{x \rightarrow a} f(x)=\lim _{x \rightarrow a} g(x)=\infty</script></li>
+<li><script type="math/tex; mode=display">
+g^{\prime}(x) \neq 0,\forall x \in \mathring{U}(a, \delta),f(x),g(x)可导</script></li>
+<li><script type="math/tex; mode=display">
+\lim _{x \rightarrow a} \frac{f^{\prime}(x)}{g^{\prime}(x)}=l(l \text { 为有限数或 } \pm \infty)</script><script type="math/tex; mode=display">
+\lim _{x \rightarrow a} \frac{f(x)}{g(x)}=\lim _{x \rightarrow a} \frac{f^{\prime}(x)}{g^{\prime}(x)}=l</script></li>
+</ul>
+<p>其他类型同样可以通过化简变形可转化为上面两类</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/09/24/%E5%A4%A7%E4%B8%80/%E6%9D%82/c4d/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1384,7 +1596,9 @@ f'(x_0)=0,f''(x_0)<0</script><p>则为极大值点</p>
 <h4 id="第三充分条件-1"><a href="#第三充分条件-1" class="headerlink" title="第三充分条件"></a>第三充分条件</h4><script type="math/tex; mode=display">
 f'(x_0)=f''(x_0)=\cdots=f^{(2n-1)}(x_0)=0\\
 f^{(2n)}(x_0) <0</script><p>类比为极小值点</p>
-<h2 id="最值"><a href="#最值" class="headerlink" title="最值"></a>最值</h2><p>若在闭区间$[a,b]$上连续，有限多个驻点和不可导点</p>
+<h2 id="最值"><a href="#最值" class="headerlink" title="最值"></a>最值</h2><p>在区间$I$上，若对于任意$x\in I$，存在$x_0\in I$，都有$f(x)\le f(x_0)$</p>
+<p>则称$f(x_0)$为函数在该区间上的最大值</p>
+<p>若在闭区间$[a,b]$上连续，有限多个驻点和不可导点</p>
 <p>则计算处各驻点$x_i$和不可导点$x’_j$</p>
 <script type="math/tex; mode=display">
 \max_{x\in[a,b]}f(x)=\max\{f(x_1),\cdots,f(x_i),f(x_1'),\cdots,f(x_j'),f(a),f(b)\}</script>
@@ -1681,133 +1895,11 @@ f^{(2n)}(x_0) <0</script><p>类比为极小值点</p>
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/10/%E5%A4%A7%E4%B8%80/python/taichi/%E6%93%8D%E4%BD%9C/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/08/10/%E5%A4%A7%E4%B8%80/python/taichi/%E6%93%8D%E4%BD%9C/" itemprop="url">大一/python/taichi/操作</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-08-10T13:25:32+08:00">
-                2022-08-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="For"><a href="#For" class="headerlink" title="For"></a>For</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i,j <span class="keyword">in</span> field:</span><br><span class="line">	fielf[i,j]=<span class="number">1</span></span><br><span class="line">    <span class="comment">#二维遍历</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(vx:ti.f32,vy:f64)</span> -&gt; ti.i32#int32</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">ti.func#只能在ti.kernel</span></span><br><span class="line"><span class="function">#无需声明类型(inline)</span></span><br></pre></td></tr></table></figure>
-<h1 id="print"><a href="#print" class="headerlink" title="print"></a>print</h1><script type="math/tex; mode=display">
-\rm print(arg1,sep=\text{' '},end=\text{'\n'})</script><h1 id="GUI"><a href="#GUI" class="headerlink" title="GUI"></a>GUI</h1><script type="math/tex; mode=display">
-\rm gui=ti.GUI(\text{my title},(512,512))</script>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/">&lt;</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/3/">&gt;</a>
+    <a class="extend prev" rel="prev" href="/">&lt;</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/3/">&gt;</a>
   </nav>
 
 
@@ -1853,7 +1945,7 @@ f^{(2n)}(x_0) <0</script><p>类比为极小值点</p>
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">70</span>
+                <span class="site-state-item-count">71</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

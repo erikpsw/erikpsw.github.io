@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/psw.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="概念系统热力学系统由大量微观粒子组成的系统，与系统发生相互作用的外部环境称为外界  孤立系统：与外界没有物质和能量的交换 封闭系统：没有物质的交换，只有能量交换 开放系统：同时有物质和能量的交换  状态参量分为宏观量和微观量 每个分子所具有的$v,m_p$为微观量 气体的宏观状态如$V,p$为宏观量 其中又分为广延量和强度量，如热量是广延量，温度是强度量 重要单位 1 \rm L&#x3D;10^{-3}m">
+<meta property="og:type" content="article">
+<meta property="og:title" content="大一&#x2F;物理&#x2F;热学">
+<meta property="og:url" content="http://yoursite.com/2022/12/01/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%83%AD%E5%AD%A6/index.html">
+<meta property="og:site_name" content="BLOG">
+<meta property="og:description" content="概念系统热力学系统由大量微观粒子组成的系统，与系统发生相互作用的外部环境称为外界  孤立系统：与外界没有物质和能量的交换 封闭系统：没有物质的交换，只有能量交换 开放系统：同时有物质和能量的交换  状态参量分为宏观量和微观量 每个分子所具有的$v,m_p$为微观量 气体的宏观状态如$V,p$为宏观量 其中又分为广延量和强度量，如热量是广延量，温度是强度量 重要单位 1 \rm L&#x3D;10^{-3}m">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-12-01T10:53:52.488Z">
+<meta property="article:modified_time" content="2022-12-05T10:06:05.518Z">
+<meta property="article:author" content="Shiwei Pan">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2022/12/01/大一/物理/热学/"/>
+
+
+
+
+
+  <title>大一/物理/热学 | BLOG</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+<script src="/live2d-widget/autoload.js"></script>
+
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">BLOG</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-mine">
+          <a href="/mine/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Old
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-new">
+          <a href="/new/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Introduction
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/12/01/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%83%AD%E5%AD%A6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">大一/物理/热学</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-12-01T18:53:52+08:00">
+                2022-12-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><h2 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h2><p>热力学系统由大量微观粒子组成的系统，与系统发生相互作用的外部环境称为外界</p>
+<ul>
+<li>孤立系统：与外界没有物质和能量的交换</li>
+<li>封闭系统：没有物质的交换，只有能量交换</li>
+<li>开放系统：同时有物质和能量的交换</li>
+</ul>
+<h3 id="状态参量"><a href="#状态参量" class="headerlink" title="状态参量"></a>状态参量</h3><p>分为宏观量和微观量</p>
+<p>每个分子所具有的$v,m_p$为微观量</p>
+<p>气体的宏观状态如$V,p$为宏观量</p>
+<p>其中又分为广延量和强度量，如热量是广延量，温度是强度量</p>
+<h4 id="重要单位"><a href="#重要单位" class="headerlink" title="重要单位"></a>重要单位</h4><script type="math/tex; mode=display">
+1 \rm L=10^{-3}m^3\\
+1atm=1.013\times10^5Pa=760mmHg</script><h2 id="热平衡"><a href="#热平衡" class="headerlink" title="热平衡"></a>热平衡</h2><p>两者之间没有热量的交换，冷热程度不发生改变</p>
+<h2 id="平衡态"><a href="#平衡态" class="headerlink" title="平衡态"></a>平衡态</h2><p>在经过足够长的时间后系统的状态参量不随时间改变，则称该系统达到了平衡态</p>
+<h3 id="弛豫时间"><a href="#弛豫时间" class="headerlink" title="弛豫时间"></a>弛豫时间</h3><p>从初始状态到达到平衡态所需要的时间</p>
+<p>若弛豫时间很短则可近似看作平衡态</p>
+<h2 id="准静态过程"><a href="#准静态过程" class="headerlink" title="准静态过程"></a>准静态过程</h2><p>过程足够缓慢以至于每一个中间态都可以看作平衡态</p>
+<h2 id="温标"><a href="#温标" class="headerlink" title="温标"></a>温标</h2><p>温度的数值表示法</p>
+<p>摄氏温标，用$t$表示，单位为$^\circ \text{C}$</p>
+<p>热力学温标，用$T$表示，开尔文温标，单位为$\text{K}$</p>
+<script type="math/tex; mode=display">
+T/\text{K}=273.15+t/^\circ\text{C}</script><h1 id="热力学定律"><a href="#热力学定律" class="headerlink" title="热力学定律"></a>热力学定律</h1><h2 id="第零定律"><a href="#第零定律" class="headerlink" title="第零定律"></a>第零定律</h2><p>若两个系统分别与第三个系统处于热平衡，则这两个系统必然也处于热平衡</p>
+<h2 id="第一定律"><a href="#第一定律" class="headerlink" title="第一定律"></a>第一定律</h2><p>只要初末两个状态为平衡态</p>
+<script type="math/tex; mode=display">
+E=f(T)
+\\\Delta E= \Delta U=W+Q</script><p>实际上对系统做功和传递热量是等效的，焦耳实验测出了热功当量</p>
+<script type="math/tex; mode=display">
+J=\frac{2mgh}Q=4.18\text{J}\cdot\text{cal}^{-1}</script><p>对于微小过程(准静态)，有</p>
+<script type="math/tex; mode=display">
+\text{d}E=\text{d}W+\text{d}Q\\
+\Delta E=-\int_{V_1}^{V_2}{p\text{d}V}+\int_{T_1}^{T_2}\frac mMC_m\text{d}T</script><p>其中$C_m=cM$为摩尔热容，对于特殊过程，引入自由度</p>
+<ul>
+<li>$i=3$单原子分子</li>
+<li>$i=5$双原子分子</li>
+<li>$i=6$多原子分子 </li>
+</ul>
+<script type="math/tex; mode=display">
+V=\text{const}:\\
+C_{V,m}=\frac i2R
+\\
+p=\text{const}:\\
+C_{p,m}=\left(\frac i2+1\right)R</script><p>从而有迈耶公式</p>
+<script type="math/tex; mode=display">
+C_{V,m}+R=C_{p,m}</script><p>$R$在数值上等于一摩尔理想气体等压过程升高$1\text{K}$对外做的功</p>
+<p>从定容推出的内能表达式适用于所有过程</p>
+<script type="math/tex; mode=display">
+E=\frac mMC_{V,m}T=\frac mM\frac i2RT</script><h1 id="理想气体物态方程"><a href="#理想气体物态方程" class="headerlink" title="理想气体物态方程"></a>理想气体物态方程</h1><script type="math/tex; mode=display">
+\frac{p_1V_1}{T_1}=\frac{p_2V_2}{T_2}</script><p>标准状态</p>
+<script type="math/tex; mode=display">
+p_0=1 \text{atm},T_0=273.15\text{K},V_m=22.4\text{L/mol}</script><script type="math/tex; mode=display">
+\frac{p_1V_1}{T_1}=\frac mM \frac{p_0V_m}{T_0}=R\frac mM</script><script type="math/tex; mode=display">
+pV=\frac mM  RT</script><p>这就是理想气体状态方程，$R=8.31$为摩尔气体常量</p>
+<script type="math/tex; mode=display">
+p=\frac NV\frac R{N_A}T=nkT</script><p>其中$k=R/N_A$称为玻尔兹曼常量，此式多用于计算分子数密度</p>
+<p>带入标况可得</p>
+<script type="math/tex; mode=display">
+n=2.69\times{10}^{25}\rm m^{-3}</script><p>这个量被称为洛施密特常量</p>
+<h1 id="热力学过程"><a href="#热力学过程" class="headerlink" title="热力学过程"></a>热力学过程</h1><h2 id="等体过程"><a href="#等体过程" class="headerlink" title="等体过程"></a>等体过程</h2><script type="math/tex; mode=display">
+Q_V=\Delta E=\frac mM\frac i2R\Delta T</script><h2 id="等压过程"><a href="#等压过程" class="headerlink" title="等压过程"></a>等压过程</h2><script type="math/tex; mode=display">
+\Delta E=p(V_1-V_2)+\frac mM\left(\frac i2+1\right)R\Delta T</script><h2 id="等温过程"><a href="#等温过程" class="headerlink" title="等温过程"></a>等温过程</h2><script type="math/tex; mode=display">
+p_1V_1=p_2V_2\\
+W=\frac mMRT\ln\frac{V_1}{V_2}=\frac mMRT\ln\frac{p_2}{p_1}=Q_T</script><p>其中摩尔定温热容</p>
+<script type="math/tex; mode=display">
+C_{T,m}=\frac Mm\left(\frac{\text{d}Q}{\text{d}T}\right)_T\to\infty</script><h2 id="绝热过程"><a href="#绝热过程" class="headerlink" title="绝热过程"></a>绝热过程</h2><script type="math/tex; mode=display">
+\Delta E=W,\text{d}E=\frac mMC_V\text{d}T\\
+\text{d}W=-p\text{d}V</script><p>引入绝热指数(摩尔热容比)</p>
+<script type="math/tex; mode=display">
+\gamma=\frac{C_{p,m}}{C_{V,m}}=\frac{i+2}i</script><p>得到绝热方程</p>
+<script type="math/tex; mode=display">
+pV^{\gamma}=C_1\\
+TV^{\gamma-1}=C_2\\
+\frac{T^{\gamma}}{p^{\gamma-1}}=C_3</script><script type="math/tex; mode=display">
+W=\frac1{\gamma-1}(p_2V_2-p_1V_1)=C_V(T_2-T_1)</script><p>在交点处，绝热过程的线更加陡</p>
+<h2 id="多方过程"><a href="#多方过程" class="headerlink" title="多方过程"></a>多方过程</h2><script type="math/tex; mode=display">
+pV^n=C</script><p>做功把绝热过程中的$\gamma\to n$即可，注意</p>
+<script type="math/tex; mode=display">
+C_{n,m}=C_{V,m}+\frac R{1-n}</script>
+      
+    </div>
+    
+    
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat.jpg" alt="Shiwei Pan wechat" style="width: 200px; max-width: 100%;"/>
+    <div></div>
+</div>
+
+      </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2022/11/12/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E6%8C%AF%E5%8A%A8/" rel="next" title="大一/物理/振动">
+                <i class="fa fa-chevron-left"></i> 大一/物理/振动
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/mount.png"
+               alt="Shiwei Pan" />
+          <p class="site-author-name" itemprop="name">Shiwei Pan</p>
+           
+              <p class="site-description motion-element" itemprop="description">Open your eyes,look up to the skies</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">71</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/erikpsw" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/pan-shi-wei-91" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                    
+                      知乎
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概念"><span class="nav-number">1.</span> <span class="nav-text">概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#系统"><span class="nav-number">1.1.</span> <span class="nav-text">系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#状态参量"><span class="nav-number">1.1.1.</span> <span class="nav-text">状态参量</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#重要单位"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">重要单位</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#热平衡"><span class="nav-number">1.2.</span> <span class="nav-text">热平衡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#平衡态"><span class="nav-number">1.3.</span> <span class="nav-text">平衡态</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#弛豫时间"><span class="nav-number">1.3.1.</span> <span class="nav-text">弛豫时间</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#准静态过程"><span class="nav-number">1.4.</span> <span class="nav-text">准静态过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#温标"><span class="nav-number">1.5.</span> <span class="nav-text">温标</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#热力学定律"><span class="nav-number">2.</span> <span class="nav-text">热力学定律</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第零定律"><span class="nav-number">2.1.</span> <span class="nav-text">第零定律</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第一定律"><span class="nav-number">2.2.</span> <span class="nav-text">第一定律</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#理想气体物态方程"><span class="nav-number">3.</span> <span class="nav-text">理想气体物态方程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#热力学过程"><span class="nav-number">4.</span> <span class="nav-text">热力学过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#等体过程"><span class="nav-number">4.1.</span> <span class="nav-text">等体过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#等压过程"><span class="nav-number">4.2.</span> <span class="nav-text">等压过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#等温过程"><span class="nav-number">4.3.</span> <span class="nav-text">等温过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#绝热过程"><span class="nav-number">4.4.</span> <span class="nav-text">绝热过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多方过程"><span class="nav-number">4.5.</span> <span class="nav-text">多方过程</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2020 - 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Shiwei Pan</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>

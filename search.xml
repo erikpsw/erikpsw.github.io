@@ -1240,7 +1240,7 @@ Ax=\lambda x(x\ne\vec{0})</script><p>对称矩阵总可以找到特征向量</p>
   <entry>
     <title>大一/物理/力学</title>
     <url>/2022/10/02/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E5%8A%9B%E5%AD%A6/</url>
-    <content><![CDATA[<h1 id="牛顿定律"><a href="#牛顿定律" class="headerlink" title="牛顿定律"></a>牛顿定律</h1><h2 id="第一定律"><a href="#第一定律" class="headerlink" title="第一定律"></a>第一定律</h2><p>若没有外力来改变物体的运动状态，任何物体都将保持静止或做匀速直线运动的状态</p>
+    <content><![CDATA[<h1 id="牛顿定律"><a href="#牛顿定律" class="headerlink" title="牛顿定律"></a>牛顿定律</h1><h2 id="第一定律"><a href="#第一定律" class="headerlink" title="第一定律"></a>第一定律</h2><p>若没有外力来改变物体的运·动状态，任何物体都将保持静止或做匀速直线运动的状态</p>
 <script type="math/tex; mode=display">
 \boldsymbol{v}=\vec C(\boldsymbol{F}=0\Rightarrow\boldsymbol{a}=0)</script><p>其又称为惯性定律，指出力是改变物体运动状态的原因</p>
 <h2 id="第二定律"><a href="#第二定律" class="headerlink" title="第二定律"></a>第二定律</h2><script type="math/tex; mode=display">
@@ -1253,7 +1253,7 @@ Ax=\lambda x(x\ne\vec{0})</script><p>对称矩阵总可以找到特征向量</p>
 <p>若该系中物体受到一个$-m\boldsymbol{a}$的惯性力，则成立</p>
 <p>生活中的超失重现象可由此解释</p>
 <h1 id="动量守恒定律"><a href="#动量守恒定律" class="headerlink" title="动量守恒定律"></a>动量守恒定律</h1><p>若$\sum F_{\text{external}}=0 $或更充分的不受外力</p>
-<p>也可$\sum F_{\text{external}}\ll\sum F_{\text{internal}}$</p>
+<p>也可$\sum F<em>{\text{external}}\ll\sum F</em>{\text{internal}}$</p>
 <script type="math/tex; mode=display">
 \boldsymbol{p}_1+\boldsymbol{p}_2=\boldsymbol{p}'_1+\boldsymbol{p}'_2\\
 m\boldsymbol{v}_1+M\boldsymbol{v}_2=m\boldsymbol{v}'_1+M\boldsymbol{v}_2'</script><p>移项可得$\Delta\boldsymbol{p}_1+\Delta\boldsymbol{p}_2=0,\Delta m\boldsymbol{v}_1+M\Delta\boldsymbol{v}_2=0$</p>
@@ -1299,7 +1299,7 @@ v_{AB}=v_{AS}-v_{BS}</script><p>推广</p>
 &=\boldsymbol{P}-\boldsymbol{P}_{C} \\
 &=\mathbf{0}
 \end{aligned}</script><p>质心系是一个零动量系 </p>
-<h3 id="柯尼希定理"><a href="#柯尼希定理" class="headerlink" title="柯尼希定理"></a><strong>柯尼希定理</strong></h3><p>对于平动系$A$和质心系$S$，有$v_{cA}=v_{SA}=v_c$</p>
+<h3 id="柯尼希定理"><a href="#柯尼希定理" class="headerlink" title="柯尼希定理"></a><strong>柯尼希定理</strong></h3><p>对于平动系$A$和质心系$S$，有$v<em>{cA}=v</em>{SA}=v_c$</p>
 <p>对于动能，对速度</p>
 <script type="math/tex; mode=display">
 v_i'=v_i-v_c\\
@@ -1307,10 +1307,10 @@ v_i'=v_i-v_c\\
 <script type="math/tex; mode=display">
 E_{kA}=E_{kS}+\frac12Mv_c^2</script><p>质点系在参考系$A$中的总动能等于质点系在质心系中的动能与质心在参考系$A $中的动能之和</p>
 <p>对前面一动一静作推广</p>
-<p>在不同参考系下，$\boldsymbol{u}_{12}=\boldsymbol{v}_{1}-\boldsymbol{v}_{2}$</p>
+<p>在不同参考系下，$\boldsymbol{u}<em>{12}=\boldsymbol{v}</em>{1}-\boldsymbol{v}_{2}$</p>
 <p>故在质心参考系下</p>
 <script type="math/tex; mode=display">
-E_{kS}=\frac12\frac{M_1M_2}{M_1+M_2}(\boldsymbol{u}_{12})^2</script><p>记$\mu=\frac{M_1M_2}{M_1+M_2}$为折合质量，所以$E_{kS}$又称为相对动能</p>
+E_{kS}=\frac12\frac{M_1M_2}{M_1+M_2}(\boldsymbol{u}_{12})^2</script><p>记$\mu=\frac{M<em>1M_2}{M_1+M_2}$为折合质量，所以$E</em>{kS}$又称为相对动能</p>
 <h1 id="能量守恒定律"><a href="#能量守恒定律" class="headerlink" title="能量守恒定律"></a>能量守恒定律</h1><h2 id="动能定理"><a href="#动能定理" class="headerlink" title="动能定理"></a>动能定理</h2><p>对某一个质点来说</p>
 <script type="math/tex; mode=display">
 \sum F=m\frac{\text{d}v}{\text{d}t}=m\frac{\text{d}v}{\text{d}x}v</script><p>两端积分得到</p>
@@ -1381,7 +1381,7 @@ m\boldsymbol{r}\times\boldsymbol{v}</script><h2 id="力矩"><a href="#力矩" cl
 <script type="math/tex; mode=display">
 (−8, 13]\backslash
 
- \{2\}(\text{not including 2})</script><h1 id="函数"><a href="#函数" class="headerlink" title="+函数"></a>+函数</h1><h2 id="基本初等函数"><a href="#基本初等函数" class="headerlink" title="基本初等函数"></a>基本初等函数</h2><p>常函数，幂函数，三角函数，反三角函数，对数函数，指数函数</p>
+ \{2\}(\text{not including 2})</script><h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><h2 id="基本初等函数"><a href="#基本初等函数" class="headerlink" title="基本初等函数"></a>基本初等函数</h2><p>常函数，幂函数，三角函数，反三角函数，对数函数，指数函数</p>
 <p>初等函数是由基本初等函数经过==有限次==复合形成的能用一个式子表示的函数</p>
 <h2 id="反三角函数"><a href="#反三角函数" class="headerlink" title="反三角函数"></a>反三角函数</h2><p><img src="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20220903183803562.png" alt="image-20220903183803562"></p>
 <script type="math/tex; mode=display">
@@ -1437,7 +1437,7 @@ f^{-1}(x)=\pi+\text{arccot}(x)</script><p><img src="/2022/08/03/%E5%A4%A7%E4%B8%
 f(x)\le K_1</script><p>则称$f(x)$在X上有上界，其中$K_1$为$f(x)$在$X$上的一个上界</p>
 <h3 id="连续"><a href="#连续" class="headerlink" title="连续"></a>连续</h3><p>$f(x)\in C[a,b]$则$f(x)$在$[a,b]$上有界</p>
 <p>但开区间不一定满足有界</p>
-<p>若有界则$\exists \lim_{x\to a^+} f(x),\lim_{x\to b^-} f(x)$</p>
+<p>若有界则$\exists \lim<em>{x\to a^+} f(x),\lim</em>{x\to b^-} f(x)$</p>
 <h2 id="极限的性质"><a href="#极限的性质" class="headerlink" title="极限的性质"></a>极限的性质</h2><h3 id="唯一性"><a href="#唯一性" class="headerlink" title="唯一性"></a>唯一性</h3><p>若有极限，则必唯一</p>
 <p>逆否：若左右极限不等，则极限不存在</p>
 <h3 id="局部有界性"><a href="#局部有界性" class="headerlink" title="局部有界性"></a>局部有界性</h3><p>函数与数列的区别是函数是连续的而数列是离散的</p>
@@ -1473,7 +1473,7 @@ f(x)\le K_1</script><p>则称$f(x)$在X上有上界，其中$K_1$为$f(x)$在$X$
 \Rightarrow\lim_{x\to x_0}f[\varphi(x)]=f[\lim_{x\to x_0}\varphi(x)]=f(a)</script><p>内层不需要连续，连续则极限符号可交换</p>
 <h3 id="间断"><a href="#间断" class="headerlink" title="间断"></a>间断</h3><p>首先有函数在去心领域有定义，其次不连续</p>
 <h3 id="介值定理"><a href="#介值定理" class="headerlink" title="介值定理"></a>介值定理</h3><p>$f(x)$在$[a,b]$上连续，则对$\forall c\in[m,M]$，$\exists \xi\in[a,b],\text{s.t.}f(\xi)=c$</p>
-<h4 id="离散形式"><a href="#离散形式" class="headerlink" title="离散形式"></a>离散形式</h4><p>数列满足$|a_{n+1}-a_{n}|\le1$则类比介值定理</p>
+<h4 id="离散形式"><a href="#离散形式" class="headerlink" title="离散形式"></a>离散形式</h4><p>数列满足$|a<em>{n+1}-a</em>{n}|\le1$则类比介值定理</p>
 <h3 id="零点定理"><a href="#零点定理" class="headerlink" title="零点定理"></a>零点定理</h3><p>$f(x)$在$[a,b]$上连续，则若$f(a)f(b)&lt;0$，$\exists \xi\in(a,b),\text{s.t.}f(\xi)=0$</p>
 <p>实际上为零点定理的特殊形式</p>
 <h1 id="特殊函数"><a href="#特殊函数" class="headerlink" title="特殊函数"></a>特殊函数</h1><p>绝对值$|x|$，$0$处连续但不可导</p>
@@ -1698,7 +1698,7 @@ g^{\prime}(x) \neq 0,\forall x \in \mathring{U}(a, \delta),f(x),g(x)可导</scri
   <entry>
     <title>大一/物理/运动</title>
     <url>/2022/10/02/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E8%BF%90%E5%8A%A8/</url>
-    <content><![CDATA[<h1 id="质点运动学"><a href="#质点运动学" class="headerlink" title="质点运动学"></a>质点运动学</h1><h2 id="运动"><a href="#运动" class="headerlink" title="运动"></a>运动</h2><p>质点为一个简化的忽略形状的物体，我们在选定的参考系(被选定的参考物体)下研究这个质点的运动情况</p>
+    <content><![CDATA[<h1 id="·-质点运动学"><a href="#·-质点运动学" class="headerlink" title="·                                                                                质点运动学"></a>·                                                                                质点运动学</h1><h2 id="运动"><a href="#运动" class="headerlink" title="运动"></a>运动</h2><p>质点为一个简化的忽略形状的物体，我们在选定的参考系(被选定的参考物体)下研究这个质点的运动情况</p>
 <h3 id="位矢"><a href="#位矢" class="headerlink" title="位矢"></a>位矢</h3><p>首先选取坐标原点，由此定义位矢$\vec r$</p>
 <script type="math/tex; mode=display">
 \vec r=x \vec i+y\vec j+z\vec k</script><p>位矢的方向由下式确定</p>
@@ -1736,7 +1736,7 @@ g^{\prime}(x) \neq 0,\forall x \in \mathring{U}(a, \delta),f(x),g(x)可导</scri
 <p>其中$\vec r,\vec v$被称为运动状态量，加速度$\vec a$被称为状态变化量</p>
 <h2 id="圆周运动"><a href="#圆周运动" class="headerlink" title="圆周运动"></a>圆周运动</h2><h3 id="法向加速度"><a href="#法向加速度" class="headerlink" title="法向加速度"></a>法向加速度</h3><script type="math/tex; mode=display">
 \boldsymbol{a}_n=\frac{v^2}r=\omega^2r=\omega v</script><script type="math/tex; mode=display">
-\boldsymbol{a}=\frac{\text{d}}{\text{d}t}(\boldsymbol{\omega \times \boldsymbol{r}})=\boldsymbol{\alpha \times \boldsymbol{r}}+\boldsymbol{\omega \times \boldsymbol{v}}</script><h3 id="运动方程"><a href="#运动方程" class="headerlink" title="运动方程"></a>运动方程</h3><p>利用园的参数方程可得</p>
+\boldsymbol{a}=\frac{\text{d}}{\text{d}t}(\boldsymbol{\omega \times \boldsymbol{r}})=\boldsymbol{\alpha \times \boldsymbol{r}}+\boldsymbol{\omega \times \boldsymbol{v}}</script><h3 id="运动方程"><a href="#运动方程" class="headerlink" title="运动方程"></a>运动方程</h3><p>利用圆的参数方程可得</p>
 <script type="math/tex; mode=display">
 \vec r(t)=R\cos(\omega t )\vec i+R\sin(\omega t)\vec i</script><h3 id="重要关系"><a href="#重要关系" class="headerlink" title="重要关系"></a>重要关系</h3><script type="math/tex; mode=display">
 T=\frac1f\\
@@ -1915,7 +1915,9 @@ f'(x_0)=0,f''(x_0)<0</script><p>则为极大值点</p>
 <h4 id="第三充分条件-1"><a href="#第三充分条件-1" class="headerlink" title="第三充分条件"></a>第三充分条件</h4><script type="math/tex; mode=display">
 f'(x_0)=f''(x_0)=\cdots=f^{(2n-1)}(x_0)=0\\
 f^{(2n)}(x_0) <0</script><p>类比为极小值点</p>
-<h2 id="最值"><a href="#最值" class="headerlink" title="最值"></a>最值</h2><p>若在闭区间$[a,b]$上连续，有限多个驻点和不可导点</p>
+<h2 id="最值"><a href="#最值" class="headerlink" title="最值"></a>最值</h2><p>在区间$I$上，若对于任意$x\in I$，存在$x_0\in I$，都有$f(x)\le f(x_0)$</p>
+<p>则称$f(x_0)$为函数在该区间上的最大值</p>
+<p>若在闭区间$[a,b]$上连续，有限多个驻点和不可导点</p>
 <p>则计算处各驻点$x_i$和不可导点$x’_j$</p>
 <script type="math/tex; mode=display">
 \max_{x\in[a,b]}f(x)=\max\{f(x_1),\cdots,f(x_i),f(x_1'),\cdots,f(x_j'),f(a),f(b)\}</script>]]></content>
@@ -2612,7 +2614,7 @@ mg\sin \theta  - \mu (Eq + mg\cos \theta ) = ma</script>]]></content>
 F=qvB\sin \theta</script><p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E7%89%A9%E7%90%86/%E7%94%B5%E7%A3%81%E5%AD%A6/image-20210503190112038.png" alt="image-20210503190112038"></p>
 <script type="math/tex; mode=display">
 mv_0=m(v_1+v_2)</script><script type="math/tex; mode=display">
-F=Blv\sin\theta</script><script type="math/tex; mode=display">
+E=Blv\sin\theta</script><script type="math/tex; mode=display">
 F-\frac{B^2L^2(v_1-v_2)}{R}=ma_1\\
 \frac{B^2L^2(v_1-v_2)}{R}=ma_2</script><script type="math/tex; mode=display">
 E=\frac{\triangle \varphi }{\triangle t}=\frac{\triangle B }{\triangle t}S+B'lv=\frac12B\omega r^2=Blv</script><p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E7%89%A9%E7%90%86/%E7%94%B5%E7%A3%81%E5%AD%A6/image-20210503190739838.png" alt="image-20210503190739838"></p>
@@ -2925,7 +2927,25 @@ f(x)=f(-x)\Rightarrow\\
 \end{cases}</script><h3 id="周期函数"><a href="#周期函数" class="headerlink" title="周期函数"></a>周期函数</h3><script type="math/tex; mode=display">
 \int_{a}^{a+T}f(x)\mathrm dx=\int_{0}^Tf(x)\mathrm dx</script><p>积分值和$a$的选取无关</p>
 <h3 id="区间再现公式"><a href="#区间再现公式" class="headerlink" title="区间再现公式"></a>区间再现公式</h3><script type="math/tex; mode=display">
-\int_a^bf(x)\text{d}x=\int_a^bf(a+b-x)\text{d}x</script>]]></content>
+\int_a^bf(x)\text{d}x=\int_a^bf(a+b-x)\text{d}x</script><h3 id="积分对称原理"><a href="#积分对称原理" class="headerlink" title="积分对称原理"></a>积分对称原理</h3><p>若$f(x) $关于$\frac{a+b}{2}$对称，根据区间再现公式</p>
+<script type="math/tex; mode=display">
+\int_{a}^{b} x f(x) \text{d} x=\frac{a+b}{2} \int_{a}^{b} f(x) \text{d} x</script><script type="math/tex; mode=display">
+\int_{a}^{x}f(t)\mathrm dt=\int_{a}^{x}f(x)\mathrm dx</script><h1 id="反常积分"><a href="#反常积分" class="headerlink" title="反常积分"></a>反常积分</h1><h2 id="无界区间"><a href="#无界区间" class="headerlink" title="无界区间"></a>无界区间</h2><p>积分区间无限或北极函数被积函数无界的积分，称为反常积分</p>
+<script type="math/tex; mode=display">
+\lim_{b\to +\infty}\int_a^bf(x)\text{d}x</script><p>存在，则称反常积分</p>
+<script type="math/tex; mode=display">
+\int_a^{+\infty}f(x)\text{d}x</script><p> 收敛，同理</p>
+<script type="math/tex; mode=display">
+\int_{-\infty}^{+\infty}f(x)\text{d}x=\int_{-\infty}^{a}f(x)\text{d}x+\int_{a}^{+\infty}f(x)\text{d}x</script><p>只有两个积分都收敛则原积分收敛</p>
+<h2 id="无界函数"><a href="#无界函数" class="headerlink" title="无界函数"></a>无界函数</h2><p>$f(x)$在$x=b$的左邻域无界，$\forall \eta\in(0,b-a)$，$f(x)$在$[a,a+\eta]$可积有界</p>
+<script type="math/tex; mode=display">
+\exists \lim_{\eta\to0^+}\int_a ^{b-\eta}f(x)\text{d}x=\int_a ^{b}f(x)\text{d}x</script><p>则称反常积分收敛，否则为发散</p>
+<h2 id="求积分"><a href="#求积分" class="headerlink" title="求积分"></a>求积分</h2><script type="math/tex; mode=display">
+\int_a^{+\infty}f(x)\text{d}x=\left[F(x)\right]^{+\infty}_a=\lim_{x\to +\infty}F(x)-F(a)</script><p>这种方式不仅可以判定散敛性还可以求出值</p>
+<h3 id="p积分"><a href="#p积分" class="headerlink" title="p积分"></a>p积分</h3><script type="math/tex; mode=display">
+\int_1^{+\infty}\frac1{x^p}\text{d}x</script><p>当$p&gt;1$时积分收敛，$p\le1$</p>
+<p>在$[0,1]$上正好相反</p>
+]]></content>
   </entry>
   <entry>
     <title>大一/物理/振动</title>
@@ -3082,5 +3102,86 @@ y=y_1+y_2=2A\cos\left(\frac{2\pi x}\lambda\right)\cos\omega t</script><p>上式�
 <script type="math/tex; mode=display">
 \sin\theta=\frac{ut}{v_st}=\frac1{Ma}</script><p>马赫数即为几倍声速</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>大一/物理/热学</title>
+    <url>/2022/12/01/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%83%AD%E5%AD%A6/</url>
+    <content><![CDATA[<h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><h2 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h2><p>热力学系统由大量微观粒子组成的系统，与系统发生相互作用的外部环境称为外界</p>
+<ul>
+<li>孤立系统：与外界没有物质和能量的交换</li>
+<li>封闭系统：没有物质的交换，只有能量交换</li>
+<li>开放系统：同时有物质和能量的交换</li>
+</ul>
+<h3 id="状态参量"><a href="#状态参量" class="headerlink" title="状态参量"></a>状态参量</h3><p>分为宏观量和微观量</p>
+<p>每个分子所具有的$v,m_p$为微观量</p>
+<p>气体的宏观状态如$V,p$为宏观量</p>
+<p>其中又分为广延量和强度量，如热量是广延量，温度是强度量</p>
+<h4 id="重要单位"><a href="#重要单位" class="headerlink" title="重要单位"></a>重要单位</h4><script type="math/tex; mode=display">
+1 \rm L=10^{-3}m^3\\
+1atm=1.013\times10^5Pa=760mmHg</script><h2 id="热平衡"><a href="#热平衡" class="headerlink" title="热平衡"></a>热平衡</h2><p>两者之间没有热量的交换，冷热程度不发生改变</p>
+<h2 id="平衡态"><a href="#平衡态" class="headerlink" title="平衡态"></a>平衡态</h2><p>在经过足够长的时间后系统的状态参量不随时间改变，则称该系统达到了平衡态</p>
+<h3 id="弛豫时间"><a href="#弛豫时间" class="headerlink" title="弛豫时间"></a>弛豫时间</h3><p>从初始状态到达到平衡态所需要的时间</p>
+<p>若弛豫时间很短则可近似看作平衡态</p>
+<h2 id="准静态过程"><a href="#准静态过程" class="headerlink" title="准静态过程"></a>准静态过程</h2><p>过程足够缓慢以至于每一个中间态都可以看作平衡态</p>
+<h2 id="温标"><a href="#温标" class="headerlink" title="温标"></a>温标</h2><p>温度的数值表示法</p>
+<p>摄氏温标，用$t$表示，单位为$^\circ \text{C}$</p>
+<p>热力学温标，用$T$表示，开尔文温标，单位为$\text{K}$</p>
+<script type="math/tex; mode=display">
+T/\text{K}=273.15+t/^\circ\text{C}</script><h1 id="热力学定律"><a href="#热力学定律" class="headerlink" title="热力学定律"></a>热力学定律</h1><h2 id="第零定律"><a href="#第零定律" class="headerlink" title="第零定律"></a>第零定律</h2><p>若两个系统分别与第三个系统处于热平衡，则这两个系统必然也处于热平衡</p>
+<h2 id="第一定律"><a href="#第一定律" class="headerlink" title="第一定律"></a>第一定律</h2><p>只要初末两个状态为平衡态</p>
+<script type="math/tex; mode=display">
+E=f(T)
+\\\Delta E= \Delta U=W+Q</script><p>实际上对系统做功和传递热量是等效的，焦耳实验测出了热功当量</p>
+<script type="math/tex; mode=display">
+J=\frac{2mgh}Q=4.18\text{J}\cdot\text{cal}^{-1}</script><p>对于微小过程(准静态)，有</p>
+<script type="math/tex; mode=display">
+\text{d}E=\text{d}W+\text{d}Q\\
+\Delta E=-\int_{V_1}^{V_2}{p\text{d}V}+\int_{T_1}^{T_2}\frac mMC_m\text{d}T</script><p>其中$C_m=cM$为摩尔热容，对于特殊过程，引入自由度</p>
+<ul>
+<li>$i=3$单原子分子</li>
+<li>$i=5$双原子分子</li>
+<li>$i=6$多原子分子 </li>
+</ul>
+<script type="math/tex; mode=display">
+V=\text{const}:\\
+C_{V,m}=\frac i2R
+\\
+p=\text{const}:\\
+C_{p,m}=\left(\frac i2+1\right)R</script><p>从而有迈耶公式</p>
+<script type="math/tex; mode=display">
+C_{V,m}+R=C_{p,m}</script><p>$R$在数值上等于一摩尔理想气体等压过程升高$1\text{K}$对外做的功</p>
+<p>从定容推出的内能表达式适用于所有过程</p>
+<script type="math/tex; mode=display">
+E=\frac mMC_{V,m}T=\frac mM\frac i2RT</script><h1 id="理想气体物态方程"><a href="#理想气体物态方程" class="headerlink" title="理想气体物态方程"></a>理想气体物态方程</h1><script type="math/tex; mode=display">
+\frac{p_1V_1}{T_1}=\frac{p_2V_2}{T_2}</script><p>标准状态</p>
+<script type="math/tex; mode=display">
+p_0=1 \text{atm},T_0=273.15\text{K},V_m=22.4\text{L/mol}</script><script type="math/tex; mode=display">
+\frac{p_1V_1}{T_1}=\frac mM \frac{p_0V_m}{T_0}=R\frac mM</script><script type="math/tex; mode=display">
+pV=\frac mM  RT</script><p>这就是理想气体状态方程，$R=8.31$为摩尔气体常量</p>
+<script type="math/tex; mode=display">
+p=\frac NV\frac R{N_A}T=nkT</script><p>其中$k=R/N_A$称为玻尔兹曼常量，此式多用于计算分子数密度</p>
+<p>带入标况可得</p>
+<script type="math/tex; mode=display">
+n=2.69\times{10}^{25}\rm m^{-3}</script><p>这个量被称为洛施密特常量</p>
+<h1 id="热力学过程"><a href="#热力学过程" class="headerlink" title="热力学过程"></a>热力学过程</h1><h2 id="等体过程"><a href="#等体过程" class="headerlink" title="等体过程"></a>等体过程</h2><script type="math/tex; mode=display">
+Q_V=\Delta E=\frac mM\frac i2R\Delta T</script><h2 id="等压过程"><a href="#等压过程" class="headerlink" title="等压过程"></a>等压过程</h2><script type="math/tex; mode=display">
+\Delta E=p(V_1-V_2)+\frac mM\left(\frac i2+1\right)R\Delta T</script><h2 id="等温过程"><a href="#等温过程" class="headerlink" title="等温过程"></a>等温过程</h2><script type="math/tex; mode=display">
+p_1V_1=p_2V_2\\
+W=\frac mMRT\ln\frac{V_1}{V_2}=\frac mMRT\ln\frac{p_2}{p_1}=Q_T</script><p>其中摩尔定温热容</p>
+<script type="math/tex; mode=display">
+C_{T,m}=\frac Mm\left(\frac{\text{d}Q}{\text{d}T}\right)_T\to\infty</script><h2 id="绝热过程"><a href="#绝热过程" class="headerlink" title="绝热过程"></a>绝热过程</h2><script type="math/tex; mode=display">
+\Delta E=W,\text{d}E=\frac mMC_V\text{d}T\\
+\text{d}W=-p\text{d}V</script><p>引入绝热指数(摩尔热容比)</p>
+<script type="math/tex; mode=display">
+\gamma=\frac{C_{p,m}}{C_{V,m}}=\frac{i+2}i</script><p>得到绝热方程</p>
+<script type="math/tex; mode=display">
+pV^{\gamma}=C_1\\
+TV^{\gamma-1}=C_2\\
+\frac{T^{\gamma}}{p^{\gamma-1}}=C_3</script><script type="math/tex; mode=display">
+W=\frac1{\gamma-1}(p_2V_2-p_1V_1)=C_V(T_2-T_1)</script><p>在交点处，绝热过程的线更加陡</p>
+<h2 id="多方过程"><a href="#多方过程" class="headerlink" title="多方过程"></a>多方过程</h2><script type="math/tex; mode=display">
+pV^n=C</script><p>做功把绝热过程中的$\gamma\to n$即可，注意</p>
+<script type="math/tex; mode=display">
+C_{n,m}=C_{V,m}+\frac R{1-n}</script>]]></content>
   </entry>
 </search>
