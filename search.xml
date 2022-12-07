@@ -1966,7 +1966,9 @@ a^{3}-b^{3}=(a-b)\left(a^{2}+a b+b^{2}\right) \\
   x^{2} y+y^{2} z+z^{2} x+z^{2} y+y^{2} x+x^{2} z+3 x y z=(x+y+z)(x y+y z+z x) \\
   x^{3}+y^{3}+z^{3}-3 x y z=(x+y+z)\left(x^{2}+y^{2}+z^{2}-x y-y z-z x\right) \\  =(x+y+z) \cdot \frac{1}{2}\left[(x-y)^{2}+(y-z)^{2}+(z-x)^{2}\right] \\</script><script type="math/tex; mode=display">
 e=\sum_{i=0}^\infty \frac1{i!}\\
-x=e^{\ln x}=\ln e^x</script>]]></content>
+x=e^{\ln x}=\ln e^x</script><script type="math/tex; mode=display">
+x+\sqrt{x^2+1}=C\\
+\frac 1C=\sqrt{x^2+1}-x</script>]]></content>
   </entry>
   <entry>
     <title>高中/数学/三角函数</title>
@@ -3183,5 +3185,54 @@ W=\frac1{\gamma-1}(p_2V_2-p_1V_1)=C_V(T_2-T_1)</script><p>在交点处，绝热�
 pV^n=C</script><p>做功把绝热过程中的$\gamma\to n$即可，注意</p>
 <script type="math/tex; mode=display">
 C_{n,m}=C_{V,m}+\frac R{1-n}</script>]]></content>
+  </entry>
+  <entry>
+    <title>大一/高数/微分方程</title>
+    <url>/2022/12/07/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/</url>
+    <content><![CDATA[<h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><p>微分方程是一种方程，它涉及对一个函数的变化率的描述。它通常表示为一个包含未知函数及其一阶或多阶导数的方程，例如：</p>
+<script type="math/tex; mode=display">
+\frac{dy}{dx} + y = x</script><p>其最高阶导数的阶数为微分方程的阶数</p>
+<p>其通解含有和阶数数目相同的相互独立的常数</p>
+<h2 id="通解"><a href="#通解" class="headerlink" title="通解"></a>通解</h2><p>对于特定类型的微分方程，可以找到一个通用的解决方案</p>
+<p>例如，对于常见的一阶线性微分方程，通解可以表示为：</p>
+<script type="math/tex; mode=display">
+y = c_1 e^{r_1 x} + c_2 e^{r_2 x}</script><p>其中 $c_1$ 和 $c_2$ 是任意常数，$r_1$和$r_2$是方程的特征根。通过对方程进行求解，可以确定 $r_1$ 和 $r_2$ 的值</p>
+<h2 id="特解"><a href="#特解" class="headerlink" title="特解"></a>特解</h2><p>微分方程需要满足特定的初值条件$\text{IVP(Initial Value Problem)}$</p>
+<p>利用这些条件可以方便求出常数的值</p>
+<h1 id="可分离变量"><a href="#可分离变量" class="headerlink" title="可分离变量"></a>可分离变量</h1><p>这类方程的一般形式为：</p>
+<script type="math/tex; mode=display">
+\frac{\text{d}y}{\text{d}x} = f(x)g(y)\Rightarrow\\
+f(x)\text{d}x=h(y)\text{d}y</script><p>其中 $f(x)$ 和 $g(y)$ 是两个函数。可以看出，在这类方程中，变量 $x$ 和 $y$ 可以分开，因此称为可分离变量的微分方程。</p>
+<p>对两端积分，并带入初值条件便可以求解</p>
+<p>对于其他方程，利用换元的方式可以化成这种类型</p>
+<p>一般的</p>
+<script type="math/tex; mode=display">
+\frac{\text{d}y}{\text{d}x}=f\left(\frac{ax+by+c}{a_1x+b_1y+c_1}\right)</script><p>若</p>
+<script type="math/tex; mode=display">
+\frac{a}{a_1}=\frac{b}{b_1}</script><p>化为</p>
+<script type="math/tex; mode=display">
+f\left(\frac{ax+by+c}{\lambda(ax+by)+c_1}\right)</script><p>作换元</p>
+<script type="math/tex; mode=display">
+u=ax+by</script><h1 id="一阶线性"><a href="#一阶线性" class="headerlink" title="一阶线性"></a>一阶线性</h1><script type="math/tex; mode=display">
+\frac{\text{d}y}{\text{d}x} +P(x)y=Q(x)</script><p>若$Q(x)\equiv 0$则为齐次，容易得到</p>
+<script type="math/tex; mode=display">
+y=C\cdot \exp \left( -\int P(x)\text{d}x \right)</script><p>将$C$换为$u(x)$(常数变易法)，容易得到</p>
+<script type="math/tex; mode=display">
+u(x)=\int Q(x)\exp\left( \int P(x)\text{d}x \right)\text{d}x    +C</script><p> 从而通解为</p>
+<script type="math/tex; mode=display">
+y=e^{-\int P(x)\text{d}x}\left(\int Q(x)e^{ \int P(x)\text{d}x} \text{d}x    +C\right)</script><p>也可以同时乘上积分因子</p>
+<script type="math/tex; mode=display">
+\text{integrating factor} = e^{ \int P(x)\text{d}x}</script><h2 id="齐次方程"><a href="#齐次方程" class="headerlink" title="齐次方程"></a>齐次方程</h2><script type="math/tex; mode=display">
+\frac{\text{d}y}{\text{d}x} =\varphi(\frac y x)</script><p>我们可以作变量代换</p>
+<script type="math/tex; mode=display">
+u=\frac yx</script><p>从而化为一般微分方程</p>
+<p>对于</p>
+<script type="math/tex; mode=display">
+\frac{\text{d}y}{\text{d}x}=\frac{ax+by+c}{a_1x+b_1y+c_1}(\frac{a}{a_1}\ne\frac{b}{b_1})</script><p>用平移的方式可以化为齐次型</p>
+<script type="math/tex; mode=display">
+\begin{cases}x=X+h\\y=Y+k\end{cases}</script><h2 id="伯努利方程"><a href="#伯努利方程" class="headerlink" title="伯努利方程"></a>伯努利方程</h2><script type="math/tex; mode=display">
+\frac{\text{d}y}{\text{d}x} +P(x)y=Q(x)y^\alpha\\
+y^{-\alpha}\frac{\text{d}y}{\text{d}x} +P(x)y^{1-\alpha}=Q(x)</script><p>从而令$u=y^{1-\alpha}$化为一阶线性求解</p>
+]]></content>
   </entry>
 </search>
