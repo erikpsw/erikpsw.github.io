@@ -2781,7 +2781,13 @@ A=\sqrt{\frac8{125}},E_p=0.2\text{J}</script><script type="math/tex; mode=displa
 \frac{\omega^3}k</script><script type="math/tex; mode=display">
 I=0.09\text{W}\cdot\text{m}^{-2}\\ \overline{w}=
 2.647\times10^{-4}\text{J}\cdot\text{s}\cdot\text{m}^{-3}</script><script type="math/tex; mode=display">
-y=0.1\cos\left[165\pi\left(t-\frac x{330}\right)+\pi\right]\text{m}</script>]]></content>
+y=0.1\cos\left[165\pi\left(t-\frac x{330}\right)+\pi\right]\text{m}</script><script type="math/tex; mode=display">
+\frac{1.5\times20}{293}+\frac{1\times V}{293}=\frac{7.5\times20}{298}\\
+\Rightarrow V=117.483 \text{L}</script><script type="math/tex; mode=display">
+W =\frac{C}2(\frac1{V_1^2}-\frac1{V_2^2})\\</script><script type="math/tex; mode=display">
+Q_1=n(\frac i2+1)R\Delta T=500\text{J}\\
+Q_2=700\text{J}</script><script type="math/tex; mode=display">
+W=\frac{3200}{293}\text{KW}=10.92\text{KW}</script>]]></content>
   </entry>
   <entry>
     <title>大一/高数/积分</title>
@@ -2931,8 +2937,7 @@ f(x)=f(-x)\Rightarrow\\
 <h3 id="区间再现公式"><a href="#区间再现公式" class="headerlink" title="区间再现公式"></a>区间再现公式</h3><script type="math/tex; mode=display">
 \int_a^bf(x)\text{d}x=\int_a^bf(a+b-x)\text{d}x</script><h3 id="积分对称原理"><a href="#积分对称原理" class="headerlink" title="积分对称原理"></a>积分对称原理</h3><p>若$f(x) $关于$\frac{a+b}{2}$对称，根据区间再现公式</p>
 <script type="math/tex; mode=display">
-\int_{a}^{b} x f(x) \text{d} x=\frac{a+b}{2} \int_{a}^{b} f(x) \text{d} x</script><script type="math/tex; mode=display">
-\int_{a}^{x}f(t)\mathrm dt=\int_{a}^{x}f(x)\mathrm dx</script><h1 id="反常积分"><a href="#反常积分" class="headerlink" title="反常积分"></a>反常积分</h1><h2 id="无界区间"><a href="#无界区间" class="headerlink" title="无界区间"></a>无界区间</h2><p>积分区间无限或北极函数被积函数无界的积分，称为反常积分</p>
+\int_{a}^{b} x f(x) \text{d} x=\frac{a+b}{2} \int_{a}^{b} f(x) \text{d} x</script><h1 id="反常积分"><a href="#反常积分" class="headerlink" title="反常积分"></a>反常积分</h1><h2 id="无界区间"><a href="#无界区间" class="headerlink" title="无界区间"></a>无界区间</h2><p>积分区间无限或北极函数被积函数无界的积分，称为反常积分</p>
 <script type="math/tex; mode=display">
 \lim_{b\to +\infty}\int_a^bf(x)\text{d}x</script><p>存在，则称反常积分</p>
 <script type="math/tex; mode=display">
@@ -3184,7 +3189,18 @@ W=\frac1{\gamma-1}(p_2V_2-p_1V_1)=C_V(T_2-T_1)</script><p>在交点处，绝热�
 <h2 id="多方过程"><a href="#多方过程" class="headerlink" title="多方过程"></a>多方过程</h2><script type="math/tex; mode=display">
 pV^n=C</script><p>做功把绝热过程中的$\gamma\to n$即可，注意</p>
 <script type="math/tex; mode=display">
-C_{n,m}=C_{V,m}+\frac R{1-n}</script>]]></content>
+C_{n,m}=C_{V,m}+\frac R{1-n}</script><h1 id="循环过程"><a href="#循环过程" class="headerlink" title="循环过程"></a>循环过程</h1><p> 某个状态出发经过一系列过程又回到初始状态的过程</p>
+<p>顺时针为正，逆时针为负</p>
+<p>正循环$W’&gt;0$，逆循环相反</p>
+<h2 id="热机"><a href="#热机" class="headerlink" title="热机"></a>热机</h2><p>吸热为$Q_1$，放热为$Q_2$</p>
+<p><img src="/2022/12/01/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%83%AD%E5%AD%A6/image-20221210192900311.png" alt="image-20221210192900311"></p>
+<script type="math/tex; mode=display">
+\eta=\frac{W}{Q_1}=\frac{Q_1-Q_2}{Q_1}=1-\frac{Q_2}{Q_1}</script><h2 id="制冷机"><a href="#制冷机" class="headerlink" title="制冷机"></a>制冷机</h2><p><img src="/2022/12/01/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%83%AD%E5%AD%A6/image-20221210194905948.png" alt="image-20221210194905948"></p>
+<script type="math/tex; mode=display">
+e=\frac{Q_2}{W}=\frac{Q_2}{Q_1'-Q_2}</script><h2 id="卡诺循环"><a href="#卡诺循环" class="headerlink" title="卡诺循环"></a>卡诺循环</h2><p><img src="/2022/12/01/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%83%AD%E5%AD%A6/image-20221210200415903.png" alt="image-20221210200415903"></p>
+<script type="math/tex; mode=display">
+\eta=\frac{T_{1}-T_{2}}{T_{1}}=1-\frac{T_{2}}{T_{1}}</script><script type="math/tex; mode=display">
+\varepsilon=\frac{Q_{2}}{W}=\frac{Q_{2}}{Q_{1}-Q_{2}}=\frac{T_{2}}{T_{1}-T_{2}}</script>]]></content>
   </entry>
   <entry>
     <title>大一/高数/微分方程</title>
@@ -3233,6 +3249,28 @@ u=\frac yx</script><p>从而化为一般微分方程</p>
 \begin{cases}x=X+h\\y=Y+k\end{cases}</script><h2 id="伯努利方程"><a href="#伯努利方程" class="headerlink" title="伯努利方程"></a>伯努利方程</h2><script type="math/tex; mode=display">
 \frac{\text{d}y}{\text{d}x} +P(x)y=Q(x)y^\alpha\\
 y^{-\alpha}\frac{\text{d}y}{\text{d}x} +P(x)y^{1-\alpha}=Q(x)</script><p>从而令$u=y^{1-\alpha}$化为一阶线性求解</p>
+<h1 id="可降阶的二阶"><a href="#可降阶的二阶" class="headerlink" title="可降阶的二阶"></a>可降阶的二阶</h1><h2 id="y’’-f-x"><a href="#y’’-f-x" class="headerlink" title="y’’=f(x)"></a>y’’=f(x)</h2><p>只需不断积分即可，注意任意常数</p>
+<p>上述解法可以推广到</p>
+<script type="math/tex; mode=display">
+y^{(n)}=f(x)</script><h2 id="y’’-f-x-y’"><a href="#y’’-f-x-y’" class="headerlink" title="y’’=f(x,y’)"></a>y’’=f(x,y’)</h2><p>使用换元法将$y’$设为$p$，利用</p>
+<script type="math/tex; mode=display">
+y''=\frac{\text{d}}{\text{d}x}(y')=\frac{\text{d}p}{\text{d}x}</script><p>化为一阶线性微分方程，求出后再进行积分即可</p>
+<h2 id="y’’-f-y-y’"><a href="#y’’-f-y-y’" class="headerlink" title="y’’=f(y,y’)"></a>y’’=f(y,y’)</h2><p>同样使用换元法将$y’$设为$p$，利用</p>
+<script type="math/tex; mode=display">
+y''=\frac{\text{d}p}{\text{d}x}=\frac{\text{d}p}{\text{d}y}\frac{\text{d}y}{\text{d}x}=p\frac{\text{d}p}{\text{d}y}</script><p>化为</p>
+<script type="math/tex; mode=display">
+p\frac{\text{d}p}{\text{d}y}=f(p,y)</script><h1 id="二阶线性微分方程"><a href="#二阶线性微分方程" class="headerlink" title="二阶线性微分方程"></a>二阶线性微分方程</h1><script type="math/tex; mode=display">
+ \frac{\text{d}^2y}{\text{d}x^2} +P(x)\frac{\text{d}y}{\text{d}x} + Q(x)y = f(x)</script><p>$f(x)$为$0$则为齐次方程</p>
+<script type="math/tex; mode=display">
+y=C_1y_1(x)+C_2y_2(x)</script><p>为方程的通解($y_1,y_2$线性无关)</p>
+<h2 id="线性相关"><a href="#线性相关" class="headerlink" title="线性相关"></a>线性相关</h2><script type="math/tex; mode=display">
+k_{1} y_{1}(x)+k_{2} y_{2}(x)+\cdots+k_{n} y_{n}(x) \equiv 0</script><p>其中$k_i$不全为$0$，则在区间上线性相关</p>
+<p>两个非零函数</p>
+<script type="math/tex; mode=display">
+y_1:y_2=C(\ne0)</script><h2 id="常数变易"><a href="#常数变易" class="headerlink" title="常数变易"></a>常数变易</h2><script type="math/tex; mode=display">
+y=C u(x) \to y=v(x)u(x)</script><h2 id="非齐次"><a href="#非齐次" class="headerlink" title="非齐次"></a>非齐次</h2><script type="math/tex; mode=display">
+y=C_1y_1(x)+C_2y_2(x)+y^*(x)</script><p>$y^*(x)$为非齐次的特解</p>
+<h2 id="解的叠加"><a href="#解的叠加" class="headerlink" title="解的叠加"></a>解的叠加</h2><p>右端的函数可以拆分后分别求特解再叠加</p>
 ]]></content>
   </entry>
 </search>
