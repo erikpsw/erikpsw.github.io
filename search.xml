@@ -1617,7 +1617,7 @@ k=\lim_{x\to \infty}\frac{f(x)}x,b=\lim_{x\to \infty}[f(x)-kx]</script>]]></cont
 <h2 id="罗尔定理"><a href="#罗尔定理" class="headerlink" title="罗尔定理"></a>罗尔定理</h2><p>若函数在闭区间$[a,b]$上连续，在开区间$(a,b)$上可导</p>
 <p>若有$f(a)=f(b)$则</p>
 <script type="math/tex; mode=display">
-\exists \xi\in(a,b)\quad\text{s.t.}f(\xi)=0</script><h2 id="拉格朗日中值定理"><a href="#拉格朗日中值定理" class="headerlink" title="拉格朗日中值定理"></a>拉格朗日中值定理</h2><p>若函数在闭区间$[a,b]$上连续，在开区间$(a,b)$上可导</p>
+\exists \xi\in(a,b)\quad\text{s.t.}f'(\xi)=0</script><h2 id="拉格朗日中值定理"><a href="#拉格朗日中值定理" class="headerlink" title="拉格朗日中值定理"></a>拉格朗日中值定理</h2><p>若函数在闭区间$[a,b]$上连续，在开区间$(a,b)$上可导</p>
 <p>则有</p>
 <script type="math/tex; mode=display">
 \exists \xi\in(a,b)\quad\text{s.t.}f'(\xi)=\frac {f(b)-f(a)}{b-a}</script><h3 id="有限增量定理"><a href="#有限增量定理" class="headerlink" title="有限增量定理"></a>有限增量定理</h3><p>若函数在闭区间$[x,x+\Delta x]$上连续，在开区间$(x,x+\Delta x)$上可导，则</p>
@@ -1672,7 +1672,7 @@ e^x=1+x+\frac1{2!}x^2+\cdots+\frac{e^{\theta x}}{(n+1)!}|x|^{n+1}</script><h3 id
 {i!}x^{i}\\&=\sum_{i=0}^n\frac{1}{(2i+1)!}\left.\left(\frac1{x^2+1}\right)^{(2i)}\right|_{x=0}x^{2i+1}\\
 \\&=\int \frac1{1+x^2}\text{d}x\\
 &=\sum_{i=0}^n\frac{(-1)^i}{2i+1} x^{2i+1}+ o(x^{2n+1})\end{aligned}</script><p>泰勒展开没有普遍规律，但关键看余项的阶数，能够消掉余项就行</p>
-<p>分式先看哪个好确定阶数，再上下同阶x</p>
+<p>分式先看哪个好确定阶数，再上下同阶</p>
 <h1 id="洛必达法则"><a href="#洛必达法则" class="headerlink" title="洛必达法则"></a>洛必达法则</h1><h2 id="frac00-型"><a href="#frac00-型" class="headerlink" title="$\frac00$型"></a>$\frac00$型</h2><ul>
 <li><script type="math/tex; mode=display">
 \lim _{x \rightarrow a} f(x)=\lim _{x \rightarrow a} g(x)=0</script></li>
@@ -1698,7 +1698,7 @@ g^{\prime}(x) \neq 0,\forall x \in \mathring{U}(a, \delta),f(x),g(x)可导</scri
   <entry>
     <title>大一/物理/运动</title>
     <url>/2022/10/02/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E8%BF%90%E5%8A%A8/</url>
-    <content><![CDATA[<h1 id="·-质点运动学"><a href="#·-质点运动学" class="headerlink" title="·                                                                                质点运动学"></a>·                                                                                质点运动学</h1><h2 id="运动"><a href="#运动" class="headerlink" title="运动"></a>运动</h2><p>质点为一个简化的忽略形状的物体，我们在选定的参考系(被选定的参考物体)下研究这个质点的运动情况</p>
+    <content><![CDATA[<h1 id="质点运动学"><a href="#质点运动学" class="headerlink" title="质点运动学"></a>质点运动学</h1><h2 id="运动"><a href="#运动" class="headerlink" title="运动"></a>运动</h2><p>质点为一个简化的忽略形状的物体，我们在选定的参考系(被选定的参考物体)下研究这个质点的运动情况</p>
 <h3 id="位矢"><a href="#位矢" class="headerlink" title="位矢"></a>位矢</h3><p>首先选取坐标原点，由此定义位矢$\vec r$</p>
 <script type="math/tex; mode=display">
 \vec r=x \vec i+y\vec j+z\vec k</script><p>位矢的方向由下式确定</p>
@@ -1968,7 +1968,10 @@ a^{3}-b^{3}=(a-b)\left(a^{2}+a b+b^{2}\right) \\
 e=\sum_{i=0}^\infty \frac1{i!}\\
 x=e^{\ln x}=\ln e^x</script><script type="math/tex; mode=display">
 x+\sqrt{x^2+1}=C\\
-\frac 1C=\sqrt{x^2+1}-x</script>]]></content>
+\frac 1C=\sqrt{x^2+1}-x</script><script type="math/tex; mode=display">
+a^2+b^2=c^2\\
+3,4,5\quad5,12,13\\
+8,15,17\quad7,24,25\\9,40,41</script>]]></content>
   </entry>
   <entry>
     <title>高中/数学/三角函数</title>
@@ -2787,7 +2790,10 @@ y=0.1\cos\left[165\pi\left(t-\frac x{330}\right)+\pi\right]\text{m}</script><scr
 W =\frac{C}2(\frac1{V_1^2}-\frac1{V_2^2})\\</script><script type="math/tex; mode=display">
 Q_1=n(\frac i2+1)R\Delta T=500\text{J}\\
 Q_2=700\text{J}</script><script type="math/tex; mode=display">
-W=\frac{3200}{293}\text{KW}=10.92\text{KW}</script>]]></content>
+W=\frac{3200}{293}\text{KW}=10.92\text{KW}</script><script type="math/tex; mode=display">
+1. N\int_{v_0}^{\infty}f(v)\text{d}v\\
+2. \frac{\displaystyle\int_{v_0}^{\infty}vf(v)\text{d}v}{\displaystyle\int_{v_0}^{\infty}f(v)\text{d}v}\\
+3. \int_{v_0}^{\infty}f(v)\text{d}v</script>]]></content>
   </entry>
   <entry>
     <title>大一/高数/积分</title>
@@ -2937,7 +2943,7 @@ f(x)=f(-x)\Rightarrow\\
 <h3 id="区间再现公式"><a href="#区间再现公式" class="headerlink" title="区间再现公式"></a>区间再现公式</h3><script type="math/tex; mode=display">
 \int_a^bf(x)\text{d}x=\int_a^bf(a+b-x)\text{d}x</script><h3 id="积分对称原理"><a href="#积分对称原理" class="headerlink" title="积分对称原理"></a>积分对称原理</h3><p>若$f(x) $关于$\frac{a+b}{2}$对称，根据区间再现公式</p>
 <script type="math/tex; mode=display">
-\int_{a}^{b} x f(x) \text{d} x=\frac{a+b}{2} \int_{a}^{b} f(x) \text{d} x</script><h1 id="反常积分"><a href="#反常积分" class="headerlink" title="反常积分"></a>反常积分</h1><h2 id="无界区间"><a href="#无界区间" class="headerlink" title="无界区间"></a>无界区间</h2><p>积分区间无限或北极函数被积函数无界的积分，称为反常积分</p>
+\int_{a}^{b} x f(x) \text{d} x=\frac{a+b}{2} \int_{a}^{b} f(x) \text{d} x</script><h1 id="反常积分"><a href="#反常积分" class="headerlink" title="反常积分"></a>反常积分</h1><h2 id="无界区间"><a href="#无界区间" class="headerlink" title="无界区间"></a>无界区间</h2><p>积分区间无限或被积函数被积函数无界的积分，称为反常积分</p>
 <script type="math/tex; mode=display">
 \lim_{b\to +\infty}\int_a^bf(x)\text{d}x</script><p>存在，则称反常积分</p>
 <script type="math/tex; mode=display">
@@ -3139,6 +3145,8 @@ T/\text{K}=273.15+t/^\circ\text{C}</script><h1 id="热力学定律"><a href="#�
 <script type="math/tex; mode=display">
 E=f(T)
 \\\Delta E= \Delta U=W+Q</script><p>实际上对系统做功和传递热量是等效的，焦耳实验测出了热功当量</p>
+<p>我们需要注意做功和传热是过程量和具体过程有关</p>
+<p>内能的变化量是状态量只和始末状态有关（处于平衡态）</p>
 <script type="math/tex; mode=display">
 J=\frac{2mgh}Q=4.18\text{J}\cdot\text{cal}^{-1}</script><p>对于微小过程(准静态)，有</p>
 <script type="math/tex; mode=display">
@@ -3200,14 +3208,28 @@ C_{n,m}=C_{V,m}+\frac R{1-n}</script><h1 id="循环过程"><a href="#循环过�
 e=\frac{Q_2}{W}=\frac{Q_2}{Q_1'-Q_2}</script><h2 id="卡诺循环"><a href="#卡诺循环" class="headerlink" title="卡诺循环"></a>卡诺循环</h2><p><img src="/2022/12/01/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%83%AD%E5%AD%A6/image-20221210200415903.png" alt="image-20221210200415903"></p>
 <script type="math/tex; mode=display">
 \eta=\frac{T_{1}-T_{2}}{T_{1}}=1-\frac{T_{2}}{T_{1}}</script><script type="math/tex; mode=display">
-\varepsilon=\frac{Q_{2}}{W}=\frac{Q_{2}}{Q_{1}-Q_{2}}=\frac{T_{2}}{T_{1}-T_{2}}</script>]]></content>
+\varepsilon=\frac{Q_{2}}{W}=\frac{Q_{2}}{Q_{1}-Q_{2}}=\frac{T_{2}}{T_{1}-T_{2}}</script><h1 id="气体动理论"><a href="#气体动理论" class="headerlink" title="气体动理论"></a>气体动理论</h1><p>分子与分子之间存在着一定的间距</p>
+<p>分子之间存在着相互作用力，注意$r_0$</p>
+<p>分子在不断的做无谓的运动，布朗运动</p>
+<p>利用统计学方法来研究气体</p>
+<h2 id="分布"><a href="#分布" class="headerlink" title="分布"></a>分布</h2><p>速率分布函数</p>
+<script type="math/tex; mode=display">
+f(v)=\lim_{\Delta v\to0}\frac{\Delta N}{N \Delta v}\\
+\int_0^{+\infty}f(v)\text{d}v=1</script><p>只有积分是具有实际意义的，单个值不具有任何意义</p>
+<h2 id="平均速率"><a href="#平均速率" class="headerlink" title="平均速率"></a>平均速率</h2><script type="math/tex; mode=display">
+\overline{v}=\frac{\int v\text{d}N}{N}=\int vf(v)\text{d}v\\=\sqrt{\frac{8RT}{\pi M}}=1.6\sqrt{\frac{RT}{ M}}</script><h2 id="方均根速率"><a href="#方均根速率" class="headerlink" title="方均根速率"></a>方均根速率</h2><script type="math/tex; mode=display">
+\overline{v^2}=\frac{\int v^2\text{d}N}{N}=\int v^2f(v)\text{d}\\\sqrt{\overline{v^2}}=\sqrt{\frac{3RT}{ M}}</script><h2 id="最概然速率"><a href="#最概然速率" class="headerlink" title="最概然速率"></a>最概然速率</h2><script type="math/tex; mode=display">
+v_p=\sqrt{\frac{2RT}{ M}}</script><h2 id="气体压强"><a href="#气体压强" class="headerlink" title="气体压强"></a>气体压强</h2><script type="math/tex; mode=display">
+p=\frac23n\overline\varepsilon_k \\
+\overline\varepsilon_k=\frac12m_0\overline{v^2}=\frac32kT\\
+\Rightarrow p=nkT</script>]]></content>
   </entry>
   <entry>
     <title>大一/高数/微分方程</title>
     <url>/2022/12/07/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/</url>
-    <content><![CDATA[<h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><p>微分方程是一种方程，它涉及对一个函数的变化率的描述。它通常表示为一个包含未知函数及其一阶或多阶导数的方程，例如：</p>
+    <content><![CDATA[<h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>微分方程是一种方程，它涉及对一个函数的变化率的描述。它通常表示为一个包含未知函数及其一阶或多阶导数的方程，例如：</p>
 <script type="math/tex; mode=display">
-\frac{dy}{dx} + y = x</script><p>其最高阶导数的阶数为微分方程的阶数</p>
+\frac{\text{d}y}{\text{d}x} + y = x</script><p>其最高阶导数的阶数为微分方程的阶数</p>
 <p>其通解含有和阶数数目相同的相互独立的常数</p>
 <h2 id="通解"><a href="#通解" class="headerlink" title="通解"></a>通解</h2><p>对于特定类型的微分方程，可以找到一个通用的解决方案</p>
 <p>例如，对于常见的一阶线性微分方程，通解可以表示为：</p>
@@ -3270,7 +3292,33 @@ k_{1} y_{1}(x)+k_{2} y_{2}(x)+\cdots+k_{n} y_{n}(x) \equiv 0</script><p>其中$k
 y_1:y_2=C(\ne0)</script><h2 id="常数变易"><a href="#常数变易" class="headerlink" title="常数变易"></a>常数变易</h2><script type="math/tex; mode=display">
 y=C u(x) \to y=v(x)u(x)</script><h2 id="非齐次"><a href="#非齐次" class="headerlink" title="非齐次"></a>非齐次</h2><script type="math/tex; mode=display">
 y=C_1y_1(x)+C_2y_2(x)+y^*(x)</script><p>$y^*(x)$为非齐次的特解</p>
+<h3 id="形式1"><a href="#形式1" class="headerlink" title="形式1"></a>形式1</h3><script type="math/tex; mode=display">
+y''+py'+qy=f(x)\\
+f(x)=P_m(x)e^{\lambda x}</script><ul>
+<li><p>$\lambda$为不为特征方程的根</p>
+<p>特解为</p>
+<script type="math/tex; mode=display">
+Q_m(x)e^{\lambda x}</script></li>
+<li><p>$\lambda$为为特征方程的单根</p>
+<script type="math/tex; mode=display">
+xQ_m(x)e^{\lambda x}</script></li>
+</ul>
+<ul>
+<li>$\lambda$为为特征方程的重根<script type="math/tex; mode=display">
+x^2Q_m(x)e^{\lambda x}</script></li>
+</ul>
+<h3 id="形式2"><a href="#形式2" class="headerlink" title="形式2"></a>形式2</h3><script type="math/tex; mode=display">
+y''+py'+qy=f(x)\\
+f(x)=[P_l(x)\cos\omega x+P_n(x)\cos\omega x]e^{\lambda x}</script><p>特解为</p>
+<script type="math/tex; mode=display">
+y^*=x^ke^{\lambda x}[R_m^{(1)}(x)\cos\omega x+R_m^{(2)}(x)\cos\omega x]\\
+m=\max\{l,n\}</script><p>其中$k$按照$x=\lambda +\text{i}\omega$是否为特征方程的根等取$0,1$</p>
 <h2 id="解的叠加"><a href="#解的叠加" class="headerlink" title="解的叠加"></a>解的叠加</h2><p>右端的函数可以拆分后分别求特解再叠加</p>
+<h1 id="欧拉方程"><a href="#欧拉方程" class="headerlink" title="欧拉方程"></a>欧拉方程</h1><script type="math/tex; mode=display">
+x^3y'''+3x^2y''-2xy'+2y=0</script><p>令$x=e^t$</p>
+<script type="math/tex; mode=display">
+D=\frac{\text{d}}{\text{d}t}\\
+x^ny^{(n)}=D(D-1)\cdots(D-n+1)y</script><p>其中$D^n$称为$n$阶微分算子</p>
 ]]></content>
   </entry>
 </search>

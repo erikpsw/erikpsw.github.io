@@ -102,7 +102,7 @@
 <meta property="og:description" content="微分的概念函数值的变化量  \Delta y&#x3D;f(x_0+\Delta x)-f(x_0)对于复杂函数，$\Delta y$比较复杂 故我们将变化量线性化，定义为微分 若函数在某邻域有定义 $\Delta y&#x3D;A\Delta x+o(\Delta x),\Delta x\to0$ 则称$f(x)$在该领域可微，$\Delta y$的线性主部$A\Delta x$ 为函数的微分，记为$\text{d">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-09-29T08:25:30.512Z">
-<meta property="article:modified_time" content="2022-10-24T11:53:24.225Z">
+<meta property="article:modified_time" content="2022-12-24T12:20:58.389Z">
 <meta property="article:author" content="Shiwei Pan">
 <meta name="twitter:card" content="summary">
 
@@ -395,7 +395,7 @@
 <h2 id="罗尔定理"><a href="#罗尔定理" class="headerlink" title="罗尔定理"></a>罗尔定理</h2><p>若函数在闭区间$[a,b]$上连续，在开区间$(a,b)$上可导</p>
 <p>若有$f(a)=f(b)$则</p>
 <script type="math/tex; mode=display">
-\exists \xi\in(a,b)\quad\text{s.t.}f(\xi)=0</script><h2 id="拉格朗日中值定理"><a href="#拉格朗日中值定理" class="headerlink" title="拉格朗日中值定理"></a>拉格朗日中值定理</h2><p>若函数在闭区间$[a,b]$上连续，在开区间$(a,b)$上可导</p>
+\exists \xi\in(a,b)\quad\text{s.t.}f'(\xi)=0</script><h2 id="拉格朗日中值定理"><a href="#拉格朗日中值定理" class="headerlink" title="拉格朗日中值定理"></a>拉格朗日中值定理</h2><p>若函数在闭区间$[a,b]$上连续，在开区间$(a,b)$上可导</p>
 <p>则有</p>
 <script type="math/tex; mode=display">
 \exists \xi\in(a,b)\quad\text{s.t.}f'(\xi)=\frac {f(b)-f(a)}{b-a}</script><h3 id="有限增量定理"><a href="#有限增量定理" class="headerlink" title="有限增量定理"></a>有限增量定理</h3><p>若函数在闭区间$[x,x+\Delta x]$上连续，在开区间$(x,x+\Delta x)$上可导，则</p>
@@ -450,7 +450,7 @@ e^x=1+x+\frac1{2!}x^2+\cdots+\frac{e^{\theta x}}{(n+1)!}|x|^{n+1}</script><h3 id
 {i!}x^{i}\\&=\sum_{i=0}^n\frac{1}{(2i+1)!}\left.\left(\frac1{x^2+1}\right)^{(2i)}\right|_{x=0}x^{2i+1}\\
 \\&=\int \frac1{1+x^2}\text{d}x\\
 &=\sum_{i=0}^n\frac{(-1)^i}{2i+1} x^{2i+1}+ o(x^{2n+1})\end{aligned}</script><p>泰勒展开没有普遍规律，但关键看余项的阶数，能够消掉余项就行</p>
-<p>分式先看哪个好确定阶数，再上下同阶x</p>
+<p>分式先看哪个好确定阶数，再上下同阶</p>
 <h1 id="洛必达法则"><a href="#洛必达法则" class="headerlink" title="洛必达法则"></a>洛必达法则</h1><h2 id="frac00-型"><a href="#frac00-型" class="headerlink" title="$\frac00$型"></a>$\frac00$型</h2><ul>
 <li><script type="math/tex; mode=display">
 \lim _{x \rightarrow a} f(x)=\lim _{x \rightarrow a} g(x)=0</script></li>
