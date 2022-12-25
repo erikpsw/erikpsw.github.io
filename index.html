@@ -692,8 +692,8 @@ f(v)=\lim_{\Delta v\to0}\frac{\Delta N}{N \Delta v}\\
 \int_0^{+\infty}f(v)\text{d}v=1</script><p>只有积分是具有实际意义的，单个值不具有任何意义</p>
 <h2 id="平均速率"><a href="#平均速率" class="headerlink" title="平均速率"></a>平均速率</h2><script type="math/tex; mode=display">
 \overline{v}=\frac{\int v\text{d}N}{N}=\int vf(v)\text{d}v\\=\sqrt{\frac{8RT}{\pi M}}=1.6\sqrt{\frac{RT}{ M}}</script><h2 id="方均根速率"><a href="#方均根速率" class="headerlink" title="方均根速率"></a>方均根速率</h2><script type="math/tex; mode=display">
-\overline{v^2}=\frac{\int v^2\text{d}N}{N}=\int v^2f(v)\text{d}\\\sqrt{\overline{v^2}}=\sqrt{\frac{3RT}{ M}}</script><h2 id="最概然速率"><a href="#最概然速率" class="headerlink" title="最概然速率"></a>最概然速率</h2><script type="math/tex; mode=display">
-v_p=\sqrt{\frac{2RT}{ M}}</script><h2 id="气体压强"><a href="#气体压强" class="headerlink" title="气体压强"></a>气体压强</h2><script type="math/tex; mode=display">
+\overline{v^2}=\frac{\int v^2\text{d}N}{N}=\int v^2f(v)\text{d}\\\sqrt{\overline{v^2}}=\sqrt{\frac{3RT}{ M}}=1.73\sqrt{\frac{RT}{ M}}</script><h2 id="最概然速率"><a href="#最概然速率" class="headerlink" title="最概然速率"></a>最概然速率</h2><script type="math/tex; mode=display">
+v_p=\sqrt{\frac{2RT}{ M}}=1.41\sqrt{\frac{RT}{ M}}</script><h2 id="气体压强"><a href="#气体压强" class="headerlink" title="气体压强"></a>气体压强</h2><script type="math/tex; mode=display">
 p=\frac23n\overline\varepsilon_k \\
 \overline\varepsilon_k=\frac12m_0\overline{v^2}=\frac32kT\\
 \Rightarrow p=nkT</script>
@@ -1913,6 +1913,16 @@ f(x)=\cos x,\frac{\cos (\tan x)-\cos x}{\tan x-x}=f'(\xi),\xi\in(x,\tan  x)\\
 &=\lim_{x\to0}\frac{(\tan x-x)f'(\xi)}{x^3\sin x}\\
 &=\lim_{x\to0}\frac{(\tan x-x)(-\sin \xi)}{x^3\sin x}\\
 &=\lim_{x\to0}-\frac{1}{3}\frac{\sin \xi}{\sin x}=-\frac 13\\
+\end{aligned}</script><script type="math/tex; mode=display">
+\lim_{n\to \infty}\frac1{n^4}\prod_{k=1}^{2n}(n^2+k^2)^{\frac1n}=\lim_{n\to \infty}A</script><script type="math/tex; mode=display">
+\int_0^kf(x)\text{d}x=\lim_{n\to \infty}\frac{k}n\sum_{i=1}^nf\left(\frac {ki}n\right)</script><script type="math/tex; mode=display">
+\begin{aligned}A&=\exp\left [\frac1n\sum_{k=1}^{2n}\ln(n^2+k^2)+2\ln\frac{1}{n^2}\right]\\&=
+\exp\left [\frac1n\sum_{k=1}^{2n}\ln(n^2+k^2)+2n\frac1{n}\ln\frac{1}{n^2}\right]\\
+&=\exp\left [\frac1n\sum_{k=1}^{2n}\ln\left(\frac{n^2+k^2}{n^2}\right)\right]\\
+&=\exp\left [\frac1n\sum_{k=1}^{2n}\ln\left(1+\frac{k^2}{n^2}\right)\right]\\
+\lim_{n\to \infty}A&=\exp \int_0^2\ln(1+x^2)\text{d}x\\
+&=\exp\left\{\left[x\ln(1+x^2)\right]_0^2-\int_0^2\frac{2x^2}{1+x^2}\text{d}x\right\} \\
+&=e^{2(\ln5-2+\arctan 2)}
 \end{aligned}</script>
           
         
