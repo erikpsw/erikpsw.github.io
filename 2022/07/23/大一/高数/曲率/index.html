@@ -94,15 +94,15 @@
 
 
 
-<meta name="description" content="预备知识曲线光滑，有连续转动的切线  f(x)&#x3D;\begin{cases}x&#x3D;x(t),\\y&#x3D;y(t)\end{cases}\\ \exists x&#39;(t),y&#39;(t)\in C(\alpha,\beta)\\ x&#39;(t)^2+y&#39;(t)^2\ne0充分条件：导函数连续 弧微分公式 s&#x3D;\int_{\alpha}^{\beta}\sqrt{x&#39;(t)^2+y&#39;(t)^2}\text{d}t \\">
+<meta name="description" content="预备知识曲线光滑，有连续转动的切线  f(x)&#x3D;\begin{cases}x&#x3D;x(t),\\y&#x3D;y(t)\end{cases}\\ \exists x&#39;(t),y&#39;(t)\in C(\alpha,\beta)\\ x&#39;(t)^2+y&#39;(t)^2\ne0充分条件：导函数连续 弧微分公式 \begin{aligned} s&amp;&#x3D;\int_{\alpha}^{\beta}\sqrt{x&#39;(t)^2+y&#39;(">
 <meta property="og:type" content="article">
 <meta property="og:title" content="大一&#x2F;高数&#x2F;曲率">
 <meta property="og:url" content="http://yoursite.com/2022/07/23/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E6%9B%B2%E7%8E%87/index.html">
 <meta property="og:site_name" content="BLOG">
-<meta property="og:description" content="预备知识曲线光滑，有连续转动的切线  f(x)&#x3D;\begin{cases}x&#x3D;x(t),\\y&#x3D;y(t)\end{cases}\\ \exists x&#39;(t),y&#39;(t)\in C(\alpha,\beta)\\ x&#39;(t)^2+y&#39;(t)^2\ne0充分条件：导函数连续 弧微分公式 s&#x3D;\int_{\alpha}^{\beta}\sqrt{x&#39;(t)^2+y&#39;(t)^2}\text{d}t \\">
+<meta property="og:description" content="预备知识曲线光滑，有连续转动的切线  f(x)&#x3D;\begin{cases}x&#x3D;x(t),\\y&#x3D;y(t)\end{cases}\\ \exists x&#39;(t),y&#39;(t)\in C(\alpha,\beta)\\ x&#39;(t)^2+y&#39;(t)^2\ne0充分条件：导函数连续 弧微分公式 \begin{aligned} s&amp;&#x3D;\int_{\alpha}^{\beta}\sqrt{x&#39;(t)^2+y&#39;(">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-07-23T13:09:55.941Z">
-<meta property="article:modified_time" content="2022-10-26T14:38:39.993Z">
+<meta property="article:modified_time" content="2022-12-28T03:14:18.316Z">
 <meta property="article:author" content="Shiwei Pan">
 <meta name="twitter:card" content="summary">
 
@@ -384,7 +384,11 @@ f(x)=\begin{cases}x=x(t),\\y=y(t)\end{cases}\\
 \exists x'(t),y'(t)\in C(\alpha,\beta)\\
 x'(t)^2+y'(t)^2\ne0</script><p>充分条件：导函数连续</p>
 <h2 id="弧微分公式"><a href="#弧微分公式" class="headerlink" title="弧微分公式"></a>弧微分公式</h2><script type="math/tex; mode=display">
-s=\int_{\alpha}^{\beta}\sqrt{x'(t)^2+y'(t)^2}\text{d}t</script><script type="math/tex; mode=display">
+\begin{aligned}
+s&=\int_{\alpha}^{\beta}\sqrt{x'(t)^2+y'(t)^2}\text{d}t\\
+&=\int_{a}^{b}\sqrt{1+y'^2}\text{d}x\\
+&=\int_{\alpha}^{\beta}\sqrt{\rho^2(\varphi)+\rho'^2(\varphi)}\text{d}\varphi
+\end{aligned}</script><script type="math/tex; mode=display">
 \\ \text ds=\sqrt{1+y'^2}\text dx</script><h1 id="曲率"><a href="#曲率" class="headerlink" title="曲率"></a>曲率</h1><p>平均曲率</p>
 <script type="math/tex; mode=display">
 \overline{K}=\left|\frac{\Delta \alpha}{\Delta s}\right|</script><p>曲线$C$在$M$处的曲率</p>
@@ -537,7 +541,7 @@ K=\frac{|y''|}{(1+y'^2)^{3/2}}\approx |y''|</script><h2 id="曲率圆"><a href="
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">72</span>
+                <span class="site-state-item-count">73</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -623,7 +627,7 @@ K=\frac{|y''|}{(1+y'^2)^{3/2}}\approx |y''|</script><h2 id="曲率圆"><a href="
         <div class="copyright" >
   
   &copy;  2020 - 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

@@ -101,10 +101,16 @@
 <meta property="og:site_name" content="BLOG">
 <meta property="og:description" content="矩阵矩形的数组，如  A&#x3D;\left[\begin{array}{l} a_{11} &amp;a_{12}&amp;a_{13}\\a_{21} &amp;a_{22}&amp;a_{23}\end{array}\right] &#x3D;\left[\begin{array}{l} 1 &amp;2&amp;3\\4&amp;5&amp;6\end{array}\right]是一个$2\times3$的矩阵$A&#x3D;(a_{ij})$其中$i&#x3D;1,2;j&#x3D;1,2,3$">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/image-20221230133843315.png">
+<meta property="og:image" content="http://yoursite.com/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/image-20221230134433897.png">
+<meta property="og:image" content="http://yoursite.com/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/image-20221230135131766.png">
+<meta property="og:image" content="http://yoursite.com/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/image-20221230154855424.png">
+<meta property="og:image" content="http://yoursite.com/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/image-20221230182812507.png">
 <meta property="article:published_time" content="2022-08-04T08:41:35.085Z">
-<meta property="article:modified_time" content="2022-11-14T05:19:47.713Z">
+<meta property="article:modified_time" content="2022-12-30T12:30:27.601Z">
 <meta property="article:author" content="Shiwei Pan">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/image-20221230133843315.png">
 
 
 
@@ -421,31 +427,84 @@ P=\begin{bmatrix}1&0&0\\0&0&1\\0&1&0\end{bmatrix}</script><h4 id="对称矩阵">
 c_{ij}=a_{ij}+b_{ij}</script><h4 id="数乘"><a href="#数乘" class="headerlink" title="数乘"></a>数乘</h4><script type="math/tex; mode=display">
 \lambda A=(\lambda a_{ij})</script><p>$\lambda$称为矩阵的一个标量倍数，矩阵的负为$-A(\lambda=-1)$</p>
 <p>故减法$A-B=A+(-B)$</p>
-<h3 id="乘法"><a href="#乘法" class="headerlink" title="==乘法=="></a>==乘法==</h3><p>给定两个相容的矩阵$A,B(A的列数=B的行数)$</p>
+<h3 id="乘法"><a href="#乘法" class="headerlink" title="乘法"></a>乘法</h3><p>给定两个相容的矩阵$A,B(A的列数=B的行数)$</p>
 <p>设$A$为$m\times p$的矩阵，$B$为$p\times n$的矩阵</p>
 <p>则 $C=AB$为$m\times n$的矩阵 </p>
 <script type="math/tex; mode=display">
 c_{ij}=\sum_{k=1}^pa_{ik}b_{kj}(i=1,\cdots,m;j=1,\cdots,n)</script><p>矩阵乘法满足结合律，分配律</p>
 <script type="math/tex; mode=display">
 A(BC)=(AB)C\\
-A(B+C)=AB+AC</script><p>==$A,B,C$必须是相容的==</p>
+A(\lambda B+\mu C)=\lambda AB+\mu A C\\
+A(\lambda B)=\lambda(AB)\\
+P^n=(P^{n-1})P</script><p>==$A,B,C$必须是相容的==</p>
+<h4 id="意义"><a href="#意义" class="headerlink" title="意义"></a>意义</h4><p>对于方阵</p>
+<script type="math/tex; mode=display">
+M=\begin{bmatrix}a&b\\c&d\end{bmatrix}\\
+M\begin{bmatrix}1\\0\end{bmatrix}=M\boldsymbol{i}=\begin{bmatrix}a\\c\end{bmatrix}\\
+M\begin{bmatrix}0\\1\end{bmatrix}=M\boldsymbol{j}=\begin{bmatrix}b\\d\end{bmatrix}</script><p>而有又有向量的分解不难看出</p>
+<script type="math/tex; mode=display">
+\left[\begin{array}{ll}
+a & b \\
+c & d
+\end{array}\right]\left[\begin{array}{l}
+x \\
+y
+\end{array}\right]=x\left[\begin{array}{l}
+a \\
+c
+\end{array}\right]+y\left[\begin{array}{l}
+b \\
+d
+\end{array}\right]=\left[\begin{array}{c}
+a x+b y \\
+c x+d y
+\end{array}\right]</script><p><img src="/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/image-20221230133843315.png" alt="image-20221230133843315"></p>
+<p>从而很容易理解旋转矩阵</p>
+<p><img src="/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/image-20221230134433897.png" alt="image-20221230134433897"></p>
+<script type="math/tex; mode=display">
+\mathbf{R}_{\theta}=\left[\begin{array}{l}
+\cos \theta & -\sin \theta \\
+\sin \theta & \cos \theta
+\end{array}\right]</script><p>对于直线</p>
+<script type="math/tex; mode=display">
+M\vec{OR}=M\vec{OA}+tM\vec{AR}</script><p>如果$M\vec{AR}=0$成立，则变化将直线变为一个点</p>
+<p><img src="/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/image-20221230135131766.png" alt="image-20221230135131766"></p>
+<p>若两个变换后的基向量共线则该变换结果为一维空间(线)</p>
+<p>对于变换</p>
+<script type="math/tex; mode=display">
+M=\begin{bmatrix}1&0\\0&0\end{bmatrix}\\</script><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">x0=<span class="number">1</span></span><br><span class="line">y0=<span class="number">1</span></span><br><span class="line">v1=<span class="number">0</span></span><br><span class="line">v2=<span class="number">1</span></span><br><span class="line">t0=<span class="number">-3</span></span><br><span class="line">t1=<span class="number">1</span></span><br><span class="line">T=np.linspace(t0,t1,<span class="number">100</span>)</span><br><span class="line">X=x0+v1*T</span><br><span class="line">Y=y0+v2*T</span><br><span class="line">M=np.array([[<span class="number">1</span>,<span class="number">0</span>],[<span class="number">0</span>,<span class="number">0</span>]])</span><br><span class="line">L=np.matmul(M,np.array([X,Y]))</span><br><span class="line"></span><br><span class="line">fig=go.Figure()</span><br><span class="line">fig.add_trace(go.Scatter(x=X,y=Y,name=<span class="string">f'原直线'</span>))  </span><br><span class="line">fig.add_trace(go.Scatter(x=L[<span class="number">0</span>],y=L[<span class="number">1</span>],name=<span class="string">f'变换后'</span>))  </span><br><span class="line">fig.update_layout(title=<span class="string">'线性变换'</span>,</span><br><span class="line">                    xaxis_title=<span class="string">'x'</span>,yaxis_title=<span class="string">'y'</span>,xaxis_range=[<span class="number">0</span>,<span class="number">2</span>],yaxis_range=[<span class="number">-3</span>,<span class="number">3</span>])</span><br></pre></td></tr></table></figure>
+<p><img src="/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/image-20221230154855424.png" alt="image-20221230154855424"></p>
+<p>将直线变化为了一个点，整个平面变换成了$y=0$</p>
+<p>一般的，如果一个条直线上的任意$2$个不同的点经过变换后重合</p>
+<p>则该变换为不可逆矩阵</p>
 <h3 id="转置"><a href="#转置" class="headerlink" title="转置"></a>转置</h3><p>交换$A$行和列获得的矩阵为$A$的转置$A^{\text T}$(第几行变为第几列)</p>
 <script type="math/tex; mode=display">
 A=\left[\begin{array}{l} 1 &2&3\\4&5&6\end{array}\right]
 \\
-A^{\text T}=\left[\begin{array}l 1&4\\2&5\\3&6\end{array}\right]</script><script type="math/tex; mode=display">
+A^{\text T}=\left[\begin{array}l 1&4\\2&5\\3&6\end{array}\right]</script><p>变换的有序性</p>
+<script type="math/tex; mode=display">
 (AB)^{\text T}=B^{\text T}A^{\text T}</script><h3 id="逆"><a href="#逆" class="headerlink" title="逆"></a>逆</h3><p>定义</p>
 <script type="math/tex; mode=display">
-AA^{-1}=I_n</script><p>若没有逆矩阵则称为奇异的</p>
-<p>对线性方程组$Mx=\alpha$，得</p>
+A^{-1}A=AA^{-1}=I_n</script><p>若没有逆矩阵则称为奇异的</p>
+<p>由共线和或叉乘得</p>
+<script type="math/tex; mode=display">
+S=\begin{vmatrix}a&b\\c&d\end{vmatrix}=ad-bc</script><p>若面积为$0$则为奇异矩阵</p>
+<script type="math/tex; mode=display">
+S_1\to S_2\to S_3  \Rightarrow\\
+S_3\to S_2\to S_1\\
+(MN)^{-1}=N^{-1}M^{-1}</script><p>简单情况下，对基向量进行研究，通过初等变换矩阵的乘积来得到逆矩阵</p>
+<h4 id="一般情况"><a href="#一般情况" class="headerlink" title="一般情况"></a>一般情况</h4><p>对线性方程组$Mx=\alpha$，得</p>
 <script type="math/tex; mode=display">
 x=\alpha M^{-1}</script><p>对$M=\begin{bmatrix}a&amp;b\c&amp;d\end{bmatrix}$</p>
 <script type="math/tex; mode=display">
+MM^{-1}=\begin{bmatrix}a&b\\c&d\end{bmatrix}\begin{bmatrix}u&v\\s&t\end{bmatrix}=\begin{bmatrix}1&0\\0&1\end{bmatrix}</script><script type="math/tex; mode=display">
 \det M\ne0\\
-\Rightarrow M^{-1}=\begin{bmatrix}\frac d{ad-bc}&\frac {-b}{ad-bc}\\\frac {-c}{ad-bc}&\frac a{ad-bc}\end{bmatrix}</script><h1 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h1><h2 id="范数"><a href="#范数" class="headerlink" title="范数"></a>范数</h2><p>frobennius范数</p>
+\Rightarrow M^{-1}=\begin{bmatrix}\frac d{ad-bc}&\frac {-b}{ad-bc}\\\frac {-c}{ad-bc}&\frac a{ad-bc}\end{bmatrix}</script><h1 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h1><h2 id="范数"><a href="#范数" class="headerlink" title="范数"></a>范数</h2><p>$\rm frobennius$范数</p>
 <script type="math/tex; mode=display">
 ||A||_{\text{Frob}}=\left[\sum_{ij}a_{ij}^2\right]^{\frac12}</script><h2 id="特征向量"><a href="#特征向量" class="headerlink" title="特征向量"></a>特征向量</h2><script type="math/tex; mode=display">
-Ax=\lambda x(x\ne\vec{0})</script><p>对称矩阵总可以找到特征向量</p>
+Ax=\lambda x(x\ne\vec{0})</script><p>表示变换A对于x构成的张成空间没有影响，$\lambda$称为特征值</p>
+<p>例如三维旋转矩阵的特征向量和旋转轴共线并且特征值为$1$</p>
+<p>对称矩阵总可以找到特征向量</p>
 <script type="math/tex; mode=display">
 \begin{bmatrix}a&b\\c&d\end{bmatrix}
 \begin{bmatrix}x\\y\end{bmatrix}=\lambda\begin{bmatrix}x\\y\end{bmatrix}=
@@ -453,9 +512,45 @@ Ax=\lambda x(x\ne\vec{0})</script><p>对称矩阵总可以找到特征向量</p>
 \begin{bmatrix}x\\y\end{bmatrix}\\
 
 \begin{bmatrix}a-\lambda&b\\c&d-\lambda\end{bmatrix}
-\begin{bmatrix}x\\y\end{bmatrix}=B\begin{bmatrix}x\\y\end{bmatrix}=\begin{bmatrix}0\\0\end{bmatrix}</script><p>若$\det M\ne 0$，$x=0$舍去、</p>
-<p>$\det M= 0$，可以解出特征向量</p>
-
+\begin{bmatrix}x\\y\end{bmatrix}=B\begin{bmatrix}x\\y\end{bmatrix}=\begin{bmatrix}0\\0\end{bmatrix}</script><script type="math/tex; mode=display">
+\Rightarrow A-\lambda I=0</script><p>若$\det A\ne 0$，$x=0$舍去</p>
+<p>$\det A= 0$，则空间压缩成一条线</p>
+<p>总有一个向量经过变换后得到零向量</p>
+<p>解出特征值后可以解出特征向量(可能有很多如缩放)</p>
+<h3 id="特征基"><a href="#特征基" class="headerlink" title="特征基"></a>特征基</h3><p>利用特征向量可以将矩阵乘法转化为数乘</p>
+<p>若将基向量变换为$2$个不共线的特征向量来表示</p>
+<p>则有非常好的性质</p>
+<script type="math/tex; mode=display">
+M^n=\lambda^n</script><p>再转换回去即可得到结果</p>
+<h1 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h1><script type="math/tex; mode=display">
+\text E[g(X)]=\sum_xg(x)\cdot\Pr\{X=x\}</script><p>对于一个决策行为，定义收益函数$q(d,h)$</p>
+<script type="math/tex; mode=display">
+d_i\in\{\text {act}\;1,\text {act}\;2,\cdots,\text {act}\;n\}</script><p>对于每一种策略，在某个随机变量的影响下都有相应的概率获得不同的收益<br>|  $h$   | $h_1$ | $h_2$ | $h_3$ |<br>| :——: | :—-: | :—-: | :—-: |<br>| $p(h)$ | $p_1$ | $p_2$ | $p_3$ |</p>
+<p>对于每一种决定$d$</p>
+<script type="math/tex; mode=display">
+\overline{q}=\sum_iq(d,h_i)p_i</script><p>写成矩阵形式</p>
+<script type="math/tex; mode=display">
+(p_1,p_2,p_3)\left.\underbrace {\begin{pmatrix}
+ q_{11}&q_{12}  & q_{13}\\
+ q_{21} & q_{22} & q_{23}\\
+ q_{31} &q_{32}  &q_{33}
+\end{pmatrix}}_{d_i}\right\}h_i=(R(d_1),R(d_2),R(d_3))</script><h2 id="决策树"><a href="#决策树" class="headerlink" title="决策树"></a>决策树</h2><p><img src="/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/image-20221230182812507.png" alt="image-20221230182812507"></p>
+<h2 id="马尔可夫链"><a href="#马尔可夫链" class="headerlink" title="马尔可夫链"></a>马尔可夫链</h2><script type="math/tex; mode=display">
+\left(\begin{array}{l}p_1^{(n+1)}\\p_2^{(n+1)}\end{array}\right )=\left(\begin{array}{l}p_{11}& p_{21}\\p_{12}& p_{22}\end{array}\right )\left(\begin{array}{l}p_1^{(n)}\\p_2^{(n)}\end{array}\right )</script><p>其中</p>
+<script type="math/tex; mode=display">
+P (X_{n+1}|X=j)=p_1^{(n)}P(X_{n+1}=j|X_n=1)+p_2^{(n)}P(X_{n+1}=j|X_n=2)\\
+p_{ij}=P(X_{n+1}=j|X_n=i)</script><p>你们将$p_{ij}$称为转移概率</p>
+<script type="math/tex; mode=display">
+P=\left(\begin{array}{l}p_{11}& p_{21}\\p_{12}& p_{22}\end{array}\right )</script><p>称为状态转移矩阵，$(p_1^{(n)},p_2^{(n)})$这样的行向量称为该瓦尔科夫链在时刻$n$的分布</p>
+<p>再乘上收益矩阵即可得到两种决策的收益</p>
+<p>考虑短期过程，观察平均收益</p>
+<script type="math/tex; mode=display">
+q_n(d)=\sum_{k=0}^nq(d,k)</script><p>对于长期过程，有平稳分布</p>
+<script type="math/tex; mode=display">
+w=wP\\
+w=(w_1,w_2,\cdots),\sum_{i=1}^nw_i=1</script><p>类比不动点，可以使用特征向量得到</p>
+<script type="math/tex; mode=display">
+w=\left(\begin{array}{l}p_{11}& p_{21}\\p_{12}& p_{22}\end{array}\right )^nw_0</script>
       
     </div>
     
@@ -599,7 +694,7 @@ Ax=\lambda x(x\ne\vec{0})</script><p>对称矩阵总可以找到特征向量</p>
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">72</span>
+                <span class="site-state-item-count">73</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -662,7 +757,7 @@ Ax=\lambda x(x\ne\vec{0})</script><p>对称矩阵总可以找到特征向量</p>
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#矩阵"><span class="nav-number">1.</span> <span class="nav-text">矩阵</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#向量"><span class="nav-number">1.1.</span> <span class="nav-text">向量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特殊的矩阵"><span class="nav-number">1.2.</span> <span class="nav-text">特殊的矩阵</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#零矩阵"><span class="nav-number">1.2.1.</span> <span class="nav-text">零矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方阵"><span class="nav-number">1.2.2.</span> <span class="nav-text">方阵</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#对角矩阵"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">对角矩阵</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#单位矩阵"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">单位矩阵</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三对角矩阵"><span class="nav-number">1.2.2.3.</span> <span class="nav-text">三对角矩阵</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#上三角矩阵"><span class="nav-number">1.2.2.4.</span> <span class="nav-text">上三角矩阵</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#排列矩阵"><span class="nav-number">1.2.2.5.</span> <span class="nav-text">排列矩阵</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对称矩阵"><span class="nav-number">1.2.2.6.</span> <span class="nav-text">对称矩阵</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#矩阵的基本操作"><span class="nav-number">1.3.</span> <span class="nav-text">矩阵的基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#加法"><span class="nav-number">1.3.1.</span> <span class="nav-text">加法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数乘"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">数乘</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#乘法"><span class="nav-number">1.3.2.</span> <span class="nav-text">&#x3D;&#x3D;乘法&#x3D;&#x3D;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#转置"><span class="nav-number">1.3.3.</span> <span class="nav-text">转置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#逆"><span class="nav-number">1.3.4.</span> <span class="nav-text">逆</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#性质"><span class="nav-number">2.</span> <span class="nav-text">性质</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#范数"><span class="nav-number">2.1.</span> <span class="nav-text">范数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特征向量"><span class="nav-number">2.2.</span> <span class="nav-text">特征向量</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#矩阵"><span class="nav-number">1.</span> <span class="nav-text">矩阵</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#向量"><span class="nav-number">1.1.</span> <span class="nav-text">向量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特殊的矩阵"><span class="nav-number">1.2.</span> <span class="nav-text">特殊的矩阵</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#零矩阵"><span class="nav-number">1.2.1.</span> <span class="nav-text">零矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方阵"><span class="nav-number">1.2.2.</span> <span class="nav-text">方阵</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#对角矩阵"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">对角矩阵</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#单位矩阵"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">单位矩阵</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三对角矩阵"><span class="nav-number">1.2.2.3.</span> <span class="nav-text">三对角矩阵</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#上三角矩阵"><span class="nav-number">1.2.2.4.</span> <span class="nav-text">上三角矩阵</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#排列矩阵"><span class="nav-number">1.2.2.5.</span> <span class="nav-text">排列矩阵</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对称矩阵"><span class="nav-number">1.2.2.6.</span> <span class="nav-text">对称矩阵</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#矩阵的基本操作"><span class="nav-number">1.3.</span> <span class="nav-text">矩阵的基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#加法"><span class="nav-number">1.3.1.</span> <span class="nav-text">加法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数乘"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">数乘</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#乘法"><span class="nav-number">1.3.2.</span> <span class="nav-text">乘法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#意义"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">意义</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#转置"><span class="nav-number">1.3.3.</span> <span class="nav-text">转置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#逆"><span class="nav-number">1.3.4.</span> <span class="nav-text">逆</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一般情况"><span class="nav-number">1.3.4.1.</span> <span class="nav-text">一般情况</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#性质"><span class="nav-number">2.</span> <span class="nav-text">性质</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#范数"><span class="nav-number">2.1.</span> <span class="nav-text">范数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特征向量"><span class="nav-number">2.2.</span> <span class="nav-text">特征向量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#特征基"><span class="nav-number">2.2.1.</span> <span class="nav-text">特征基</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#应用"><span class="nav-number">3.</span> <span class="nav-text">应用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#决策树"><span class="nav-number">3.1.</span> <span class="nav-text">决策树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#马尔可夫链"><span class="nav-number">3.2.</span> <span class="nav-text">马尔可夫链</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -685,7 +780,7 @@ Ax=\lambda x(x\ne\vec{0})</script><p>对称矩阵总可以找到特征向量</p>
         <div class="copyright" >
   
   &copy;  2020 - 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
