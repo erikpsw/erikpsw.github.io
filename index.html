@@ -392,9 +392,12 @@ Y=f(X)+\epsilon</script><p>其中$\epsilon$为误差，不可避免</p>
 f(x)=E(Y|X=x)</script><p>$X$表示抽象特征$x$为具体值</p>
 <p>需要准确根据所有数据选取模型的复杂度</p>
 <h2 id="线性模型"><a href="#线性模型" class="headerlink" title="线性模型"></a>线性模型</h2><script type="math/tex; mode=display">
-f_L(X)=\beta_0+\beta_1X_1+\beta_2X_2\dots</script><p>几乎不可能正确，但很可能是最佳的一部分</p>
+\hat { y } = \hat { \beta_1 } x + \hat { \beta_0}</script><p>几乎不可能正确，但很可能是最佳的一部分</p>
 <script type="math/tex; mode=display">
-\hat { y } = \hat { \beta_1 } x + \hat { \beta_0}\\\hat { \beta_1 } = \frac { \sum\limits _ { i = 1 } ^ { n } x _ { i } y _ { i } - n \overline { x } \overline { y } } { \sum \limits_ { i = 1 } ^ { n } x _ { i } ^ { 2 } - n \overline { x } ^ { 2 } } , \hat { \beta_0 } = \overline { y } - \hat { b } \overline { x }</script><p>相关系数为</p>
+
+\\ \frac{\partial y}{\partial \beta_1}=\frac{\partial y}{\partial \beta_0}=0\\
+
+\hat { \beta_1 } = \frac { \sum\limits _ { i = 1 } ^ { n } x _ { i } y _ { i } - n \overline { x } \overline { y } } { \sum \limits_ { i = 1 } ^ { n } x _ { i } ^ { 2 } - n \overline { x } ^ { 2 } } , \hat { \beta_0 } = \overline { y } - \hat { b } \overline { x }</script><p>相关系数为</p>
 <script type="math/tex; mode=display">
 r = \frac { \sum \limits_ { i = 1 } ^ { n } x _ { i } y _ { i } - n \overline { x } \overline { y } } { \sqrt { ( \sum \limits_ { i = 1 } ^ { n } x _ { i } ^ { 2 } - n \overline { x } ^ { 2 } ) ( \sum \limits_ { i = 1 } ^ { n } y _ { i } ^ { 2 } - n \overline { y } ^ { 2 } ) } }</script><p>计算标准差的平方(方差)为</p>
 <script type="math/tex; mode=display">
@@ -409,10 +412,39 @@ Y=\beta_0+\beta_1X+\epsilon</script><p>由方差的性质得到</p>
 \text{Var}(\epsilon)=\text{Var}[Y]</script><script type="math/tex; mode=display">
 \text{SE}(\hat{\beta_1})^2=\frac{\sigma^2}{S_{xx}}
 \\
-\text{SE}(\hat{\beta_0})^2=\sigma^2\left(\frac1n+\frac{\overline{x}^2}{S_{xx}}\right)</script><h3 id="置信区间"><a href="#置信区间" class="headerlink" title="置信区间"></a>置信区间</h3><p>Confidence Intervals</p>
+\text{SE}(\hat{\beta_0})^2=\sigma^2\left(\frac1n+\frac{\overline{x}^2}{S_{xx}}\right)</script><p><strong>RSE：</strong>Residual Standard Error</p>
+<script type="math/tex; mode=display">
+\mathrm{RSE}=\sqrt{\frac{1}{n-2} \operatorname{RSS}}=\sqrt{\frac{1}{n-2} \sum_{i=1}^{n}\left(y_{i}-\hat{y}_{j}\right)^{2}}</script><p><strong>RSS：</strong>Residual Sum of Squares</p>
+<p>由误差导致的真实值和估计值之间的偏差平方和</p>
+<h3 id="置信区间"><a href="#置信区间" class="headerlink" title="置信区间"></a>置信区间</h3><p>Confidence Intervals</p>
 <p>有$95\%$的概率使得最佳值在区间内(根据数据的不同)</p>
 <script type="math/tex; mode=display">
-[\hat{\beta_1}-2\text{SE}(\hat{\beta_1}),\hat{\beta_1}+2\text{SE}(\hat{\beta_1})]</script><h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><p>最小化方差</p>
+[\hat{\beta_1}-2\text{SE}(\hat{\beta_1}),\hat{\beta_1}+2\text{SE}(\hat{\beta_1})]</script><h3 id="多元"><a href="#多元" class="headerlink" title="多元"></a>多元</h3><script type="math/tex; mode=display">
+f_L(X)=\beta_0+\beta_1X_1+\beta_2X_2\dots\\
+Y=X\beta+\epsilon</script><p>若一个量变化，其余量固定不变，不相关(常常不符合事实)</p>
+<p>但有一些很有用，能够看出某个量的影响</p>
+<script type="math/tex; mode=display">
+\text{minimize}\{l(\beta)= (Y-X\beta)^2\}\\
+\frac{\partial l}{\partial \beta}=0,l(\beta)=(Y-X\beta)^T(Y-X\beta)</script><p> 展开后求导可得</p>
+<script type="math/tex; mode=display">
+\beta=(X^TX)^{-1}X^TY</script><p>其中$X$代表$n$个样本</p>
+<script type="math/tex; mode=display">
+X=\begin{bmatrix}1&X_{11}&\cdots&X_{1(m-1)}&X_{1m}\\
+1&X_{21}&\cdots&X_{2(m-1)}&X_{2m}\\
+1&X_{31}&\cdots&X_{3(m-1)}&X_{3m}\\
+\vdots& \vdots&\vdots&\vdots&\vdots\\
+1&X_{n1}&\cdots&X_{n(m-1)}&X_{nm}\\
+\end{bmatrix}</script><p>对于</p>
+<script type="math/tex; mode=display">
+y=2x_1-3.4x_2+4.2\\
+\beta=\begin{bmatrix}\beta_0\\\beta_1\\\beta_2\\
+
+
+\end{bmatrix}</script><h2 id="相关"><a href="#相关" class="headerlink" title="相关"></a>相关</h2><p>若两个量相关则</p>
+<script type="math/tex; mode=display">
+\beta_1\ne0</script><script type="math/tex; mode=display">
+\beta_1=0\Rightarrow Y=\beta_0+\epsilon</script><p>假设检验(hypothesis testing)</p>
+<h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><p>最小化方差</p>
 <script type="math/tex; mode=display">
 \text{minimize}\{E[(Y-\hat{f}(x))^2|X=x]\}</script><p>$\hat{f}(x)$为所估计的函数</p>
 <script type="math/tex; mode=display">
@@ -2318,7 +2350,7 @@ a^2+b^2=c^2\\
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">73</span>
+                <span class="site-state-item-count">71</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
