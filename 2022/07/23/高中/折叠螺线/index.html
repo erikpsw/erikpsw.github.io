@@ -94,12 +94,12 @@
 
 
 
-<meta name="description" content="折纸与迭代函数系统折叠按如下图折叠      观察图$(14)$，可以看出它形成了一个螺旋 建系 展开，观察折痕图，以纸的左下角为原点建立坐标系  再把螺旋放在坐标系之中   观察右侧图形可以得到$y&#x3D;\sqrt{2}-1$，$AB&#x3D;1-y&#x3D;2-\sqrt{2}&#x3D;OA$ 在继续之前，我们先了解一下旋转矩阵 旋转矩阵对于任意点$(x,y)$，我们在极坐标系中表示为 $\left\{\begin{ar">
+<meta name="description" content="折纸与迭代函数系统折叠按如下图折叠      观察图$(14)$，可以看出它形成了一个螺旋 建系 展开，观察折痕图，以纸的左下角为原点建立坐标系  再把螺旋放在坐标系之中   观察右侧图形可以得到$y&#x3D;\sqrt{2}-1$，$AB&#x3D;1-y&#x3D;2-\sqrt{2}&#x3D;OA$ 在继续之前，我们先了解一下旋转矩阵 旋转矩阵对于任意点$(x,y)$，我们在极坐标系中表示为 $\left{\begin{arr">
 <meta property="og:type" content="article">
 <meta property="og:title" content="高中&#x2F;折叠螺线">
 <meta property="og:url" content="http://yoursite.com/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%98%E5%8F%A0%E8%9E%BA%E7%BA%BF/index.html">
 <meta property="og:site_name" content="BLOG">
-<meta property="og:description" content="折纸与迭代函数系统折叠按如下图折叠      观察图$(14)$，可以看出它形成了一个螺旋 建系 展开，观察折痕图，以纸的左下角为原点建立坐标系  再把螺旋放在坐标系之中   观察右侧图形可以得到$y&#x3D;\sqrt{2}-1$，$AB&#x3D;1-y&#x3D;2-\sqrt{2}&#x3D;OA$ 在继续之前，我们先了解一下旋转矩阵 旋转矩阵对于任意点$(x,y)$，我们在极坐标系中表示为 $\left\{\begin{ar">
+<meta property="og:description" content="折纸与迭代函数系统折叠按如下图折叠      观察图$(14)$，可以看出它形成了一个螺旋 建系 展开，观察折痕图，以纸的左下角为原点建立坐标系  再把螺旋放在坐标系之中   观察右侧图形可以得到$y&#x3D;\sqrt{2}-1$，$AB&#x3D;1-y&#x3D;2-\sqrt{2}&#x3D;OA$ 在继续之前，我们先了解一下旋转矩阵 旋转矩阵对于任意点$(x,y)$，我们在极坐标系中表示为 $\left{\begin{arr">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://yoursite.com/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%98%E5%8F%A0%E8%9E%BA%E7%BA%BF/image-20200919191304031.png">
 <meta property="og:image" content="http://yoursite.com/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%98%E5%8F%A0%E8%9E%BA%E7%BA%BF/image-20200919191344915.png">
@@ -412,13 +412,13 @@
 <p> 观察右侧图形可以得到$y=\sqrt{2}-1$，$AB=1-y=2-\sqrt{2}=OA$</p>
 <p>在继续之前，我们先了解一下旋转矩阵</p>
 <h2 id="旋转矩阵"><a href="#旋转矩阵" class="headerlink" title="旋转矩阵"></a>旋转矩阵</h2><p>对于任意点$(x,y)$，我们在极坐标系中表示为</p>
-<p>$\left\{\begin{array}{l}<br>x=r \cos \phi \\<br>y=r \sin \phi<br>\end{array}\right.$</p>
+<p>$\left{\begin{array}{l}<br>x=r \cos \phi \<br>y=r \sin \phi<br>\end{array}\right.$</p>
 <p>如果把它绕原点旋转$\theta$角，可以得到旋转后的点在直角坐标系中的坐标为</p>
-<p>$\left\{\begin{array}{l}<br>x^{\prime}=\operatorname{rcos}(\phi+\theta)=r \cos \phi \cos \theta-r \sin \phi \sin \theta=x \cos \theta-y \sin \theta \\<br>y^{\prime}=r \sin (\phi+\theta)=r \cos \phi \sin \theta+r \sin \phi \cos \theta=x \sin \theta+y \cos \theta<br>\end{array}\right .$</p>
+<p>$\left{\begin{array}{l}<br>x^{\prime}=\operatorname{rcos}(\phi+\theta)=r \cos \phi \cos \theta-r \sin \phi \sin \theta=x \cos \theta-y \sin \theta \<br>y^{\prime}=r \sin (\phi+\theta)=r \cos \phi \sin \theta+r \sin \phi \cos \theta=x \sin \theta+y \cos \theta<br>\end{array}\right .$</p>
 <p>写成矩阵形式</p>
-<p>$\left(\begin{array}{l}<br>x^{\prime} \\<br>y^{\prime}<br>\end{array}\right)=\left(\begin{array}{ll}<br>\cos \theta &amp; -\sin \theta \\<br>\sin \theta &amp; \cos \theta<br>\end{array}\right)\left(\begin{array}{l}<br>x \\<br>y<br>\end{array}\right)$</p>
+<p>$\left(\begin{array}{l}<br>x^{\prime} \<br>y^{\prime}<br>\end{array}\right)=\left(\begin{array}{ll}<br>\cos \theta &amp; -\sin \theta \<br>\sin \theta &amp; \cos \theta<br>\end{array}\right)\left(\begin{array}{l}<br>x \<br>y<br>\end{array}\right)$</p>
 <p>所以旋转矩阵$\mathbf{R}_{\theta}$为</p>
-<p>$\mathbf{R}_{\theta}=\left(\begin{array}{l}<br>\cos \theta &amp; -\sin \theta \\<br>\sin \theta &amp; \cos \theta<br>\end{array}\right)$</p>
+<p>$\mathbf{R}_{\theta}=\left(\begin{array}{l}<br>\cos \theta &amp; -\sin \theta \<br>\sin \theta &amp; \cos \theta<br>\end{array}\right)$</p>
 <p>理解旋转矩阵是我们接下来讨论的基础</p>
 <h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>我们将螺旋透视化</p>
 <p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%98%E5%8F%A0%E8%9E%BA%E7%BA%BF/image-20200919201651794.png" alt="image-20200919201651794"></p>
@@ -426,11 +426,11 @@
 <p>相似比为$\lambda= \frac {AB} {OE}=2-\sqrt 2$</p>
 <p>观察$x$轴的基向量$\hat{\imath}=\overrightarrow{OE}$从$\overrightarrow{OE}$变化到$\overrightarrow{AB}$的过程，我们可以发现，实际上$\overrightarrow{OE}$先乘了缩小因子$\lambda $变为了$\overrightarrow{OA}$，再绕着原点$O$逆时针旋转了$45^{\circ} $，最后沿原基向量$\overrightarrow{OE}$方向平移了$\lambda\overrightarrow{OE}$，便得到了变换后$x$轴的基向量$\hat{\imath}^{\prime}=\overrightarrow{AB}$</p>
 <p>我们可以把这个仿射变换过程用矩阵形式表示</p>
-<p>$F(x, y)=\left(\begin{array}{ll}<br>a &amp; b \\<br>c &amp; d<br>\end{array}\right)\left(\begin{array}{l}<br>x \\<br>y<br>\end{array}\right)+\left(\begin{array}{l}<br>e \\<br>f<br>\end{array}\right)$</p>
+<p>$F(x, y)=\left(\begin{array}{ll}<br>a &amp; b \<br>c &amp; d<br>\end{array}\right)\left(\begin{array}{l}<br>x \<br>y<br>\end{array}\right)+\left(\begin{array}{l}<br>e \<br>f<br>\end{array}\right)$</p>
 <p>其中的线性变换矩阵为</p>
-<p>$\begin{aligned}<br>\left(\begin{array}{ll}<br>a &amp; b \\<br>c &amp; d<br>\end{array}\right) &amp;=(2-\sqrt{2})\left(\begin{array}{cc}<br>\cos 45^{\circ} &amp; -\sin 45^{\circ} \\<br>\sin 45^{\circ} &amp; \cos 45^{\circ}<br>\end{array}\right) \\<br>&amp;=\left(\begin{array}{ll}<br>2-\sqrt{2}<br>\end{array}\right)\left(\begin{array}{ll}<br>\frac{\sqrt{2}}{2} &amp; -\frac{\sqrt{2}}{2} \\<br>\frac{\sqrt{2}}{2} &amp; \frac{\sqrt{2}}{2}<br>\end{array}\right)=(\sqrt{2}-1)\left(\begin{array}{cc}<br>1 &amp; -1 \\<br>1 &amp; 1<br>\end{array}\right)<br>\end{aligned}$</p>
+<p>$\begin{aligned}<br>\left(\begin{array}{ll}<br>a &amp; b \<br>c &amp; d<br>\end{array}\right) &amp;=(2-\sqrt{2})\left(\begin{array}{cc}<br>\cos 45^{\circ} &amp; -\sin 45^{\circ} \<br>\sin 45^{\circ} &amp; \cos 45^{\circ}<br>\end{array}\right) \<br>&amp;=\left(\begin{array}{ll}<br>2-\sqrt{2}<br>\end{array}\right)\left(\begin{array}{ll}<br>\frac{\sqrt{2}}{2} &amp; -\frac{\sqrt{2}}{2} \<br>\frac{\sqrt{2}}{2} &amp; \frac{\sqrt{2}}{2}<br>\end{array}\right)=(\sqrt{2}-1)\left(\begin{array}{cc}<br>1 &amp; -1 \<br>1 &amp; 1<br>\end{array}\right)<br>\end{aligned}$</p>
 <p>所以我们的变换函数为</p>
-<p>$F(x, y)=(\sqrt{2}-1)\left(\begin{array}{cc}<br>1 &amp; -1 \\<br>1 &amp; 1<br>\end{array}\right)\left(\begin{array}{c}<br>x \\<br>y<br>\end{array}\right)+\left(\begin{array}{c}<br>2-\sqrt{2} \\<br>0<br>\end{array}\right)$</p>
+<p>$F(x, y)=(\sqrt{2}-1)\left(\begin{array}{cc}<br>1 &amp; -1 \<br>1 &amp; 1<br>\end{array}\right)\left(\begin{array}{c}<br>x \<br>y<br>\end{array}\right)+\left(\begin{array}{c}<br>2-\sqrt{2} \<br>0<br>\end{array}\right)$</p>
 <h2 id="分析-1"><a href="#分析-1" class="headerlink" title="分析"></a>分析</h2><h3 id="迭代函数系统iterated-function-systems-IFS"><a href="#迭代函数系统iterated-function-systems-IFS" class="headerlink" title="迭代函数系统iterated function systems (IFS)"></a>迭代函数系统iterated function systems (IFS)</h3><p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%98%E5%8F%A0%E8%9E%BA%E7%BA%BF/Barnsley_fern_2000x2000.png" alt="Barnsley_fern_2000x2000"></p>
 <p>迭代函数系统（Iterated Function System，IFS）是分形理论的重要分支 。它以仿射变换为框架，根据几何对象的整体与局部具有自相似的结构，将总体形状以一定的概率按不同的仿射变换迭代下去，直至得到满意的分形图形。相比较分形几何学，IFS与集合论关系更为密切。IFS在1981年提出。</p>
 <h3 id="python程序例子"><a href="#python程序例子" class="headerlink" title="python程序例子"></a>python程序例子</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">x = <span class="number">0</span></span><br><span class="line">y = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> range(<span class="number">1500</span>):</span><br><span class="line">    r = random.random()</span><br><span class="line">    r = r * <span class="number">100</span></span><br><span class="line">    xn = x</span><br><span class="line">    yn = y</span><br><span class="line">    <span class="keyword">if</span> r &lt; <span class="number">1</span>:</span><br><span class="line">        x = <span class="number">0</span></span><br><span class="line">        y = <span class="number">0.16</span> * yn</span><br><span class="line">    <span class="keyword">elif</span> r &lt; <span class="number">86</span>:</span><br><span class="line">        x = <span class="number">0.85</span> * xn + <span class="number">0.04</span> * yn</span><br><span class="line">        y = <span class="number">-0.04</span> * xn + <span class="number">0.85</span> * yn + <span class="number">1.6</span></span><br><span class="line">    <span class="keyword">elif</span> r &lt; <span class="number">93</span>:</span><br><span class="line">        x = <span class="number">0.20</span> * xn - <span class="number">0.26</span> * yn</span><br><span class="line">        y = <span class="number">0.23</span> * xn + <span class="number">0.22</span> * yn + <span class="number">1.6</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        x = <span class="number">-0.15</span> * xn + <span class="number">0.28</span> * yn</span><br><span class="line">        y = <span class="number">0.26</span> * xn + <span class="number">0.24</span> * yn + <span class="number">0.44</span></span><br><span class="line">    plt.scatter(x, y,s=<span class="number">6</span>,c=<span class="string">'g'</span>,alpha=<span class="number">0.7</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
@@ -443,25 +443,25 @@
 <h3 id="寻找不动点"><a href="#寻找不动点" class="headerlink" title="寻找不动点"></a>寻找不动点</h3><p>在数学中，函数的<strong>不动点</strong>或<strong>定点</strong>是指被这个函数映射到其自身一个点</p>
 <p>在我们的变换函数中如果有一个点经过函数变换后得到的仍是其本身，那我们的图形就不再前进，这个点就是不动点</p>
 <p>写成矩阵形式为</p>
-<p>$\left(\begin{array}{c}<br>x \\<br>y<br>\end{array}\right)=(\sqrt{2}-1)\left(\begin{array}{cc}<br>1 &amp; -1 \\<br>1 &amp; 1<br>\end{array}\right)\left(\begin{array}{c}<br>x \\<br>y<br>\end{array}\right)+\left(\begin{array}{c}<br>2-\sqrt{2} \\<br>0<br>\end{array}\right)$</p>
+<p>$\left(\begin{array}{c}<br>x \<br>y<br>\end{array}\right)=(\sqrt{2}-1)\left(\begin{array}{cc}<br>1 &amp; -1 \<br>1 &amp; 1<br>\end{array}\right)\left(\begin{array}{c}<br>x \<br>y<br>\end{array}\right)+\left(\begin{array}{c}<br>2-\sqrt{2} \<br>0<br>\end{array}\right)$</p>
 <p>化简得</p>
-<p>$ \left(\begin{array}{c}x \\y\end{array}\right) = \left( \begin{array}{c} ( \sqrt { 2 } - 1 ) ( x - y ) + 2 - \sqrt { 2 }  \\  ( \sqrt { 2 } - 1 ) ( x + y )\end{array}\right)$</p>
+<p>$ \left(\begin{array}{c}x \y\end{array}\right) = \left( \begin{array}{c} ( \sqrt { 2 } - 1 ) ( x - y ) + 2 - \sqrt { 2 }  \  ( \sqrt { 2 } - 1 ) ( x + y )\end{array}\right)$</p>
 <p>于是得到一个二元一次方程组</p>
-<p>$\left\{\begin{array}{l}<br> (\sqrt { 2 } - 2 ) x - ( \sqrt { 2 } - 1 ) y + 2 - \sqrt { 2 } = 0  \\<br>(\sqrt { 2 } - 1 ) x + ( \sqrt { 2 } - 2 ) y = 0<br>\end{array}\right.$</p>
+<p>$\left{\begin{array}{l}<br> (\sqrt { 2 } - 2 ) x - ( \sqrt { 2 } - 1 ) y + 2 - \sqrt { 2 } = 0  \<br>(\sqrt { 2 } - 1 ) x + ( \sqrt { 2 } - 2 ) y = 0<br>\end{array}\right.$</p>
 <p>解得</p>
-<p>$\left\{\begin{array}{l}x=\frac{2}{3}\\y=\frac{\sqrt{2}}{3}\end{array}\right.$</p>
+<p>$\left{\begin{array}{l}x=\frac{2}{3}\y=\frac{\sqrt{2}}{3}\end{array}\right.$</p>
 <p>于是点$(\frac{2}{3},\frac{\sqrt{2}}{3})$就是我们要找的不动点</p>
 <h2 id="利用复数"><a href="#利用复数" class="headerlink" title="利用复数"></a>利用复数</h2><p> 考察$ e^{\mathrm{i}x} $的幂级数展开式的实部和虚部。用$\mathrm{i}$的幂以长度4循环$ 1, i,-1,-i, 1, \cdots$，所以有</p>
-<p>$\begin{aligned}<br>\mathrm{e}^{\mathrm{i} x} &amp;=1+\mathrm{i} x+\frac{(\mathrm{i} x)^{2}}{2 !}+\frac{(\mathrm{i} x)^{3}}{3 !}+\cdots \\<br>&amp;=\left[1-\frac{x^{2}}{2 !}+\frac{x^{4}}{4 !}+\cdots\right]+\mathrm{i}\left[x-\frac{x^{3}}{3 !}+\frac{x^{5}}{5 !}+\cdots\right] \\<br>&amp;=\cos x+\mathrm{i} \sin x<br>\end{aligned}$</p>
+<p>$\begin{aligned}<br>\mathrm{e}^{\mathrm{i} x} &amp;=1+\mathrm{i} x+\frac{(\mathrm{i} x)^{2}}{2 !}+\frac{(\mathrm{i} x)^{3}}{3 !}+\cdots \<br>&amp;=\left[1-\frac{x^{2}}{2 !}+\frac{x^{4}}{4 !}+\cdots\right]+\mathrm{i}\left[x-\frac{x^{3}}{3 !}+\frac{x^{5}}{5 !}+\cdots\right] \<br>&amp;=\cos x+\mathrm{i} \sin x<br>\end{aligned}$</p>
 <p>以下图的方式构造复平面</p>
 <p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%98%E5%8F%A0%E8%9E%BA%E7%BA%BF/image-20200920133231935.png" alt="image-20200920133231935"></p>
 <p>将螺旋透视化</p>
 <p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%98%E5%8F%A0%E8%9E%BA%E7%BA%BF/image-20200920133342891.png" alt="image-20200920133342891"></p>
-<p>由上面的分析可知，螺旋以右图的形式前进，$P_0P_1+P_1P_2+P_2P_3+\cdots+P_{n-1}P_{n}$即为$P_n$在复平面中的坐标</p>
+<p>由上面的分析可知，螺旋以右图的形式前进，$P<em>0P_1+P_1P_2+P_2P_3+\cdots+P</em>{n-1}P_{n}$即为$P_n$在复平面中的坐标</p>
 <p>从$P_0P_1$到$P_1P_2$，就是先逆时针旋转$\frac \pi 4$，再乘上缩小因子$a= 2-\sqrt 2$，所以</p>
 <p>$P_{1}=2-\sqrt{2}$</p>
-<p>$P_{2}=P_{1}+a^{2} e^{(\pi/4) i}=a+a^{2} e^{(\pi/4) i} $</p>
-<p>$P_{3}=P_{2}+a^{3} e^{2(\pi / 4) i}=a+a^{2} e^{(\pi / 4) i}+a^{3} e^{2(\pi / 4) i}$</p>
+<p>$P<em>{2}=P</em>{1}+a^{2} e^{(\pi/4) i}=a+a^{2} e^{(\pi/4) i} $</p>
+<p>$P<em>{3}=P</em>{2}+a^{3} e^{2(\pi / 4) i}=a+a^{2} e^{(\pi / 4) i}+a^{3} e^{2(\pi / 4) i}$</p>
 <p>不断迭代</p>
 <p>$P_{n}=a+a^{2} e^{\frac{\pi}{4} i}+a^{3} e^{2 \frac{\pi}{4} i}+\cdots+a^{n} e^{(n-1) \frac{\pi}{4} i}$</p>
 <p>当$n\to \infty$时，有</p>
@@ -469,10 +469,10 @@
 <p>这是一个几何级数，所以</p>
 <p>$\sum_{n=0}^{\infty} z^{n}=\frac{1}{(1-z)}$</p>
 <p>其中</p>
-<p>$\begin{aligned}z&amp;=a e^{(\pi / 4) i}\\&amp;=(2-\sqrt{2})(\cos (\pi / 4)+i \sin (\pi / 4))\\&amp;=(2-\sqrt{2})((\sqrt{2} / 2)+(\sqrt{2} / 2) i)\\&amp;=<br>(\sqrt{2}-1)(1+i)\end{aligned}$</p>
+<p>$\begin{aligned}z&amp;=a e^{(\pi / 4) i}\&amp;=(2-\sqrt{2})(\cos (\pi / 4)+i \sin (\pi / 4))\&amp;=(2-\sqrt{2})((\sqrt{2} / 2)+(\sqrt{2} / 2) i)\&amp;=<br>(\sqrt{2}-1)(1+i)\end{aligned}$</p>
 <p>$a=2-\sqrt{2}=2 /(2+\sqrt{2})$</p>
 <p>所以我们的不动点为</p>
-<p>$\begin{aligned}P&amp;=(2-\sqrt{2}) \frac{1}{1-(\sqrt{2}-1)(1+i)}\\&amp;=\frac{2}{2+\sqrt{2}} \frac{1}{(2-\sqrt{2})-(\sqrt{2}-1) i}\\&amp;=\frac{2}{2-\sqrt{2} i}\end{aligned}$</p>
+<p>$\begin{aligned}P&amp;=(2-\sqrt{2}) \frac{1}{1-(\sqrt{2}-1)(1+i)}\&amp;=\frac{2}{2+\sqrt{2}} \frac{1}{(2-\sqrt{2})-(\sqrt{2}-1) i}\&amp;=\frac{2}{2-\sqrt{2} i}\end{aligned}$</p>
 <p>同时乘以共轭复数</p>
 <script type="math/tex; mode=display">
 \begin{aligned}P&=\frac{2}{2-\sqrt{2} i} \frac{2+\sqrt{2} i}{2+\sqrt{2} i}\\&=\frac{4+2 \sqrt{2} i}{6}\\&=\frac{2}{3}+\frac{\sqrt{2}}{3} i\end{aligned}</script><p>这和我们用矩阵方法求解的答案是一样的</p>
@@ -630,7 +630,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">71</span>
+                <span class="site-state-item-count">72</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

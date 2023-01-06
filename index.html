@@ -311,7 +311,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2023/01/02/%E5%A4%A7%E4%B8%80/%E7%BB%9F%E8%AE%A1/%E5%9B%9E%E5%BD%92/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2023/01/05/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E5%82%85%E9%87%8C%E5%8F%B6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Shiwei Pan">
@@ -330,7 +330,205 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2023/01/02/%E5%A4%A7%E4%B8%80/%E7%BB%9F%E8%AE%A1/%E5%9B%9E%E5%BD%92/" itemprop="url">大一/统计/回归</a></h1>
+                <a class="post-title-link" href="/2023/01/05/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E5%82%85%E9%87%8C%E5%8F%B6/" itemprop="url">大一/数据科学/傅里叶</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-01-05T11:50:59+08:00">
+                2023-01-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="复数"><a href="#复数" class="headerlink" title="复数"></a>复数</h1><h2 id="表示"><a href="#表示" class="headerlink" title="表示"></a>表示</h2><script type="math/tex; mode=display">
+z=a+b\text{i}\\
+a=\Re z\quad
+b=\Im z</script><script type="math/tex; mode=display">
+|z|=|a+b\mathrm{i}|=\sqrt{a^2+b^2}\\\overline{z}=a-b\text{i}</script><p>其中$\overline{z}$为共轭复数</p>
+<script type="math/tex; mode=display">
+\Re z=\frac12(z+\overline z)\\
+\Re z=\frac1{2\text i}(z-\overline z)\\</script><h2 id="运算定律"><a href="#运算定律" class="headerlink" title="运算定律"></a>运算定律</h2><script type="math/tex; mode=display">
+(a+b\mathrm{i})\pm (c+d\mathrm{i})=(a\pm c)+(b\pm d)\mathrm{i}\\(a+b\mathrm{i})(c+d\mathrm{i})=(ac-bd)+(ad+bc)\mathrm{i}\\\frac{a+b\mathrm{i}  }{c+d\mathrm{i}  }=\frac{(a+b\mathrm{i})(c-d\mathrm{i})}{(c+d\mathrm{i})(c-d\mathrm{i})}=\frac{(ac+bd)+(bc-ad)\mathrm{i}  }{c^2+d^2}</script><h2 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h2><script type="math/tex; mode=display">
+z\overline z=|z|^2\\
+\overline{z+w}=\overline z+\overline w\\
+\overline{zw}=\overline z\;\overline w\\
+|zw|=|z||w|\\
+\left|\frac{z}{w}\right|=\frac{|z|}{|w|}</script><h1 id="几何表示"><a href="#几何表示" class="headerlink" title="几何表示"></a>几何表示</h1><p><img src="/2023/01/05/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E5%82%85%E9%87%8C%E5%8F%B6/image-20230105144356493.png" alt="image-20230105144356493"></p>
+<script type="math/tex; mode=display">
+z = a + b\text{i} = r(\cos \theta  + \text{isin}\theta ) = re^{\theta{\text i} }</script><p>其中$\theta $称为辐角，记为$\text{Arg} z$，对于$-\pi&lt;\theta\le\pi$</p>
+<script type="math/tex; mode=display">
+\text{Arg} z=\text{arg}z+2k\pi,k \in \mathbf{Z}</script><p>而$\text{arg}z$就是辐角的主值</p>
+<h2 id="性质-1"><a href="#性质-1" class="headerlink" title="性质"></a>性质</h2><script type="math/tex; mode=display">
+z_{1} z_{2}=r_{1} r_{2}\left(\cos \left(\theta_{1}+\theta_{2}\right)+i \operatorname{isin}\left(\theta_{1}+\theta_{2}\right)\right)\\
+\text{Arg}(z_{1} z_{2})=\text{Arg}z_{1}+\text{Arg}z_{2}</script><p>同理</p>
+<script type="math/tex; mode=display">
+\frac{z_{1}}{z_{2}}=  \frac{r_{1}}{r_{2}}\left[\cos \left(\theta_{1}-\theta_{2}\right)+\operatorname{isin}\left(\theta_{1}-\theta_{2}\right)\right]\\
+\operatorname{Arg}\left(\frac{z_{1}}{z_{2}}\right)=\operatorname{Arg} z_{1}-\operatorname{Arg} z_{2}</script><p>可以看出复数乘除和旋转有关</p>
+<p>应用于垂直，有</p>
+<script type="math/tex; mode=display">
+\operatorname{arg}\left(\frac{z_{1}}{z_{2}}\right)=\pm\frac\pi2\\
+\Re\frac{z_{1}}{z_{2}}=\Re\frac{z_{1}}{z_{2}}|z_2|^2=\Re z_1\overline{z_2}=0</script><p>同理，平行</p>
+<script type="math/tex; mode=display">
+\operatorname{arg}\left(\frac{z_{1}}{z_{2}}\right)=0/\pi\\\Im z_1\overline{z_2}=0</script><h3 id="棣莫弗公式"><a href="#棣莫弗公式" class="headerlink" title="棣莫弗公式"></a>棣莫弗公式</h3><p>de Moivre formula</p>
+<script type="math/tex; mode=display">
+(\cos \theta+\text{i} \sin \theta)^{n}=\cos n \theta+\text{i}  \sin n \theta=(e^{\text{i} \theta})^n</script><p>从而对于$|z|=1$</p>
+<script type="math/tex; mode=display">
+\omega=\sqrt[n]{z},\omega^n=z\\\cos n \varphi+\text{i}  \sin n \varphi=\cos \theta+\text{i} \sin \theta\\
+\varphi=\frac{\theta+2k\pi}{n}\;(k=0,1,\cdots ,n-1)</script><p>注意到每次加上$2\pi/n$</p>
+<script type="math/tex; mode=display">
+\omega=\cos \frac{2 \pi}{n}+i \sin \frac{2 \pi}{n}\\
+\sqrt[n]1=1,\omega,\omega^2\dots\omega^{n-1}</script><p>这就是单位根</p>
+<h1 id="傅里叶变换"><a href="#傅里叶变换" class="headerlink" title="傅里叶变换"></a>傅里叶变换</h1><script type="math/tex; mode=display">
+g(t)-A_0=\sum_{i=1}^\infty A_n\cos(n\omega t+\varphi_n)</script><p>考虑这个图形的质心</p>
+<script type="math/tex; mode=display">
+g(t)e^{-2\pi ft    \text{i}}\\
+z_c=\frac1N\sum_{k=0}^{N}g(t_k)e^{-2\pi ft_k    \text{i}}</script><p>取极限，并不需平均</p>
+<script type="math/tex; mode=display">
+\hat{g}(f)=\int_{0}^{t_m}g(t)e^{-2\pi ft    \text{i}}\text{d}t</script><p>利用复数的三角形式</p>
+<p><img src="/2023/01/05/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E5%82%85%E9%87%8C%E5%8F%B6/image-20230105165158433.png" alt="image-20230105165158433"></p>
+<p>当频率匹配时，积分为正</p>
+<p>由三角函数的正交性，若正交，为零</p>
+<p><img src="/2023/01/05/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E5%82%85%E9%87%8C%E5%8F%B6/image-20230105165412880.png" alt="image-20230105165412880"></p>
+<p>从而得到两个分量$\sin | \cos$的强度</p>
+<h1 id="快速傅里叶变换"><a href="#快速傅里叶变换" class="headerlink" title="快速傅里叶变换"></a>快速傅里叶变换</h1><h2 id="多项式乘法"><a href="#多项式乘法" class="headerlink" title="多项式乘法"></a>多项式乘法</h2><p>对于多项式</p>
+<script type="math/tex; mode=display">
+A(x)=\sum_{i=0}^{n-1}a_ix^{i}\\
+B(x)=\sum_{i=0}^{n-1}b_ix^{i}\\
+C(x)=A(x)B(x)=\sum_{i=0}^{2n-2}c_ix^{i}\\
+c_i=\sum_{j=0}^ia_jb_{i-j}</script><p>这是多项式的系数表示，但还可以使用点值表示</p>
+<script type="math/tex; mode=display">
+\{(x_0,y_0),(x_1,y_1)\dots(x_{n-1},y_{n-1})\}</script><p>其中$x_i$各不相同，可以证明两种表示是等价的</p>
+<script type="math/tex; mode=display">
+\left[\begin{array}{c}
+P\left(x_{0}\right) \\
+P\left(x_{1}\right) \\
+\vdots \\
+P\left(x_{n-1}\right)
+\end{array}\right]=\left[\begin{array}{ccccc}
+1 & x_{0} & x_{0}^{2} & \cdots & x_{0}^{n-1} \\
+1 & x_{1} & x_{1}^{2} & \cdots & x_{1}^{n-1} \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+1 & x_{n-1} & x_{n-1}^{2} & \cdots & x_{n-1}^{n-1}
+\end{array}\right]\left[\begin{array}{c}
+p_{0} \\
+p_{1} \\
+\vdots \\
+p_{n-1}
+\end{array}\right]</script><p>所以$C(x)$可以表达为</p>
+<script type="math/tex; mode=display">
+\{(x_0,y_0y_0'),(x_1,y_1y_1')\dots(x_{2n-2},y_{2n-2}y_{2n-2}')\}</script><p>利用拉格朗日插值公式</p>
+<script type="math/tex; mode=display">
+A(x)=\sum_{k=0}^{n-1}y_k\frac{\displaystyle\prod_{j\ne k}(x-x_j)}{\displaystyle\prod_{j\ne k}(x_k-x_j)}</script><p>可以快速将点值表示转化为系数表示</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2023/01/02/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E5%9B%9E%E5%BD%92/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2023/01/02/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E5%9B%9E%E5%BD%92/" itemprop="url">大一/数据科学/回归</a></h1>
         
 
         <div class="post-meta">
@@ -394,7 +592,6 @@ f(x)=E(Y|X=x)</script><p>$X$表示抽象特征$x$为具体值</p>
 <h2 id="线性模型"><a href="#线性模型" class="headerlink" title="线性模型"></a>线性模型</h2><script type="math/tex; mode=display">
 \hat { y } = \hat { \beta_1 } x + \hat { \beta_0}</script><p>几乎不可能正确，但很可能是最佳的一部分</p>
 <script type="math/tex; mode=display">
-
 \\ \frac{\partial y}{\partial \beta_1}=\frac{\partial y}{\partial \beta_0}=0\\
 
 \hat { \beta_1 } = \frac { \sum\limits _ { i = 1 } ^ { n } x _ { i } y _ { i } - n \overline { x } \overline { y } } { \sum \limits_ { i = 1 } ^ { n } x _ { i } ^ { 2 } - n \overline { x } ^ { 2 } } , \hat { \beta_0 } = \overline { y } - \hat { b } \overline { x }</script><p>相关系数为</p>
@@ -424,8 +621,8 @@ f_L(X)=\beta_0+\beta_1X_1+\beta_2X_2\dots\\
 Y=X\beta+\epsilon</script><p>若一个量变化，其余量固定不变，不相关(常常不符合事实)</p>
 <p>但有一些很有用，能够看出某个量的影响</p>
 <script type="math/tex; mode=display">
-\text{minimize}\{l(\beta)= (Y-X\beta)^2\}\\
-\frac{\partial l}{\partial \beta}=0,l(\beta)=(Y-X\beta)^T(Y-X\beta)</script><p> 展开后求导可得</p>
+\text{minimize}\{\ell(\beta)= (Y-X\beta)^2\}\\
+\frac{\partial l}{\partial \beta}=0,\ell(\beta)=(Y-X\beta)^T(Y-X\beta)</script><p> 展开后求导可得</p>
 <script type="math/tex; mode=display">
 \beta=(X^TX)^{-1}X^TY</script><p>其中$X$代表$n$个样本</p>
 <script type="math/tex; mode=display">
@@ -440,28 +637,41 @@ y=2x_1-3.4x_2+4.2\\
 \beta=\begin{bmatrix}\beta_0\\\beta_1\\\beta_2\\
 
 
-\end{bmatrix}</script><h2 id="相关"><a href="#相关" class="headerlink" title="相关"></a>相关</h2><p>若两个量相关则</p>
+\end{bmatrix}</script><h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a>相关</h3><p>若两个量相关则</p>
 <script type="math/tex; mode=display">
 \beta_1\ne0</script><script type="math/tex; mode=display">
-\beta_1=0\Rightarrow Y=\beta_0+\epsilon</script><p>假设检验(hypothesis testing)</p>
-<h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><p>最小化方差</p>
+\beta_1=0\Rightarrow Y=\beta_0+\epsilon</script><p> 对于多元模型，可以引入乘积项</p>
+<script type="math/tex; mode=display">
+y=\beta_0+\beta_1X_1+\beta_2X_2+\beta_3X_1X_2+\epsilon</script><h3 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h3><p>最小化方差</p>
 <script type="math/tex; mode=display">
 \text{minimize}\{E[(Y-\hat{f}(x))^2|X=x]\}</script><p>$\hat{f}(x)$为所估计的函数</p>
 <script type="math/tex; mode=display">
 E[(Y-\hat{f}(x))^2|X=x]=[f(x)-\hat{f}(x)]^2+\text{Var}(\epsilon)</script><p>但每个值不一定都有</p>
 <script type="math/tex; mode=display">
 \rm good /over/under\;fitting</script><p>取测试数据集计算准确度，评估模型好坏</p>
-<h3 id="取均值"><a href="#取均值" class="headerlink" title="取均值"></a>取均值</h3><script type="math/tex; mode=display">
+<p>可以引入非线性项来改进模型</p>
+<script type="math/tex; mode=display">
+Y=\beta_0+\beta_1X+\beta_2X^2+\epsilon</script><h1 id="分类模型"><a href="#分类模型" class="headerlink" title="分类模型"></a>分类模型</h1><script type="math/tex; mode=display">
 \hat{f}(x)=\text{Ave}(Y|X\in \mathcal{N}(x))</script><p>考察$x$的邻域$\mathcal{N}(x)$，如扩展到$10\%$的数据</p>
 <p>但对高维数据范围太大失去了局部信息，效果不好</p>
-<h1 id="分类模型"><a href="#分类模型" class="headerlink" title="分类模型"></a>分类模型</h1><p>分类器$C(X)$，考虑条件概率</p>
+<p>分类器$C(X)$，考虑条件概率</p>
 <script type="math/tex; mode=display">
 p_k(x)=\text{Pr}(Y=k|X=x),k=1,2,\dots ,k</script><p>分类结果为</p>
 <script type="math/tex; mode=display">
 Y=j \;\text{if}\;p_j(x)=\max\{p_k(x) \}</script><p>用正确率来衡量结果</p>
-<p><img src="/2023/01/02/%E5%A4%A7%E4%B8%80/%E7%BB%9F%E8%AE%A1/%E5%9B%9E%E5%BD%92/image-20230102194141113.png" alt="image-20230102194141113"></p>
+<p><img src="/2023/01/02/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E5%9B%9E%E5%BD%92/image-20230102194141113.png" alt="image-20230102194141113"></p>
 <p>可使用$\rm Nearest-neighbor$，如找十个看哪种最多</p>
-
+<h2 id="Logistic"><a href="#Logistic" class="headerlink" title="Logistic"></a>Logistic</h2><p>逻辑斯谛回归</p>
+<script type="math/tex; mode=display">
+p(X)=\text{Pr}\{Y=1|X\}\\
+p(X)=\frac{e^{\beta_0+\beta_1X}}{1+e^{\beta_0+\beta_1X}}\\
+\text{Pr}\{Y=0|X\}=\frac{1}{1+e^{\beta_0+\beta_1X}}\\
+\ln \left(\frac{p(X)}{1-p(X)}\right)=\beta_{0}+\beta_{1} X\\</script><p>这是一种广义线性模型，利用最大似然函数估计误差</p>
+<script type="math/tex; mode=display">
+\ell\left(\beta_{0}, \beta\right)=\prod_{i: y_{i}=1} p\left(x_{i}\right) \prod_{i: y_{i}=0}\left(1-p\left(x_{i}\right)\right)</script><p>随机抽小球，取得一个样本</p>
+<p>我们认为概率最大的情况就是这个结果，从而</p>
+<script type="math/tex; mode=display">
+\text{maximize}\{\ell\left(\beta_{0}, \beta\right)\}</script>
           
         
       
@@ -2155,151 +2365,6 @@ f(x)=\cos x,\frac{\cos (\tan x)-\cos x}{\tan x-x}=f'(\xi),\xi\in(x,\tan  x)\\
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/10/04/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E7%AD%89%E4%BB%B7%E5%8F%98%E5%BD%A2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/10/04/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E7%AD%89%E4%BB%B7%E5%8F%98%E5%BD%A2/" itemprop="url">大一/高数/等价变形</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-10-04T23:43:58+08:00">
-                2022-10-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <script type="math/tex; mode=display">
-x^2-a=0\Rightarrow x={\color{red}\pm a(a\ge0)}\\
-\sqrt{1-\cos^2x}=|\sin x|\\
-\sqrt{1-\cos x}\sim\frac {\sqrt{2}}{2} {\color{red}{|x|}}\\
-(\sqrt{a})^2=a,(\sqrt{a^2})=|a|\\
-\sqrt{\frac AB},讨论A,B正负\\
-f(x)>x\Rightarrow\begin{cases}\frac{f(x)}x>1,x>0\\
-\frac{f(x)}x<1,x<0\\
-f(0)>0,x=0
-\end{cases}</script><script type="math/tex; mode=display">
-(a+b+c)^{2}=a^{2}+b^{2}+c^{2}+2 a b+2 b c+2 c a \\
- a^{2}+b^{2}+c^{2}+a b+b c+c a=\frac{1}{2}\left[(a+b)^{2}+(b+c)^{2}+(c+a)^{2}\right] \\
-a^{3}-b^{3}=(a-b)\left(a^{2}+a b+b^{2}\right) \\
- x^{n}-y^{n}=(x-y)\left(x^{n-1}+x^{n-2} y+\ldots+x y^{n-2}+y^{n-1}\right) \\
-  x^{2 n+1}+y^{2 n+1}=(x+y)\left(x^{2 n}-x^{2 n-1} y+x^{2 n-2} y^{2}-\ldots-x y^{2 n-1}+y^{2 n}\right)  \\=(x+y) \cdot \sum_{i=0}^{2 n}\left[x^{2 n-i}(-y)^{i}\right] \\
- x y+n x+m y+m n=(x+m)(y+n) \\
-  x y z+x y+y z+z x+(x+y+z)+1=(x+1)(y+1)(z+1) \\
-  x^{2} y+y^{2} z+z^{2} x+z^{2} y+y^{2} x+x^{2} z+2 x y z=(x+y)(y+z)(z+x) \\
-  x^{2} y+y^{2} z+z^{2} x+z^{2} y+y^{2} x+x^{2} z+3 x y z=(x+y+z)(x y+y z+z x) \\
-  x^{3}+y^{3}+z^{3}-3 x y z=(x+y+z)\left(x^{2}+y^{2}+z^{2}-x y-y z-z x\right) \\  =(x+y+z) \cdot \frac{1}{2}\left[(x-y)^{2}+(y-z)^{2}+(z-x)^{2}\right] \\</script><script type="math/tex; mode=display">
-e=\sum_{i=0}^\infty \frac1{i!}\\
-x=e^{\ln x}=\ln e^x</script><script type="math/tex; mode=display">
-x+\sqrt{x^2+1}=C\\
-\frac 1C=\sqrt{x^2+1}-x</script><script type="math/tex; mode=display">
-a^2+b^2=c^2\\
-3,4,5\quad5,12,13\\
-8,15,17\quad7,24,25\\9,40,41</script>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2350,7 +2415,7 @@ a^2+b^2=c^2\\
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">71</span>
+                <span class="site-state-item-count">72</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
