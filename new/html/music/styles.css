@@ -1,0 +1,18 @@
+
+div{
+    border-color: black;
+    margin: 2em;
+    border-style: solid;
+    color: red;
+    
+}
+
+iframe{
+    width: 60%;
+    height: 50em;
+}
+
+#name2{
+    animation-duration: 2s;
+    animation-delay: 2s;
+}

@@ -418,8 +418,9 @@ z_{1} z_{2}=r_{1} r_{2}\left(\cos \left(\theta_{1}+\theta_{2}\right)+i \operator
 \omega=\sqrt[n]{z},\omega^n=z\\\cos n \varphi+\text{i}  \sin n \varphi=\cos \theta+\text{i} \sin \theta\\
 \varphi=\frac{\theta+2k\pi}{n}\;(k=0,1,\cdots ,n-1)</script><p>注意到每次加上$2\pi/n$</p>
 <script type="math/tex; mode=display">
-\omega=\cos \frac{2 \pi}{n}+i \sin \frac{2 \pi}{n}\\
-\sqrt[n]1=1,\omega,\omega^2\dots\omega^{n-1}</script><p>这就是单位根</p>
+\omega_n=\cos \frac{2 \pi}{n}+i \sin \frac{2 \pi}{n}\\
+\sqrt[n]1=\omega_n^0,\omega_n^1,\omega_n^2\dots\omega_n^{n-1}</script><p>这就是$n$个单位根，$\omega_n$为主$n$次单位根</p>
+<p>不难想到可以利用这$n$个值来表示多项式</p>
 <h1 id="傅里叶变换"><a href="#傅里叶变换" class="headerlink" title="傅里叶变换"></a>傅里叶变换</h1><script type="math/tex; mode=display">
 g(t)-A_0=\sum_{i=1}^\infty A_n\cos(n\omega t+\varphi_n)</script><p>考虑这个图形的质心</p>
 <script type="math/tex; mode=display">
@@ -461,7 +462,20 @@ p_{n-1}
 \{(x_0,y_0y_0'),(x_1,y_1y_1')\dots(x_{2n-2},y_{2n-2}y_{2n-2}')\}</script><p>利用拉格朗日插值公式</p>
 <script type="math/tex; mode=display">
 A(x)=\sum_{k=0}^{n-1}y_k\frac{\displaystyle\prod_{j\ne k}(x-x_j)}{\displaystyle\prod_{j\ne k}(x_k-x_j)}</script><p>可以快速将点值表示转化为系数表示</p>
-
+<p>注意到$2n-2$为偶数，使用几何意义去理解</p>
+<h3 id="消去引理"><a href="#消去引理" class="headerlink" title="消去引理"></a>消去引理</h3><script type="math/tex; mode=display">
+\omega_{dn}^{dk}=\omega_{n}^{k}\\
+\omega_n^{\frac n2}=\omega^\frac12=\omega_2^1=-1</script><h3 id="折半引理"><a href="#折半引理" class="headerlink" title="折半引理"></a>折半引理</h3><script type="math/tex; mode=display">
+(\omega_n^k)^2=\omega_\frac n2^k\\
+(\omega_n^k)^2=(\omega_n^{k+\frac n2})^2\;\;2\theta/2(\theta+\pi)</script><h3 id="求和引理"><a href="#求和引理" class="headerlink" title="求和引理"></a>求和引理</h3><p>对于$\forall n\ge1,n\mod k\ne0$</p>
+<script type="math/tex; mode=display">
+\sum_{j=0}^{n-1}(\omega_n^k)^j=0</script><p>利用$n$次单位根，带入可以得到</p>
+<script type="math/tex; mode=display">
+y_k=\sum_{j=0}^{n-1}a_j(\omega_n^k)^j</script><p>从而向量</p>
+<script type="math/tex; mode=display">
+(y_0,y_1,\cdots ,y_{n-1})</script><p>为系数向量的离散傅里叶变换(DFT)</p>
+<h2 id="FFT"><a href="#FFT" class="headerlink" title="FFT"></a>FFT</h2><script type="math/tex; mode=display">
+A(x)=A^{[0]}(x^2)+xA^{[1]}(x^2)</script>
           
         
       

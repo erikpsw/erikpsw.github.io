@@ -811,8 +811,138 @@ f^{(2n)}(x_0) <0</script><p>类比为极小值点</p>
 <h2 id="…扩展运算符"><a href="#…扩展运算符" class="headerlink" title="…扩展运算符"></a>…扩展运算符</h2><p>相当于python的解包*</p>
 <h2 id="模板字符串"><a href="#模板字符串" class="headerlink" title="模板字符串"></a>模板字符串</h2><p>反引号``</p>
 <blockquote>
-<p>除了作为普通字符串，还可以用来定义多行字符串，还可以在字符串中加入变量和表达式。</p>
+<p>除了作为普通字符串，还可以用来定义多行字符串，还可以在字符串中加入变量和表达式</p>
 </blockquote>
+<h1 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h1><p>文档对象模型，每个 HTML 标签都是一个对象</p>
+<p>从而有利于js对HTML元素进行修改</p>
+<p>window.onload与$(document).ready()</p>
+<p>一个是需要网页全部加载完(包括图片)</p>
+<p>第二个只要DOM树加载完就行</p>
+<h1 id="Event"><a href="#Event" class="headerlink" title="Event"></a>Event</h1><p>Event 对象代表事件的状态，比如事件在其中发生的元素、键盘按键的状态、鼠标的位置、鼠标按钮的状态</p>
+<h2 id="事件监听"><a href="#事件监听" class="headerlink" title="事件监听"></a>事件监听</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.addEveantListener(eventType, (event)=&gt;&#123;&#125;, <span class="literal">false</span>)</span><br></pre></td></tr></table></figure>
+<p><strong>事件由子元素传递到父元素</strong>的过程叫做冒泡（false）</p>
+<p><strong>事件由父元素传递到子元素</strong>的过程叫做事件捕获（ture）</p>
+<p><code>false</code>表示事件冒泡,为<code>true</code>表示事件捕获</p>
+<p>事件捕获和事件触发(冒泡)是相反的,也就是说,当用户触发了一个事件的时候,这个事件是从DOM树的最上层开始触发一直到捕获到事件源</p>
+<p><img src="/2022/08/12/%E5%A4%A7%E4%B8%80/web/js/image-20230106213824890.png" alt="image-20230106213824890"></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">属性</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">altKey</td>
+<td style="text-align:center">返回当事件被触发时，”ALT” 是否被按下。</td>
+</tr>
+<tr>
+<td style="text-align:center">button</td>
+<td style="text-align:center">返回当事件被触发时，哪个鼠标按钮被点击。</td>
+</tr>
+<tr>
+<td style="text-align:center">clientX</td>
+<td style="text-align:center">返回当事件被触发时，鼠标指针的水平坐标。</td>
+</tr>
+<tr>
+<td style="text-align:center">clientY</td>
+<td style="text-align:center">返回当事件被触发时，鼠标指针的垂直坐标。</td>
+</tr>
+<tr>
+<td style="text-align:center">ctrlKey</td>
+<td style="text-align:center">返回当事件被触发时，”CTRL” 键是否被按下。</td>
+</tr>
+<tr>
+<td style="text-align:center">metaKey</td>
+<td style="text-align:center">返回当事件被触发时，”meta” 键是否被按下。</td>
+</tr>
+<tr>
+<td style="text-align:center">relatedTarget</td>
+<td style="text-align:center">返回与事件的目标节点相关的节点。</td>
+</tr>
+<tr>
+<td style="text-align:center">screenX</td>
+<td style="text-align:center">返回当某个事件被触发时，鼠标指针的水平坐标。</td>
+</tr>
+<tr>
+<td style="text-align:center">screenY</td>
+<td style="text-align:center">返回当某个事件被触发时，鼠标指针的垂直坐标。</td>
+</tr>
+<tr>
+<td style="text-align:center">shiftKey</td>
+<td style="text-align:center">返回当事件被触发时，”SHIFT” 键是否被按下。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th><strong><code>cancelable</code></strong></th>
+<th><strong>返回布尔值，指示事件是否可拥可取消的默认动作。</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>currentTarget</code></strong></td>
+<td><strong>返回其事件监听器触发该事件的元素。</strong></td>
+</tr>
+<tr>
+<td><strong>eventPhase</strong></td>
+<td><strong>返回事件传播的当前阶段。</strong></td>
+</tr>
+<tr>
+<td><strong><code>target</code></strong></td>
+<td><strong>返回触发此事件的元素（事件的目标节点）。</strong></td>
+</tr>
+<tr>
+<td><strong>timeStamp</strong></td>
+<td><strong>返回事件生成的日期和时间。</strong></td>
+</tr>
+<tr>
+<td><strong><code>type</code></strong></td>
+<td><strong>返回当前 Event 对象表示的事件的名称。</strong></td>
+</tr>
+<tr>
+<td><strong>initEvent()</strong></td>
+<td><strong>初始化新创建的 Event 对象的属性。</strong></td>
+</tr>
+<tr>
+<td><strong><code>preventDefault()</code></strong></td>
+<td><strong>通知浏览器不要执行与事件关联的默认动作。</strong></td>
+</tr>
+<tr>
+<td><code>stopPropagation()</code></td>
+<td>不再派发事件，阻止冒泡</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>target：触发事件的元素。<br>currentTarget：事件绑定的元素</p>
+<blockquote>
+<p>比如说现在有A和B，A包含B， A监听鼠标点击事件 那么当点击B时，target是B，currentTarget是A 也就是说，currentTarget始终是监听事件者，而target是事件的真正发出者</p>
+</blockquote>
+<p>比如有两个div</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"div_1"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"div_2"</span>&gt;</span></span><br><span class="line">click here</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"div_2"</span>).addEventListener(<span class="string">"click"</span>,(event)=&gt;&#123;</span><br><span class="line">    tar=event.target</span><br><span class="line">    tar.style.background=<span class="string">"red"</span></span><br></pre></td></tr></table></figure>
+<p>点div_2时</p>
+<p><img src="/2022/08/12/%E5%A4%A7%E4%B8%80/web/js/image-20230107092340379.png" alt="image-20230107092340379"></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"div_1"</span>).addEventListener(<span class="string">"click"</span>,(event)=&gt;&#123;</span><br><span class="line">    tar=event.target</span><br><span class="line">    tar.style.background=<span class="string">"red"</span></span><br></pre></td></tr></table></figure>
+<p>点哪个哪个变红</p>
+<p><img src="/2022/08/12/%E5%A4%A7%E4%B8%80/web/js/image-20230107092435426.png" alt="image-20230107092435426"></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"div_2"</span>).addEventListener(<span class="string">"click"</span>,(event)=&gt;&#123;</span><br><span class="line">    tar=event.currentTarget</span><br><span class="line">    tar.style.background=<span class="string">"red"</span></span><br></pre></td></tr></table></figure>
+<p>始终都是大的都变红</p>
+<h1 id="数据传输"><a href="#数据传输" class="headerlink" title="数据传输"></a>数据传输</h1><p>跨源读取阻止 (CORB) 是一种浏览器功能，旨在防止攻击者通过欺骗用户的方式获取敏感信息。 它通过阻止浏览器向具有不同域的服务器发送请求，并将其响应内容作为 text/html 解析来实现。</p>
+<p>例如，假设你有一个页面，其中包含一个带有恶意内容的 iframe。 如果你的浏览器没有 CORB 功能，则可能会被攻击者欺骗，将恶意信息发送到服务器，而不知道这是在发生什么。 但是，如果你的浏览器具有 CORB 功能，则浏览器会阻止请求，并告诉你发生了什么。</p>
+<ul>
+<li><strong>GET</strong> – 从指定的资源请求数据。</li>
+<li><strong>POST</strong> – 向指定的资源提交要被处理的数据。</li>
+</ul>
+<p>get 可以直接从地址栏提交</p>
+<p>post需要用到相关插件</p>
 
           
         

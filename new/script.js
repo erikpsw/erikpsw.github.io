@@ -1,7 +1,13 @@
 $(function(){
-
     $("#wechat").click(function(){
-        $("#QR").toggle(300);
+        if(window.getComputedStyle($("#QR")[0]).height=="0px"){
+            $("#QR").removeClass("QRFout");
+            $("#QR").addClass("QRFin");
+        }
+        else{
+            $("#QR").removeClass("QRFin");
+            $("#QR").addClass("QRFout");
+        }
     })
 
     $("#history").click(function(){
