@@ -28,7 +28,7 @@ async function getData() {
     let data = await response.json();
     wyy_music=data
   }
-  
+getData()
 
 $(function(){
     //二维码动画
