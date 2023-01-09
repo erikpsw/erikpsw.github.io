@@ -3,7 +3,50 @@
     box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
 }
 
+#papers{
+    grid-row: 2;
+    grid-column: 1/2;
+}
+
+.sub_title{
+    font-size: 3em;
+    padding-left: 0.5em;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
 @media screen and (min-width:1050px){
+#song_name{
+    font-size: 1.5em;
+    padding-right: 0;
+}
+
+.play-button{
+    width: 20.098px;
+}
+
+#play{
+    margin-left: 3em;
+}
+
+.pause-button{
+    display: none;
+}
+
+
+#meau {
+    transform: translate(312.339px,75px) rotateX(-90deg);
+    transform-origin: 0 0;
+    position: fixed;
+    height: 10em;
+    width: 8em;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    background-color: white;
+    box-shadow: 0 0.25rem 0.25rem 0 rgb(0 0 0 / 31%);
+    z-index: 20;
+}
+
     #start_box
 {
     display:flex;
@@ -13,13 +56,14 @@
     right: 0;
     left: 0;
     z-index: 10;
+
 }    
 
 #title{
     text-decoration: none;
     font-family:"Times New Roman",Georgia,Serif;
     font-style:inherit;
-    padding:5px 30px 5px;
+    padding:10px 80px 10px 15px;
     color:black;
     font-size: 3em;
 }
@@ -28,7 +72,7 @@
     box-sizing: border-box;
     text-decoration: none;
     font-family:"Times New Roman",Georgia,Serif;
-    padding-left:1em;
+    padding-right:1em;
     color:black;
     display: inline-flex;
     align-items: center;
@@ -37,6 +81,7 @@
 
 .body{
     margin: 0%;
+    
 }
 
 #myblog{
@@ -129,7 +174,20 @@
     animation-iteration-count: 1;
     animation-fill-mode: backwards;
 }
-
+.MeauFin{
+    animation-name: MeauIn;
+    animation-timing-function:cubic-bezier(0.23, 1, 0.320, 1);
+    animation-duration: 1.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+.MeauFout{
+    animation-name: MeauOut;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-duration: 0.8s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
 
 @keyframes In {
     0%   {height:0em;}	
@@ -142,6 +200,18 @@
 }
 
 
+@keyframes MeauIn {
+    0%   {transform: translate(312.339px,75px) rotateX(-90deg);}	
+    100%   {transform: translate(312.339px,75px) rotateX(0deg);}
+}
+
+@keyframes MeauOut {
+    0%   {transform: translate(312.339px,75px) rotateX(0deg);}	
+    100%   {transform: translate(312.339px,75px) rotateX(-90deg);}	
+}
+
+
+
 #quote{
     display: grid;
     place-items: center;
@@ -151,19 +221,21 @@
 
 .hline{
     background-image: linear-gradient(to right,rgb(233, 231, 231),#333,rgb(233, 231, 231));
+    
 }
 
 #line1{
     margin-top: 200px;
 }
-#work-title{
+#work-title,#Papers_title{
     font-size: 3em;
     padding-left: 0.5em;
     font-family:'Times New Roman', Times, serif;
     font-weight: bold;
+    
 }
 #line2{
-    margin-top: 20em;
+    margin-top: 30em;
 }
 
 #work-list{
@@ -180,11 +252,13 @@
 #box1{
     display: grid;
     grid-template-columns: 50% 50%;
+    row-gap: 12em;
 } 
 #education{
     font-size: 3em;
     font-family:'Times New Roman', Times, serif;
     font-weight: bold;
+   
 }   
 .school{
     font-size: 1.8em;
@@ -192,11 +266,57 @@
     font-family:'Times New Roman', Times, serif;
 }
 
+.paper_name{
+    margin-top:0.5em;
+    margin-bottom: 0.5em;
+    padding-left: 2em;
+    font-family: Times New Roman;
+    font-size:x-large
+}
+
+.meau_item{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.sub_title::after{
+    opacity: 0;
+    content: "";
+    position: absolute;
+    border-bottom: 3px solid rgb(70, 237, 156,0.3);
+    height: 30px;
+    transform: translate(-100%,50%);
+    transition: all 0.5s;
+    transition-timing-function:cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.sub_title:hover::after{
+    opacity: 1;
+}
+
 
 }
 
 
 @media screen and (max-width:1050px){
+
+    #Papers_title{
+        font-size: 3em;
+        padding-left: 0.5em;
+        margin-top: 3em;
+        font-family:'Times New Roman', Times, serif;
+        font-weight: bold;
+        
+    }
+    .paper_name{
+        margin-top:0.5em;
+        margin-bottom: 0.5em;
+        padding-left: 2em;
+        font-family: Times New Roman;
+        font-size:x-large
+    }
     #start_box
     {
         box-sizing: border-box;
@@ -232,6 +352,11 @@
         align-items: center;
         font-size: 2em;
     }
+    #box1{
+        display: grid;
+        grid-template-columns: 100%;
+        row-gap: 12em;
+    } 
     
     .body{
         margin: 0%;
@@ -319,7 +444,7 @@
         animation-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
         animation-duration: 1.2s;
         animation-iteration-count: 1;
-        animation-fill-mode: forwards;
+        animation-fill-mode: backwards;
     }
     .QRFout{
         animation-name: Out;
@@ -345,11 +470,11 @@
         display: none;
     }
 
-    #history{
+    #profile_start{
         display: none;
     }
 
-    #work{
+    #play{
         display: none;
     }
 
@@ -368,15 +493,9 @@
     #line1{
         margin-top: 200px;
     }
-    #work-title{
-        font-size: 3em;
-        padding-left: 0.5em;
-        font-family:'Times New Roman', Times, serif;
-        font-weight: bold;
 
-    }
     #line2{
-        margin-top: 100em;
+        margin-top: 30em;
     }
     
     #work-list{
@@ -403,6 +522,16 @@
         padding-left: 0.5em;
         font-family:'Times New Roman', Times, serif;
     }
+    #papers{
+        grid-row: 3 ;
+    }
+
+    #song_name{
+        display: none;
+ 
+    }
+
+
 }
 
 

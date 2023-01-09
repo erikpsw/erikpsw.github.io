@@ -5,18 +5,25 @@
 <title>Shiwei Pan</title>
 <link rel="shortcut icon" href="pic/psw.ico">
 <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
 <script src="script.js"></script>
 <link rel="stylesheet" type="text/css" href="styles.css">
 <link href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
 </head>
-<body class="body">
 <nav id="start_box">
     <a class="nav" id="title">Shiwei Pan</a> 
-    <a class="nav" id="history" href="javascript:void(0);">History</a> 
-    <a class="nav" href="javascript:void(0);" id="work">Work</a> 
+    <a class="nav" id="profile_start" href="javascript:void(0);">Profile</a> 
     <a class="nav" href="" id="prize">Prize</a>
+    <a class="nav" href="javascript:void(0);" id="play"><div class="play-button">▶︎</div>
+        <div class="pause-button">&#10073;&#10073;</div></a> 
+    <div class="nav" id="song_name"></div>
     <a class="nav" id="myblog" target="_blank" href="https://erikpsw.github.io/">Blog</a>
 </nav>
+<div id="meau">
+
+</div>
+<body class="body">
+    
 <section >
     <div class="container">
         <div id="profile">
@@ -25,10 +32,10 @@
             <h2 id="name2">潘世维</h2>
         <ul class="network_icon">
             <li>
-                <a target="_blank" href="https://github.com/erikpsw"><img src="pic\github.png" id="github"></a>
+                <a target="_blank" href="https://github.com/erikpsw"><img src="https://media.licdn.com/dms/image/C5622AQGwcEu8ZHYT0g/feedshare-shrink_800/0/1673096042774?e=1675900800&v=beta&t=EW9BOdk3k5uR-0Xmu5Epb4YLn0l9y51Zsv1ns1UloaY" id="github"></a>
             </li>
             <li>
-            <img src="pic\wechat.png" id="wechat">
+            <img src="https://media.licdn.com/dms/image/C5622AQHDC-26Sj5bUA/feedshare-shrink_800/0/1673096042650?e=1675900800&v=beta&t=bqj3iVB2RLNB6OWYQOjjwASyGXzYCjkjTd30V56dlrM  " id="wechat">
     
             </li>
             
@@ -61,14 +68,14 @@
 
 <section id="box1">
     <div>
-        <a id="work-title" class="text">My works</a>
+        <a id="work-title" class="sub_title">Programming</a>
         <li id="work-list" >
             <a id='work1' href="html/latex_render/latex_render.html" target="_blank">Latex render</a>
         </li>
     </div>
     
     <div>
-        <a id="education">
+        <a id="education" class="sub_title">
             Education
         </a>
         <li class="school">
@@ -78,10 +85,20 @@
         Tongji University<br>&ensp;&ensp;    2022.9-Today
     </li>
     </div>
+    <div id="papers" >
+        <a class="sub_title" id="Papers_title">Papers</a>
+        <div class="paper_name" ><a href="https://gitee.com/shiwei_pan/file/raw/master/The%20Maekawa-Justin%20Theorem.pdf">前川定理(The Maekawa-Justin Theorem)</a></div>
+        <div class="paper_name"><a href="https://gitee.com/shiwei_pan/file/raw/master/2022MCMA.pdf">Analysis of the 2022 MCM Problem A</a></div>
+        <div class="paper_name"><a href="https://gitee.com/shiwei_pan/file/blob/master/solve_problem.pdf">How to Solve Mathematical Modelling Problems</a></div>
+        <div class="paper_name"><a href="https://gitee.com/shiwei_pan/file/raw/master/2251912%E6%BD%98%E4%B8%96%E7%BB%B4%E8%AE%BA%E6%96%87.pdf">大一上物理期末论文: 恢复系数的测定</a></div>
+    </div>
 </section>
 <hr class="hline" id="line2">
 
     <p id="quote">Youth passes, but with luck immaturity can last a life time!</p>
+    <audio src="https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBb3pmeXJKV0dUMHVndTRIR1VZbmQ4Sl9RX3Q2Znc_ZT13aWpVVEI.mp3" controls = "false" controlslist="nodownload">
+        宇多田ヒカル-One Last Kiss
+    </audio>
 </div>
 </body>
 </html>

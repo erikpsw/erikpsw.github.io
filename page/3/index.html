@@ -943,6 +943,8 @@ f^{(2n)}(x_0) <0</script><p>类比为极小值点</p>
 </ul>
 <p>get 可以直接从地址栏提交</p>
 <p>post需要用到相关插件</p>
+<h1 id="获取坐标"><a href="#获取坐标" class="headerlink" title="获取坐标"></a>获取坐标</h1><p><img src="https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect/element-box-diagram.png" alt="DOMRect object that is the smallest rectangle containing the entire element."></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">var</span> rect=element.getBoundingClientRect()</span><br><span class="line"> <span class="keyword">var</span> x=rect.left<span class="comment">//相对于窗口来说</span></span><br><span class="line"> </span><br><span class="line"><span class="built_in">window</span>.scrollY滚动了多少</span><br><span class="line"><span class="keyword">var</span> width = <span class="built_in">window</span>.innerWidth;</span><br><span class="line"><span class="keyword">var</span> height = <span class="built_in">window</span>.innerHeight;</span><br><span class="line">获取当前窗口的长宽</span><br><span class="line">$(ele)[<span class="number">0</span>].offsetHeight</span><br><span class="line">获取高</span><br></pre></td></tr></table></figure>
 
           
         
