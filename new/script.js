@@ -10,9 +10,26 @@ songs_list={
 "茶理理,TetraCalyx,Hanser - Moon Halo":"https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBb3pmeXJKV0dUMHVndTRRb0F0dEtTSFlXbHdhenc_ZT11a3R1SmI.mp3",
 "宇多田ヒカル-Beautiful World":"https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBb3pmeXJKV0dUMHVndTRSeTlXU2FCRjJnVDVuOXc_ZT1keDhlMk8.mp3"
 }
-
-
-
+//网易云音乐
+function get_json(){
+list=document.getElementsByClassName("txt")
+music_list=[]
+for(i=0;i<list.length;i++){
+    music_name=list[i].children[0].children[0].getAttribute("title")
+    id=list[i].children[0].getAttribute("href").match(/\?id=\d+/)[0]
+    music_list.push({name:music_name,str:id})
+    // urls.push("http://music.163.com/song/media/outer/url"+str+".mp3")
+}
+return JSON.stringify(music_list)//化成JSON格式
+}
+wyy_music=[]
+async function getData() {
+    let response = await fetch('musics.json');
+    let data = await response.json();
+    wyy_music=data
+  }
+  
+  getData();
 $(function(){
     //二维码动画
     $("#wechat").click(function(){
@@ -123,6 +140,7 @@ $("#song_name").click(function(){
     do 
         i=getRandomInt(0,Object.keys(songs_list).length-1)
     while(i==ori)//防止重复
+    ori=i
     $("#song_name").velocity({
         /* translateX 初始值永远为0 动画结束值为500px */
         translateX: [ 0, 100 ],
@@ -137,6 +155,27 @@ $("#song_name").click(function(){
     song = document.querySelector('audio')
     $("#song_name")[0].innerHTML=Object.keys(songs_list)[i]
     song.src=Object.values(songs_list)[i]
+    playButton.style.display = 'none';
+    song.play()
+    pauseButton.style.display = 'inline';
+})
+//网易云音乐换歌
+$("#music").click(function(){
+    i=getRandomInt(0,wyy_music.length-1)
+    $("#song_name").velocity({
+        /* translateX 初始值永远为0 动画结束值为500px */
+        translateX: [ 0, 100 ],
+        /* opacity 初始值永远为0 动画结束值为1 缓动效果为"easeInSine" */
+        opacity: [ 1, "easeInSine", 0 ]
+    }, 
+    {
+        duration: 250,
+        delay: 0
+    }
+    );
+    song = document.querySelector('audio')
+    $("#song_name")[0].innerHTML=wyy_music[i].name
+    song.src="http://music.163.com/song/media/outer/url"+wyy_music[i].str+".mp3"
     playButton.style.display = 'none';
     song.play()
     pauseButton.style.display = 'inline';

@@ -444,7 +444,7 @@
         animation-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
         animation-duration: 1.2s;
         animation-iteration-count: 1;
-        animation-fill-mode: backwards;
+        animation-fill-mode: forwards;
     }
     .QRFout{
         animation-name: Out;
@@ -466,7 +466,7 @@
     }
     
 
-    #prize{
+    #music{
         display: none;
     }
 
@@ -530,7 +530,9 @@
         display: none;
  
     }
-
+    #meau{
+        display: none;
+    }
 
 }
 
