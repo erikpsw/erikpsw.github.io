@@ -86,7 +86,7 @@ $(".sub_title").get().forEach(element => {//使用get来获取数组
     var style=document.createElement('style');//创建一个<style>标签
     var change=document.createTextNode(`
     #${element.id}::after{
-        width: ${element.offsetWidth-parseInt(getComputedStyle(element).paddingLeft)}px;
+        width: ${element.offsetWidth-24}px;
     }  
     `)//更改后伪元素的样式
     style.appendChild(change);//把样式添加到style标签里
@@ -160,7 +160,7 @@ $("#song_name").click(function(){
     pauseButton.style.display = 'inline';
 })
 //网易云音乐换歌
-getData()
+
 $("#music").click(function(){
     i=getRandomInt(0,wyy_music.length-1)
     $("#song_name").velocity({
