@@ -24,12 +24,12 @@ return JSON.stringify(music_list)//化成JSON格式
 }
 wyy_music=[]
 async function getData() {
-    let response = await fetch('musics.json');
+    let response = await fetch('data/musics.JSON');
     let data = await response.json();
     wyy_music=data
   }
   
-  getData();
+
 $(function(){
     //二维码动画
     $("#wechat").click(function(){
@@ -160,6 +160,7 @@ $("#song_name").click(function(){
     pauseButton.style.display = 'inline';
 })
 //网易云音乐换歌
+getData()
 $("#music").click(function(){
     i=getRandomInt(0,wyy_music.length-1)
     $("#song_name").velocity({
