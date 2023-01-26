@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js">
+    </script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+    <script src="script.js"></script>
+<title>Number</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<meta charset="utf-8">
+</head>
+<body>
+    <div id="main">
+    <canvas
+    id="myCanvas"
+    height="280"
+    width="280"
+    style="border: 1px solid rgb(39, 37, 37);"></canvas> 
+    <button class="clear">clear</button>
+    <div class="numbers">
+        <div class="number">0</div>
+        <div class="number">1</div>
+        <div class="number">2</div>
+        <div class="number">3</div>
+        <div class="number">4</div>
+        <div class="number">5</div>
+        <div class="number">6</div>
+        <div class="number">7</div>
+        <div class="number">8</div>
+        <div class="number">9</div>
+    </div>
+    <div class="prediction">
+        <div id="bar0" class="bar"></div>
+        <div id="bar1" class="bar"></div>
+        <div id="bar2" class="bar"></div>
+        <div id="bar3" class="bar"></div>
+        <div id="bar4" class="bar"></div>
+        <div id="bar5" class="bar"></div>
+        <div id="bar6" class="bar"></div>
+        <div id="bar7" class="bar"></div>
+        <div id="bar8" class="bar"></div>
+        <div id="bar9" class="bar"></div>
+    </div>
+</div>
+
+</body>
+
+</html>

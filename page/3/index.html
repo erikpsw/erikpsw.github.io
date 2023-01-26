@@ -311,6 +311,131 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/17/%E5%A4%A7%E4%B8%80/python/DL/api/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/08/17/%E5%A4%A7%E4%B8%80/python/DL/api/" itemprop="url">大一/python/DL/api</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-08-17T18:20:11+08:00">
+                2022-08-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> torch.utils <span class="keyword">import</span> data</span><br><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">from</span> torch <span class="keyword">import</span> nn<span class="comment">#neural network</span></span><br></pre></td></tr></table></figure>
+<h1 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">trans = torchvision.transforms.ToTensor()<span class="comment">#变换为张量</span></span><br><span class="line">mnist_train = torchvision.datasets.MNIST(</span><br><span class="line">    root=<span class="string">"./data"</span>, train=<span class="literal">True</span>, transform=trans, download=<span class="literal">True</span>)</span><br><span class="line">mnist_test = torchvision.datasets.MNIST(</span><br><span class="line">    root=<span class="string">"./data"</span>, train=<span class="literal">False</span>, transform=trans, download=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">train_iter=data.DataLoader(mnist_train,<span class="number">256</span>,<span class="literal">True</span>)</span><br><span class="line">test_iter=data.DataLoader(mnist_test,<span class="number">256</span>,<span class="literal">True</span>)</span><br><span class="line"><span class="comment">#变成一个迭代器</span></span><br></pre></td></tr></table></figure>
+<p>注意labels的形状为$m\times 1$而非$m$</p>
+<p>返回一个迭代器，用$\rm next(iter(data))$来访问</p>
+<h1 id="网络结构"><a href="#网络结构" class="headerlink" title="网络结构"></a>网络结构</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#先定义参数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">init_weight</span><span class="params">(m)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> type(m)==nn.linear:</span><br><span class="line">        nn.init.normal_(m.weight,std=<span class="number">0.01</span>,mean=<span class="number">0</span>)</span><br><span class="line"><span class="comment">#不能用randn,太大了</span></span><br><span class="line">net.apply(init_weight)</span><br><span class="line">net=nn.Sequential(nn.Linear(<span class="number">2</span>,<span class="number">1</span>))</span><br></pre></td></tr></table></figure>
+<h1 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">loss=nn.MSELoss()<span class="comment">#损失函数</span></span><br><span class="line">trainer=torch.optim.SGD(net.parameters(),lr=<span class="number">0.03</span>)</span><br><span class="line"><span class="comment">#实例化优化器</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> epoch <span class="keyword">in</span> range(epochs):</span><br><span class="line">    <span class="keyword">for</span> X, y <span class="keyword">in</span> data_iter:<span class="comment">#迭代器每次返回X和y</span></span><br><span class="line">        l = loss(net(X) ,y)</span><br><span class="line">        trainer.zero_grad()<span class="comment">#清零梯度</span></span><br><span class="line">        l.backward()</span><br><span class="line">        trainer.step()<span class="comment">#自动前进</span></span><br><span class="line">    l = loss(net(feature), lables)<span class="comment">#每轮再计算loss</span></span><br><span class="line">    print(<span class="string">f'epoch <span class="subst">&#123;epoch + <span class="number">1</span>&#125;</span>, loss <span class="subst">&#123;l:f&#125;</span>'</span>)</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/15/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%AF%BC%E6%95%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1240,7 +1365,7 @@ f^{(2n)}(x_0) <0</script><p>类比为极小值点</p>
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/07/%E5%A4%A7%E4%B8%80/%E6%9D%82/%E7%89%A9%E7%90%86%E7%B3%BB%E7%BB%9F/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/07/%E5%A4%A7%E4%B8%80/%E6%9D%82/%E5%9B%BE%E5%BD%A2%E5%AD%A6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Shiwei Pan">
@@ -1259,7 +1384,7 @@ f^{(2n)}(x_0) <0</script><p>类比为极小值点</p>
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2022/08/07/%E5%A4%A7%E4%B8%80/%E6%9D%82/%E7%89%A9%E7%90%86%E7%B3%BB%E7%BB%9F/" itemprop="url">大一/杂/物理系统</a></h1>
+                <a class="post-title-link" href="/2022/08/07/%E5%A4%A7%E4%B8%80/%E6%9D%82/%E5%9B%BE%E5%BD%A2%E5%AD%A6/" itemprop="url">大一/杂/图形学</a></h1>
         
 
         <div class="post-meta">
@@ -1321,7 +1446,22 @@ f^{(2n)}(x_0) <0</script><p>类比为极小值点</p>
 <h2 id="半隐式欧拉方法"><a href="#半隐式欧拉方法" class="headerlink" title="半隐式欧拉方法"></a>半隐式欧拉方法</h2><script type="math/tex; mode=display">
 \vec{v}\left(t_{1}\right)=\vec{v}\left(t_{0}\right)+M^{-1} \vec{F}\left(t_{0}\right)\Delta t \\
 \vec{x}\left(t_{1}\right)=\vec{x}\left(t_{0}\right)+\vec{v}\left(t_{1}\right) \Delta t</script><p>本质上为显式方法</p>
-
+<h1 id="旋转"><a href="#旋转" class="headerlink" title="旋转"></a>旋转</h1><h2 id="欧拉角"><a href="#欧拉角" class="headerlink" title="欧拉角"></a>欧拉角</h2><script type="math/tex; mode=display">
+\mathbf{R}_{x y z}(\alpha, \beta, \gamma)=\mathbf{R}_{x}(\alpha) \mathbf{R}_{y}(\beta) \mathbf{R}_{z}(\gamma)</script><p>任意旋转都可以分解为绕$x,y,z$三个轴的旋转</p>
+<p>顺序非常重要</p>
+<script type="math/tex; mode=display">
+\mathbf{R}_{x}(\alpha) \mathbf{R}_{y}(\beta) \mathbf{R}_{z}(\gamma)\ne\mathbf{R}_{x}(\alpha)\mathbf{R}_{z}(\gamma) \mathbf{R}_{y}(\beta)</script><p><img src="/2022/08/07/%E5%A4%A7%E4%B8%80/%E6%9D%82/%E5%9B%BE%E5%BD%A2%E5%AD%A6/image-20230120142858751.png" alt="image-20230120142858751"></p>
+<p><strong>飞机滚转（Roll）；飞机俯仰（Pitch）；飞机偏航（Yaw）</strong></p>
+<p>罗德里格斯旋转公式</p>
+<script type="math/tex; mode=display">
+\mathbf{R}(\mathbf{n}, \alpha)=\cos (\alpha) \mathbf{I}+(1-\cos (\alpha)) \mathbf{n} \mathbf{n}^{T}+\sin (\alpha) \underbrace{\left(\begin{array}{ccc}
+0 & -n_{z} & n_{y} \\
+n_{z} & 0 & -n_{x} \\
+-n_{y} & n_{x} & 0
+\end{array}\right)}_{\mathbf{N}}</script><h2 id="四元数"><a href="#四元数" class="headerlink" title="四元数"></a>四元数</h2><script type="math/tex; mode=display">
+q=(q_1, q_ 2, q _3, q _4)=\left(\cos \left(\frac{\theta}{2}\right), \sin \left(\frac{\theta}{2}\right) n_ x, \sin \left(\frac{\theta}{2}\right) n_ y, \sin \left(\frac{\theta}{2}\right)n_  z\right)</script><p>对应于绕$\mathbf{n}$的旋转</p>
+<script type="math/tex; mode=display">
+p'=qpq^{-1}</script>
           
         
       
@@ -1446,13 +1586,16 @@ f^{(2n)}(x_0) <0</script><p>类比为极小值点</p>
 <p>在直角坐标系中</p>
 <script type="math/tex; mode=display">
 ||\vec{a}||=\sqrt{x^2+y^2}\\
-单位向量\hat{a}=\vec{a}/||\vec{a}||</script><h2 id="点乘"><a href="#点乘" class="headerlink" title="点乘"></a>点乘</h2><p>$\rm Dot\;Product$</p>
+单位向量\hat{a}=\vec{a}/||\vec{a}||</script><p>两向量之间的夹角为$0\le\left \langle \alpha,\beta \right \rangle \le \pi$</p>
+<h2 id="点乘"><a href="#点乘" class="headerlink" title="点乘"></a>点乘</h2><p>$\rm Dot\;Product$</p>
 <script type="math/tex; mode=display">
 \vec{a} \cdot \vec{b}=\|\vec{a}\|\|\vec{b}\| \cos \theta 
 =x_1x_2+y_1y_2
 \\
 \cos \theta=\frac{\vec{a} \cdot \vec{b}}{\|\vec{a}\|\|\vec{b}\|}\\
-\theta=\arccos (\hat{a}\cdot\hat{b})</script><p>运算性质</p>
+\theta=\arccos (\hat{a}\cdot\hat{b})</script><p>矩阵</p>
+<script type="math/tex; mode=display">
+\vec{a} \cdot \vec{b}=a^Tb</script><p>运算性质</p>
 <script type="math/tex; mode=display">
 交换律：\vec{a} \cdot \vec{b}=\vec{b} \cdot \vec{a} \\
 分配律：\vec{a} \cdot(\vec{b}+\vec{c})=\vec{a} \cdot \vec{b}+\vec{a} \cdot \vec{c} \\
@@ -1510,7 +1653,7 @@ y_{m}
 \frac{\partial y_{2}}{\partial x} \\
 \vdots \\
 \frac{\partial y_{m}}{\partial x}
-\end{array}\right]</script><h3 id="雅可比矩阵"><a href="#雅可比矩阵" class="headerlink" title="雅可比矩阵"></a>雅可比矩阵</h3><script type="math/tex; mode=display">
+\end{array}\right]</script><h2 id="雅可比矩阵"><a href="#雅可比矩阵" class="headerlink" title="雅可比矩阵"></a>雅可比矩阵</h2><script type="math/tex; mode=display">
 \text{jacobi matrix}
 \\\frac{\partial \mathbf{y}}{\partial \mathbf{x}}=\left[\begin{array}{c}
 \frac{\partial y_{1}}{\partial \mathbf{x}} \\
@@ -1522,14 +1665,44 @@ y_{m}
 \frac{\partial y_{2}}{\partial x_{1}}, \frac{\partial y_{2}}{\partial x_{2}}, \ldots, \frac{\partial y_{2}}{\partial x_{n}} \\
 \vdots \\
 \frac{\partial y_{m}}{\partial x_{1}}, \frac{\partial y_{m}}{\partial x_{2}}, \ldots, \frac{\partial y_{m}}{\partial x_{n}}
-\end{array}\right]</script><h3 id="线性回归"><a href="#线性回归" class="headerlink" title="线性回归"></a>线性回归</h3><script type="math/tex; mode=display">
+\end{array}\right]</script><h2 id="线性回归"><a href="#线性回归" class="headerlink" title="线性回归"></a>线性回归</h2><script type="math/tex; mode=display">
 x , w \in \mathbf{R }^ { n } , y \in \mathbf{R }  \\  z = (\left \langle  \mathbf{x}  ,\mathbf{w} \right \rangle - y ) ^ { 2 }</script><script type="math/tex; mode=display">
-\begin{aligned}\frac{\partial z}{\partial \mathbf{w}}\end{aligned}=2(\left \langle  \mathbf{x}  ,\mathbf{w} \right \rangle - y )\mathbf{w}^{\rm T}</script><h3 id="求导"><a href="#求导" class="headerlink" title="求导"></a>求导</h3><p>采用分子布局</p>
+\begin{aligned}\frac{\partial z}{\partial \mathbf{w}}\end{aligned}=2(\left \langle  \mathbf{x}  ,\mathbf{w} \right \rangle - y )\mathbf{w}^{\rm T}</script><h2 id="求导"><a href="#求导" class="headerlink" title="求导"></a>求导</h2><p>采用分子布局</p>
 <script type="math/tex; mode=display">
 \frac{\partial A x}{\partial x}=A\\
 \frac{\partial A x}{\partial x^{T}}=A^{T} \\
 
-\frac{\partial x^{T} A}{\partial x}=A^{T}</script><h3 id><a href="#" class="headerlink" title></a><img src="/2022/08/07/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E5%90%91%E9%87%8F/ca965b6eb9595c5542db8fa385d9d58a.png" alt="ca965b6eb9595c5542db8fa385d9d58a"></h3>
+\frac{\partial x^{T} A}{\partial x}=A^{T}</script><p><img src="/2022/08/07/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E5%90%91%E9%87%8F/ca965b6eb9595c5542db8fa385d9d58a.png" alt="ca965b6eb9595c5542db8fa385d9d58a"></p>
+<h1 id="梯度"><a href="#梯度" class="headerlink" title="梯度"></a>梯度</h1><script type="math/tex; mode=display">
+(x',y')=F(x,y)</script><p>向量场里每个点赋予一个向量</p>
+<script type="math/tex; mode=display">
+\nabla=\begin{bmatrix}\frac{\partial }{\partial x_1}
+\frac{\partial}{\partial x_2}
+\cdots
+\frac{\partial }{\partial x_n}\end{bmatrix}</script><h2 id="散度"><a href="#散度" class="headerlink" title="散度"></a>散度</h2><script type="math/tex; mode=display">
+\text{div}F(x,y)=\nabla\cdot F</script><p>描述净流量，若流入大于流出则为负</p>
+<p>$(x,y)$点生成的流量</p>
+<p>例如对于不可压缩的流体</p>
+<script type="math/tex; mode=display">
+\text{div}V=0</script><h2 id="旋度"><a href="#旋度" class="headerlink" title="旋度"></a>旋度</h2><script type="math/tex; mode=display">
+\text{curl}F(x,y)     =\nabla\times F</script><p><img src="/2022/08/07/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E5%90%91%E9%87%8F/image-20230119093040237.png" alt="image-20230119093040237"></p>
+<script type="math/tex; mode=display">
+\begin{array}{l}\nabla\cdot  F=
+{\left[\begin{array}{c}
+\frac{\partial}{\partial x} \\
+\frac{\partial}{\partial y}
+\end{array}\right] \cdot\left[\begin{array}{c}
+\mathbf{F}_{x} \\
+\mathbf{F}_{y}
+\end{array}\right]=\frac{\partial F_{x}}{\partial x}+\frac{\partial F_{y}}{\partial y}} \\
+{\nabla\times F=\left[\begin{array}{c}
+\frac{\partial}{\partial x} \\
+\frac{\partial}{\partial y}
+\end{array}\right] \times\left[\begin{array}{c}
+ \mathbf{F}_x \\
+\mathbf{F}_{y}
+\end{array}\right]=\frac{\partial F_{y}}{\partial x}-\frac{\partial F_{x}}{\partial y}}
+\end{array}</script>
           
         
       
@@ -1995,261 +2168,6 @@ w=\left(\begin{array}{l}p_{11}& p_{21}\\p_{12}& p_{22}\end{array}\right )^nw_0</
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/" itemprop="url">大一/高数/函数</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-08-03T22:24:00+08:00">
-                2022-08-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><p>例​：$f(x)=x^2$</p>
-<p>定义了一个函数 $f$ ，法则为将一个数转变为它的平方</p>
-<p>未指定，故定义域为$\mathbf{R }$(实数集)</p>
-<p>意义：$f(2)=4$，通过法则$f$将数字$2$转变为$4$</p>
-<blockquote>
-<p>By the way, $f$ is the transformation rule, while $f(x)$ is the result of applying the transformation rule to the variable $x$. So it’s technically not correct to say “$f(x)$ is a function”; it should be “$f$ is a function.”</p>
-</blockquote>
-<h2 id="区间"><a href="#区间" class="headerlink" title="区间"></a>区间</h2><script type="math/tex; mode=display">
-[a, b) \quad\{x: a \leq x<b\}</script><p><img src="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20220803230718705.png" alt="image-20220803230718705"></p>
-<script type="math/tex; mode=display">
-(−8, 13]\backslash
-
- \{2\}(\text{not including 2})</script><h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><h2 id="基本初等函数"><a href="#基本初等函数" class="headerlink" title="基本初等函数"></a>基本初等函数</h2><p>常函数，幂函数，三角函数，反三角函数，对数函数，指数函数</p>
-<p>初等函数是由基本初等函数经过==有限次==复合形成的能用一个式子表示的函数</p>
-<h2 id="反三角函数"><a href="#反三角函数" class="headerlink" title="反三角函数"></a>反三角函数</h2><p><img src="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20220903183803562.png" alt="image-20220903183803562"></p>
-<script type="math/tex; mode=display">
-x\in[-1,1],y\in\left[-\frac\pi2,\frac\pi2\right]\\
-\frac{\text{d}}{\text{d}x}\arcsin x=\frac1{\sqrt{1-x^2}}</script><p><img src="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20220903184248952.png" alt="image-20220903184248952"></p>
-<script type="math/tex; mode=display">
-x\in[-1,1],y\in\left[0,\pi\right]</script><p>重要关系</p>
-<script type="math/tex; mode=display">
-\sin\left(\frac\pi2-x\right)=\cos x=t
-\\ \arcsin x+\arccos x=\frac\pi2</script><p><img src="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20220903184550875.png" alt="image-20220903184550875"></p>
-<p><img src="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20220903184848430.png" alt="image-20220903184848430"></p>
-<script type="math/tex; mode=display">
-x\in\mathbf{R},y\in\left(-\frac\pi2,\frac\pi2\right)</script><script type="math/tex; mode=display">
-\arctan A-\arctan B=\arctan \frac{A-B}{1+A B}</script><script type="math/tex; mode=display">
-A=\tan \alpha \Leftrightarrow \alpha=k\pi+ \arctan A</script><p><img src="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20221024164637553.png" alt="image-20221024164637553"></p>
-<p>例</p>
-<script type="math/tex; mode=display">
-f(x)=\cot x(x\in(\pi,2\pi))\\
-f_{\text{std}}=\cot(x-\pi),x-\pi=\text{arccot}(x-\pi)\\
-f^{-1}(x)=\pi+\text{arccot}(x)</script><p><img src="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20221024165718816.png" alt="image-20221024165718816"></p>
-<p><img src="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20221024165731926.png" alt="image-20221024165731926"></p>
-<p><img src="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20221024170051034.png" alt="image-20221024170051034"></p>
-<p><img src="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20221024170150305.png" alt="image-20221024170150305"></p>
-<h2 id="双曲函数"><a href="#双曲函数" class="headerlink" title="双曲函数"></a>双曲函数</h2><p><img src="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20221004215400105.png" alt="image-20221004215400105"></p>
-<script type="math/tex; mode=display">
-\sinh x=\frac{e^x-e^{-x}}2\\
-\cosh x=\frac{e^x+e^{-x}}2</script><script type="math/tex; mode=display">
-\cosh^2 x - \sinh^2 x = 1\\
-\sinh\left(x+y\right)  = \sinh x \cosh y + \cosh x \sinh y\\ \cosh\left(x+y\right)  = \cosh x \cosh y + \sinh x \sinh y</script><p><img src="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20221004214520866.png" alt="image-20221004214520866"></p>
-<script type="math/tex; mode=display">
-\sinh^{-1} x =  \ln\left(x + \sqrt{x^2 + 1}\right) 
-\\
-\cosh^{-1} x =  \ln\left(x + \sqrt{x^2 - 1}\right) 
-\\</script><h1 id="函数的极限"><a href="#函数的极限" class="headerlink" title="函数的极限"></a>函数的极限</h1><h2 id="varepsilon-delta-定义"><a href="#varepsilon-delta-定义" class="headerlink" title="$\varepsilon-\delta$定义"></a>$\varepsilon-\delta$定义</h2><p>$\forall \varepsilon&gt;0$，$\exists \delta&gt;0$，使得$x\in(a-\delta,a+\delta)$时，$|f(x)-A|&lt;\varepsilon$恒成立，但存在$f(a)$无定义，故$0&lt;|x-a|&lt;\delta$</p>
-<p>记作：</p>
-<script type="math/tex; mode=display">
-\lim_{x\to a}f(x)=A</script><h3 id="去心-delta-邻域"><a href="#去心-delta-邻域" class="headerlink" title="去心$\delta$邻域"></a>去心$\delta$邻域</h3><script type="math/tex; mode=display">
-\mathring{U}(a,\delta)=\{x|0<|x-a|<\delta,\delta>0\}</script><h3 id="右-delta-邻域"><a href="#右-delta-邻域" class="headerlink" title="右$\delta$邻域"></a>右$\delta$邻域</h3><script type="math/tex; mode=display">
-\mathring{U}^+(a,\delta)=\{x|0<x-a<\delta\}=(a,a+\delta)</script><h2 id="左右极限"><a href="#左右极限" class="headerlink" title="左右极限"></a>左右极限</h2><p>若对$\forall \varepsilon&gt;0$，$\exists \delta&gt;0$，当$x\in\mathring{U}^+(a,\delta)$时恒有${|f(a)-A|&lt;\varepsilon}$</p>
-<p>就称$A$为函数$f(x)$在$a$处的右极限，记为</p>
-<script type="math/tex; mode=display">
-\lim_{x\to a^+}f(x)=A</script><h2 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h2><script type="math/tex; mode=display">
-\lim_{x\to a}f(x)存在\Leftrightarrow\lim_{x\to a^-}f(x)和\lim_{x\to a^+}f(x)\\分别存在且相等</script><h2 id="无穷"><a href="#无穷" class="headerlink" title="无穷"></a>无穷</h2><p>设$f(x)$在$|x|&gt;M,M&gt;0$时有定义，$A$为某一常数，若对任意$\varepsilon&gt;$0，都$\exists X&gt;0$使得当$ |x|&gt;X$时</p>
-<script type="math/tex; mode=display">
-|f(x)-A|<\varepsilon</script><p>那么就称$A$为函数$f(x)$当$x\to \infty$的极限</p>
-<script type="math/tex; mode=display">
-\lim_{x\to \infty}f(x)=A/f(x)\to A(当x\to  \infty)</script><p>同理正无穷去掉绝对值</p>
-<h1 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h1><h2 id="有界性"><a href="#有界性" class="headerlink" title="有界性"></a>有界性</h2><p>设$f(x)$在区间$X$上有定义，且对任意$x\in X$，存在$M$使得</p>
-<script type="math/tex; mode=display">
-|f(x)|\le M</script><p>就称$f(x)$在$X$上有界</p>
-<p>同理若</p>
-<script type="math/tex; mode=display">
-f(x)\le K_1</script><p>则称$f(x)$在X上有上界，其中$K_1$为$f(x)$在$X$上的一个上界</p>
-<h3 id="连续"><a href="#连续" class="headerlink" title="连续"></a>连续</h3><p>$f(x)\in C[a,b]$则$f(x)$在$[a,b]$上有界</p>
-<p>但开区间不一定满足有界</p>
-<p>若有界则$\exists \lim<em>{x\to a^+} f(x),\lim</em>{x\to b^-} f(x)$</p>
-<h2 id="极限的性质"><a href="#极限的性质" class="headerlink" title="极限的性质"></a>极限的性质</h2><h3 id="唯一性"><a href="#唯一性" class="headerlink" title="唯一性"></a>唯一性</h3><p>若有极限，则必唯一</p>
-<p>逆否：若左右极限不等，则极限不存在</p>
-<h3 id="局部有界性"><a href="#局部有界性" class="headerlink" title="局部有界性"></a>局部有界性</h3><p>函数与数列的区别是函数是连续的而数列是离散的</p>
-<p>如$y=\frac1x$极限为$0$但无界</p>
-<p>若$\displaystyle\lim_{x\to a}f(x)=A$，则$\exists \delta&gt;0$，当$x\in \mathring{U}(a,\delta),|f(x)|\le M(M&gt;0)$</p>
-<p>反向</p>
-<p>若$\displaystyle\lim_{x\to a}f(x)=A(A\ne 0)$，则$\exists \delta&gt;0$，当$x\in \mathring{U}(a,\delta),|f(x)|&gt;\left|\frac A2\right |(M&gt;0)$</p>
-<h4 id="单侧有界性"><a href="#单侧有界性" class="headerlink" title="单侧有界性"></a>单侧有界性</h4><p> 可单侧使用</p>
-<p>若右极限存在，则在右邻域中有界</p>
-<h3 id="保号性"><a href="#保号性" class="headerlink" title="保号性"></a>保号性</h3><p>若$\displaystyle\lim_{x\to a}f(x)=A&gt;0$，则$\exists \delta&gt;0$，当$x\in \mathring{U}(a,\delta),f(x)&gt;0$</p>
-<h2 id="复合函数"><a href="#复合函数" class="headerlink" title="复合函数"></a>复合函数</h2><p>$y=f[\varphi(x)]$==其中$\varphi (x)\ne a $==，若</p>
-<script type="math/tex; mode=display">
-\lim_{x\to x_0}\varphi(x)=a,\lim_{x\to a}f(x)=A\Rightarrow\\
-\lim_{x\to x_0}f[\varphi(x)]=A</script><p>$f(x)$可能在$a$处无定义</p>
-<h2 id="连续与间断"><a href="#连续与间断" class="headerlink" title="连续与间断"></a>连续与间断</h2><p>定义，若$f(x)$在$x_0$的邻域(不去心)有定义，且</p>
-<script type="math/tex; mode=display">
-\lim_{\Delta x\to0}\Delta y=\lim_{\Delta x\to0}f(x_0+\Delta x)-f(x_0)=0</script><p>等价定义(三合一)，必须双向逼近</p>
-<script type="math/tex; mode=display">
-\lim_{x\to x_0}f(x)=f(x_0)=\lim_{x\to x_0^+/x_0^-}f(x)</script><p>特点:</p>
-<ul>
-<li>在邻域有定义$\exists f(x_0)$</li>
-<li>左右极限存在且相等</li>
-<li>等于函数值</li>
-</ul>
-<h3 id="在区间上连续"><a href="#在区间上连续" class="headerlink" title="在区间上连续"></a>在区间上连续</h3><p>开区间若每一点连续则在区间上连续                                                                                                                                                                                            </p>
-<p>闭区间在端点处只要求单侧连续</p>
-<p>基本初等函数在定义域上连续</p>
-<p>初等函数在定义区间上连续($\text{not}$定义域)</p>
-<p>反例$y=\sqrt{\sin x-1}$无邻域</p>
-<h3 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h3><p>四则注意分母不为0 </p>
-<h3 id="复合函数-1"><a href="#复合函数-1" class="headerlink" title="复合函数"></a>复合函数</h3><script type="math/tex; mode=display">
-\lim_{x\to x_0}\varphi(x)=a,\lim_{x\to a}f(x)=f(a)=A\\
-\Rightarrow\lim_{x\to x_0}f[\varphi(x)]=f[\lim_{x\to x_0}\varphi(x)]=f(a)</script><p>内层不需要连续，连续则极限符号可交换</p>
-<h3 id="间断"><a href="#间断" class="headerlink" title="间断"></a>间断</h3><p>首先有函数在去心领域有定义，其次不连续</p>
-<h3 id="介值定理"><a href="#介值定理" class="headerlink" title="介值定理"></a>介值定理</h3><p>$f(x)$在$[a,b]$上连续，则对$\forall c\in[m,M]$，$\exists \xi\in[a,b],\text{s.t.}f(\xi)=c$</p>
-<h4 id="离散形式"><a href="#离散形式" class="headerlink" title="离散形式"></a>离散形式</h4><p>数列满足$|a<em>{n+1}-a</em>{n}|\le1$则类比介值定理</p>
-<h3 id="零点定理"><a href="#零点定理" class="headerlink" title="零点定理"></a>零点定理</h3><p>$f(x)$在$[a,b]$上连续，则若$f(a)f(b)&lt;0$，$\exists \xi\in(a,b),\text{s.t.}f(\xi)=0$</p>
-<p>实际上为零点定理的特殊形式</p>
-<h1 id="特殊函数"><a href="#特殊函数" class="headerlink" title="特殊函数"></a>特殊函数</h1><p>绝对值$|x|$，$0$处连续但不可导</p>
-<script type="math/tex; mode=display">
-\lim_{x\to0}\frac{f(x+h)-f(x-h)}h=0</script><ul>
-<li><p>曲线光滑不一定可导</p>
-<p>$y=x^{\frac13},y’=\frac{1}{3x^{\frac23}},x\to0,y’=\infty$</p>
-</li>
-<li><p>导数存在不一定连续可导(导函数连续)</p>
-<script type="math/tex; mode=display">
-f(x)=\begin{cases}x^2\sin \frac1x,x\ne0\\
-0,x=0\end{cases}</script></li>
-</ul>
-<p>符号函数</p>
-<p><img src="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/Signum_function.svg.png" alt="Signum_function.svg"></p>
-<script type="math/tex; mode=display">
-x=|x|\text{sgn}x \\
-|x|=x\text{sgn}x</script><script type="math/tex; mode=display">
-f(x)=\begin{cases}1,x\ge0\\
--1,x<0\end{cases}</script><p>$|f(x)|$连续</p>
-<p><img src="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/Signum_function.svg-1666608110047.png" alt="Signum_function.svg"></p>
-<script type="math/tex; mode=display">
-[x]\le x<[x]+1</script><p>定义域为$\mathbf R$，值域为$\mathbf Z$</p>
-<script type="math/tex; mode=display">
-[x]+[y]\le[x+y]\le[x]+[y]+1</script><p><strong>Dirichlet function</strong></p>
-<script type="math/tex; mode=display">
-\textbf{1}_{\mathbb{Q}}(x)=\begin{cases}1,x\in \mathbb{Q}\\
-0,x\notin \mathbb{Q}\end{cases}</script><p>处处无极限，处处不连续，处处不可导</p>
-<p>任意有理数都为其周期，无最小正周期，偶函数</p>
-<script type="math/tex; mode=display">
-f(x)=\begin{cases}\frac1x,x\ne0\\
-0,x=0\end{cases},f(f(x))=x</script>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2300,7 +2218,7 @@ f(x)=\begin{cases}\frac1x,x\ne0\\
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">72</span>
+                <span class="site-state-item-count">73</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

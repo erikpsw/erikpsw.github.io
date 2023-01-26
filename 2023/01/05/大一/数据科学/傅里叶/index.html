@@ -105,7 +105,7 @@
 <meta property="og:image" content="http://yoursite.com/2023/01/05/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E5%82%85%E9%87%8C%E5%8F%B6/image-20230105165158433.png">
 <meta property="og:image" content="http://yoursite.com/2023/01/05/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E5%82%85%E9%87%8C%E5%8F%B6/image-20230105165412880.png">
 <meta property="article:published_time" content="2023-01-05T03:50:59.169Z">
-<meta property="article:modified_time" content="2023-01-06T07:04:43.585Z">
+<meta property="article:modified_time" content="2023-01-13T12:13:30.649Z">
 <meta property="article:author" content="Shiwei Pan">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/2023/01/05/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E5%82%85%E9%87%8C%E5%8F%B6/image-20230105144356493.png">
@@ -422,10 +422,10 @@ z_{1} z_{2}=r_{1} r_{2}\left(\cos \left(\theta_{1}+\theta_{2}\right)+i \operator
 \sqrt[n]1=\omega_n^0,\omega_n^1,\omega_n^2\dots\omega_n^{n-1}</script><p>这就是$n$个单位根，$\omega_n$为主$n$次单位根</p>
 <p>不难想到可以利用这$n$个值来表示多项式</p>
 <h1 id="傅里叶变换"><a href="#傅里叶变换" class="headerlink" title="傅里叶变换"></a>傅里叶变换</h1><script type="math/tex; mode=display">
-g(t)-A_0=\sum_{i=1}^\infty A_n\cos(n\omega t+\varphi_n)</script><p>考虑这个图形的质心</p>
+g(t)-A_0=\sum_{i=0}^\infty A_n\cos(n\omega t+\varphi_n)</script><p>考虑这个图形的质心</p>
 <script type="math/tex; mode=display">
 g(t)e^{-2\pi ft    \text{i}}\\
-z_c=\frac1N\sum_{k=0}^{N}g(t_k)e^{-2\pi ft_k    \text{i}}</script><p>取极限，并不需平均</p>
+z_c=\frac1N\sum_{k=0}^{N-1}g(t_k)e^{-2\pi ft_k    \text{i}}</script><p>取极限，并不需平均</p>
 <script type="math/tex; mode=display">
 \hat{g}(f)=\int_{0}^{t_m}g(t)e^{-2\pi ft    \text{i}}\text{d}t</script><p>利用复数的三角形式</p>
 <p><img src="/2023/01/05/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E5%82%85%E9%87%8C%E5%8F%B6/image-20230105165158433.png" alt="image-20230105165158433"></p>
@@ -475,7 +475,71 @@ y_k=\sum_{j=0}^{n-1}a_j(\omega_n^k)^j</script><p>从而向量</p>
 <script type="math/tex; mode=display">
 (y_0,y_1,\cdots ,y_{n-1})</script><p>为系数向量的离散傅里叶变换(DFT)</p>
 <h2 id="FFT"><a href="#FFT" class="headerlink" title="FFT"></a>FFT</h2><script type="math/tex; mode=display">
-A(x)=A^{[0]}(x^2)+xA^{[1]}(x^2)</script>
+A(x)=A^{[0]}(x^2)+xA^{[1]}(x^2)</script><p>从而对$k:0\to \frac n 2-1$有</p>
+<script type="math/tex; mode=display">
+\begin{cases}y_k=y^{[0]}_k+\omega_n^ky_k^{[1]}\\
+y_{k+n/2}=y^{[0]}_k-\omega_n^ky_k^{[1]}\end{cases}</script><p>从而分为两个规模为一半的子问题</p>
+<script type="math/tex; mode=display">
+\left[\begin{array}{c}
+P\left(\omega^{0}\right) \\
+P\left(\omega^{1}\right) \\
+P\left(\omega^{2}\right) \\
+\vdots \\
+P\left(\omega^{n-1}\right)
+\end{array}\right]=\left[\begin{array}{ccccc}
+1 & 1 & 1 & \cdots & 1 \\
+1 & \omega & \omega^{2} & \cdots & \omega^{n-1} \\
+1 & \omega^{2} & \omega^{4} & \cdots & \omega^{2(n-1)} \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+1 & \omega^{n-1} & \omega^{2(n-1)} & \cdots & \omega^{(n-1)(n-1)}
+\end{array}\right]\left[\begin{array}{c}
+p_{0} \\
+p_{1} \\
+p_{2} \\
+\vdots \\
+p_{n-1}
+\end{array}\right]</script><script type="math/tex; mode=display">
+\left[\begin{array}{c}
+p_{0} \\
+p_{1} \\
+p_{2} \\
+\vdots \\
+p_{n-1}
+\end{array}\right]=\frac{1}{n}\left[\begin{array}{ccccc}
+1 & 1 & 1 & \cdots & 1 \\
+1 & \omega^{-1} & \omega^{-2} & \cdots & \omega^{-(n-1)} \\
+1 & \omega^{-2} & \omega^{-4} & \cdots & \omega^{-2(n-1)} \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+1 & \omega^{-(n-1)} & \omega^{-2(n-1)} & \cdots & \omega^{-(n-1)(n-1)}
+\end{array}\right]\left[\begin{array}{c}
+P\left(\omega^{0}\right) \\
+P\left(\omega^{1}\right) \\
+P\left(\omega^{2}\right) \\
+\vdots \\
+P\left(\omega^{n-1}\right)
+\end{array}\right]</script><p>而离散傅里叶变换可以写为</p>
+<script type="math/tex; mode=display">
+z_c=\sum_{k=0}^{N-1}g(t_k)e^{-2\pi ft_k    \text{i}}</script><p>这就是带入单位根后的多项式的形式</p>
+<h3 id="化简"><a href="#化简" class="headerlink" title="化简"></a>化简</h3><script type="math/tex; mode=display">
+z_c=\sum_{k=0}^{N-1}x_ke^{-2\pi f_rt_k    \text{i}}\\</script><p>总共有N个频率$f_r(0\le r\le n-1)$，让其等距分布</p>
+<script type="math/tex; mode=display">
+\\-2\pi f_rt_k=-2\pi f_r\frac{k}{f_s}</script><p>等距，所以令</p>
+<script type="math/tex; mode=display">
+\frac{f_r}{rf_s}=\frac1{N}</script><p>得</p>
+<script type="math/tex; mode=display">
+X_r=\sum_{k=0}^{N-1}x_ke^{-(2\pi/N) rk\text{i}}</script><h1 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h1><p>采样定理告诉我们，采样频率要大于信号频率的两倍</p>
+<p>时域到频域，将N个采样点变为N个复数</p>
+<script type="math/tex; mode=display">
+t\to f\\
+A\to z</script><p>设采样频率为$f_s$，则FFT的分辨率为$f_s/N$</p>
+<script type="math/tex; mode=display">
+f_i=\frac{(i-1)f_s}N</script><p>$z$的模长反映了振幅占比</p>
+<script type="math/tex; mode=display">
+A_i=\frac{2||z_i||}{N}</script><p> 每个分量的相位为对应复数的相位</p>
+<script type="math/tex; mode=display">
+\tan \varphi=\frac{\Im z}{\Re z}</script><p>由于$X<em>r$和$X</em>{N-r}$共轭，取模后相等</p>
+<p>所以FFT的结果左右是对称的，只需取一般</p>
+
       
     </div>
     
@@ -516,6 +580,10 @@ A(x)=A^{[0]}(x^2)+xA^{[1]}(x^2)</script>
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2023/01/11/%E5%A4%A7%E4%B8%80/%E6%9D%82/%E7%9E%8E%E5%87%A0%E6%8A%8A%E8%AE%B0/" rel="prev" title="大一/杂/瞎几把记">
+                大一/杂/瞎几把记 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -615,7 +683,7 @@ A(x)=A^{[0]}(x^2)+xA^{[1]}(x^2)</script>
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">72</span>
+                <span class="site-state-item-count">73</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -678,7 +746,7 @@ A(x)=A^{[0]}(x^2)+xA^{[1]}(x^2)</script>
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#复数"><span class="nav-number">1.</span> <span class="nav-text">复数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#表示"><span class="nav-number">1.1.</span> <span class="nav-text">表示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运算定律"><span class="nav-number">1.2.</span> <span class="nav-text">运算定律</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#性质"><span class="nav-number">1.3.</span> <span class="nav-text">性质</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#几何表示"><span class="nav-number">2.</span> <span class="nav-text">几何表示</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#性质-1"><span class="nav-number">2.1.</span> <span class="nav-text">性质</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#棣莫弗公式"><span class="nav-number">2.1.1.</span> <span class="nav-text">棣莫弗公式</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#傅里叶变换"><span class="nav-number">3.</span> <span class="nav-text">傅里叶变换</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#快速傅里叶变换"><span class="nav-number">4.</span> <span class="nav-text">快速傅里叶变换</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#多项式乘法"><span class="nav-number">4.1.</span> <span class="nav-text">多项式乘法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#消去引理"><span class="nav-number">4.1.1.</span> <span class="nav-text">消去引理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#折半引理"><span class="nav-number">4.1.2.</span> <span class="nav-text">折半引理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#求和引理"><span class="nav-number">4.1.3.</span> <span class="nav-text">求和引理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FFT"><span class="nav-number">4.2.</span> <span class="nav-text">FFT</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#复数"><span class="nav-number">1.</span> <span class="nav-text">复数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#表示"><span class="nav-number">1.1.</span> <span class="nav-text">表示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运算定律"><span class="nav-number">1.2.</span> <span class="nav-text">运算定律</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#性质"><span class="nav-number">1.3.</span> <span class="nav-text">性质</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#几何表示"><span class="nav-number">2.</span> <span class="nav-text">几何表示</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#性质-1"><span class="nav-number">2.1.</span> <span class="nav-text">性质</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#棣莫弗公式"><span class="nav-number">2.1.1.</span> <span class="nav-text">棣莫弗公式</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#傅里叶变换"><span class="nav-number">3.</span> <span class="nav-text">傅里叶变换</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#快速傅里叶变换"><span class="nav-number">4.</span> <span class="nav-text">快速傅里叶变换</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#多项式乘法"><span class="nav-number">4.1.</span> <span class="nav-text">多项式乘法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#消去引理"><span class="nav-number">4.1.1.</span> <span class="nav-text">消去引理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#折半引理"><span class="nav-number">4.1.2.</span> <span class="nav-text">折半引理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#求和引理"><span class="nav-number">4.1.3.</span> <span class="nav-text">求和引理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FFT"><span class="nav-number">4.2.</span> <span class="nav-text">FFT</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#化简"><span class="nav-number">4.2.1.</span> <span class="nav-text">化简</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结果"><span class="nav-number">5.</span> <span class="nav-text">结果</span></a></li></ol></div>
             
 
           </div>

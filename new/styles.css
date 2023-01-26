@@ -241,7 +241,7 @@
 #work-list{
     margin-left: 2.5em;
 }
-#work1{
+.work{
     font-size: 3em;
     font-family: 'Courier New';
     font-weight: bolder;
@@ -502,7 +502,7 @@
         margin-left: 1em;
         margin-bottom: 10em;
     }
-    #work1{
+    .work{
         font-size: 3em;
         font-family: 'Courier New';
         font-weight: bolder;

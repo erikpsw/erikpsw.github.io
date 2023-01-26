@@ -311,6 +311,371 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/10/09/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E5%88%9A%E4%BD%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/10/09/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E5%88%9A%E4%BD%93/" itemprop="url">大一/物理/刚体</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-10-09T12:00:18+08:00">
+                2022-10-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="刚体"><a href="#刚体" class="headerlink" title="刚体"></a>刚体</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>刚体指在力的作用下大小和形状都不发生变化的物体</p>
+<p>其有两种运动</p>
+<ul>
+<li><p>平动：其上任意两点的连线平行</p>
+</li>
+<li><p>转动：任意点都绕某轴做圆周运动</p>
+<p>其中分有定轴，动轴和定</p>
+</li>
+</ul>
+<h2 id="角动量"><a href="#角动量" class="headerlink" title="角动量"></a>角动量</h2><p>对于刚体，我们知道其是由许多质元所组成的</p>
+<p>利用微元的思想，据质点的角动量表达式</p>
+<p>我们计算物体角动量在某一轴上的投影</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+ \boldsymbol{L}_z&=\sum _i \boldsymbol{r}_i\times \boldsymbol{p}_i\\
+ &=\sum_im_i\boldsymbol{r}_i\times\boldsymbol{v}_i\\
+ &=\sum_i m_i\boldsymbol{\omega} r_i^2\\
+ &=\left ( \sum_i m_i r_i^2\right )\boldsymbol{\omega}\\
+ &=J_z\boldsymbol{\omega}
+ \end{aligned}</script><p>对于刚体，我们引入一个重要的物理量，即转动惯量$J$</p>
+<h2 id="转动惯量"><a href="#转动惯量" class="headerlink" title="转动惯量"></a>转动惯量</h2><p>对于连续体，由转动惯量的定义，有</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+ J&=\int_L r^2\lambda\text{d}l\\
+ &=\int_S r^2\sigma\text{d}S\\
+ &=\int_V r^2\rho\text{d}V\\
+ \end{aligned}</script><p>利用等效替代的思想，我们引入回旋半径$r_g$，由此知</p>
+<script type="math/tex; mode=display">
+J=Mr_g^2</script><p>对于常见的刚体</p>
+<p><img src="/2022/10/09/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E5%88%9A%E4%BD%93/ExMI_1.svg" alt="ExMI_1"></p>
+<p>例，对于球体</p>
+<p><img src="/2022/10/09/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E5%88%9A%E4%BD%93/v2-ee1741f6b1779893994dbe13bd07339f_r.png" alt="v2-ee1741f6b1779893994dbe13bd07339f_r"></p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+J&=\int_V r^2\rho_0\text{d}V\\
+&=\rho_0\iiint_\Omega (\rho\sin \theta )^2  \rho^2\sin \theta\,\mathrm{d}\theta\mathrm{d}\phi\mathrm{d}{\rho} \\
+&=\rho_0\int_0^R\rho^4\int_0^{2\pi}\int_0^\pi\sin^3\mathrm{d}\theta\mathrm{d}\phi\mathrm{d}{\rho} \\
+&=\rho_0\int_0^R\rho^42\pi\frac43\mathrm{d}{\rho}=\frac{2mR^2}5
+
+\end{aligned}</script><h3 id="平行轴定理"><a href="#平行轴定理" class="headerlink" title="平行轴定理"></a>平行轴定理</h3><script type="math/tex; mode=display">
+J=J_c+md^2</script><h3 id="垂直轴定理"><a href="#垂直轴定理" class="headerlink" title="垂直轴定理"></a>垂直轴定理</h3><script type="math/tex; mode=display">
+I_z=I_x+I_y</script><p>利用对称性$(I_x=I_y)$，可以快速得到转动惯量</p>
+<h1 id="角动量守恒"><a href="#角动量守恒" class="headerlink" title="角动量守恒"></a>角动量守恒</h1><p>若$M=0$</p>
+<script type="math/tex; mode=display">
+J\omega=C</script><p>对于转轴来说</p>
+<ul>
+<li>外力与轴平行</li>
+<li>外力与力臂平行(有心力)</li>
+</ul>
+<p>则都有动量守恒</p>
+<p>外力矩(只考虑外力)</p>
+<script type="math/tex; mode=display">
+\boldsymbol{M}=\boldsymbol{r}\times\boldsymbol{F}_{外}</script><p>对于系统，角动量守恒的表达式为</p>
+<script type="math/tex; mode=display">
+\boldsymbol{M}\text{d}t=J\text{d}\boldsymbol{\omega}\\
+J_1\boldsymbol{\omega}_1+J_2\boldsymbol{\omega}_2=J_1\boldsymbol{\omega}_1'+J_2\boldsymbol{\omega}_2'</script><h1 id="刚体的能量"><a href="#刚体的能量" class="headerlink" title="刚体的能量"></a>刚体的能量</h1><p>力矩的功</p>
+<script type="math/tex; mode=display">
+\text{d}W=M\text{d}\theta</script><p>转动动能</p>
+<script type="math/tex; mode=display">
+E_k=\frac12J\omega^2</script><p>动能定理</p>
+<script type="math/tex; mode=display">
+\int_{\theta_1}^{\theta_2}(M_{外}+M_{G})\text{d}\theta=\frac12J\omega_2^2-\frac12J\omega_1^2</script><p>和平动类似，故含刚体的系统需加上转动动能</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/10/06/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%A5%BD%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/10/06/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%A5%BD%E9%A2%98/" itemprop="url">大一/高数/好题</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-10-06T15:32:36+08:00">
+                2022-10-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <script type="math/tex; mode=display">
+\lim_{x\to\frac\pi2}(\sin x)^{\tan x}</script><script type="math/tex; mode=display">
+\begin{aligned}\lim_{x\to\frac\pi2}(\sin x)^{\tan x}
+&=\lim_{x\to\frac\pi2}e^{\tan x\ln\sin x}\\&=\lim_{t\to1^-} e^{\tan x\ln t}\end{aligned}</script><p>法1</p>
+<script type="math/tex; mode=display">
+\begin{aligned}\because\lim_{t\to1^-} {\tan x\ln t}&=\lim_{t\to1^-}\frac{t}{\sqrt{1-t^2}}\ln t \\
+&=\lim_{t\to1^-}t\cdot\lim_{t\to1^-}\frac{t-1}{\sqrt{1-t^2}}\\
+&=1\cdot \lim_{t\to1^-}\sqrt{\frac{(t-1)^2}{1-t^2}}\\
+&=\lim_{t\to1^-}\sqrt{\frac{1-t}{1+t}}\\
+&=0
+\end{aligned}\\
+\therefore 由复合函数的极限运算法则知\\
+\lim_{t\to1^-} e^{\tan x\ln t}=e^{\lim_{t\to1^-} {\tan x\ln t}}=e^0=1</script><p>法2</p>
+<script type="math/tex; mode=display">
+t=x-\frac\pi2\to0,x=\frac\pi2+t\\
+\begin{aligned}\lim_{x\to\frac\pi2}(\sin x)^{\tan x}
+&=\lim_{x\to\frac\pi2}e^{\tan x\ln\sin x}
+
+\\&=\lim_{t\to0} \exp \left \{   
+\frac{\sin \left(\frac\pi2+t \right)\ln\left[\sin \left(\frac\pi2+t \right)\right] }{\cos \left(\frac\pi2+t \right)}\right\}
+
+\\&=\lim_{t\to0} \exp \left \{   
+\frac{\sin \left(\frac\pi2+t \right)\left[\sin \left(\frac\pi2+t \right)-1\right] }{\cos \left(\frac\pi2+t \right)}\right\}
+
+\\&=\lim_{t\to0} \exp \left \{   
+\frac{\cos t (\cos t-1)     }{-\sin t}\right\}
+
+\\&=\lim_{t\to0} \exp \left \{   
+\frac{1\cdot(-\frac12t^2)     }{-t}\right\}
+\\&=\lim_{t\to0} e^{\frac12t}=e^0=1
+\end{aligned}</script><p>简化</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\lim _{x \rightarrow \frac{\pi}{2}}(\sin x)^{\tan x} &=\lim _{x \rightarrow 0}\left[\sin \left(\frac{\pi}{2}-x\right)\right]^{\tan \left(\frac{\pi}{2}-x\right)} \\
+&=\lim _{x \rightarrow 0}(\cos x)^{\frac{1}{\tan x}} \\
+&=\exp \lim _{x \rightarrow 0} \frac{\cos x-1}{\tan x} \\
+& = \exp \lim _{x \rightarrow 0} \frac{-x^{2} / 2}{x}=e^{0}=1
+\end{aligned}</script><script type="math/tex; mode=display">
+\lim_{x\to0}\frac{\cos(\tan x)-\cos x}{x^3\sin x}</script><p>法1</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\quad\,\lim_{x\to0}\frac{\cos(\tan x)-\cos x}{x^4}\\&=
+\lim_{x\to0}\frac{\cos(\tan x)-\cos x}{x^3\sin x}\\
+&=\lim_{x\to0}\frac
+{\frac12(x^2-\tan^2x)+\frac1{24}(\tan^4x-x^4)+o(x^4)}{x^4}\\
+&=\lim_{x\to0}\frac{(x-\tan x)2x[\frac12+\frac1{24} (\tan^2x+x^2)]+o(x^4)}{x^4}
+\\&=\frac{x(-\frac13x^3)}{x^4}=-\frac13
+\end{aligned}</script><p>法2</p>
+<script type="math/tex; mode=display">
+f(x)=\cos x,\frac{\cos (\tan x)-\cos x}{\tan x-x}=f'(\xi),\xi\in(x,\tan  x)\\
+\begin{aligned}
+&\quad\,\lim_{x\to0}\frac{\cos(\tan x)-\cos x}{x^4}\\
+&=\lim_{x\to0}\frac{(\tan x-x)f'(\xi)}{x^3\sin x}\\
+&=\lim_{x\to0}\frac{(\tan x-x)(-\sin \xi)}{x^3\sin x}\\
+&=\lim_{x\to0}-\frac{1}{3}\frac{\sin \xi}{\sin x}=-\frac 13\\
+\end{aligned}</script><script type="math/tex; mode=display">
+\lim_{n\to \infty}\frac1{n^4}\prod_{k=1}^{2n}(n^2+k^2)^{\frac1n}=\lim_{n\to \infty}A</script><script type="math/tex; mode=display">
+\int_0^kf(x)\text{d}x=\lim_{n\to \infty}\frac{k}n\sum_{i=1}^nf\left(\frac {ki}n\right)</script><script type="math/tex; mode=display">
+\begin{aligned}A&=\exp\left [\frac1n\sum_{k=1}^{2n}\ln(n^2+k^2)+2\ln\frac{1}{n^2}\right]\\&=
+\exp\left [\frac1n\sum_{k=1}^{2n}\ln(n^2+k^2)+2n\frac1{n}\ln\frac{1}{n^2}\right]\\
+&=\exp\left [\frac1n\sum_{k=1}^{2n}\ln\left(\frac{n^2+k^2}{n^2}\right)\right]\\
+&=\exp\left [\frac1n\sum_{k=1}^{2n}\ln\left(1+\frac{k^2}{n^2}\right)\right]\\
+\lim_{n\to \infty}A&=\exp \int_0^2\ln(1+x^2)\text{d}x\\
+&=\exp\left\{\left[x\ln(1+x^2)\right]_0^2-\int_0^2\frac{2x^2}{1+x^2}\text{d}x\right\} \\
+&=e^{2(\ln5-2+\arctan 2)}
+\end{aligned}</script>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/10/04/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E7%AD%89%E4%BB%B7%E5%8F%98%E5%BD%A2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -622,7 +987,8 @@ E_{kS}=\frac12\frac{M_1M_2}{M_1+M_2}(\boldsymbol{u}_{12})^2</script><p>记$\mu=\
 \boldsymbol{F}_{保}=-\left(\frac{\partial E_p}{\partial x }\boldsymbol{i} +
 \frac{\partial E_p}{\partial y }\boldsymbol{j}
 +\frac{\partial E_p}{\partial z }\boldsymbol{k}
-\right)</script><p>保守力的方向延势能降低最快的方向</p>
+\right)\\
+\boldsymbol{F}_{保}=-\nabla E_p</script><p>保守力的方向沿势能降低最快的方向</p>
 <h2 id="功能原理"><a href="#功能原理" class="headerlink" title="功能原理"></a>功能原理</h2><p>首先引入保守力的概念</p>
 <p>若一个力为保守力，则它满足以下条件</p>
 <script type="math/tex; mode=display">
@@ -1028,130 +1394,6 @@ g^{\prime}(x) \neq 0,\forall x \in \mathring{U}(a, \delta),f(x),g(x)可导</scri
 \lim _{x \rightarrow a} \frac{f(x)}{g(x)}=\lim _{x \rightarrow a} \frac{f^{\prime}(x)}{g^{\prime}(x)}=l</script></li>
 </ul>
 <p>其他类型同样可以通过化简变形可转化为上面两类</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/09/24/%E5%A4%A7%E4%B8%80/%E6%9D%82/c4d/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/09/24/%E5%A4%A7%E4%B8%80/%E6%9D%82/c4d/" itemprop="url">大一/杂/c4d</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-09-24T16:40:28+08:00">
-                2022-09-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>摄像机的移动</p>
-<p>1移动2缩放3旋转</p>
-<p>f1透视 f2顶视图f3右视图f4正视图f5四个</p>
-<p>对物体</p>
-<p>4移动5缩放6旋转</p>
 
           
         
@@ -1736,8 +1978,8 @@ k=\lim_{x\to \infty}\frac{f(x)}x,b=\lim_{x\to \infty}[f(x)-kx]</script>
             <h1 id="Grid"><a href="#Grid" class="headerlink" title="Grid"></a>Grid</h1><p>2D排版方式定义</p>
 <script type="math/tex; mode=display">
 \text{display: grid}</script><p>分割</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">grid-template-rows</span>: 100<span class="selector-tag">px</span> 100<span class="selector-tag">px</span> 50<span class="selector-tag">px</span>;#垂直,分割行数值为间隔</span><br><span class="line"><span class="selector-tag">grid-template-columns</span>#水平</span><br><span class="line"></span><br><span class="line">居中元素</span><br><span class="line"><span class="selector-tag">align-items</span>: <span class="selector-tag">center</span>;</span><br><span class="line">间隔</span><br><span class="line"><span class="selector-tag">row-gap</span>: 10<span class="selector-tag">px</span></span><br><span class="line"></span><br><span class="line">按比例分配 1<span class="selector-tag">fr</span> 3<span class="selector-tag">fr</span> 1<span class="selector-pseudo">:3</span>分割</span><br><span class="line">4*1<span class="selector-tag">fr</span> 等价于 <span class="selector-tag">repeat</span>(4,1<span class="selector-tag">fr</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="子对象"><a href="#子对象" class="headerlink" title="子对象"></a>子对象</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#起始为1</span><br><span class="line">grid-area:1/1/4/3</span><br><span class="line"></span><br><span class="line">行首/列首/行尾/列尾</span><br><span class="line">grid-row: 1/4;</span><br><span class="line">grid-cloumn: 1/3;</span><br><span class="line"></span><br><span class="line">从哪开始延伸</span><br><span class="line">1/ span 3</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">    <span class="selector-tag">grid-template-rows</span>: 100<span class="selector-tag">px</span> 100<span class="selector-tag">px</span> 50<span class="selector-tag">px</span>;#垂直,分割行数值为间隔</span><br><span class="line"><span class="selector-tag">grid-template-columns</span>#水平</span><br><span class="line"></span><br><span class="line">居中元素</span><br><span class="line"><span class="selector-tag">align-items</span>: <span class="selector-tag">center</span>;</span><br><span class="line"><span class="selector-tag">place-items</span>: <span class="selector-tag">center</span>;</span><br><span class="line">间隔</span><br><span class="line"><span class="selector-tag">row-gap</span>: 10<span class="selector-tag">px</span></span><br><span class="line"></span><br><span class="line">按比例分配 1<span class="selector-tag">fr</span> 3<span class="selector-tag">fr</span> 1<span class="selector-pseudo">:3</span>分割</span><br><span class="line">4*1<span class="selector-tag">fr</span> 等价于 <span class="selector-tag">repeat</span>(4,1<span class="selector-tag">fr</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="子对象"><a href="#子对象" class="headerlink" title="子对象"></a>子对象</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#起始为1</span><br><span class="line">grid-area:1/1/4/3</span><br><span class="line"></span><br><span class="line">行首/列首/行尾/列尾</span><br><span class="line">grid-row: 1/4;</span><br><span class="line">grid-column: 1/3;</span><br><span class="line"></span><br><span class="line">从哪开始延伸</span><br><span class="line">1/ span 3</span><br></pre></td></tr></table></figure>
 <h1 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h1><p>使用animate.css</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">"https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.min.css"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">使用class来应用动画</span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">"animate__animated animate__bounce"</span>&gt;</span></span><br><span class="line">需要animate__前缀</span><br></pre></td></tr></table></figure>
 <p>然后可以在对象中指定参数</p>
@@ -1748,131 +1990,6 @@ k=\lim_{x\to \infty}\frac{f(x)}x,b=\lim_{x\to \infty}[f(x)-kx]</script>
 <h2 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.css(<span class="string">"color"</span>,<span class="string">"blue"</span>) (JQuery)</span><br><span class="line">.style</span><br><span class="line">如果样式是通过外部样式表或者通过浏览器的默认样式设置的，则无法通过.style对象访问这些样式</span><br><span class="line">.style.setProperty(<span class="string">'--animate-duration'</span>, <span class="string">'2s'</span>);(DOM对象)</span><br><span class="line"><span class="comment">//获取具体内容</span></span><br><span class="line"><span class="keyword">var</span> element = <span class="built_in">document</span>.querySelector(<span class="string">'.my-element'</span>);</span><br><span class="line"><span class="keyword">var</span> style = <span class="built_in">window</span>.getComputedStyle(element).<span class="string">'::before'</span>;</span><br><span class="line"><span class="keyword">var</span> content = style.getPropertyValue(<span class="string">'content'</span>);</span><br><span class="line"></span><br><span class="line">getComputedStyle 方法只能用于获取元素的最终渲染样式，不能用于获取元素的原始样式</span><br></pre></td></tr></table></figure>
 <h1 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h1><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">box-shadow</span>:</span><br><span class="line">offset-x | offset-y | blur-radius | spread-radius | color</span><br></pre></td></tr></table></figure>
 <h2 id="伪元素"><a href="#伪元素" class="headerlink" title="伪元素"></a>伪元素</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">::before/::after</span><br><span class="line">在前或在后面</span><br><span class="line"><span class="selector-class">.sub_title</span><span class="selector-pseudo">::after</span>&#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">5px</span> solid black;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translate</span>(-<span class="number">50%</span>,<span class="number">50%</span>);&#125;</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/17/%E5%A4%A7%E4%B8%80/python/DL/api/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/08/17/%E5%A4%A7%E4%B8%80/python/DL/api/" itemprop="url">大一/python/DL/api</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-08-17T18:20:11+08:00">
-                2022-08-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> torch.utils <span class="keyword">import</span> data</span><br><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">from</span> torch <span class="keyword">import</span> nn<span class="comment">#neural network</span></span><br></pre></td></tr></table></figure>
-<h1 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">trans = torchvision.transforms.ToTensor()<span class="comment">#变换为张量</span></span><br><span class="line">mnist_train = torchvision.datasets.MNIST(</span><br><span class="line">    root=<span class="string">"./data"</span>, train=<span class="literal">True</span>, transform=trans, download=<span class="literal">True</span>)</span><br><span class="line">mnist_test = torchvision.datasets.MNIST(</span><br><span class="line">    root=<span class="string">"./data"</span>, train=<span class="literal">False</span>, transform=trans, download=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">train_iter=data.DataLoader(mnist_train,<span class="number">256</span>,<span class="literal">True</span>)</span><br><span class="line">test_iter=data.DataLoader(mnist_test,<span class="number">256</span>,<span class="literal">True</span>)</span><br><span class="line"><span class="comment">#变成一个迭代器</span></span><br></pre></td></tr></table></figure>
-<p>注意labels的形状为$m\times 1$而非$m$</p>
-<p>返回一个迭代器，用$\rm next(iter(data))$来访问</p>
-<h1 id="网络结构"><a href="#网络结构" class="headerlink" title="网络结构"></a>网络结构</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#先定义参数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">init_weight</span><span class="params">(m)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> type(m)==nn.linear:</span><br><span class="line">        nn.init.normal_(m.weight,std=<span class="number">0.01</span>,mean=<span class="number">0</span>)</span><br><span class="line"><span class="comment">#不能用randn,太大了</span></span><br><span class="line">net.apply(init_weight)</span><br><span class="line">net=nn.Sequential(nn.Linear(<span class="number">2</span>,<span class="number">1</span>))</span><br></pre></td></tr></table></figure>
-<h1 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">loss=nn.MSELoss()<span class="comment">#损失函数</span></span><br><span class="line">trainer=torch.optim.SGD(net.parameters(),lr=<span class="number">0.03</span>)</span><br><span class="line"><span class="comment">#实例化优化器</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> epoch <span class="keyword">in</span> range(epochs):</span><br><span class="line">    <span class="keyword">for</span> X, y <span class="keyword">in</span> data_iter:<span class="comment">#迭代器每次返回X和y</span></span><br><span class="line">        l = loss(net(X) ,y)</span><br><span class="line">        trainer.zero_grad()<span class="comment">#清零梯度</span></span><br><span class="line">        l.backward()</span><br><span class="line">        trainer.step()<span class="comment">#自动前进</span></span><br><span class="line">    l = loss(net(feature), lables)<span class="comment">#每轮再计算loss</span></span><br><span class="line">    print(<span class="string">f'epoch <span class="subst">&#123;epoch + <span class="number">1</span>&#125;</span>, loss <span class="subst">&#123;l:f&#125;</span>'</span>)</span><br></pre></td></tr></table></figure>
 
           
         
@@ -1958,7 +2075,7 @@ k=\lim_{x\to \infty}\frac{f(x)}x,b=\lim_{x\to \infty}[f(x)-kx]</script>
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">72</span>
+                <span class="site-state-item-count">73</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

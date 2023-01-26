@@ -1,0 +1,50 @@
+#main{
+    display: grid;
+    place-items: center;
+    margin-top: 30px;
+    row-gap: 1rem;
+}
+
+#myCanvas{
+    box-shadow: 0.25rem 0.25rem 0.25rem 0 rgb(0 0 0 / 31%);
+}
+
+.clear{
+    font-size: 1.5em;
+    font-family:'Times New Roman', Times, serif;
+    border-radius: 0.5em;
+    border: 1.5px;
+    border-style:outset;
+    background-color: white;
+    box-shadow: 0.1rem 0.1rem 0.1rem 0 rgb(0 0 0 / 31%);
+}
+
+.prediction{
+    display: grid;
+    grid-auto-flow: column;
+    height: 5em;
+    width: 280px;
+    align-items:flex-start
+}
+
+.bar{
+    margin: 0 6.5px;
+    width: 15px;
+    height: 0em;
+    background-color: aquamarine;
+    box-shadow: 0.1rem 0.1rem 0.1rem 0 rgb(0 0 0 / 31%);
+    border-radius: 5px;
+}
+
+.numbers{
+    display: grid;
+    grid-auto-flow: column;
+    height: 1.5em;
+    width: 280px;
+    font-family:Georgia, 'Times New Roman', Times, serif
+    /* font-style:; */
+}
+.number{
+    display: grid;
+    place-items: center;
+}

@@ -745,8 +745,8 @@ y=\frac{1-x^{2}}{2}</script><p>带入得$x=\frac{1}{3}$，即点$M$是$  C D  $�
     <content><![CDATA[<h1 id="Grid"><a href="#Grid" class="headerlink" title="Grid"></a>Grid</h1><p>2D排版方式定义</p>
 <script type="math/tex; mode=display">
 \text{display: grid}</script><p>分割</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">grid-template-rows</span>: 100<span class="selector-tag">px</span> 100<span class="selector-tag">px</span> 50<span class="selector-tag">px</span>;#垂直,分割行数值为间隔</span><br><span class="line"><span class="selector-tag">grid-template-columns</span>#水平</span><br><span class="line"></span><br><span class="line">居中元素</span><br><span class="line"><span class="selector-tag">align-items</span>: <span class="selector-tag">center</span>;</span><br><span class="line">间隔</span><br><span class="line"><span class="selector-tag">row-gap</span>: 10<span class="selector-tag">px</span></span><br><span class="line"></span><br><span class="line">按比例分配 1<span class="selector-tag">fr</span> 3<span class="selector-tag">fr</span> 1<span class="selector-pseudo">:3</span>分割</span><br><span class="line">4*1<span class="selector-tag">fr</span> 等价于 <span class="selector-tag">repeat</span>(4,1<span class="selector-tag">fr</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="子对象"><a href="#子对象" class="headerlink" title="子对象"></a>子对象</h2><figure class="highlight"><table><tr><td class="code"><pre><span class="line">#起始为1</span><br><span class="line">grid-area:1/1/4/3</span><br><span class="line"></span><br><span class="line">行首/列首/行尾/列尾</span><br><span class="line">grid-row: 1/4;</span><br><span class="line">grid-cloumn: 1/3;</span><br><span class="line"></span><br><span class="line">从哪开始延伸</span><br><span class="line">1/ span 3</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">    <span class="selector-tag">grid-template-rows</span>: 100<span class="selector-tag">px</span> 100<span class="selector-tag">px</span> 50<span class="selector-tag">px</span>;#垂直,分割行数值为间隔</span><br><span class="line"><span class="selector-tag">grid-template-columns</span>#水平</span><br><span class="line"></span><br><span class="line">居中元素</span><br><span class="line"><span class="selector-tag">align-items</span>: <span class="selector-tag">center</span>;</span><br><span class="line"><span class="selector-tag">place-items</span>: <span class="selector-tag">center</span>;</span><br><span class="line">间隔</span><br><span class="line"><span class="selector-tag">row-gap</span>: 10<span class="selector-tag">px</span></span><br><span class="line"></span><br><span class="line">按比例分配 1<span class="selector-tag">fr</span> 3<span class="selector-tag">fr</span> 1<span class="selector-pseudo">:3</span>分割</span><br><span class="line">4*1<span class="selector-tag">fr</span> 等价于 <span class="selector-tag">repeat</span>(4,1<span class="selector-tag">fr</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="子对象"><a href="#子对象" class="headerlink" title="子对象"></a>子对象</h2><figure class="highlight"><table><tr><td class="code"><pre><span class="line">#起始为1</span><br><span class="line">grid-area:1/1/4/3</span><br><span class="line"></span><br><span class="line">行首/列首/行尾/列尾</span><br><span class="line">grid-row: 1/4;</span><br><span class="line">grid-column: 1/3;</span><br><span class="line"></span><br><span class="line">从哪开始延伸</span><br><span class="line">1/ span 3</span><br></pre></td></tr></table></figure>
 <h1 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h1><p>使用animate.css</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">"https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.min.css"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">使用class来应用动画</span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">"animate__animated animate__bounce"</span>&gt;</span></span><br><span class="line">需要animate__前缀</span><br></pre></td></tr></table></figure>
 <p>然后可以在对象中指定参数</p>
@@ -813,10 +813,10 @@ z_{1} z_{2}=r_{1} r_{2}\left(\cos \left(\theta_{1}+\theta_{2}\right)+i \operator
 \sqrt[n]1=\omega_n^0,\omega_n^1,\omega_n^2\dots\omega_n^{n-1}</script><p>这就是$n$个单位根，$\omega_n$为主$n$次单位根</p>
 <p>不难想到可以利用这$n$个值来表示多项式</p>
 <h1 id="傅里叶变换"><a href="#傅里叶变换" class="headerlink" title="傅里叶变换"></a>傅里叶变换</h1><script type="math/tex; mode=display">
-g(t)-A_0=\sum_{i=1}^\infty A_n\cos(n\omega t+\varphi_n)</script><p>考虑这个图形的质心</p>
+g(t)-A_0=\sum_{i=0}^\infty A_n\cos(n\omega t+\varphi_n)</script><p>考虑这个图形的质心</p>
 <script type="math/tex; mode=display">
 g(t)e^{-2\pi ft    \text{i}}\\
-z_c=\frac1N\sum_{k=0}^{N}g(t_k)e^{-2\pi ft_k    \text{i}}</script><p>取极限，并不需平均</p>
+z_c=\frac1N\sum_{k=0}^{N-1}g(t_k)e^{-2\pi ft_k    \text{i}}</script><p>取极限，并不需平均</p>
 <script type="math/tex; mode=display">
 \hat{g}(f)=\int_{0}^{t_m}g(t)e^{-2\pi ft    \text{i}}\text{d}t</script><p>利用复数的三角形式</p>
 <p><img src="/2023/01/05/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E5%82%85%E9%87%8C%E5%8F%B6/image-20230105165158433.png" alt="image-20230105165158433"></p>
@@ -866,7 +866,71 @@ y_k=\sum_{j=0}^{n-1}a_j(\omega_n^k)^j</script><p>从而向量</p>
 <script type="math/tex; mode=display">
 (y_0,y_1,\cdots ,y_{n-1})</script><p>为系数向量的离散傅里叶变换(DFT)</p>
 <h2 id="FFT"><a href="#FFT" class="headerlink" title="FFT"></a>FFT</h2><script type="math/tex; mode=display">
-A(x)=A^{[0]}(x^2)+xA^{[1]}(x^2)</script>]]></content>
+A(x)=A^{[0]}(x^2)+xA^{[1]}(x^2)</script><p>从而对$k:0\to \frac n 2-1$有</p>
+<script type="math/tex; mode=display">
+\begin{cases}y_k=y^{[0]}_k+\omega_n^ky_k^{[1]}\\
+y_{k+n/2}=y^{[0]}_k-\omega_n^ky_k^{[1]}\end{cases}</script><p>从而分为两个规模为一半的子问题</p>
+<script type="math/tex; mode=display">
+\left[\begin{array}{c}
+P\left(\omega^{0}\right) \\
+P\left(\omega^{1}\right) \\
+P\left(\omega^{2}\right) \\
+\vdots \\
+P\left(\omega^{n-1}\right)
+\end{array}\right]=\left[\begin{array}{ccccc}
+1 & 1 & 1 & \cdots & 1 \\
+1 & \omega & \omega^{2} & \cdots & \omega^{n-1} \\
+1 & \omega^{2} & \omega^{4} & \cdots & \omega^{2(n-1)} \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+1 & \omega^{n-1} & \omega^{2(n-1)} & \cdots & \omega^{(n-1)(n-1)}
+\end{array}\right]\left[\begin{array}{c}
+p_{0} \\
+p_{1} \\
+p_{2} \\
+\vdots \\
+p_{n-1}
+\end{array}\right]</script><script type="math/tex; mode=display">
+\left[\begin{array}{c}
+p_{0} \\
+p_{1} \\
+p_{2} \\
+\vdots \\
+p_{n-1}
+\end{array}\right]=\frac{1}{n}\left[\begin{array}{ccccc}
+1 & 1 & 1 & \cdots & 1 \\
+1 & \omega^{-1} & \omega^{-2} & \cdots & \omega^{-(n-1)} \\
+1 & \omega^{-2} & \omega^{-4} & \cdots & \omega^{-2(n-1)} \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+1 & \omega^{-(n-1)} & \omega^{-2(n-1)} & \cdots & \omega^{-(n-1)(n-1)}
+\end{array}\right]\left[\begin{array}{c}
+P\left(\omega^{0}\right) \\
+P\left(\omega^{1}\right) \\
+P\left(\omega^{2}\right) \\
+\vdots \\
+P\left(\omega^{n-1}\right)
+\end{array}\right]</script><p>而离散傅里叶变换可以写为</p>
+<script type="math/tex; mode=display">
+z_c=\sum_{k=0}^{N-1}g(t_k)e^{-2\pi ft_k    \text{i}}</script><p>这就是带入单位根后的多项式的形式</p>
+<h3 id="化简"><a href="#化简" class="headerlink" title="化简"></a>化简</h3><script type="math/tex; mode=display">
+z_c=\sum_{k=0}^{N-1}x_ke^{-2\pi f_rt_k    \text{i}}\\</script><p>总共有N个频率$f_r(0\le r\le n-1)$，让其等距分布</p>
+<script type="math/tex; mode=display">
+\\-2\pi f_rt_k=-2\pi f_r\frac{k}{f_s}</script><p>等距，所以令</p>
+<script type="math/tex; mode=display">
+\frac{f_r}{rf_s}=\frac1{N}</script><p>得</p>
+<script type="math/tex; mode=display">
+X_r=\sum_{k=0}^{N-1}x_ke^{-(2\pi/N) rk\text{i}}</script><h1 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h1><p>采样定理告诉我们，采样频率要大于信号频率的两倍</p>
+<p>时域到频域，将N个采样点变为N个复数</p>
+<script type="math/tex; mode=display">
+t\to f\\
+A\to z</script><p>设采样频率为$f_s$，则FFT的分辨率为$f_s/N$</p>
+<script type="math/tex; mode=display">
+f_i=\frac{(i-1)f_s}N</script><p>$z$的模长反映了振幅占比</p>
+<script type="math/tex; mode=display">
+A_i=\frac{2||z_i||}{N}</script><p> 每个分量的相位为对应复数的相位</p>
+<script type="math/tex; mode=display">
+\tan \varphi=\frac{\Im z}{\Re z}</script><p>由于$X<em>r$和$X</em>{N-r}$共轭，取模后相等</p>
+<p>所以FFT的结果左右是对称的，只需取一般</p>
+]]></content>
   </entry>
   <entry>
     <title>大一/c语言/选择</title>
@@ -887,16 +951,6 @@ A(x)=A^{[0]}(x^2)+xA^{[1]}(x^2)</script>]]></content>
 <p>If the case label matches the switch’s expression, then the statements that follow that label are executed up until the break statement is encountered. </p>
 </blockquote>
 <p>若没有break，一直执行，直到break</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>大一/杂/c4d</title>
-    <url>/2022/09/24/%E5%A4%A7%E4%B8%80/%E6%9D%82/c4d/</url>
-    <content><![CDATA[<p>摄像机的移动</p>
-<p>1移动2缩放3旋转</p>
-<p>f1透视 f2顶视图f3右视图f4正视图f5四个</p>
-<p>对物体</p>
-<p>4移动5缩放6旋转</p>
 ]]></content>
   </entry>
   <entry>
@@ -1088,21 +1142,6 @@ p(X)=\frac{e^{\beta_0+\beta_1X}}{1+e^{\beta_0+\beta_1X}}\\
 \text{maximize}\{\ell\left(\beta_{0}, \beta\right)\}</script>]]></content>
   </entry>
   <entry>
-    <title>大一/杂/物理系统</title>
-    <url>/2022/08/07/%E5%A4%A7%E4%B8%80/%E6%9D%82/%E7%89%A9%E7%90%86%E7%B3%BB%E7%BB%9F/</url>
-    <content><![CDATA[<h1 id="欧拉方法"><a href="#欧拉方法" class="headerlink" title="欧拉方法"></a>欧拉方法</h1><h2 id="显式欧拉方法"><a href="#显式欧拉方法" class="headerlink" title="显式欧拉方法"></a>显式欧拉方法</h2><script type="math/tex; mode=display">
-\begin{cases}\vec{v}\left(t_{1}\right)=\vec{v}\left(t_{0}\right)+M^{-1} \vec{F}\left(t_{0}\right)\Delta t \\
-\vec{x}\left(t_{1}\right)=\vec{x}\left(t_{0}\right)+\vec{v}\left(t_{0}\right) \Delta t\end{cases}</script><p>用当前的状态计算速度和加速度$(\text{Forward} )$</p>
-<p>能量增加，开放的系统</p>
-<h2 id="隐式欧拉方法"><a href="#隐式欧拉方法" class="headerlink" title="隐式欧拉方法"></a>隐式欧拉方法</h2><script type="math/tex; mode=display">
-\vec{v}\left(t_{1}\right)=\lambda(\vec{v}\left(t_{0}\right)+M^{-1} \vec{F}\left(t_{1}\right)\Delta t) \\
-\vec{x}\left(t_{1}\right)=\vec{x}\left(t_{0}\right)+\vec{v}\left(t_{1}\right) \Delta t</script><p>用未来的状态去计算速度和加速度再来更新$(\text{Backward} )$</p>
-<h2 id="半隐式欧拉方法"><a href="#半隐式欧拉方法" class="headerlink" title="半隐式欧拉方法"></a>半隐式欧拉方法</h2><script type="math/tex; mode=display">
-\vec{v}\left(t_{1}\right)=\vec{v}\left(t_{0}\right)+M^{-1} \vec{F}\left(t_{0}\right)\Delta t \\
-\vec{x}\left(t_{1}\right)=\vec{x}\left(t_{0}\right)+\vec{v}\left(t_{1}\right) \Delta t</script><p>本质上为显式方法</p>
-]]></content>
-  </entry>
-  <entry>
     <title>大一/概率论/离散随机变量</title>
     <url>/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E7%A6%BB%E6%95%A3%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/</url>
     <content><![CDATA[<p>随机变量$X$是有限或无限可数样本空间$S$到实数的函数</p>
@@ -1266,7 +1305,8 @@ E_{kS}=\frac12\frac{M_1M_2}{M_1+M_2}(\boldsymbol{u}_{12})^2</script><p>记$\mu=\
 \boldsymbol{F}_{保}=-\left(\frac{\partial E_p}{\partial x }\boldsymbol{i} +
 \frac{\partial E_p}{\partial y }\boldsymbol{j}
 +\frac{\partial E_p}{\partial z }\boldsymbol{k}
-\right)</script><p>保守力的方向延势能降低最快的方向</p>
+\right)\\
+\boldsymbol{F}_{保}=-\nabla E_p</script><p>保守力的方向沿势能降低最快的方向</p>
 <h2 id="功能原理"><a href="#功能原理" class="headerlink" title="功能原理"></a>功能原理</h2><p>首先引入保守力的概念</p>
 <p>若一个力为保守力，则它满足以下条件</p>
 <script type="math/tex; mode=display">
@@ -2911,13 +2951,16 @@ f(x)=f(-x)\Rightarrow\\
 <p>在直角坐标系中</p>
 <script type="math/tex; mode=display">
 ||\vec{a}||=\sqrt{x^2+y^2}\\
-单位向量\hat{a}=\vec{a}/||\vec{a}||</script><h2 id="点乘"><a href="#点乘" class="headerlink" title="点乘"></a>点乘</h2><p>$\rm Dot\;Product$</p>
+单位向量\hat{a}=\vec{a}/||\vec{a}||</script><p>两向量之间的夹角为$0\le\left \langle \alpha,\beta \right \rangle \le \pi$</p>
+<h2 id="点乘"><a href="#点乘" class="headerlink" title="点乘"></a>点乘</h2><p>$\rm Dot\;Product$</p>
 <script type="math/tex; mode=display">
 \vec{a} \cdot \vec{b}=\|\vec{a}\|\|\vec{b}\| \cos \theta 
 =x_1x_2+y_1y_2
 \\
 \cos \theta=\frac{\vec{a} \cdot \vec{b}}{\|\vec{a}\|\|\vec{b}\|}\\
-\theta=\arccos (\hat{a}\cdot\hat{b})</script><p>运算性质</p>
+\theta=\arccos (\hat{a}\cdot\hat{b})</script><p>矩阵</p>
+<script type="math/tex; mode=display">
+\vec{a} \cdot \vec{b}=a^Tb</script><p>运算性质</p>
 <script type="math/tex; mode=display">
 交换律：\vec{a} \cdot \vec{b}=\vec{b} \cdot \vec{a} \\
 分配律：\vec{a} \cdot(\vec{b}+\vec{c})=\vec{a} \cdot \vec{b}+\vec{a} \cdot \vec{c} \\
@@ -2975,7 +3018,7 @@ y_{m}
 \frac{\partial y_{2}}{\partial x} \\
 \vdots \\
 \frac{\partial y_{m}}{\partial x}
-\end{array}\right]</script><h3 id="雅可比矩阵"><a href="#雅可比矩阵" class="headerlink" title="雅可比矩阵"></a>雅可比矩阵</h3><script type="math/tex; mode=display">
+\end{array}\right]</script><h2 id="雅可比矩阵"><a href="#雅可比矩阵" class="headerlink" title="雅可比矩阵"></a>雅可比矩阵</h2><script type="math/tex; mode=display">
 \text{jacobi matrix}
 \\\frac{\partial \mathbf{y}}{\partial \mathbf{x}}=\left[\begin{array}{c}
 \frac{\partial y_{1}}{\partial \mathbf{x}} \\
@@ -2987,14 +3030,44 @@ y_{m}
 \frac{\partial y_{2}}{\partial x_{1}}, \frac{\partial y_{2}}{\partial x_{2}}, \ldots, \frac{\partial y_{2}}{\partial x_{n}} \\
 \vdots \\
 \frac{\partial y_{m}}{\partial x_{1}}, \frac{\partial y_{m}}{\partial x_{2}}, \ldots, \frac{\partial y_{m}}{\partial x_{n}}
-\end{array}\right]</script><h3 id="线性回归"><a href="#线性回归" class="headerlink" title="线性回归"></a>线性回归</h3><script type="math/tex; mode=display">
+\end{array}\right]</script><h2 id="线性回归"><a href="#线性回归" class="headerlink" title="线性回归"></a>线性回归</h2><script type="math/tex; mode=display">
 x , w \in \mathbf{R }^ { n } , y \in \mathbf{R }  \\  z = (\left \langle  \mathbf{x}  ,\mathbf{w} \right \rangle - y ) ^ { 2 }</script><script type="math/tex; mode=display">
-\begin{aligned}\frac{\partial z}{\partial \mathbf{w}}\end{aligned}=2(\left \langle  \mathbf{x}  ,\mathbf{w} \right \rangle - y )\mathbf{w}^{\rm T}</script><h3 id="求导"><a href="#求导" class="headerlink" title="求导"></a>求导</h3><p>采用分子布局</p>
+\begin{aligned}\frac{\partial z}{\partial \mathbf{w}}\end{aligned}=2(\left \langle  \mathbf{x}  ,\mathbf{w} \right \rangle - y )\mathbf{w}^{\rm T}</script><h2 id="求导"><a href="#求导" class="headerlink" title="求导"></a>求导</h2><p>采用分子布局</p>
 <script type="math/tex; mode=display">
 \frac{\partial A x}{\partial x}=A\\
 \frac{\partial A x}{\partial x^{T}}=A^{T} \\
 
-\frac{\partial x^{T} A}{\partial x}=A^{T}</script><h3 id><a href="#" class="headerlink" title></a><img src="/2022/08/07/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E5%90%91%E9%87%8F/ca965b6eb9595c5542db8fa385d9d58a.png" alt="ca965b6eb9595c5542db8fa385d9d58a"></h3>]]></content>
+\frac{\partial x^{T} A}{\partial x}=A^{T}</script><p><img src="/2022/08/07/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E5%90%91%E9%87%8F/ca965b6eb9595c5542db8fa385d9d58a.png" alt="ca965b6eb9595c5542db8fa385d9d58a"></p>
+<h1 id="梯度"><a href="#梯度" class="headerlink" title="梯度"></a>梯度</h1><script type="math/tex; mode=display">
+(x',y')=F(x,y)</script><p>向量场里每个点赋予一个向量</p>
+<script type="math/tex; mode=display">
+\nabla=\begin{bmatrix}\frac{\partial }{\partial x_1}
+\frac{\partial}{\partial x_2}
+\cdots
+\frac{\partial }{\partial x_n}\end{bmatrix}</script><h2 id="散度"><a href="#散度" class="headerlink" title="散度"></a>散度</h2><script type="math/tex; mode=display">
+\text{div}F(x,y)=\nabla\cdot F</script><p>描述净流量，若流入大于流出则为负</p>
+<p>$(x,y)$点生成的流量</p>
+<p>例如对于不可压缩的流体</p>
+<script type="math/tex; mode=display">
+\text{div}V=0</script><h2 id="旋度"><a href="#旋度" class="headerlink" title="旋度"></a>旋度</h2><script type="math/tex; mode=display">
+\text{curl}F(x,y)     =\nabla\times F</script><p><img src="/2022/08/07/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E5%90%91%E9%87%8F/image-20230119093040237.png" alt="image-20230119093040237"></p>
+<script type="math/tex; mode=display">
+\begin{array}{l}\nabla\cdot  F=
+{\left[\begin{array}{c}
+\frac{\partial}{\partial x} \\
+\frac{\partial}{\partial y}
+\end{array}\right] \cdot\left[\begin{array}{c}
+\mathbf{F}_{x} \\
+\mathbf{F}_{y}
+\end{array}\right]=\frac{\partial F_{x}}{\partial x}+\frac{\partial F_{y}}{\partial y}} \\
+{\nabla\times F=\left[\begin{array}{c}
+\frac{\partial}{\partial x} \\
+\frac{\partial}{\partial y}
+\end{array}\right] \times\left[\begin{array}{c}
+ \mathbf{F}_x \\
+\mathbf{F}_{y}
+\end{array}\right]=\frac{\partial F_{y}}{\partial x}-\frac{\partial F_{x}}{\partial y}}
+\end{array}</script>]]></content>
   </entry>
   <entry>
     <title>大一/高数/等价变形</title>
@@ -3825,6 +3898,188 @@ case\;2:mobject.clear\_updater()\\移除全部updater</script><h1 id="UpdateFrom
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">self.play(t.set_value,<span class="number">1</span>,rate_func=,run_time=<span class="number">3</span>)</span><br><span class="line"><span class="comment">#目标值为1</span></span><br></pre></td></tr></table></figure>
 <p><img src="/2022/08/06/%E5%A4%A7%E4%B8%80/python/manim/updater/updater/image-20220806210411711.png" alt="image-20220806210411711"></p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x1=ValueTracker(<span class="number">0</span>)</span><br><span class="line">        n2=Tex(<span class="string">"0"</span>)</span><br><span class="line">        n2.add_updater(<span class="keyword">lambda</span> t:t.become(Tex(str(round(x1.get_value(),<span class="number">1</span>)))))</span><br><span class="line">        self.play(ShowCreation(n2))</span><br><span class="line">        self.play(x1.set_value,<span class="number">1</span>,rate_func=smooth,run_time=<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+]]></content>
+  </entry>
+  <entry>
+    <title>大一/杂/图形学</title>
+    <url>/2022/08/07/%E5%A4%A7%E4%B8%80/%E6%9D%82/%E5%9B%BE%E5%BD%A2%E5%AD%A6/</url>
+    <content><![CDATA[<h1 id="欧拉方法"><a href="#欧拉方法" class="headerlink" title="欧拉方法"></a>欧拉方法</h1><h2 id="显式欧拉方法"><a href="#显式欧拉方法" class="headerlink" title="显式欧拉方法"></a>显式欧拉方法</h2><script type="math/tex; mode=display">
+\begin{cases}\vec{v}\left(t_{1}\right)=\vec{v}\left(t_{0}\right)+M^{-1} \vec{F}\left(t_{0}\right)\Delta t \\
+\vec{x}\left(t_{1}\right)=\vec{x}\left(t_{0}\right)+\vec{v}\left(t_{0}\right) \Delta t\end{cases}</script><p>用当前的状态计算速度和加速度$(\text{Forward} )$</p>
+<p>能量增加，开放的系统</p>
+<h2 id="隐式欧拉方法"><a href="#隐式欧拉方法" class="headerlink" title="隐式欧拉方法"></a>隐式欧拉方法</h2><script type="math/tex; mode=display">
+\vec{v}\left(t_{1}\right)=\lambda(\vec{v}\left(t_{0}\right)+M^{-1} \vec{F}\left(t_{1}\right)\Delta t) \\
+\vec{x}\left(t_{1}\right)=\vec{x}\left(t_{0}\right)+\vec{v}\left(t_{1}\right) \Delta t</script><p>用未来的状态去计算速度和加速度再来更新$(\text{Backward} )$</p>
+<h2 id="半隐式欧拉方法"><a href="#半隐式欧拉方法" class="headerlink" title="半隐式欧拉方法"></a>半隐式欧拉方法</h2><script type="math/tex; mode=display">
+\vec{v}\left(t_{1}\right)=\vec{v}\left(t_{0}\right)+M^{-1} \vec{F}\left(t_{0}\right)\Delta t \\
+\vec{x}\left(t_{1}\right)=\vec{x}\left(t_{0}\right)+\vec{v}\left(t_{1}\right) \Delta t</script><p>本质上为显式方法</p>
+<h1 id="旋转"><a href="#旋转" class="headerlink" title="旋转"></a>旋转</h1><h2 id="欧拉角"><a href="#欧拉角" class="headerlink" title="欧拉角"></a>欧拉角</h2><script type="math/tex; mode=display">
+\mathbf{R}_{x y z}(\alpha, \beta, \gamma)=\mathbf{R}_{x}(\alpha) \mathbf{R}_{y}(\beta) \mathbf{R}_{z}(\gamma)</script><p>任意旋转都可以分解为绕$x,y,z$三个轴的旋转</p>
+<p>顺序非常重要</p>
+<script type="math/tex; mode=display">
+\mathbf{R}_{x}(\alpha) \mathbf{R}_{y}(\beta) \mathbf{R}_{z}(\gamma)\ne\mathbf{R}_{x}(\alpha)\mathbf{R}_{z}(\gamma) \mathbf{R}_{y}(\beta)</script><p><img src="/2022/08/07/%E5%A4%A7%E4%B8%80/%E6%9D%82/%E5%9B%BE%E5%BD%A2%E5%AD%A6/image-20230120142858751.png" alt="image-20230120142858751"></p>
+<p><strong>飞机滚转（Roll）；飞机俯仰（Pitch）；飞机偏航（Yaw）</strong></p>
+<p>罗德里格斯旋转公式</p>
+<script type="math/tex; mode=display">
+\mathbf{R}(\mathbf{n}, \alpha)=\cos (\alpha) \mathbf{I}+(1-\cos (\alpha)) \mathbf{n} \mathbf{n}^{T}+\sin (\alpha) \underbrace{\left(\begin{array}{ccc}
+0 & -n_{z} & n_{y} \\
+n_{z} & 0 & -n_{x} \\
+-n_{y} & n_{x} & 0
+\end{array}\right)}_{\mathbf{N}}</script><h2 id="四元数"><a href="#四元数" class="headerlink" title="四元数"></a>四元数</h2><script type="math/tex; mode=display">
+q=(q_1, q_ 2, q _3, q _4)=\left(\cos \left(\frac{\theta}{2}\right), \sin \left(\frac{\theta}{2}\right) n_ x, \sin \left(\frac{\theta}{2}\right) n_ y, \sin \left(\frac{\theta}{2}\right)n_  z\right)</script><p>对应于绕$\mathbf{n}$的旋转</p>
+<script type="math/tex; mode=display">
+p'=qpq^{-1}</script>]]></content>
+  </entry>
+  <entry>
+    <title>大一/杂/瞎几把记</title>
+    <url>/2023/01/11/%E5%A4%A7%E4%B8%80/%E6%9D%82/%E7%9E%8E%E5%87%A0%E6%8A%8A%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="颜色系统"><a href="#颜色系统" class="headerlink" title="颜色系统"></a>颜色系统</h1><p>RGB系统使用三个十六进制数来表示颜色的3个分量红绿蓝</p>
+<script type="math/tex; mode=display">
+\rm \#FFFFFF\to white</script><p>从$(0,0,0)\to(255,255,255)$</p>
+<p>可以得到逐渐变亮的颜色</p>
+<p>YCbCr其中Y代表亮度（Luminance或Luma）,也就是灰阶值；而“Cb“和“Cr” 表示的则是色度（Chrominance或Chroma）</p>
+<script type="math/tex; mode=display">
+\rm\begin{cases}Y= 0.257R + 0.504G + 0.098B + 16\\
+\rm Cb = -0.148R - 0.291G + 0.439B + 128\\
+\rm Cr  = 0.439R - 0.368G - 0.071B + 128\end{cases}</script><p>转为RGB</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+\rm R= 1.164(Y - 16) + 1.596(Cr - 128)\\
+\rm G= 1.164(Y - 16) - 0.813(Cr - 128) - 0.392(Cb - 128)\\
+\rm B= 1.164(Y - 16) + 2.017(Cb - 128)\end{cases}</script><h1 id="白金汉π定理"><a href="#白金汉π定理" class="headerlink" title="白金汉π定理"></a>白金汉π定理</h1><p>物理量$q_i$之间满足</p>
+<script type="math/tex; mode=display">
+f(q_1,q_2\dots q_m)=0</script><p>则有</p>
+<script type="math/tex; mode=display">
+[q_j]=\prod_{i=1}^nX_i^{a_{ij}}\\
+A=(a_{ij})_{m\times n}</script><p>存在$m-\text{Rank} A$个无量纲量$\pi_s$</p>
+<p>$\text{Rank} A$为基本物理量的个数</p>
+<script type="math/tex; mode=display">
+F(\pi_1,\pi_2\dots\pi_{m-\text{Rank} A})=0</script>]]></content>
+  </entry>
+  <entry>
+    <title>大一/线性代数/解析几何</title>
+    <url>/2023/01/11/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/</url>
+    <content><![CDATA[<h1 id="空间直角坐标系"><a href="#空间直角坐标系" class="headerlink" title="空间直角坐标系"></a>空间直角坐标系</h1><p>记为$[O;\boldsymbol i,\boldsymbol j,\boldsymbol k]$，若为右手系，则有</p>
+<script type="math/tex; mode=display">
+\boldsymbol i\times \boldsymbol j=\boldsymbol k</script><p><img src="/2023/01/11/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/Octant_numbers.svg.png" alt="Octant_numbers.svg" style="zoom: 25%;"></p>
+<h2 id="坐标表示"><a href="#坐标表示" class="headerlink" title="坐标表示"></a>坐标表示</h2><p>$xOy$面从上面和从下面看，分为八个卦限<br>任意向量可以分解为</p>
+<script type="math/tex; mode=display">
+\boldsymbol r=x\boldsymbol i+y\boldsymbol j+z\boldsymbol k\\
+\boldsymbol r=(x,y,z)</script><p>定比分点</p>
+<script type="math/tex; mode=display">
+\vec{AM}=\lambda\vec{MB}\\
+\vec{OM}=\left(\frac{x_1+\lambda x_2}{1+\lambda},\frac{y_1+\lambda y_2}{1+\lambda},\frac{z_1+\lambda z_2}{1+\lambda}\right)</script><h2 id="方向角"><a href="#方向角" class="headerlink" title="方向角"></a>方向角</h2><script type="math/tex; mode=display">
+|\vec{OM}|=\sqrt{x^2+y^2+z^2}\\
+\cos\alpha=\frac{x}{|\vec{OM}|},(\alpha\to x)\\\beta\to y,\gamma\to z</script><p> 分别为方向角和方向余弦</p>
+<script type="math/tex; mode=display">
+\cos^2\alpha+\cos^2\beta+\cos^2\gamma=1</script><h1 id="具体应用"><a href="#具体应用" class="headerlink" title="具体应用"></a>具体应用</h1><h2 id="直线"><a href="#直线" class="headerlink" title="直线"></a>直线</h2><p><img src="/2023/01/11/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20230112121932474.png" alt="image-20230112121932474" style="zoom:50%;"></p>
+<script type="math/tex; mode=display">
+\vec{OR}=\vec{OA}+t\vec{AR}\quad(t\in \mathbf{R})\\
+\mathbf p=f(t)</script><p>射线$t\ge 0$，线段$t\in[0,1]$</p>
+<script type="math/tex; mode=display">
+f(x,y)=Ax+By+C=0</script><p>$(A,-B)/(-A,B)$为方向向量</p>
+<p>平面直线的两点式</p>
+<script type="math/tex; mode=display">
+(y_0-y_1)x+(x_1-x_0)+x_0y_1-x_1y_0=0</script><p><img src="/2023/01/11/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20230112203213491.png" alt="image-20230112203213491"></p>
+<p>从而$(a,b)$到直线的距离为</p>
+<script type="math/tex; mode=display">
+\text{signed distance}=\frac{f(a,b)}{\sqrt{A^2+B^2}}</script><p>三维空间中的直线的坐标表示为</p>
+<script type="math/tex; mode=display">
+(x,y,z)=(x_0,y_0,z_0)+vt\\
+\frac{x-x_0}{v_1}=\frac{y-y_0}{v_2}=\frac{z-z_0}{v_3}</script><h2 id="点乘"><a href="#点乘" class="headerlink" title="点乘"></a>点乘</h2><h3 id="平面"><a href="#平面" class="headerlink" title="平面"></a>平面</h3><p>点在平面的哪</p>
+<p><img src="/2023/01/11/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20230112122617388.png" alt="image-20230112122617388" style="zoom:50%;"></p>
+<script type="math/tex; mode=display">
+s=\vec{CP}\cdot \boldsymbol n=0</script><p>$s&gt;0$在平面上，反之在平面下(先定义方向向量)</p>
+<script type="math/tex; mode=display">
+A(x-x_c)+B(y-y_c)+C(z-z_c)=0\\
+f(x,y)=Ax+By+C</script><h3 id="投影"><a href="#投影" class="headerlink" title="投影"></a>投影</h3><script type="math/tex; mode=display">
+\text{Prj}_{\vec{OM}}\vec{OA}=\frac{\vec{OM}\cdot \vec{OA}}{|\vec{OM}|}</script><p>结果为一个数，有正负</p>
+<p><img src="/2023/01/11/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20230112122336596.png" alt="image-20230112122336596" style="zoom:67%;"></p>
+<script type="math/tex; mode=display">
+s=(\boldsymbol  q-\boldsymbol o)^T\overline{\boldsymbol v}</script><h2 id="叉乘"><a href="#叉乘" class="headerlink" title="叉乘"></a>叉乘</h2><p>平行共线</p>
+<script type="math/tex; mode=display">
+\vec{a} \times \vec{b}=\vec{0}</script><p>则$\sin \theta=0$，同向或反向</p>
+<h3 id="面积"><a href="#面积" class="headerlink" title="面积"></a>面积</h3><p><img src="/2023/01/11/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20230112123339636.png" alt="image-20230112123339636" style="zoom:50%;"></p>
+<script type="math/tex; mode=display">
+S=\frac12||(\boldsymbol{x_1-x_0})\times(\boldsymbol{x_2-x_0})||\\
+\boldsymbol{n}=\boldsymbol{x_{10}}\times\boldsymbol{x_{20}}/||\boldsymbol{x_{10}}\times\boldsymbol{x_{20}}||</script><p>拓扑关系很重要，否则法向量相反</p>
+<p>是否在三角形内</p>
+<p><img src="/2023/01/11/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20230112124411050.png" alt="image-20230112124411050" style="zoom:50%;"></p>
+<script type="math/tex; mode=display">
+\vec{PA}\times\vec{PB},\vec{PB}\times\vec{PC},\vec{PC}\times\vec{PA}</script><p>三个值同号，一半为三个三角形的有向面积</p>
+<h2 id="混合积"><a href="#混合积" class="headerlink" title="混合积"></a>混合积</h2><p><img src="/2023/01/11/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20230112124927840.png" alt="image-20230112124927840"></p>
+<script type="math/tex; mode=display">
+\begin{array}{l}
+V&=\frac{1}{3} h A=\frac16\mathbf{x}_{10}\times \mathbf{x}_{20}\cdot\mathbf{x}_{30}\\
+&=\frac{1}{6}\left|\begin{array}{cccc}
+\mathbf{x}_{1} & \mathbf{x}_{2} & \mathbf{x}_{3} & \mathbf{x}_{0} \\
+1 & 1 & 1 & 1
+\end{array}\right| \\
+\end{array}</script><p>$\mathbf{x}_{3} $在平面以上则为正体积</p>
+<p>体积为$0$则说明$\mathbf{x}_{3} $在平面上</p>
+<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p>多元函数</p>
+<script type="math/tex; mode=display">
+z=f(x,y)</script><h2 id="偏导数"><a href="#偏导数" class="headerlink" title="偏导数"></a>偏导数</h2><script type="math/tex; mode=display">
+\frac{\partial f}{\partial y}=\lim _{\Delta y \rightarrow 0} \frac{f\left(x_{0}, y_{0}+\Delta y\right)-f\left(x_{0}, y_{0}\right)}{\Delta y}</script><p>从而有全微分</p>
+<script type="math/tex; mode=display">
+\text{d}z=\frac{\partial f}{\partial x}\text{d}x+\frac{\partial f}{\partial y}\text{d}y</script><p>方向导数为函数在某一方向上的变化率</p>
+<p>定义$l$的方向余弦为</p>
+<script type="math/tex; mode=display">
+\cos\alpha=\frac{\Delta x}{\Delta l},\cos\alpha=\frac{\Delta y}{\Delta l}</script><p>由全微分公式将导数沿方向分解，得到</p>
+<script type="math/tex; mode=display">
+\left. \frac{\partial f}{\partial l}\right|_{x_0,y_0}=\frac{\partial f}{\partial x}\cos\alpha+\frac{\partial f}{\partial y}\cos\beta</script><h2 id="梯度"><a href="#梯度" class="headerlink" title="梯度"></a>梯度</h2><p>定义梯度，Nabla算子</p>
+<script type="math/tex; mode=display">
+\nabla  f(x,y)=\left(\frac{\partial f}{\partial x},\frac{\partial f}{\partial y}\right)</script><p>可视化</p>
+<p><img src="/2023/01/11/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20230112180103226.png" alt="image-20230112180103226"></p>
+<p>利用辅助角公式得出梯度方向的方向导数最大</p>
+<p>所以梯度指向上升最快的方向</p>
+<p><img src="/2023/01/11/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20230112180424895.png" alt="image-20230112180424895" style="zoom:50%;"></p>
+<p>引入等值面$f(x,y,z)=c$</p>
+<p>梯度向量垂直于等值面，梯度的模为沿梯度方向的方向导数</p>
+<p><img src="/2023/01/11/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20230112200515086.png" alt="image-20230112200515086"></p>
+<p>可以看出梯度向量垂直于等高线的切线</p>
+<h2 id="曲面"><a href="#曲面" class="headerlink" title="曲面"></a>曲面</h2><p>用三元函数来表示</p>
+<script type="math/tex; mode=display">
+f(x,y,z)=0</script><p>这种表示可以非常方便地判断一个点是否在面上</p>
+<p>一般使用向量来表示</p>
+<script type="math/tex; mode=display">
+\mathbf p=(x,y,z)\\
+f(\mathbf p)=0</script><p>类比定义梯度</p>
+<script type="math/tex; mode=display">
+\mathbf n=\nabla  f(\mathbf p)=\left(\frac{\partial f(\mathbf p)}{\partial x},\frac{\partial f(\mathbf p)}{\partial y},\frac{\partial f(\mathbf p)}{\partial z}\right)</script><p><img src="/2023/01/11/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20230112210228986.png" alt="image-20230112210228986" style="zoom:67%;"></p>
+<p>切平面</p>
+<script type="math/tex; mode=display">
+(\mathbf p-\mathbf a)((\mathbf a-\mathbf b)\times(\mathbf a-\mathbf c))=0</script><h3 id="球面"><a href="#球面" class="headerlink" title="球面"></a>球面</h3><script type="math/tex; mode=display">
+f(\mathbf p)=(\mathbf p-\mathbf c)^2-r^2=0</script><h2 id="三维曲线"><a href="#三维曲线" class="headerlink" title="三维曲线"></a>三维曲线</h2><p>回顾三维直线，消去参数$t$之后可以得到$2$个方程</p>
+<p>其实这2个方程表示了2个平面，空间的直线就是这2个平面的交线</p>
+<p>从而我们可以引入空间曲线的参数表达式</p>
+<script type="math/tex; mode=display">
+\begin{cases}f(\mathbf p)=0\\g(\mathbf p)=0\end{cases}</script><p>==点动成线，线动成面，面动成体==</p>
+<h2 id="参数方程"><a href="#参数方程" class="headerlink" title="参数方程"></a>参数方程</h2><p>由方程表达的曲线和面难以计算</p>
+<p>所以我们一般采用参数方程来绘制</p>
+<p>对于平面曲线</p>
+<script type="math/tex; mode=display">
+\begin{bmatrix}x\\y\end{bmatrix}=\begin{bmatrix}f(t)\\g(t)\end{bmatrix}</script><p>同理，空间曲线</p>
+<script type="math/tex; mode=display">
+\begin{bmatrix}x\\y\\z\end{bmatrix}=\begin{bmatrix}f(t)\\g(t)\\h(t)\end{bmatrix}</script><p>如螺线(spiral)</p>
+<script type="math/tex; mode=display">
+\begin{bmatrix}x\\y\\z\end{bmatrix}=\begin{bmatrix}\cos t\\\sin t\\t\end{bmatrix}</script><p>三维参数曲面</p>
+<script type="math/tex; mode=display">
+f:\mathbf{R}^2\to \mathbf{R}^3\\
+(u,v)\to(x,y,z)</script><p>如</p>
+<script type="math/tex; mode=display">
+f(u,v)=((2+\cos u)\cos v,(2+\cos u)\sin v,\sin u)</script><p>球坐标</p>
+<p><img src="/2023/01/11/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/Sph_1.svg" alt="Sph_1"></p>
+<script type="math/tex; mode=display">
+\begin{cases}
+x = r\sin \theta \cos \phi \\
+y = r\sin \theta \sin \phi \\
+z = r\cos \theta 
+\end{cases}</script><script type="math/tex; mode=display">
+ \left\{\begin{aligned} 
+r &= \sqrt {x^2 + y^2 + z^2} \\
+\theta  &=  \operatorname{Arctan}  \left(\sqrt{x^2 + y^2}, z \right) \\
+\phi  &=  \operatorname{Arctan} (y, x)\end{aligned}\right.</script><p>类似经度和纬度</p>
 ]]></content>
   </entry>
 </search>
