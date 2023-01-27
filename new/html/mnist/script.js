@@ -1,4 +1,6 @@
-async function predict(inputData) {
+
+$(function(){
+  async function predict(inputData) {
     try {
       // create a new session and load the AlexNet model.
       const session = await ort.InferenceSession.create('../../data/mnist.onnx');
@@ -15,26 +17,29 @@ async function predict(inputData) {
         ans.push(temp)
       });
       list=$(".bar")
+      numbers=$(".number")
+      index=ans.reduce((iMax, x, i, ans) => x > ans[iMax] ? i : iMax, 0)
       for(i=0;i<10;i++){
         p=ans[i]/sum
         $(list[i]).css("height",`${p*10}em`)
+        $(numbers[i]).css("color",`rgb(${p*127},${p*255},${p*212})`)
       }
+      $(numbers[pvindex]).css("font-weight","normal")
+      pvindex=index
+      $(numbers[index]).css("font-weight","bolder")
       console.log(ans)
     } catch (e) {
       console.log(e);
     }
   }
 
-
-$(function(){
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d",{willReadFrequently: true});
 ctx.strokeStyle = "black";
 ctx.fillStyle="black"
 ctx.lineWidth = 3;
 var isDrawing = false;
-var pvx = 0;
-var pvy = 0;
+var pvindex = 0;
 r=15
 
 canvas_width=Number(getComputedStyle($("#myCanvas")[0]).width.match(/\d+/)[0])
@@ -95,7 +100,9 @@ $(".clear").mousedown( ()=>{
   for(i=0;i<10;i++){
     p=ans[i]/sum
     $(list[i]).css("height",`0em`)
+    $(numbers[i]).css("color","black")
   }
+  $(numbers[pvindex]).css("font-weight","normal")
 })
 $(".clear").mouseup( ()=>{
   $(".clear").css("border-style","outset")

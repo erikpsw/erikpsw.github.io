@@ -41,10 +41,35 @@
     grid-auto-flow: column;
     height: 1.5em;
     width: 280px;
-    font-family:Georgia, 'Times New Roman', Times, serif
-    /* font-style:; */
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: normal;
 }
 .number{
+    font-size: larger;
     display: grid;
+    color:rgb(0, 0, 0);
     place-items: center;
+}
+
+.title{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.8em;
+}
+
+.name{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1em;
+    display: flex;
+    width: 280px;
+    flex-direction: row-reverse;
+    color: rgb(99, 199, 166);
+}
+
+@media screen and (min-width:1050px){
+    body {
+        background-image: url('background.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
 }
