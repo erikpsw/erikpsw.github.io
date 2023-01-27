@@ -3,7 +3,7 @@ $(function(){
   async function predict(inputData) {
     try {
       // create a new session and load the AlexNet model.
-      const session = await ort.InferenceSession.create('../../data/mnist.onnx');
+      const session = await ort.InferenceSession.create('./mnist.onnx');
       
       // prepare feeds. use model input names as keys.
       const feeds = { input1: new ort.Tensor('float32', inputData, [1,1,28,28]) };
