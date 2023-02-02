@@ -311,6 +311,140 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/20/%E5%A4%A7%E4%B8%80/web/css/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/08/20/%E5%A4%A7%E4%B8%80/web/css/" itemprop="url">大一/web/css</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-08-20T12:48:06+08:00">
+                2022-08-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Grid"><a href="#Grid" class="headerlink" title="Grid"></a>Grid</h1><p>2D排版方式定义</p>
+<script type="math/tex; mode=display">
+\text{display: grid}</script><p>分割</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">    <span class="selector-tag">grid-template-rows</span>: 100<span class="selector-tag">px</span> 100<span class="selector-tag">px</span> 50<span class="selector-tag">px</span>;#垂直,分割行数值为间隔</span><br><span class="line"><span class="selector-tag">grid-template-columns</span>#水平</span><br><span class="line"></span><br><span class="line">居中元素</span><br><span class="line"><span class="selector-tag">align-items</span>: <span class="selector-tag">center</span>;</span><br><span class="line"><span class="selector-tag">place-items</span>: <span class="selector-tag">center</span>;</span><br><span class="line">间隔</span><br><span class="line"><span class="selector-tag">row-gap</span>: 10<span class="selector-tag">px</span></span><br><span class="line"></span><br><span class="line">按比例分配 1<span class="selector-tag">fr</span> 3<span class="selector-tag">fr</span> 1<span class="selector-pseudo">:3</span>分割</span><br><span class="line">4*1<span class="selector-tag">fr</span> 等价于 <span class="selector-tag">repeat</span>(4,1<span class="selector-tag">fr</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="子对象"><a href="#子对象" class="headerlink" title="子对象"></a>子对象</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#起始为1</span><br><span class="line">grid-area:1/1/4/3</span><br><span class="line"></span><br><span class="line">行首/列首/行尾/列尾</span><br><span class="line">grid-row: 1/4;</span><br><span class="line">grid-column: 1/3;</span><br><span class="line"></span><br><span class="line">从哪开始延伸</span><br><span class="line">1/ span 3</span><br></pre></td></tr></table></figure>
+<h1 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h1><p>使用animate.css</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">"https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.min.css"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">使用class来应用动画</span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">"animate__animated animate__bounce"</span>&gt;</span></span><br><span class="line">需要animate__前缀</span><br></pre></td></tr></table></figure>
+<p>然后可以在对象中指定参数</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#ele</span>&#123;</span><br><span class="line">    <span class="attribute">animation-duration</span>: <span class="number">2s</span>;</span><br><span class="line">    <span class="attribute">animation-delay</span>: <span class="number">2s</span>;</span><br><span class="line">    <span class="attribute">animation-timing-function</span>:</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="关键帧"><a href="#关键帧" class="headerlink" title="关键帧"></a>关键帧</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line"><span class="attribute">animation-name</span>:mymove;</span><br><span class="line">animation-duration:3s;时间</span><br><span class="line"><span class="selector-tag">animation-timing-function</span><span class="selector-pseudo">:ease-in-out</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@keyframes</span> mymove&#123;</span><br><span class="line">    0%   &#123;<span class="attribute">width</span>:<span class="number">50px</span>;<span class="attribute">height</span>:<span class="number">50px</span>;&#125;	</span><br><span class="line">    50%   &#123;<span class="attribute">width</span>:<span class="number">100px</span>;<span class="attribute">height</span>:<span class="number">100px</span>;&#125;	</span><br><span class="line">    100%   &#123;<span class="attribute">width</span>:<span class="number">50px</span>;<span class="attribute">height</span>:<span class="number">50px</span>;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">animation-iteration-count</span>：检索或设置对象动画的循环次数</span><br></pre></td></tr></table></figure>
+<h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><p>CSS变量可以访问 DOM</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span>&#123; </span><br><span class="line">  <span class="attribute">--bg-color</span>: <span class="number">#cccccc</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#123; </span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">var</span>(--primary-color, blue);</span><br><span class="line">&#125;</span><br><span class="line">用<span class="selector-tag">var</span>来插入变量</span><br><span class="line">自定义属性有前缀<span class="selector-tag">--</span></span><br><span class="line">从而可以快速改变<span class="selector-tag">css</span>属性 	</span><br><span class="line">也可以使用 <span class="selector-tag">fallback</span> <span class="selector-tag">values</span>，以便在自定义属性没有被定义时使用默认值</span><br></pre></td></tr></table></figure>
+<h2 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.css(<span class="string">"color"</span>,<span class="string">"blue"</span>) (JQuery)</span><br><span class="line">.style</span><br><span class="line">如果样式是通过外部样式表或者通过浏览器的默认样式设置的，则无法通过.style对象访问这些样式</span><br><span class="line">.style.setProperty(<span class="string">'--animate-duration'</span>, <span class="string">'2s'</span>);(DOM对象)</span><br><span class="line"><span class="comment">//获取具体内容</span></span><br><span class="line"><span class="keyword">var</span> element = <span class="built_in">document</span>.querySelector(<span class="string">'.my-element'</span>);</span><br><span class="line"><span class="keyword">var</span> style = <span class="built_in">window</span>.getComputedStyle(element).<span class="string">'::before'</span>;</span><br><span class="line"><span class="keyword">var</span> content = style.getPropertyValue(<span class="string">'content'</span>);</span><br><span class="line"></span><br><span class="line">getComputedStyle 方法只能用于获取元素的最终渲染样式，不能用于获取元素的原始样式</span><br></pre></td></tr></table></figure>
+<h1 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h1><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">box-shadow</span>:</span><br><span class="line">offset-x | offset-y | blur-radius | spread-radius | color</span><br></pre></td></tr></table></figure>
+<h2 id="伪元素"><a href="#伪元素" class="headerlink" title="伪元素"></a>伪元素</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">::before/::after</span><br><span class="line">在前或在后面</span><br><span class="line"><span class="selector-class">.sub_title</span><span class="selector-pseudo">::after</span>&#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">5px</span> solid black;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translate</span>(-<span class="number">50%</span>,<span class="number">50%</span>);&#125;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/17/%E5%A4%A7%E4%B8%80/python/DL/api/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1673,7 +1807,8 @@ x , w \in \mathbf{R }^ { n } , y \in \mathbf{R }  \\  z = (\left \langle  \mathb
 \frac{\partial A x}{\partial x^{T}}=A^{T} \\
 
 \frac{\partial x^{T} A}{\partial x}=A^{T}</script><p><img src="/2022/08/07/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E5%90%91%E9%87%8F/ca965b6eb9595c5542db8fa385d9d58a.png" alt="ca965b6eb9595c5542db8fa385d9d58a"></p>
-<h1 id="梯度"><a href="#梯度" class="headerlink" title="梯度"></a>梯度</h1><script type="math/tex; mode=display">
+<h1 id="场论"><a href="#场论" class="headerlink" title="场论"></a>场论</h1><script type="math/tex; mode=display">
+\vec{F}(x,y,z)=f_x(x,y,z)\mathbf{i}+f_y(x,y,z)\mathbf{j}+f_z(x,y,z)\mathbf{k}</script><h2 id="梯度"><a href="#梯度" class="headerlink" title="梯度"></a>梯度</h2><script type="math/tex; mode=display">
 (x',y')=F(x,y)</script><p>向量场里每个点赋予一个向量</p>
 <script type="math/tex; mode=display">
 \nabla=\begin{bmatrix}\frac{\partial }{\partial x_1}
@@ -1880,294 +2015,6 @@ case\;2:mobject.clear\_updater()\\移除全部updater</script><h1 id="UpdateFrom
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/" itemprop="url">大一/线性代数/矩阵</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-08-04T16:41:35+08:00">
-                2022-08-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><p>矩形的数组，如</p>
-<script type="math/tex; mode=display">
-A=\left[\begin{array}{l} a_{11} &a_{12}&a_{13}\\a_{21} &a_{22}&a_{23}\end{array}\right]
-=\left[\begin{array}{l} 1 &2&3\\4&5&6\end{array}\right]</script><p>是一个$2\times3$的矩阵$A=(a_{ij})$其中$i=1,2;j=1,2,3$</p>
-<p>矩阵中第$i$行第$j$列的元素表示为$a_{ij}$(大写矩阵，小写元素)</p>
-<h2 id="向量"><a href="#向量" class="headerlink" title="向量"></a>向量</h2><p>向量是一维数组($1D$ ,如只有一行或一列)，如</p>
-<script type="math/tex; mode=display">
-x=\left(\begin{array}l 1\\2\\3\end{array}\right)</script><p>把长度为$n$的向量称为$n$向量，通常用小写字母来表示向量</p>
-<p>$x_i$表示向量中第$i$个元素</p>
-<p>向量的标准形式为列向量($n\times1$)</p>
-<script type="math/tex; mode=display">
-x^{\text T}=(1,2,3)</script><h2 id="特殊的矩阵"><a href="#特殊的矩阵" class="headerlink" title="特殊的矩阵"></a>特殊的矩阵</h2><h3 id="零矩阵"><a href="#零矩阵" class="headerlink" title="零矩阵"></a>零矩阵</h3><p>所有元素均为$0$的矩阵，矩阵大小需要从上下文中推测</p>
-<h3 id="方阵"><a href="#方阵" class="headerlink" title="方阵"></a>方阵</h3><p>方阵为$n\times n$矩阵</p>
-<h4 id="对角矩阵"><a href="#对角矩阵" class="headerlink" title="对角矩阵"></a>对角矩阵</h4><p>对角线($\text {diagnoal}$)，其中对于任意$i\ne j,a_{ij}=0$，故只需列出对角线上的元素就可以表示出这个矩阵</p>
-<script type="math/tex; mode=display">
-\text{diag}(a_{11},a_{22},\cdots,a_{nn})=\begin{bmatrix}  
-  a_{11} &0& \cdots & 0\\  
-  0 &a_{22}&\cdots&0
-  \\ \vdots &\vdots& \ddots & \vdots\\
- 0 & 0&\cdots & a_{nn}  
-\end{bmatrix}</script><h4 id="单位矩阵"><a href="#单位矩阵" class="headerlink" title="单位矩阵"></a>单位矩阵</h4><script type="math/tex; mode=display">
-I_n=\text{diag}(1,1,\cdots,1)</script><h4 id="三对角矩阵"><a href="#三对角矩阵" class="headerlink" title="三对角矩阵"></a>三对角矩阵</h4><p>对$|i-j|&gt;1,a_{ij}=0$，即矩阵中不为$0$的项只出现在对角线或上下，$i-j$相当于偏移量，类似八皇后问题</p>
-<h4 id="上三角矩阵"><a href="#上三角矩阵" class="headerlink" title="上三角矩阵"></a>上三角矩阵</h4><p>若$i&gt;j,a_{ij}=0$，其对角线以下的元素为$0$</p>
-<script type="math/tex; mode=display">
-U=\left[\begin{array}{ccccc}
-u_{11} & u_{12} & u_{13} & \cdots & u_{1n} \\
-& u_{22} & u_{23} & \cdots & u_{2n} \\
-& & \ddots & \ddots & \vdots \\
-& & & \ddots & u_{n-1}n \\
-& & & & u_{nn}
-\end{array}\right]</script><p>同理下三角矩阵$L$对角线以上的元素为$0$</p>
-<p>若非零项均为$1$，则为单位三角矩阵</p>
-<h4 id="排列矩阵"><a href="#排列矩阵" class="headerlink" title="排列矩阵"></a>排列矩阵</h4><p>每行每列只有一个1，其余都为0，可以重新排列向量中的元素</p>
-<script type="math/tex; mode=display">
-P=\begin{bmatrix}1&0&0\\0&0&1\\0&1&0\end{bmatrix}</script><h4 id="对称矩阵"><a href="#对称矩阵" class="headerlink" title="对称矩阵"></a>对称矩阵</h4><p>若矩阵$A$满足$A=A^{\text  T}$，则矩阵的元素关于对角线对称</p>
-<script type="math/tex; mode=display">
-\begin{bmatrix}1&2&3\\2&4&5\\3&5&6\end{bmatrix}</script><p>性质$a<em>{ij}=a</em>{ji}$</p>
-<p>反对称$a<em>{ij}=-a</em>{ji}$</p>
-<h2 id="矩阵的基本操作"><a href="#矩阵的基本操作" class="headerlink" title="矩阵的基本操作"></a>矩阵的基本操作</h2><h3 id="加法"><a href="#加法" class="headerlink" title="加法"></a>加法</h3><p>若矩阵$A,B$大小相同，则$C=A+B$为相同大小</p>
-<script type="math/tex; mode=display">
-c_{ij}=a_{ij}+b_{ij}</script><h4 id="数乘"><a href="#数乘" class="headerlink" title="数乘"></a>数乘</h4><script type="math/tex; mode=display">
-\lambda A=(\lambda a_{ij})</script><p>$\lambda$称为矩阵的一个标量倍数，矩阵的负为$-A(\lambda=-1)$</p>
-<p>故减法$A-B=A+(-B)$</p>
-<h3 id="乘法"><a href="#乘法" class="headerlink" title="乘法"></a>乘法</h3><p>给定两个相容的矩阵$A,B(A的列数=B的行数)$</p>
-<p>设$A$为$m\times p$的矩阵，$B$为$p\times n$的矩阵</p>
-<p>则 $C=AB$为$m\times n$的矩阵 </p>
-<script type="math/tex; mode=display">
-c_{ij}=\sum_{k=1}^pa_{ik}b_{kj}(i=1,\cdots,m;j=1,\cdots,n)</script><p>矩阵乘法满足结合律，分配律</p>
-<script type="math/tex; mode=display">
-A(BC)=(AB)C\\
-A(\lambda B+\mu C)=\lambda AB+\mu A C\\
-A(\lambda B)=\lambda(AB)\\
-P^n=(P^{n-1})P</script><p>==$A,B,C$必须是相容的==</p>
-<h4 id="意义"><a href="#意义" class="headerlink" title="意义"></a>意义</h4><p>对于方阵</p>
-<script type="math/tex; mode=display">
-M=\begin{bmatrix}a&b\\c&d\end{bmatrix}\\
-M\begin{bmatrix}1\\0\end{bmatrix}=M\boldsymbol{i}=\begin{bmatrix}a\\c\end{bmatrix}\\
-M\begin{bmatrix}0\\1\end{bmatrix}=M\boldsymbol{j}=\begin{bmatrix}b\\d\end{bmatrix}</script><p>而有又有向量的分解不难看出</p>
-<script type="math/tex; mode=display">
-\left[\begin{array}{ll}
-a & b \\
-c & d
-\end{array}\right]\left[\begin{array}{l}
-x \\
-y
-\end{array}\right]=x\left[\begin{array}{l}
-a \\
-c
-\end{array}\right]+y\left[\begin{array}{l}
-b \\
-d
-\end{array}\right]=\left[\begin{array}{c}
-a x+b y \\
-c x+d y
-\end{array}\right]</script><p><img src="/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/image-20221230133843315.png" alt="image-20221230133843315"></p>
-<p>从而很容易理解旋转矩阵</p>
-<p><img src="/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/image-20221230134433897.png" alt="image-20221230134433897"></p>
-<script type="math/tex; mode=display">
-\mathbf{R}_{\theta}=\left[\begin{array}{l}
-\cos \theta & -\sin \theta \\
-\sin \theta & \cos \theta
-\end{array}\right]</script><p>对于直线</p>
-<script type="math/tex; mode=display">
-M\vec{OR}=M\vec{OA}+tM\vec{AR}</script><p>如果$M\vec{AR}=0$成立，则变化将直线变为一个点</p>
-<p><img src="/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/image-20221230135131766.png" alt="image-20221230135131766"></p>
-<p>若两个变换后的基向量共线则该变换结果为一维空间(线)</p>
-<p>对于变换</p>
-<script type="math/tex; mode=display">
-M=\begin{bmatrix}1&0\\0&0\end{bmatrix}\\</script><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">x0=<span class="number">1</span></span><br><span class="line">y0=<span class="number">1</span></span><br><span class="line">v1=<span class="number">0</span></span><br><span class="line">v2=<span class="number">1</span></span><br><span class="line">t0=<span class="number">-3</span></span><br><span class="line">t1=<span class="number">1</span></span><br><span class="line">T=np.linspace(t0,t1,<span class="number">100</span>)</span><br><span class="line">X=x0+v1*T</span><br><span class="line">Y=y0+v2*T</span><br><span class="line">M=np.array([[<span class="number">1</span>,<span class="number">0</span>],[<span class="number">0</span>,<span class="number">0</span>]])</span><br><span class="line">L=np.matmul(M,np.array([X,Y]))</span><br><span class="line"></span><br><span class="line">fig=go.Figure()</span><br><span class="line">fig.add_trace(go.Scatter(x=X,y=Y,name=<span class="string">f'原直线'</span>))  </span><br><span class="line">fig.add_trace(go.Scatter(x=L[<span class="number">0</span>],y=L[<span class="number">1</span>],name=<span class="string">f'变换后'</span>))  </span><br><span class="line">fig.update_layout(title=<span class="string">'线性变换'</span>,</span><br><span class="line">                    xaxis_title=<span class="string">'x'</span>,yaxis_title=<span class="string">'y'</span>,xaxis_range=[<span class="number">0</span>,<span class="number">2</span>],yaxis_range=[<span class="number">-3</span>,<span class="number">3</span>])</span><br></pre></td></tr></table></figure>
-<p><img src="/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/image-20221230154855424.png" alt="image-20221230154855424"></p>
-<p>将直线变化为了一个点，整个平面变换成了$y=0$</p>
-<p>一般的，如果一个条直线上的任意$2$个不同的点经过变换后重合</p>
-<p>则该变换为不可逆矩阵</p>
-<h3 id="转置"><a href="#转置" class="headerlink" title="转置"></a>转置</h3><p>交换$A$行和列获得的矩阵为$A$的转置$A^{\text T}$(第几行变为第几列)</p>
-<script type="math/tex; mode=display">
-A=\left[\begin{array}{l} 1 &2&3\\4&5&6\end{array}\right]
-\\
-A^{\text T}=\left[\begin{array}l 1&4\\2&5\\3&6\end{array}\right]</script><script type="math/tex; mode=display">
-(A+B)^T=A^T+B^T\\
-(\lambda A)^T=\lambda A^T</script><p>观察矩阵的形状</p>
-<script type="math/tex; mode=display">
-n\times m=(n\times p)(p\times m)\\
-(AB)^{\text T}=B^{\text T}A^{\text T}</script><h3 id="逆"><a href="#逆" class="headerlink" title="逆"></a>逆</h3><p>定义</p>
-<script type="math/tex; mode=display">
-A^{-1}A=AA^{-1}=I_n</script><p>若没有逆矩阵则称为奇异的</p>
-<p>由共线和或叉乘得</p>
-<script type="math/tex; mode=display">
-S=\begin{vmatrix}a&b\\c&d\end{vmatrix}=ad-bc</script><p>若面积为$0$则为奇异矩阵</p>
-<script type="math/tex; mode=display">
-S_1\to S_2\to S_3  \Rightarrow\\
-S_3\to S_2\to S_1\\
-(MN)^{-1}=N^{-1}M^{-1}</script><p>简单情况下，对基向量进行研究，通过初等变换矩阵的乘积来得到逆矩阵</p>
-<h4 id="一般情况"><a href="#一般情况" class="headerlink" title="一般情况"></a>一般情况</h4><p>对线性方程组$Mx=\alpha$，得</p>
-<script type="math/tex; mode=display">
-x=\alpha M^{-1}</script><p>对$M=\begin{bmatrix}a&amp;b\c&amp;d\end{bmatrix}$</p>
-<script type="math/tex; mode=display">
-MM^{-1}=\begin{bmatrix}a&b\\c&d\end{bmatrix}\begin{bmatrix}u&v\\s&t\end{bmatrix}=\begin{bmatrix}1&0\\0&1\end{bmatrix}</script><script type="math/tex; mode=display">
-\det M\ne0\\
-\Rightarrow M^{-1}=\begin{bmatrix}\frac d{ad-bc}&\frac {-b}{ad-bc}\\\frac {-c}{ad-bc}&\frac a{ad-bc}\end{bmatrix}</script><h1 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h1><h2 id="范数"><a href="#范数" class="headerlink" title="范数"></a>范数</h2><p>$\rm frobennius$范数</p>
-<script type="math/tex; mode=display">
-||A||_{\text{Frob}}=\left[\sum_{ij}a_{ij}^2\right]^{\frac12}</script><h2 id="特征向量"><a href="#特征向量" class="headerlink" title="特征向量"></a>特征向量</h2><script type="math/tex; mode=display">
-Ax=\lambda x(x\ne\vec{0})</script><p>表示变换A对于x构成的张成空间没有影响，$\lambda$称为特征值</p>
-<p>例如三维旋转矩阵的特征向量和旋转轴共线并且特征值为$1$</p>
-<p>对称矩阵总可以找到特征向量</p>
-<script type="math/tex; mode=display">
-\begin{bmatrix}a&b\\c&d\end{bmatrix}
-\begin{bmatrix}x\\y\end{bmatrix}=\lambda\begin{bmatrix}x\\y\end{bmatrix}=
-\begin{bmatrix}\lambda&0\\0&\lambda\end{bmatrix}
-\begin{bmatrix}x\\y\end{bmatrix}\\
-
-\begin{bmatrix}a-\lambda&b\\c&d-\lambda\end{bmatrix}
-\begin{bmatrix}x\\y\end{bmatrix}=B\begin{bmatrix}x\\y\end{bmatrix}=\begin{bmatrix}0\\0\end{bmatrix}</script><script type="math/tex; mode=display">
-\Rightarrow A-\lambda I=0</script><p>若$\det A\ne 0$，$x=0$舍去</p>
-<p>$\det A= 0$，则空间压缩成一条线</p>
-<p>总有一个向量经过变换后得到零向量</p>
-<p>解出特征值后可以解出特征向量(可能有很多如缩放)</p>
-<h3 id="特征基"><a href="#特征基" class="headerlink" title="特征基"></a>特征基</h3><p>利用特征向量可以将矩阵乘法转化为数乘</p>
-<p>若将基向量变换为$2$个不共线的特征向量来表示</p>
-<p>则有非常好的性质</p>
-<script type="math/tex; mode=display">
-M^n=\lambda^n</script><p>再转换回去即可得到结果</p>
-<h1 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h1><script type="math/tex; mode=display">
-\text E[g(X)]=\sum_xg(x)\cdot\Pr\{X=x\}</script><p>对于一个决策行为，定义收益函数$q(d,h)$</p>
-<script type="math/tex; mode=display">
-d_i\in\{\text {act}\;1,\text {act}\;2,\cdots,\text {act}\;n\}</script><p>对于每一种策略，在某个随机变量的影响下都有相应的概率获得不同的收益<br>|  $h$   | $h_1$ | $h_2$ | $h_3$ |<br>| :——: | :—-: | :—-: | :—-: |<br>| $p(h)$ | $p_1$ | $p_2$ | $p_3$ |</p>
-<p>对于每一种决定$d$</p>
-<script type="math/tex; mode=display">
-\overline{q}=\sum_iq(d,h_i)p_i</script><p>写成矩阵形式</p>
-<script type="math/tex; mode=display">
-(p_1,p_2,p_3)\left.\underbrace {\begin{pmatrix}
- q_{11}&q_{12}  & q_{13}\\
- q_{21} & q_{22} & q_{23}\\
- q_{31} &q_{32}  &q_{33}
-\end{pmatrix}}_{d_i}\right\}h_i=(R(d_1),R(d_2),R(d_3))</script><h2 id="决策树"><a href="#决策树" class="headerlink" title="决策树"></a>决策树</h2><p><img src="/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/image-20221230182812507.png" alt="image-20221230182812507"></p>
-<h2 id="马尔可夫链"><a href="#马尔可夫链" class="headerlink" title="马尔可夫链"></a>马尔可夫链</h2><script type="math/tex; mode=display">
-\left(\begin{array}{l}p_1^{(n+1)}\\p_2^{(n+1)}\end{array}\right )=\left(\begin{array}{l}p_{11}& p_{21}\\p_{12}& p_{22}\end{array}\right )\left(\begin{array}{l}p_1^{(n)}\\p_2^{(n)}\end{array}\right )</script><p>其中</p>
-<script type="math/tex; mode=display">
-P (X_{n+1}|X=j)=p_1^{(n)}P(X_{n+1}=j|X_n=1)+p_2^{(n)}P(X_{n+1}=j|X_n=2)\\
-p_{ij}=P(X_{n+1}=j|X_n=i)</script><p>你们将$p_{ij}$称为转移概率</p>
-<script type="math/tex; mode=display">
-P=\left(\begin{array}{l}p_{11}& p_{21}\\p_{12}& p_{22}\end{array}\right )</script><p>称为状态转移矩阵，$(p_1^{(n)},p_2^{(n)})$这样的行向量称为该瓦尔科夫链在时刻$n$的分布</p>
-<p>再乘上收益矩阵即可得到两种决策的收益</p>
-<p>考虑短期过程，观察平均收益</p>
-<script type="math/tex; mode=display">
-q_n(d)=\sum_{k=0}^nq(d,k)</script><p>对于长期过程，有平稳分布</p>
-<script type="math/tex; mode=display">
-w=wP\\
-w=(w_1,w_2,\cdots),\sum_{i=1}^nw_i=1</script><p>类比不动点，可以使用特征向量得到</p>
-<script type="math/tex; mode=display">
-w=\left(\begin{array}{l}p_{11}& p_{21}\\p_{12}& p_{22}\end{array}\right )^nw_0</script>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2218,7 +2065,7 @@ w=\left(\begin{array}{l}p_{11}& p_{21}\\p_{12}& p_{22}\end{array}\right )^nw_0</
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">73</span>
+                <span class="site-state-item-count">74</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

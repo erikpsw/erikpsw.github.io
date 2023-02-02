@@ -3038,7 +3038,8 @@ x , w \in \mathbf{R }^ { n } , y \in \mathbf{R }  \\  z = (\left \langle  \mathb
 \frac{\partial A x}{\partial x^{T}}=A^{T} \\
 
 \frac{\partial x^{T} A}{\partial x}=A^{T}</script><p><img src="/2022/08/07/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E5%90%91%E9%87%8F/ca965b6eb9595c5542db8fa385d9d58a.png" alt="ca965b6eb9595c5542db8fa385d9d58a"></p>
-<h1 id="梯度"><a href="#梯度" class="headerlink" title="梯度"></a>梯度</h1><script type="math/tex; mode=display">
+<h1 id="场论"><a href="#场论" class="headerlink" title="场论"></a>场论</h1><script type="math/tex; mode=display">
+\vec{F}(x,y,z)=f_x(x,y,z)\mathbf{i}+f_y(x,y,z)\mathbf{j}+f_z(x,y,z)\mathbf{k}</script><h2 id="梯度"><a href="#梯度" class="headerlink" title="梯度"></a>梯度</h2><script type="math/tex; mode=display">
 (x',y')=F(x,y)</script><p>向量场里每个点赋予一个向量</p>
 <script type="math/tex; mode=display">
 \nabla=\begin{bmatrix}\frac{\partial }{\partial x_1}
@@ -4081,5 +4082,22 @@ r &= \sqrt {x^2 + y^2 + z^2} \\
 \theta  &=  \operatorname{Arctan}  \left(\sqrt{x^2 + y^2}, z \right) \\
 \phi  &=  \operatorname{Arctan} (y, x)\end{aligned}\right.</script><p>类似经度和纬度</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>大一/物理/电学</title>
+    <url>/2023/01/31/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%94%B5%E5%AD%A6/</url>
+    <content><![CDATA[<h1 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h1><h2 id="远距作用"><a href="#远距作用" class="headerlink" title="远距作用"></a>远距作用</h2><p>过去人们认为相距一段距离的物体发生相互作用是一种远距作用(action at a distance)</p>
+<p>它不需要中间介质的传递只需要两个物体就能发生</p>
+<p>但很多现象无法解释例如为什么有的时候只有直接接触才能产生力</p>
+<h2 id="场论"><a href="#场论" class="headerlink" title="场论"></a>场论</h2><p>因此后来人们认为两个相距一段距离的物体之间存在一种物质通过连续的相互作用使作用得到传递，人们把它称之为场</p>
+<p>作用在场中的传递就像力在弹簧中的传递一样</p>
+<h3 id="标量场"><a href="#标量场" class="headerlink" title="标量场"></a>标量场</h3><script type="math/tex; mode=display">
+f(x,y,z)</script><p>空间中的每一个点都对应一个标量</p>
+<p>固定一个分量可以使用等高线来表示</p>
+<p><img src="/2023/01/31/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%94%B5%E5%AD%A6/image-20230201175531274.png" alt="image-20230201175531274"></p>
+<p>还可以使用颜色映射或三维地形图(Relief Maps)来表示</p>
+<h3 id="向量场"><a href="#向量场" class="headerlink" title="向量场"></a>向量场</h3><p>结果为向量</p>
+<script type="math/tex; mode=display">
+\vec{F}(x,y,z)=f_x(x,y,z)\mathbf{i}+f_y(x,y,z)\mathbf{j}+f_z(x,y,z)\mathbf{k}</script>]]></content>
   </entry>
 </search>

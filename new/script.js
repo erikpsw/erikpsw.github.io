@@ -87,6 +87,7 @@ $(".sub_title").get().forEach(element => {//使用get来获取数组
     var change=document.createTextNode(`
     #${element.id}::after{
         width: ${element.offsetWidth-24}px;
+        z-index: -1;
     }  
     `)//更改后伪元素的样式
     style.appendChild(change);//把样式添加到style标签里

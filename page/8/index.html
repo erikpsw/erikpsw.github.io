@@ -311,6 +311,165 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E5%9F%BA%E6%9C%AC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E5%9F%BA%E6%9C%AC/" itemprop="url">大一/概率论/基本</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-07-23T21:09:55+08:00">
+                2022-07-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="概率论公理"><a href="#概率论公理" class="headerlink" title="概率论公理"></a>概率论公理</h1><p>样本空间$S$上的概率分布$\rm {Pr{}}$是一个从事件到实数的映射</p>
+<ol>
+<li><p>$\forall  事件A,\text {Pr}{A}\ge0$</p>
+</li>
+<li><p>$\text {Pr}{S}=1$</p>
+</li>
+<li><p>对两两互斥的事件，有</p>
+<script type="math/tex; mode=display">
+\text {Pr}\left\{\bigcup_{i}A_i\right\}=\sum_i\text {Pr}\{A\}</script></li>
+</ol>
+<h3 id="容斥"><a href="#容斥" class="headerlink" title="容斥"></a>容斥</h3><script type="math/tex; mode=display">
+\begin{aligned}\text {Pr}\{A\cup B\}&=\text {Pr}\{A\}+\text {Pr}\{B\}-\text {Pr}\{A\cap B\}\\&\le\text {Pr}\{A\}+\text {Pr}\{B\}\end{aligned}</script><h2 id="离散概率分布"><a href="#离散概率分布" class="headerlink" title="离散概率分布"></a>离散概率分布</h2><p>概率分布在有限或无限可数的样本空间，则该概率分布是离散的</p>
+<script type="math/tex; mode=display">
+\text {Pr}\{A\}=\sum_{s\in A}\text {Pr}\{s\}</script><p>若基本事件$s\in S$的概率为</p>
+<script type="math/tex; mode=display">
+\text {Pr}\{s\}=1/|S|</script><p>则称为$S$上的的均匀概率分布</p>
+<h3 id="条件概率和独立"><a href="#条件概率和独立" class="headerlink" title="条件概率和独立"></a>条件概率和独立</h3><p>已知事件 $B$发生$\text {Pr}{B}\ne 0$，事件$A$的条件概率定义为</p>
+<script type="math/tex; mode=display">
+\text {Pr}\{A|B\}=\frac{\text {Pr}\{A\cap B\}}{\text {Pr}\{B\}}</script><p>若</p>
+<script type="math/tex; mode=display">
+\text {Pr}\{A\cap B\}=\text {Pr}\{A\}\text {Pr}\{B\}</script><p>则称事件$A$和$B$是独立的，若$\text {Pr}{B}\ne 0$，则等价于</p>
+<script type="math/tex; mode=display">
+\text {Pr}\{A|B\}=\Pr\{A\}(与B无关)</script><p>若对于所有$1\le i &lt; j\le n$，有</p>
+<script type="math/tex; mode=display">
+\text {Pr}\{A_i\cap A_j\}=\Pr\{A_i\}\Pr\{A_j\}</script><p>则称事件$A_1,A_2,\cdots,A_n$两两独立</p>
+<p>若对这些事件的每一个$k$子集${ A<em>{i_1},A</em>{i<em>2},\cdots,A</em>{i_k}}$，其中$2\le k\le n$且$1\le {i_1}&lt; {i_2}&lt; \cdots&lt; {i_k}\le n $，有</p>
+<script type="math/tex; mode=display">
+\Pr\{ A_{i_1}\cap A_{i_2}\cap \cdots\cap A_{i_k}\}=\Pr\{ A_{i_1}\}\Pr\{ A_{i_2}\}\cdots\Pr\{ A_{i_k}\}</script><p>则称这些事件相互独立</p>
+<h3 id="全概率公式"><a href="#全概率公式" class="headerlink" title="全概率公式"></a>全概率公式</h3><p>将样本空间$\Omega$划分为两两独立的$n$个事件，且</p>
+<script type="math/tex; mode=display">
+\bigcup_iA_i=\Omega</script><p>则</p>
+<script type="math/tex; mode=display">
+\Pr\{B\}=\sum_{i=1}^n\Pr\{B|A_i\}\Pr\{A_i\}</script><h3 id="贝叶斯定理"><a href="#贝叶斯定理" class="headerlink" title="贝叶斯定理"></a>贝叶斯定理</h3><p>由</p>
+<script type="math/tex; mode=display">
+\Pr\{A\cap B\}=\Pr\{A|B\}\Pr\{B\}=\Pr\{B|A\}\Pr\{A\}</script><p>得</p>
+<script type="math/tex; mode=display">
+\Pr\{A|B\}=\frac{\Pr\{B|A\}\Pr\{A\}}{\Pr\{B\}}</script><p>对于$\Pr{B}$，因为可以划分，故</p>
+<script type="math/tex; mode=display">
+\Pr\{B\}=\Pr\{B|A\}\Pr\{A\}+\Pr\{B|\overline{A} \}\Pr\{\overline{A} \}</script><p>所</p>
+<script type="math/tex; mode=display">
+\Pr\{A|B\}=\frac{\Pr\{B|A\}\Pr\{A\}}{\Pr\{B|A\}\Pr\{A\}+\Pr\{B|\overline{A} \}\Pr\{\overline{A} \}}</script>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E7%A6%BB%E6%95%A3%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -786,7 +945,7 @@ e^x+e^{-x}\text{d}x=\text{d}(e^x-e^{-x})\\
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">73</span>
+                <span class="site-state-item-count">74</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
