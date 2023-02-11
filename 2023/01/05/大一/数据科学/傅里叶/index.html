@@ -94,21 +94,20 @@
 
 
 
-<meta name="description" content="复数表示 z&#x3D;a+b\text{i}\\ a&#x3D;\Re z\quad b&#x3D;\Im z |z|&#x3D;|a+b\mathrm{i}|&#x3D;\sqrt{a^2+b^2}\\\overline{z}&#x3D;a-b\text{i}其中$\overline{z}$为共轭复数  \Re z&#x3D;\frac12(z+\overline z)\\ \Re z&#x3D;\frac1{2\text i}(z-\overline z)\\运算定律">
+<meta name="description" content="傅里叶变换 g(t)-A_0&#x3D;\sum_{i&#x3D;0}^\infty A_n\cos(n\omega t+\varphi_n)考虑这个图形的质心  g(t)e^{-2\pi ft    \text{i}}\\ z_c&#x3D;\frac1N\sum_{k&#x3D;0}^{N-1}g(t_k)e^{-2\pi ft_k    \text{i}}取极限，并不需平均  \hat{g}(f)&#x3D;\int_{0}^{t_m}g(">
 <meta property="og:type" content="article">
 <meta property="og:title" content="大一&#x2F;数据科学&#x2F;傅里叶">
 <meta property="og:url" content="http://yoursite.com/2023/01/05/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E5%82%85%E9%87%8C%E5%8F%B6/index.html">
 <meta property="og:site_name" content="BLOG">
-<meta property="og:description" content="复数表示 z&#x3D;a+b\text{i}\\ a&#x3D;\Re z\quad b&#x3D;\Im z |z|&#x3D;|a+b\mathrm{i}|&#x3D;\sqrt{a^2+b^2}\\\overline{z}&#x3D;a-b\text{i}其中$\overline{z}$为共轭复数  \Re z&#x3D;\frac12(z+\overline z)\\ \Re z&#x3D;\frac1{2\text i}(z-\overline z)\\运算定律">
+<meta property="og:description" content="傅里叶变换 g(t)-A_0&#x3D;\sum_{i&#x3D;0}^\infty A_n\cos(n\omega t+\varphi_n)考虑这个图形的质心  g(t)e^{-2\pi ft    \text{i}}\\ z_c&#x3D;\frac1N\sum_{k&#x3D;0}^{N-1}g(t_k)e^{-2\pi ft_k    \text{i}}取极限，并不需平均  \hat{g}(f)&#x3D;\int_{0}^{t_m}g(">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/2023/01/05/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E5%82%85%E9%87%8C%E5%8F%B6/image-20230105144356493.png">
 <meta property="og:image" content="http://yoursite.com/2023/01/05/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E5%82%85%E9%87%8C%E5%8F%B6/image-20230105165158433.png">
 <meta property="og:image" content="http://yoursite.com/2023/01/05/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E5%82%85%E9%87%8C%E5%8F%B6/image-20230105165412880.png">
 <meta property="article:published_time" content="2023-01-05T03:50:59.169Z">
-<meta property="article:modified_time" content="2023-01-13T12:13:30.649Z">
+<meta property="article:modified_time" content="2023-02-10T08:28:20.055Z">
 <meta property="article:author" content="Shiwei Pan">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2023/01/05/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E5%82%85%E9%87%8C%E5%8F%B6/image-20230105144356493.png">
+<meta name="twitter:image" content="http://yoursite.com/2023/01/05/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E5%82%85%E9%87%8C%E5%8F%B6/image-20230105165158433.png">
 
 
 
@@ -382,46 +381,7 @@
       
 
       
-        <h1 id="复数"><a href="#复数" class="headerlink" title="复数"></a>复数</h1><h2 id="表示"><a href="#表示" class="headerlink" title="表示"></a>表示</h2><script type="math/tex; mode=display">
-z=a+b\text{i}\\
-a=\Re z\quad
-b=\Im z</script><script type="math/tex; mode=display">
-|z|=|a+b\mathrm{i}|=\sqrt{a^2+b^2}\\\overline{z}=a-b\text{i}</script><p>其中$\overline{z}$为共轭复数</p>
-<script type="math/tex; mode=display">
-\Re z=\frac12(z+\overline z)\\
-\Re z=\frac1{2\text i}(z-\overline z)\\</script><h2 id="运算定律"><a href="#运算定律" class="headerlink" title="运算定律"></a>运算定律</h2><script type="math/tex; mode=display">
-(a+b\mathrm{i})\pm (c+d\mathrm{i})=(a\pm c)+(b\pm d)\mathrm{i}\\(a+b\mathrm{i})(c+d\mathrm{i})=(ac-bd)+(ad+bc)\mathrm{i}\\\frac{a+b\mathrm{i}  }{c+d\mathrm{i}  }=\frac{(a+b\mathrm{i})(c-d\mathrm{i})}{(c+d\mathrm{i})(c-d\mathrm{i})}=\frac{(ac+bd)+(bc-ad)\mathrm{i}  }{c^2+d^2}</script><h2 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h2><script type="math/tex; mode=display">
-z\overline z=|z|^2\\
-\overline{z+w}=\overline z+\overline w\\
-\overline{zw}=\overline z\;\overline w\\
-|zw|=|z||w|\\
-\left|\frac{z}{w}\right|=\frac{|z|}{|w|}</script><h1 id="几何表示"><a href="#几何表示" class="headerlink" title="几何表示"></a>几何表示</h1><p><img src="/2023/01/05/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E5%82%85%E9%87%8C%E5%8F%B6/image-20230105144356493.png" alt="image-20230105144356493"></p>
-<script type="math/tex; mode=display">
-z = a + b\text{i} = r(\cos \theta  + \text{isin}\theta ) = re^{\theta{\text i} }</script><p>其中$\theta $称为辐角，记为$\text{Arg} z$，对于$-\pi&lt;\theta\le\pi$</p>
-<script type="math/tex; mode=display">
-\text{Arg} z=\text{arg}z+2k\pi,k \in \mathbf{Z}</script><p>而$\text{arg}z$就是辐角的主值</p>
-<h2 id="性质-1"><a href="#性质-1" class="headerlink" title="性质"></a>性质</h2><script type="math/tex; mode=display">
-z_{1} z_{2}=r_{1} r_{2}\left(\cos \left(\theta_{1}+\theta_{2}\right)+i \operatorname{isin}\left(\theta_{1}+\theta_{2}\right)\right)\\
-\text{Arg}(z_{1} z_{2})=\text{Arg}z_{1}+\text{Arg}z_{2}</script><p>同理</p>
-<script type="math/tex; mode=display">
-\frac{z_{1}}{z_{2}}=  \frac{r_{1}}{r_{2}}\left[\cos \left(\theta_{1}-\theta_{2}\right)+\operatorname{isin}\left(\theta_{1}-\theta_{2}\right)\right]\\
-\operatorname{Arg}\left(\frac{z_{1}}{z_{2}}\right)=\operatorname{Arg} z_{1}-\operatorname{Arg} z_{2}</script><p>可以看出复数乘除和旋转有关</p>
-<p>应用于垂直，有</p>
-<script type="math/tex; mode=display">
-\operatorname{arg}\left(\frac{z_{1}}{z_{2}}\right)=\pm\frac\pi2\\
-\Re\frac{z_{1}}{z_{2}}=\Re\frac{z_{1}}{z_{2}}|z_2|^2=\Re z_1\overline{z_2}=0</script><p>同理，平行</p>
-<script type="math/tex; mode=display">
-\operatorname{arg}\left(\frac{z_{1}}{z_{2}}\right)=0/\pi\\\Im z_1\overline{z_2}=0</script><h3 id="棣莫弗公式"><a href="#棣莫弗公式" class="headerlink" title="棣莫弗公式"></a>棣莫弗公式</h3><p>de Moivre formula</p>
-<script type="math/tex; mode=display">
-(\cos \theta+\text{i} \sin \theta)^{n}=\cos n \theta+\text{i}  \sin n \theta=(e^{\text{i} \theta})^n</script><p>从而对于$|z|=1$</p>
-<script type="math/tex; mode=display">
-\omega=\sqrt[n]{z},\omega^n=z\\\cos n \varphi+\text{i}  \sin n \varphi=\cos \theta+\text{i} \sin \theta\\
-\varphi=\frac{\theta+2k\pi}{n}\;(k=0,1,\cdots ,n-1)</script><p>注意到每次加上$2\pi/n$</p>
-<script type="math/tex; mode=display">
-\omega_n=\cos \frac{2 \pi}{n}+i \sin \frac{2 \pi}{n}\\
-\sqrt[n]1=\omega_n^0,\omega_n^1,\omega_n^2\dots\omega_n^{n-1}</script><p>这就是$n$个单位根，$\omega_n$为主$n$次单位根</p>
-<p>不难想到可以利用这$n$个值来表示多项式</p>
-<h1 id="傅里叶变换"><a href="#傅里叶变换" class="headerlink" title="傅里叶变换"></a>傅里叶变换</h1><script type="math/tex; mode=display">
+        <h1 id="傅里叶变换"><a href="#傅里叶变换" class="headerlink" title="傅里叶变换"></a>傅里叶变换</h1><script type="math/tex; mode=display">
 g(t)-A_0=\sum_{i=0}^\infty A_n\cos(n\omega t+\varphi_n)</script><p>考虑这个图形的质心</p>
 <script type="math/tex; mode=display">
 g(t)e^{-2\pi ft    \text{i}}\\
@@ -683,7 +643,7 @@ A_i=\frac{2||z_i||}{N}</script><p> 每个分量的相位为对应复数的相位
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">74</span>
+                <span class="site-state-item-count">77</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -746,7 +706,7 @@ A_i=\frac{2||z_i||}{N}</script><p> 每个分量的相位为对应复数的相位
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#复数"><span class="nav-number">1.</span> <span class="nav-text">复数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#表示"><span class="nav-number">1.1.</span> <span class="nav-text">表示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运算定律"><span class="nav-number">1.2.</span> <span class="nav-text">运算定律</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#性质"><span class="nav-number">1.3.</span> <span class="nav-text">性质</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#几何表示"><span class="nav-number">2.</span> <span class="nav-text">几何表示</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#性质-1"><span class="nav-number">2.1.</span> <span class="nav-text">性质</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#棣莫弗公式"><span class="nav-number">2.1.1.</span> <span class="nav-text">棣莫弗公式</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#傅里叶变换"><span class="nav-number">3.</span> <span class="nav-text">傅里叶变换</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#快速傅里叶变换"><span class="nav-number">4.</span> <span class="nav-text">快速傅里叶变换</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#多项式乘法"><span class="nav-number">4.1.</span> <span class="nav-text">多项式乘法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#消去引理"><span class="nav-number">4.1.1.</span> <span class="nav-text">消去引理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#折半引理"><span class="nav-number">4.1.2.</span> <span class="nav-text">折半引理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#求和引理"><span class="nav-number">4.1.3.</span> <span class="nav-text">求和引理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FFT"><span class="nav-number">4.2.</span> <span class="nav-text">FFT</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#化简"><span class="nav-number">4.2.1.</span> <span class="nav-text">化简</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结果"><span class="nav-number">5.</span> <span class="nav-text">结果</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#傅里叶变换"><span class="nav-number">1.</span> <span class="nav-text">傅里叶变换</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#快速傅里叶变换"><span class="nav-number">2.</span> <span class="nav-text">快速傅里叶变换</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#多项式乘法"><span class="nav-number">2.1.</span> <span class="nav-text">多项式乘法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#消去引理"><span class="nav-number">2.1.1.</span> <span class="nav-text">消去引理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#折半引理"><span class="nav-number">2.1.2.</span> <span class="nav-text">折半引理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#求和引理"><span class="nav-number">2.1.3.</span> <span class="nav-text">求和引理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FFT"><span class="nav-number">2.2.</span> <span class="nav-text">FFT</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#化简"><span class="nav-number">2.2.1.</span> <span class="nav-text">化简</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结果"><span class="nav-number">3.</span> <span class="nav-text">结果</span></a></li></ol></div>
             
 
           </div>
