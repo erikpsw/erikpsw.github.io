@@ -311,6 +311,885 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2023/01/05/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E5%82%85%E9%87%8C%E5%8F%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2023/01/05/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E5%82%85%E9%87%8C%E5%8F%B6/" itemprop="url">大一/数据科学/傅里叶</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-01-05T11:50:59+08:00">
+                2023-01-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="傅里叶变换"><a href="#傅里叶变换" class="headerlink" title="傅里叶变换"></a>傅里叶变换</h1><script type="math/tex; mode=display">
+g(t)-A_0=\sum_{i=0}^\infty A_n\cos(n\omega t+\varphi_n)</script><p>考虑这个图形的质心</p>
+<script type="math/tex; mode=display">
+g(t)e^{-2\pi ft    \text{i}}\\
+z_c=\frac1N\sum_{k=0}^{N-1}g(t_k)e^{-2\pi ft_k    \text{i}}</script><p>取极限，并不需平均</p>
+<script type="math/tex; mode=display">
+\hat{g}(f)=\int_{0}^{t_m}g(t)e^{-2\pi ft    \text{i}}\text{d}t</script><p>利用复数的三角形式</p>
+<p><img src="/2023/01/05/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E5%82%85%E9%87%8C%E5%8F%B6/image-20230105165158433.png" alt="image-20230105165158433"></p>
+<p>当频率匹配时，积分为正</p>
+<p>由三角函数的正交性，若正交，为零</p>
+<p><img src="/2023/01/05/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E5%82%85%E9%87%8C%E5%8F%B6/image-20230105165412880.png" alt="image-20230105165412880"></p>
+<p>从而得到两个分量$\sin | \cos$的强度</p>
+<h1 id="快速傅里叶变换"><a href="#快速傅里叶变换" class="headerlink" title="快速傅里叶变换"></a>快速傅里叶变换</h1><h2 id="多项式乘法"><a href="#多项式乘法" class="headerlink" title="多项式乘法"></a>多项式乘法</h2><p>对于多项式</p>
+<script type="math/tex; mode=display">
+A(x)=\sum_{i=0}^{n-1}a_ix^{i}\\
+B(x)=\sum_{i=0}^{n-1}b_ix^{i}\\
+C(x)=A(x)B(x)=\sum_{i=0}^{2n-2}c_ix^{i}\\
+c_i=\sum_{j=0}^ia_jb_{i-j}</script><p>这是多项式的系数表示，但还可以使用点值表示</p>
+<script type="math/tex; mode=display">
+\{(x_0,y_0),(x_1,y_1)\dots(x_{n-1},y_{n-1})\}</script><p>其中$x_i$各不相同，可以证明两种表示是等价的</p>
+<script type="math/tex; mode=display">
+\left[\begin{array}{c}
+P\left(x_{0}\right) \\
+P\left(x_{1}\right) \\
+\vdots \\
+P\left(x_{n-1}\right)
+\end{array}\right]=\left[\begin{array}{ccccc}
+1 & x_{0} & x_{0}^{2} & \cdots & x_{0}^{n-1} \\
+1 & x_{1} & x_{1}^{2} & \cdots & x_{1}^{n-1} \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+1 & x_{n-1} & x_{n-1}^{2} & \cdots & x_{n-1}^{n-1}
+\end{array}\right]\left[\begin{array}{c}
+p_{0} \\
+p_{1} \\
+\vdots \\
+p_{n-1}
+\end{array}\right]</script><p>所以$C(x)$可以表达为</p>
+<script type="math/tex; mode=display">
+\{(x_0,y_0y_0'),(x_1,y_1y_1')\dots(x_{2n-2},y_{2n-2}y_{2n-2}')\}</script><p>利用拉格朗日插值公式</p>
+<script type="math/tex; mode=display">
+A(x)=\sum_{k=0}^{n-1}y_k\frac{\displaystyle\prod_{j\ne k}(x-x_j)}{\displaystyle\prod_{j\ne k}(x_k-x_j)}</script><p>可以快速将点值表示转化为系数表示</p>
+<p>注意到$2n-2$为偶数，使用几何意义去理解</p>
+<h3 id="消去引理"><a href="#消去引理" class="headerlink" title="消去引理"></a>消去引理</h3><script type="math/tex; mode=display">
+\omega_{dn}^{dk}=\omega_{n}^{k}\\
+\omega_n^{\frac n2}=\omega^\frac12=\omega_2^1=-1</script><h3 id="折半引理"><a href="#折半引理" class="headerlink" title="折半引理"></a>折半引理</h3><script type="math/tex; mode=display">
+(\omega_n^k)^2=\omega_\frac n2^k\\
+(\omega_n^k)^2=(\omega_n^{k+\frac n2})^2\;\;2\theta/2(\theta+\pi)</script><h3 id="求和引理"><a href="#求和引理" class="headerlink" title="求和引理"></a>求和引理</h3><p>对于$\forall n\ge1,n\mod k\ne0$</p>
+<script type="math/tex; mode=display">
+\sum_{j=0}^{n-1}(\omega_n^k)^j=0</script><p>利用$n$次单位根，带入可以得到</p>
+<script type="math/tex; mode=display">
+y_k=\sum_{j=0}^{n-1}a_j(\omega_n^k)^j</script><p>从而向量</p>
+<script type="math/tex; mode=display">
+(y_0,y_1,\cdots ,y_{n-1})</script><p>为系数向量的离散傅里叶变换(DFT)</p>
+<h2 id="FFT"><a href="#FFT" class="headerlink" title="FFT"></a>FFT</h2><script type="math/tex; mode=display">
+A(x)=A^{[0]}(x^2)+xA^{[1]}(x^2)</script><p>从而对$k:0\to \frac n 2-1$有</p>
+<script type="math/tex; mode=display">
+\begin{cases}y_k=y^{[0]}_k+\omega_n^ky_k^{[1]}\\
+y_{k+n/2}=y^{[0]}_k-\omega_n^ky_k^{[1]}\end{cases}</script><p>从而分为两个规模为一半的子问题</p>
+<script type="math/tex; mode=display">
+\left[\begin{array}{c}
+P\left(\omega^{0}\right) \\
+P\left(\omega^{1}\right) \\
+P\left(\omega^{2}\right) \\
+\vdots \\
+P\left(\omega^{n-1}\right)
+\end{array}\right]=\left[\begin{array}{ccccc}
+1 & 1 & 1 & \cdots & 1 \\
+1 & \omega & \omega^{2} & \cdots & \omega^{n-1} \\
+1 & \omega^{2} & \omega^{4} & \cdots & \omega^{2(n-1)} \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+1 & \omega^{n-1} & \omega^{2(n-1)} & \cdots & \omega^{(n-1)(n-1)}
+\end{array}\right]\left[\begin{array}{c}
+p_{0} \\
+p_{1} \\
+p_{2} \\
+\vdots \\
+p_{n-1}
+\end{array}\right]</script><script type="math/tex; mode=display">
+\left[\begin{array}{c}
+p_{0} \\
+p_{1} \\
+p_{2} \\
+\vdots \\
+p_{n-1}
+\end{array}\right]=\frac{1}{n}\left[\begin{array}{ccccc}
+1 & 1 & 1 & \cdots & 1 \\
+1 & \omega^{-1} & \omega^{-2} & \cdots & \omega^{-(n-1)} \\
+1 & \omega^{-2} & \omega^{-4} & \cdots & \omega^{-2(n-1)} \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+1 & \omega^{-(n-1)} & \omega^{-2(n-1)} & \cdots & \omega^{-(n-1)(n-1)}
+\end{array}\right]\left[\begin{array}{c}
+P\left(\omega^{0}\right) \\
+P\left(\omega^{1}\right) \\
+P\left(\omega^{2}\right) \\
+\vdots \\
+P\left(\omega^{n-1}\right)
+\end{array}\right]</script><p>而离散傅里叶变换可以写为</p>
+<script type="math/tex; mode=display">
+z_c=\sum_{k=0}^{N-1}g(t_k)e^{-2\pi ft_k    \text{i}}</script><p>这就是带入单位根后的多项式的形式</p>
+<h3 id="化简"><a href="#化简" class="headerlink" title="化简"></a>化简</h3><script type="math/tex; mode=display">
+z_c=\sum_{k=0}^{N-1}x_ke^{-2\pi f_rt_k    \text{i}}\\</script><p>总共有N个频率$f_r(0\le r\le n-1)$，让其等距分布</p>
+<script type="math/tex; mode=display">
+\\-2\pi f_rt_k=-2\pi f_r\frac{k}{f_s}</script><p>等距，所以令</p>
+<script type="math/tex; mode=display">
+\frac{f_r}{rf_s}=\frac1{N}</script><p>得</p>
+<script type="math/tex; mode=display">
+X_r=\sum_{k=0}^{N-1}x_ke^{-(2\pi/N) rk\text{i}}</script><h1 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h1><p>采样定理告诉我们，采样频率要大于信号频率的两倍</p>
+<p>时域到频域，将N个采样点变为N个复数</p>
+<script type="math/tex; mode=display">
+t\to f\\
+A\to z</script><p>设采样频率为$f_s$，则FFT的分辨率为$f_s/N$</p>
+<script type="math/tex; mode=display">
+f_i=\frac{(i-1)f_s}N</script><p>$z$的模长反映了振幅占比</p>
+<script type="math/tex; mode=display">
+A_i=\frac{2||z_i||}{N}</script><p> 每个分量的相位为对应复数的相位</p>
+<script type="math/tex; mode=display">
+\tan \varphi=\frac{\Im z}{\Re z}</script><p>由于$X<em>r$和$X</em>{N-r}$共轭，取模后相等</p>
+<p>所以FFT的结果左右是对称的，只需取一般</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2023/01/02/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E5%9B%9E%E5%BD%92/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2023/01/02/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E5%9B%9E%E5%BD%92/" itemprop="url">大一/数据科学/回归</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-01-02T16:05:23+08:00">
+                2023-01-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="回归模型"><a href="#回归模型" class="headerlink" title="回归模型"></a>回归模型</h1><p>输入向量</p>
+<script type="math/tex; mode=display">
+X=\begin{pmatrix}X_1\\X_2\\X_3\end{pmatrix}\\</script><p>模型</p>
+<script type="math/tex; mode=display">
+Y=f(X)+\epsilon</script><p>其中$\epsilon$为误差，不可避免</p>
+<p>回归函数(regression function)为理想目标</p>
+<script type="math/tex; mode=display">
+f(x)=E(Y|X=x)</script><p>$X$表示抽象特征$x$为具体值</p>
+<p>需要准确根据所有数据选取模型的复杂度</p>
+<h2 id="线性模型"><a href="#线性模型" class="headerlink" title="线性模型"></a>线性模型</h2><script type="math/tex; mode=display">
+\hat { y } = \hat { \beta_1 } x + \hat { \beta_0}</script><p>几乎不可能正确，但很可能是最佳的一部分</p>
+<script type="math/tex; mode=display">
+\\ \frac{\partial y}{\partial \beta_1}=\frac{\partial y}{\partial \beta_0}=0\\
+
+\hat { \beta_1 } = \frac { \sum\limits _ { i = 1 } ^ { n } x _ { i } y _ { i } - n \overline { x } \overline { y } } { \sum \limits_ { i = 1 } ^ { n } x _ { i } ^ { 2 } - n \overline { x } ^ { 2 } } , \hat { \beta_0 } = \overline { y } - \hat { b } \overline { x }</script><p>相关系数为</p>
+<script type="math/tex; mode=display">
+r = \frac { \sum \limits_ { i = 1 } ^ { n } x _ { i } y _ { i } - n \overline { x } \overline { y } } { \sqrt { ( \sum \limits_ { i = 1 } ^ { n } x _ { i } ^ { 2 } - n \overline { x } ^ { 2 } ) ( \sum \limits_ { i = 1 } ^ { n } y _ { i } ^ { 2 } - n \overline { y } ^ { 2 } ) } }</script><p>计算标准差的平方(方差)为</p>
+<script type="math/tex; mode=display">
+S_{xx}=\sum_{i=1}^n(x_i-\overline{x})^2\\
+S_{yy}=\sum_{i=1}^n(y_i-\overline{y})^2\\
+S_{xy}=\sum_{i=1}^n(x_i-\overline{x})(y_i-\overline{y})</script><p>其中$\sigma^2=\text{Var}(\epsilon)$</p>
+<p>因为x_i为人为给定量，y_i为测量值，存在误差</p>
+<p>若样本无穷大，有总体回归线</p>
+<script type="math/tex; mode=display">
+Y=\beta_0+\beta_1X+\epsilon</script><p>由方差的性质得到</p>
+<script type="math/tex; mode=display">
+\text{Var}(\epsilon)=\text{Var}[Y]</script><script type="math/tex; mode=display">
+\text{SE}(\hat{\beta_1})^2=\frac{\sigma^2}{S_{xx}}
+\\
+\text{SE}(\hat{\beta_0})^2=\sigma^2\left(\frac1n+\frac{\overline{x}^2}{S_{xx}}\right)</script><p><strong>RSE：</strong>Residual Standard Error</p>
+<script type="math/tex; mode=display">
+\mathrm{RSE}=\sqrt{\frac{1}{n-2} \operatorname{RSS}}=\sqrt{\frac{1}{n-2} \sum_{i=1}^{n}\left(y_{i}-\hat{y}_{j}\right)^{2}}</script><p><strong>RSS：</strong>Residual Sum of Squares</p>
+<p>由误差导致的真实值和估计值之间的偏差平方和</p>
+<h3 id="置信区间"><a href="#置信区间" class="headerlink" title="置信区间"></a>置信区间</h3><p>Confidence Intervals</p>
+<p>有$95\%$的概率使得最佳值在区间内(根据数据的不同)</p>
+<script type="math/tex; mode=display">
+[\hat{\beta_1}-2\text{SE}(\hat{\beta_1}),\hat{\beta_1}+2\text{SE}(\hat{\beta_1})]</script><h3 id="多元"><a href="#多元" class="headerlink" title="多元"></a>多元</h3><script type="math/tex; mode=display">
+f_L(X)=\beta_0+\beta_1X_1+\beta_2X_2\dots\\
+Y=X\beta+\epsilon</script><p>若一个量变化，其余量固定不变，不相关(常常不符合事实)</p>
+<p>但有一些很有用，能够看出某个量的影响</p>
+<script type="math/tex; mode=display">
+\text{minimize}\{\ell(\beta)= (Y-X\beta)^2\}\\
+\frac{\partial l}{\partial \beta}=0,\ell(\beta)=(Y-X\beta)^T(Y-X\beta)</script><p> 展开后求导可得</p>
+<script type="math/tex; mode=display">
+\beta=(X^TX)^{-1}X^TY</script><p>其中$X$代表$n$个样本</p>
+<script type="math/tex; mode=display">
+X=\begin{bmatrix}1&X_{11}&\cdots&X_{1(m-1)}&X_{1m}\\
+1&X_{21}&\cdots&X_{2(m-1)}&X_{2m}\\
+1&X_{31}&\cdots&X_{3(m-1)}&X_{3m}\\
+\vdots& \vdots&\vdots&\vdots&\vdots\\
+1&X_{n1}&\cdots&X_{n(m-1)}&X_{nm}\\
+\end{bmatrix}</script><p>对于</p>
+<script type="math/tex; mode=display">
+y=2x_1-3.4x_2+4.2\\
+\beta=\begin{bmatrix}\beta_0\\\beta_1\\\beta_2\\
+
+
+\end{bmatrix}</script><h3 id="相关"><a href="#相关" class="headerlink" title="相关"></a>相关</h3><p>若两个量相关则</p>
+<script type="math/tex; mode=display">
+\beta_1\ne0</script><script type="math/tex; mode=display">
+\beta_1=0\Rightarrow Y=\beta_0+\epsilon</script><p> 对于多元模型，可以引入乘积项</p>
+<script type="math/tex; mode=display">
+y=\beta_0+\beta_1X_1+\beta_2X_2+\beta_3X_1X_2+\epsilon</script><h3 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h3><p>最小化方差</p>
+<script type="math/tex; mode=display">
+\text{minimize}\{E[(Y-\hat{f}(x))^2|X=x]\}</script><p>$\hat{f}(x)$为所估计的函数</p>
+<script type="math/tex; mode=display">
+E[(Y-\hat{f}(x))^2|X=x]=[f(x)-\hat{f}(x)]^2+\text{Var}(\epsilon)</script><p>但每个值不一定都有</p>
+<script type="math/tex; mode=display">
+\rm good /over/under\;fitting</script><p>取测试数据集计算准确度，评估模型好坏</p>
+<p>可以引入非线性项来改进模型</p>
+<script type="math/tex; mode=display">
+Y=\beta_0+\beta_1X+\beta_2X^2+\epsilon</script><h1 id="分类模型"><a href="#分类模型" class="headerlink" title="分类模型"></a>分类模型</h1><script type="math/tex; mode=display">
+\hat{f}(x)=\text{Ave}(Y|X\in \mathcal{N}(x))</script><p>考察$x$的邻域$\mathcal{N}(x)$，如扩展到$10\%$的数据</p>
+<p>但对高维数据范围太大失去了局部信息，效果不好</p>
+<p>分类器$C(X)$，考虑条件概率</p>
+<script type="math/tex; mode=display">
+p_k(x)=\text{Pr}(Y=k|X=x),k=1,2,\dots ,k</script><p>分类结果为</p>
+<script type="math/tex; mode=display">
+Y=j \;\text{if}\;p_j(x)=\max\{p_k(x) \}</script><p>用正确率来衡量结果</p>
+<p><img src="/2023/01/02/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E5%9B%9E%E5%BD%92/image-20230102194141113.png" alt="image-20230102194141113"></p>
+<p>可使用$\rm Nearest-neighbor$，如找十个看哪种最多</p>
+<h2 id="Logistic"><a href="#Logistic" class="headerlink" title="Logistic"></a>Logistic</h2><p>逻辑斯谛回归</p>
+<script type="math/tex; mode=display">
+p(X)=\text{Pr}\{Y=1|X\}\\
+p(X)=\frac{e^{\beta_0+\beta_1X}}{1+e^{\beta_0+\beta_1X}}\\
+\text{Pr}\{Y=0|X\}=\frac{1}{1+e^{\beta_0+\beta_1X}}\\
+\ln \left(\frac{p(X)}{1-p(X)}\right)=\beta_{0}+\beta_{1} X\\</script><p>这是一种广义线性模型，利用最大似然函数估计误差</p>
+<script type="math/tex; mode=display">
+\ell\left(\beta_{0}, \beta\right)=\prod_{i: y_{i}=1} p\left(x_{i}\right) \prod_{i: y_{i}=0}\left(1-p\left(x_{i}\right)\right)</script><p>随机抽小球，取得一个样本</p>
+<p>我们认为概率最大的情况就是这个结果，从而</p>
+<script type="math/tex; mode=display">
+\text{maximize}\{\ell\left(\beta_{0}, \beta\right)\}</script>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/12/07/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/12/07/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/" itemprop="url">大一/高数/微分方程</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-12-07T14:12:43+08:00">
+                2022-12-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>微分方程是一种方程，它涉及对一个函数的变化率的描述。它通常表示为一个包含未知函数及其一阶或多阶导数的方程，例如：</p>
+<script type="math/tex; mode=display">
+\frac{\text{d}y}{\text{d}x} + y = x</script><p>其最高阶导数的阶数为微分方程的阶数</p>
+<p>其通解含有和阶数数目相同的相互独立的常数</p>
+<h2 id="通解"><a href="#通解" class="headerlink" title="通解"></a>通解</h2><p>对于特定类型的微分方程，可以找到一个通用的解决方案</p>
+<p>例如，对于常见的一阶线性微分方程，通解可以表示为：</p>
+<script type="math/tex; mode=display">
+y = c_1 e^{r_1 x} + c_2 e^{r_2 x}</script><p>其中 $c_1$ 和 $c_2$ 是任意常数，$r_1$和$r_2$是方程的特征根。通过对方程进行求解，可以确定 $r_1$ 和 $r_2$ 的值</p>
+<h2 id="特解"><a href="#特解" class="headerlink" title="特解"></a>特解</h2><p>微分方程需要满足特定的初值条件$\text{IVP(Initial Value Problem)}$</p>
+<p>利用这些条件可以方便求出常数的值</p>
+<h1 id="可分离变量"><a href="#可分离变量" class="headerlink" title="可分离变量"></a>可分离变量</h1><p>这类方程的一般形式为：</p>
+<script type="math/tex; mode=display">
+\frac{\text{d}y}{\text{d}x} = f(x)g(y)\Rightarrow\\
+f(x)\text{d}x=h(y)\text{d}y</script><p>其中 $f(x)$ 和 $g(y)$ 是两个函数。可以看出，在这类方程中，变量 $x$ 和 $y$ 可以分开，因此称为可分离变量的微分方程。</p>
+<p>对两端积分，并带入初值条件便可以求解</p>
+<p>对于其他方程，利用换元的方式可以化成这种类型</p>
+<p>一般的</p>
+<script type="math/tex; mode=display">
+\frac{\text{d}y}{\text{d}x}=f\left(\frac{ax+by+c}{a_1x+b_1y+c_1}\right)</script><p>若</p>
+<script type="math/tex; mode=display">
+\frac{a}{a_1}=\frac{b}{b_1}</script><p>化为</p>
+<script type="math/tex; mode=display">
+f\left(\frac{ax+by+c}{\lambda(ax+by)+c_1}\right)</script><p>作换元</p>
+<script type="math/tex; mode=display">
+u=ax+by</script><h1 id="一阶线性"><a href="#一阶线性" class="headerlink" title="一阶线性"></a>一阶线性</h1><script type="math/tex; mode=display">
+\frac{\text{d}y}{\text{d}x} +P(x)y=Q(x)</script><p>若$Q(x)\equiv 0$则为齐次，容易得到</p>
+<script type="math/tex; mode=display">
+y=C\cdot \exp \left( -\int P(x)\text{d}x \right)</script><p>将$C$换为$u(x)$(常数变易法)，容易得到</p>
+<script type="math/tex; mode=display">
+u(x)=\int Q(x)\exp\left( \int P(x)\text{d}x \right)\text{d}x    +C</script><p> 从而通解为</p>
+<script type="math/tex; mode=display">
+y=e^{-\int P(x)\text{d}x}\left(\int Q(x)e^{ \int P(x)\text{d}x} \text{d}x    +C\right)</script><p>也可以同时乘上积分因子</p>
+<script type="math/tex; mode=display">
+\text{integrating factor} = e^{ \int P(x)\text{d}x}</script><h2 id="齐次方程"><a href="#齐次方程" class="headerlink" title="齐次方程"></a>齐次方程</h2><script type="math/tex; mode=display">
+\frac{\text{d}y}{\text{d}x} =\varphi(\frac y x)</script><p>我们可以作变量代换</p>
+<script type="math/tex; mode=display">
+u=\frac yx</script><p>从而化为一般微分方程</p>
+<p>对于</p>
+<script type="math/tex; mode=display">
+\frac{\text{d}y}{\text{d}x}=\frac{ax+by+c}{a_1x+b_1y+c_1}(\frac{a}{a_1}\ne\frac{b}{b_1})</script><p>用平移的方式可以化为齐次型</p>
+<script type="math/tex; mode=display">
+\begin{cases}x=X+h\\y=Y+k\end{cases}</script><h2 id="伯努利方程"><a href="#伯努利方程" class="headerlink" title="伯努利方程"></a>伯努利方程</h2><script type="math/tex; mode=display">
+\frac{\text{d}y}{\text{d}x} +P(x)y=Q(x)y^\alpha\\
+y^{-\alpha}\frac{\text{d}y}{\text{d}x} +P(x)y^{1-\alpha}=Q(x)</script><p>从而令$u=y^{1-\alpha}$化为一阶线性求解</p>
+<h1 id="可降阶的二阶"><a href="#可降阶的二阶" class="headerlink" title="可降阶的二阶"></a>可降阶的二阶</h1><h2 id="y’’-f-x"><a href="#y’’-f-x" class="headerlink" title="y’’=f(x)"></a>y’’=f(x)</h2><p>只需不断积分即可，注意任意常数</p>
+<p>上述解法可以推广到</p>
+<script type="math/tex; mode=display">
+y^{(n)}=f(x)</script><h2 id="y’’-f-x-y’"><a href="#y’’-f-x-y’" class="headerlink" title="y’’=f(x,y’)"></a>y’’=f(x,y’)</h2><p>使用换元法将$y’$设为$p$，利用</p>
+<script type="math/tex; mode=display">
+y''=\frac{\text{d}}{\text{d}x}(y')=\frac{\text{d}p}{\text{d}x}</script><p>化为一阶线性微分方程，求出后再进行积分即可</p>
+<h2 id="y’’-f-y-y’"><a href="#y’’-f-y-y’" class="headerlink" title="y’’=f(y,y’)"></a>y’’=f(y,y’)</h2><p>同样使用换元法将$y’$设为$p$，利用</p>
+<script type="math/tex; mode=display">
+y''=\frac{\text{d}p}{\text{d}x}=\frac{\text{d}p}{\text{d}y}\frac{\text{d}y}{\text{d}x}=p\frac{\text{d}p}{\text{d}y}</script><p>化为</p>
+<script type="math/tex; mode=display">
+p\frac{\text{d}p}{\text{d}y}=f(p,y)</script><h1 id="二阶线性微分方程"><a href="#二阶线性微分方程" class="headerlink" title="二阶线性微分方程"></a>二阶线性微分方程</h1><script type="math/tex; mode=display">
+ \frac{\text{d}^2y}{\text{d}x^2} +P(x)\frac{\text{d}y}{\text{d}x} + Q(x)y = f(x)</script><p>$f(x)$为$0$则为齐次方程</p>
+<script type="math/tex; mode=display">
+y=C_1y_1(x)+C_2y_2(x)</script><p>为方程的通解($y_1,y_2$线性无关)</p>
+<h2 id="线性相关"><a href="#线性相关" class="headerlink" title="线性相关"></a>线性相关</h2><script type="math/tex; mode=display">
+k_{1} y_{1}(x)+k_{2} y_{2}(x)+\cdots+k_{n} y_{n}(x) \equiv 0</script><p>其中$k_i$不全为$0$，则在区间上线性相关</p>
+<p>两个非零函数</p>
+<script type="math/tex; mode=display">
+y_1:y_2=C(\ne0)</script><h2 id="常数变易"><a href="#常数变易" class="headerlink" title="常数变易"></a>常数变易</h2><script type="math/tex; mode=display">
+y=C u(x) \to y=v(x)u(x)</script><h2 id="非齐次"><a href="#非齐次" class="headerlink" title="非齐次"></a>非齐次</h2><script type="math/tex; mode=display">
+y=C_1y_1(x)+C_2y_2(x)+y^*(x)</script><p>$y^*(x)$为非齐次的特解</p>
+<h3 id="形式1"><a href="#形式1" class="headerlink" title="形式1"></a>形式1</h3><script type="math/tex; mode=display">
+y''+py'+qy=f(x)\\
+f(x)=P_m(x)e^{\lambda x}</script><ul>
+<li><p>$\lambda$为不为特征方程的根</p>
+<p>特解为</p>
+<script type="math/tex; mode=display">
+Q_m(x)e^{\lambda x}</script></li>
+<li><p>$\lambda$为为特征方程的单根</p>
+<script type="math/tex; mode=display">
+xQ_m(x)e^{\lambda x}</script></li>
+<li><p>$\lambda$为为特征方程的重根</p>
+<script type="math/tex; mode=display">
+x^2Q_m(x)e^{\lambda x}</script></li>
+</ul>
+<h3 id="形式2"><a href="#形式2" class="headerlink" title="形式2"></a>形式2</h3><script type="math/tex; mode=display">
+y''+py'+qy=f(x)\\
+f(x)=[P_l(x)\cos\omega x+P_n(x)\cos\omega x]e^{\lambda x}</script><p>特解为</p>
+<script type="math/tex; mode=display">
+y^*=x^ke^{\lambda x}[R_m^{(1)}(x)\cos\omega x+R_m^{(2)}(x)\cos\omega x]\\
+m=\max\{l,n\}</script><p>其中$k$按照$x=\lambda +\text{i}\omega$是否为特征方程的根等取$0,1$</p>
+<h2 id="解的叠加"><a href="#解的叠加" class="headerlink" title="解的叠加"></a>解的叠加</h2><p>右端的函数可以拆分后分别求特解再叠加</p>
+<h1 id="欧拉方程"><a href="#欧拉方程" class="headerlink" title="欧拉方程"></a>欧拉方程</h1><script type="math/tex; mode=display">
+x^3y'''+3x^2y''-2xy'+2y=0</script><p>令$x=e^t$</p>
+<script type="math/tex; mode=display">
+D=\frac{\text{d}}{\text{d}t}\\
+x^ny^{(n)}=D(D-1)\cdots(D-n+1)y</script><p>其中$D^n$称为$n$阶微分算子</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/12/01/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%83%AD%E5%AD%A6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/12/01/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%83%AD%E5%AD%A6/" itemprop="url">大一/物理/热学</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-12-01T18:53:52+08:00">
+                2022-12-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><h2 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h2><p>热力学系统由大量微观粒子组成的系统，与系统发生相互作用的外部环境称为外界</p>
+<ul>
+<li>孤立系统：与外界没有物质和能量的交换</li>
+<li>封闭系统：没有物质的交换，只有能量交换</li>
+<li>开放系统：同时有物质和能量的交换</li>
+</ul>
+<h3 id="状态参量"><a href="#状态参量" class="headerlink" title="状态参量"></a>状态参量</h3><p>分为宏观量和微观量</p>
+<p>每个分子所具有的$v,m_p$为微观量</p>
+<p>气体的宏观状态如$V,p$为宏观量</p>
+<p>其中又分为广延量和强度量，如热量是广延量，温度是强度量</p>
+<h4 id="重要单位"><a href="#重要单位" class="headerlink" title="重要单位"></a>重要单位</h4><script type="math/tex; mode=display">
+1 \rm L=10^{-3}m^3\\
+1atm=1.013\times10^5Pa=760mmHg</script><h2 id="热平衡"><a href="#热平衡" class="headerlink" title="热平衡"></a>热平衡</h2><p>两者之间没有热量的交换，冷热程度不发生改变</p>
+<h2 id="平衡态"><a href="#平衡态" class="headerlink" title="平衡态"></a>平衡态</h2><p>在经过足够长的时间后系统的状态参量不随时间改变，则称该系统达到了平衡态</p>
+<h3 id="弛豫时间"><a href="#弛豫时间" class="headerlink" title="弛豫时间"></a>弛豫时间</h3><p>从初始状态到达到平衡态所需要的时间</p>
+<p>若弛豫时间很短则可近似看作平衡态</p>
+<h2 id="准静态过程"><a href="#准静态过程" class="headerlink" title="准静态过程"></a>准静态过程</h2><p>过程足够缓慢以至于每一个中间态都可以看作平衡态</p>
+<h2 id="温标"><a href="#温标" class="headerlink" title="温标"></a>温标</h2><p>温度的数值表示法</p>
+<p>摄氏温标，用$t$表示，单位为$^\circ \text{C}$</p>
+<p>热力学温标，用$T$表示，开尔文温标，单位为$\text{K}$</p>
+<script type="math/tex; mode=display">
+T/\text{K}=273.15+t/^\circ\text{C}</script><h1 id="热力学定律"><a href="#热力学定律" class="headerlink" title="热力学定律"></a>热力学定律</h1><h2 id="第零定律"><a href="#第零定律" class="headerlink" title="第零定律"></a>第零定律</h2><p>若两个系统分别与第三个系统处于热平衡，则这两个系统必然也处于热平衡</p>
+<h2 id="第一定律"><a href="#第一定律" class="headerlink" title="第一定律"></a>第一定律</h2><p>只要初末两个状态为平衡态</p>
+<script type="math/tex; mode=display">
+E=f(T)
+\\\Delta E= \Delta U=W+Q</script><p>实际上对系统做功和传递热量是等效的，焦耳实验测出了热功当量</p>
+<p>我们需要注意做功和传热是过程量和具体过程有关</p>
+<p>内能的变化量是状态量只和始末状态有关（处于平衡态）</p>
+<script type="math/tex; mode=display">
+J=\frac{2mgh}Q=4.18\text{J}\cdot\text{cal}^{-1}</script><p>对于微小过程(准静态)，有</p>
+<script type="math/tex; mode=display">
+\text{d}E=\text{d}W+\text{d}Q\\
+\Delta E=-\int_{V_1}^{V_2}{p\text{d}V}+\int_{T_1}^{T_2}\frac mMC_m\text{d}T</script><p>其中$C_m=cM$为摩尔热容，对于特殊过程，引入自由度</p>
+<ul>
+<li>$i=3$单原子分子</li>
+<li>$i=5$双原子分子</li>
+<li>$i=6$多原子分子 </li>
+</ul>
+<script type="math/tex; mode=display">
+V=\text{const}:\\
+C_{V,m}=\frac i2R
+\\
+p=\text{const}:\\
+C_{p,m}=\left(\frac i2+1\right)R</script><p>从而有迈耶公式</p>
+<script type="math/tex; mode=display">
+C_{V,m}+R=C_{p,m}</script><p>$R$在数值上等于一摩尔理想气体等压过程升高$1\text{K}$对外做的功</p>
+<p>从定容推出的内能表达式适用于所有过程</p>
+<script type="math/tex; mode=display">
+E=\frac mMC_{V,m}T=\frac mM\frac i2RT</script><h1 id="理想气体物态方程"><a href="#理想气体物态方程" class="headerlink" title="理想气体物态方程"></a>理想气体物态方程</h1><script type="math/tex; mode=display">
+\frac{p_1V_1}{T_1}=\frac{p_2V_2}{T_2}</script><p>标准状态</p>
+<script type="math/tex; mode=display">
+p_0=1 \text{atm},T_0=273.15\text{K},V_m=22.4\text{L/mol}</script><script type="math/tex; mode=display">
+\frac{p_1V_1}{T_1}=\frac mM \frac{p_0V_m}{T_0}=R\frac mM</script><script type="math/tex; mode=display">
+pV=\frac mM  RT</script><p>这就是理想气体状态方程，$R=8.31$为摩尔气体常量</p>
+<script type="math/tex; mode=display">
+p=\frac NV\frac R{N_A}T=nkT</script><p>其中$k=R/N_A$称为玻尔兹曼常量，此式多用于计算分子数密度</p>
+<p>带入标况可得</p>
+<script type="math/tex; mode=display">
+n=2.69\times{10}^{25}\rm m^{-3}</script><p>这个量被称为洛施密特常量</p>
+<h1 id="热力学过程"><a href="#热力学过程" class="headerlink" title="热力学过程"></a>热力学过程</h1><h2 id="等体过程"><a href="#等体过程" class="headerlink" title="等体过程"></a>等体过程</h2><script type="math/tex; mode=display">
+Q_V=\Delta E=\frac mM\frac i2R\Delta T</script><h2 id="等压过程"><a href="#等压过程" class="headerlink" title="等压过程"></a>等压过程</h2><script type="math/tex; mode=display">
+\Delta E=p(V_1-V_2)+\frac mM\left(\frac i2+1\right)R\Delta T</script><h2 id="等温过程"><a href="#等温过程" class="headerlink" title="等温过程"></a>等温过程</h2><script type="math/tex; mode=display">
+p_1V_1=p_2V_2\\
+W=\frac mMRT\ln\frac{V_1}{V_2}=\frac mMRT\ln\frac{p_2}{p_1}=Q_T</script><p>其中摩尔定温热容</p>
+<script type="math/tex; mode=display">
+C_{T,m}=\frac Mm\left(\frac{\text{d}Q}{\text{d}T}\right)_T\to\infty</script><h2 id="绝热过程"><a href="#绝热过程" class="headerlink" title="绝热过程"></a>绝热过程</h2><script type="math/tex; mode=display">
+\Delta E=W,\text{d}E=\frac mMC_V\text{d}T\\
+\text{d}W=-p\text{d}V</script><p>引入绝热指数(摩尔热容比)</p>
+<script type="math/tex; mode=display">
+\gamma=\frac{C_{p,m}}{C_{V,m}}=\frac{i+2}i</script><p>得到绝热方程</p>
+<script type="math/tex; mode=display">
+pV^{\gamma}=C_1\\
+TV^{\gamma-1}=C_2\\
+\frac{T^{\gamma}}{p^{\gamma-1}}=C_3</script><script type="math/tex; mode=display">
+W=\frac1{\gamma-1}(p_2V_2-p_1V_1)=C_V(T_2-T_1)</script><p>在交点处，绝热过程的线更加陡</p>
+<h2 id="多方过程"><a href="#多方过程" class="headerlink" title="多方过程"></a>多方过程</h2><script type="math/tex; mode=display">
+pV^n=C</script><p>做功把绝热过程中的$\gamma\to n$即可，注意</p>
+<script type="math/tex; mode=display">
+C_{n,m}=C_{V,m}+\frac R{1-n}</script><h1 id="循环过程"><a href="#循环过程" class="headerlink" title="循环过程"></a>循环过程</h1><p> 某个状态出发经过一系列过程又回到初始状态的过程</p>
+<p>顺时针为正，逆时针为负</p>
+<p>正循环$W’&gt;0$，逆循环相反</p>
+<h2 id="热机"><a href="#热机" class="headerlink" title="热机"></a>热机</h2><p>吸热为$Q_1$，放热为$Q_2$</p>
+<p><img src="/2022/12/01/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%83%AD%E5%AD%A6/image-20221210192900311.png" alt="image-20221210192900311"></p>
+<script type="math/tex; mode=display">
+\eta=\frac{W}{Q_1}=\frac{Q_1-Q_2}{Q_1}=1-\frac{Q_2}{Q_1}</script><h2 id="制冷机"><a href="#制冷机" class="headerlink" title="制冷机"></a>制冷机</h2><p><img src="/2022/12/01/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%83%AD%E5%AD%A6/image-20221210194905948.png" alt="image-20221210194905948"></p>
+<script type="math/tex; mode=display">
+e=\frac{Q_2}{W}=\frac{Q_2}{Q_1'-Q_2}</script><h2 id="卡诺循环"><a href="#卡诺循环" class="headerlink" title="卡诺循环"></a>卡诺循环</h2><p><img src="/2022/12/01/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%83%AD%E5%AD%A6/image-20221210200415903.png" alt="image-20221210200415903"></p>
+<script type="math/tex; mode=display">
+\eta=\frac{T_{1}-T_{2}}{T_{1}}=1-\frac{T_{2}}{T_{1}}</script><script type="math/tex; mode=display">
+\varepsilon=\frac{Q_{2}}{W}=\frac{Q_{2}}{Q_{1}-Q_{2}}=\frac{T_{2}}{T_{1}-T_{2}}</script><h1 id="气体动理论"><a href="#气体动理论" class="headerlink" title="气体动理论"></a>气体动理论</h1><p>分子与分子之间存在着一定的间距</p>
+<p>分子之间存在着相互作用力，注意$r_0$</p>
+<p>分子在不断的做无谓的运动，布朗运动</p>
+<p>利用统计学方法来研究气体</p>
+<h2 id="分布"><a href="#分布" class="headerlink" title="分布"></a>分布</h2><p>速率分布函数</p>
+<script type="math/tex; mode=display">
+f(v)=\lim_{\Delta v\to0}\frac{\Delta N}{N \Delta v}\\
+\int_0^{+\infty}f(v)\text{d}v=1</script><p>只有积分是具有实际意义的，单个值不具有任何意义</p>
+<h2 id="平均速率"><a href="#平均速率" class="headerlink" title="平均速率"></a>平均速率</h2><script type="math/tex; mode=display">
+\overline{v}=\frac{\int v\text{d}N}{N}=\int vf(v)\text{d}v\\=\sqrt{\frac{8RT}{\pi M}}=1.6\sqrt{\frac{RT}{ M}}</script><h2 id="方均根速率"><a href="#方均根速率" class="headerlink" title="方均根速率"></a>方均根速率</h2><script type="math/tex; mode=display">
+\overline{v^2}=\frac{\int v^2\text{d}N}{N}=\int v^2f(v)\text{d}\\\sqrt{\overline{v^2}}=\sqrt{\frac{3RT}{ M}}=1.73\sqrt{\frac{RT}{ M}}</script><h2 id="最概然速率"><a href="#最概然速率" class="headerlink" title="最概然速率"></a>最概然速率</h2><script type="math/tex; mode=display">
+v_p=\sqrt{\frac{2RT}{ M}}=1.41\sqrt{\frac{RT}{ M}}</script><h2 id="气体压强"><a href="#气体压强" class="headerlink" title="气体压强"></a>气体压强</h2><script type="math/tex; mode=display">
+p=\frac23n\overline\varepsilon_k \\
+\overline\varepsilon_k=\frac12m_0\overline{v^2}=\frac32kT\\
+\Rightarrow p=nkT</script>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/11/12/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E6%8C%AF%E5%8A%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1534,777 +2413,11 @@ f(x)=\cos x,\frac{\cos (\tan x)-\cos x}{\tan x-x}=f'(\xi),\xi\in(x,\tan  x)\\
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/10/04/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E7%AD%89%E4%BB%B7%E5%8F%98%E5%BD%A2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/10/04/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E7%AD%89%E4%BB%B7%E5%8F%98%E5%BD%A2/" itemprop="url">大一/高数/等价变形</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-10-04T23:43:58+08:00">
-                2022-10-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <script type="math/tex; mode=display">
-x^2-a=0\Rightarrow x={\color{red}\pm a(a\ge0)}\\
-\sqrt{1-\cos^2x}=|\sin x|\\
-\sqrt{1-\cos x}\sim\frac {\sqrt{2}}{2} {\color{red}{|x|}}\\
-(\sqrt{a})^2=a,(\sqrt{a^2})=|a|\\
-\sqrt{\frac AB},讨论A,B正负\\
-f(x)>x\Rightarrow\begin{cases}\frac{f(x)}x>1,x>0\\
-\frac{f(x)}x<1,x<0\\
-f(0)>0,x=0
-\end{cases}</script><script type="math/tex; mode=display">
-(a+b+c)^{2}=a^{2}+b^{2}+c^{2}+2 a b+2 b c+2 c a \\
- a^{2}+b^{2}+c^{2}+a b+b c+c a=\frac{1}{2}\left[(a+b)^{2}+(b+c)^{2}+(c+a)^{2}\right] \\
-a^{3}-b^{3}=(a-b)\left(a^{2}+a b+b^{2}\right) \\
- x^{n}-y^{n}=(x-y)\left(x^{n-1}+x^{n-2} y+\ldots+x y^{n-2}+y^{n-1}\right) \\
-  x^{2 n+1}+y^{2 n+1}=(x+y)\left(x^{2 n}-x^{2 n-1} y+x^{2 n-2} y^{2}-\ldots-x y^{2 n-1}+y^{2 n}\right)  \\=(x+y) \cdot \sum_{i=0}^{2 n}\left[x^{2 n-i}(-y)^{i}\right] \\
- x y+n x+m y+m n=(x+m)(y+n) \\
-  x y z+x y+y z+z x+(x+y+z)+1=(x+1)(y+1)(z+1) \\
-  x^{2} y+y^{2} z+z^{2} x+z^{2} y+y^{2} x+x^{2} z+2 x y z=(x+y)(y+z)(z+x) \\
-  x^{2} y+y^{2} z+z^{2} x+z^{2} y+y^{2} x+x^{2} z+3 x y z=(x+y+z)(x y+y z+z x) \\
-  x^{3}+y^{3}+z^{3}-3 x y z=(x+y+z)\left(x^{2}+y^{2}+z^{2}-x y-y z-z x\right) \\  =(x+y+z) \cdot \frac{1}{2}\left[(x-y)^{2}+(y-z)^{2}+(z-x)^{2}\right] \\</script><script type="math/tex; mode=display">
-e=\sum_{i=0}^\infty \frac1{i!}\\
-x=e^{\ln x}=\ln e^x</script><script type="math/tex; mode=display">
-x+\sqrt{x^2+1}=C\\
-\frac 1C=\sqrt{x^2+1}-x</script><script type="math/tex; mode=display">
-a^2+b^2=c^2\\
-3,4,5\quad5,12,13\\
-8,15,17\quad7,24,25\\9,40,41</script>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/10/02/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E5%8A%9B%E5%AD%A6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/10/02/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E5%8A%9B%E5%AD%A6/" itemprop="url">大一/物理/力学</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-10-02T22:42:33+08:00">
-                2022-10-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="牛顿定律"><a href="#牛顿定律" class="headerlink" title="牛顿定律"></a>牛顿定律</h1><h2 id="第一定律"><a href="#第一定律" class="headerlink" title="第一定律"></a>第一定律</h2><p>若没有外力来改变物体的运·动状态，任何物体都将保持静止或做匀速直线运动的状态</p>
-<script type="math/tex; mode=display">
-\boldsymbol{v}=\vec C(\boldsymbol{F}=0\Rightarrow\boldsymbol{a}=0)</script><p>其又称为惯性定律，指出力是改变物体运动状态的原因</p>
-<h2 id="第二定律"><a href="#第二定律" class="headerlink" title="第二定律"></a>第二定律</h2><script type="math/tex; mode=display">
-\boldsymbol{F}=k\frac{\text{d}\boldsymbol{p}}{\text{d}t}</script><p>在$\text{SI(International System of Unit)}$中，$k=1$</p>
-<p>一般情况下</p>
-<script type="math/tex; mode=display">
-\boldsymbol{F}=M\boldsymbol{a}(\frac{\text{d}M}{\text{d}t}=0)</script><h2 id="第三定律"><a href="#第三定律" class="headerlink" title="第三定律"></a>第三定律</h2><p>当两个物体相互作用时，相互作用力</p>
-<script type="math/tex; mode=display">
-\boldsymbol{F}_{12}=-\boldsymbol{F}_{21}</script><h2 id="非惯性系"><a href="#非惯性系" class="headerlink" title="非惯性系"></a>非惯性系</h2><p>对一个以加速度$\boldsymbol{a}$做加速运动的参考系，牛顿定律不成立</p>
-<p>若该系中物体受到一个$-m\boldsymbol{a}$的惯性力，则成立</p>
-<p>生活中的超失重现象可由此解释</p>
-<h1 id="动量守恒定律"><a href="#动量守恒定律" class="headerlink" title="动量守恒定律"></a>动量守恒定律</h1><p>若$\sum F_{\text{external}}=0 $或更充分的不受外力</p>
-<p>也可$\sum F<em>{\text{external}}\ll\sum F</em>{\text{internal}}$</p>
-<script type="math/tex; mode=display">
-\boldsymbol{p}_1+\boldsymbol{p}_2=\boldsymbol{p}'_1+\boldsymbol{p}'_2\\
-m\boldsymbol{v}_1+M\boldsymbol{v}_2=m\boldsymbol{v}'_1+M\boldsymbol{v}_2'</script><p>移项可得$\Delta\boldsymbol{p}_1+\Delta\boldsymbol{p}_2=0,\Delta m\boldsymbol{v}_1+M\Delta\boldsymbol{v}_2=0$</p>
-<p>由牛顿第三定律也可推出</p>
-<h2 id="动量定理"><a href="#动量定理" class="headerlink" title="动量定理"></a>动量定理</h2><p>冲量等于动量变化量</p>
-<script type="math/tex; mode=display">
-\int_{t_1}^{t_2}\boldsymbol{F}\text{d}t=\boldsymbol{p}_2-\boldsymbol{p}_1</script><p>由积分中值公式</p>
-<script type="math/tex; mode=display">
-\overline{\boldsymbol{F}}=\frac{\displaystyle\int_{t_1}^{t_2}\boldsymbol{F}\text{d}t}{t_2-t_1}=\frac{\boldsymbol{p}_2-\boldsymbol{p}_1}{t_2-t_1}\\
-\Rightarrow \boldsymbol{I}=\int_{t_1}^{t_2}\boldsymbol{F}\text{d}t=\overline{\boldsymbol{F}}(t_2-t_1)</script><p>对于质点组，我们可以对每一个物体运用再求和</p>
-<p>容易看出合外力的冲量等于总动量的变化量</p>
-<p>并且$\sum F_{\text{internal}}=0$，故内力不能改变总动量</p>
-<h1 id="质心"><a href="#质心" class="headerlink" title="质心"></a>质心</h1><script type="math/tex; mode=display">
-\boldsymbol{r}_c=\frac{ \sum m_i\boldsymbol{r}_i}{\sum m_i}</script><p>一般我们为了计算，将其分解到三个轴的方向上</p>
-<p>对于连续的物体，</p>
-<script type="math/tex; mode=display">
-\boldsymbol{r}_c=\frac{ \displaystyle\int_V \boldsymbol{r}_i\text{d}m}{M}</script><p>对两边求导得</p>
-<script type="math/tex; mode=display">
-\boldsymbol{a}_c/\boldsymbol{v}_c=\frac{\sum m_i\boldsymbol{a}_c/\boldsymbol{v}_i}{\sum m_i}</script><p>前提是质量不变</p>
-<script type="math/tex; mode=display">
- \boldsymbol{p}=\sum m_iv_i\\
-\sum\boldsymbol{F}=\frac{\text{d}\boldsymbol{p}}{\text{d}t}=M\boldsymbol{a}_c</script><p>利用等效替代的思想可以很容易理解质心</p>
-<h2 id="质心与动量守恒"><a href="#质心与动量守恒" class="headerlink" title="质心与动量守恒"></a>质心与动量守恒</h2><p><img src="/2022/10/02/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E5%8A%9B%E5%AD%A6/image-20221006170413428.png" alt="image-20221006170413428"></p>
-<p>初始时，质心的运动速度</p>
-<script type="math/tex; mode=display">
-v_c=\frac{M_1v_1+M_2\cdot0 }{M_1+M_2}=\frac{M_1v_1 }{M_1+M_2}</script><p>由动量守恒得到相同的结果</p>
-<p>从质心看，两个物体组成的系统运动状态保持不变</p>
-<p>考虑碰撞前后动能的比值</p>
-<script type="math/tex; mode=display">
-\frac{E_{k2}}{K_{k1}}=\frac{M_1 }{M_1+M_2}</script><h2 id="质心参考系"><a href="#质心参考系" class="headerlink" title="质心参考系"></a>质心参考系</h2><script type="math/tex; mode=display">
-v_c=\frac{M_1v_1 }{M_1+M_2}\\
-u_1=v_1-v_c=\frac{M_2v_1 }{M_1+M_2}\\
-u_2=0-v_c=-\frac{M_1v_1 }{M_1+M_2}</script><script type="math/tex; mode=display">
-M_1u_1+M_2u_2=0</script><p>在质心参考系中，两动量一直等大反向</p>
-<script type="math/tex; mode=display">
-v_{AB}=v_{AS}-v_{BS}</script><p>推广</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-\boldsymbol{P}^{\prime} &=\sum_{i=1}^{N} m_{i} \boldsymbol{v}_{i}^{\prime} \\
-&=\sum_{i=1}^{N} m_{i}\left(\boldsymbol{v}_{i}-\boldsymbol{v}_{C}\right) \\
-&=\sum_{i=1}^{N} m_{i} \boldsymbol{v}_{i}-\sum_{i=1}^{N} m_{i} \boldsymbol{v}_{C} \\
-&=\sum_{i=1}^{N} m_{i} \boldsymbol{v}_{i}-M \boldsymbol{v}_{C} \\
-&=\boldsymbol{P}-\boldsymbol{P}_{C} \\
-&=\mathbf{0}
-\end{aligned}</script><p>质心系是一个零动量系 </p>
-<h3 id="柯尼希定理"><a href="#柯尼希定理" class="headerlink" title="柯尼希定理"></a><strong>柯尼希定理</strong></h3><p>对于平动系$A$和质心系$S$，有$v<em>{cA}=v</em>{SA}=v_c$</p>
-<p>对于动能，对速度</p>
-<script type="math/tex; mode=display">
-v_i'=v_i-v_c\\
-\Rightarrow E_{kS}=E_{kA}-\frac12Mv_c^2</script><p>移项</p>
-<script type="math/tex; mode=display">
-E_{kA}=E_{kS}+\frac12Mv_c^2</script><p>质点系在参考系$A$中的总动能等于质点系在质心系中的动能与质心在参考系$A $中的动能之和</p>
-<p>对前面一动一静作推广</p>
-<p>在不同参考系下，$\boldsymbol{u}<em>{12}=\boldsymbol{v}</em>{1}-\boldsymbol{v}_{2}$</p>
-<p>故在质心参考系下</p>
-<script type="math/tex; mode=display">
-E_{kS}=\frac12\frac{M_1M_2}{M_1+M_2}(\boldsymbol{u}_{12})^2</script><p>记$\mu=\frac{M<em>1M_2}{M_1+M_2}$为折合质量，所以$E</em>{kS}$又称为相对动能</p>
-<h1 id="能量守恒定律"><a href="#能量守恒定律" class="headerlink" title="能量守恒定律"></a>能量守恒定律</h1><h2 id="动能定理"><a href="#动能定理" class="headerlink" title="动能定理"></a>动能定理</h2><p>对某一个质点来说</p>
-<script type="math/tex; mode=display">
-\sum F=m\frac{\text{d}v}{\text{d}t}=m\frac{\text{d}v}{\text{d}x}v</script><p>两端积分得到</p>
-<script type="math/tex; mode=display">
-\int _{x_1}^{x_2}\sum F\text{d}x=\frac12mv_2^2-\frac12mv_1^2</script><p>由此，我们定义$\frac12mv^2$为动能$E_k(\text{kinetic})$</p>
-<p>而$\displaystyle \int _{x_1}^{x_2}\sum F\text{d}x$称为合外力的功$(\text{work})$</p>
-<p>若力和位移有夹角，则乘上$\cos \theta$</p>
-<p>注意方向，如位移从大到小，则指明$\text{d}x$为负值</p>
-<p>对于能量，我们考察重力所做的功</p>
-<p><img src="/2022/10/02/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E5%8A%9B%E5%AD%A6/image-20221003172928452.png" alt="image-20221003172928452"></p>
-<p>重力做了$Mgh$的功从而存在着重力势能，由此我们定义</p>
-<p>物体在地球表面上方$h$处的重力势能为$Mgh$</p>
-<p>势能即为物体能获得动能的能力</p>
-<p>对与某一个过程来说，$W_G=-\Delta E_p=E_1-E_2$</p>
-<p>若$E_2=0$则场力做的功为势能，反之</p>
-<p>从势能零点用外力匀速移动物体所做的功为势能</p>
-<p>注意，势能零点可以随意选取，原则上方便为主</p>
-<p>因此不指定零点的势能是无意义的</p>
-<p>写成微分形式$W_F=F\text{d}x=-\text{d}U$</p>
-<p>故分解后有</p>
-<script type="math/tex; mode=display">
-\boldsymbol{F}_{保}=-\left(\frac{\partial E_p}{\partial x }\boldsymbol{i} +
-\frac{\partial E_p}{\partial y }\boldsymbol{j}
-+\frac{\partial E_p}{\partial z }\boldsymbol{k}
-\right)\\
-\boldsymbol{F}_{保}=-\nabla E_p</script><p>保守力的方向沿势能降低最快的方向</p>
-<h2 id="功能原理"><a href="#功能原理" class="headerlink" title="功能原理"></a>功能原理</h2><p>首先引入保守力的概念</p>
-<p>若一个力为保守力，则它满足以下条件</p>
-<script type="math/tex; mode=display">
-\oint F\text{d}x=0</script><p>即保守力做功与路径无关</p>
-<p>我们引入机械能的概念</p>
-<script type="math/tex; mode=display">
-E_k+E_p=E</script><p>由动能定理和势能和功的关系移项可知</p>
-<p>若一个系统只有保守力做功，则机械能守恒</p>
-<p>对质点组求和，易得</p>
-<script type="math/tex; mode=display">
-W_外+W_{内非保守}=\Delta E</script><h1 id="角动量守恒"><a href="#角动量守恒" class="headerlink" title="角动量守恒"></a>角动量守恒</h1><p>角动量指位矢和动量的叉乘</p>
-<p><img src="/2022/10/02/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E5%8A%9B%E5%AD%A6/image-20221003191058254.png" alt="image-20221003191058254"></p>
-<script type="math/tex; mode=display">
-\boldsymbol{L}=\boldsymbol{r}\times\boldsymbol{p}=
-m\boldsymbol{r}\times\boldsymbol{v}</script><h2 id="力矩"><a href="#力矩" class="headerlink" title="力矩"></a>力矩</h2><p><img src="/2022/10/02/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E5%8A%9B%E5%AD%A6/image-20221003191112784.png" alt="image-20221003191112784"></p>
-<script type="math/tex; mode=display">
-\boldsymbol{M}=\boldsymbol{r}\times\boldsymbol{F}</script><p>对$\boldsymbol{L}$</p>
-<script type="math/tex; mode=display">
-\boldsymbol{M}=\frac{\text{d}\boldsymbol{L}}{\text{d}t}</script><p>对$\boldsymbol{M}=0$，有角动量为一常量，即角动量守恒</p>
-<p>对于有心力，$\sin \theta=0$，故也有角动量守恒</p>
-<p>同时对系统来说内力所产生的力矩之和为$0$</p>
-<h2 id="力矩投影"><a href="#力矩投影" class="headerlink" title="力矩投影"></a>力矩投影</h2><p>我们一般研究力矩在某一轴上的投影，故还要乘上$\cos \gamma$</p>
-<p>因为与轴平行的力产生的力矩与轴垂直</p>
-<p>故只有在与轴垂直的平面内力的投影才有效</p>
-<p>或称为垂直于轴的力$F_\perp $</p>
-<p>有时外力矩的矢量不为$0$</p>
-<p>而系统所受外力在某一轴上代数和为$0$</p>
-<p> 则系统对某轴角动量守恒</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/10/02/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E8%BF%90%E5%8A%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/10/02/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E8%BF%90%E5%8A%A8/" itemprop="url">大一/物理/运动</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-10-02T15:24:53+08:00">
-                2022-10-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="质点运动学"><a href="#质点运动学" class="headerlink" title="质点运动学"></a>质点运动学</h1><h2 id="运动"><a href="#运动" class="headerlink" title="运动"></a>运动</h2><p>质点为一个简化的忽略形状的物体，我们在选定的参考系(被选定的参考物体)下研究这个质点的运动情况</p>
-<h3 id="位矢"><a href="#位矢" class="headerlink" title="位矢"></a>位矢</h3><p>首先选取坐标原点，由此定义位矢$\vec r$</p>
-<script type="math/tex; mode=display">
-\vec r=x \vec i+y\vec j+z\vec k</script><p>位矢的方向由下式确定</p>
-<script type="math/tex; mode=display">
-\cos \alpha=\frac x r,\cos \beta =\frac yr,\cos \gamma=\frac z r</script><p>从而可以写出质点的运动方程</p>
-<script type="math/tex; mode=display">
-\vec{r}=\vec{r}(t)=x(t) \vec i+y(t)\vec j+z(t) \vec k</script><p>对于某一段过程，我们可以很自然地表示位移</p>
-<p><img src="/2022/10/02/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E8%BF%90%E5%8A%A8/image-20221002185221128.png" alt="image-20221002185221128"></p>
-<script type="math/tex; mode=display">
-\Delta\vec r=\vec r(t_2)-\vec r(t_1)</script><p>位移为矢量，$|\Delta\vec r|$表示两点的直线距离</p>
-<h3 id="速度"><a href="#速度" class="headerlink" title="速度"></a>速度</h3><p>为了描述质点运动的快慢，我们引入速度的概念</p>
-<script type="math/tex; mode=display">
-\overline{\vec v}=\frac{\vec r(t_2)-\vec r(t_1)}{t_2-t_1}</script><p>这就是在某一段时间内的平均速度，方向为位移方向</p>
-<p>当两个点$P_1,P_2$不断接近，割线变为切线</p>
-<p>故速度也沿着切线方向</p>
-<script type="math/tex; mode=display">
-\vec v=\lim_{\Delta t\to 0}\frac{\Delta \vec r}{\Delta t}=\frac{\text{d}\vec r}{\text{d}t}</script><p>这也就是瞬间速度，$|\vec v|$被称为速率</p>
-<p>同理可以正交分解，但还可以这样分解</p>
-<p>在极坐标系下，有$r,\theta$两个参数</p>
-<p><img src="/2022/10/02/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E8%BF%90%E5%8A%A8/image-20221002190350293.png" alt="image-20221002190350293"></p>
-<script type="math/tex; mode=display">
-\boldsymbol{v}=\frac{\text{d}r}{\text{d}t}\hat{\boldsymbol{r}}+r\frac{\text{d}\theta}{\text{d}t}\hat{\boldsymbol{\theta}}\\</script><p>其中$\hat{\mathbf{r}}$是径向单位矢量，$\hat{\boldsymbol{\theta}}$是与径向垂直的单位矢量</p>
-<h3 id="加速度"><a href="#加速度" class="headerlink" title="加速度"></a>加速度</h3><p>同理，加速度即为速度对时间的导数，位移的二阶导数</p>
-<script type="math/tex; mode=display">
-\vec a=\frac{\text{d}\vec v}{\text{d}r}=
-\frac{\text{d}^2\vec r}{\text{d}t^2}</script><p>极坐标系下，有</p>
-<script type="math/tex; mode=display">
-\boldsymbol{a}=\left[\frac{\text{d}^{2} r}{\text{d} t^{2}}-r\left(\frac{\text{d} \theta}{\text{d} t}\right)^{2}\right] \hat{\boldsymbol{r}}+\frac{1}{r}\left[\frac{\text{d}}{\text{d} t}\left(r^{2} \frac{\text{d} \theta}{\text{d} t}\right)\right] \hat{\boldsymbol{\theta}}</script><h4 id="自然坐标"><a href="#自然坐标" class="headerlink" title="自然坐标"></a>自然坐标</h4><p>因为速度延切线方向，故</p>
-<script type="math/tex; mode=display">
-\boldsymbol{v}=\frac{\text{d}s}{\text{d}t}\boldsymbol{e}_t</script><p>因为两个因子都是关于时间的函数</p>
-<p><strong><img src="/2022/10/02/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E8%BF%90%E5%8A%A8/image-20221002193555014.png" alt="image-20221002193555014"></strong></p>
-<script type="math/tex; mode=display">
-\Rightarrow\vec a=\frac{\text{d}^2s}{\text{d}t^2}\boldsymbol{e}_t+v\frac{\text{d}\theta}{\text{d}t}\boldsymbol{e}_n</script><p>故可以分解为切向加速度和法向加速度</p>
-<h3 id="关系"><a href="#关系" class="headerlink" title="关系"></a>关系</h3><p>质点的运动方程是描述质点运动的核心</p>
-<p>其中$\vec r,\vec v$被称为运动状态量，加速度$\vec a$被称为状态变化量</p>
-<h2 id="圆周运动"><a href="#圆周运动" class="headerlink" title="圆周运动"></a>圆周运动</h2><h3 id="法向加速度"><a href="#法向加速度" class="headerlink" title="法向加速度"></a>法向加速度</h3><script type="math/tex; mode=display">
-\boldsymbol{a}_n=\frac{v^2}r=\omega^2r=\omega v</script><script type="math/tex; mode=display">
-\boldsymbol{a}=\frac{\text{d}}{\text{d}t}(\boldsymbol{\omega \times \boldsymbol{r}})=\boldsymbol{\alpha \times \boldsymbol{r}}+\boldsymbol{\omega \times \boldsymbol{v}}</script><h3 id="运动方程"><a href="#运动方程" class="headerlink" title="运动方程"></a>运动方程</h3><p>利用圆的参数方程可得</p>
-<script type="math/tex; mode=display">
-\vec r(t)=R\cos(\omega t )\vec i+R\sin(\omega t)\vec i</script><h3 id="重要关系"><a href="#重要关系" class="headerlink" title="重要关系"></a>重要关系</h3><script type="math/tex; mode=display">
-T=\frac1f\\
-\omega=2\pi f</script><h2 id="相对运动"><a href="#相对运动" class="headerlink" title="相对运动"></a>相对运动</h2><script type="math/tex; mode=display">
-\boldsymbol{v}_{ac}=\boldsymbol{v}_{ab}+\boldsymbol{v}_{bc}\\
-\boldsymbol{a}_{ac}=\boldsymbol{a}_{ab}+\boldsymbol{a}_{bc}\\</script><p>推论，当某一加速度为$0$时，保持不变</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/09/29/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%BE%AE%E5%88%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/09/29/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%BE%AE%E5%88%86/" itemprop="url">大一/高数/微分</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-09-29T16:25:30+08:00">
-                2022-09-29
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="微分的概念"><a href="#微分的概念" class="headerlink" title="微分的概念"></a>微分的概念</h1><p>函数值的变化量</p>
-<script type="math/tex; mode=display">
-\Delta y=f(x_0+\Delta x)-f(x_0)</script><p>对于复杂函数，$\Delta y$比较复杂</p>
-<p>故我们将变化量线性化，定义为微分</p>
-<p>若函数在某邻域有定义</p>
-<p>$\Delta y=A\Delta x+o(\Delta x),\Delta x\to0$</p>
-<p>则称$f(x)$在该领域可微，$\Delta y$的线性主部$A\Delta x$</p>
-<p>为函数的微分，记为$\text{d} y|_{x=x_0}(\Delta x=\text{d} x)$</p>
-<h2 id="与导数的关系"><a href="#与导数的关系" class="headerlink" title="与导数的关系"></a>与导数的关系</h2><p>可导$\Leftrightarrow$可微$\Rightarrow A=f’(x_0)$</p>
-<h2 id="微分形式不变性"><a href="#微分形式不变性" class="headerlink" title="微分形式不变性"></a>微分形式不变性</h2><script type="math/tex; mode=display">
-\text{d} y=f'(u)\text{d} u</script><p>不论$u$是自变量还是函数都成立</p>
-<h1 id="微分中值定理"><a href="#微分中值定理" class="headerlink" title="微分中值定理"></a>微分中值定理</h1><h2 id="费马引理"><a href="#费马引理" class="headerlink" title="费马引理"></a>费马引理</h2><p>若函数在某邻域$U(x_0)$有定义，且在$x_0$处可导，则若对于任意$x\in U(x_0)$，有 $f(x)\le f(x_0)$</p>
-<script type="math/tex; mode=display">
-\Rightarrow f'(x_0)=0</script><p>利用极限的保号性和夹逼</p>
-<h2 id="罗尔定理"><a href="#罗尔定理" class="headerlink" title="罗尔定理"></a>罗尔定理</h2><p>若函数在闭区间$[a,b]$上连续，在开区间$(a,b)$上可导</p>
-<p>若有$f(a)=f(b)$则</p>
-<script type="math/tex; mode=display">
-\exists \xi\in(a,b)\quad\text{s.t.}f'(\xi)=0</script><h2 id="拉格朗日中值定理"><a href="#拉格朗日中值定理" class="headerlink" title="拉格朗日中值定理"></a>拉格朗日中值定理</h2><p>若函数在闭区间$[a,b]$上连续，在开区间$(a,b)$上可导</p>
-<p>则有</p>
-<script type="math/tex; mode=display">
-\exists \xi\in(a,b)\quad\text{s.t.}f'(\xi)=\frac {f(b)-f(a)}{b-a}</script><h3 id="有限增量定理"><a href="#有限增量定理" class="headerlink" title="有限增量定理"></a>有限增量定理</h3><p>若函数在闭区间$[x,x+\Delta x]$上连续，在开区间$(x,x+\Delta x)$上可导，则</p>
-<script type="math/tex; mode=display">
-\exists \xi\in(a,b)\\ \text{s.t.}f'(x+\theta \Delta x)\Delta x=f(x+\Delta x)-f(x)</script><h3 id="推论"><a href="#推论" class="headerlink" title="推论"></a>推论</h3><p>若$f(x)$在区间$I$上的导数恒为$0$，则在该区间上为常函数</p>
-<h2 id="柯西中值定理"><a href="#柯西中值定理" class="headerlink" title="柯西中值定理"></a>柯西中值定理</h2><p>若函数$f(x),g(x)$在闭区间$[a,b]$上连续，在开区间$(a,b)$上可导，且$g’(x)\ne0$</p>
-<p>则有</p>
-<script type="math/tex; mode=display">
-\exists \xi\in(a,b)\\ \text{s.t.} 
-\frac{f'(\xi)}{g'(\xi)}=\frac {f(b)-f(a)}{g(b)-g(a)}</script><h3 id="达布中值定理"><a href="#达布中值定理" class="headerlink" title="达布中值定理"></a>达布中值定理</h3><p>$f(x)$在$[a,b]$上连续</p>
-<p>则导函数具有介值性，即可以取到$f’(a)$和$f’(b)$之间的一切值</p>
-<p>同时导函数不具有第一类间断点3</p>
-<h1 id="泰勒公式"><a href="#泰勒公式" class="headerlink" title="泰勒公式"></a>泰勒公式</h1><p>若函数$f(x)$在$I=(a,b),x_0\in I$处有$n(n\ge1)$阶导数，则</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-f(x)&= f\left(x_{0}\right)+\frac{f^{\prime}\left(x_{0}\right)}{1 !}\left(x-x_{0}\right)+\frac{f^{\prime \prime}\left(x_{0}\right)}{2 !}\left(x-x_{0}\right)^{2}+\cdots \\
-&+\frac{f^{(n)}\left(x_{0}\right)}{n !}\left(x-x_{0}\right)^{n}+o\left(\left(x-x_{0}\right)^{n}\right)\\
-&=\sum_{i=0}^n\frac{f^{(n)}\left(x_{0}\right)}{n !}\left(x-x_{0}\right)^{n}+o\left(\left(x-x_{0}\right)^{n}\right)
-\end{aligned}</script><p>$ o\left(\left(x-x_{0}\right)^{n}\right) $为佩亚诺余项，在某邻域上使用</p>
-<h2 id="泰勒中值定理"><a href="#泰勒中值定理" class="headerlink" title="泰勒中值定理"></a>泰勒中值定理</h2><p>若函数$f(x)$在$I=(a,b),x_0\in I$处有$n+4(n\ge1)$阶导数，则</p>
-<script type="math/tex; mode=display">
-f(x)=\sum_{i=0}^n\frac{f^{(n)}\left(x_{0}\right)}{n !}\left(x-x_{0}\right)^{n}+R_n(x)\\
-R_n(x)=\frac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)^{n+1}\\
-\xi \in(x_0,x)</script><p> $R_n(x)$称为拉格朗日余项，在区间上使用</p>
-<h3 id="麦克劳林公式"><a href="#麦克劳林公式" class="headerlink" title="麦克劳林公式"></a>麦克劳林公式</h3><p>若$x_0=0,\xi =\theta x$</p>
-<script type="math/tex; mode=display">
-\begin{aligned}
-f(x)&=f(0)+f^{\prime}(0) x+\frac{f^{\prime \prime}(0)}{2 !} x^{2}+ \\
-\quad &\cdots+\frac{f^{(n)}(0)}{n !} x^{n}+\frac{f^{(n+1)}(\theta x)}{(n+1) !} x^{n+1} \quad(0<\theta<1) .
-\end{aligned}</script><p>$|f^{(n+1)}(\xi)|\le M$则有</p>
-<script type="math/tex; mode=display">
-|R_n(x)|\le\frac{M}{(n+1)!}|x|^{n+1}</script><p>例</p>
-<script type="math/tex; mode=display">
-e^x=1+x+\frac1{2!}x^2+\cdots+\frac{e^{\theta x}}{(n+1)!}|x|^{n+1}</script><h3 id="常用"><a href="#常用" class="headerlink" title="常用"></a>常用</h3><script type="math/tex; mode=display">
-\sin x = x - \frac{1}{3!} x^3 + \frac{1}{5!} x^5 - \frac{1}{7!} x^7 \ldots
-\qquad (x \in \mathbb R)\\
-\cos x = 1 - \frac{1}{2!} x^2 + \frac{1}{4!} x^4 -\frac{1}{6!} x^6 \ldots
-\qquad (x \in \mathbb R)\\
-\mathrm{e} ^x =1 + x + \frac{1}{2!} x^2 + \frac{1}{3!} x^3  \ldots
-\qquad (x \in \mathbb R)\\
-\ln\left(1+x\right)  = x - \frac12 x^2 + \frac13 x^3 - \frac14 x^4 \ldots
-\qquad (-1 < x < 1)\\
-\frac{1}{1 \pm x} = 1 \mp x + x^2 \mp x^3 + x^4 \ldots
-\qquad (-1 < x < 1)\\
-\sqrt{1\pm x} = 1 \pm \frac12 x - \frac18 x^2 \pm \frac{1}{16} x^3 - \frac{5}{128}x^4 \ldots
-\qquad (-1 < x < 1)\\
-\tan x=x+\frac{x^3}3+\frac{2}{15}x^5\ldots\\
-(1+x)^\alpha=1+\alpha x+\frac{\alpha(\alpha-1)}2 x^2+\cdots+\frac{\alpha(\alpha-1)\cdots(\alpha-n+1)}{n!}x^n\ldots</script><p>拓展</p>
-<script type="math/tex; mode=display">
-\frac1{1+x^2}=\sum_{i=0}^n(-1)^ix^{2i}+o(x^{2n+1})\\
-\begin{aligned}
-\arctan x&=\sum_{i=0}^{2n}\frac{f ^{(i)}(0)}
-{i!}x^{i}\\&=\sum_{i=0}^n\frac{1}{(2i+1)!}\left.\left(\frac1{x^2+1}\right)^{(2i)}\right|_{x=0}x^{2i+1}\\
-\\&=\int \frac1{1+x^2}\text{d}x\\
-&=\sum_{i=0}^n\frac{(-1)^i}{2i+1} x^{2i+1}+ o(x^{2n+1})\end{aligned}</script><p>泰勒展开没有普遍规律，但关键看余项的阶数，能够消掉余项就行</p>
-<p>分式先看哪个好确定阶数，再上下同阶</p>
-<h1 id="洛必达法则"><a href="#洛必达法则" class="headerlink" title="洛必达法则"></a>洛必达法则</h1><h2 id="frac00-型"><a href="#frac00-型" class="headerlink" title="$\frac00$型"></a>$\frac00$型</h2><ul>
-<li><script type="math/tex; mode=display">
-\lim _{x \rightarrow a} f(x)=\lim _{x \rightarrow a} g(x)=0</script></li>
-<li><script type="math/tex; mode=display">
-g^{\prime}(x) \neq 0, \forall x \in \mathring{U}(a, \delta),f(x),g(x)可导</script></li>
-<li><script type="math/tex; mode=display">
-\lim _{x \rightarrow a} \frac{f^{\prime}(x)}{g^{\prime}(x)}=l(l \text { 为有限数或 } \pm \infty)</script></li>
-</ul>
-<script type="math/tex; mode=display">
-\lim _{x \rightarrow a} \frac{f(x)}{g(x)}=\lim _{x \rightarrow a} \frac{f^{\prime}(x)}{g^{\prime}(x)}=l</script><p> 洛必达法则为后验的，上下求导极限不存在而不能说明原极限不存在</p>
-<h2 id="frac-infty-infty-型"><a href="#frac-infty-infty-型" class="headerlink" title="$\frac\infty\infty$型"></a>$\frac\infty\infty$型</h2><ul>
-<li><script type="math/tex; mode=display">
-\lim _{x \rightarrow a} f(x)=\lim _{x \rightarrow a} g(x)=\infty</script></li>
-<li><script type="math/tex; mode=display">
-g^{\prime}(x) \neq 0,\forall x \in \mathring{U}(a, \delta),f(x),g(x)可导</script></li>
-<li><script type="math/tex; mode=display">
-\lim _{x \rightarrow a} \frac{f^{\prime}(x)}{g^{\prime}(x)}=l(l \text { 为有限数或 } \pm \infty)</script><script type="math/tex; mode=display">
-\lim _{x \rightarrow a} \frac{f(x)}{g(x)}=\lim _{x \rightarrow a} \frac{f^{\prime}(x)}{g^{\prime}(x)}=l</script></li>
-</ul>
-<p>其他类型同样可以通过化简变形可转化为上面两类</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/">&lt;</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/3/">&gt;</a>
+    <a class="extend prev" rel="prev" href="/">&lt;</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/3/">&gt;</a>
   </nav>
 
 
@@ -2350,7 +2463,7 @@ g^{\prime}(x) \neq 0,\forall x \in \mathring{U}(a, \delta),f(x),g(x)可导</scri
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">77</span>
+                <span class="site-state-item-count">81</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
