@@ -2726,7 +2726,10 @@ Ax=\lambda x(x\ne\vec{0})</script><p>表示变换A对于x构成的张成空间�
 <p>$\det A= 0$，则空间压缩成一条线</p>
 <p>总有一个向量经过变换后得到零向量</p>
 <p>解出特征值后可以解出特征向量(可能有很多如缩放)</p>
-<h3 id="特征基"><a href="#特征基" class="headerlink" title="特征基"></a>特征基</h3><p>利用特征向量可以将矩阵乘法转化为数乘</p>
+<script type="math/tex; mode=display">
+\lambda_{\pm}=\frac{T}{2} \pm \sqrt{(T / 2)^{2}-D}\\
+T= \text{trace}\\
+D=\text{det}</script><h3 id="特征基"><a href="#特征基" class="headerlink" title="特征基"></a>特征基</h3><p>利用特征向量可以将矩阵乘法转化为数乘</p>
 <p>若将基向量变换为$2$个不共线的特征向量来表示</p>
 <p>则有非常好的性质</p>
 <script type="math/tex; mode=display">
@@ -3998,18 +4001,28 @@ F(\pi_1,\pi_2\dots\pi_{m-\text{Rank} A})=0</script>]]></content>
 f(x,y)=Ax+By+C=0</script><p>$(A,-B)/(-A,B)$为方向向量</p>
 <p>平面直线的两点式</p>
 <script type="math/tex; mode=display">
-(y_0-y_1)x+(x_1-x_0)+x_0y_1-x_1y_0=0</script><p>从而$(a,b)$到直线的距离为</p>
+(y_0-y_1)x+(x_1-x_0)y+x_0y_1-x_1y_0=0</script><p>从而$(a,b)$到直线的距离为</p>
 <script type="math/tex; mode=display">
 \text{signed distance}=\frac{f(a,b)}{\sqrt{A^2+B^2}}</script><p>三维空间中的直线的坐标表示为</p>
 <script type="math/tex; mode=display">
 (x,y,z)=(x_0,y_0,z_0)+vt\\
-\frac{x-x_0}{v_1}=\frac{y-y_0}{v_2}=\frac{z-z_0}{v_3}</script><h2 id="点乘"><a href="#点乘" class="headerlink" title="点乘"></a>点乘</h2><h3 id="平面"><a href="#平面" class="headerlink" title="平面"></a>平面</h3><p>点在平面的哪</p>
+\frac{x-x_0}{v_1}=\frac{y-y_0}{v_2}=\frac{z-z_0}{v_3}</script><p>同理可以用两个平面的交线来表示</p>
+<script type="math/tex; mode=display">
+\begin{cases}A_1x+B_1y+C_1z+D_1=0\\A_2x+B_2y+C_2z+D_2=0\end{cases}</script><p>这就是平面的一般方程</p>
+<h2 id="点乘"><a href="#点乘" class="headerlink" title="点乘"></a>点乘</h2><h3 id="平面"><a href="#平面" class="headerlink" title="平面"></a>平面</h3><p>点在平面的哪</p>
 <p><img src="/2023/01/11/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20230112122617388.png" alt="image-20230112122617388" style="zoom:50%;"></p>
 <script type="math/tex; mode=display">
 s=\vec{CP}\cdot \boldsymbol n=0</script><p>$s&gt;0$在平面上，反之在平面下(先定义方向向量)</p>
+<p>考虑直线和平面的夹角</p>
+<script type="math/tex; mode=display">
+\sin \theta=|\cos <\mathbf s,\mathbf n>|</script><p>平面的点法式方程</p>
 <script type="math/tex; mode=display">
 A(x-x_c)+B(y-y_c)+C(z-z_c)=0\\
-f(x,y)=Ax+By+C</script><h3 id="投影"><a href="#投影" class="headerlink" title="投影"></a>投影</h3><script type="math/tex; mode=display">
+f(x,y)=Ax+By+C</script><p>截距式方程</p>
+<script type="math/tex; mode=display">
+\frac xa+\frac yb+\frac zc=1x</script><p>距离</p>
+<script type="math/tex; mode=display">
+\text{distance}=\frac{|Ax_0+By_0+Cz_0+D|}{\sqrt{A^2+B^2+C^2}}</script><h3 id="投影"><a href="#投影" class="headerlink" title="投影"></a>投影</h3><script type="math/tex; mode=display">
 \text{Prj}_{\vec{OM}}\vec{OA}=\frac{\vec{OM}\cdot \vec{OA}}{|\vec{OM}|}</script><p>结果为一个数，有正负</p>
 <p><img src="/2023/01/11/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20230112122336596.png" alt="image-20230112122336596" style="zoom:67%;"></p>
 <script type="math/tex; mode=display">
@@ -4046,7 +4059,28 @@ f(\mathbf p)=0</script><p>类比定义梯度</p>
 <p>切平面</p>
 <script type="math/tex; mode=display">
 (\mathbf p-\mathbf a)((\mathbf a-\mathbf b)\times(\mathbf a-\mathbf c))=0</script><h3 id="球面"><a href="#球面" class="headerlink" title="球面"></a>球面</h3><script type="math/tex; mode=display">
-f(\mathbf p)=(\mathbf p-\mathbf c)^2-r^2=0</script><h2 id="三维曲线"><a href="#三维曲线" class="headerlink" title="三维曲线"></a>三维曲线</h2><p>回顾三维直线，消去参数$t$之后可以得到$2$个方程</p>
+f(\mathbf p)=(\mathbf p-\mathbf c)^2-r^2=0</script><h3 id="旋转曲面"><a href="#旋转曲面" class="headerlink" title="旋转曲面"></a>旋转曲面</h3><p>绕哪个轴旋转哪个不变</p>
+<p>例如母线在$yOz$上，则绕$y$轴旋转的方程为</p>
+<script type="math/tex; mode=display">
+f(y,\pm\sqrt{x^2+z^2})</script><p>若要还原母线则关键看$x^2+z^2$</p>
+<h3 id="柱面"><a href="#柱面" class="headerlink" title="柱面"></a>柱面</h3><p>平面曲线叫做准线，直线叫做母线</p>
+<p><img src="/2023/01/11/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20230305204345610.png" alt="image-20230305204345610"></p>
+<p>对于二维$f(x,y)=0$表示平面曲线</p>
+<p>而对于三维空间表示柱面</p>
+<h3 id="二次曲面"><a href="#二次曲面" class="headerlink" title="二次曲面"></a>二次曲面</h3><p><img src="/2023/01/11/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20230305204514637.png" alt="image-20230305204514637"></p>
+<p>椭球面由椭圆旋转而来</p>
+<p><img src="/2023/01/11/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20230305204845720.png" alt="image-20230305204845720"></p>
+<p>利用截横法有椭圆锥面(两个圆锥)</p>
+<p><img src="/2023/01/11/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20230305205123977.png" alt="image-20230305205123977"></p>
+<p>根据旋转轴的不同有单叶和双叶双曲面</p>
+<p><img src="/2023/01/11/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20230305205105937.png" alt="image-20230305205105937"></p>
+<p>椭圆抛物面是抛物线旋转后伸缩得到的</p>
+<p><img src="/2023/01/11/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20230305210651035.png" alt="image-20230305210651035"></p>
+<p>双曲抛物面(马鞍面)</p>
+<blockquote>
+<p>Near the origin, the surface is shaped like a saddle or mountain pass. To a person traveling along the surface in the yz-plane the origin looks like a minimum. To a person traveling in the xz-plane the origin looks like a maximum. Such a point is called a saddle point of a surface</p>
+</blockquote>
+<h2 id="三维曲线"><a href="#三维曲线" class="headerlink" title="三维曲线"></a>三维曲线</h2><p>回顾三维直线，消去参数$t$之后可以得到$2$个方程</p>
 <p>其实这2个方程表示了2个平面，空间的直线就是这2个平面的交线</p>
 <p>从而我们可以引入空间曲线的参数表达式</p>
 <script type="math/tex; mode=display">
@@ -4310,7 +4344,40 @@ w'(t) = u'(t) + \text iv'(t)\\
 \left.{\int_a^bw(t)\text dt=W(t)}\right|_a^b</script><p>如</p>
 <script type="math/tex; mode=display">
 \int_0^{\frac\pi 4}e^{\text it}\text dt=\frac{\sqrt 2}2+\left(1-\frac{\sqrt 2}2\right)\text i</script><p>注意，如积分中值定理不适用于复变函数</p>
-]]></content>
+<h1 id="曲线"><a href="#曲线" class="headerlink" title="曲线"></a>曲线</h1><script type="math/tex; mode=display">
+z(t) = x(t) + \text iy(t)\quad (t\in[a,b])</script><p>这就是曲线$C$的方程</p>
+<ul>
+<li>若$z$值没有重复相交则为简单曲线(simple arc)</li>
+<li>只有$z(a)=z(b)$则称为简单封闭曲线(simple closed curve)</li>
+</ul>
+<h2 id="弧微分"><a href="#弧微分" class="headerlink" title="弧微分"></a>弧微分</h2><script type="math/tex; mode=display">
+\text d s=\sqrt{1+y'^2}\text dx=\sqrt{[x'(t)]^2+[y'(t)]^2}\text d t</script><p>所以弧长</p>
+<script type="math/tex; mode=display">
+L=\int_a^b\sqrt{[x'(t)]^2+[y'(t)]^2}\text d t</script><p>对于$\varphi’(\tau)&gt;0$，也可变换</p>
+<script type="math/tex; mode=display">
+Z(t)=z(\varphi(t))</script><p>又因为</p>
+<script type="math/tex; mode=display">
+|z'(t)|=\sqrt{[x'(t)]^2+[y'(t)]^2}\\
+L=\int_\alpha^\beta|z'(\varphi(t))|\varphi'(t)\text d t=\int_\alpha^\beta|Z'(t)|\text d t</script><p>考虑径矢</p>
+<script type="math/tex; mode=display">
+\mathbf{T}=\frac{z'(t)}{|z'(t)|}</script><p>如果$z’(t)$连续且$\ne0$，即$x’(t),y’(t)$不同时为$0$</p>
+<p>则曲线处处有切线可以自由转动，则曲线光滑</p>
+<h2 id="轮廓"><a href="#轮廓" class="headerlink" title="轮廓"></a>轮廓</h2><p>contour通常指的是复平面上的曲线，它可以用于描述复变函数在复平面上的取值和变化情况，用两种方式定义</p>
+<ol>
+<li>参数方程：$z (t)$，其中 $t$ 是在某个区间 $[a,b]$ 上变化的实数。通过让 $t$ 在区间 $[a,b]$ 上遍历，我们就可以得到一条曲线</li>
+<li>等值线方程：$f(z) = c$，其中 $c$ 是一个常数。这个方程表示的是函数 $f(z)$ 在复平面上取值为 $c$ 的所有点</li>
+</ol>
+<h1 id="积分"><a href="#积分" class="headerlink" title="积分"></a>积分</h1><p>对于一个轮廓$C$，积分表示为</p>
+<script type="math/tex; mode=display">
+\int_Cf(z)\text dz\;\;\text{or}\;\;\int_{z_1}^{z_2}f(z)\text dz</script><p>对于由参数定义的$C$</p>
+<script type="math/tex; mode=display">
+\int_Cf(z)\text dz=\int_Cf[z(t)]z'(t)\text dt</script><h2 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h2><p><img src="/2023/02/11/%E5%A4%A7%E4%B8%80/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/%E7%A7%AF%E5%88%86/image-20230227183020559.png" alt="image-20230227183020559" style="zoom: 50%;"></p>
+<p>对于方向相反的轮廓$z(-t)$</p>
+<script type="math/tex; mode=display">
+\int_{-C}f(z)\text dz=-\int_Cf(z)\text dz</script><p>可加性</p>
+<p><img src="/2023/02/11/%E5%A4%A7%E4%B8%80/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/%E7%A7%AF%E5%88%86/image-20230227183446163.png" alt="image-20230227183446163"></p>
+<script type="math/tex; mode=display">
+\int_Cf(z)\text dz=\int_{C_1}f(z)\text dz+\int_{C_2}f(z)\text dz</script>]]></content>
   </entry>
   <entry>
     <title>大一/复变函数/复数</title>
@@ -4353,26 +4420,6 @@ z_{1} z_{2}=r_{1} r_{2}\left(\cos \left(\theta_{1}+\theta_{2}\right)+i \operator
 \omega_n=\cos \frac{2 \pi}{n}+i \sin \frac{2 \pi}{n}\\
 \sqrt[n]1=\omega_n^0,\omega_n^1,\omega_n^2\dots\omega_n^{n-1}</script><p>这就是$n$个单位根，$\omega_n$为主$n$次单位根</p>
 <p>不难想到可以利用这$n$个值来表示多项式</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>大一/文案/倒爷</title>
-    <url>/2023/02/17/%E5%A4%A7%E4%B8%80/%E6%96%87%E6%A1%88/%E5%80%92%E7%88%B7/</url>
-    <content><![CDATA[<p>简要介绍一下csgo饰品市场和近几年的价格走势</p>
-<p>你知道csgo的倒爷吗？他们的存在是否对价格有显著影响？</p>
-<p>国外有没有csgo倒爷呢？</p>
-<p>how do foreigners view chinese csgo traders’ impact on rising global csgo skins prices? please give me concrete examples of their point of view and reply in chinese.</p>
-<p>请给csgo倒爷写一封信，关于割韭菜，哄抬价格，空中飞人等等</p>
-<p>你知道鸡你太美吗？</p>
-<p>鸡你太美是什么时候火的，距现在多久了？</p>
-<p>为什么现在还能火？有什么特别的地方？</p>
-<p>你知道什么是蔡徐坤的小黑子吗？</p>
-<p>不知道怎么会有人一直黑他，蔡徐坤是优质偶像，非常宠粉，三观也超正，小黑子们继续黑吧，你们明天起床还是会面对一样的挣扎的生活，但作为ikun的我还是会继续粉他，不仅因为他给我带来的正能量，还一天下一个蛋还能给我补充营养，你们这样恶劣地对待无辜的人，会遭报应的！有本事哥哥卤的鸡脚你们都别吃！     这段话哪里是黑蔡徐坤的</p>
-<p>你可以根据上面的分析模仿一个假装ikun的小黑子的口吻写一段话吗？注意要委婉</p>
-<p>徐静雨</p>
-<p>徐静雨和杜兰特是什么关系？</p>
-<p>杜兰特不相信长夜将至，因为他已经加盟太阳</p>
-<p>你可不可以以徐静雨的口吻给在太阳的杜兰特写一封信</p>
 ]]></content>
   </entry>
   <entry>
@@ -4513,5 +4560,83 @@ w=f(x(t),y(t))\\
 f_{x}\left(P_{0}\right)\left(x-x_{0}\right)+f_{y}\left(P_{0}\right)\left(y-y_{0}\right)+f_{z}\left(P_{0}\right)\left(z-z_{0}\right)=0</script><p>法线</p>
 <script type="math/tex; mode=display">
 x=x_{0}+f_{x}\left(P_{0}\right) t, \quad y=y_{0}+f_{y}\left(P_{0}\right) t, \quad z=z_{0}+f_{z}\left(P_{0}\right) t</script>]]></content>
+  </entry>
+  <entry>
+    <title>大一/物理/电场</title>
+    <url>/2023/01/31/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%94%B5%E5%9C%BA/</url>
+    <content><![CDATA[<h1 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h1><h2 id="远距作用"><a href="#远距作用" class="headerlink" title="远距作用"></a>远距作用</h2><p>过去人们认为相距一段距离的物体发生相互作用是一种远距作用(action at a distance)</p>
+<p>它不需要中间介质的传递只需要两个物体就能发生</p>
+<p>但很多现象无法解释例如为什么有的时候只有直接接触才能产生力</p>
+<h2 id="场论"><a href="#场论" class="headerlink" title="场论"></a>场论</h2><p>因此后来人们认为两个相距一段距离的物体之间存在一种物质通过连续的相互作用使作用得到传递，人们把它称之为场</p>
+<p>作用在场中的传递就像力在弹簧中的传递一样</p>
+<h3 id="标量场"><a href="#标量场" class="headerlink" title="标量场"></a>标量场</h3><script type="math/tex; mode=display">
+f(x,y,z)</script><p>空间中的每一个点都对应一个标量</p>
+<p>固定一个分量可以使用等高线来表示</p>
+<p><img src="/2023/01/31/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%94%B5%E5%9C%BA/image-20230201175531274.png" alt="image-20230201175531274"></p>
+<p>还可以使用颜色映射或三维地形图(Relief Maps)来表示</p>
+<h3 id="向量场"><a href="#向量场" class="headerlink" title="向量场"></a>向量场</h3><p>结果为向量</p>
+<script type="math/tex; mode=display">
+\vec{F}(x,y,z)=f_x(x,y,z)\mathbf{i}+f_y(x,y,z)\mathbf{j}+f_z(x,y,z)\mathbf{k}</script><p>流场</p>
+<script type="math/tex; mode=display">
+\overrightarrow{\mathbf{v}}(x, y, z)=v_{x}(x, y, z) \hat{\mathbf{i}}+v_{y}(x, y, z) \hat{\mathbf{j}}+v_{z}(x, y, z) \hat{\mathbf{k}}</script><p>电场中很多的概念是从流场中类比而来的</p>
+<p>重力场</p>
+<script type="math/tex; mode=display">
+\vec{g}=-G\frac{M}{r^2}\hat{\mathbf{r}}</script><h3 id="电场"><a href="#电场" class="headerlink" title="电场"></a>电场</h3><p>由库仑定律得到</p>
+<script type="math/tex; mode=display">
+\vec{F}_e=k_e\frac{Qq}{r^2}\hat{\mathbf r},\vec{E}_e=k_e\frac{Q}{r^2}\hat{\mathbf r}\\
+k_e=\frac1{4\pi\varepsilon _0}</script><p>注意电荷有正负</p>
+<script type="math/tex; mode=display">
+\vec{F}_e=q\vec{E}_e</script><p>对于场强，由微元法</p>
+<script type="math/tex; mode=display">
+\text d\vec{E}_e=k_e\frac{\text dQ}{r^2}\hat{\mathbf r}\\</script><p>积分</p>
+<script type="math/tex; mode=display">
+\vec{E}_e=k_e\int_V\frac{\text dQ}{r^2}\hat{\boldsymbol r}\\
+\text dQ=\lambda\text{d}x=
+\sigma\text{d}S=
+\rho\text{d}V</script><h3 id="磁场"><a href="#磁场" class="headerlink" title="磁场"></a>磁场</h3><p><img src="/2023/01/31/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%94%B5%E5%9C%BA/image-20230204171759936.png" alt="·"></p>
+<p>在周围放置许多小磁针，由于力矩的作用使得小磁针成如下排列</p>
+<p><img src="/2023/01/31/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%94%B5%E5%9C%BA/image-20230204171940172.png" alt="image-20230204171940172"></p>
+<p>这形成的一根根线被法拉第描述成电场线</p>
+<p>电场线的切线代表该点处的场强方向</p>
+<p><img src="/2023/01/31/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%94%B5%E5%9C%BA/image-20230204172450907.png" alt="image-20230204172450907" style="zoom: 33%;"></p>
+<blockquote>
+<p>Faraday called the field lines for electric field “lines of force.” </p>
+</blockquote>
+<p>运动的电荷产生磁场(电生磁)</p>
+<h1 id="高斯定理"><a href="#高斯定理" class="headerlink" title="高斯定理"></a>高斯定理</h1><h2 id="电通量"><a href="#电通量" class="headerlink" title="电通量"></a>电通量</h2><p><img src="/2023/01/31/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%94%B5%E5%9C%BA/image-20230305212024770.png" alt="image-20230305212024770"></p>
+<p>用电通量来描述穿过某一面积的电场线条数</p>
+<script type="math/tex; mode=display">
+\Phi=\vec E\cdot \vec S</script><p>利用点电荷的电通量公式可以导出</p>
+<script type="math/tex; mode=display">
+\Phi_e=\frac{q}{\varepsilon_0}</script><p>库仑力满足平方反比关系，故有高斯定理</p>
+<script type="math/tex; mode=display">
+\Phi=\oint_{S}\vec E\cdot \text d\vec S=\frac1{\varepsilon_0}\sum_{i=1}^nq_i</script><h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><p>如果选取恰当的高斯面(球面或柱面)，则</p>
+<script type="math/tex; mode=display">
+E,\cos \theta=\text{constant}</script><p>就可以通过电荷量计算出场强</p>
+<h1 id="电势能"><a href="#电势能" class="headerlink" title="电势能"></a>电势能</h1><p>电场力为保守力，做功与路径无关</p>
+<script type="math/tex; mode=display">
+W_{ab}=\frac{q_0}{4\pi\varepsilon_0}\sum_iq_i\left(\frac1{r_{ia}}-\frac1{r_{ib}}\right)</script><p>所以有环路定理</p>
+<script type="math/tex; mode=display">
+\oint_lE\cdot\text dl=0</script><p>电场力对应一种势能</p>
+<script type="math/tex; mode=display">
+\Delta V_{e}=-\int_{A}^{B}\left(\overrightarrow{\mathbf{F}}_{e} / q_{t}\right) \cdot \text d \overrightarrow{\mathbf{s}}=-\int_{A}^{B} \overrightarrow{\mathbf{E}} \cdot \text d \overrightarrow{\mathbf{s}},\\
+\Delta U=q_t\Delta V_e</script><p>故有保守力做功等于势能的减少量</p>
+<script type="math/tex; mode=display">
+\Delta U=-W_e\\
+\Delta V = \Delta V_{CA} + \Delta V_{BC}</script><p>对于点电荷</p>
+<script type="math/tex; mode=display">
+\Delta V=V_{B}-V_{A}=-\int_{A}^{B} \frac{Q}{4 \pi \varepsilon_{0} r^{2}} \text d r=\frac{Q}{4 \pi \varepsilon_{0}}\left(\frac{1}{r_{B}}-\frac{1}{r_{A}}\right)</script><blockquote>
+<p>As in the case of gravity, only the difference in electrical  potential is physically meaningful, and one may choose a reference point and set the  potential there to be zero. In practice, it is often convenient to choose the reference point  to be at infinity, so that the electric potential at a point P becomes</p>
+</blockquote>
+<script type="math/tex; mode=display">
+V_p=\int_p^\infty\overrightarrow{\mathbf{E}} \cdot \text d \overrightarrow{\mathbf{s}},\quad V_\infty=0\\
+ V = k_e\frac
+Q
+r</script><p>点乘，所以考虑梯度</p>
+<script type="math/tex; mode=display">
+E=-\nabla V=-\left(\frac{\partial V}{\partial x},\frac{\partial V}{\partial y},\frac{\partial V}{\partial z}\right)</script><p>更严谨的</p>
+<script type="math/tex; mode=display">
+\text dV=\frac{\partial V}{\partial x}\text dx+\frac{\partial V}{\partial y}\text dy+\frac{\partial V}{\partial z}\text dz\\
+\text dV=-E\cdot  \text d s</script>]]></content>
   </entry>
 </search>
