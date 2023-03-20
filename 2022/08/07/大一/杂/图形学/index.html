@@ -94,22 +94,23 @@
 
 
 
-<meta name="description" content="欧拉方法显式欧拉方法 \begin{cases}\vec{v}\left(t_{1}\right)&#x3D;\vec{v}\left(t_{0}\right)+M^{-1} \vec{F}\left(t_{0}\right)\Delta t \\ \vec{x}\left(t_{1}\right)&#x3D;\vec{x}\left(t_{0}\right)+\vec{v}\left(t_{0}\right) \D">
+<meta name="description" content="欧拉方法有限差分Forward  \frac{\text{d}f}{\text dt}&#x3D;\frac{f(t_0+\Delta t)-f(t_0)}{\Delta t}Backward  \frac{\text{d}f}{\text dt}&#x3D;\frac{f(t_0)-f(t-\Delta t)}{\Delta t}更精确(二阶)  \frac{\text{d}f}{\text dt}&#x3D;\frac{f">
 <meta property="og:type" content="article">
 <meta property="og:title" content="大一&#x2F;杂&#x2F;图形学">
 <meta property="og:url" content="http://yoursite.com/2022/08/07/%E5%A4%A7%E4%B8%80/%E6%9D%82/%E5%9B%BE%E5%BD%A2%E5%AD%A6/index.html">
 <meta property="og:site_name" content="BLOG">
-<meta property="og:description" content="欧拉方法显式欧拉方法 \begin{cases}\vec{v}\left(t_{1}\right)&#x3D;\vec{v}\left(t_{0}\right)+M^{-1} \vec{F}\left(t_{0}\right)\Delta t \\ \vec{x}\left(t_{1}\right)&#x3D;\vec{x}\left(t_{0}\right)+\vec{v}\left(t_{0}\right) \D">
+<meta property="og:description" content="欧拉方法有限差分Forward  \frac{\text{d}f}{\text dt}&#x3D;\frac{f(t_0+\Delta t)-f(t_0)}{\Delta t}Backward  \frac{\text{d}f}{\text dt}&#x3D;\frac{f(t_0)-f(t-\Delta t)}{\Delta t}更精确(二阶)  \frac{\text{d}f}{\text dt}&#x3D;\frac{f">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2022/08/07/%E5%A4%A7%E4%B8%80/%E6%9D%82/%E5%9B%BE%E5%BD%A2%E5%AD%A6/image-20230319213302155.png">
 <meta property="og:image" content="http://yoursite.com/2022/08/07/%E5%A4%A7%E4%B8%80/%E6%9D%82/%E5%9B%BE%E5%BD%A2%E5%AD%A6/image-20230213110541464.png">
 <meta property="og:image" content="http://yoursite.com/2022/08/07/%E5%A4%A7%E4%B8%80/%E6%9D%82/%E5%9B%BE%E5%BD%A2%E5%AD%A6/image-20230213111225564.png">
 <meta property="og:image" content="http://yoursite.com/2022/08/07/%E5%A4%A7%E4%B8%80/%E6%9D%82/%E5%9B%BE%E5%BD%A2%E5%AD%A6/image-20230120142858751.png">
 <meta property="og:image" content="http://yoursite.com/2022/08/07/%E5%A4%A7%E4%B8%80/%E6%9D%82/%E5%9B%BE%E5%BD%A2%E5%AD%A6/image-20230212182413373.png">
 <meta property="article:published_time" content="2022-08-07T09:33:32.536Z">
-<meta property="article:modified_time" content="2023-02-13T03:18:30.691Z">
+<meta property="article:modified_time" content="2023-03-19T16:03:09.831Z">
 <meta property="article:author" content="Shiwei Pan">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2022/08/07/%E5%A4%A7%E4%B8%80/%E6%9D%82/%E5%9B%BE%E5%BD%A2%E5%AD%A6/image-20230213110541464.png">
+<meta name="twitter:image" content="http://yoursite.com/2022/08/07/%E5%A4%A7%E4%B8%80/%E6%9D%82/%E5%9B%BE%E5%BD%A2%E5%AD%A6/image-20230319213302155.png">
 
 
 
@@ -383,7 +384,16 @@
       
 
       
-        <h1 id="欧拉方法"><a href="#欧拉方法" class="headerlink" title="欧拉方法"></a>欧拉方法</h1><h2 id="显式欧拉方法"><a href="#显式欧拉方法" class="headerlink" title="显式欧拉方法"></a>显式欧拉方法</h2><script type="math/tex; mode=display">
+        <h1 id="欧拉方法"><a href="#欧拉方法" class="headerlink" title="欧拉方法"></a>欧拉方法</h1><h2 id="有限差分"><a href="#有限差分" class="headerlink" title="有限差分"></a>有限差分</h2><p>Forward</p>
+<script type="math/tex; mode=display">
+\frac{\text{d}f}{\text dt}=\frac{f(t_0+\Delta t)-f(t_0)}{\Delta t}</script><p>Backward</p>
+<script type="math/tex; mode=display">
+\frac{\text{d}f}{\text dt}=\frac{f(t_0)-f(t-\Delta t)}{\Delta t}</script><p>更精确(二阶)</p>
+<script type="math/tex; mode=display">
+\frac{\text{d}f}{\text dt}=\frac{f(t_0+\Delta t)-f(t_0-\Delta t)}{2\Delta t}</script><p>二阶导数</p>
+<p><img src="/2022/08/07/%E5%A4%A7%E4%B8%80/%E6%9D%82/%E5%9B%BE%E5%BD%A2%E5%AD%A6/image-20230319213302155.png" alt="    "></p>
+<script type="math/tex; mode=display">
+\frac{\text{d}^2f}{\text dt^2}=\frac{f(t_0+\Delta t)+f(t_0-\Delta t)-2f(t_0)}{\Delta t^2}</script><h2 id="显式欧拉方法"><a href="#显式欧拉方法" class="headerlink" title="显式欧拉方法"></a>显式欧拉方法</h2><script type="math/tex; mode=display">
 \begin{cases}\vec{v}\left(t_{1}\right)=\vec{v}\left(t_{0}\right)+M^{-1} \vec{F}\left(t_{0}\right)\Delta t \\
 \vec{x}\left(t_{1}\right)=\vec{x}\left(t_{0}\right)+\vec{v}\left(t_{0}\right) \Delta t\end{cases}</script><p>用当前的状态计算速度和加速度$(\text{Forward} )$</p>
 <p>能量增加，开放的系统</p>
@@ -420,7 +430,10 @@ p'=qpq^{-1}</script><h1 id="质点弹簧系统"><a href="#质点弹簧系统" cl
 <script type="math/tex; mode=display">
 f=-k_d\dot{\boldsymbol x}</script><p> 但表示合速度，表示不了弹簧内部的损耗</p>
 <script type="math/tex; mode=display">
-f_a=-k_s\frac{\boldsymbol a-\boldsymbol b}{||\boldsymbol a-\boldsymbol b||}(\dot{\boldsymbol a}-\dot{\boldsymbol b})\cdot\frac{\boldsymbol a-\boldsymbol b}{||\boldsymbol a-\boldsymbol b||}</script>
+f_a=-k_s\frac{\boldsymbol a-\boldsymbol b}{||\boldsymbol a-\boldsymbol b||}(\dot{\boldsymbol a}-\dot{\boldsymbol b})\cdot\frac{\boldsymbol a-\boldsymbol b}{||\boldsymbol a-\boldsymbol b||}</script><h1 id="流体"><a href="#流体" class="headerlink" title="流体"></a>流体</h1><p>不可压缩流体</p>
+<script type="math/tex; mode=display">
+h_{i}\left(t_{0}+\Delta t\right)=2 h_{i}\left(t_{0}\right)-h_{i}\left(t_{0}-\Delta t\right)+\frac{\Delta t^{2}}{\Delta x^{2} \rho}\left(\left(\frac{h_{i-1}+h_{i}}{2}\right)\left(P_{i-1}-P_{i}\right)+\left(\frac{h_{i+1}+h_{i}}{2}\right)\left(P_{i+1}-P_{i}\right)\right)\\
+h_{i}\left(t_{0}+\Delta t\right)=h_{i}\left(t_{0}\right)+\beta\left(h_{i}\left(t_{0}\right)-h_{i}\left(t_{0}-\Delta t\right)\right)+\alpha\left(h_{i+1}\left(t_{0}\right)+h_{i-1}\left(t_{0}\right)-2 h_{i}\left(t_{0}\right)\right)</script>
       
     </div>
     
@@ -627,7 +640,7 @@ f_a=-k_s\frac{\boldsymbol a-\boldsymbol b}{||\boldsymbol a-\boldsymbol b||}(\dot
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#欧拉方法"><span class="nav-number">1.</span> <span class="nav-text">欧拉方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#显式欧拉方法"><span class="nav-number">1.1.</span> <span class="nav-text">显式欧拉方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#隐式欧拉方法"><span class="nav-number">1.2.</span> <span class="nav-text">隐式欧拉方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#中点方法"><span class="nav-number">1.3.</span> <span class="nav-text">中点方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#半隐式欧拉方法"><span class="nav-number">1.4.</span> <span class="nav-text">半隐式欧拉方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#旋转"><span class="nav-number">2.</span> <span class="nav-text">旋转</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#欧拉角"><span class="nav-number">2.1.</span> <span class="nav-text">欧拉角</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四元数"><span class="nav-number">2.2.</span> <span class="nav-text">四元数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#质点弹簧系统"><span class="nav-number">3.</span> <span class="nav-text">质点弹簧系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#能量耗散"><span class="nav-number">3.1.</span> <span class="nav-text">能量耗散</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#欧拉方法"><span class="nav-number">1.</span> <span class="nav-text">欧拉方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#有限差分"><span class="nav-number">1.1.</span> <span class="nav-text">有限差分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#显式欧拉方法"><span class="nav-number">1.2.</span> <span class="nav-text">显式欧拉方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#隐式欧拉方法"><span class="nav-number">1.3.</span> <span class="nav-text">隐式欧拉方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#中点方法"><span class="nav-number">1.4.</span> <span class="nav-text">中点方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#半隐式欧拉方法"><span class="nav-number">1.5.</span> <span class="nav-text">半隐式欧拉方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#旋转"><span class="nav-number">2.</span> <span class="nav-text">旋转</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#欧拉角"><span class="nav-number">2.1.</span> <span class="nav-text">欧拉角</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四元数"><span class="nav-number">2.2.</span> <span class="nav-text">四元数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#质点弹簧系统"><span class="nav-number">3.</span> <span class="nav-text">质点弹簧系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#能量耗散"><span class="nav-number">3.1.</span> <span class="nav-text">能量耗散</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#流体"><span class="nav-number">4.</span> <span class="nav-text">流体</span></a></li></ol></div>
             
 
           </div>

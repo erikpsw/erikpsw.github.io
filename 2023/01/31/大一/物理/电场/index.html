@@ -106,8 +106,11 @@
 <meta property="og:image" content="http://yoursite.com/2023/01/31/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%94%B5%E5%9C%BA/image-20230204171940172.png">
 <meta property="og:image" content="http://yoursite.com/2023/01/31/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%94%B5%E5%9C%BA/image-20230204172450907.png">
 <meta property="og:image" content="http://yoursite.com/2023/01/31/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%94%B5%E5%9C%BA/image-20230305212024770.png">
+<meta property="og:image" content="http://yoursite.com/2023/01/31/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%94%B5%E5%9C%BA/image-20230320085139503.png">
+<meta property="og:image" content="http://yoursite.com/2023/01/31/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%94%B5%E5%9C%BA/image-20230320085233890.png">
+<meta property="og:image" content="http://yoursite.com/2023/01/31/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%94%B5%E5%9C%BA/image-20230320085903461.png">
 <meta property="article:published_time" content="2023-01-31T10:15:38.493Z">
-<meta property="article:modified_time" content="2023-03-05T14:28:00.139Z">
+<meta property="article:modified_time" content="2023-03-20T01:29:15.055Z">
 <meta property="article:author" content="Shiwei Pan">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/2023/01/31/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%94%B5%E5%9C%BA/image-20230201175531274.png">
@@ -457,7 +460,62 @@ r</script><p>点乘，所以考虑梯度</p>
 E=-\nabla V=-\left(\frac{\partial V}{\partial x},\frac{\partial V}{\partial y},\frac{\partial V}{\partial z}\right)</script><p>更严谨的</p>
 <script type="math/tex; mode=display">
 \text dV=\frac{\partial V}{\partial x}\text dx+\frac{\partial V}{\partial y}\text dy+\frac{\partial V}{\partial z}\text dz\\
-\text dV=-E\cdot  \text d s</script>
+\text dV=-E\cdot  \text d s</script><h1 id="导体的电场"><a href="#导体的电场" class="headerlink" title="导体的电场"></a>导体的电场</h1><h2 id="静电平衡"><a href="#静电平衡" class="headerlink" title="静电平衡"></a>静电平衡</h2><p><img src="/2023/01/31/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%94%B5%E5%9C%BA/image-20230320085139503.png" alt="image-20230320085139503" style="zoom: 33%;"></p>
+<p>对于导体内部，条件为</p>
+<script type="math/tex; mode=display">
+E+E_{感}=0</script><p><img src="/2023/01/31/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%94%B5%E5%9C%BA/image-20230320085233890.png" alt="image-20230320085233890" style="zoom:50%;"></p>
+<p>对表面用高斯定理得到若内部没有电荷则电荷只能在表面分布</p>
+<script type="math/tex; mode=display">
+E=\frac \sigma{\varepsilon_0}</script><p>对于内部有电荷的情况，内外不会相互影响</p>
+<p><img src="/2023/01/31/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%94%B5%E5%9C%BA/image-20230320085903461.png" alt="image-20230320085903461" style="zoom:33%;"></p>
+<p>内部电荷为$-q$，外层分布只和外电场有关</p>
+<p>若接地则为静电屏蔽，没有电场</p>
+<h1 id="电介质"><a href="#电介质" class="headerlink" title="电介质"></a>电介质</h1><p>因为电介质常为中性存在正负电荷所以引入电偶极子和偶极矩(电矩)</p>
+<script type="math/tex; mode=display">
+\vec p=q\vec l</script><p>方向由负电荷指向正电荷</p>
+<p>电介质中存在大量电偶极子，所以引入电极化强度</p>
+<script type="math/tex; mode=display">
+\boldsymbol P=\frac{
+\sum_i\boldsymbol p_i
+}V</script><p>对于表面，有</p>
+<script type="math/tex; mode=display">
+\sigma'=P\cos\theta =P_n</script><h2 id="高斯定理-1"><a href="#高斯定理-1" class="headerlink" title="高斯定理"></a>高斯定理</h2><p>单独对极化电荷</p>
+<script type="math/tex; mode=display">
+\oint_{S}\vec P\cdot \text d\vec S=-\sum_{i}q_{i}</script><p>为了方便计算单独考虑自由电荷产生的电场</p>
+<script type="math/tex; mode=display">
+\oint_{S}(\varepsilon_0E+P)\cdot \text d\vec S=-\sum_{\text{free}}q_{i}</script><p>从而定义电位移</p>
+<script type="math/tex; mode=display">
+D=\varepsilon_0E+P\\
+E=\frac{D-P}{\varepsilon_0}</script><p>合场强是由自由电荷和极化电荷产生电场的叠加</p>
+<p>类比电场线我们可以引入电位移线，始于正自由电荷终于负自由电荷</p>
+<p>对于各向同性的电介质，$\chi _e$为电极化率</p>
+<script type="math/tex; mode=display">
+P=\chi _e\varepsilon_0E\\
+D=(1+\chi _e)\varepsilon_0E=\varepsilon_r\varepsilon_0E=\varepsilon E</script><p>将$\varepsilon$称为为电介质的介电常量，$\varepsilon_r$为相对介电常量</p>
+<h2 id="电容器"><a href="#电容器" class="headerlink" title="电容器"></a>电容器</h2><p>电容为电容器容纳电荷的本领</p>
+<script type="math/tex; mode=display">
+C=\frac{Q}V</script><p>单位为法拉</p>
+<script type="math/tex; mode=display">
+\rm 1 F=10^6\mu F=10^{12}pF</script><h3 id="常见电容器"><a href="#常见电容器" class="headerlink" title="常见电容器"></a>常见电容器</h3><p>平行板电容器</p>
+<script type="math/tex; mode=display">
+C=\frac{\varepsilon_r\varepsilon_0S}{d}</script><p>将$\varepsilon$称为为电容率，$\varepsilon_r$为相对电容率</p>
+<p>球型</p>
+<script type="math/tex; mode=display">
+C=\frac{4\pi \varepsilon R_A R_B}{ R_B-R_A}</script><p>圆柱</p>
+<script type="math/tex; mode=display">
+C=\frac{2\pi\varepsilon l}{\ln\frac{R_B}{R_A}}</script><h2 id="连接"><a href="#连接" class="headerlink" title="连接"></a>连接</h2><p> 和电阻相反</p>
+<h3 id="串联"><a href="#串联" class="headerlink" title="串联"></a>串联</h3><script type="math/tex; mode=display">
+\frac1C=\sum_i\frac1{C_i}</script><h2 id="并联"><a href="#并联" class="headerlink" title="并联"></a>并联</h2><script type="math/tex; mode=display">
+C=\sum_i C_i</script><h1 id="静电场的能量"><a href="#静电场的能量" class="headerlink" title="静电场的能量"></a>静电场的能量</h1><p>电荷之间相互作用从而存在能量，类比引力势能</p>
+<script type="math/tex; mode=display">
+W_e=\frac12\sum_iq_iV_i</script><p>对于连续分布的带电体</p>
+<script type="math/tex; mode=display">
+W_e=\frac12\int_qV\text dq</script><h2 id="电容器-1"><a href="#电容器-1" class="headerlink" title="电容器"></a>电容器</h2><p>由于电容器的$U$为电势差，充电时电荷从一个极板移向另一个极板</p>
+<script type="math/tex; mode=display">
+W=\frac12QU=\frac 12CU^2=\frac12\frac{Q^2}C</script><p>所以从广义上讲，电场的能量就是聚集电荷所需的功</p>
+<script type="math/tex; mode=display">
+W_e=\int _V\frac 12\varepsilon E^2\text dV</script><p>其中$\frac 12\varepsilon E^2$为电场的能量密度</p>
+
       
     </div>
     
@@ -499,8 +557,8 @@ E=-\nabla V=-\left(\frac{\partial V}{\partial x},\frac{\partial V}{\partial y},\
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2023/01/31/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%94%B5%E5%AD%A6/" rel="prev" title="大一/物理/电学">
-                大一/物理/电学 <i class="fa fa-chevron-right"></i>
+              <a href="/2023/02/10/%E5%A4%A7%E4%B8%80/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/%E5%A4%8D%E6%95%B0/" rel="prev" title="大一/复变函数/复数">
+                大一/复变函数/复数 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -664,7 +722,7 @@ E=-\nabla V=-\left(\frac{\partial V}{\partial x},\frac{\partial V}{\partial y},\
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#引入"><span class="nav-number">1.</span> <span class="nav-text">引入</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#远距作用"><span class="nav-number">1.1.</span> <span class="nav-text">远距作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#场论"><span class="nav-number">1.2.</span> <span class="nav-text">场论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#标量场"><span class="nav-number">1.2.1.</span> <span class="nav-text">标量场</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#向量场"><span class="nav-number">1.2.2.</span> <span class="nav-text">向量场</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#电场"><span class="nav-number">1.2.3.</span> <span class="nav-text">电场</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#磁场"><span class="nav-number">1.2.4.</span> <span class="nav-text">磁场</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#高斯定理"><span class="nav-number">2.</span> <span class="nav-text">高斯定理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#电通量"><span class="nav-number">2.1.</span> <span class="nav-text">电通量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用"><span class="nav-number">2.2.</span> <span class="nav-text">应用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#电势能"><span class="nav-number">3.</span> <span class="nav-text">电势能</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#引入"><span class="nav-number">1.</span> <span class="nav-text">引入</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#远距作用"><span class="nav-number">1.1.</span> <span class="nav-text">远距作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#场论"><span class="nav-number">1.2.</span> <span class="nav-text">场论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#标量场"><span class="nav-number">1.2.1.</span> <span class="nav-text">标量场</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#向量场"><span class="nav-number">1.2.2.</span> <span class="nav-text">向量场</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#电场"><span class="nav-number">1.2.3.</span> <span class="nav-text">电场</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#磁场"><span class="nav-number">1.2.4.</span> <span class="nav-text">磁场</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#高斯定理"><span class="nav-number">2.</span> <span class="nav-text">高斯定理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#电通量"><span class="nav-number">2.1.</span> <span class="nav-text">电通量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用"><span class="nav-number">2.2.</span> <span class="nav-text">应用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#电势能"><span class="nav-number">3.</span> <span class="nav-text">电势能</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#导体的电场"><span class="nav-number">4.</span> <span class="nav-text">导体的电场</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#静电平衡"><span class="nav-number">4.1.</span> <span class="nav-text">静电平衡</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#电介质"><span class="nav-number">5.</span> <span class="nav-text">电介质</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#高斯定理-1"><span class="nav-number">5.1.</span> <span class="nav-text">高斯定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#电容器"><span class="nav-number">5.2.</span> <span class="nav-text">电容器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#常见电容器"><span class="nav-number">5.2.1.</span> <span class="nav-text">常见电容器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#连接"><span class="nav-number">5.3.</span> <span class="nav-text">连接</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#串联"><span class="nav-number">5.3.1.</span> <span class="nav-text">串联</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#并联"><span class="nav-number">5.4.</span> <span class="nav-text">并联</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#静电场的能量"><span class="nav-number">6.</span> <span class="nav-text">静电场的能量</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#电容器-1"><span class="nav-number">6.1.</span> <span class="nav-text">电容器</span></a></li></ol></li></ol></div>
             
 
           </div>

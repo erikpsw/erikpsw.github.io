@@ -1020,7 +1020,16 @@
       
         
           
-            <h1 id="欧拉方法"><a href="#欧拉方法" class="headerlink" title="欧拉方法"></a>欧拉方法</h1><h2 id="显式欧拉方法"><a href="#显式欧拉方法" class="headerlink" title="显式欧拉方法"></a>显式欧拉方法</h2><script type="math/tex; mode=display">
+            <h1 id="欧拉方法"><a href="#欧拉方法" class="headerlink" title="欧拉方法"></a>欧拉方法</h1><h2 id="有限差分"><a href="#有限差分" class="headerlink" title="有限差分"></a>有限差分</h2><p>Forward</p>
+<script type="math/tex; mode=display">
+\frac{\text{d}f}{\text dt}=\frac{f(t_0+\Delta t)-f(t_0)}{\Delta t}</script><p>Backward</p>
+<script type="math/tex; mode=display">
+\frac{\text{d}f}{\text dt}=\frac{f(t_0)-f(t-\Delta t)}{\Delta t}</script><p>更精确(二阶)</p>
+<script type="math/tex; mode=display">
+\frac{\text{d}f}{\text dt}=\frac{f(t_0+\Delta t)-f(t_0-\Delta t)}{2\Delta t}</script><p>二阶导数</p>
+<p><img src="/2022/08/07/%E5%A4%A7%E4%B8%80/%E6%9D%82/%E5%9B%BE%E5%BD%A2%E5%AD%A6/image-20230319213302155.png" alt="    "></p>
+<script type="math/tex; mode=display">
+\frac{\text{d}^2f}{\text dt^2}=\frac{f(t_0+\Delta t)+f(t_0-\Delta t)-2f(t_0)}{\Delta t^2}</script><h2 id="显式欧拉方法"><a href="#显式欧拉方法" class="headerlink" title="显式欧拉方法"></a>显式欧拉方法</h2><script type="math/tex; mode=display">
 \begin{cases}\vec{v}\left(t_{1}\right)=\vec{v}\left(t_{0}\right)+M^{-1} \vec{F}\left(t_{0}\right)\Delta t \\
 \vec{x}\left(t_{1}\right)=\vec{x}\left(t_{0}\right)+\vec{v}\left(t_{0}\right) \Delta t\end{cases}</script><p>用当前的状态计算速度和加速度$(\text{Forward} )$</p>
 <p>能量增加，开放的系统</p>
@@ -1057,7 +1066,10 @@ p'=qpq^{-1}</script><h1 id="质点弹簧系统"><a href="#质点弹簧系统" cl
 <script type="math/tex; mode=display">
 f=-k_d\dot{\boldsymbol x}</script><p> 但表示合速度，表示不了弹簧内部的损耗</p>
 <script type="math/tex; mode=display">
-f_a=-k_s\frac{\boldsymbol a-\boldsymbol b}{||\boldsymbol a-\boldsymbol b||}(\dot{\boldsymbol a}-\dot{\boldsymbol b})\cdot\frac{\boldsymbol a-\boldsymbol b}{||\boldsymbol a-\boldsymbol b||}</script>
+f_a=-k_s\frac{\boldsymbol a-\boldsymbol b}{||\boldsymbol a-\boldsymbol b||}(\dot{\boldsymbol a}-\dot{\boldsymbol b})\cdot\frac{\boldsymbol a-\boldsymbol b}{||\boldsymbol a-\boldsymbol b||}</script><h1 id="流体"><a href="#流体" class="headerlink" title="流体"></a>流体</h1><p>不可压缩流体</p>
+<script type="math/tex; mode=display">
+h_{i}\left(t_{0}+\Delta t\right)=2 h_{i}\left(t_{0}\right)-h_{i}\left(t_{0}-\Delta t\right)+\frac{\Delta t^{2}}{\Delta x^{2} \rho}\left(\left(\frac{h_{i-1}+h_{i}}{2}\right)\left(P_{i-1}-P_{i}\right)+\left(\frac{h_{i+1}+h_{i}}{2}\right)\left(P_{i+1}-P_{i}\right)\right)\\
+h_{i}\left(t_{0}+\Delta t\right)=h_{i}\left(t_{0}\right)+\beta\left(h_{i}\left(t_{0}\right)-h_{i}\left(t_{0}-\Delta t\right)\right)+\alpha\left(h_{i+1}\left(t_{0}\right)+h_{i-1}\left(t_{0}\right)-2 h_{i}\left(t_{0}\right)\right)</script>
           
         
       

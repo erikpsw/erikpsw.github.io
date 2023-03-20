@@ -311,6 +311,159 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2023/03/20/%E5%A4%A7%E4%B8%80/%E7%90%86%E8%AE%BA%E5%8A%9B%E5%AD%A6/%E5%8A%9B%E7%B3%BB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2023/03/20/%E5%A4%A7%E4%B8%80/%E7%90%86%E8%AE%BA%E5%8A%9B%E5%AD%A6/%E5%8A%9B%E7%B3%BB/" itemprop="url">大一/理论力学/力系</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-03-20T09:29:33+08:00">
+                2023-03-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="力矩"><a href="#力矩" class="headerlink" title="力矩"></a>力矩</h1><p>对某一轴来说在轴上任取一点与力的作用点连线，矢量为$r$</p>
+<p>则力矩在这个轴上投影为</p>
+<script type="math/tex; mode=display">
+M_s(F)=(\vec r\times \vec F)\cdot\vec s</script><p>利用混合积可以写成</p>
+<script type="math/tex; mode=display">
+\begin{vmatrix}
+ s_x&s_y & s_z\\
+r_x&r_y & r_z \\
+F_x&F_y & F_z
+\end{vmatrix}</script><h2 id="力偶"><a href="#力偶" class="headerlink" title="力偶"></a>力偶</h2><p><img src="/2023/03/20/%E5%A4%A7%E4%B8%80/%E7%90%86%E8%AE%BA%E5%8A%9B%E5%AD%A6/%E5%8A%9B%E7%B3%BB/image-20230320181725219.png" alt="image-20230320181725219"></p>
+<p>大小相等方向相反且不共线的力系称为力偶</p>
+<p>其方向可以由右手螺旋来判定，大小有</p>
+<script type="math/tex; mode=display">
+M=d\times F</script><p>力偶是自由矢量可以进行平移</p>
+<p>注意力偶只能与力偶平衡</p>
+<h1 id="力系的简化"><a href="#力系的简化" class="headerlink" title="力系的简化"></a>力系的简化</h1><h2 id="平移定理"><a href="#平移定理" class="headerlink" title="平移定理"></a>平移定理</h2><p><img src="/2023/03/20/%E5%A4%A7%E4%B8%80/%E7%90%86%E8%AE%BA%E5%8A%9B%E5%AD%A6/%E5%8A%9B%E7%B3%BB/image-20230320182011066.png" alt="image-20230320182011066"></p>
+<p>为了抵消旋转效果我们加上一个力偶就可以等效</p>
+<script type="math/tex; mode=display">
+M_B=Fd</script><p>从而我们可以对力系进行简化，选取简化中心</p>
+<p>将所有的力平移到简化中心，有</p>
+<script type="math/tex; mode=display">
+F_R'=\sum_iF_i\\
+M_O=\sum_iM_O(F_i)=\sum_ir_i\times F_i</script><p>其中分别称为主矢和主矩</p>
+<p>力系向一点简化</p>
+<p><img src="/2023/03/20/%E5%A4%A7%E4%B8%80/%E7%90%86%E8%AE%BA%E5%8A%9B%E5%AD%A6/%E5%8A%9B%E7%B3%BB/image-20230320182850133.png" alt="image-20230320182850133"></p>
+<p>将力偶分解成平行与力方向和垂直力方向的两个力偶</p>
+<p>其中垂直于力方向的可以通过力的平移来抵消</p>
+<script type="math/tex; mode=display">
+d=\frac{M_{O}\sin\theta}{F_R}</script><p><img src="/2023/03/20/%E5%A4%A7%E4%B8%80/%E7%90%86%E8%AE%BA%E5%8A%9B%E5%AD%A6/%E5%8A%9B%E7%B3%BB/image-20230320182748773.png" alt="image-20230320182748773"></p>
+<p>如果用右手定则判断方向与力的方向相同则为右螺旋</p>
+<h1 id="力系的平衡"><a href="#力系的平衡" class="headerlink" title="力系的平衡"></a>力系的平衡</h1><p>对于平面力系有一般方程</p>
+<script type="math/tex; mode=display">
+\begin{cases} \sum F_x=0\\\sum F_y=0\\M_O(F)=0\end{cases}</script><p>同理对于空间</p>
+<script type="math/tex; mode=display">
+\begin{cases} \sum F_x=0\\\sum F_y=0\\\sum F_z=0\\\sum M_x=0\\\sum M_y=0\\\sum M_z=0\end{cases}</script>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2023/02/21/%E5%A4%A7%E4%B8%80/%E7%90%86%E8%AE%BA%E5%8A%9B%E5%AD%A6/%E5%9F%BA%E7%A1%80/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -546,7 +699,10 @@ R\subset U(O,r)</script><p>则为有界集</p>
 f(x,y)\approx f(x_0,y_0)+f_x(x_0,y_0)(x-x_0)+f_y(x_0,y_0)(y-y_0)=L(x,y)</script><p>对于误差$E(x,y)=f(x,y)-L(x,y)$</p>
 <script type="math/tex; mode=display">
 |E(x,y)|\le\frac12M(|x-x_0|+|y-y_0|)^2\\
-M=\max\{|f_{xx}|,|f_{yy}|,|f_{xy}|\}</script><h3 id="链式法则"><a href="#链式法则" class="headerlink" title="链式法则"></a>链式法则</h3><p>利用全微分可以得到链式法则</p>
+M=\max\{|f_{xx}|,|f_{yy}|,|f_{xy}|\}</script><h3 id="链式法则"><a href="#链式法则" class="headerlink" title="链式法则"></a>链式法则</h3><p>复合函数</p>
+<script type="math/tex; mode=display">
+x\overset{f_0 }{\rightarrow}x^1\to\cdots\overset{f_k }{\rightarrow}y\\
+f=f_k^{\circ}f_{k-1}^{\circ}\dots^{\circ}f_0</script><p>利用全微分可以得到链式法则</p>
 <script type="math/tex; mode=display">
 w=f(x(t),y(t))\\
 \frac{\partial w}{\partial t}=\frac{\partial f}{\partial x}\frac{\partial f}{\partial t}+\frac{\partial f}{\partial y}\frac{\partial y}{\partial t}</script><p>更一般的</p>
@@ -1325,156 +1481,6 @@ z_{1} z_{2}=r_{1} r_{2}\left(\cos \left(\theta_{1}+\theta_{2}\right)+i \operator
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2023/01/31/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%94%B5%E5%AD%A6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2023/01/31/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%94%B5%E5%AD%A6/" itemprop="url">大一/物理/电学</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-01-31T18:15:38+08:00">
-                2023-01-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h1><h2 id="远距作用"><a href="#远距作用" class="headerlink" title="远距作用"></a>远距作用</h2><p>过去人们认为相距一段距离的物体发生相互作用是一种远距作用(action at a distance)</p>
-<p>它不需要中间介质的传递只需要两个物体就能发生</p>
-<p>但很多现象无法解释例如为什么有的时候只有直接接触才能产生力</p>
-<h2 id="场论"><a href="#场论" class="headerlink" title="场论"></a>场论</h2><p>因此后来人们认为两个相距一段距离的物体之间存在一种物质通过连续的相互作用使作用得到传递，人们把它称之为场</p>
-<p>作用在场中的传递就像力在弹簧中的传递一样</p>
-<h3 id="标量场"><a href="#标量场" class="headerlink" title="标量场"></a>标量场</h3><script type="math/tex; mode=display">
-f(x,y,z)</script><p>空间中的每一个点都对应一个标量</p>
-<p>固定一个分量可以使用等高线来表示</p>
-<p><img src="/2023/01/31/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%94%B5%E5%AD%A6/image-20230201175531274.png" alt="image-20230201175531274"></p>
-<p>还可以使用颜色映射或三维地形图(Relief Maps)来表示</p>
-<h3 id="向量场"><a href="#向量场" class="headerlink" title="向量场"></a>向量场</h3><p>结果为向量</p>
-<script type="math/tex; mode=display">
-\vec{F}(x,y,z)=f_x(x,y,z)\mathbf{i}+f_y(x,y,z)\mathbf{j}+f_z(x,y,z)\mathbf{k}</script><p>流场</p>
-<script type="math/tex; mode=display">
-\overrightarrow{\mathbf{v}}(x, y, z)=v_{x}(x, y, z) \hat{\mathbf{i}}+v_{y}(x, y, z) \hat{\mathbf{j}}+v_{z}(x, y, z) \hat{\mathbf{k}}</script><p>电场中很多的概念是从流场中类比而来的</p>
-<p>重力场</p>
-<script type="math/tex; mode=display">
-\vec{g}=-G\frac{M}{r^2}\hat{\mathbf{r}}</script><h3 id="电场"><a href="#电场" class="headerlink" title="电场"></a>电场</h3><p>由库仑定律得到</p>
-<script type="math/tex; mode=display">
-\vec{F}_e=k_e\frac{Qq}{r^2},\vec{E}_e=k_e\frac{Q}{r^2},</script><p>注意电荷有正负</p>
-<script type="math/tex; mode=display">
-\vec{F}_e=q\vec{E}_e</script><h2 id="磁场"><a href="#磁场" class="headerlink" title="磁场"></a>磁场</h2><p><img src="/2023/01/31/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%94%B5%E5%AD%A6/image-20230204171759936.png" alt="image-20230204171759936"></p>
-<p>在周围放置许多小磁针，由于力矩的作用使得小磁针成如下排列</p>
-<p><img src="/2023/01/31/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%94%B5%E5%AD%A6/image-20230204171940172.png" alt="image-20230204171940172"></p>
-<p>这形成的一根根线被法拉第描述成电场线</p>
-<p>电场线的切线代表该点处的场强方向</p>
-<p><img src="/2023/01/31/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%94%B5%E5%AD%A6/image-20230204172450907.png" alt="image-20230204172450907" style="zoom: 33%;"></p>
-<blockquote>
-<p>Faraday called the field lines for electric field “lines of force.” </p>
-</blockquote>
-<p>运动的电荷产生磁场(电生磁)</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2023/01/31/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%94%B5%E5%9C%BA/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1619,7 +1625,62 @@ r</script><p>点乘，所以考虑梯度</p>
 E=-\nabla V=-\left(\frac{\partial V}{\partial x},\frac{\partial V}{\partial y},\frac{\partial V}{\partial z}\right)</script><p>更严谨的</p>
 <script type="math/tex; mode=display">
 \text dV=\frac{\partial V}{\partial x}\text dx+\frac{\partial V}{\partial y}\text dy+\frac{\partial V}{\partial z}\text dz\\
-\text dV=-E\cdot  \text d s</script>
+\text dV=-E\cdot  \text d s</script><h1 id="导体的电场"><a href="#导体的电场" class="headerlink" title="导体的电场"></a>导体的电场</h1><h2 id="静电平衡"><a href="#静电平衡" class="headerlink" title="静电平衡"></a>静电平衡</h2><p><img src="/2023/01/31/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%94%B5%E5%9C%BA/image-20230320085139503.png" alt="image-20230320085139503" style="zoom: 33%;"></p>
+<p>对于导体内部，条件为</p>
+<script type="math/tex; mode=display">
+E+E_{感}=0</script><p><img src="/2023/01/31/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%94%B5%E5%9C%BA/image-20230320085233890.png" alt="image-20230320085233890" style="zoom:50%;"></p>
+<p>对表面用高斯定理得到若内部没有电荷则电荷只能在表面分布</p>
+<script type="math/tex; mode=display">
+E=\frac \sigma{\varepsilon_0}</script><p>对于内部有电荷的情况，内外不会相互影响</p>
+<p><img src="/2023/01/31/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%94%B5%E5%9C%BA/image-20230320085903461.png" alt="image-20230320085903461" style="zoom:33%;"></p>
+<p>内部电荷为$-q$，外层分布只和外电场有关</p>
+<p>若接地则为静电屏蔽，没有电场</p>
+<h1 id="电介质"><a href="#电介质" class="headerlink" title="电介质"></a>电介质</h1><p>因为电介质常为中性存在正负电荷所以引入电偶极子和偶极矩(电矩)</p>
+<script type="math/tex; mode=display">
+\vec p=q\vec l</script><p>方向由负电荷指向正电荷</p>
+<p>电介质中存在大量电偶极子，所以引入电极化强度</p>
+<script type="math/tex; mode=display">
+\boldsymbol P=\frac{
+\sum_i\boldsymbol p_i
+}V</script><p>对于表面，有</p>
+<script type="math/tex; mode=display">
+\sigma'=P\cos\theta =P_n</script><h2 id="高斯定理-1"><a href="#高斯定理-1" class="headerlink" title="高斯定理"></a>高斯定理</h2><p>单独对极化电荷</p>
+<script type="math/tex; mode=display">
+\oint_{S}\vec P\cdot \text d\vec S=-\sum_{i}q_{i}</script><p>为了方便计算单独考虑自由电荷产生的电场</p>
+<script type="math/tex; mode=display">
+\oint_{S}(\varepsilon_0E+P)\cdot \text d\vec S=-\sum_{\text{free}}q_{i}</script><p>从而定义电位移</p>
+<script type="math/tex; mode=display">
+D=\varepsilon_0E+P\\
+E=\frac{D-P}{\varepsilon_0}</script><p>合场强是由自由电荷和极化电荷产生电场的叠加</p>
+<p>类比电场线我们可以引入电位移线，始于正自由电荷终于负自由电荷</p>
+<p>对于各向同性的电介质，$\chi _e$为电极化率</p>
+<script type="math/tex; mode=display">
+P=\chi _e\varepsilon_0E\\
+D=(1+\chi _e)\varepsilon_0E=\varepsilon_r\varepsilon_0E=\varepsilon E</script><p>将$\varepsilon$称为为电介质的介电常量，$\varepsilon_r$为相对介电常量</p>
+<h2 id="电容器"><a href="#电容器" class="headerlink" title="电容器"></a>电容器</h2><p>电容为电容器容纳电荷的本领</p>
+<script type="math/tex; mode=display">
+C=\frac{Q}V</script><p>单位为法拉</p>
+<script type="math/tex; mode=display">
+\rm 1 F=10^6\mu F=10^{12}pF</script><h3 id="常见电容器"><a href="#常见电容器" class="headerlink" title="常见电容器"></a>常见电容器</h3><p>平行板电容器</p>
+<script type="math/tex; mode=display">
+C=\frac{\varepsilon_r\varepsilon_0S}{d}</script><p>将$\varepsilon$称为为电容率，$\varepsilon_r$为相对电容率</p>
+<p>球型</p>
+<script type="math/tex; mode=display">
+C=\frac{4\pi \varepsilon R_A R_B}{ R_B-R_A}</script><p>圆柱</p>
+<script type="math/tex; mode=display">
+C=\frac{2\pi\varepsilon l}{\ln\frac{R_B}{R_A}}</script><h2 id="连接"><a href="#连接" class="headerlink" title="连接"></a>连接</h2><p> 和电阻相反</p>
+<h3 id="串联"><a href="#串联" class="headerlink" title="串联"></a>串联</h3><script type="math/tex; mode=display">
+\frac1C=\sum_i\frac1{C_i}</script><h2 id="并联"><a href="#并联" class="headerlink" title="并联"></a>并联</h2><script type="math/tex; mode=display">
+C=\sum_i C_i</script><h1 id="静电场的能量"><a href="#静电场的能量" class="headerlink" title="静电场的能量"></a>静电场的能量</h1><p>电荷之间相互作用从而存在能量，类比引力势能</p>
+<script type="math/tex; mode=display">
+W_e=\frac12\sum_iq_iV_i</script><p>对于连续分布的带电体</p>
+<script type="math/tex; mode=display">
+W_e=\frac12\int_qV\text dq</script><h2 id="电容器-1"><a href="#电容器-1" class="headerlink" title="电容器"></a>电容器</h2><p>由于电容器的$U$为电势差，充电时电荷从一个极板移向另一个极板</p>
+<script type="math/tex; mode=display">
+W=\frac12QU=\frac 12CU^2=\frac12\frac{Q^2}C</script><p>所以从广义上讲，电场的能量就是聚集电荷所需的功</p>
+<script type="math/tex; mode=display">
+W_e=\int _V\frac 12\varepsilon E^2\text dV</script><p>其中$\frac 12\varepsilon E^2$为电场的能量密度</p>
+
           
         
       
@@ -1868,6 +1929,11 @@ z = r\cos \theta
 r &= \sqrt {x^2 + y^2 + z^2} \\
 \theta  &=  \operatorname{Arctan}  \left(\sqrt{x^2 + y^2}, z \right) \\
 \phi  &=  \operatorname{Arctan} (y, x)\end{aligned}\right.</script><p>类似经度和纬度</p>
+<h2 id="映射"><a href="#映射" class="headerlink" title="映射"></a>映射</h2><script type="math/tex; mode=display">
+f:R^n\to R^m</script><p>对于$n&lt;m$，为低维到高维的映射，本征维度为$n$</p>
+<p>$m&lt;n$，降维映射，一般会损失数据</p>
+<p><img src="/2023/01/11/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/image-20230319122239725.png" alt="image-20230319122239725"></p>
+<p>取一小段可以看到仍为本征维度</p>
 
           
         
