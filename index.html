@@ -311,6 +311,207 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2023/03/22/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2023/03/22/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/" itemprop="url">大一/数据科学/数值分析</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-03-22T11:38:32+08:00">
+                2023-03-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="有限差分"><a href="#有限差分" class="headerlink" title="有限差分"></a>有限差分</h1><p>Forward</p>
+<script type="math/tex; mode=display">
+\frac{\text{d}f}{\text dt}=\frac{f(t_0+\Delta t)-f(t_0)}{\Delta t}</script><p>Backward</p>
+<script type="math/tex; mode=display">
+\frac{\text{d}f}{\text dt}=\frac{f(t_0)-f(t-\Delta t)}{\Delta t}</script><p>更精确(二阶)</p>
+<script type="math/tex; mode=display">
+\frac{\text{d}f}{\text dt}=\frac{f(t_0+\Delta t)-f(t_0-\Delta t)}{2\Delta t}</script><p>二阶导数</p>
+<p><img src="/2023/03/22/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/image-20230319213302155.png" alt="    "></p>
+<script type="math/tex; mode=display">
+\frac{\text{d}^2f}{\text dt^2}=\frac{f(t_0+\Delta t)+f(t_0-\Delta t)-2f(t_0)}{\Delta t^2}</script><h2 id="理查森外推公式"><a href="#理查森外推公式" class="headerlink" title="理查森外推公式"></a>理查森外推公式</h2><p>对于某个带误差的式子</p>
+<script type="math/tex; mode=display">
+Q=F(h)+kh^n</script><p>再加入一个方程可以得到</p>
+<script type="math/tex; mode=display">
+Q=\frac{2^nF(h/2)-F(h)}{2^n-1}</script><h1 id="插值"><a href="#插值" class="headerlink" title="插值"></a>插值</h1><h2 id="拉格朗日"><a href="#拉格朗日" class="headerlink" title="拉格朗日"></a>拉格朗日</h2><script type="math/tex; mode=display">
+L_{n-1}(x)=\sum_{k=0}^{n-1}y_k\frac{\displaystyle\prod_{j\ne k}(x-x_j)}{\displaystyle\prod_{j\ne k}(x_k-x_j)}\\
+p(x)=\prod_{j\ne k}(x-x_j)</script><p>缺点：在一堆原始点中，只改变了其中几个点的情况下，所有的基函数和插值曲线都要重新计算</p>
+<h2 id="牛顿"><a href="#牛顿" class="headerlink" title="牛顿"></a>牛顿</h2><p>差商</p>
+<script type="math/tex; mode=display">
+f[x_0]=f(x_0)\\
+f[x_0,x_1]=\frac{f[x_1]-f[x_0]}{x_1-x_1}\\
+f\left[x_{0}, x_{1}, \cdots, x_{n}\right]=\frac{f\left[x_{1}, x_{2}, \cdots, x_{n}\right]-f\left[x_{0}, x_{1}, \cdots, x_{n-1}\right]}{x_{n}-x_{0}}</script><p>则有牛顿插值公式 </p>
+<script type="math/tex; mode=display">
+\begin{array}{l}
+f(x)=f\left[x_{0}\right]+f\left[x_{0}, x_{1}\right]\left(x-x_{0}\right) \\
++f\left[x_{0}, x_{1}, x_{2}\right]\left(x-x_{0}\right)\left(x-x_{1}\right)+\ldots \\
++f\left[x_{0}, x_{1}, \ldots, x_{n}\right]\left(x-x_{0}\right)\left(x-x_{1}\right) \ldots\left(x-x_{n-1}\right) 
+\end{array}</script><h1 id="数值积分"><a href="#数值积分" class="headerlink" title="数值积分"></a>数值积分</h1><p><img src="/2023/03/22/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/image-20230325100922762.png" alt="image-20230325100922762"></p>
+<h2 id="Trapezoid"><a href="#Trapezoid" class="headerlink" title="Trapezoid"></a>Trapezoid</h2><p>用四边形进行逼近，如图$(a)$</p>
+<script type="math/tex; mode=display">
+\int_{x_0}^{x_1}f(x)\text dx=h\left [\frac{f(x_1)+f(x_0)}2\right]</script><p>每两个点进行采样，从而有</p>
+<script type="math/tex; mode=display">
+\int_{a}^{b}f(x)\text dx=\frac h2\left [f(a)+f(b)+2\sum_{i=1}^{m-1}f(x_i)\right]-\sum_{i=1}^{m-1}\frac{h^3}{12}f''(c_i)</script><p>由广义介值定理</p>
+<script type="math/tex; mode=display">
+f(x)\sum_{i=1}^na_i=\sum_{i=1}^na_i f(x_i)\\
+\sum_{i=1}^{m-1}\frac{h^3}{12}f''(c_i)=\frac{h^2(b-a)}{12}f''(c)</script><h2 id="Simpson"><a href="#Simpson" class="headerlink" title="Simpson"></a>Simpson</h2><p>用二次函数来插值三个点，积分得</p>
+<script type="math/tex; mode=display">
+\int_{x_0}^{x_2}f(x)\text dx=\frac h3(y_0+4y_1+y_2)-\frac{h^5}{90}f^{(5)}(c)</script><p>从而对于区间$[a,b]$</p>
+<script type="math/tex; mode=display">
+\int_{a}^{b}f(x)\text dx=\frac h3\left [f(x_0)+f(b)+2\sum_{i=1}^{m-1}f(x_{2i})+4\sum_{i=1}^{m}f(x_{2i-1})\right]</script><h2 id="龙贝格"><a href="#龙贝格" class="headerlink" title="龙贝格"></a>龙贝格</h2><p>Romberg Integration</p>
+<p>利用外推公式和增加细分</p>
+<script type="math/tex; mode=display">
+h_j=\frac{b-a}{2^{j-1}}\\
+R_{j,1}=\frac 12R_{j-1,1}+h_j\sum_{i=1}^{2^{j-1}}f[a+(2j-1)h_j]\\
+R_{j,k}=\frac{4^{k-1}R_{j,k-1}-R_{j-1,k-1}}{4^{k-1}-1}</script><h2 id="自适应"><a href="#自适应" class="headerlink" title="自适应"></a>自适应</h2><p>Adaptive Quadrature</p>
+<p>如果使用Simpson方法</p>
+<script type="math/tex; mode=display">
+\text {error}=\frac 1{15}\left[S(a,b)-S\left(a,\frac{a+b}2\right)-S\left(\frac{a+b}2,b\right)\right]</script><h1 id="二维"><a href="#二维" class="headerlink" title="二维"></a>二维</h1><p>用网格来表示</p>
+<h2 id="偏微分方程"><a href="#偏微分方程" class="headerlink" title="偏微分方程"></a>偏微分方程</h2><p>对于$u(x,y)$</p>
+<script type="math/tex; mode=display">
+Au_{x x} + Bu_{x y} + Cu_{yy} + F(u_x ,u_y ,u, x, y) = 0</script><p>利用前面的公式固定一个变量，有</p>
+<script type="math/tex; mode=display">
+u_{x x}(x, t) \approx \frac{1}{h^{2}}(u(x+h, t)-2 u(x, t)+u(x-h, t))</script><p>对于热传导方程，使用Forward Difference Method</p>
+<script type="math/tex; mode=display">
+u_t=Du_{xx}\\\sigma =\frac{Dk}{h^2}\\
+\\w_{i,j+1}=\sigma w_{i+1,j}+(1-2\sigma)w_{i,j}+\sigma w_{i-1,j}</script><p>如果直接能从前面的值推算出后面的值则为显式</p>
+<p>写成矩阵形式$w<em>{j+1} = Aw</em>{j} + s_j$</p>
+<script type="math/tex; mode=display">
+\left[\begin{array}{c}
+w_{1, j+1} \\
+\vdots \\
+w_{m, j+1}
+\end{array}\right]=\left[\begin{array}{ccccc}
+1-2 \sigma & \sigma & 0 & \cdots & 0 \\
+\sigma & 1-2 \sigma & \sigma & \ddots & \vdots \\
+0 & \sigma & 1-2 \sigma & \ddots & 0 \\
+\vdots & \ddots & \ddots & \ddots & \sigma \\
+0 & \cdots & 0 & \sigma & 1-2 \sigma
+\end{array}\right]\left[\begin{array}{c}
+w_{1 j} \\
+\vdots \\
+w_{m j}
+\end{array}\right]+\sigma\left[\begin{array}{c}
+w_{0, j} \\
+0 \\
+\vdots \\
+0 \\
+w_{m+1, j}
+\end{array}\right]</script><p>显式具有不稳定性，误差容易爆炸</p>
+<h3 id="隐式"><a href="#隐式" class="headerlink" title="隐式"></a>隐式</h3><p>使用Backward来计算导数可以得到</p>
+<script type="math/tex; mode=display">
+-\sigma w_{i+1,j}-\sigma w_{i-1,j}+(1+2\sigma)w_{i,j}= w_{i,j-1}</script><script type="math/tex; mode=display">
+\left[ \begin{array} { c c c c c } { 1 + 2 \sigma } & { - \sigma } & { 0 } & { \cdots } & { 0 } \\ { - \sigma } & { 1 + 2 \sigma } & { - \sigma } & { \ddots } & { \vdots } \\ { 0 } & { - \sigma } & { 1 + 2 \sigma } & { \ddots } & { 0 } \\ { \vdots } & { \ddots } & { \ddots } & { \ddots } & { - \sigma } \\ { 0 } & { \cdots } & { 0 } & { - \sigma } & { 1 + 2 \sigma } \end{array} \right] \left[ \begin{array} { c } { w _ { 1 j } } \\ { \vdots } \\ { w _ { m j } } \end{array} \right] = \left[ \begin{array} { c } { w _ { 1 , j - 1 } } \\ { \vdots } \\ { w _ { m , j - 1 } } \end{array} \right] + \sigma \left[ \begin{array} { c } { w _ { 0 j } } \\ { 0 } \\ { \vdots } \\ { 0 } \\ { w _ { m + 1 , j } } \end{array} \right]</script><p>$$</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2023/03/20/%E5%A4%A7%E4%B8%80/%E7%90%86%E8%AE%BA%E5%8A%9B%E5%AD%A6/%E5%8A%9B%E7%B3%BB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1969,146 +2170,6 @@ f:R^n\to R^m</script><p>对于$n&lt;m$，为低维到高维的映射，本征维
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2023/01/11/%E5%A4%A7%E4%B8%80/%E6%9D%82/%E7%9E%8E%E5%87%A0%E6%8A%8A%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2023/01/11/%E5%A4%A7%E4%B8%80/%E6%9D%82/%E7%9E%8E%E5%87%A0%E6%8A%8A%E8%AE%B0/" itemprop="url">大一/杂/瞎几把记</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-01-11T17:56:32+08:00">
-                2023-01-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="颜色系统"><a href="#颜色系统" class="headerlink" title="颜色系统"></a>颜色系统</h1><p>RGB系统使用三个十六进制数来表示颜色的3个分量红绿蓝</p>
-<script type="math/tex; mode=display">
-\rm \#FFFFFF\to white</script><p>从$(0,0,0)\to(255,255,255)$</p>
-<p>可以得到逐渐变亮的颜色</p>
-<p>YCbCr其中Y代表亮度（Luminance或Luma）,也就是灰阶值；而“Cb“和“Cr” 表示的则是色度（Chrominance或Chroma）</p>
-<script type="math/tex; mode=display">
-\rm\begin{cases}Y= 0.257R + 0.504G + 0.098B + 16\\
-\rm Cb = -0.148R - 0.291G + 0.439B + 128\\
-\rm Cr  = 0.439R - 0.368G - 0.071B + 128\end{cases}</script><p>转为RGB</p>
-<script type="math/tex; mode=display">
-\begin{cases}
-\rm R= 1.164(Y - 16) + 1.596(Cr - 128)\\
-\rm G= 1.164(Y - 16) - 0.813(Cr - 128) - 0.392(Cb - 128)\\
-\rm B= 1.164(Y - 16) + 2.017(Cb - 128)\end{cases}</script><h1 id="白金汉π定理"><a href="#白金汉π定理" class="headerlink" title="白金汉π定理"></a>白金汉π定理</h1><p>物理量$q_i$之间满足</p>
-<script type="math/tex; mode=display">
-f(q_1,q_2\dots q_m)=0</script><p>则有</p>
-<script type="math/tex; mode=display">
-[q_j]=\prod_{i=1}^nX_i^{a_{ij}}\\
-A=(a_{ij})_{m\times n}</script><p>存在$m-\text{Rank} A$个无量纲量$\pi_s$</p>
-<p>$\text{Rank} A$为基本物理量的个数</p>
-<script type="math/tex; mode=display">
-F(\pi_1,\pi_2\dots\pi_{m-\text{Rank} A})=0</script>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2159,7 +2220,7 @@ F(\pi_1,\pi_2\dots\pi_{m-\text{Rank} A})=0</script>
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">81</span>
+                <span class="site-state-item-count">82</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

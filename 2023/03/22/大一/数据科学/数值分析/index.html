@@ -94,32 +94,20 @@
 
 
 
-<meta name="description" content="基本概念例​：$f(x)&#x3D;x^2$ 定义了一个函数 $f$ ，法则为将一个数转变为它的平方 未指定，故定义域为$\mathbf{R }$(实数集) 意义：$f(2)&#x3D;4$，通过法则$f$将数字$2$转变为$4$  By the way, $f$ is the transformation rule, while $f(x)$ is the result of applying the transf">
+<meta name="description" content="有限差分Forward  \frac{\text{d}f}{\text dt}&#x3D;\frac{f(t_0+\Delta t)-f(t_0)}{\Delta t}Backward  \frac{\text{d}f}{\text dt}&#x3D;\frac{f(t_0)-f(t-\Delta t)}{\Delta t}更精确(二阶)  \frac{\text{d}f}{\text dt}&#x3D;\frac{f(t_0">
 <meta property="og:type" content="article">
-<meta property="og:title" content="大一&#x2F;高数&#x2F;函数">
-<meta property="og:url" content="http://yoursite.com/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/index.html">
+<meta property="og:title" content="大一&#x2F;数据科学&#x2F;数值分析">
+<meta property="og:url" content="http://yoursite.com/2023/03/22/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/index.html">
 <meta property="og:site_name" content="BLOG">
-<meta property="og:description" content="基本概念例​：$f(x)&#x3D;x^2$ 定义了一个函数 $f$ ，法则为将一个数转变为它的平方 未指定，故定义域为$\mathbf{R }$(实数集) 意义：$f(2)&#x3D;4$，通过法则$f$将数字$2$转变为$4$  By the way, $f$ is the transformation rule, while $f(x)$ is the result of applying the transf">
+<meta property="og:description" content="有限差分Forward  \frac{\text{d}f}{\text dt}&#x3D;\frac{f(t_0+\Delta t)-f(t_0)}{\Delta t}Backward  \frac{\text{d}f}{\text dt}&#x3D;\frac{f(t_0)-f(t-\Delta t)}{\Delta t}更精确(二阶)  \frac{\text{d}f}{\text dt}&#x3D;\frac{f(t_0">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20220803230718705.png">
-<meta property="og:image" content="http://yoursite.com/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20220903183803562.png">
-<meta property="og:image" content="http://yoursite.com/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20220903184248952.png">
-<meta property="og:image" content="http://yoursite.com/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20220903184550875.png">
-<meta property="og:image" content="http://yoursite.com/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20220903184848430.png">
-<meta property="og:image" content="http://yoursite.com/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20221024164637553.png">
-<meta property="og:image" content="http://yoursite.com/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20221024165718816.png">
-<meta property="og:image" content="http://yoursite.com/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20221024165731926.png">
-<meta property="og:image" content="http://yoursite.com/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20221024170051034.png">
-<meta property="og:image" content="http://yoursite.com/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20221024170150305.png">
-<meta property="og:image" content="http://yoursite.com/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20221004215400105.png">
-<meta property="og:image" content="http://yoursite.com/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20221004214520866.png">
-<meta property="og:image" content="http://yoursite.com/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/Signum_function.svg.png">
-<meta property="og:image" content="http://yoursite.com/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/Signum_function.svg-1666608110047.png">
-<meta property="article:published_time" content="2022-08-03T14:24:00.473Z">
-<meta property="article:modified_time" content="2022-12-02T04:36:05.605Z">
+<meta property="og:image" content="http://yoursite.com/2023/03/22/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/image-20230319213302155.png">
+<meta property="og:image" content="http://yoursite.com/2023/03/22/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/image-20230325100922762.png">
+<meta property="article:published_time" content="2023-03-22T03:38:32.380Z">
+<meta property="article:modified_time" content="2023-03-25T15:10:20.240Z">
 <meta property="article:author" content="Shiwei Pan">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20220803230718705.png">
+<meta name="twitter:image" content="http://yoursite.com/2023/03/22/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/image-20230319213302155.png">
 
 
 
@@ -148,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2022/08/03/大一/高数/函数/"/>
+  <link rel="canonical" href="http://yoursite.com/2023/03/22/大一/数据科学/数值分析/"/>
 
 
 
 
 
-  <title>大一/高数/函数 | BLOG</title>
+  <title>大一/数据科学/数值分析 | BLOG</title>
   
 
 
@@ -326,7 +314,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2023/03/22/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Shiwei Pan">
@@ -343,7 +331,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">大一/高数/函数</h1>
+          <h1 class="post-title" itemprop="name headline">大一/数据科学/数值分析</h1>
         
 
         <div class="post-meta">
@@ -355,8 +343,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-08-03T22:24:00+08:00">
-                2022-08-03
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-03-22T11:38:32+08:00">
+                2023-03-22
               </time>
             
 
@@ -393,143 +381,89 @@
       
 
       
-        <h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><p>例​：$f(x)=x^2$</p>
-<p>定义了一个函数 $f$ ，法则为将一个数转变为它的平方</p>
-<p>未指定，故定义域为$\mathbf{R }$(实数集)</p>
-<p>意义：$f(2)=4$，通过法则$f$将数字$2$转变为$4$</p>
-<blockquote>
-<p>By the way, $f$ is the transformation rule, while $f(x)$ is the result of applying the transformation rule to the variable $x$. So it’s technically not correct to say “$f(x)$ is a function”; it should be “$f$ is a function.”</p>
-</blockquote>
-<h2 id="区间"><a href="#区间" class="headerlink" title="区间"></a>区间</h2><script type="math/tex; mode=display">
-[a, b) \quad\{x: a \leq x<b\}</script><p><img src="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20220803230718705.png" alt="image-20220803230718705"></p>
+        <h1 id="有限差分"><a href="#有限差分" class="headerlink" title="有限差分"></a>有限差分</h1><p>Forward</p>
 <script type="math/tex; mode=display">
-(−8, 13]\backslash
+\frac{\text{d}f}{\text dt}=\frac{f(t_0+\Delta t)-f(t_0)}{\Delta t}</script><p>Backward</p>
+<script type="math/tex; mode=display">
+\frac{\text{d}f}{\text dt}=\frac{f(t_0)-f(t-\Delta t)}{\Delta t}</script><p>更精确(二阶)</p>
+<script type="math/tex; mode=display">
+\frac{\text{d}f}{\text dt}=\frac{f(t_0+\Delta t)-f(t_0-\Delta t)}{2\Delta t}</script><p>二阶导数</p>
+<p><img src="/2023/03/22/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/image-20230319213302155.png" alt="    "></p>
+<script type="math/tex; mode=display">
+\frac{\text{d}^2f}{\text dt^2}=\frac{f(t_0+\Delta t)+f(t_0-\Delta t)-2f(t_0)}{\Delta t^2}</script><h2 id="理查森外推公式"><a href="#理查森外推公式" class="headerlink" title="理查森外推公式"></a>理查森外推公式</h2><p>对于某个带误差的式子</p>
+<script type="math/tex; mode=display">
+Q=F(h)+kh^n</script><p>再加入一个方程可以得到</p>
+<script type="math/tex; mode=display">
+Q=\frac{2^nF(h/2)-F(h)}{2^n-1}</script><h1 id="插值"><a href="#插值" class="headerlink" title="插值"></a>插值</h1><h2 id="拉格朗日"><a href="#拉格朗日" class="headerlink" title="拉格朗日"></a>拉格朗日</h2><script type="math/tex; mode=display">
+L_{n-1}(x)=\sum_{k=0}^{n-1}y_k\frac{\displaystyle\prod_{j\ne k}(x-x_j)}{\displaystyle\prod_{j\ne k}(x_k-x_j)}\\
+p(x)=\prod_{j\ne k}(x-x_j)</script><p>缺点：在一堆原始点中，只改变了其中几个点的情况下，所有的基函数和插值曲线都要重新计算</p>
+<h2 id="牛顿"><a href="#牛顿" class="headerlink" title="牛顿"></a>牛顿</h2><p>差商</p>
+<script type="math/tex; mode=display">
+f[x_0]=f(x_0)\\
+f[x_0,x_1]=\frac{f[x_1]-f[x_0]}{x_1-x_1}\\
+f\left[x_{0}, x_{1}, \cdots, x_{n}\right]=\frac{f\left[x_{1}, x_{2}, \cdots, x_{n}\right]-f\left[x_{0}, x_{1}, \cdots, x_{n-1}\right]}{x_{n}-x_{0}}</script><p>则有牛顿插值公式 </p>
+<script type="math/tex; mode=display">
+\begin{array}{l}
+f(x)=f\left[x_{0}\right]+f\left[x_{0}, x_{1}\right]\left(x-x_{0}\right) \\
++f\left[x_{0}, x_{1}, x_{2}\right]\left(x-x_{0}\right)\left(x-x_{1}\right)+\ldots \\
++f\left[x_{0}, x_{1}, \ldots, x_{n}\right]\left(x-x_{0}\right)\left(x-x_{1}\right) \ldots\left(x-x_{n-1}\right) 
+\end{array}</script><h1 id="数值积分"><a href="#数值积分" class="headerlink" title="数值积分"></a>数值积分</h1><p><img src="/2023/03/22/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/image-20230325100922762.png" alt="image-20230325100922762"></p>
+<h2 id="Trapezoid"><a href="#Trapezoid" class="headerlink" title="Trapezoid"></a>Trapezoid</h2><p>用四边形进行逼近，如图$(a)$</p>
+<script type="math/tex; mode=display">
+\int_{x_0}^{x_1}f(x)\text dx=h\left [\frac{f(x_1)+f(x_0)}2\right]</script><p>每两个点进行采样，从而有</p>
+<script type="math/tex; mode=display">
+\int_{a}^{b}f(x)\text dx=\frac h2\left [f(a)+f(b)+2\sum_{i=1}^{m-1}f(x_i)\right]-\sum_{i=1}^{m-1}\frac{h^3}{12}f''(c_i)</script><p>由广义介值定理</p>
+<script type="math/tex; mode=display">
+f(x)\sum_{i=1}^na_i=\sum_{i=1}^na_i f(x_i)\\
+\sum_{i=1}^{m-1}\frac{h^3}{12}f''(c_i)=\frac{h^2(b-a)}{12}f''(c)</script><h2 id="Simpson"><a href="#Simpson" class="headerlink" title="Simpson"></a>Simpson</h2><p>用二次函数来插值三个点，积分得</p>
+<script type="math/tex; mode=display">
+\int_{x_0}^{x_2}f(x)\text dx=\frac h3(y_0+4y_1+y_2)-\frac{h^5}{90}f^{(5)}(c)</script><p>从而对于区间$[a,b]$</p>
+<script type="math/tex; mode=display">
+\int_{a}^{b}f(x)\text dx=\frac h3\left [f(x_0)+f(b)+2\sum_{i=1}^{m-1}f(x_{2i})+4\sum_{i=1}^{m}f(x_{2i-1})\right]</script><h2 id="龙贝格"><a href="#龙贝格" class="headerlink" title="龙贝格"></a>龙贝格</h2><p>Romberg Integration</p>
+<p>利用外推公式和增加细分</p>
+<script type="math/tex; mode=display">
+h_j=\frac{b-a}{2^{j-1}}\\
+R_{j,1}=\frac 12R_{j-1,1}+h_j\sum_{i=1}^{2^{j-1}}f[a+(2j-1)h_j]\\
+R_{j,k}=\frac{4^{k-1}R_{j,k-1}-R_{j-1,k-1}}{4^{k-1}-1}</script><h2 id="自适应"><a href="#自适应" class="headerlink" title="自适应"></a>自适应</h2><p>Adaptive Quadrature</p>
+<p>如果使用Simpson方法</p>
+<script type="math/tex; mode=display">
+\text {error}=\frac 1{15}\left[S(a,b)-S\left(a,\frac{a+b}2\right)-S\left(\frac{a+b}2,b\right)\right]</script><h1 id="二维"><a href="#二维" class="headerlink" title="二维"></a>二维</h1><p>用网格来表示</p>
+<h2 id="偏微分方程"><a href="#偏微分方程" class="headerlink" title="偏微分方程"></a>偏微分方程</h2><p>对于$u(x,y)$</p>
+<script type="math/tex; mode=display">
+Au_{x x} + Bu_{x y} + Cu_{yy} + F(u_x ,u_y ,u, x, y) = 0</script><p>利用前面的公式固定一个变量，有</p>
+<script type="math/tex; mode=display">
+u_{x x}(x, t) \approx \frac{1}{h^{2}}(u(x+h, t)-2 u(x, t)+u(x-h, t))</script><p>对于热传导方程，使用Forward Difference Method</p>
+<script type="math/tex; mode=display">
+u_t=Du_{xx}\\\sigma =\frac{Dk}{h^2}\\
+\\w_{i,j+1}=\sigma w_{i+1,j}+(1-2\sigma)w_{i,j}+\sigma w_{i-1,j}</script><p>如果直接能从前面的值推算出后面的值则为显式</p>
+<p>写成矩阵形式$w<em>{j+1} = Aw</em>{j} + s_j$</p>
+<script type="math/tex; mode=display">
+\left[\begin{array}{c}
+w_{1, j+1} \\
+\vdots \\
+w_{m, j+1}
+\end{array}\right]=\left[\begin{array}{ccccc}
+1-2 \sigma & \sigma & 0 & \cdots & 0 \\
+\sigma & 1-2 \sigma & \sigma & \ddots & \vdots \\
+0 & \sigma & 1-2 \sigma & \ddots & 0 \\
+\vdots & \ddots & \ddots & \ddots & \sigma \\
+0 & \cdots & 0 & \sigma & 1-2 \sigma
+\end{array}\right]\left[\begin{array}{c}
+w_{1 j} \\
+\vdots \\
+w_{m j}
+\end{array}\right]+\sigma\left[\begin{array}{c}
+w_{0, j} \\
+0 \\
+\vdots \\
+0 \\
+w_{m+1, j}
+\end{array}\right]</script><p>显式具有不稳定性，误差容易爆炸</p>
+<h3 id="隐式"><a href="#隐式" class="headerlink" title="隐式"></a>隐式</h3><p>使用Backward来计算导数可以得到</p>
+<script type="math/tex; mode=display">
+-\sigma w_{i+1,j}-\sigma w_{i-1,j}+(1+2\sigma)w_{i,j}= w_{i,j-1}</script><script type="math/tex; mode=display">
+\left[ \begin{array} { c c c c c } { 1 + 2 \sigma } & { - \sigma } & { 0 } & { \cdots } & { 0 } \\ { - \sigma } & { 1 + 2 \sigma } & { - \sigma } & { \ddots } & { \vdots } \\ { 0 } & { - \sigma } & { 1 + 2 \sigma } & { \ddots } & { 0 } \\ { \vdots } & { \ddots } & { \ddots } & { \ddots } & { - \sigma } \\ { 0 } & { \cdots } & { 0 } & { - \sigma } & { 1 + 2 \sigma } \end{array} \right] \left[ \begin{array} { c } { w _ { 1 j } } \\ { \vdots } \\ { w _ { m j } } \end{array} \right] = \left[ \begin{array} { c } { w _ { 1 , j - 1 } } \\ { \vdots } \\ { w _ { m , j - 1 } } \end{array} \right] + \sigma \left[ \begin{array} { c } { w _ { 0 j } } \\ { 0 } \\ { \vdots } \\ { 0 } \\ { w _ { m + 1 , j } } \end{array} \right]</script><p>$$</p>
 
- \{2\}(\text{not including 2})</script><h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><h2 id="基本初等函数"><a href="#基本初等函数" class="headerlink" title="基本初等函数"></a>基本初等函数</h2><p>常函数，幂函数，三角函数，反三角函数，对数函数，指数函数</p>
-<p>初等函数是由基本初等函数经过==有限次==复合形成的能用一个式子表示的函数</p>
-<h2 id="反三角函数"><a href="#反三角函数" class="headerlink" title="反三角函数"></a>反三角函数</h2><p><img src="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20220903183803562.png" alt="image-20220903183803562"></p>
-<script type="math/tex; mode=display">
-x\in[-1,1],y\in\left[-\frac\pi2,\frac\pi2\right]\\
-\frac{\text{d}}{\text{d}x}\arcsin x=\frac1{\sqrt{1-x^2}}</script><p><img src="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20220903184248952.png" alt="image-20220903184248952"></p>
-<script type="math/tex; mode=display">
-x\in[-1,1],y\in\left[0,\pi\right]</script><p>重要关系</p>
-<script type="math/tex; mode=display">
-\sin\left(\frac\pi2-x\right)=\cos x=t
-\\ \arcsin x+\arccos x=\frac\pi2</script><p><img src="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20220903184550875.png" alt="image-20220903184550875"></p>
-<p><img src="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20220903184848430.png" alt="image-20220903184848430"></p>
-<script type="math/tex; mode=display">
-x\in\mathbf{R},y\in\left(-\frac\pi2,\frac\pi2\right)</script><script type="math/tex; mode=display">
-\arctan A-\arctan B=\arctan \frac{A-B}{1+A B}</script><script type="math/tex; mode=display">
-A=\tan \alpha \Leftrightarrow \alpha=k\pi+ \arctan A</script><p><img src="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20221024164637553.png" alt="image-20221024164637553"></p>
-<p>例</p>
-<script type="math/tex; mode=display">
-f(x)=\cot x(x\in(\pi,2\pi))\\
-f_{\text{std}}=\cot(x-\pi),x-\pi=\text{arccot}(x-\pi)\\
-f^{-1}(x)=\pi+\text{arccot}(x)</script><p><img src="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20221024165718816.png" alt="image-20221024165718816"></p>
-<p><img src="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20221024165731926.png" alt="image-20221024165731926"></p>
-<p><img src="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20221024170051034.png" alt="image-20221024170051034"></p>
-<p><img src="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20221024170150305.png" alt="image-20221024170150305"></p>
-<h2 id="双曲函数"><a href="#双曲函数" class="headerlink" title="双曲函数"></a>双曲函数</h2><p><img src="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20221004215400105.png" alt="image-20221004215400105"></p>
-<script type="math/tex; mode=display">
-\sinh x=\frac{e^x-e^{-x}}2\\
-\cosh x=\frac{e^x+e^{-x}}2</script><script type="math/tex; mode=display">
-\cosh^2 x - \sinh^2 x = 1\\
-\sinh\left(x+y\right)  = \sinh x \cosh y + \cosh x \sinh y\\ \cosh\left(x+y\right)  = \cosh x \cosh y + \sinh x \sinh y</script><p><img src="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/image-20221004214520866.png" alt="image-20221004214520866"></p>
-<script type="math/tex; mode=display">
-\sinh^{-1} x =  \ln\left(x + \sqrt{x^2 + 1}\right) 
-\\
-\cosh^{-1} x =  \ln\left(x + \sqrt{x^2 - 1}\right) 
-\\</script><h1 id="函数的极限"><a href="#函数的极限" class="headerlink" title="函数的极限"></a>函数的极限</h1><h2 id="varepsilon-delta-定义"><a href="#varepsilon-delta-定义" class="headerlink" title="$\varepsilon-\delta$定义"></a>$\varepsilon-\delta$定义</h2><p>$\forall \varepsilon&gt;0$，$\exists \delta&gt;0$，使得$x\in(a-\delta,a+\delta)$时，$|f(x)-A|&lt;\varepsilon$恒成立，但存在$f(a)$无定义，故$0&lt;|x-a|&lt;\delta$</p>
-<p>记作：</p>
-<script type="math/tex; mode=display">
-\lim_{x\to a}f(x)=A</script><h3 id="去心-delta-邻域"><a href="#去心-delta-邻域" class="headerlink" title="去心$\delta$邻域"></a>去心$\delta$邻域</h3><script type="math/tex; mode=display">
-\mathring{U}(a,\delta)=\{x|0<|x-a|<\delta,\delta>0\}</script><h3 id="右-delta-邻域"><a href="#右-delta-邻域" class="headerlink" title="右$\delta$邻域"></a>右$\delta$邻域</h3><script type="math/tex; mode=display">
-\mathring{U}^+(a,\delta)=\{x|0<x-a<\delta\}=(a,a+\delta)</script><h2 id="左右极限"><a href="#左右极限" class="headerlink" title="左右极限"></a>左右极限</h2><p>若对$\forall \varepsilon&gt;0$，$\exists \delta&gt;0$，当$x\in\mathring{U}^+(a,\delta)$时恒有${|f(a)-A|&lt;\varepsilon}$</p>
-<p>就称$A$为函数$f(x)$在$a$处的右极限，记为</p>
-<script type="math/tex; mode=display">
-\lim_{x\to a^+}f(x)=A</script><h2 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h2><script type="math/tex; mode=display">
-\lim_{x\to a}f(x)存在\Leftrightarrow\lim_{x\to a^-}f(x)和\lim_{x\to a^+}f(x)\\分别存在且相等</script><h2 id="无穷"><a href="#无穷" class="headerlink" title="无穷"></a>无穷</h2><p>设$f(x)$在$|x|&gt;M,M&gt;0$时有定义，$A$为某一常数，若对任意$\varepsilon&gt;$0，都$\exists X&gt;0$使得当$ |x|&gt;X$时</p>
-<script type="math/tex; mode=display">
-|f(x)-A|<\varepsilon</script><p>那么就称$A$为函数$f(x)$当$x\to \infty$的极限</p>
-<script type="math/tex; mode=display">
-\lim_{x\to \infty}f(x)=A/f(x)\to A(当x\to  \infty)</script><p>同理正无穷去掉绝对值</p>
-<h1 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h1><h2 id="有界性"><a href="#有界性" class="headerlink" title="有界性"></a>有界性</h2><p>设$f(x)$在区间$X$上有定义，且对任意$x\in X$，存在$M$使得</p>
-<script type="math/tex; mode=display">
-|f(x)|\le M</script><p>就称$f(x)$在$X$上有界</p>
-<p>同理若</p>
-<script type="math/tex; mode=display">
-f(x)\le K_1</script><p>则称$f(x)$在X上有上界，其中$K_1$为$f(x)$在$X$上的一个上界</p>
-<h3 id="连续"><a href="#连续" class="headerlink" title="连续"></a>连续</h3><p>$f(x)\in C[a,b]$则$f(x)$在$[a,b]$上有界</p>
-<p>但开区间不一定满足有界</p>
-<p>若有界则$\exists \lim<em>{x\to a^+} f(x),\lim</em>{x\to b^-} f(x)$</p>
-<h2 id="极限的性质"><a href="#极限的性质" class="headerlink" title="极限的性质"></a>极限的性质</h2><h3 id="唯一性"><a href="#唯一性" class="headerlink" title="唯一性"></a>唯一性</h3><p>若有极限，则必唯一</p>
-<p>逆否：若左右极限不等，则极限不存在</p>
-<h3 id="局部有界性"><a href="#局部有界性" class="headerlink" title="局部有界性"></a>局部有界性</h3><p>函数与数列的区别是函数是连续的而数列是离散的</p>
-<p>如$y=\frac1x$极限为$0$但无界</p>
-<p>若$\displaystyle\lim_{x\to a}f(x)=A$，则$\exists \delta&gt;0$，当$x\in \mathring{U}(a,\delta),|f(x)|\le M(M&gt;0)$</p>
-<p>反向</p>
-<p>若$\displaystyle\lim_{x\to a}f(x)=A(A\ne 0)$，则$\exists \delta&gt;0$，当$x\in \mathring{U}(a,\delta),|f(x)|&gt;\left|\frac A2\right |(M&gt;0)$</p>
-<h4 id="单侧有界性"><a href="#单侧有界性" class="headerlink" title="单侧有界性"></a>单侧有界性</h4><p> 可单侧使用</p>
-<p>若右极限存在，则在右邻域中有界</p>
-<h3 id="保号性"><a href="#保号性" class="headerlink" title="保号性"></a>保号性</h3><p>若$\displaystyle\lim_{x\to a}f(x)=A&gt;0$，则$\exists \delta&gt;0$，当$x\in \mathring{U}(a,\delta),f(x)&gt;0$</p>
-<h2 id="复合函数"><a href="#复合函数" class="headerlink" title="复合函数"></a>复合函数</h2><p>$y=f[\varphi(x)]$==其中$\varphi (x)\ne a $==，若</p>
-<script type="math/tex; mode=display">
-\lim_{x\to x_0}\varphi(x)=a,\lim_{x\to a}f(x)=A\Rightarrow\\
-\lim_{x\to x_0}f[\varphi(x)]=A</script><p>$f(x)$可能在$a$处无定义</p>
-<h2 id="连续与间断"><a href="#连续与间断" class="headerlink" title="连续与间断"></a>连续与间断</h2><p>定义，若$f(x)$在$x_0$的邻域(不去心)有定义，且</p>
-<script type="math/tex; mode=display">
-\lim_{\Delta x\to0}\Delta y=\lim_{\Delta x\to0}f(x_0+\Delta x)-f(x_0)=0</script><p>等价定义(三合一)，必须双向逼近</p>
-<script type="math/tex; mode=display">
-\lim_{x\to x_0}f(x)=f(x_0)=\lim_{x\to x_0^+/x_0^-}f(x)</script><p>特点:</p>
-<ul>
-<li>在邻域有定义$\exists f(x_0)$</li>
-<li>左右极限存在且相等</li>
-<li>等于函数值</li>
-</ul>
-<h3 id="在区间上连续"><a href="#在区间上连续" class="headerlink" title="在区间上连续"></a>在区间上连续</h3><p>开区间若每一点连续则在区间上连续                                                                                                                                                                                            </p>
-<p>闭区间在端点处只要求单侧连续</p>
-<p>基本初等函数在定义域上连续</p>
-<p>初等函数在定义区间上连续($\text{not}$定义域)</p>
-<p>反例$y=\sqrt{\sin x-1}$无邻域</p>
-<h3 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h3><p>四则注意分母不为0 </p>
-<h3 id="复合函数-1"><a href="#复合函数-1" class="headerlink" title="复合函数"></a>复合函数</h3><script type="math/tex; mode=display">
-\lim_{x\to x_0}\varphi(x)=a,\lim_{x\to a}f(x)=f(a)=A\\
-\Rightarrow\lim_{x\to x_0}f[\varphi(x)]=f[\lim_{x\to x_0}\varphi(x)]=f(a)</script><p>内层不需要连续，连续则极限符号可交换</p>
-<h3 id="间断"><a href="#间断" class="headerlink" title="间断"></a>间断</h3><p>首先有函数在去心领域有定义，其次不连续</p>
-<h3 id="介值定理"><a href="#介值定理" class="headerlink" title="介值定理"></a>介值定理</h3><p>$f(x)$在$[a,b]$上连续，则对$\forall c\in[m,M]$，$\exists \xi\in[a,b],\text{s.t.}f(\xi)=c$</p>
-<h4 id="离散形式"><a href="#离散形式" class="headerlink" title="离散形式"></a>离散形式</h4><p>数列满足$|a<em>{n+1}-a</em>{n}|\le1$则类比介值定理</p>
-<h3 id="零点定理"><a href="#零点定理" class="headerlink" title="零点定理"></a>零点定理</h3><p>$f(x)$在$[a,b]$上连续，则若$f(a)f(b)&lt;0$，$\exists \xi\in(a,b),\text{s.t.}f(\xi)=0$</p>
-<p>实际上为零点定理的特殊形式</p>
-<h1 id="特殊函数"><a href="#特殊函数" class="headerlink" title="特殊函数"></a>特殊函数</h1><p>绝对值$|x|$，$0$处连续但不可导</p>
-<script type="math/tex; mode=display">
-\lim_{x\to0}\frac{f(x+h)-f(x-h)}h=0</script><ul>
-<li><p>曲线光滑不一定可导</p>
-<p>$y=x^{\frac13},y’=\frac{1}{3x^{\frac23}},x\to0,y’=\infty$</p>
-</li>
-<li><p>导数存在不一定连续可导(导函数连续)</p>
-<script type="math/tex; mode=display">
-f(x)=\begin{cases}x^2\sin \frac1x,x\ne0\\
-0,x=0\end{cases}</script></li>
-</ul>
-<p>符号函数</p>
-<p><img src="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/Signum_function.svg.png" alt="Signum_function.svg"></p>
-<script type="math/tex; mode=display">
-x=|x|\text{sgn}x \\
-|x|=x\text{sgn}x</script><script type="math/tex; mode=display">
-f(x)=\begin{cases}1,x\ge0\\
--1,x<0\end{cases}</script><p>$|f(x)|$连续</p>
-<p><img src="/2022/08/03/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%87%BD%E6%95%B0/Signum_function.svg-1666608110047.png" alt="Signum_function.svg"></p>
-<script type="math/tex; mode=display">
-[x]\le x<[x]+1</script><p>定义域为$\mathbf R$，值域为$\mathbf Z$</p>
-<script type="math/tex; mode=display">
-[x]+[y]\le[x+y]\le[x]+[y]+1</script><p><strong>Dirichlet function</strong></p>
-<script type="math/tex; mode=display">
-\textbf{1}_{\mathbb{Q}}(x)=\begin{cases}1,x\in \mathbb{Q}\\
-0,x\notin \mathbb{Q}\end{cases}</script><p>处处无极限，处处不连续，处处不可导</p>
-<p>任意有理数都为其周期，无最小正周期，偶函数</p>
-<script type="math/tex; mode=display">
-f(x)=\begin{cases}\frac1x,x\ne0\\
-0,x=0\end{cases},f(f(x))=x</script>
       
     </div>
     
@@ -561,8 +495,8 @@ f(x)=\begin{cases}\frac1x,x\ne0\\
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2022/07/31/%E5%A4%A7%E4%B8%80/c%E8%AF%AD%E8%A8%80/%E5%BE%AA%E7%8E%AF/" rel="next" title="大一/c语言/循环">
-                <i class="fa fa-chevron-left"></i> 大一/c语言/循环
+              <a href="/2023/03/20/%E5%A4%A7%E4%B8%80/%E7%90%86%E8%AE%BA%E5%8A%9B%E5%AD%A6/%E5%8A%9B%E7%B3%BB/" rel="next" title="大一/理论力学/力系">
+                <i class="fa fa-chevron-left"></i> 大一/理论力学/力系
               </a>
             
           </div>
@@ -570,10 +504,6 @@ f(x)=\begin{cases}\frac1x,x\ne0\\
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/" rel="prev" title="大一/线性代数/矩阵">
-                大一/线性代数/矩阵 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -736,7 +666,7 @@ f(x)=\begin{cases}\frac1x,x\ne0\\
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基本概念"><span class="nav-number">1.</span> <span class="nav-text">基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#区间"><span class="nav-number">1.1.</span> <span class="nav-text">区间</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数"><span class="nav-number">2.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本初等函数"><span class="nav-number">2.1.</span> <span class="nav-text">基本初等函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#反三角函数"><span class="nav-number">2.2.</span> <span class="nav-text">反三角函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#双曲函数"><span class="nav-number">2.3.</span> <span class="nav-text">双曲函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数的极限"><span class="nav-number">3.</span> <span class="nav-text">函数的极限</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#varepsilon-delta-定义"><span class="nav-number">3.1.</span> <span class="nav-text">$\varepsilon-\delta$定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#去心-delta-邻域"><span class="nav-number">3.1.1.</span> <span class="nav-text">去心$\delta$邻域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#右-delta-邻域"><span class="nav-number">3.1.2.</span> <span class="nav-text">右$\delta$邻域</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#左右极限"><span class="nav-number">3.2.</span> <span class="nav-text">左右极限</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定理"><span class="nav-number">3.3.</span> <span class="nav-text">定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#无穷"><span class="nav-number">3.4.</span> <span class="nav-text">无穷</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#性质"><span class="nav-number">4.</span> <span class="nav-text">性质</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#有界性"><span class="nav-number">4.1.</span> <span class="nav-text">有界性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#连续"><span class="nav-number">4.1.1.</span> <span class="nav-text">连续</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#极限的性质"><span class="nav-number">4.2.</span> <span class="nav-text">极限的性质</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#唯一性"><span class="nav-number">4.2.1.</span> <span class="nav-text">唯一性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#局部有界性"><span class="nav-number">4.2.2.</span> <span class="nav-text">局部有界性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#单侧有界性"><span class="nav-number">4.2.2.1.</span> <span class="nav-text">单侧有界性</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#保号性"><span class="nav-number">4.2.3.</span> <span class="nav-text">保号性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复合函数"><span class="nav-number">4.3.</span> <span class="nav-text">复合函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#连续与间断"><span class="nav-number">4.4.</span> <span class="nav-text">连续与间断</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#在区间上连续"><span class="nav-number">4.4.1.</span> <span class="nav-text">在区间上连续</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运算"><span class="nav-number">4.4.2.</span> <span class="nav-text">运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复合函数-1"><span class="nav-number">4.4.3.</span> <span class="nav-text">复合函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#间断"><span class="nav-number">4.4.4.</span> <span class="nav-text">间断</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#介值定理"><span class="nav-number">4.4.5.</span> <span class="nav-text">介值定理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#离散形式"><span class="nav-number">4.4.5.1.</span> <span class="nav-text">离散形式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#零点定理"><span class="nav-number">4.4.6.</span> <span class="nav-text">零点定理</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#特殊函数"><span class="nav-number">5.</span> <span class="nav-text">特殊函数</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#有限差分"><span class="nav-number">1.</span> <span class="nav-text">有限差分</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#理查森外推公式"><span class="nav-number">1.1.</span> <span class="nav-text">理查森外推公式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#插值"><span class="nav-number">2.</span> <span class="nav-text">插值</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#拉格朗日"><span class="nav-number">2.1.</span> <span class="nav-text">拉格朗日</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#牛顿"><span class="nav-number">2.2.</span> <span class="nav-text">牛顿</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数值积分"><span class="nav-number">3.</span> <span class="nav-text">数值积分</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Trapezoid"><span class="nav-number">3.1.</span> <span class="nav-text">Trapezoid</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Simpson"><span class="nav-number">3.2.</span> <span class="nav-text">Simpson</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#龙贝格"><span class="nav-number">3.3.</span> <span class="nav-text">龙贝格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自适应"><span class="nav-number">3.4.</span> <span class="nav-text">自适应</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二维"><span class="nav-number">4.</span> <span class="nav-text">二维</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#偏微分方程"><span class="nav-number">4.1.</span> <span class="nav-text">偏微分方程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#隐式"><span class="nav-number">4.1.1.</span> <span class="nav-text">隐式</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
