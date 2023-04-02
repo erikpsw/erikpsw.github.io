@@ -4493,7 +4493,8 @@ R\subset U(O,r)</script><p>则为有界集</p>
 <script type="math/tex; mode=display">
 \frac{\partial^{2} f}{\partial x^{2}}=\frac{\partial}{\partial x}\left(\frac{\partial f}{\partial x}\right), \quad \frac{\partial^{2} f}{\partial x \partial y}=\frac{\partial}{\partial x}\left(\frac{\partial f}{\partial y}\right)</script><p>杨氏定理(Young’s theorem)，二阶偏微分连续，二阶混合偏导数相等</p>
 <script type="math/tex; mode=display">
-\frac{\partial^{2} f}{\partial x \partial y}=\frac{\partial^{2} f}{\partial y \partial x}</script><h2 id="全微分"><a href="#全微分" class="headerlink" title="全微分"></a>全微分</h2><script type="math/tex; mode=display">
+\frac{\partial^{2} f}{\partial x \partial y}=\frac{\partial^{2} f}{\partial y \partial x}</script><p>可偏(有偏导数)不代表有全微分形式</p>
+<h2 id="全微分"><a href="#全微分" class="headerlink" title="全微分"></a>全微分</h2><script type="math/tex; mode=display">
 \text{d}z=\frac{\partial f}{\partial x}\text{d}x+\frac{\partial f}{\partial y}\text{d}y</script><p>从而有标准线性近似</p>
 <script type="math/tex; mode=display">
 f(x,y)\approx f(x_0,y_0)+f_x(x_0,y_0)(x-x_0)+f_y(x_0,y_0)(y-y_0)=L(x,y)</script><p>对于误差$E(x,y)=f(x,y)-L(x,y)$</p>
@@ -4509,7 +4510,26 @@ w=f(x(t),y(t))\\
 <p><img src="/2023/02/15/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%A4%9A%E5%85%83%E5%BE%AE%E5%88%86/image-20230216140235918.png" alt="image-20230216140235918"></p>
 <script type="math/tex; mode=display">
 \frac{\partial w}{\partial r}=\frac{\partial w}{\partial x} \frac{\partial x}{\partial r}+\frac{\partial w}{\partial y} \frac{\partial y}{\partial r}+\frac{\partial w}{\partial z} \frac{\partial z}{\partial r} \\
-\frac{\partial w}{\partial s}=\frac{\partial w}{\partial x} \frac{\partial x}{\partial s}+\frac{\partial w}{\partial y} \frac{\partial y}{\partial s}+\frac{\partial w}{\partial z} \frac{\partial z}{\partial s}</script><h2 id="方向导数"><a href="#方向导数" class="headerlink" title="方向导数"></a>方向导数</h2><p>方向导数为函数在某一方向(正反都可以)上的变化率</p>
+\frac{\partial w}{\partial s}=\frac{\partial w}{\partial x} \frac{\partial x}{\partial s}+\frac{\partial w}{\partial y} \frac{\partial y}{\partial s}+\frac{\partial w}{\partial z} \frac{\partial z}{\partial s}</script><h2 id="隐函数"><a href="#隐函数" class="headerlink" title="隐函数"></a>隐函数</h2><p>首先，有方程</p>
+<script type="math/tex; mode=display">
+F(x,y,z)=0</script><p>从而若$F_z\ne 0$可以确定一个函数$z(x,y)$</p>
+<p>由方程推导法(两边直接对$x,y$求导)</p>
+<p>或用公式</p>
+<script type="math/tex; mode=display">
+\frac{\partial z}{\partial x}=-\frac{F_x}{F_z} \\
+\frac{\partial z}{\partial y}=-\frac{F_y}{F_z}</script><p>利用全微分可以将两个导数同时求出</p>
+<h3 id="方程组"><a href="#方程组" class="headerlink" title="方程组"></a>方程组</h3><script type="math/tex; mode=display">
+\begin{cases}F(x,y,u,v)=0\\
+G(x,y,u,v)=0\end{cases}</script><p>如果</p>
+<script type="math/tex; mode=display">
+J=\frac{\partial(F,G)}{\partial(u,v)}=\begin{vmatrix}\frac{\partial F}{\partial u}&\frac{\partial F}{\partial v}\\\frac{\partial G}{\partial u}&\frac{\partial G}{\partial v}\end{vmatrix} \ne0</script><p> 则可以确定$u(x,y)$和$v(x,y)$，一个方程确定一个因变量</p>
+<p>将要求的因变量用自变量替换得到</p>
+<script type="math/tex; mode=display">
+\frac{\partial u}{\partial x}=-\frac1J\frac{\partial(F,G)}{\partial(x,v)}=-\frac1J\begin{vmatrix}\frac{\partial F}{\partial x}&\frac{\partial F}{\partial v}\\\frac{\partial G}{\partial x}&\frac{\partial G}{\partial v}\end{vmatrix}</script><p>同理也有方程推导法和微分法</p>
+<p>根据克拉姆法则，对于一个$n$元线性方程组，如果它的系数矩阵的行列式不等于零，则可以使用如下公式求解：</p>
+<script type="math/tex; mode=display">
+x_i = \Delta_i / \Delta</script><p>其中，$xi$是第$i$个未知数的值，$\Delta_i$是将系数矩阵中第i列替换为常数矩阵后的行列式值，$\Delta$是系数矩阵的行列式值。</p>
+<h2 id="方向导数"><a href="#方向导数" class="headerlink" title="方向导数"></a>方向导数</h2><p>方向导数为函数在某一方向(正反都可以)上的变化率</p>
 <p><img src="/2023/02/15/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%A4%9A%E5%85%83%E5%BE%AE%E5%88%86/image-20230216180930645.png" alt="image-20230216180930645" style="zoom:50%;"></p>
 <script type="math/tex; mode=display">
 \frac{\partial f}{\partial l}=\lim _{s \rightarrow 0} \frac{f\left(x_{0}+sl_x, y_{0}+sl_y\right)-f\left(x_{0}, y_{0}\right)}{s}</script><p>定义$l$的方向余弦为</p>
@@ -4522,19 +4542,60 @@ w=f(x(t),y(t))\\
 \text{grad}f=\nabla  f(x,y)=\left(\frac{\partial f}{\partial x},\frac{\partial f}{\partial y}\right)</script><p>利用辅助角公式得出梯度方向的方向导数最大，或</p>
 <script type="math/tex; mode=display">
 \left. \frac{\partial f}{\partial l}\right|_{x_0,y_0}=\nabla  f(x,y)\cdot(\cos\alpha,\cos\beta)</script><p>所以梯度指向上升最快的方向</p>
-<p>引入等值面$f(x,y)=c$，引入参数$t$后得到</p>
-<script type="math/tex; mode=display">
-\left(\frac{\partial f}{\partial x},\frac{\partial f}{\partial y}\right)\cdot\left(\frac{\partial x}{\partial t},\frac{\partial y}{\partial t}\right)=2 \frac{\partial f}{\partial t}=0</script><p>梯度向量垂直于等值面，梯度的模为沿梯度方向的方向导数</p>
 <p>可以看出梯度向量垂直于等高线的切线</p>
 <script type="math/tex; mode=display">
 \nabla (kf)=k\nabla f\\
 \nabla(f\pm g)=\nabla f\pm \nabla g\\
 \nabla (fg)=\nabla fg+f\nabla g\\
-\nabla\left(\frac fg\right)=\frac{\nabla fg-f\nabla g}{g^2}</script><p>推广到三维空间，切平面</p>
+\nabla\left(\frac fg\right)=\frac{\nabla fg-f\nabla g}{g^2}</script><h3 id="切线和法线"><a href="#切线和法线" class="headerlink" title="切线和法线"></a>切线和法线</h3><p>引入等值面$f(x,y)=c$，对于空间曲线引入参数$t$后得到</p>
+<script type="math/tex; mode=display">
+\left(\frac{\partial f}{\partial x},\frac{\partial f}{\partial y}\right)\cdot\left(\frac{\partial x}{\partial t},\frac{\partial y}{\partial t}\right)=2 \frac{\partial f}{\partial t}=0</script><p>梯度向量垂直于等值面，梯度的模为沿梯度方向的方向导数</p>
+<p>对于切线</p>
+<script type="math/tex; mode=display">
+\frac{x-x_0}{\varphi'(t_0)}=\frac{y-y_0}{\phi'(t_0)}=\frac{z-z_0}{\omega'(t_0)}</script><p>法平面为与切线垂直的面</p>
+<script type="math/tex; mode=display">
+{\varphi'(t_0)}(x-x_0)={\phi'(t_0)}(y-y_0)={\omega'(t_0)}(z-z_0)</script><p>对于由方程确定的曲线</p>
+<script type="math/tex; mode=display">
+\begin{cases}F(x,y,z)=0\\
+G(x,y,z)=0\end{cases}\\
+J=\frac{\partial(F,G)}{\partial(y,z)}</script><p>则以$x$为参数可以写成</p>
+<script type="math/tex; mode=display">
+\begin{cases}x=x\\
+y=y(x)\\z=z(x)\end{cases}</script><p>解出</p>
+<script type="math/tex; mode=display">
+T=(1,y_x,z_x)</script><p>整理得轮换对称式</p>
+<script type="math/tex; mode=display">
+T=\left(\begin{vmatrix}F_y&F_z\\ G_y& G_z\end{vmatrix}_M,\begin{vmatrix}F_z&F_x\\ G_z& G_x\end{vmatrix}_M,\begin{vmatrix}F_x&F_y\\ G_x& G_y\end{vmatrix}_M\right)</script><p>推广到三维空间，切向量</p>
+<script type="math/tex; mode=display">
+T=(F_x,F_y,F_z)=(-z_x,-z_y,1)</script><p>切平面</p>
 <script type="math/tex; mode=display">
 f_{x}\left(P_{0}\right)\left(x-x_{0}\right)+f_{y}\left(P_{0}\right)\left(y-y_{0}\right)+f_{z}\left(P_{0}\right)\left(z-z_{0}\right)=0</script><p>法线</p>
 <script type="math/tex; mode=display">
-x=x_{0}+f_{x}\left(P_{0}\right) t, \quad y=y_{0}+f_{y}\left(P_{0}\right) t, \quad z=z_{0}+f_{z}\left(P_{0}\right) t</script>]]></content>
+x=x_{0}+f_{x}\left(P_{0}\right) t, \quad y=y_{0}+f_{y}\left(P_{0}\right) t, \quad z=z_{0}+f_{z}\left(P_{0}\right) t</script><p>可以方便地使用全微分公式得到</p>
+<h1 id="极值和最值"><a href="#极值和最值" class="headerlink" title="极值和最值"></a>极值和最值</h1><p>$n$ 元函数 $f(x_1,x_2,\ldots,x_n)$，若存在某个自变量取值的去心邻域，在该邻域内函数值不小于（或不大于）该自变量取值处的函数值，则称该自变量取值处为函数的极大值点（或极小值点）</p>
+<h2 id="必要条件"><a href="#必要条件" class="headerlink" title="必要条件"></a>必要条件</h2><p>一阶偏导数都为$0$</p>
+<script type="math/tex; mode=display">
+f_x(x,y)=0,f_y(x,y)=0</script><h2 id="充分条件"><a href="#充分条件" class="headerlink" title="充分条件"></a>充分条件</h2><p>引入Hessian 矩阵</p>
+<script type="math/tex; mode=display">
+H=\begin{bmatrix}
+\frac{\partial^2 f}{\partial x_1^2} & \frac{\partial^2 f}{\partial x_1 \partial x_2} & \cdots & \frac{\partial^2 f}{\partial x_1 \partial x_n}\\
+\frac{\partial^2 f}{\partial x_2 \partial x_1} & \frac{\partial^2 f}{\partial x_2^2} & \cdots & \frac{\partial^2 f}{\partial x_2 \partial x_n}\\
+\vdots & \vdots & \ddots & \vdots\\
+\frac{\partial^2 f}{\partial x_n \partial x_1} & \frac{\partial^2 f}{\partial x_n \partial x_2} & \cdots & \frac{\partial^2 f}{\partial x_n^2}
+\end{bmatrix}</script><p>对于二元</p>
+<script type="math/tex; mode=display">
+f_{xx}=A,f_{xy}=B,f_{yy}=C</script><p>若$AC-B^2&gt;0$则有极值，$A/C&gt;0$则为极小值</p>
+<p>若$AC-B^2&lt;0$则无极值，$AC-B^2=0$则可能有</p>
+<h2 id="拉格朗日函数"><a href="#拉格朗日函数" class="headerlink" title="拉格朗日函数"></a>拉格朗日函数</h2><p>对于约束条件$g(x_1,x_2,\dots,x_n)=0$，可以构造拉格朗日函数 $L(x_1,x_2,\dots,x_n)=f(x_1,x_2,\dots,x_n)+\lambda g(x_1,x_2,\dots,x_n)$</p>
+<script type="math/tex; mode=display">
+\begin{cases} \frac{\partial L}{\partial x_1} = 0\\
+\frac{\partial L}{\partial x_2} = 0\\
+\cdots\\
+\frac{\partial L}{\partial x_n} = 0\\
+\frac{\partial L}{\partial \lambda} = 0\\
+
+\end{cases}</script><p>需要注意的是，拉格朗日乘数法并不适用于所有类型的优化问题，有些问题可能存在多个局部极小值或不可导等情况，需要根据具体问题进行分析</p>
+]]></content>
   </entry>
   <entry>
     <title>大一/物理/电场</title>
@@ -4588,7 +4649,14 @@ k_e=\frac1{4\pi\varepsilon _0}</script><p>注意电荷有正负</p>
 \Phi=\oint_{S}\vec E\cdot \text d\vec S=\frac1{\varepsilon_0}\sum_{i=1}^nq_i</script><h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><p>如果选取恰当的高斯面(球面或柱面)，则</p>
 <script type="math/tex; mode=display">
 E,\cos \theta=\text{constant}</script><p>就可以通过电荷量计算出场强</p>
-<h1 id="电势能"><a href="#电势能" class="headerlink" title="电势能"></a>电势能</h1><p>电场力为保守力，做功与路径无关</p>
+<p>无限长的导线</p>
+<script type="math/tex; mode=display">
+E=\frac\lambda{4\pi\varepsilon_0 r}(\cos\theta_1-\cos\theta_2)\\
+E=\frac\lambda{2\pi\varepsilon_0 r}</script><p>无限大平板</p>
+<script type="math/tex; mode=display">
+E=\frac{\sigma}{2\varepsilon_0 }</script><p>对电偶极子，$p=ql$由负到正</p>
+<script type="math/tex; mode=display">
+E=\frac{-p}{4\pi\varepsilon_0r^3}</script><h1 id="电势能"><a href="#电势能" class="headerlink" title="电势能"></a>电势能</h1><p>电场力为保守力，做功与路径无关</p>
 <script type="math/tex; mode=display">
 W_{ab}=\frac{q_0}{4\pi\varepsilon_0}\sum_iq_i\left(\frac1{r_{ia}}-\frac1{r_{ib}}\right)</script><p>所以有环路定理</p>
 <script type="math/tex; mode=display">
@@ -4794,5 +4862,59 @@ w_{m+1, j}
 -\sigma w_{i+1,j}-\sigma w_{i-1,j}+(1+2\sigma)w_{i,j}= w_{i,j-1}</script><script type="math/tex; mode=display">
 \left[ \begin{array} { c c c c c } { 1 + 2 \sigma } & { - \sigma } & { 0 } & { \cdots } & { 0 } \\ { - \sigma } & { 1 + 2 \sigma } & { - \sigma } & { \ddots } & { \vdots } \\ { 0 } & { - \sigma } & { 1 + 2 \sigma } & { \ddots } & { 0 } \\ { \vdots } & { \ddots } & { \ddots } & { \ddots } & { - \sigma } \\ { 0 } & { \cdots } & { 0 } & { - \sigma } & { 1 + 2 \sigma } \end{array} \right] \left[ \begin{array} { c } { w _ { 1 j } } \\ { \vdots } \\ { w _ { m j } } \end{array} \right] = \left[ \begin{array} { c } { w _ { 1 , j - 1 } } \\ { \vdots } \\ { w _ { m , j - 1 } } \end{array} \right] + \sigma \left[ \begin{array} { c } { w _ { 0 j } } \\ { 0 } \\ { \vdots } \\ { 0 } \\ { w _ { m + 1 , j } } \end{array} \right]</script><p>$$</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>大一/物理/磁场</title>
+    <url>/2023/04/02/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%A3%81%E5%9C%BA/</url>
+    <content><![CDATA[<p>对于阴极射线的研究发现</p>
+<script type="math/tex; mode=display">
+F=q\vec E+q\vec v\times \vec B</script><h1 id="洛伦兹力"><a href="#洛伦兹力" class="headerlink" title="洛伦兹力"></a>洛伦兹力</h1><p>同上式</p>
+<script type="math/tex; mode=display">
+F=qvB\sin\theta</script><p>从而可以得到磁感应强度</p>
+<script type="math/tex; mode=display">
+B=\frac{F_\text{max}}{q_0v}</script><p>同电场可以定义磁感应线</p>
+<p><img src="/2023/04/02/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%A3%81%E5%9C%BA/image-20230402161414825.png" alt="image-20230402161414825" style="zoom:50%;"></p>
+<h1 id="电流"><a href="#电流" class="headerlink" title="电流"></a>电流</h1><script type="math/tex; mode=display">
+I=\frac{\text dq}{\text dt}=nqSv</script><p>引入电流强度</p>
+<script type="math/tex; mode=display">
+\vec j=nq\vec v</script><p>来表示电流</p>
+<h1 id="毕奥萨伐尔定律"><a href="#毕奥萨伐尔定律" class="headerlink" title="毕奥萨伐尔定律"></a>毕奥萨伐尔定律</h1><p><img src="/2023/04/02/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%A3%81%E5%9C%BA/image-20230402162157506.png" alt="image-20230402162157506" style="zoom:50%;"></p>
+<p>对于电流元$I\text dl$，定律告诉我们</p>
+<script type="math/tex; mode=display">
+\text dB=\frac{\mu_0}{4\pi}\frac{I\text dl\times e_r}{r^2}</script><h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><p>常见的磁场</p>
+<p>导线</p>
+<script type="math/tex; mode=display">
+B=\frac{\mu_0I}{4\pi a}(\cos \theta_1-\cos \theta_2)</script><p>无限长</p>
+<script type="math/tex; mode=display">
+B=\frac{\mu_0I}{2\pi a}</script><p><img src="/2023/04/02/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%A3%81%E5%9C%BA/image-20230402163056575.png" alt="image-20230402163056575" style="zoom:50%;"></p>
+<script type="math/tex; mode=display">
+B=\frac{\mu_0}2\frac{IR^2}{(R^2+x^2)^{3/2}}</script><p>对于$x=0$处</p>
+<script type="math/tex; mode=display">
+B=\frac{\mu_0I}{2 a}</script><p>若远离</p>
+<script type="math/tex; mode=display">
+B=\frac{\mu_0IS}{2\pi x^3},S=\pi R^2</script><p>引入磁矩</p>
+<script type="math/tex; mode=display">
+m=ISe_n</script><p>这就是磁偶极磁场</p>
+<p>运动电荷，有</p>
+<script type="math/tex; mode=display">
+B=\frac{\mu_0}{4\pi}\frac{qv\times e_r}{r^2}</script><h1 id="高斯定理"><a href="#高斯定理" class="headerlink" title="高斯定理"></a>高斯定理</h1><p>磁场的散度为零</p>
+<script type="math/tex; mode=display">
+\text{div}B=0</script><p>所以有</p>
+<script type="math/tex; mode=display">
+\oint_SB\cdot\text dS=0</script><h1 id="安培环路定理"><a href="#安培环路定理" class="headerlink" title="安培环路定理"></a>安培环路定理</h1><p><img src="/2023/04/02/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%A3%81%E5%9C%BA/image-20230402165353178.png" alt="image-20230402165353178" style="zoom:33%;"></p>
+<script type="math/tex; mode=display">
+\oint_LB\text dl=\mu_0\sum_iI_i</script><p>电流方向符合使用右手定则得到的绕行方向时为正</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>大一/数据科学/数字信号处理</title>
+    <url>/2023/04/01/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/</url>
+    <content><![CDATA[<h1 id="信号"><a href="#信号" class="headerlink" title="信号"></a>信号</h1><p>Unit sample sequence</p>
+<script type="math/tex; mode=display">
+\delta(n)=\begin{cases}1,n=0\\0,n\ne0\end{cases}=\{⋯,0,0,1,0,0,⋯\}</script><p>Unit step sequence</p>
+<script type="math/tex; mode=display">
+u(n)=\begin{cases}1,n≥0\\0,n<0\end{cases}=\{⋯,0,0,1,1,1,⋯\}</script><h2 id="卷积"><a href="#卷积" class="headerlink" title="卷积"></a>卷积</h2><script type="math/tex; mode=display">
+(a*b)_n=\sum_{i+j=n}a_j\cdot b_j\\
+x*h(n)=\sum_{k}x(k)h(n-k)</script>]]></content>
   </entry>
 </search>

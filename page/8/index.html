@@ -311,6 +311,379 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/" itemprop="url">高中/抛物线折叠</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-07-23T21:09:59+08:00">
+                2022-07-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="5-抛物线折叠"><a href="#5-抛物线折叠" class="headerlink" title="5.抛物线折叠"></a>5.抛物线折叠</h1><p>取一张纸，将边线当做线$L$，在纸上取点$P$，将$P$折叠到$L$上，对应点为$P’$，压出折痕，如下图所示</p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/image-20200905125312126.png" alt="image-20200905125312126"></p>
+<p>观察折痕所形成的图形</p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/image-20200905125843676.png" alt="image-20200905125843676"></p>
+<p>看上去像是一条抛物线，但我们需要严格证明</p>
+<h3 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h3><p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/20200905131930.png" alt="20200905131930"></p>
+<p>以$O$为原点建立坐标系，使得$p$点坐标为$(0,1)$，$p’$点的坐标为$(t,1)$，下面求折线的方程</p>
+<p>因为折线$l$是$pp’$的中垂线</p>
+<p>$\left. { k<em>{pp^ { \prime }} = \frac { 2 } { t } } \ { k </em> { l } = \frac { t } { 2 } } \ { y - 0 = \frac { t } { 2 } ( x - \frac { t } { 2 } ) } \ { y = \frac { t } { 2 } x - \frac { t ^ { 2 } } { 4 } } \right.$</p>
+<p>这就是折线的方程</p>
+<h2 id="求解抛物线方程"><a href="#求解抛物线方程" class="headerlink" title="求解抛物线方程"></a>求解抛物线方程</h2><h3 id="带入法："><a href="#带入法：" class="headerlink" title="带入法："></a>带入法：</h3><p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/image-20200905135205746.png" alt="image-20200905135205746"></p>
+<p>考虑折线上横坐标为$t$的一点$M$</p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/20200905135547462.png" alt="20200905135547462"></p>
+<p>将$t=x$代入折线方程</p>
+<p>$y = \frac { x } { 2 } \cdot x - \frac { x ^ { 2 } } { 4 } = \frac { x ^ { 2 } } { 4 }$</p>
+<p>这就是当$p’$在$L$上运动时，点$M$的轨迹方程</p>
+<h3 id="切线法："><a href="#切线法：" class="headerlink" title="切线法："></a>切线法：</h3><p>折线即为抛物线的切线</p>
+<p>$\frac{d y}{d x}=\frac{x}{2}$</p>
+<p>两边积分得</p>
+<p>$y=\frac{x^{2}}{4}+C$</p>
+<p>又当$p’=(0,-1)$时，函数过$O=(0,0)$，故$C=0$，即</p>
+<p>$y=\frac{x^{2}}{4}$</p>
+<h3 id="包络线法："><a href="#包络线法：" class="headerlink" title="包络线法："></a>包络线法：</h3><p>将折线方程化成有三个变量的隐式方程</p>
+<p>$\left. { 4 y = 2 t x - t ^ { 2 } } \ { t ^ { 2 } - 2 t x + 4 y = 0 } \ { F ( x , y , t ) = t ^ { 2 } - 2 t x + 4 y }  \right.$</p>
+<p>带入包络线线上方一点$(0,1)$</p>
+<p>$F ( 0,1 , t ) = t ^ { 2 } - 0 + 4 &gt; 0$</p>
+<p>故图像被分为两个区域</p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/x2.png" alt="x2"></p>
+<p>这个关系是对任意的$t$都成立</p>
+<p>考虑包络线上一点$(x_0,y_0)$，仅存在一个$t$使得$F(x_0,y_0, t)=0$，对其余$t$的题都有$F(x_0,y_0, t)&gt;0$</p>
+<p>所以$F(x_0,y_0, t)$对$t$有极值，又因为$(x_0,y_0)$必须在折线上，故</p>
+<p>$\left{  \begin{array}{<strong>lr</strong>}    F(x, y, t)=0 \ \frac{\partial}{\partial t} F(x, y, t)=0\end{array} \right.$</p>
+<p>$\frac{\partial}{\partial t} F(x, y, t)=2 t - 2 x=0$</p>
+<p>解得</p>
+<p>$t=x$</p>
+<p>将$t=x$代入隐式方程，同样得到</p>
+<p>$y = \frac { x } { 2 } \cdot x - \frac { x ^ { 2 } } { 4 } = \frac { x ^ { 2 } } { 4 }$</p>
+<h2 id="More-examples"><a href="#More-examples" class="headerlink" title="More examples"></a>More examples</h2><p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/image-20200905191017432.png" alt="image-20200905191017432"></p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/image-20200905191224070.png" alt="image-20200905191224070"></p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/image-20200905191320876.png" alt="image-20200905191320876"></p>
+<h2 id="斜抛运动包络线："><a href="#斜抛运动包络线：" class="headerlink" title="斜抛运动包络线："></a>斜抛运动包络线：</h2><p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/image-20200905191604321.png" alt="image-20200905191604321"></p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/image-20200905192011346.png" alt="image-20200905192011346"></p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/pic.png" alt="pic"></p>
+<h2 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h2><p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%9B%E7%89%A9%E7%BA%BF%E6%8A%98%E5%8F%A0/20200905135547462.png" alt="20200905135547462"></p>
+<p>重新观察这张图，$\frac{Mp}{Mp^{\prime}}=e=1$，根据抛物线的第二定义</p>
+<p>将$p$到$L$上所形成的折线便是以$p$为焦点，以$L$为准线的抛物线的一条切线，这个性质将在下一节中起到非常重要的作用。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%98%E5%8F%A0%E8%9E%BA%E7%BA%BF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%98%E5%8F%A0%E8%9E%BA%E7%BA%BF/" itemprop="url">高中/折叠螺线</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-07-23T21:09:59+08:00">
+                2022-07-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="折纸与迭代函数系统"><a href="#折纸与迭代函数系统" class="headerlink" title="折纸与迭代函数系统"></a>折纸与迭代函数系统</h1><h2 id="折叠"><a href="#折叠" class="headerlink" title="折叠"></a>折叠</h2><p>按如下图折叠</p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%98%E5%8F%A0%E8%9E%BA%E7%BA%BF/image-20200919191304031.png" alt="image-20200919191304031"></p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%98%E5%8F%A0%E8%9E%BA%E7%BA%BF/image-20200919191344915.png" alt="image-20200919191344915"></p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%98%E5%8F%A0%E8%9E%BA%E7%BA%BF/image-20200919191406332.png" alt="image-20200919191406332"></p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%98%E5%8F%A0%E8%9E%BA%E7%BA%BF/image-20200919191425127.png" alt="image-20200919191425127"></p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%98%E5%8F%A0%E8%9E%BA%E7%BA%BF/image-20200919191444186.png" alt="image-20200919191444186"></p>
+<p>观察图$(14)$，可以看出它形成了一个螺旋</p>
+<h3 id="建系"><a href="#建系" class="headerlink" title="建系"></a>建系</h3><p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%98%E5%8F%A0%E8%9E%BA%E7%BA%BF/image-20200919191615790.png" alt="image-20200919191615790"></p>
+<p>展开，观察折痕图，以纸的左下角为原点建立坐标系</p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%98%E5%8F%A0%E8%9E%BA%E7%BA%BF/image-20200919191701742.png" alt="image-20200919191701742"></p>
+<p>再把螺旋放在坐标系之中</p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%98%E5%8F%A0%E8%9E%BA%E7%BA%BF/image-20200919200931931.png" alt="image-20200919200931931"></p>
+<p> 观察右侧图形可以得到$y=\sqrt{2}-1$，$AB=1-y=2-\sqrt{2}=OA$</p>
+<p>在继续之前，我们先了解一下旋转矩阵</p>
+<h2 id="旋转矩阵"><a href="#旋转矩阵" class="headerlink" title="旋转矩阵"></a>旋转矩阵</h2><p>对于任意点$(x,y)$，我们在极坐标系中表示为</p>
+<p>$\left{\begin{array}{l}<br>x=r \cos \phi \<br>y=r \sin \phi<br>\end{array}\right.$</p>
+<p>如果把它绕原点旋转$\theta$角，可以得到旋转后的点在直角坐标系中的坐标为</p>
+<p>$\left{\begin{array}{l}<br>x^{\prime}=\operatorname{rcos}(\phi+\theta)=r \cos \phi \cos \theta-r \sin \phi \sin \theta=x \cos \theta-y \sin \theta \<br>y^{\prime}=r \sin (\phi+\theta)=r \cos \phi \sin \theta+r \sin \phi \cos \theta=x \sin \theta+y \cos \theta<br>\end{array}\right .$</p>
+<p>写成矩阵形式</p>
+<p>$\left(\begin{array}{l}<br>x^{\prime} \<br>y^{\prime}<br>\end{array}\right)=\left(\begin{array}{ll}<br>\cos \theta &amp; -\sin \theta \<br>\sin \theta &amp; \cos \theta<br>\end{array}\right)\left(\begin{array}{l}<br>x \<br>y<br>\end{array}\right)$</p>
+<p>所以旋转矩阵$\mathbf{R}_{\theta}$为</p>
+<p>$\mathbf{R}_{\theta}=\left(\begin{array}{l}<br>\cos \theta &amp; -\sin \theta \<br>\sin \theta &amp; \cos \theta<br>\end{array}\right)$</p>
+<p>理解旋转矩阵是我们接下来讨论的基础</p>
+<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>我们将螺旋透视化</p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%98%E5%8F%A0%E8%9E%BA%E7%BA%BF/image-20200919201651794.png" alt="image-20200919201651794"></p>
+<p>容易看出$\triangle OEB\sim \triangle ABD\sim \triangle CDF\cdots $</p>
+<p>相似比为$\lambda= \frac {AB} {OE}=2-\sqrt 2$</p>
+<p>观察$x$轴的基向量$\hat{\imath}=\overrightarrow{OE}$从$\overrightarrow{OE}$变化到$\overrightarrow{AB}$的过程，我们可以发现，实际上$\overrightarrow{OE}$先乘了缩小因子$\lambda $变为了$\overrightarrow{OA}$，再绕着原点$O$逆时针旋转了$45^{\circ} $，最后沿原基向量$\overrightarrow{OE}$方向平移了$\lambda\overrightarrow{OE}$，便得到了变换后$x$轴的基向量$\hat{\imath}^{\prime}=\overrightarrow{AB}$</p>
+<p>我们可以把这个仿射变换过程用矩阵形式表示</p>
+<p>$F(x, y)=\left(\begin{array}{ll}<br>a &amp; b \<br>c &amp; d<br>\end{array}\right)\left(\begin{array}{l}<br>x \<br>y<br>\end{array}\right)+\left(\begin{array}{l}<br>e \<br>f<br>\end{array}\right)$</p>
+<p>其中的线性变换矩阵为</p>
+<p>$\begin{aligned}<br>\left(\begin{array}{ll}<br>a &amp; b \<br>c &amp; d<br>\end{array}\right) &amp;=(2-\sqrt{2})\left(\begin{array}{cc}<br>\cos 45^{\circ} &amp; -\sin 45^{\circ} \<br>\sin 45^{\circ} &amp; \cos 45^{\circ}<br>\end{array}\right) \<br>&amp;=\left(\begin{array}{ll}<br>2-\sqrt{2}<br>\end{array}\right)\left(\begin{array}{ll}<br>\frac{\sqrt{2}}{2} &amp; -\frac{\sqrt{2}}{2} \<br>\frac{\sqrt{2}}{2} &amp; \frac{\sqrt{2}}{2}<br>\end{array}\right)=(\sqrt{2}-1)\left(\begin{array}{cc}<br>1 &amp; -1 \<br>1 &amp; 1<br>\end{array}\right)<br>\end{aligned}$</p>
+<p>所以我们的变换函数为</p>
+<p>$F(x, y)=(\sqrt{2}-1)\left(\begin{array}{cc}<br>1 &amp; -1 \<br>1 &amp; 1<br>\end{array}\right)\left(\begin{array}{c}<br>x \<br>y<br>\end{array}\right)+\left(\begin{array}{c}<br>2-\sqrt{2} \<br>0<br>\end{array}\right)$</p>
+<h2 id="分析-1"><a href="#分析-1" class="headerlink" title="分析"></a>分析</h2><h3 id="迭代函数系统iterated-function-systems-IFS"><a href="#迭代函数系统iterated-function-systems-IFS" class="headerlink" title="迭代函数系统iterated function systems (IFS)"></a>迭代函数系统iterated function systems (IFS)</h3><p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%98%E5%8F%A0%E8%9E%BA%E7%BA%BF/Barnsley_fern_2000x2000.png" alt="Barnsley_fern_2000x2000"></p>
+<p>迭代函数系统（Iterated Function System，IFS）是分形理论的重要分支 。它以仿射变换为框架，根据几何对象的整体与局部具有自相似的结构，将总体形状以一定的概率按不同的仿射变换迭代下去，直至得到满意的分形图形。相比较分形几何学，IFS与集合论关系更为密切。IFS在1981年提出。</p>
+<h3 id="python程序例子"><a href="#python程序例子" class="headerlink" title="python程序例子"></a>python程序例子</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">x = <span class="number">0</span></span><br><span class="line">y = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> range(<span class="number">1500</span>):</span><br><span class="line">    r = random.random()</span><br><span class="line">    r = r * <span class="number">100</span></span><br><span class="line">    xn = x</span><br><span class="line">    yn = y</span><br><span class="line">    <span class="keyword">if</span> r &lt; <span class="number">1</span>:</span><br><span class="line">        x = <span class="number">0</span></span><br><span class="line">        y = <span class="number">0.16</span> * yn</span><br><span class="line">    <span class="keyword">elif</span> r &lt; <span class="number">86</span>:</span><br><span class="line">        x = <span class="number">0.85</span> * xn + <span class="number">0.04</span> * yn</span><br><span class="line">        y = <span class="number">-0.04</span> * xn + <span class="number">0.85</span> * yn + <span class="number">1.6</span></span><br><span class="line">    <span class="keyword">elif</span> r &lt; <span class="number">93</span>:</span><br><span class="line">        x = <span class="number">0.20</span> * xn - <span class="number">0.26</span> * yn</span><br><span class="line">        y = <span class="number">0.23</span> * xn + <span class="number">0.22</span> * yn + <span class="number">1.6</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        x = <span class="number">-0.15</span> * xn + <span class="number">0.28</span> * yn</span><br><span class="line">        y = <span class="number">0.26</span> * xn + <span class="number">0.24</span> * yn + <span class="number">0.44</span></span><br><span class="line">    plt.scatter(x, y,s=<span class="number">6</span>,c=<span class="string">'g'</span>,alpha=<span class="number">0.7</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%98%E5%8F%A0%E8%9E%BA%E7%BA%BF/image-20200920195346090.png" alt="image-20200920195346090"></p>
+<p>基于IFS机械式重复来生成图形的性质，我们可以利用计算机来模拟折叠的过程</p>
+<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p>用MATLAB实现</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">R_45=[<span class="number">0.7071</span>   <span class="number">-0.7071</span> ; <span class="number">0.7071</span>    <span class="number">0.7071</span>] ;<span class="comment">%45°旋转矩阵</span></span><br><span class="line">p=[<span class="number">1</span> ; <span class="number">0</span>];<span class="comment">%初始点</span></span><br><span class="line">move=[<span class="number">2</span>-<span class="built_in">sqrt</span>(<span class="number">2</span>);<span class="number">0</span>];<span class="comment">%偏移量</span></span><br><span class="line"><span class="keyword">for</span> <span class="built_in">i</span>=<span class="number">1</span>:<span class="number">100</span></span><br><span class="line">    pprime=(<span class="number">2</span>-<span class="built_in">sqrt</span>(<span class="number">2</span>))*R_45*p+move;<span class="comment">%变换后的点</span></span><br><span class="line">    <span class="built_in">scatter</span>(pprime(<span class="number">1</span>),pprime(<span class="number">2</span>),<span class="string">'filled'</span>)<span class="comment">%描点</span></span><br><span class="line">    line([p(<span class="number">1</span>) pprime(<span class="number">1</span>)],[p(<span class="number">2</span>) pprime(<span class="number">2</span>)])<span class="comment">%连线</span></span><br><span class="line">    <span class="built_in">hold</span> on</span><br><span class="line">    p=pprime;<span class="comment">%更新</span></span><br><span class="line">    <span class="built_in">disp</span>(p)</span><br><span class="line">    <span class="built_in">hold</span> on</span><br><span class="line">    grid on</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">xlim([<span class="number">.5</span> <span class="number">1.2</span>])</span><br><span class="line">ylim([<span class="number">0</span> <span class="number">.7</span>])</span><br><span class="line">ax = gca;</span><br><span class="line">ax.XAxisLocation = <span class="string">'origin'</span>;<span class="comment">%坐标轴</span></span><br><span class="line">ax.YAxisLocation = <span class="string">'origin'</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%98%E5%8F%A0%E8%9E%BA%E7%BA%BF/rotate.png" alt="rotate"></p>
+<p>由图形可以看出，螺旋好像趋于一个特定的点，那么它的坐标是什么呢？</p>
+<h3 id="寻找不动点"><a href="#寻找不动点" class="headerlink" title="寻找不动点"></a>寻找不动点</h3><p>在数学中，函数的<strong>不动点</strong>或<strong>定点</strong>是指被这个函数映射到其自身一个点</p>
+<p>在我们的变换函数中如果有一个点经过函数变换后得到的仍是其本身，那我们的图形就不再前进，这个点就是不动点</p>
+<p>写成矩阵形式为</p>
+<p>$\left(\begin{array}{c}<br>x \<br>y<br>\end{array}\right)=(\sqrt{2}-1)\left(\begin{array}{cc}<br>1 &amp; -1 \<br>1 &amp; 1<br>\end{array}\right)\left(\begin{array}{c}<br>x \<br>y<br>\end{array}\right)+\left(\begin{array}{c}<br>2-\sqrt{2} \<br>0<br>\end{array}\right)$</p>
+<p>化简得</p>
+<p>$ \left(\begin{array}{c}x \y\end{array}\right) = \left( \begin{array}{c} ( \sqrt { 2 } - 1 ) ( x - y ) + 2 - \sqrt { 2 }  \  ( \sqrt { 2 } - 1 ) ( x + y )\end{array}\right)$</p>
+<p>于是得到一个二元一次方程组</p>
+<p>$\left{\begin{array}{l}<br> (\sqrt { 2 } - 2 ) x - ( \sqrt { 2 } - 1 ) y + 2 - \sqrt { 2 } = 0  \<br>(\sqrt { 2 } - 1 ) x + ( \sqrt { 2 } - 2 ) y = 0<br>\end{array}\right.$</p>
+<p>解得</p>
+<p>$\left{\begin{array}{l}x=\frac{2}{3}\y=\frac{\sqrt{2}}{3}\end{array}\right.$</p>
+<p>于是点$(\frac{2}{3},\frac{\sqrt{2}}{3})$就是我们要找的不动点</p>
+<h2 id="利用复数"><a href="#利用复数" class="headerlink" title="利用复数"></a>利用复数</h2><p> 考察$ e^{\mathrm{i}x} $的幂级数展开式的实部和虚部。用$\mathrm{i}$的幂以长度4循环$ 1, i,-1,-i, 1, \cdots$，所以有</p>
+<p>$\begin{aligned}<br>\mathrm{e}^{\mathrm{i} x} &amp;=1+\mathrm{i} x+\frac{(\mathrm{i} x)^{2}}{2 !}+\frac{(\mathrm{i} x)^{3}}{3 !}+\cdots \<br>&amp;=\left[1-\frac{x^{2}}{2 !}+\frac{x^{4}}{4 !}+\cdots\right]+\mathrm{i}\left[x-\frac{x^{3}}{3 !}+\frac{x^{5}}{5 !}+\cdots\right] \<br>&amp;=\cos x+\mathrm{i} \sin x<br>\end{aligned}$</p>
+<p>以下图的方式构造复平面</p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%98%E5%8F%A0%E8%9E%BA%E7%BA%BF/image-20200920133231935.png" alt="image-20200920133231935"></p>
+<p>将螺旋透视化</p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%98%E5%8F%A0%E8%9E%BA%E7%BA%BF/image-20200920133342891.png" alt="image-20200920133342891"></p>
+<p>由上面的分析可知，螺旋以右图的形式前进，$P<em>0P_1+P_1P_2+P_2P_3+\cdots+P</em>{n-1}P_{n}$即为$P_n$在复平面中的坐标</p>
+<p>从$P_0P_1$到$P_1P_2$，就是先逆时针旋转$\frac \pi 4$，再乘上缩小因子$a= 2-\sqrt 2$，所以</p>
+<p>$P_{1}=2-\sqrt{2}$</p>
+<p>$P<em>{2}=P</em>{1}+a^{2} e^{(\pi/4) i}=a+a^{2} e^{(\pi/4) i} $</p>
+<p>$P<em>{3}=P</em>{2}+a^{3} e^{2(\pi / 4) i}=a+a^{2} e^{(\pi / 4) i}+a^{3} e^{2(\pi / 4) i}$</p>
+<p>不断迭代</p>
+<p>$P_{n}=a+a^{2} e^{\frac{\pi}{4} i}+a^{3} e^{2 \frac{\pi}{4} i}+\cdots+a^{n} e^{(n-1) \frac{\pi}{4} i}$</p>
+<p>当$n\to \infty$时，有</p>
+<p>$P=a \sum_{n=0}^{\infty}\left(a e^{\frac{\pi}{4} i}\right)^{n}$</p>
+<p>这是一个几何级数，所以</p>
+<p>$\sum_{n=0}^{\infty} z^{n}=\frac{1}{(1-z)}$</p>
+<p>其中</p>
+<p>$\begin{aligned}z&amp;=a e^{(\pi / 4) i}\&amp;=(2-\sqrt{2})(\cos (\pi / 4)+i \sin (\pi / 4))\&amp;=(2-\sqrt{2})((\sqrt{2} / 2)+(\sqrt{2} / 2) i)\&amp;=<br>(\sqrt{2}-1)(1+i)\end{aligned}$</p>
+<p>$a=2-\sqrt{2}=2 /(2+\sqrt{2})$</p>
+<p>所以我们的不动点为</p>
+<p>$\begin{aligned}P&amp;=(2-\sqrt{2}) \frac{1}{1-(\sqrt{2}-1)(1+i)}\&amp;=\frac{2}{2+\sqrt{2}} \frac{1}{(2-\sqrt{2})-(\sqrt{2}-1) i}\&amp;=\frac{2}{2-\sqrt{2} i}\end{aligned}$</p>
+<p>同时乘以共轭复数</p>
+<script type="math/tex; mode=display">
+\begin{aligned}P&=\frac{2}{2-\sqrt{2} i} \frac{2+\sqrt{2} i}{2+\sqrt{2} i}\\&=\frac{4+2 \sqrt{2} i}{6}\\&=\frac{2}{3}+\frac{\sqrt{2}}{3} i\end{aligned}</script><p>这和我们用矩阵方法求解的答案是一样的</p>
+<h3 id="对数螺线"><a href="#对数螺线" class="headerlink" title="对数螺线"></a>对数螺线</h3><p>计算螺线上任意一点$P_n$到不动点$P$的距离</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\left|P-P_{n}\right|&=\left|a \sum_{k=n}^{\infty}\left(a e^{\frac{\pi}{4} i}\right)^{k}\right|=\left|a\left(a e^{\frac{\pi}{4} i}\right)^{n} \sum_{k=0}^{\infty}\left(a e^{\frac{\pi}{4} i}\right)^{k}\right|\\&=\left|(2-\sqrt{2})((\sqrt{2}-1)(1+i))^{n}\right| \cdot|P|\\&=(2-\sqrt{2})((\sqrt{2}-1) \sqrt{2})^{n} \frac{\sqrt{6}}{3}\\&=\frac{\sqrt{6}}{3}(2-\sqrt{2})^{n+1}\end{aligned}</script><p>这是一个几何级数，而对数螺线的臂的距离以几何级数递增，所以螺线是对数螺线</p>
+<p>实际上，它的方程在极坐标系中表示为</p>
+<p>$r(\theta)=\frac{\sqrt{6}}{3}(2-\sqrt{2})^{\frac{4}{\pi}(\theta-\pi-\arctan (\sqrt{2} / 2))}$</p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%98%E5%8F%A0%E8%9E%BA%E7%BA%BF/image-20200920183841052.png" alt="image-20200920183841052"></p>
+<p>这种折法在折纸艺术中非常常见，以下是几个折纸作品</p>
+<p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%98%E5%8F%A0%E8%9E%BA%E7%BA%BF/image-20200920185728281.png" alt="image-20200920185728281"></p>
+<h3 id="镶嵌折纸作品欣赏"><a href="#镶嵌折纸作品欣赏" class="headerlink" title="镶嵌折纸作品欣赏"></a>镶嵌折纸作品欣赏</h3><p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%98%E5%8F%A0%E8%9E%BA%E7%BA%BF/折纸镶嵌1.png" alt="折纸镶嵌1"><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%8A%98%E5%8F%A0%E8%9E%BA%E7%BA%BF/折纸镶嵌.png" alt="折纸镶嵌"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%9C%89%E6%9C%BA/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1428,415 +1801,6 @@ y=\frac{1-x^{2}}{2}</script><p>带入得$x=\frac{1}{3}$，即点$M$是$  C D  $�
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E5%9F%BA%E6%9C%AC/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E5%9F%BA%E6%9C%AC/" itemprop="url">大一/概率论/基本</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-07-23T21:09:55+08:00">
-                2022-07-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="概率论公理"><a href="#概率论公理" class="headerlink" title="概率论公理"></a>概率论公理</h1><p>我们说样本空间是无限可数的意味着其中的元素可以与正整数一一对应</p>
-<p>样本空间$S$上的概率分布$\rm {Pr{}}$是一个从事件到实数的映射</p>
-<p><img src="/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E5%9F%BA%E6%9C%AC/image-20230207200811398.png" alt="image-20230207200811398"></p>
-<h2 id="记号"><a href="#记号" class="headerlink" title="记号"></a>记号</h2><p>将事件$\text{Pr}({A})$简记为$\text{Pr}{A}$</p>
-<p>事件可能有无数个，如掷硬币n次H </p>
-<ol>
-<li><p>$\forall  事件A,\text {Pr}{A}\ge0$</p>
-</li>
-<li><p>$\text {Pr}{S}=1$</p>
-</li>
-<li><p>对两两互斥的事件，有</p>
-<script type="math/tex; mode=display">
-\text {Pr}\left\{s_{1}, s_{2}, \ldots, s_{n}\right\}=\text {Pr}\left\{s_{1}\right\}+\text {Pr}\left\{s_{2}\right\}+\cdots+\text {Pr}\left\{s_{n}\right\}\\
-\text {Pr}\left\{\bigcup_{i}A_i\right\}=\sum_i\text {Pr}\{A_i\}</script></li>
-</ol>
-<p>对于一个序列型的事件，可以用以下方式描述</p>
-<p><img src="/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E5%9F%BA%E6%9C%AC/image-20230208143201104.png" alt="image-20230208143201104"></p>
-<h2 id="模型"><a href="#模型" class="headerlink" title="模型"></a>模型</h2><p>为了构建模型，我们需要考虑多个因素</p>
-<blockquote>
-<p>The choice of a model often involves a tradeof be-tween accuracy, simplicity,and tractability. </p>
-</blockquote>
-<p>但是不论多复杂的模型，对于某个特定的事件都有确定的概率</p>
-<blockquote>
-<p>All conceivable questions have precise answers and it is only a matter of developing the skill to arrive at them.</p>
-</blockquote>
-<h3 id="离散模型"><a href="#离散模型" class="headerlink" title="离散模型"></a>离散模型</h3><p>对于多个等概率事件</p>
-<script type="math/tex; mode=display">
-\text {Pr}\{A\}=\frac{\text{number of elements of }A }{n}</script><h3 id="连续模型"><a href="#连续模型" class="headerlink" title="连续模型"></a>连续模型</h3><p>样本空间可以用图形来表示</p>
-<p>对于样本空间为</p>
-<script type="math/tex; mode=display">
-\Omega=[0,1]</script><p>对于某一个值，概率为0，只有考虑长度才有意义</p>
-<script type="math/tex; mode=display">
-\text { If } A \subset B, \text { then } \text {Pr}\{A\} \leq \text {Pr}\{B\}</script><h3 id="容斥"><a href="#容斥" class="headerlink" title="容斥"></a>容斥</h3><script type="math/tex; mode=display">
-\begin{aligned}\text {Pr}\{A\cup B\}&=\text {Pr}\{A\}+\text {Pr}\{B\}-\text {Pr}\{A\cap B\}\\&\le\text {Pr}\{A\}+\text {Pr}\{B\}\end{aligned}</script><script type="math/tex; mode=display">
-\text {Pr}\left\{\bigcup_{i}A_i\right\}\le\sum_i\text {Pr}\{A_i\}</script><p>由德摩根律</p>
-<script type="math/tex; mode=display">
-\text {Pr}\{A\cup C|B\}\le\text {Pr}\{A|B\}+\text {Pr}\{C|B\}</script><h1 id="离散概率分布"><a href="#离散概率分布" class="headerlink" title="离散概率分布"></a>离散概率分布</h1><p>概率分布在有限或无限可数的样本空间，则该概率分布是离散的</p>
-<script type="math/tex; mode=display">
-\text {Pr}\{A\}=\sum_{s\in A}\text {Pr}\{s\}</script><p>若基本事件$s\in S$的概率为</p>
-<script type="math/tex; mode=display">
-\text {Pr}\{s\}=1/|S|</script><p>则称为$S$上的的均匀概率分布</p>
-<h2 id="条件概率"><a href="#条件概率" class="headerlink" title="条件概率"></a>条件概率</h2><p>已知事件 $B$发生$\text {Pr}{B}\ne 0$，事件$A$的条件概率定义为</p>
-<script type="math/tex; mode=display">
-\text {Pr}\{A|B\}=\frac{\text {Pr}\{A\cap B\}}{\text {Pr}\{B\}}</script><p>需要从直观角度上理解</p>
-<script type="math/tex; mode=display">
-\text {Pr}\{A|B\}+\text {Pr}\{A^c|B\}=1</script><h3 id="状态转移"><a href="#状态转移" class="headerlink" title="状态转移"></a>状态转移</h3><script type="math/tex; mode=display">
-\mathbf{P}\left(\cap_{i=1}^{n} A_{i}\right)=\mathbf{P}\left(A_{1}\right) \cdot \frac{\mathbf{P}\left(A_{1} \cap A_{2}\right)}{\mathbf{P}\left(A_{1}\right)} \cdot \frac{\mathbf{P}\left(A_{1} \cap A_{2} \cap A_{3}\right)}{\mathbf{P}\left(A_{1} \cap A_{2}\right)} \cdots \frac{\mathbf{P}\left(\cap_{i=1}^{n} A_{i}\right)}{\mathbf{P}\left(\cap_{i=1}^{n-1} A_{i}\right)}</script><p><img src="/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E5%9F%BA%E6%9C%AC/image-20230208222842437.png" alt="image-20230208222842437"></p>
-<h3 id="独立"><a href="#独立" class="headerlink" title="独立"></a>独立</h3><p>若</p>
-<script type="math/tex; mode=display">
-\text {Pr}\{A\cap B\}=\text {Pr}\{A\}\text {Pr}\{B\}</script><p>则称事件$A$和$B$是独立的，若$\text {Pr}{B}\ne 0$，则等价于</p>
-<script type="math/tex; mode=display">
-\text {Pr}\{A|B\}=\Pr\{A\}(与B无关)</script><p>若对于所有$1\le i &lt; j\le n$，有</p>
-<script type="math/tex; mode=display">
-\text {Pr}\{A_i\cap A_j\}=\Pr\{A_i\}\Pr\{A_j\}</script><p>则称事件$A_1,A_2,\cdots,A_n$两两独立</p>
-<p>若对这些事件的每一个$k$子集${ A<em>{i_1},A</em>{i<em>2},\cdots,A</em>{i_k}}$，其中$2\le k\le n$且$1\le {i_1}&lt; {i_2}&lt; \cdots&lt; {i_k}\le n $，有</p>
-<script type="math/tex; mode=display">
-\Pr\{ A_{i_1}\cap A_{i_2}\cap \cdots\cap A_{i_k}\}=\Pr\{ A_{i_1}\}\Pr\{ A_{i_2}\}\cdots\Pr\{ A_{i_k}\}</script><p>则称这些事件相互独立</p>
-<h4 id="条件独立"><a href="#条件独立" class="headerlink" title="条件独立"></a>条件独立</h4><script type="math/tex; mode=display">
-\text {Pr}\{A\cap B|C\}=\text {Pr}\{A|C\}\text {Pr}\{B|C\}\\
-\Leftrightarrow\text {Pr}\{A| B\cap C\}=\text {Pr}\{A|C\}</script><blockquote>
-<p>In words, this relation states that if is known to have occurred,the additional knowledge that B also occurred does not change the probability of A.</p>
-</blockquote>
-<p>考虑事件A为第一次掷为H，B为第二次H，C为两次结果不同</p>
-<script type="math/tex; mode=display">
-\text {Pr}\{A\cap B|C\}=0\\\text {Pr}\{A|C\}=\text {Pr}\{B|C\}=\frac12</script><p>所以独立不代表条件独立</p>
-<script type="math/tex; mode=display">
-\text {Pr}\{A\cap B\cap C\}=0</script><p>则A，B两个独立事件不条件独立</p>
-<h2 id="全概率公式"><a href="#全概率公式" class="headerlink" title="全概率公式"></a>全概率公式</h2><p>将样本空间$\Omega$划分为两两独立的$n$个事件，且</p>
-<script type="math/tex; mode=display">
-\bigcup_iA_i=\Omega</script><p>则</p>
-<script type="math/tex; mode=display">
-\Pr\{B\}=\sum_{i=1}^n\Pr\{B|A_i\}\Pr\{A_i\}</script><h2 id="贝叶斯定理"><a href="#贝叶斯定理" class="headerlink" title="贝叶斯定理"></a>贝叶斯定理</h2><p>由</p>
-<script type="math/tex; mode=display">
-\Pr\{A\cap B\}=\Pr\{A|B\}\Pr\{B\}=\Pr\{B|A\}\Pr\{A\}</script><p>得</p>
-<script type="math/tex; mode=display">
-\Pr\{A|B\}=\frac{\Pr\{B|A\}\Pr\{A\}}{\Pr\{B\}}</script><p>对于$\Pr{B}$，因为可以划分，故</p>
-<script type="math/tex; mode=display">
-\Pr\{B\}=\Pr\{B|A\}\Pr\{A\}+\Pr\{B|\overline{A} \}\Pr\{\overline{A} \}</script><p>所</p>
-<script type="math/tex; mode=display">
-\Pr\{A|B\}=\frac{\Pr\{B|A\}\Pr\{A\}}{\Pr\{B|A\}\Pr\{A\}+\Pr\{B|\overline{A} \}\Pr\{\overline{A} \}}</script><p>贝叶斯定理常常用来由果导因，如抗原阳性是否代表感染新冠</p>
-<script type="math/tex; mode=display">
-\Pr\{A_i|B\}=\frac{\Pr\{B|A_i\}\Pr\{A_i\}}{\Pr\{B|A_1\}\Pr\{A_1\}+\dots+\Pr\{B|A_n \}\Pr\{A_n \}}</script><p>其中$\Pr{A_i|B}$为后验概率，$\Pr{A_i}$是先验概率</p>
-<h1 id="计数"><a href="#计数" class="headerlink" title="计数"></a>计数</h1><p>分类加法计数原理，同一个阶段的不同方法可以相加</p>
-<p>有N个阶段每个阶段有$n_i$个方式，则总方式为</p>
-<script type="math/tex; mode=display">
-n_1n_2\cdots n_N</script><h2 id="排列数"><a href="#排列数" class="headerlink" title="排列数"></a>排列数</h2><script type="math/tex; mode=display">
-k-\text{permutations}=\frac{n!}{(n-k)!}</script><h2 id="组合数"><a href="#组合数" class="headerlink" title="组合数"></a>组合数</h2><script type="math/tex; mode=display">
-\left(\begin{array}{l}n\\k\end{array}\right)=\frac{n!}{(n-k)!k!}</script><h2 id="多项式定理"><a href="#多项式定理" class="headerlink" title="多项式定理"></a>多项式定理</h2><p>将n个元素分为$k$类，其中各为$n_i$个</p>
-<script type="math/tex; mode=display">
-C_{n}^{n_{1}} C_{n-n_{1}}^{n_{2}} \ldots C_{n-n_{1}-\ldots-n_{k-1}}^{n_{k}}=\frac{n !}{n_{1} ! n_{2} ! \ldots n_{k} !}</script><script type="math/tex; mode=display">
-\left(x_{1}+\ldots+x_{k}\right)^{n}=\sum_{n_{1}+\ldots+n_{k}=n}\left(\begin{array}{ccc} 
-& n & \\
-n_{1} & \ldots & n_{k}
-\end{array}\right) x_{1}^{n_{1}} x_{2}^{n_{2}} \ldots x_{k}^{n_{k}}</script>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/" itemprop="url">大一/概率论/随机变量</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-07-23T21:09:55+08:00">
-                2022-07-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="随机变量"><a href="#随机变量" class="headerlink" title="随机变量"></a>随机变量</h1><p>随机变量$X$是有限或无限可数样本空间$S$到实数的函数</p>
-<p><img src="/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/image-20230209133135226.png" alt="image-20230209133135226"></p>
-<p>对于随机变量$X$和实数$x$，定义事件$X=x$为${s\in S,X(s)=x}$，因此</p>
-<blockquote>
-<p>we will use upper case charactersto denote random variables，and lower case characters to denote real numbers such as the numerical values of a random variable.</p>
-</blockquote>
-<script type="math/tex; mode=display">
-\Pr\{X=x\}=\sum_{s\in S,X(s)=x}\Pr\{s\}</script><p> 对于离散随机变量，函数$p_X(x)=\Pr{X=x}$为$X$的概率质量函数PMF</p>
-<p>特别的，对于连续随机变量也称为概率密度函数PDF</p>
-<script type="math/tex; mode=display">
-\Pr\{X\in B\}=\int_Bf_X(x)\text{d}x</script><p>归一化条件为</p>
-<script type="math/tex; mode=display">
-\int_{-\infty}^{+\infty}f_X(x)\text{d}x=1</script><script type="math/tex; mode=display">
-\Pr\{[x,x+\delta ]\}\approx f_X(x)
-\delta</script><p>所以$f_X(x)$可以看成单位长度的概率</p>
-<p>可以把这两种函数整合成一个函数CDF(cumulative distribution function)</p>
-<script type="math/tex; mode=display">
-F_x(x)=\text{Pr}\{X\le x\}=\begin{cases}\displaystyle\sum_{k\le x}p_X(k) \\\displaystyle\int_{-\infty}^xf_X(x)\text{d}x\end{cases}</script><p><img src="/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/image-20230209223350322.png" alt="image-20230209223350322"></p>
-<p><img src="/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/image-20230209223424967.png" alt="image-20230209223424967" style="zoom:100%;"></p>
-<p> 可以类比积分上限函数，通过差分和求导可以还原</p>
-<p>若有若干个随机变量，则函数</p>
-<script type="math/tex; mode=display">
-p_{X,Y}(x,y)=\Pr\{X=x且Y=y\}</script><p>为$X$与$Y$的联合概率密度函数，性质同理，如</p>
-<script type="math/tex; mode=display">
-\begin{aligned}\Pr\{Y=y\}&=\sum_x\Pr\{X=x且Y=y\}(y为定值)\\&=\sum _xp_{X,Y}(x,y)\end{aligned}\\</script><script type="math/tex; mode=display">
-p_Z(z)=\sum_{\{z|z=g(x,y)\}}p_{X,Y}(x,y)\\
-\text{E}[g(X, Y)]=\sum_{x} \sum_{y} g(x, y) p_{X, Y}(x, y)</script><h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><script type="math/tex; mode=display">
-Y=g(X)\\p_Y(y)=\sum_{\{x|g(x)=y\}}p_X(x)</script><p><img src="/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/image-20230209180813949.png" alt="image-20230209180813949"></p>
-<h2 id="随机变量的期望值"><a href="#随机变量的期望值" class="headerlink" title="随机变量的期望值"></a>随机变量的期望值</h2><script type="math/tex; mode=display">
-\text E[X]=\sum_xx\cdot\Pr\{X=x\}\\
-\text E[g(X)]=\sum_xg(x)\cdot\Pr\{X=x\}\\</script><p>对于连续的随机变量</p>
-<script type="math/tex; mode=display">
-\text{E}[X]=\int_{-\infty}^{+\infty}xf_X(x)\text{d}x\\
-\text{E}[g(X)]=\int_{-\infty}^{+\infty}g(x)f_X(x)\text{d}x</script><p>期望的线性性质</p>
-<script type="math/tex; mode=display">
-\text E\left[\sum_{i=1}^nX_i\right]=\sum_{i=1}^n\text E[X_i]\\\text E[aX+b]=a\text E[X]+b</script><p>若相互独立，使用期望的定义得</p>
-<script type="math/tex; mode=display">
-\text E[XY]=\text E[X]\text E[Y]</script><h2 id="方差"><a href="#方差" class="headerlink" title="方差"></a>方差</h2><script type="math/tex; mode=display">
-\text{Var}[X]=\text{E}[(X-\text{E}[X])^2]=\text{E}[X^2]-\text{E}^2[X]\\
-\text{Var}[aX+b]=a^2\text{Var}[X]</script><p>对于连续的随机变量</p>
-<script type="math/tex; mode=display">
-\text{Var}[X]=\int_{-\infty}^{+\infty}(x-\text{E}[X])^2f_X(x)\text{d}x\\</script><p>若相互独立</p>
-<script type="math/tex; mode=display">
-\text{Var}[X+Y]=\text{Var}[X]+\text{Var}[Y]\\
-\text{Var}[\sum_{i=1}^nX_i]=\sum_{i=1}^n\text{Var}[X_i]</script><script type="math/tex; mode=display">
-\begin{aligned}\text{Var}[XY]&=\text{E}^2[Y]\text{Var}[X]+\text{E}[X^2]\text{Var}[Y]\\
-&=\text{E}[Y]^2\text{Var}[X]+\text{E}^2[X]\text{Var}[Y]\\
-&=\text{Var}[X]\text{Var}[Y]+\text{E}^2[Y]\text{Var}[X]+\text{E}^2[X]\text{Var}[Y]
-\end{aligned}</script><p> 标准差</p>
-<script type="math/tex; mode=display">
-\sigma_X=\sqrt{\text{var}(X) }</script><h2 id="条件"><a href="#条件" class="headerlink" title="条件"></a>条件</h2><p>conditional PMF</p>
-<script type="math/tex; mode=display">
-p_{X|A}=\frac{\text{Pr}\{\{X=x\}\cap A \}}{\text{Pr}\{A\}}</script><p><img src="/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/image-20230209195032570.png" alt="image-20230209195032570"></p>
-<p>可以将A推广为一个随机变量</p>
-<script type="math/tex; mode=display">
-p_{X|Y}(x,y)=\frac{p_{X,Y}(x,y)}{p_Y(y)}</script><p><img src="/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/image-20230209195505072.png" alt="image-20230209195505072"></p>
-<script type="math/tex; mode=display">
-\sum_{x} p_{X \mid Y}(x \mid y)=1</script><h2 id="分布"><a href="#分布" class="headerlink" title="分布"></a>分布</h2><h3 id="几何分布"><a href="#几何分布" class="headerlink" title="几何分布"></a>几何分布</h3><p>前面一直没有成功直到第n次才成功</p>
-<p><img src="/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/image-20230209135132169.png" alt="image-20230209135132169"></p>
-<script type="math/tex; mode=display">
-\Pr\{X=k\}=(1-p)^{n-1}p\\
-\text E[x]=\sum_{k=1}^\infty(1-p)^{k-1}pk=1/p</script><h3 id="二项分布"><a href="#二项分布" class="headerlink" title="二项分布"></a>二项分布</h3><p>区别于国内表达，组合数记为</p>
-<script type="math/tex; mode=display">
-\left(\begin{array}{l}n\\k\end{array}\right)=C_n^k</script><p>读作$n$取$k$</p>
-<script type="math/tex; mode=display">
-\Pr\{X=k\}=\left(\begin{array}{l}n\\k\end{array}\right)p^k(1-p)^{n-k}\\
-\text E[X]=np\\
-\text{Var}[X]=np(1-p)</script><h3 id="泊松分布"><a href="#泊松分布" class="headerlink" title="泊松分布"></a>泊松分布</h3><script type="math/tex; mode=display">
-p_X(k)=e^{-\lambda}\frac{\lambda^k}{k!}\\
-\sum_{k=0}^{\infty} e^{-\lambda} \frac{\lambda^{k}}{k !}=e^{-\lambda}\left(1+\lambda+\frac{\lambda^{2}}{2 !}+\frac{\lambda^{3}}{3 !}+\cdots\right)=e^{-\lambda} e^{\lambda}=1\\
-EX=\lambda</script><h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><h3 id="指数随机变量"><a href="#指数随机变量" class="headerlink" title="指数随机变量"></a>指数随机变量</h3><script type="math/tex; mode=display">
- f_{X}(x)=\left\{\begin{array}{ll}
-\lambda e^{-\lambda x}, & \text { if } x \geq 0 \\
-0, & \text { otherwise }
-\end{array}\right.</script><script type="math/tex; mode=display">
-\text{E}[X]=\frac{1}{\lambda}, \quad \operatorname{Var}(X)=\frac{1}{\lambda^{2}}</script><p>其中$\lambda$是参数可以用来调控均值，这个模型用途很广</p>
-<h3 id="正态随机变量"><a href="#正态随机变量" class="headerlink" title="正态随机变量"></a>正态随机变量</h3><script type="math/tex; mode=display">
-f_X(x)=\frac1{\sqrt{2\pi}\sigma}e^{-(x-\mu)^2/2\sigma^2}</script><script type="math/tex; mode=display">
-\text{E}[X]=\mu, \quad \operatorname{Var}(X)=\sigma^{2}</script>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1887,7 +1851,7 @@ f_X(x)=\frac1{\sqrt{2\pi}\sigma}e^{-(x-\mu)^2/2\sigma^2}</script><script type="m
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">82</span>
+                <span class="site-state-item-count">84</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

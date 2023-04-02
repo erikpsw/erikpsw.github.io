@@ -311,6 +311,415 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E5%9F%BA%E6%9C%AC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E5%9F%BA%E6%9C%AC/" itemprop="url">大一/概率论/基本</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-07-23T21:09:55+08:00">
+                2022-07-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="概率论公理"><a href="#概率论公理" class="headerlink" title="概率论公理"></a>概率论公理</h1><p>我们说样本空间是无限可数的意味着其中的元素可以与正整数一一对应</p>
+<p>样本空间$S$上的概率分布$\rm {Pr{}}$是一个从事件到实数的映射</p>
+<p><img src="/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E5%9F%BA%E6%9C%AC/image-20230207200811398.png" alt="image-20230207200811398"></p>
+<h2 id="记号"><a href="#记号" class="headerlink" title="记号"></a>记号</h2><p>将事件$\text{Pr}({A})$简记为$\text{Pr}{A}$</p>
+<p>事件可能有无数个，如掷硬币n次H </p>
+<ol>
+<li><p>$\forall  事件A,\text {Pr}{A}\ge0$</p>
+</li>
+<li><p>$\text {Pr}{S}=1$</p>
+</li>
+<li><p>对两两互斥的事件，有</p>
+<script type="math/tex; mode=display">
+\text {Pr}\left\{s_{1}, s_{2}, \ldots, s_{n}\right\}=\text {Pr}\left\{s_{1}\right\}+\text {Pr}\left\{s_{2}\right\}+\cdots+\text {Pr}\left\{s_{n}\right\}\\
+\text {Pr}\left\{\bigcup_{i}A_i\right\}=\sum_i\text {Pr}\{A_i\}</script></li>
+</ol>
+<p>对于一个序列型的事件，可以用以下方式描述</p>
+<p><img src="/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E5%9F%BA%E6%9C%AC/image-20230208143201104.png" alt="image-20230208143201104"></p>
+<h2 id="模型"><a href="#模型" class="headerlink" title="模型"></a>模型</h2><p>为了构建模型，我们需要考虑多个因素</p>
+<blockquote>
+<p>The choice of a model often involves a tradeof be-tween accuracy, simplicity,and tractability. </p>
+</blockquote>
+<p>但是不论多复杂的模型，对于某个特定的事件都有确定的概率</p>
+<blockquote>
+<p>All conceivable questions have precise answers and it is only a matter of developing the skill to arrive at them.</p>
+</blockquote>
+<h3 id="离散模型"><a href="#离散模型" class="headerlink" title="离散模型"></a>离散模型</h3><p>对于多个等概率事件</p>
+<script type="math/tex; mode=display">
+\text {Pr}\{A\}=\frac{\text{number of elements of }A }{n}</script><h3 id="连续模型"><a href="#连续模型" class="headerlink" title="连续模型"></a>连续模型</h3><p>样本空间可以用图形来表示</p>
+<p>对于样本空间为</p>
+<script type="math/tex; mode=display">
+\Omega=[0,1]</script><p>对于某一个值，概率为0，只有考虑长度才有意义</p>
+<script type="math/tex; mode=display">
+\text { If } A \subset B, \text { then } \text {Pr}\{A\} \leq \text {Pr}\{B\}</script><h3 id="容斥"><a href="#容斥" class="headerlink" title="容斥"></a>容斥</h3><script type="math/tex; mode=display">
+\begin{aligned}\text {Pr}\{A\cup B\}&=\text {Pr}\{A\}+\text {Pr}\{B\}-\text {Pr}\{A\cap B\}\\&\le\text {Pr}\{A\}+\text {Pr}\{B\}\end{aligned}</script><script type="math/tex; mode=display">
+\text {Pr}\left\{\bigcup_{i}A_i\right\}\le\sum_i\text {Pr}\{A_i\}</script><p>由德摩根律</p>
+<script type="math/tex; mode=display">
+\text {Pr}\{A\cup C|B\}\le\text {Pr}\{A|B\}+\text {Pr}\{C|B\}</script><h1 id="离散概率分布"><a href="#离散概率分布" class="headerlink" title="离散概率分布"></a>离散概率分布</h1><p>概率分布在有限或无限可数的样本空间，则该概率分布是离散的</p>
+<script type="math/tex; mode=display">
+\text {Pr}\{A\}=\sum_{s\in A}\text {Pr}\{s\}</script><p>若基本事件$s\in S$的概率为</p>
+<script type="math/tex; mode=display">
+\text {Pr}\{s\}=1/|S|</script><p>则称为$S$上的的均匀概率分布</p>
+<h2 id="条件概率"><a href="#条件概率" class="headerlink" title="条件概率"></a>条件概率</h2><p>已知事件 $B$发生$\text {Pr}{B}\ne 0$，事件$A$的条件概率定义为</p>
+<script type="math/tex; mode=display">
+\text {Pr}\{A|B\}=\frac{\text {Pr}\{A\cap B\}}{\text {Pr}\{B\}}</script><p>需要从直观角度上理解</p>
+<script type="math/tex; mode=display">
+\text {Pr}\{A|B\}+\text {Pr}\{A^c|B\}=1</script><h3 id="状态转移"><a href="#状态转移" class="headerlink" title="状态转移"></a>状态转移</h3><script type="math/tex; mode=display">
+\mathbf{P}\left(\cap_{i=1}^{n} A_{i}\right)=\mathbf{P}\left(A_{1}\right) \cdot \frac{\mathbf{P}\left(A_{1} \cap A_{2}\right)}{\mathbf{P}\left(A_{1}\right)} \cdot \frac{\mathbf{P}\left(A_{1} \cap A_{2} \cap A_{3}\right)}{\mathbf{P}\left(A_{1} \cap A_{2}\right)} \cdots \frac{\mathbf{P}\left(\cap_{i=1}^{n} A_{i}\right)}{\mathbf{P}\left(\cap_{i=1}^{n-1} A_{i}\right)}</script><p><img src="/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E5%9F%BA%E6%9C%AC/image-20230208222842437.png" alt="image-20230208222842437"></p>
+<h3 id="独立"><a href="#独立" class="headerlink" title="独立"></a>独立</h3><p>若</p>
+<script type="math/tex; mode=display">
+\text {Pr}\{A\cap B\}=\text {Pr}\{A\}\text {Pr}\{B\}</script><p>则称事件$A$和$B$是独立的，若$\text {Pr}{B}\ne 0$，则等价于</p>
+<script type="math/tex; mode=display">
+\text {Pr}\{A|B\}=\Pr\{A\}(与B无关)</script><p>若对于所有$1\le i &lt; j\le n$，有</p>
+<script type="math/tex; mode=display">
+\text {Pr}\{A_i\cap A_j\}=\Pr\{A_i\}\Pr\{A_j\}</script><p>则称事件$A_1,A_2,\cdots,A_n$两两独立</p>
+<p>若对这些事件的每一个$k$子集${ A<em>{i_1},A</em>{i<em>2},\cdots,A</em>{i_k}}$，其中$2\le k\le n$且$1\le {i_1}&lt; {i_2}&lt; \cdots&lt; {i_k}\le n $，有</p>
+<script type="math/tex; mode=display">
+\Pr\{ A_{i_1}\cap A_{i_2}\cap \cdots\cap A_{i_k}\}=\Pr\{ A_{i_1}\}\Pr\{ A_{i_2}\}\cdots\Pr\{ A_{i_k}\}</script><p>则称这些事件相互独立</p>
+<h4 id="条件独立"><a href="#条件独立" class="headerlink" title="条件独立"></a>条件独立</h4><script type="math/tex; mode=display">
+\text {Pr}\{A\cap B|C\}=\text {Pr}\{A|C\}\text {Pr}\{B|C\}\\
+\Leftrightarrow\text {Pr}\{A| B\cap C\}=\text {Pr}\{A|C\}</script><blockquote>
+<p>In words, this relation states that if is known to have occurred,the additional knowledge that B also occurred does not change the probability of A.</p>
+</blockquote>
+<p>考虑事件A为第一次掷为H，B为第二次H，C为两次结果不同</p>
+<script type="math/tex; mode=display">
+\text {Pr}\{A\cap B|C\}=0\\\text {Pr}\{A|C\}=\text {Pr}\{B|C\}=\frac12</script><p>所以独立不代表条件独立</p>
+<script type="math/tex; mode=display">
+\text {Pr}\{A\cap B\cap C\}=0</script><p>则A，B两个独立事件不条件独立</p>
+<h2 id="全概率公式"><a href="#全概率公式" class="headerlink" title="全概率公式"></a>全概率公式</h2><p>将样本空间$\Omega$划分为两两独立的$n$个事件，且</p>
+<script type="math/tex; mode=display">
+\bigcup_iA_i=\Omega</script><p>则</p>
+<script type="math/tex; mode=display">
+\Pr\{B\}=\sum_{i=1}^n\Pr\{B|A_i\}\Pr\{A_i\}</script><h2 id="贝叶斯定理"><a href="#贝叶斯定理" class="headerlink" title="贝叶斯定理"></a>贝叶斯定理</h2><p>由</p>
+<script type="math/tex; mode=display">
+\Pr\{A\cap B\}=\Pr\{A|B\}\Pr\{B\}=\Pr\{B|A\}\Pr\{A\}</script><p>得</p>
+<script type="math/tex; mode=display">
+\Pr\{A|B\}=\frac{\Pr\{B|A\}\Pr\{A\}}{\Pr\{B\}}</script><p>对于$\Pr{B}$，因为可以划分，故</p>
+<script type="math/tex; mode=display">
+\Pr\{B\}=\Pr\{B|A\}\Pr\{A\}+\Pr\{B|\overline{A} \}\Pr\{\overline{A} \}</script><p>所</p>
+<script type="math/tex; mode=display">
+\Pr\{A|B\}=\frac{\Pr\{B|A\}\Pr\{A\}}{\Pr\{B|A\}\Pr\{A\}+\Pr\{B|\overline{A} \}\Pr\{\overline{A} \}}</script><p>贝叶斯定理常常用来由果导因，如抗原阳性是否代表感染新冠</p>
+<script type="math/tex; mode=display">
+\Pr\{A_i|B\}=\frac{\Pr\{B|A_i\}\Pr\{A_i\}}{\Pr\{B|A_1\}\Pr\{A_1\}+\dots+\Pr\{B|A_n \}\Pr\{A_n \}}</script><p>其中$\Pr{A_i|B}$为后验概率，$\Pr{A_i}$是先验概率</p>
+<h1 id="计数"><a href="#计数" class="headerlink" title="计数"></a>计数</h1><p>分类加法计数原理，同一个阶段的不同方法可以相加</p>
+<p>有N个阶段每个阶段有$n_i$个方式，则总方式为</p>
+<script type="math/tex; mode=display">
+n_1n_2\cdots n_N</script><h2 id="排列数"><a href="#排列数" class="headerlink" title="排列数"></a>排列数</h2><script type="math/tex; mode=display">
+k-\text{permutations}=\frac{n!}{(n-k)!}</script><h2 id="组合数"><a href="#组合数" class="headerlink" title="组合数"></a>组合数</h2><script type="math/tex; mode=display">
+\left(\begin{array}{l}n\\k\end{array}\right)=\frac{n!}{(n-k)!k!}</script><h2 id="多项式定理"><a href="#多项式定理" class="headerlink" title="多项式定理"></a>多项式定理</h2><p>将n个元素分为$k$类，其中各为$n_i$个</p>
+<script type="math/tex; mode=display">
+C_{n}^{n_{1}} C_{n-n_{1}}^{n_{2}} \ldots C_{n-n_{1}-\ldots-n_{k-1}}^{n_{k}}=\frac{n !}{n_{1} ! n_{2} ! \ldots n_{k} !}</script><script type="math/tex; mode=display">
+\left(x_{1}+\ldots+x_{k}\right)^{n}=\sum_{n_{1}+\ldots+n_{k}=n}\left(\begin{array}{ccc} 
+& n & \\
+n_{1} & \ldots & n_{k}
+\end{array}\right) x_{1}^{n_{1}} x_{2}^{n_{2}} \ldots x_{k}^{n_{k}}</script>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/" itemprop="url">大一/概率论/随机变量</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-07-23T21:09:55+08:00">
+                2022-07-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="随机变量"><a href="#随机变量" class="headerlink" title="随机变量"></a>随机变量</h1><p>随机变量$X$是有限或无限可数样本空间$S$到实数的函数</p>
+<p><img src="/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/image-20230209133135226.png" alt="image-20230209133135226"></p>
+<p>对于随机变量$X$和实数$x$，定义事件$X=x$为${s\in S,X(s)=x}$，因此</p>
+<blockquote>
+<p>we will use upper case charactersto denote random variables，and lower case characters to denote real numbers such as the numerical values of a random variable.</p>
+</blockquote>
+<script type="math/tex; mode=display">
+\Pr\{X=x\}=\sum_{s\in S,X(s)=x}\Pr\{s\}</script><p> 对于离散随机变量，函数$p_X(x)=\Pr{X=x}$为$X$的概率质量函数PMF</p>
+<p>特别的，对于连续随机变量也称为概率密度函数PDF</p>
+<script type="math/tex; mode=display">
+\Pr\{X\in B\}=\int_Bf_X(x)\text{d}x</script><p>归一化条件为</p>
+<script type="math/tex; mode=display">
+\int_{-\infty}^{+\infty}f_X(x)\text{d}x=1</script><script type="math/tex; mode=display">
+\Pr\{[x,x+\delta ]\}\approx f_X(x)
+\delta</script><p>所以$f_X(x)$可以看成单位长度的概率</p>
+<p>可以把这两种函数整合成一个函数CDF(cumulative distribution function)</p>
+<script type="math/tex; mode=display">
+F_x(x)=\text{Pr}\{X\le x\}=\begin{cases}\displaystyle\sum_{k\le x}p_X(k) \\\displaystyle\int_{-\infty}^xf_X(x)\text{d}x\end{cases}</script><p><img src="/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/image-20230209223350322.png" alt="image-20230209223350322"></p>
+<p><img src="/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/image-20230209223424967.png" alt="image-20230209223424967" style="zoom:100%;"></p>
+<p> 可以类比积分上限函数，通过差分和求导可以还原</p>
+<p>若有若干个随机变量，则函数</p>
+<script type="math/tex; mode=display">
+p_{X,Y}(x,y)=\Pr\{X=x且Y=y\}</script><p>为$X$与$Y$的联合概率密度函数，性质同理，如</p>
+<script type="math/tex; mode=display">
+\begin{aligned}\Pr\{Y=y\}&=\sum_x\Pr\{X=x且Y=y\}(y为定值)\\&=\sum _xp_{X,Y}(x,y)\end{aligned}\\</script><script type="math/tex; mode=display">
+p_Z(z)=\sum_{\{z|z=g(x,y)\}}p_{X,Y}(x,y)\\
+\text{E}[g(X, Y)]=\sum_{x} \sum_{y} g(x, y) p_{X, Y}(x, y)</script><h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><script type="math/tex; mode=display">
+Y=g(X)\\p_Y(y)=\sum_{\{x|g(x)=y\}}p_X(x)</script><p><img src="/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/image-20230209180813949.png" alt="image-20230209180813949"></p>
+<h2 id="随机变量的期望值"><a href="#随机变量的期望值" class="headerlink" title="随机变量的期望值"></a>随机变量的期望值</h2><script type="math/tex; mode=display">
+\text E[X]=\sum_xx\cdot\Pr\{X=x\}\\
+\text E[g(X)]=\sum_xg(x)\cdot\Pr\{X=x\}\\</script><p>对于连续的随机变量</p>
+<script type="math/tex; mode=display">
+\text{E}[X]=\int_{-\infty}^{+\infty}xf_X(x)\text{d}x\\
+\text{E}[g(X)]=\int_{-\infty}^{+\infty}g(x)f_X(x)\text{d}x</script><p>期望的线性性质</p>
+<script type="math/tex; mode=display">
+\text E\left[\sum_{i=1}^nX_i\right]=\sum_{i=1}^n\text E[X_i]\\\text E[aX+b]=a\text E[X]+b</script><p>若相互独立，使用期望的定义得</p>
+<script type="math/tex; mode=display">
+\text E[XY]=\text E[X]\text E[Y]</script><h2 id="方差"><a href="#方差" class="headerlink" title="方差"></a>方差</h2><script type="math/tex; mode=display">
+\text{Var}[X]=\text{E}[(X-\text{E}[X])^2]=\text{E}[X^2]-\text{E}^2[X]\\
+\text{Var}[aX+b]=a^2\text{Var}[X]</script><p>对于连续的随机变量</p>
+<script type="math/tex; mode=display">
+\text{Var}[X]=\int_{-\infty}^{+\infty}(x-\text{E}[X])^2f_X(x)\text{d}x\\</script><p>若相互独立</p>
+<script type="math/tex; mode=display">
+\text{Var}[X+Y]=\text{Var}[X]+\text{Var}[Y]\\
+\text{Var}[\sum_{i=1}^nX_i]=\sum_{i=1}^n\text{Var}[X_i]</script><script type="math/tex; mode=display">
+\begin{aligned}\text{Var}[XY]&=\text{E}^2[Y]\text{Var}[X]+\text{E}[X^2]\text{Var}[Y]\\
+&=\text{E}[Y]^2\text{Var}[X]+\text{E}^2[X]\text{Var}[Y]\\
+&=\text{Var}[X]\text{Var}[Y]+\text{E}^2[Y]\text{Var}[X]+\text{E}^2[X]\text{Var}[Y]
+\end{aligned}</script><p> 标准差</p>
+<script type="math/tex; mode=display">
+\sigma_X=\sqrt{\text{var}(X) }</script><h2 id="条件"><a href="#条件" class="headerlink" title="条件"></a>条件</h2><p>conditional PMF</p>
+<script type="math/tex; mode=display">
+p_{X|A}=\frac{\text{Pr}\{\{X=x\}\cap A \}}{\text{Pr}\{A\}}</script><p><img src="/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/image-20230209195032570.png" alt="image-20230209195032570"></p>
+<p>可以将A推广为一个随机变量</p>
+<script type="math/tex; mode=display">
+p_{X|Y}(x,y)=\frac{p_{X,Y}(x,y)}{p_Y(y)}</script><p><img src="/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/image-20230209195505072.png" alt="image-20230209195505072"></p>
+<script type="math/tex; mode=display">
+\sum_{x} p_{X \mid Y}(x \mid y)=1</script><h2 id="分布"><a href="#分布" class="headerlink" title="分布"></a>分布</h2><h3 id="几何分布"><a href="#几何分布" class="headerlink" title="几何分布"></a>几何分布</h3><p>前面一直没有成功直到第n次才成功</p>
+<p><img src="/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/image-20230209135132169.png" alt="image-20230209135132169"></p>
+<script type="math/tex; mode=display">
+\Pr\{X=k\}=(1-p)^{n-1}p\\
+\text E[x]=\sum_{k=1}^\infty(1-p)^{k-1}pk=1/p</script><h3 id="二项分布"><a href="#二项分布" class="headerlink" title="二项分布"></a>二项分布</h3><p>区别于国内表达，组合数记为</p>
+<script type="math/tex; mode=display">
+\left(\begin{array}{l}n\\k\end{array}\right)=C_n^k</script><p>读作$n$取$k$</p>
+<script type="math/tex; mode=display">
+\Pr\{X=k\}=\left(\begin{array}{l}n\\k\end{array}\right)p^k(1-p)^{n-k}\\
+\text E[X]=np\\
+\text{Var}[X]=np(1-p)</script><h3 id="泊松分布"><a href="#泊松分布" class="headerlink" title="泊松分布"></a>泊松分布</h3><script type="math/tex; mode=display">
+p_X(k)=e^{-\lambda}\frac{\lambda^k}{k!}\\
+\sum_{k=0}^{\infty} e^{-\lambda} \frac{\lambda^{k}}{k !}=e^{-\lambda}\left(1+\lambda+\frac{\lambda^{2}}{2 !}+\frac{\lambda^{3}}{3 !}+\cdots\right)=e^{-\lambda} e^{\lambda}=1\\
+EX=\lambda</script><h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><h3 id="指数随机变量"><a href="#指数随机变量" class="headerlink" title="指数随机变量"></a>指数随机变量</h3><script type="math/tex; mode=display">
+ f_{X}(x)=\left\{\begin{array}{ll}
+\lambda e^{-\lambda x}, & \text { if } x \geq 0 \\
+0, & \text { otherwise }
+\end{array}\right.</script><script type="math/tex; mode=display">
+\text{E}[X]=\frac{1}{\lambda}, \quad \operatorname{Var}(X)=\frac{1}{\lambda^{2}}</script><p>其中$\lambda$是参数可以用来调控均值，这个模型用途很广</p>
+<h3 id="正态随机变量"><a href="#正态随机变量" class="headerlink" title="正态随机变量"></a>正态随机变量</h3><script type="math/tex; mode=display">
+f_X(x)=\frac1{\sqrt{2\pi}\sigma}e^{-(x-\mu)^2/2\sigma^2}</script><script type="math/tex; mode=display">
+\text{E}[X]=\mu, \quad \operatorname{Var}(X)=\sigma^{2}</script>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/07/23/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E6%9B%B2%E7%8E%87/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -636,7 +1045,7 @@ e^x+e^{-x}\text{d}x=\text{d}(e^x-e^{-x})\\
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">82</span>
+                <span class="site-state-item-count">84</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
