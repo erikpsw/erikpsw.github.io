@@ -390,14 +390,31 @@ F=qvB\sin\theta</script><p>从而可以得到磁感应强度</p>
 <script type="math/tex; mode=display">
 B=\frac{F_\text{max}}{q_0v}</script><p>同电场可以定义磁感应线</p>
 <p><img src="/2023/04/02/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%A3%81%E5%9C%BA/image-20230402161414825.png" alt="image-20230402161414825" style="zoom:50%;"></p>
-<h1 id="电流"><a href="#电流" class="headerlink" title="电流"></a>电流</h1><script type="math/tex; mode=display">
+<p>经典结论</p>
+<script type="math/tex; mode=display">
+R=\frac{mv}{Bq}
+\\T=\frac{2\pi m}{qB}</script><p>对于与磁场方向成一定角度的运动，螺距$h$</p>
+<script type="math/tex; mode=display">
+h=v_{\parallel}T=\frac{2\pi mv_0\cos\theta}{qB}</script><h1 id="电流"><a href="#电流" class="headerlink" title="电流"></a>电流</h1><script type="math/tex; mode=display">
 I=\frac{\text dq}{\text dt}=nqSv</script><p>引入电流强度</p>
 <script type="math/tex; mode=display">
-\vec j=nq\vec v</script><p>来表示电流</p>
-<h1 id="毕奥萨伐尔定律"><a href="#毕奥萨伐尔定律" class="headerlink" title="毕奥萨伐尔定律"></a>毕奥萨伐尔定律</h1><p><img src="/2023/04/02/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%A3%81%E5%9C%BA/image-20230402162157506.png" alt="image-20230402162157506" style="zoom:50%;"></p>
+\vec j=nq\vec v</script><p>从而电流可以表示成通过个面积元电流的积分电流得到</p>
+<script type="math/tex; mode=display">
+I=\int_Sj\text dS</script><h2 id="安培力"><a href="#安培力" class="headerlink" title="安培力"></a>安培力</h2><script type="math/tex; mode=display">
+\text dF=nS\text dl(qv_d\times B)\\
+F=\int_LI\text dl\times B</script><p>对于直导线</p>
+<script type="math/tex; mode=display">
+F=BIL\sin \theta</script><p>对于两平行直导线</p>
+<script type="math/tex; mode=display">
+\frac{\text d F_{21}}{\text dl_1}=\frac{\text d F_{21}}{\text dl_1}=\frac {\mu_0 I_1I_2}{2\pi d}</script><h2 id="磁力偶矩"><a href="#磁力偶矩" class="headerlink" title="磁力偶矩"></a>磁力偶矩</h2><script type="math/tex; mode=display">
+M=\vec m\times \vec B\\
+m=NIS\vec e</script><p>磁场力做功 </p>
+<script type="math/tex; mode=display">
+W=\int_II\text d\Phi</script><h1 id="毕奥萨伐尔定律"><a href="#毕奥萨伐尔定律" class="headerlink" title="毕奥萨伐尔定律"></a>毕奥萨伐尔定律</h1><p><img src="/2023/04/02/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%A3%81%E5%9C%BA/image-20230402162157506.png" alt="image-20230402162157506" style="zoom:50%;"></p>
 <p>对于电流元$I\text dl$，定律告诉我们</p>
 <script type="math/tex; mode=display">
-\text dB=\frac{\mu_0}{4\pi}\frac{I\text dl\times e_r}{r^2}</script><h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><p>常见的磁场</p>
+\text dB=\frac{\mu_0}{4\pi}\frac{I\text dl\times e_r}{r^2}</script><p>$\mu_0$为真空磁导率</p>
+<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><p>常见的磁场</p>
 <p>导线</p>
 <script type="math/tex; mode=display">
 B=\frac{\mu_0I}{4\pi a}(\cos \theta_1-\cos \theta_2)</script><p>无限长</p>
@@ -420,7 +437,72 @@ B=\frac{\mu_0}{4\pi}\frac{qv\times e_r}{r^2}</script><h1 id="高斯定理"><a hr
 \oint_SB\cdot\text dS=0</script><h1 id="安培环路定理"><a href="#安培环路定理" class="headerlink" title="安培环路定理"></a>安培环路定理</h1><p><img src="/2023/04/02/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%A3%81%E5%9C%BA/image-20230402165353178.png" alt="image-20230402165353178" style="zoom:33%;"></p>
 <script type="math/tex; mode=display">
 \oint_LB\text dl=\mu_0\sum_iI_i</script><p>电流方向符合使用右手定则得到的绕行方向时为正</p>
-
+<h1 id="安培力-1"><a href="#安培力-1" class="headerlink" title="安培力"></a>安培力</h1><p>电流是由大量带电粒子定向运动而形成的，由洛伦兹力可以得到</p>
+<script type="math/tex; mode=display">
+\text dF=I\text dl\times B\\
+F_A=\int_LI\text dl\times B</script><p>对于最基本的直线电流</p>
+<script type="math/tex; mode=display">
+F=BIL\sin\theta</script><p>对于两根长直导线</p>
+<script type="math/tex; mode=display">
+\frac{\text d F}{\text dl}=\frac{\mu_0 I_1I_2}{2\pi d}</script><h2 id="磁力矩"><a href="#磁力矩" class="headerlink" title="磁力矩"></a>磁力矩</h2><p>对于线圈来说在磁场中会受力产生力矩</p>
+<script type="math/tex; mode=display">
+M=m\times B
+\\m=NIS\vec{e_n}</script><p>其中$\vec{e_n}$的方向由右手定则确定</p>
+<p>对于法向量与磁场方向的夹角$\theta$</p>
+<ul>
+<li>$\theta=0^{\circ}$线圈不受磁力偶矩的作用此时线圈处于稳定平衡状态</li>
+<li>$\theta=90^{\circ}$线圈所受磁力偶矩最大</li>
+<li>$\theta=180^{\circ}$线圈处于不稳定平衡状态</li>
+</ul>
+<p>对安培力做功无论是平动还是转动</p>
+<script type="math/tex; mode=display">
+W=I\Delta\Phi_m=\int_{\Phi_m}I\text d\Phi_m</script><h1 id="磁介质"><a href="#磁介质" class="headerlink" title="磁介质"></a>磁介质</h1><p>类比电介质我们引入磁介质和相对磁导率</p>
+<p>戒指内部任意点的磁场强度$B$可表示为外磁场$B_0$和附加磁场$B’$的矢量和</p>
+<script type="math/tex; mode=display">
+B=B_0+B'=\mu_rB_0</script><ol>
+<li>$\mu_r&gt;&gt;1$铁磁性磁场被大大增强</li>
+<li>$\mu_r&gt;1$顺磁性磁场被加强</li>
+<li>$\mu_r&lt;1$ 抗磁性磁场被削弱</li>
+<li>$\mu_r=0$完全抗磁性磁场被抵消</li>
+</ol>
+<p>为了描述磁介质的被磁化强度，我们引入磁化强度</p>
+<script type="math/tex; mode=display">
+M=\frac{\sum m_i}{\Delta V}</script><p>在宏观上石戒指可在表面形成等效环形电流称为磁化电流</p>
+<p>类比$P_n=\sigma$</p>
+<script type="math/tex; mode=display">
+M=j_s=\frac{I_s}{L}</script><p>$j_s$称为磁化面电流线密度，故对于安培定理</p>
+<script type="math/tex; mode=display">
+\oint_LB\text dl=\mu_0\sum_iI_i+\oint_LM\cdot\text dl\\
+\oint_L\left(\frac{B}{\
+\mu_0}-M\right)\text dl=\sum_iI_i</script><p>定义$H$ 为磁场强度</p>
+<script type="math/tex; mode=display">
+H=\left(\frac{B}{\
+\mu_0}-M\right)</script><p>对于各向同性的均匀磁介质</p>
+<script type="math/tex; mode=display">
+M=\chi _mH\\
+B=\mu_0(1+\chi _m)H=\mu_0\mu_rH=\mu H</script><p>其中$\chi _m$为磁化率，$\mu_r$称为相对磁导率，$\mu$为磁导率</p>
+<h1 id="电磁感应"><a href="#电磁感应" class="headerlink" title="电磁感应"></a>电磁感应</h1><script type="math/tex; mode=display">
+\mathscr{E}_i=-\frac{\text d\Phi}{\text dt}\\
+\Psi =N\Phi
+\\
+q=\frac1R(\Psi_1-\Psi _2)</script><p>对$\Phi$求导得到两个分量</p>
+<script type="math/tex; mode=display">
+\mathscr{E}_i=\int_L(v\times B)\cdot \text dl-\int_S\frac{\partial B}{\partial t}\cdot\text dS</script><p>分别为动生和感生电动势</p>
+<script type="math/tex; mode=display">
+\mathscr{E}_{感}=\oint_LE_k\cdot\text dl=-\frac{\text d\Phi}{\text dt}</script><h2 id="自感"><a href="#自感" class="headerlink" title="自感"></a>自感</h2><script type="math/tex; mode=display">
+\Psi =N\Phi=LI\\
+\mathscr{E}_{L}=-L\frac{\text dI}{\text dt}</script><h2 id="互感"><a href="#互感" class="headerlink" title="互感"></a>互感</h2><script type="math/tex; mode=display">
+\Psi _{21}=M_{21}I_1\\ 
+\Psi _{12}=M_{12}I_2\\
+M=M_{12}=M_{21}\\
+\mathscr{E}_{12}=-M\frac{\text dI_2}{\text dt}\\
+\mathscr{E}_{21}=-M\frac{\text dI_1}{\text dt}</script><p>自感$L$和互感$M$单位都为亨利</p>
+<h1 id="能量"><a href="#能量" class="headerlink" title="能量"></a>能量</h1><script type="math/tex; mode=display">
+W_m=\int_V\frac12\frac{B^2}{\mu}\text dV</script><p>所以有能量密度</p>
+<script type="math/tex; mode=display">
+w_m=\frac12\frac{B^2}{\mu}=\frac12BH</script><p>对于自感，有</p>
+<script type="math/tex; mode=display">
+W_m=\frac12LI^2</script>
           
         
       
@@ -1211,7 +1293,7 @@ J=\frac{\partial(F,G)}{\partial(u,v)}=\begin{vmatrix}\frac{\partial F}{\partial 
 \frac{\partial u}{\partial x}=-\frac1J\frac{\partial(F,G)}{\partial(x,v)}=-\frac1J\begin{vmatrix}\frac{\partial F}{\partial x}&\frac{\partial F}{\partial v}\\\frac{\partial G}{\partial x}&\frac{\partial G}{\partial v}\end{vmatrix}</script><p>同理也有方程推导法和微分法</p>
 <p>根据克拉姆法则，对于一个$n$元线性方程组，如果它的系数矩阵的行列式不等于零，则可以使用如下公式求解：</p>
 <script type="math/tex; mode=display">
-x_i = \Delta_i / \Delta</script><p>其中，$xi$是第$i$个未知数的值，$\Delta_i$是将系数矩阵中第i列替换为常数矩阵后的行列式值，$\Delta$是系数矩阵的行列式值。</p>
+x_i = \Delta_i / \Delta</script><p>其中，$x_i$是第$i$个未知数的值，$\Delta_i$是将系数矩阵中第$i$列替换为常数矩阵后的行列式值，$\Delta$是系数矩阵的行列式值。</p>
 <h2 id="方向导数"><a href="#方向导数" class="headerlink" title="方向导数"></a>方向导数</h2><p>方向导数为函数在某一方向(正反都可以)上的变化率</p>
 <p><img src="/2023/02/15/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%A4%9A%E5%85%83%E5%BE%AE%E5%88%86/image-20230216180930645.png" alt="image-20230216180930645" style="zoom:50%;"></p>
 <script type="math/tex; mode=display">
