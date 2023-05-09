@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/psw.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="二重积分  \lambda&#x3D;\max\{\Delta A_k\}\\ \iint_Df(x,y)\text d\sigma&#x3D;\lim_{\lambda\to0}\sum _if(\xi_i,\eta_i)\Delta A_i其中$f(x,y)$称为被积函数，$f(x,y)\text d\sigma$称为被积表达式，积分区域为$D$，$\text d\sigma$为面积元素，$\displaysty">
+<meta property="og:type" content="article">
+<meta property="og:title" content="大一&#x2F;高数&#x2F;重积分">
+<meta property="og:url" content="http://yoursite.com/2023/05/07/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E9%87%8D%E7%A7%AF%E5%88%86/index.html">
+<meta property="og:site_name" content="BLOG">
+<meta property="og:description" content="二重积分  \lambda&#x3D;\max\{\Delta A_k\}\\ \iint_Df(x,y)\text d\sigma&#x3D;\lim_{\lambda\to0}\sum _if(\xi_i,\eta_i)\Delta A_i其中$f(x,y)$称为被积函数，$f(x,y)\text d\sigma$称为被积表达式，积分区域为$D$，$\text d\sigma$为面积元素，$\displaysty">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2023/05/07/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E9%87%8D%E7%A7%AF%E5%88%86/image-20230507181748171.png">
+<meta property="og:image" content="http://yoursite.com/2023/05/07/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E9%87%8D%E7%A7%AF%E5%88%86/image-20230507182436296.png">
+<meta property="og:image" content="http://yoursite.com/2023/05/07/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E9%87%8D%E7%A7%AF%E5%88%86/image-20230507224502808.png">
+<meta property="og:image" content="http://yoursite.com/2023/05/07/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E9%87%8D%E7%A7%AF%E5%88%86/image-20230507231225697.png">
+<meta property="og:image" content="http://yoursite.com/2023/05/07/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E9%87%8D%E7%A7%AF%E5%88%86/image-20230507231602218.png">
+<meta property="og:image" content="http://yoursite.com/2023/05/07/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E9%87%8D%E7%A7%AF%E5%88%86/20200905200443461.png">
+<meta property="og:image" content="http://yoursite.com/2023/05/07/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E9%87%8D%E7%A7%AF%E5%88%86/image-20230508084722693.png">
+<meta property="og:image" content="http://yoursite.com/2023/05/07/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E9%87%8D%E7%A7%AF%E5%88%86/image-20230509214814190.png">
+<meta property="article:published_time" content="2023-05-07T10:15:29.103Z">
+<meta property="article:modified_time" content="2023-05-09T15:37:25.868Z">
+<meta property="article:author" content="Shiwei Pan">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2023/05/07/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E9%87%8D%E7%A7%AF%E5%88%86/image-20230507181748171.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2023/05/07/大一/高数/重积分/"/>
+
+
+
+
+
+  <title>大一/高数/重积分 | BLOG</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+<script src="/live2d-widget/autoload.js"></script>
+
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">BLOG</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-mine">
+          <a href="/mine/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Old
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-new">
+          <a href="/new/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Introduction
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2023/05/07/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E9%87%8D%E7%A7%AF%E5%88%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">大一/高数/重积分</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-05-07T18:15:29+08:00">
+                2023-05-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="二重积分"><a href="#二重积分" class="headerlink" title="二重积分"></a>二重积分</h1><p><img src="/2023/05/07/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E9%87%8D%E7%A7%AF%E5%88%86/image-20230507181748171.png" alt="image-20230507181748171" style="zoom:50%;"></p>
+<script type="math/tex; mode=display">
+\lambda=\max\{\Delta A_k\}\\
+\iint_Df(x,y)\text d\sigma=\lim_{\lambda\to0}\sum _if(\xi_i,\eta_i)\Delta A_i</script><p>其中$f(x,y)$称为被积函数，$f(x,y)\text d\sigma$称为被积表达式，积分区域为$D$，$\text d\sigma$为面积元素，$\displaystyle \sum _if(\xi_i,\eta_i)\Delta A_i$称为积分和</p>
+<h2 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h2><p>可加性</p>
+<script type="math/tex; mode=display">
+\iint_D=\iint_{D_1}+\iint_{D_2}</script><p>线性</p>
+<script type="math/tex; mode=display">
+a\iint_D\text d \sigma=\iint_Da\text d \sigma\\
+\iint_D[\alpha f+\beta g]\text d \sigma=\alpha\iint_Df \text d \sigma+\beta\iint_Dg\text d \sigma\\</script><p>绝对值不等式</p>
+<script type="math/tex; mode=display">
+\left|\iint_Df\text d\sigma\right|\le\iint_D|f|\text d\sigma</script><p>估值</p>
+<script type="math/tex; mode=display">
+m\sigma\le\iint_Df(x,y)\text d\sigma\le M\sigma</script><p>中值定理</p>
+<script type="math/tex; mode=display">
+\iint_Df(x,y)\text d\sigma=f(\xi,\eta)\sigma</script><p>平均值</p>
+<script type="math/tex; mode=display">
+\overline{f}=\frac{\displaystyle \iint_Df(x,y)\text d\sigma}{\sigma}</script><p>对称性</p>
+<p>如果$D$关于$x$轴对称，被分为$D_1$和$D_2$</p>
+<script type="math/tex; mode=display">
+f(x,y)=-f(x,-y)\Rightarrow\iint_Df=0\\
+f(x,y)=f(x,-y)\Rightarrow\iint_Df=2\iint_{D_1}f</script><p>若$D$关于$y=x$对称</p>
+<script type="math/tex; mode=display">
+\iint_Df(x,y)=\iint_{D}f(y,x)</script><p>若$D_1$和$D_2$关于$y=x$对称</p>
+<script type="math/tex; mode=display">
+\iint_{D_1}f(x,y)=\iint_{D_2}f(y,x)</script><h2 id="计算法"><a href="#计算法" class="headerlink" title="计算法"></a>计算法</h2><h3 id="直角坐标"><a href="#直角坐标" class="headerlink" title="直角坐标"></a>直角坐标</h3><script type="math/tex; mode=display">
+\iint_Df(x,y)\text d\sigma=\iint_Df(x,y)\text dx\text dy</script><p><img src="/2023/05/07/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E9%87%8D%E7%A7%AF%E5%88%86/image-20230507182436296.png" alt="image-20230507182436296"></p>
+<p>先在一条线上作定积分，再对线作定积分</p>
+<script type="math/tex; mode=display">
+x:\quad I=\int_a^b\text dx\int_{g_1(x)}^{g_2(x)}f(x,y)\text dy\\
+x:\quad I=\int_c^d\text dy\int_{h_1(y)}^{h_2(y)}f(x,y)\text dx</script><h3 id="极坐标"><a href="#极坐标" class="headerlink" title="极坐标"></a>极坐标</h3><p><img src="/2023/05/07/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E9%87%8D%E7%A7%AF%E5%88%86/image-20230507224502808.png" alt="image-20230507224502808"></p>
+<script type="math/tex; mode=display">
+I=\int_{\theta_1}^{\theta_2}\text d\theta\int_{\rho_1(\theta)}^{\rho_2(\theta)}f(\rho\cos\theta,\rho \sin \theta)\rho\text d\rho</script><p>注意积分上下限，如双扭线$\rho=\sqrt{4\cos 2\theta}$</p>
+<h3 id="平移变换"><a href="#平移变换" class="headerlink" title="平移变换"></a>平移变换</h3><script type="math/tex; mode=display">
+\iint_Df(x,y)\text dx \text dy=\iint_{D'}f(u+x_0,v+y_0)\text du\text dv</script><h3 id="换元积分"><a href="#换元积分" class="headerlink" title="换元积分"></a>换元积分</h3><p>满足条件</p>
+<p>有雅可比$x(u,v),y(u,v)$在D上一阶偏导连续</p>
+<script type="math/tex; mode=display">
+J(u,v)=\frac{\partial(x,y)}{\partial(u,v)}\ne0</script><p>且$D’\to D$ 的变换为一一映射，则有</p>
+<script type="math/tex; mode=display">
+I=\iint_{D'}f[x(u,v),y(u,v)]|J(u,v)|\text du\text dv\\
+|J(u,v)|=\frac1{|J(x,y)|}</script><p>画出还原后的区域即可</p>
+<h1 id="三重积分"><a href="#三重积分" class="headerlink" title="三重积分"></a>三重积分</h1><p><img src="/2023/05/07/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E9%87%8D%E7%A7%AF%E5%88%86/image-20230507231225697.png" alt="image-20230507231225697" style="zoom:50%;"></p>
+<script type="math/tex; mode=display">
+\lambda=\max\{\Delta V_k\}\\
+\iiint_{\Omega}f(x,y,z)\text dv=\lim_{\lambda\to0}\sum _if(\xi_i,\eta_i,\zeta _i)\Delta V_i</script><h2 id="计算法-1"><a href="#计算法-1" class="headerlink" title="计算法"></a>计算法</h2><h3 id="三次积分"><a href="#三次积分" class="headerlink" title="三次积分"></a>三次积分</h3><p><img src="/2023/05/07/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E9%87%8D%E7%A7%AF%E5%88%86/image-20230507231602218.png" alt="image-20230507231602218"></p>
+<script type="math/tex; mode=display">
+I=\int_a^b\text dx\int_{y_1(x)}^{y_2(x)}\text dy\int_{z_1(x,y)}^{z_2(x,y)}f(x,y,z)\text dz</script><p>先找到投影区域再对$z$积分从而化为二次积分，积分可换序</p>
+<p>也可先计算二重积分(投影法)</p>
+<script type="math/tex; mode=display">
+I=\int_{c_1}^{c_2}\text dz\iint_{D_z}f(x,y,z)\text dy\text dz</script><h3 id="柱面坐标"><a href="#柱面坐标" class="headerlink" title="柱面坐标"></a>柱面坐标</h3><p>对二重积分使用极坐标得到</p>
+<script type="math/tex; mode=display">
+I=\int_{\theta_1}^{\theta_2}\text d\theta\int_{\rho_1(\theta)}^{\rho_2(\theta)}\rho\text d\rho\int_{z_1(\theta,\rho)}^{z_2(\theta,\rho)}f(\rho\cos\theta,\rho \sin \theta,z)\text dz</script><h3 id="球坐标"><a href="#球坐标" class="headerlink" title="球坐标"></a>球坐标</h3><script type="math/tex; mode=display">
+\begin{cases}x=r\sin\varphi\cos\theta\\
+y=r\sin\varphi\sin\theta\\
+z=r\cos\varphi\end{cases}</script><p><img src="/2023/05/07/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E9%87%8D%E7%A7%AF%E5%88%86/20200905200443461.png" alt="20200905200443461" style="zoom:50%;"></p>
+<script type="math/tex; mode=display">
+I=\int_{\theta_1}^{\theta_2}\text d\theta\int_{\varphi_1(\theta)}^{\varphi_2(\theta)}\sin\varphi\text d\varphi\int_{r_1(\theta,\varphi)}^{r_2(\theta,\varphi)}f(x,y,z)r^2\text dr</script><p>一定要画出积分区域</p>
+<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><p>曲面面积</p>
+<script type="math/tex; mode=display">
+A=\iint_D\sqrt{1+\left(\frac{\partial z}{\partial x}\right)^2+\left(\frac{\partial z}{\partial y}\right)^2}\text dx\text dy</script><script type="math/tex; mode=display">
+E=x_{u}^{2}+y_{u}^{2}+z_{u}^{2} \\
+F=x_{u} \cdot x_{v}+y_{u} \cdot y_{v}+z_{u} \cdot z_{v} \\
+G=x_{v}^{2}+y_{v}^{2}+z_{v}^{2} \\
+A=\iint_{D} \sqrt{E G-F^{2}} \mathrm{~d} u \mathrm{d} v</script><p>质心</p>
+<script type="math/tex; mode=display">
+x_C=\frac{\displaystyle \iiint_{\Omega} x
+\text dv}{V}</script><p>转动惯量</p>
+<script type="math/tex; mode=display">
+I_L=\displaystyle \iiint_{\Omega} r^2(x,y)\rho(x,y)
+\text dv\\
+I_z=\displaystyle \iiint_{\Omega} (x^2+y^2)\rho(x,y)
+\text dv</script><h1 id="曲线积分"><a href="#曲线积分" class="headerlink" title="曲线积分"></a>曲线积分</h1><h2 id="第一类"><a href="#第一类" class="headerlink" title="第一类"></a>第一类</h2><p><img src="/2023/05/07/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E9%87%8D%E7%A7%AF%E5%88%86/image-20230508084722693.png" alt="image-20230508084722693" style="zoom:50%;"></p>
+<script type="math/tex; mode=display">
+\lambda=\max\{\Delta s_k\}\\
+\int_Lf(x,y,z)\text ds=\lim_{\lambda\to0}\sum _if(\xi_i,\eta_i,\zeta_i)\Delta s_i</script><p>$f(x,y,z)$为积分函数，$L$为积分弧段</p>
+<h3 id="性质-1"><a href="#性质-1" class="headerlink" title="性质"></a>性质</h3><p>满足线性性质，可加性，绝对值不等式</p>
+<script type="math/tex; mode=display">
+f(x,y)\le g(x,y)\\
+\int_Lf\text ds\le \int_L g\text ds</script><h3 id="计算法-2"><a href="#计算法-2" class="headerlink" title="计算法"></a>计算法</h3><p>曲线可表示为参数方程，对二维</p>
+<script type="math/tex; mode=display">
+\int_Lf\text ds=\int_\alpha^\beta f[\varphi(t),\phi(t)]\sqrt{\varphi'^2(t)+\phi'^2(t)}\text dt</script><p>为使$\text ds\sim\text dt&gt;0$，积分上限总大于积分下限</p>
+<p>若可表示为函数或极坐标，则有</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+s
+&=\int_{a}^{b}f\sqrt{1+y'^2}\text{d}x\\
+&=\int_{\alpha}^{\beta}f\sqrt{\rho^2(\varphi)+\rho'^2(\varphi)}\text{d}\varphi
+\end{aligned}</script><h2 id="第二类"><a href="#第二类" class="headerlink" title="第二类"></a>第二类</h2><p>由变力做功可以得出对坐标的曲线积分</p>
+<script type="math/tex; mode=display">
+W=\int_L\vec F\cdot \text d\vec s</script><p>由点积的定义可得</p>
+<script type="math/tex; mode=display">
+F=P\vec i+Q\vec j\\
+I=\int_LP\text dx+\int_LQ\text dy</script><h3 id="性质-2"><a href="#性质-2" class="headerlink" title="性质"></a>性质</h3><p>可加性和线性性质都满足</p>
+<script type="math/tex; mode=display">
+\int_{L^-}\vec F\cdot \text d\vec s=-\int_{L}\vec F\cdot \text d\vec s</script><p>因为向量有方向所以需要注意曲线积分的方向</p>
+<h3 id="计算法-3"><a href="#计算法-3" class="headerlink" title="计算法"></a>计算法</h3><p>同样利用参数方程换元得到</p>
+<script type="math/tex; mode=display">
+I=\int_L[P\varphi'(t)+Q\phi'(t)\text] dt</script><h2 id="联系"><a href="#联系" class="headerlink" title="联系"></a>联系</h2><p>对$\text ds$分解可得到$\text dx,\text dy$</p>
+<script type="math/tex; mode=display">
+\int_LP\text dx+Q\text dy=\int_L(P\cos\alpha+Q\cos\beta )\text ds</script><p>在某一弧处的单位切向量为</p>
+<script type="math/tex; mode=display">
+\boldsymbol{\tau}=(\cos\alpha,\cos\beta,\cos\gamma)</script><p>有向曲线元为</p>
+<script type="math/tex; mode=display">
+\text d\boldsymbol {r}=\boldsymbol{\tau}\text ds=(\text dx,\text dy,\text dz)</script><h2 id="格林公式"><a href="#格林公式" class="headerlink" title="格林公式"></a>格林公式</h2><p>对于单连通域(无洞)，定义曲线正向为绕行一直在左边</p>
+<p>若满足条件</p>
+<ul>
+<li>单连通闭区域$D$</li>
+<li>光滑曲线$L$</li>
+<li>$P(x,y)$和$Q(x,y)$具有连续偏导数</li>
+</ul>
+<p>则有旋度形式</p>
+<script type="math/tex; mode=display">
+\iint_{D}\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)=\oint_{\partial D}P\text dx+Q\text dy</script><p>散度形式</p>
+<script type="math/tex; mode=display">
+\iint_{D}\left(\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}\right)=\oint_{\partial D}P\text dy-Q\text dx</script><h3 id="全微分求积"><a href="#全微分求积" class="headerlink" title="全微分求积"></a>全微分求积</h3><p>积分与路径无关，保守场，有</p>
+<script type="math/tex; mode=display">
+\frac{\partial Q}{\partial x}=\frac{\partial P}{\partial y}</script><p>从而要求路径积分只需考虑始末位置，取折线即可</p>
+<p>若要找到一个函数$u(x,y)$</p>
+<script type="math/tex; mode=display">
+\text du=P\text dx+Q\text dy</script><p>则有</p>
+<script type="math/tex; mode=display">
+u_0(x,y)=\int_{x_0}^xP(x,y_0)\text dx+\int_{y_0}^yQ(x,y)\text dy</script><h3 id="全微分方程"><a href="#全微分方程" class="headerlink" title="全微分方程"></a>全微分方程</h3><p>若方程为</p>
+<script type="math/tex; mode=display">
+P\text dx+Q\text dy=0,\text{find }F(x,y)=0</script><p>满足</p>
+<script type="math/tex; mode=display">
+\frac{\partial Q}{\partial x}=\frac{\partial P}{\partial y}</script><p>则可知$u=C$</p>
+<script type="math/tex; mode=display">
+u=C=\int_{(x_0,y_0)}^{(x,y)}P\text dx+Q\text dy</script><h1 id="曲面积分"><a href="#曲面积分" class="headerlink" title="曲面积分"></a>曲面积分</h1><h2 id="第一类-1"><a href="#第一类-1" class="headerlink" title="第一类"></a>第一类</h2><p><img src="/2023/05/07/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E9%87%8D%E7%A7%AF%E5%88%86/image-20230509214814190.png" alt="image-20230509214814190" style="zoom:50%;"></p>
+<script type="math/tex; mode=display">
+\lambda=\max\{\Delta S_k\}\\
+\iint_{\Sigma}f(x,y,z)\text dS=\lim_{\lambda\to0}\sum _if(\xi_i,\eta_i,\zeta _i)\Delta S_i</script><p>由面积投影定理可以知道</p>
+<script type="math/tex; mode=display">
+I=\iint_R\frac {f(x,y,z(x,y))}{|\cos\gamma|}\text dA</script><p>对于一般曲面$f(x,y,z)=c$和方向向量$p$</p>
+<script type="math/tex; mode=display">
+\frac1{|\cos\gamma|}=\frac{|\nabla f|}{|\nabla f\cdot p|}\text dA</script><p>特别的，对$z=f(x,y)$</p>
+<script type="math/tex; mode=display">
+\nabla f=\left(\frac{\partial z}{\partial x},\frac{\partial z}{\partial y},-1\right)\\
+I=\iint_Df\sqrt{1+\left(\frac{\partial z}{\partial x}\right)^2+\left(\frac{\partial z}{\partial y}\right)^2}\text dx\text dy</script><h3 id="换元法"><a href="#换元法" class="headerlink" title="换元法"></a>换元法</h3><p>对于参数</p>
+<script type="math/tex; mode=display">
+\begin{cases}x=x(u,v)\\
+y=y(u,v)\\z=z(u,v)\end{cases}</script><script type="math/tex; mode=display">
+I=\int_a^b\text du\int_c^d\begin{Vmatrix}
+  i& j & k\\
+x_u& y_u & z_u \\
+ x_v& y_v & z_v
+\end{Vmatrix}\text dv</script><p>或者用雅可比表示</p>
+<script type="math/tex; mode=display">
+\sqrt{\frac{\partial(x,y)}{\partial(u,v)}^2+\frac{\partial(y,z)}{\partial(u,v)}^2+\frac{\partial(z,x)}{\partial(u,v)}^2}</script><h2 id="第二类-1"><a href="#第二类-1" class="headerlink" title="第二类"></a>第二类</h2><p>有向曲面，法向量和轴同向</p>
+<script type="math/tex; mode=display">
+(\Delta S)_{xy}=\begin{cases}(\Delta\sigma)_{xy},\cos\gamma>0\\
+-(\Delta\sigma)_{xy},\cos\gamma<0\\
+0,\cos\gamma=0\end{cases}</script><p>对于三维向量场</p>
+<script type="math/tex; mode=display">
+v=Pi+Qj+Rk</script><p>对某个坐标面</p>
+<script type="math/tex; mode=display">
+\iint_{\Sigma}P(x,y,z)\text dy\text dz=\lim_{\lambda\to0}\sum _iP(\xi_i,\eta_i,\zeta _i)(\Delta S_i)_{xy}</script><p>对其余两个面也有同样积分</p>
+<p>从而这三个曲面积分称为第二类曲面积分</p>
+<p>具有可加性和方向性</p>
+<h3 id="计算法-4"><a href="#计算法-4" class="headerlink" title="计算法"></a>计算法</h3><p>关键是把积分从曲面转化为二重</p>
+<script type="math/tex; mode=display">
+\iint_{\Sigma}P(x,y,z)\text dy\text dz=\pm\iint_{D_{yz}}P[x(y,z),y,z]\text dy\text dz</script><p>利用可加性将曲面分成$\cos\gamma$同号的区域</p>
+<h2 id="联系-1"><a href="#联系-1" class="headerlink" title="联系"></a>联系</h2><script type="math/tex; mode=display">
+\iint_{\Sigma}P\text dy\text dz+Q\text dz\text dx+R\text dx\text dy=\iint_{\Sigma}(P\cos\alpha+Q\cos\beta+R\cos\gamma)\text dS\\
+\iint_{\Sigma}\bold{A}\cdot \text{d}\bold{S}=\iint_{\Sigma}\bold{A}\cdot \bold{n}\text dS</script><h1 id="高斯公式"><a href="#高斯公式" class="headerlink" title="高斯公式"></a>高斯公式</h1><script type="math/tex; mode=display">
+\iiint_\Omega\left(\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}\right)\text dv=\oiint_\Sigma P\text dy\text d z+Q\text dz\text d x+RP\text dx\text d y</script>
+      
+    </div>
+    
+    
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat.jpg" alt="Shiwei Pan wechat" style="width: 200px; max-width: 100%;"/>
+    <div></div>
+</div>
+
+      </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2023/04/02/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%A3%81%E5%9C%BA/" rel="next" title="大一/物理/磁场">
+                <i class="fa fa-chevron-left"></i> 大一/物理/磁场
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/mount.png"
+               alt="Shiwei Pan" />
+          <p class="site-author-name" itemprop="name">Shiwei Pan</p>
+           
+              <p class="site-description motion-element" itemprop="description">Open your eyes,look up to the skies</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">85</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/erikpsw" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/pan-shi-wei-91" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                    
+                      知乎
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#二重积分"><span class="nav-number">1.</span> <span class="nav-text">二重积分</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#性质"><span class="nav-number">1.1.</span> <span class="nav-text">性质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#计算法"><span class="nav-number">1.2.</span> <span class="nav-text">计算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#直角坐标"><span class="nav-number">1.2.1.</span> <span class="nav-text">直角坐标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#极坐标"><span class="nav-number">1.2.2.</span> <span class="nav-text">极坐标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#平移变换"><span class="nav-number">1.2.3.</span> <span class="nav-text">平移变换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#换元积分"><span class="nav-number">1.2.4.</span> <span class="nav-text">换元积分</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三重积分"><span class="nav-number">2.</span> <span class="nav-text">三重积分</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#计算法-1"><span class="nav-number">2.1.</span> <span class="nav-text">计算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#三次积分"><span class="nav-number">2.1.1.</span> <span class="nav-text">三次积分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#柱面坐标"><span class="nav-number">2.1.2.</span> <span class="nav-text">柱面坐标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#球坐标"><span class="nav-number">2.1.3.</span> <span class="nav-text">球坐标</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用"><span class="nav-number">2.2.</span> <span class="nav-text">应用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#曲线积分"><span class="nav-number">3.</span> <span class="nav-text">曲线积分</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一类"><span class="nav-number">3.1.</span> <span class="nav-text">第一类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#性质-1"><span class="nav-number">3.1.1.</span> <span class="nav-text">性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算法-2"><span class="nav-number">3.1.2.</span> <span class="nav-text">计算法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二类"><span class="nav-number">3.2.</span> <span class="nav-text">第二类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#性质-2"><span class="nav-number">3.2.1.</span> <span class="nav-text">性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算法-3"><span class="nav-number">3.2.2.</span> <span class="nav-text">计算法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#联系"><span class="nav-number">3.3.</span> <span class="nav-text">联系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#格林公式"><span class="nav-number">3.4.</span> <span class="nav-text">格林公式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#全微分求积"><span class="nav-number">3.4.1.</span> <span class="nav-text">全微分求积</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#全微分方程"><span class="nav-number">3.4.2.</span> <span class="nav-text">全微分方程</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#曲面积分"><span class="nav-number">4.</span> <span class="nav-text">曲面积分</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一类-1"><span class="nav-number">4.1.</span> <span class="nav-text">第一类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#换元法"><span class="nav-number">4.1.1.</span> <span class="nav-text">换元法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二类-1"><span class="nav-number">4.2.</span> <span class="nav-text">第二类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#计算法-4"><span class="nav-number">4.2.1.</span> <span class="nav-text">计算法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#联系-1"><span class="nav-number">4.3.</span> <span class="nav-text">联系</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#高斯公式"><span class="nav-number">5.</span> <span class="nav-text">高斯公式</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2020 - 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Shiwei Pan</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>

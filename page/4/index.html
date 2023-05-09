@@ -311,6 +311,137 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/22/%E5%A4%A7%E4%B8%80/python/basis/class/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/08/22/%E5%A4%A7%E4%B8%80/python/basis/class/" itemprop="url">大一/python/basis/class</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-08-22T15:14:54+08:00">
+                2022-08-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>:</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,param)</span>:</span></span><br><span class="line">        self.a=param</span><br></pre></td></tr></table></figure>
+<p>在实例化对象时自动运行此方法，前后两个下划线为了防止冲突</p>
+<p>$\rm self$必须为第一个参数,运行时会自动传入，代表实例本身</p>
+<h1 id="属性和方法"><a href="#属性和方法" class="headerlink" title="属性和方法"></a>属性和方法</h1><p>.attribute_name访问对象的某个属性</p>
+<p>属性可为全新的类</p>
+<p>.method_name(params)访问某个方法</p>
+<h1 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h1><p>父类$\rightarrow$子类，继承了属性和方法</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">child_class</span><span class="params">(parent_class)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,attributes)</span>:</span></span><br><span class="line">        super().__init__(attributes)</span><br><span class="line">        self.other_attri=<span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p>$\rm super$代表superclass即父类，子类称为subclass</p>
+<h2 id="覆盖原方法"><a href="#覆盖原方法" class="headerlink" title="覆盖原方法"></a>覆盖原方法</h2><p>直接重写，python会忽略父类中的方法</p>
+<h1 id="魔法方法"><a href="#魔法方法" class="headerlink" title="魔法方法"></a>魔法方法</h1><p>sub,mul等方法用于重载运算符</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">__repr__</span><span class="params">()</span>#用于重写<span class="title">print</span></span></span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/20/%E5%A4%A7%E4%B8%80/web/css/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1899,149 +2030,6 @@ x , w \in \mathbf{R }^ { n } , y \in \mathbf{R }  \\  z = (\left \langle  \mathb
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/06/%E5%A4%A7%E4%B8%80/python/manim/updater/updater/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/08/06/%E5%A4%A7%E4%B8%80/python/manim/updater/updater/" itemprop="url">大一/python/manim/updater/updater</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-08-06T18:34:41+08:00">
-                2022-08-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>,</p>
-<p>updater(迭代，更新器)</p>
-<p>语法：$\rm mobject.add_updater(anim)$</p>
-<p>anim 为更新的规则</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">anim</span><span class="params">(obj)</span>:</span></span><br><span class="line">    obj.next_to(obj_2,RIGHT)</span><br><span class="line">    <span class="comment">#将obj放在obj_2的右侧</span></span><br></pre></td></tr></table></figure>
-<p>可以合二为一</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mobject.add_updater(<span class="keyword">lambda</span> m:m.next_to(obj,RIGHT))</span><br><span class="line"><span class="comment">#使用匿名函数</span></span><br></pre></td></tr></table></figure>
-<p>删除updater:</p>
-<script type="math/tex; mode=display">
-\rm case\;1:mobject.remove\_updater(anim)\\移除某个updater\\
-case\;2:mobject.clear\_updater()\\移除全部updater</script><h1 id="UpdateFromFunc"><a href="#UpdateFromFunc" class="headerlink" title="UpdateFromFunc"></a>UpdateFromFunc</h1><p>直接更新，不用添加updater：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">self.play(</span><br><span class="line">    UpdateFromFunc(</span><br><span class="line">        obj,</span><br><span class="line">        <span class="keyword">lambda</span> m:m.next_to(obj_2,RIGHT)</span><br><span class="line">    )</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-<p>拓展</p>
-<h2 id="UpdateFromAlphaFunc"><a href="#UpdateFromAlphaFunc" class="headerlink" title="UpdateFromAlphaFunc"></a>UpdateFromAlphaFunc</h2><p>传入一个含有参数==$\rm alpha$==的函数</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">move</span><span class="params">(obj,alpha)</span>:</span></span><br><span class="line">    obj.shift(alpha*RIGHT)</span><br><span class="line">    obj.rotate(alpha*TAU)<span class="comment">#TAU=2*PI</span></span><br><span class="line">   </span><br><span class="line">self.play(UpdateFromAlphaFunc(t,move))</span><br></pre></td></tr></table></figure>
-<p>不太推荐使用此方法</p>
-<h1 id="dt"><a href="#dt" class="headerlink" title="dt"></a>dt</h1><p>根据时间进行迭代</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">anim</span><span class="params">(obj,dt)</span>:</span></span><br><span class="line">            obj.shift(dt*RIGHT)</span><br><span class="line">        </span><br><span class="line">mobject.add_updater(anim)</span><br><span class="line">self.wait(time)<span class="comment">#基于时间进行更新</span></span><br></pre></td></tr></table></figure>
-<h1 id="ValueTracker"><a href="#ValueTracker" class="headerlink" title="ValueTracker"></a>ValueTracker</h1><p>初始化设为$-1$</p>
-<script type="math/tex; mode=display">
-\rm t=ValueTracker(-1)</script><p>接着可以生成目标</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">self.play(t.set_value,<span class="number">1</span>,rate_func=,run_time=<span class="number">3</span>)</span><br><span class="line"><span class="comment">#目标值为1</span></span><br></pre></td></tr></table></figure>
-<p><img src="/2022/08/06/%E5%A4%A7%E4%B8%80/python/manim/updater/updater/image-20220806210411711.png" alt="image-20220806210411711"></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x1=ValueTracker(<span class="number">0</span>)</span><br><span class="line">        n2=Tex(<span class="string">"0"</span>)</span><br><span class="line">        n2.add_updater(<span class="keyword">lambda</span> t:t.become(Tex(str(round(x1.get_value(),<span class="number">1</span>)))))</span><br><span class="line">        self.play(ShowCreation(n2))</span><br><span class="line">        self.play(x1.set_value,<span class="number">1</span>,rate_func=smooth,run_time=<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2092,7 +2080,7 @@ case\;2:mobject.clear\_updater()\\移除全部updater</script><h1 id="UpdateFrom
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">84</span>
+                <span class="site-state-item-count">85</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
