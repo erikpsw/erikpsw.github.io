@@ -5170,6 +5170,6 @@ v=Pi+Qj+Rk</script><p>对某个坐标面</p>
 <h2 id="联系-1"><a href="#联系-1" class="headerlink" title="联系"></a>联系</h2><script type="math/tex; mode=display">
 \iint_{\Sigma}P\text dy\text dz+Q\text dz\text dx+R\text dx\text dy=\iint_{\Sigma}(P\cos\alpha+Q\cos\beta+R\cos\gamma)\text dS\\
 \iint_{\Sigma}\bold{A}\cdot \text{d}\bold{S}=\iint_{\Sigma}\bold{A}\cdot \bold{n}\text dS</script><h1 id="高斯公式"><a href="#高斯公式" class="headerlink" title="高斯公式"></a>高斯公式</h1><script type="math/tex; mode=display">
-\iiint_\Omega\left(\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}\right)\text dv=\oiint_\Sigma P\text dy\text d z+Q\text dz\text d x+RP\text dx\text d y</script>]]></content>
+\iiint_\Omega\left(\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}\right)\text dv=\iint_\Sigma P\text dy\text d z+Q\text dz\text d x+RP\text dx\text d y</script>]]></content>
   </entry>
 </search>
