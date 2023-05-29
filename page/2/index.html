@@ -311,6 +311,215 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2023/02/10/%E5%A4%A7%E4%B8%80/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/%E5%87%BD%E6%95%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2023/02/10/%E5%A4%A7%E4%B8%80/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/%E5%87%BD%E6%95%B0/" itemprop="url">大一/复变函数/函数</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-02-10T16:32:01+08:00">
+                2023-02-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><p>类比一般函数复变函数就是将一个复数映射成另外一个复数</p>
+<script type="math/tex; mode=display">
+w=f(z)\\
+u+v\text{i}=f(x+y\text{i})\\
+f(z)=u(x,y)+v(x,y)\text{i}=f(re^{\text{i}\theta})</script><p>如平方根</p>
+<script type="math/tex; mode=display">
+f(z)=\sqrt{r}\exp\left(\frac{\theta}2\text{i}\right)</script><p>相较于定义在实数域上的函数，复变函数没有图像</p>
+<p>从变换的角度来思考，函数将平面上的每一个点映射到了另外一个点</p>
+<p>例如反射，旋转等变换</p>
+<h2 id="可视化"><a href="#可视化" class="headerlink" title="可视化"></a>可视化</h2><p>通过对于特殊曲线的变换来可视化</p>
+<script type="math/tex; mode=display">
+f(z)=z^2\\
+\begin{cases}u=x^2-y^2\\
+v=2xy\end{cases}</script><p><img src="/2023/02/10/%E5%A4%A7%E4%B8%80/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/%E5%87%BD%E6%95%B0/image-20230210193339928.png" alt="image-20230210193339928"></p>
+<script type="math/tex; mode=display">
+e^z=e^{x+y\text{i}}=e^xe^{y\text{i}}</script><p>通过指数形式也可表示变换</p>
+<p><img src="/2023/02/10/%E5%A4%A7%E4%B8%80/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/%E5%87%BD%E6%95%B0/image-20230210193739625.png" alt="image-20230210193739625"></p>
+<h2 id="极限"><a href="#极限" class="headerlink" title="极限"></a>极限</h2><p>函数极限</p>
+<p>对于任意$\epsilon&gt;0$都有$\delta&gt;0$使得$0&lt;|x-x_0|&lt;\delta$有$|f(x)-A|&lt;\epsilon$</p>
+<p>类比</p>
+<p>对于任意$\epsilon&gt;0$都有$\delta&gt;0$使得$0&lt;|z-z_0|&lt;\delta$有$|f(z)-w_0|&lt;\epsilon$</p>
+<p><img src="/2023/02/10/%E5%A4%A7%E4%B8%80/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/%E5%87%BD%E6%95%B0/image-20230210202338993.png" alt="image-20230210202338993"></p>
+<p>则记为</p>
+<script type="math/tex; mode=display">
+\lim_{z\to z_00}f(z)=w_0</script><h3 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h3><script type="math/tex; mode=display">
+\lim_{z\to z_0}f(z)=w_0\Leftrightarrow\begin{cases}\displaystyle\lim_{(x,y)\to(x_0,y_0)}u(x,y)=u_0\\
+\displaystyle\lim_{(x,y)\to(x_0,y_0)}v(x,y)=v_0\end{cases}</script><p>利用这个定理可以很方便地将复变函数的极限转换为一般函数极限</p>
+<p>所以四则运算法则同一般函数极限的运算法则</p>
+<p>没有所谓左右极限的概念</p>
+<h2 id="无穷"><a href="#无穷" class="headerlink" title="无穷"></a>无穷</h2><p>将无穷远点(point at infinity)引入复平面，得到扩充复平面</p>
+<p>全体复数再加上一个无穷远点构成扩充复数</p>
+<p><img src="/2023/02/10/%E5%A4%A7%E4%B8%80/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/%E5%87%BD%E6%95%B0/image-20230210211714977.png" alt="image-20230210211714977"></p>
+<p>引入黎曼球面，球面投影点$z$为复平面上的点，和球面上的$P$一一对应</p>
+<p>加上无穷远点$N$代表无穷远点，构成了球和复数的对应关系</p>
+<p>可以通过倒数来将极限转化为0</p>
+<script type="math/tex; mode=display">
+\lim_{z\to \infty}f(z)=\infty\Leftrightarrow \lim_{z\to 0}\frac1{f(1/z)}=0</script><h2 id="连续"><a href="#连续" class="headerlink" title="连续"></a>连续</h2><p>定义为</p>
+<ol>
+<li>$\displaystyle \lim_{z\to z_0}f(z)$存在</li>
+<li>$f(z_0)$存在</li>
+<li>$\displaystyle \lim_{z\to z_0}f(z)=f(z_0)$</li>
+</ol>
+<p>同理有若两函数都连续则$f(g(x))$也连续</p>
+<p>如果函数在某一封闭区域内连续那么</p>
+<script type="math/tex; mode=display">
+|f(z)|\le M</script><h2 id="导数"><a href="#导数" class="headerlink" title="导数"></a>导数</h2><p><img src="/2023/02/10/%E5%A4%A7%E4%B8%80/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/%E5%87%BD%E6%95%B0/image-20230210215205518.png" alt="image-20230210215205518" style="zoom:50%;"></p>
+<script type="math/tex; mode=display">
+f'(z_0)=\lim_{\Delta z\to0}\frac{f(z_0+\Delta z)-f(z_0)}{\Delta z}</script><p>导数的大部分公式都可以用于复变函数，但复变函数自变量为二维，所以趋向有方向</p>
+<p>但因为导数定义，不同趋向极限应该相同，得到可导的必要条件</p>
+<script type="math/tex; mode=display">
+\begin{cases}\displaystyle\frac{\partial u}{\partial x}=\frac{\partial v}{\partial y}\\
+\displaystyle\frac{\partial v}{\partial x}=-\frac{\partial u}{\partial y}\end{cases}</script><p>这就是柯西-黎曼方程(Cauchy–Riemann Equations)</p>
+<script type="math/tex; mode=display">
+f'(z_0)=\frac{\partial u}{\partial x}+\frac{\partial v}{\partial y}\text{i}</script><p>导数还可以用极坐标来表示</p>
+<script type="math/tex; mode=display">
+\\f'(z)=f'(re^{\theta\text{i}})=u(r,\theta)+v(r,\theta)\text{i}</script><script type="math/tex; mode=display">
+\begin{cases}ru_r=v_\theta\\
+u_\theta=-rv_r\end{cases}\\
+f'(z_0)=e^{-\theta\text{i}}(u_r+v_r\text i)</script><h1 id="解析函数"><a href="#解析函数" class="headerlink" title="解析函数"></a>解析函数</h1><p>某区域上处处可微分的复变函数</p>
+<blockquote>
+<p>If we should speak of a function $f$ that is analytic in a set $S$ which is not open, it is to be understood that $f$ is analytic in an open set containing $S$</p>
+</blockquote>
+<p>如果$f’(z)=0$在$D$上恒成立则$f(z)$在$D$上是常函数</p>
+<h2 id="调和函数"><a href="#调和函数" class="headerlink" title="调和函数"></a>调和函数</h2><p>有二阶导数同时满足拉普拉斯方程</p>
+<script type="math/tex; mode=display">
+\frac{\partial^2 f}{\partial x_1^2}+\frac{\partial^2 f}{\partial x_2^2}+\cdots+\frac{\partial^2 f}{\partial x_n^2}=0</script><p>对于复变函数，如果在$D$上是解析函数，则两个分量$u,v$是调和函数</p>
+<h1 id="特殊函数"><a href="#特殊函数" class="headerlink" title="特殊函数"></a>特殊函数</h1><p>指数函数$e^z$运算法则符合一般指数的运算</p>
+<script type="math/tex; mode=display">
+\frac{\text{d}}{\text{d}z}e^z=e^z\\
+e^{z+2n\pi\text{i}}=e^z</script><h2 id="对数函数"><a href="#对数函数" class="headerlink" title="对数函数"></a>对数函数</h2><script type="math/tex; mode=display">
+\ln z=\ln r+\text{i}(\Theta+2n\pi)\\
+\Theta=\text{Arg } z</script><p>对应多个值，如果我们限定主枝(principal branch)</p>
+<script type="math/tex; mode=display">
+\ln z=\ln r+\text i\Theta\quad(\Theta\in(-\pi,\pi))</script><p>不能取等否则不连续，一般$\log z\Leftrightarrow\ln z$</p>
+<script type="math/tex; mode=display">
+\log z_1z_2=\log z_1+\log z_2\\
+\log \left (\frac{z_1}{z_2}\right )=\log z_1-\log z_2\\
+z^n=e^{n\log z}</script><p>$n$可以为复数，即指数为复数</p>
+<h2 id="三角函数"><a href="#三角函数" class="headerlink" title="三角函数"></a>三角函数</h2><p>利用欧拉公式，利用共轭复数得到</p>
+<script type="math/tex; mode=display">
+\sin z=\frac{e^{\text i z}-e^{-\text i z}}{2\text i}\\
+\cos z =\frac{e^{\text i z}+e^{-\text i z}}{2\text i}</script><p>许多性质和三角函数一模一样</p>
+<script type="math/tex; mode=display">
+\frac{\text d} {\text dz }\sin z=\cos z\\
+\sin(z_1 + z_2) = \sin z_1 \cos z_2 + \cos z_1 \sin z_2\\
+\sin ^2z+\cos ^2z=1</script><p>对于双曲函数</p>
+<script type="math/tex; mode=display">
+\sinh z=\frac{e^z-e^{-z}}2\\
+\cosh z=\frac{e^z+e^{-z}}2\\
+\sin(\text iz)=\text i\sinh z\\
+\cos(\text iz)=\sinh z</script>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2023/02/10/%E5%A4%A7%E4%B8%80/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/%E5%A4%8D%E6%95%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -607,7 +816,7 @@ W_{ab}=\frac{q_0}{4\pi\varepsilon_0}\sum_iq_i\left(\frac1{r_{ia}}-\frac1{r_{ib}}
 \Delta U=-W_e\\
 \Delta V = \Delta V_{CA} + \Delta V_{BC}</script><p>对于点电荷</p>
 <script type="math/tex; mode=display">
-\Delta V=V_{B}-V_{A}=-\int_{A}^{B} \frac{Q}{4 \pi \varepsilon_{0} r^{2}} \text d r=\frac{Q}{4 \pi \varepsilon_{0}}\left(\frac{1}{r_{B}}-\frac{1}{r_{A}}\right)</script><blockquote>
+\Delta E=E_{B}-E_{A}=-\int_{A}^{B} \frac{Q}{4 \pi \varepsilon_{0} r^{2}} \text d r=\frac{Q}{4 \pi \varepsilon_{0}}\left(\frac{1}{r_{B}}-\frac{1}{r_{A}}\right)</script><blockquote>
 <p>As in the case of gravity, only the difference in electrical  potential is physically meaningful, and one may choose a reference point and set the  potential there to be zero. In practice, it is often convenient to choose the reference point  to be at infinity, so that the electric potential at a point P becomes</p>
 </blockquote>
 <script type="math/tex; mode=display">
@@ -2253,150 +2462,6 @@ y=y_1+y_2=2A\cos\left(\frac{2\pi x}\lambda\right)\cos\omega t</script><p>上式�
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/10/27/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E4%BD%9C%E4%B8%9A/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/10/27/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E4%BD%9C%E4%B8%9A/" itemprop="url">大一/物理/作业</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-10-27T09:01:44+08:00">
-                2022-10-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <script type="math/tex; mode=display">
-v=\frac{\sqrt 3}2c\\
-\Delta t=-\frac{\sqrt 3}3\times10^{-5}\text s</script><script type="math/tex; mode=display">
-p_1=\sqrt{2m_eUe}\\
-
-p_2=\frac{\sqrt{2m_eeUc^2+e^2U^2}}c</script><script type="math/tex; mode=display">
-E=\frac{\varepsilon _0m_0c^2}{m_0c^2+\varepsilon _0(1-\cos\theta)}</script><script type="math/tex; mode=display">
-\overline{E_k}=\frac14kA^2,\overline{E_p}=\frac14kA^2</script><script type="math/tex; mode=display">
-a:0,b:\frac{\pi}3,c:\pi\\
-d:\frac{2\pi}3,e:-\frac{2\pi}3\\
-x=5\cos\left(\frac{\pi}{1.2}t-\frac{\pi}3\right)</script><script type="math/tex; mode=display">
-A=\sqrt{\frac8{125}},E_p=0.2\text{J}</script><script type="math/tex; mode=display">
-\frac{2\pi}k,I=\frac12\rho A^2
-\frac{\omega^3}k</script><script type="math/tex; mode=display">
-I=0.09\text{W}\cdot\text{m}^{-2}\\ \overline{w}=
-2.647\times10^{-4}\text{J}\cdot\text{s}\cdot\text{m}^{-3}</script><script type="math/tex; mode=display">
-y=0.1\cos\left[165\pi\left(t-\frac x{330}\right)+\pi\right]\text{m}</script><script type="math/tex; mode=display">
-\frac{1.5\times20}{293}+\frac{1\times V}{293}=\frac{7.5\times20}{298}\\
-\Rightarrow V=117.483 \text{L}</script><script type="math/tex; mode=display">
-W =\frac{C}2(\frac1{V_1^2}-\frac1{V_2^2})\\</script><script type="math/tex; mode=display">
-Q_1=n(\frac i2+1)R\Delta T=500\text{J}\\
-Q_2=700\text{J}</script><script type="math/tex; mode=display">
-W=\frac{3200}{293}\text{KW}=10.92\text{KW}</script><script type="math/tex; mode=display">
-1. N\int_{v_0}^{\infty}f(v)\text{d}v\\
-2. \frac{\displaystyle\int_{v_0}^{\infty}vf(v)\text{d}v}{\displaystyle\int_{v_0}^{\infty}f(v)\text{d}v}\\
-3. \int_{v_0}^{\infty}f(v)\text{d}v</script>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2447,7 +2512,7 @@ W=\frac{3200}{293}\text{KW}=10.92\text{KW}</script><script type="math/tex; mode=
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">85</span>
+                <span class="site-state-item-count">86</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

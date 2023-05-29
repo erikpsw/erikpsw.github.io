@@ -4668,7 +4668,7 @@ W_{ab}=\frac{q_0}{4\pi\varepsilon_0}\sum_iq_i\left(\frac1{r_{ia}}-\frac1{r_{ib}}
 \Delta U=-W_e\\
 \Delta V = \Delta V_{CA} + \Delta V_{BC}</script><p>对于点电荷</p>
 <script type="math/tex; mode=display">
-\Delta V=V_{B}-V_{A}=-\int_{A}^{B} \frac{Q}{4 \pi \varepsilon_{0} r^{2}} \text d r=\frac{Q}{4 \pi \varepsilon_{0}}\left(\frac{1}{r_{B}}-\frac{1}{r_{A}}\right)</script><blockquote>
+\Delta E=E_{B}-E_{A}=-\int_{A}^{B} \frac{Q}{4 \pi \varepsilon_{0} r^{2}} \text d r=\frac{Q}{4 \pi \varepsilon_{0}}\left(\frac{1}{r_{B}}-\frac{1}{r_{A}}\right)</script><blockquote>
 <p>As in the case of gravity, only the difference in electrical  potential is physically meaningful, and one may choose a reference point and set the  potential there to be zero. In practice, it is often convenient to choose the reference point  to be at infinity, so that the electric potential at a point P becomes</p>
 </blockquote>
 <script type="math/tex; mode=display">
@@ -5103,7 +5103,12 @@ I=\int_LP\text dx+\int_LQ\text dy</script><h3 id="性质-2"><a href="#性质-2" 
 \int_{L^-}\vec F\cdot \text d\vec s=-\int_{L}\vec F\cdot \text d\vec s</script><p>因为向量有方向所以需要注意曲线积分的方向</p>
 <h3 id="计算法-3"><a href="#计算法-3" class="headerlink" title="计算法"></a>计算法</h3><p>同样利用参数方程换元得到</p>
 <script type="math/tex; mode=display">
-I=\int_L[P\varphi'(t)+Q\phi'(t)\text] dt</script><h2 id="联系"><a href="#联系" class="headerlink" title="联系"></a>联系</h2><p>对$\text ds$分解可得到$\text dx,\text dy$</p>
+I=\int_L[P\varphi'(t)+Q\phi'(t)\text] dt</script><p>对称性，偶零奇倍</p>
+<p>若$L$关于$x$，$f$关于y为偶，则</p>
+<script type="math/tex; mode=display">
+\int_LP\text dx=0</script><p>若L关于$y=x$对称则</p>
+<script type="math/tex; mode=display">
+\int_Lf(x,y)\text dx+\int_Lf(y,x)\text dy=0</script><h2 id="联系"><a href="#联系" class="headerlink" title="联系"></a>联系</h2><p>对$\text ds$分解可得到$\text dx,\text dy$</p>
 <script type="math/tex; mode=display">
 \int_LP\text dx+Q\text dy=\int_L(P\cos\alpha+Q\cos\beta )\text ds</script><p>在某一弧处的单位切向量为</p>
 <script type="math/tex; mode=display">
@@ -5118,9 +5123,9 @@ I=\int_L[P\varphi'(t)+Q\phi'(t)\text] dt</script><h2 id="联系"><a href="#联�
 </ul>
 <p>则有旋度形式</p>
 <script type="math/tex; mode=display">
-\iint_{D}\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)=\oint_{\partial D}P\text dx+Q\text dy</script><p>散度形式</p>
+\iint_{D}\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)\text dx\text dy=\oint_{\partial D}P\text dx+Q\text dy</script><p>散度形式</p>
 <script type="math/tex; mode=display">
-\iint_{D}\left(\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}\right)=\oint_{\partial D}P\text dy-Q\text dx</script><h3 id="全微分求积"><a href="#全微分求积" class="headerlink" title="全微分求积"></a>全微分求积</h3><p>积分与路径无关，保守场，有</p>
+\iint_{D}\left(\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}\right)\text dx\text dy=\oint_{\partial D}P\text dy-Q\text dx</script><h3 id="全微分求积"><a href="#全微分求积" class="headerlink" title="全微分求积"></a>全微分求积</h3><p>积分与路径无关，保守场，有</p>
 <script type="math/tex; mode=display">
 \frac{\partial Q}{\partial x}=\frac{\partial P}{\partial y}</script><p>从而要求路径积分只需考虑始末位置，取折线即可</p>
 <p>若要找到一个函数$u(x,y)$</p>
@@ -5147,11 +5152,12 @@ I=\iint_Df\sqrt{1+\left(\frac{\partial z}{\partial x}\right)^2+\left(\frac{\part
 <script type="math/tex; mode=display">
 \begin{cases}x=x(u,v)\\
 y=y(u,v)\\z=z(u,v)\end{cases}</script><script type="math/tex; mode=display">
-I=\int_a^b\text du\int_c^d\begin{Vmatrix}
+I=\int_a^b\text du\int_c^df\begin{Vmatrix}
   i& j & k\\
 x_u& y_u & z_u \\
  x_v& y_v & z_v
-\end{Vmatrix}\text dv</script><p>或者用雅可比表示</p>
+\end{Vmatrix}\text dv\\
+I=\int_a^b\text du\int_c^df||e_u\times e_v||\text dv</script><p>或者用雅可比表示</p>
 <script type="math/tex; mode=display">
 \sqrt{\frac{\partial(x,y)}{\partial(u,v)}^2+\frac{\partial(y,z)}{\partial(u,v)}^2+\frac{\partial(z,x)}{\partial(u,v)}^2}</script><h2 id="第二类-1"><a href="#第二类-1" class="headerlink" title="第二类"></a>第二类</h2><p>有向曲面，法向量和轴同向</p>
 <script type="math/tex; mode=display">
@@ -5167,9 +5173,97 @@ v=Pi+Qj+Rk</script><p>对某个坐标面</p>
 <h3 id="计算法-4"><a href="#计算法-4" class="headerlink" title="计算法"></a>计算法</h3><p>关键是把积分从曲面转化为二重</p>
 <script type="math/tex; mode=display">
 \iint_{\Sigma}P(x,y,z)\text dy\text dz=\pm\iint_{D_{yz}}P[x(y,z),y,z]\text dy\text dz</script><p>利用可加性将曲面分成$\cos\gamma$同号的区域</p>
-<h2 id="联系-1"><a href="#联系-1" class="headerlink" title="联系"></a>联系</h2><script type="math/tex; mode=display">
+<p>或者换元</p>
+<script type="math/tex; mode=display">
+I=\iint_\Sigma\vec v\cdot (e_u\times e_v)\text du\text dv</script><p>对称性，$\Sigma$关于$xOy$对称，$P$关于$z$为偶函数</p>
+<script type="math/tex; mode=display">
+\iint_\Sigma P\text dx\text d y=0</script><p>轮换对称</p>
+<script type="math/tex; mode=display">
+f(x,y,z)\text dx\text dy=f(y,z,x)\text dy\text dz=f(z,x,y)\text dz\text dx</script><h2 id="联系-1"><a href="#联系-1" class="headerlink" title="联系"></a>联系</h2><script type="math/tex; mode=display">
 \iint_{\Sigma}P\text dy\text dz+Q\text dz\text dx+R\text dx\text dy=\iint_{\Sigma}(P\cos\alpha+Q\cos\beta+R\cos\gamma)\text dS\\
-\iint_{\Sigma}\bold{A}\cdot \text{d}\bold{S}=\iint_{\Sigma}\bold{A}\cdot \bold{n}\text dS</script><h1 id="高斯公式"><a href="#高斯公式" class="headerlink" title="高斯公式"></a>高斯公式</h1><script type="math/tex; mode=display">
-\iiint_\Omega\left(\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}\right)\text dv=\iint_\Sigma P\text dy\text d z+Q\text dz\text d x+RP\text dx\text d y</script>]]></content>
+\iint_{\Sigma}\bold{A}\cdot \text{d}\bold{S}=\iint_{\Sigma}\bold{A}\cdot \bold{n}\text dS</script><p>从而计算时利用</p>
+<script type="math/tex; mode=display">
+\frac{\text dy\text dz}{n_x}=\frac{\text dz\text dx}{n_y}=\frac{\text dx\text dy}{n_z}</script><p>换成某一个面的积分</p>
+<h2 id="高斯公式"><a href="#高斯公式" class="headerlink" title="高斯公式"></a>高斯公式</h2><p>格林公式在三维空间的推广</p>
+<p><img src="/2023/05/07/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E9%87%8D%E7%A7%AF%E5%88%86/image-20230510104804108.png" alt="image-20230510104804108" style="zoom:50%;"></p>
+<script type="math/tex; mode=display">
+\iint_\Sigma P\text dy\text d z+Q\text dz\text d x+R\text dx\text d y=\pm\iiint_\Omega\left(\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}\right)\text dv</script><p>其中外侧为正向，向内为负向</p>
+<h2 id="斯托克斯公式"><a href="#斯托克斯公式" class="headerlink" title="斯托克斯公式"></a>斯托克斯公式</h2><p>对于三维曲面边界</p>
+<script type="math/tex; mode=display">
+\oint _CP\text dx+Q\text dy+R\text dz=\iint_\Sigma\begin{vmatrix}
+  \text dy\text dz& \text dz\text dx & \text dy\text dz\\
+\frac{\partial }{\partial x}& \frac{\partial }{\partial y} & \frac{\partial }{\partial z} \\
+ P& Q & R
+\end{vmatrix}</script>]]></content>
+  </entry>
+  <entry>
+    <title>大一/物理/波动光学</title>
+    <url>/2023/05/18/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E6%B3%A2%E5%8A%A8%E5%85%89%E5%AD%A6/</url>
+    <content><![CDATA[<h1 id="杨氏双缝干涉"><a href="#杨氏双缝干涉" class="headerlink" title="杨氏双缝干涉"></a>杨氏双缝干涉</h1><h2 id="发光"><a href="#发光" class="headerlink" title="发光"></a>发光</h2><p>原子在能级之间跃迁时会发出一列有限长度的光波称为光波列</p>
+<script type="math/tex; mode=display">
+l=c\Delta t</script><p>普通光源由于跃迁的随机性所以不满足干涉条件</p>
+<p>现代技术可以实现相干光的产生，能产生的光源称为相干光源‘</p>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p><img src="/2023/05/18/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E6%B3%A2%E5%8A%A8%E5%85%89%E5%AD%A6/image-20230518235646004.png" alt="image-20230518235646004"></p>
+<p>干涉极大和极小的条件分别为</p>
+<script type="math/tex; mode=display">
+\delta=r_2-r_1=\pm k\lambda/\pm(2k-1)\frac\lambda2</script><p>利用几何关系 ,可得亮纹位置</p>
+<script type="math/tex; mode=display">
+x=\pm k\frac{D\lambda}d</script><p>暗纹位置</p>
+<script type="math/tex; mode=display">
+x=\pm (2k-1)\frac{D\lambda}d</script><p>从而得到相邻两明或暗纹的间距为</p>
+<script type="math/tex; mode=display">
+\Delta x=\frac{D\lambda}d</script><h3 id="光程"><a href="#光程" class="headerlink" title="光程"></a>光程</h3><p>由于光在不同介质中传播的速度不同，有光程$nr$</p>
+<script type="math/tex; mode=display">
+\delta=n_1r_1-n_2r_2</script><p>注意薄透镜不会引起附加的光程差</p>
+<h1 id="薄膜干涉"><a href="#薄膜干涉" class="headerlink" title="薄膜干涉"></a>薄膜干涉</h1><p><img src="/2023/05/18/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E6%B3%A2%E5%8A%A8%E5%85%89%E5%AD%A6/image-20230518235708139.png" alt="image-20230518235708139" style="zoom:50%;"></p>
+<p>薄膜，两波的光程差不是很大，两束光出自同一波列</p>
+<script type="math/tex; mode=display">
+\delta=n_2(AB+BC)-n_1 CD</script><p>借助折射定律和几何关系</p>
+<script type="math/tex; mode=display">
+\begin{array}{l}\delta&=2d\sqrt{n_2^2-n_1^2\sin^2i}\\
+&=2dn_2\cos r\end{array}</script><p>增反膜和增透膜</p>
+<h1 id="等厚干涉"><a href="#等厚干涉" class="headerlink" title="等厚干涉"></a>等厚干涉</h1><p><img src="/2023/05/18/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E6%B3%A2%E5%8A%A8%E5%85%89%E5%AD%A6/image-20230518235932636.png" alt="image-20230518235932636" style="zoom:50%;"></p>
+<p>通过劈尖可以将长度转为高度</p>
+<script type="math/tex; mode=display">
+\Delta d=d_{k+1}-d_k=\frac\lambda{2n}</script><p>则条纹间距为</p>
+<script type="math/tex; mode=display">
+l=\frac\lambda{2n\sin\theta}\approx\frac\lambda{2n\theta}</script><p>利用这种可以检测厚度等微小物理量</p>
+<h1 id="牛顿环"><a href="#牛顿环" class="headerlink" title="牛顿环"></a>牛顿环</h1><p><img src="/2023/05/18/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E6%B3%A2%E5%8A%A8%E5%85%89%E5%AD%A6/image-20230519000702872.png" alt="image-20230519000702872"></p>
+<p>明纹</p>
+<script type="math/tex; mode=display">
+r=\sqrt{(2k-1)\frac{R\lambda}{2n}}</script><p>暗纹</p>
+<script type="math/tex; mode=display">
+r=\sqrt{\frac{kR\lambda}n}</script><h1 id="迈克尔逊干涉仪"><a href="#迈克尔逊干涉仪" class="headerlink" title="迈克尔逊干涉仪"></a>迈克尔逊干涉仪</h1><p><img src="/2023/05/18/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E6%B3%A2%E5%8A%A8%E5%85%89%E5%AD%A6/image-20230519001349294.png" alt="image-20230519001349294"></p>
+<p>利用等效原理，可以把$M_1,M_2’$看成两个面</p>
+<p>则若有夹角称为等厚干涉，平行称为等倾干涉</p>
+<p>若为空气则调整间距可以得到</p>
+<script type="math/tex; mode=display">
+d=N\frac\lambda2</script><h1 id="衍射"><a href="#衍射" class="headerlink" title="衍射"></a>衍射</h1><p><img src="/2023/05/18/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E6%B3%A2%E5%8A%A8%E5%85%89%E5%AD%A6/image-20230522091516879.png" alt="image-20230522091516879" style="zoom:50%;"></p>
+<p>单缝夫琅禾夫衍射，使用菲涅尔半波带法</p>
+<script type="math/tex; mode=display">
+a \sin \varphi=\left\{\begin{array}{l} 
+\pm k \lambda, k=1,2,3, \ldots \\
+\pm(2 k+1) \frac{\lambda}{2}, k=1,2,3, \ldots
+\end{array}\right.</script><p>注意不能带入$\lambda=0$，没有相消</p>
+<script type="math/tex; mode=display">
+-\lambda<a\sin\varphi<\lambda</script><p>这个范围对应中央明纹，不能分析非整数倍</p>
+<script type="math/tex; mode=display">
+l_0\approx2\frac{\lambda}b</script><p>暗纹精确成立，明纹近似成立亮度$(\frac{1}{N-1})$</p>
+<h2 id="多缝"><a href="#多缝" class="headerlink" title="多缝"></a>多缝</h2><p><img src="/2023/05/18/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E6%B3%A2%E5%8A%A8%E5%85%89%E5%AD%A6/image-20230522091332974.png" alt="image-20230522091332974" style="zoom:33%;"></p>
+<p>光栅方程</p>
+<script type="math/tex; mode=display">
+d\sin\varphi=k\lambda\\
+|\sin\varphi|<1\\
+(a+b)\sin\varphi=k\lambda  \;(k=0,\pm1,\cdots,\pm\left \lfloor  \frac{a+b}\lambda\right \rfloor )\\</script><p>用来计算主极大条纹的位置</p>
+<h3 id="缺级"><a href="#缺级" class="headerlink" title="缺级"></a>缺级</h3><script type="math/tex; mode=display">
+(a+b)\sin\varphi=k\lambda\\
+a\sin\varphi=k'\lambda</script><p>$\pm k,\pm k’$都为整数</p>
+<p><img src="/2023/05/18/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E6%B3%A2%E5%8A%A8%E5%85%89%E5%AD%A6/image-20230522093021386.png" alt="image-20230522093021386"></p>
+<p>$N$条光栅，有$N-1$条暗纹，$N-2$条次极大</p>
+<p>设$a$为第一明纹和中心之间的距离，$x_2-x_1$为光屏到光栅之间的距离，则由光栅方程</p>
+<script type="math/tex; mode=display">
+d\sin\varphi=\lambda\\
+\tan\varphi=\frac{a}{x_2-x_1}\\
+d=\lambda\sqrt{a^2+(x_2-x_1)^2}</script>]]></content>
   </entry>
 </search>

@@ -311,6 +311,260 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/07/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E5%90%91%E9%87%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/08/07/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E5%90%91%E9%87%8F/" itemprop="url">大一/线性代数/向量</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-08-07T12:24:39+08:00">
+                2022-08-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="向量"><a href="#向量" class="headerlink" title="向量"></a>向量</h1><p>$\rm vector$ 表示</p>
+<script type="math/tex; mode=display">
+\vec{a}/\mathbf{a}</script><p>$||\vec{a}||$为向量的长度</p>
+<p>在直角坐标系中</p>
+<script type="math/tex; mode=display">
+||\vec{a}||=\sqrt{x^2+y^2}\\
+单位向量\hat{a}=\vec{a}/||\vec{a}||</script><p>两向量之间的夹角为$0\le\left \langle \alpha,\beta \right \rangle \le \pi$</p>
+<h2 id="点乘"><a href="#点乘" class="headerlink" title="点乘"></a>点乘</h2><p>$\rm Dot\;Product$</p>
+<script type="math/tex; mode=display">
+\vec{a} \cdot \vec{b}=\|\vec{a}\|\|\vec{b}\| \cos \theta 
+=x_1x_2+y_1y_2
+\\
+\cos \theta=\frac{\vec{a} \cdot \vec{b}}{\|\vec{a}\|\|\vec{b}\|}\\
+\theta=\arccos (\hat{a}\cdot\hat{b})</script><p>矩阵</p>
+<script type="math/tex; mode=display">
+\vec{a} \cdot \vec{b}=a^Tb</script><p>运算性质</p>
+<script type="math/tex; mode=display">
+交换律：\vec{a} \cdot \vec{b}=\vec{b} \cdot \vec{a} \\
+分配律：\vec{a} \cdot(\vec{b}+\vec{c})=\vec{a} \cdot \vec{b}+\vec{a} \cdot \vec{c} \\
+(k \vec{a}) \cdot \vec{b}=\vec{a} \cdot(k \vec{b})=k(\vec{a} \cdot \vec{b})</script><h2 id="叉乘"><a href="#叉乘" class="headerlink" title="叉乘"></a>叉乘</h2><p>$\rm Cross \;Product$</p>
+<script type="math/tex; mode=display">
+||\vec{a}\times\vec{b}||=||\vec{a}||||\vec{b}||\sin\theta</script><p>运算性质</p>
+<script type="math/tex; mode=display">
+\vec{a}\times\vec{b}=-\vec{b}\times\vec{a}\\
+\vec{k}=\vec{i}\times \vec{j}</script><script type="math/tex; mode=display">
+\vec{a} \times \vec{b}=\left(\begin{array}{c}
+y_{a} z_{b}-y_{b} z_{a} \\
+z_{a} x_{b}-x_{a} z_{b} \\
+x_{a} y_{b}-y_{a} x_{b}
+\end{array}\right)=\begin{vmatrix}
+  i& j & k\\
+x_a  &y_a  &z_a \\
+ x_b & y_b &z_b
+\end{vmatrix}</script><h2 id="混合积"><a href="#混合积" class="headerlink" title="混合积"></a>混合积</h2><script type="math/tex; mode=display">
+[\vec{a}\;\vec{b}\; \vec c]=\vec{a}\times\vec{b}\cdot \vec c\\
+=\begin{vmatrix}
+  x_c& y_c & z_c\\
+x_a  &y_a  &z_a \\
+ x_b & y_b &z_b
+\end{vmatrix}</script><p>根据Levi-Civita</p>
+<script type="math/tex; mode=display">
+\vec{a}\times\vec{b}\cdot \vec c=\vec{b}\times\vec{c}\cdot \vec a=\vec{c}\times\vec{a}\cdot \vec b</script><h2 id="范数"><a href="#范数" class="headerlink" title="范数"></a>范数</h2><script type="math/tex; mode=display">
+||\vec{x}||_p=\sqrt[p]{\sum_{i=1}^n|x_i|}</script><script type="math/tex; mode=display">
+\|x\|_{1}=\left|x_{1}\right|+\cdots+\left|x_{n}\right| \\
+\|x\|_{2}=\sqrt{\left|x_{1}\right|^{2}+\cdots+\left|x_{n}\right|^{2}}=\sqrt{x^{H} x} \\
+\|x\|_{\infty}= \underset{1 \leq i \leq n}\max|x_{i}|</script><h1 id="表示"><a href="#表示" class="headerlink" title="表示"></a>表示</h1><p>根据三角形法则，对于任何一个向量</p>
+<p>都可以分解为两个基向量的线性组合</p>
+<script type="math/tex; mode=display">
+\vec{OP}=x\boldsymbol{i}+y\boldsymbol{j}</script><p>所有线性组合构成集合$\text{span}(\boldsymbol{i},\boldsymbol{j})$，称为张成空间</p>
+<p>这就是向量的坐标表示法</p>
+<script type="math/tex; mode=display">
+\vec{OP}=\left(\begin{array}l x\\y\end{array}\right)\\
+\boldsymbol{i}=\left(\begin{array}l 1\\0\end{array}\right),\boldsymbol{j}=\left(\begin{array}l 0\\1\end{array}\right)</script><h2 id="直线的向量方程"><a href="#直线的向量方程" class="headerlink" title="直线的向量方程"></a>直线的向量方程</h2><p>对于直线，有如下关系</p>
+<p><img src="/2022/08/07/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E5%90%91%E9%87%8F/image-20221230132600024.png" alt="image-20221230132600024"></p>
+<script type="math/tex; mode=display">
+\vec{OR}=\vec{OA}+t\vec{AR}\quad(t\in \mathbf{R})</script><p>其中非零向量$\vec{AR}$为该直线的方向向量</p>
+<p>写成坐标形式，可得</p>
+<script type="math/tex; mode=display">
+\left(\begin{array}l x\\y\end{array}\right)=\left(\begin{array}l x_0\\y_0\end{array}\right)+t\left(\begin{array}l v_1\\v_2\end{array}\right)</script><h1 id="导数"><a href="#导数" class="headerlink" title="导数"></a>导数</h1><p>求导的本质只是把标量求导的结果排列起来，至于是按行排列还是按列排列都是可以的</p>
+<p>最基本的求导布局有两个：</p>
+<p><strong>分子布局(numerator layout)</strong>和<strong>分母布局(denominator layout )</strong></p>
+<p>机器学习主要为分子布局</p>
+<blockquote>
+<p>分子布局：分子为列向量，分母为行向量</p>
+</blockquote>
+<script type="math/tex; mode=display">
+\mathbf{x}=\begin{bmatrix}x_1\\x_2\\ \vdots \\x_n\end{bmatrix}
+\\\frac{\partial y}{\partial \mathbf{x}}=\begin{bmatrix}\frac{\partial y}{\partial x_1}
+\frac{\partial y}{\partial x_2}
+\cdots
+\frac{\partial y}{\partial x_n}
+\end{bmatrix}</script><p>方向导数，定义的$\rm shape$，例</p>
+<script type="math/tex; mode=display">
+\frac{\partial}{\partial \mathbf{x}}(x_1^2+2x_2^2)=[2x_1,4x_2]</script><p>求导运算是线性算子</p>
+<script type="math/tex; mode=display">
+\mathbf{y}=\left[\begin{array}{c}
+y_{1} \\
+y_{2} \\
+\vdots \\
+y_{m}
+\end{array}\right] \quad \frac{\partial \mathbf{y}}{\partial x}=\left[\begin{array}{c}
+\frac{\partial y_{1}}{\partial x} \\
+\frac{\partial y_{2}}{\partial x} \\
+\vdots \\
+\frac{\partial y_{m}}{\partial x}
+\end{array}\right]</script><h2 id="雅可比矩阵"><a href="#雅可比矩阵" class="headerlink" title="雅可比矩阵"></a>雅可比矩阵</h2><script type="math/tex; mode=display">
+\text{jacobi matrix}
+\\\frac{\partial \mathbf{y}}{\partial \mathbf{x}}=\left[\begin{array}{c}
+\frac{\partial y_{1}}{\partial \mathbf{x}} \\
+\frac{\partial y_{2}}{\partial \mathbf{x}} \\
+\vdots \\
+\frac{\partial y_{m}}{\partial \mathbf{x}}
+\end{array}\right]=\left[\begin{array}{c}
+\frac{\partial y_{1}}{\partial x_{1}}, \frac{\partial y_{1}}{\partial x_{2}}, \ldots, \frac{\partial y_{1}}{\partial x_{n}} \\
+\frac{\partial y_{2}}{\partial x_{1}}, \frac{\partial y_{2}}{\partial x_{2}}, \ldots, \frac{\partial y_{2}}{\partial x_{n}} \\
+\vdots \\
+\frac{\partial y_{m}}{\partial x_{1}}, \frac{\partial y_{m}}{\partial x_{2}}, \ldots, \frac{\partial y_{m}}{\partial x_{n}}
+\end{array}\right]</script><h2 id="线性回归"><a href="#线性回归" class="headerlink" title="线性回归"></a>线性回归</h2><script type="math/tex; mode=display">
+x , w \in \mathbf{R }^ { n } , y \in \mathbf{R }  \\  z = (\left \langle  \mathbf{x}  ,\mathbf{w} \right \rangle - y ) ^ { 2 }</script><script type="math/tex; mode=display">
+\begin{aligned}\frac{\partial z}{\partial \mathbf{w}}\end{aligned}=2(\left \langle  \mathbf{x}  ,\mathbf{w} \right \rangle - y )\mathbf{w}^{\rm T}</script><h2 id="求导"><a href="#求导" class="headerlink" title="求导"></a>求导</h2><p>采用分子布局</p>
+<script type="math/tex; mode=display">
+\frac{\partial A x}{\partial x}=A\\
+\frac{\partial A x}{\partial x^{T}}=A^{T} \\
+
+\frac{\partial x^{T} A}{\partial x}=A^{T}</script><p><img src="/2022/08/07/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E5%90%91%E9%87%8F/ca965b6eb9595c5542db8fa385d9d58a.png" alt="ca965b6eb9595c5542db8fa385d9d58a"></p>
+<h1 id="场论"><a href="#场论" class="headerlink" title="场论"></a>场论</h1><script type="math/tex; mode=display">
+\vec{F}(x,y,z)=f_x(x,y,z)\mathbf{i}+f_y(x,y,z)\mathbf{j}+f_z(x,y,z)\mathbf{k}</script><h2 id="梯度"><a href="#梯度" class="headerlink" title="梯度"></a>梯度</h2><script type="math/tex; mode=display">
+(x',y')=F(x,y)</script><p>向量场里每个点赋予一个向量</p>
+<script type="math/tex; mode=display">
+\nabla=\begin{bmatrix}\frac{\partial }{\partial x_1}
+\frac{\partial}{\partial x_2}
+\cdots
+\frac{\partial }{\partial x_n}\end{bmatrix}</script><h2 id="散度"><a href="#散度" class="headerlink" title="散度"></a>散度</h2><script type="math/tex; mode=display">
+\text{div}F(x,y)=\nabla\cdot F</script><p>描述净流量，若流入大于流出则为负</p>
+<p>$(x,y)$点生成的流量</p>
+<p>例如对于不可压缩的流体</p>
+<script type="math/tex; mode=display">
+\text{div}V=0</script><h2 id="旋度"><a href="#旋度" class="headerlink" title="旋度"></a>旋度</h2><script type="math/tex; mode=display">
+\text{curl}F(x,y)     =\nabla\times F</script><p><img src="/2022/08/07/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E5%90%91%E9%87%8F/image-20230119093040237.png" alt="image-20230119093040237"></p>
+<script type="math/tex; mode=display">
+\begin{array}{l}\nabla\cdot  F=
+{\left[\begin{array}{c}
+\frac{\partial}{\partial x} \\
+\frac{\partial}{\partial y}
+\end{array}\right] \cdot\left[\begin{array}{c}
+\mathbf{F}_{x} \\
+\mathbf{F}_{y}
+\end{array}\right]=\frac{\partial F_{x}}{\partial x}+\frac{\partial F_{y}}{\partial y}} \\
+{\nabla\times F=\left[\begin{array}{c}
+\frac{\partial}{\partial x} \\
+\frac{\partial}{\partial y}
+\end{array}\right] \times\left[\begin{array}{c}
+ \mathbf{F}_x \\
+\mathbf{F}_{y}
+\end{array}\right]=\frac{\partial F_{y}}{\partial x}-\frac{\partial F_{x}}{\partial y}}
+\end{array}</script>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/06/%E5%A4%A7%E4%B8%80/python/manim/updater/updater/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1847,139 +2101,6 @@ z = a + b\text{i} = r(\cos \theta  + \text{isin}\theta ) = re^{\text{i}\theta }<
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E5%AF%BC%E6%95%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E5%AF%BC%E6%95%B0/" itemprop="url">高中/数学/导数</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-07-23T21:10:03+08:00">
-                2022-07-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="导数"><a href="#导数" class="headerlink" title="导数"></a>导数</h1><h2 id="基本公式"><a href="#基本公式" class="headerlink" title="基本公式"></a>基本公式</h2><script type="math/tex; mode=display">
-(x^a)'=ax^{a-1}\\
-(a^x)'=\ln a \cdot a^x
-\\(\log_ax)'=\frac{1}{\ln a\cdot x }\\
-(\sin x)'=\cos x\\
-(\cos x)'=-\sin x</script><script type="math/tex; mode=display">
-[f(x)\pm g(x)]'=f'(x)\pm g'(x) \\
-[f(x)\cdot g(x)]'=f'(x)g(x)+f(x)g'(x)\\
-\left (\frac{f(x)}{g(x)}\right)'=\frac{f'(x)g(x)-f(x)g'(x)}{g^2(x)}</script><script type="math/tex; mode=display">
-[f(g(x))]'=f'(g(x))\cdot g'(x)</script><h2 id="放缩"><a href="#放缩" class="headerlink" title="放缩"></a>放缩</h2><script type="math/tex; mode=display">
-1-\frac1x\le\ln x\le x-1\\
-\ln x\le \frac xe
-\\e^x\ge x+1\\e^x\ge ex
-\\x e^{x} \geq x+\ln x+1\\
-e^{x-1-\ln x}=\frac{e^{x-1}}{x} \geq x-\ln x\Leftrightarrow e^{x-1} \geq x^{2}-x \ln x</script>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2030,7 +2151,7 @@ e^{x-1-\ln x}=\frac{e^{x-1}}{x} \geq x-\ln x\Leftrightarrow e^{x-1} \geq x^{2}-x
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">85</span>
+                <span class="site-state-item-count">86</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
