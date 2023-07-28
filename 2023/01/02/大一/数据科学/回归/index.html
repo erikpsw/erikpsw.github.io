@@ -103,7 +103,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://yoursite.com/2023/01/02/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E5%9B%9E%E5%BD%92/image-20230102194141113.png">
 <meta property="article:published_time" content="2023-01-02T08:05:23.917Z">
-<meta property="article:modified_time" content="2023-01-05T15:24:10.482Z">
+<meta property="article:modified_time" content="2023-06-03T09:52:57.858Z">
 <meta property="article:author" content="Shiwei Pan">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/2023/01/02/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E5%9B%9E%E5%BD%92/image-20230102194141113.png">
@@ -400,8 +400,10 @@ r = \frac { \sum \limits_ { i = 1 } ^ { n } x _ { i } y _ { i } - n \overline { 
 <script type="math/tex; mode=display">
 S_{xx}=\sum_{i=1}^n(x_i-\overline{x})^2\\
 S_{yy}=\sum_{i=1}^n(y_i-\overline{y})^2\\
-S_{xy}=\sum_{i=1}^n(x_i-\overline{x})(y_i-\overline{y})</script><p>其中$\sigma^2=\text{Var}(\epsilon)$</p>
-<p>因为x_i为人为给定量，y_i为测量值，存在误差</p>
+S_{xy}=\sum_{i=1}^n(x_i-\overline{x})(y_i-\overline{y})</script><p>标准差为</p>
+<script type="math/tex; mode=display">
+\sqrt{\frac{1}{n-1} \sum_{i=1}^{n}\left(x_{i}-\hat{x}_{j}\right)^{2}}</script><p>其中$\sigma^2=\text{Var}(\epsilon)$</p>
+<p>因为$x_i$为人为给定量，$y_i$为测量值，存在误差</p>
 <p>若样本无穷大，有总体回归线</p>
 <script type="math/tex; mode=display">
 Y=\beta_0+\beta_1X+\epsilon</script><p>由方差的性质得到</p>
@@ -409,7 +411,8 @@ Y=\beta_0+\beta_1X+\epsilon</script><p>由方差的性质得到</p>
 \text{Var}(\epsilon)=\text{Var}[Y]</script><script type="math/tex; mode=display">
 \text{SE}(\hat{\beta_1})^2=\frac{\sigma^2}{S_{xx}}
 \\
-\text{SE}(\hat{\beta_0})^2=\sigma^2\left(\frac1n+\frac{\overline{x}^2}{S_{xx}}\right)</script><p><strong>RSE：</strong>Residual Standard Error</p>
+\text{SE}(\hat{\beta_0})^2=\sigma^2\left(\frac1n+\frac{\overline{x}^2}{S_{xx}}\right)</script><p>SE(Standard Error)为标准误差</p>
+<p><strong>RSE：</strong>Residual Standard Error</p>
 <script type="math/tex; mode=display">
 \mathrm{RSE}=\sqrt{\frac{1}{n-2} \operatorname{RSS}}=\sqrt{\frac{1}{n-2} \sum_{i=1}^{n}\left(y_{i}-\hat{y}_{j}\right)^{2}}</script><p><strong>RSS：</strong>Residual Sum of Squares</p>
 <p>由误差导致的真实值和估计值之间的偏差平方和</p>
@@ -615,7 +618,7 @@ p(X)=\frac{e^{\beta_0+\beta_1X}}{1+e^{\beta_0+\beta_1X}}\\
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">86</span>
+                <span class="site-state-item-count">88</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

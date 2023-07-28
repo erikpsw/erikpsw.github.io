@@ -311,6 +311,339 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2023/02/14/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E5%90%91%E9%87%8F%E5%88%86%E6%9E%90/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2023/02/14/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E5%90%91%E9%87%8F%E5%88%86%E6%9E%90/" itemprop="url">大一/线性代数/向量分析</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-02-14T18:57:35+08:00">
+                2023-02-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h1><h2 id="克罗内克函数"><a href="#克罗内克函数" class="headerlink" title="克罗内克函数"></a>克罗内克函数</h2><p>Kronecker Delta符号</p>
+<script type="math/tex; mode=display">
+\delta_{ij} =\{ 1,\text{if}\; i = j\;;\;0,\text{if}\; i ≠ j \}</script><h2 id="爱因斯坦求和约定"><a href="#爱因斯坦求和约定" class="headerlink" title="爱因斯坦求和约定"></a>爱因斯坦求和约定</h2><p>当式子中任何一个指标出现了==两次==，那么该式表示的实际上是对这个角标一切可能值的求和，如</p>
+<script type="math/tex; mode=display">
+C_{ij}=A_{ik}B_{kj}</script><p>$k$出现了两次，表示对$ k $进行了求和</p>
+<script type="math/tex; mode=display">
+\sum a_ib_i=a_ib_i</script><p>出现两处的指标称为哑标(dummy index)，出现一次指标称为自由指标(特指)</p>
+<p>对于上下标需要一起算</p>
+<script type="math/tex; mode=display">
+a_i^i=\sum a_i^i</script><p>等式两边自由指标的数量要相同</p>
+<h2 id="列维-奇维塔符号"><a href="#列维-奇维塔符号" class="headerlink" title="列维-奇维塔符号"></a><strong>列维-奇维塔符号</strong></h2><p>(Levi-Civita symbol)也称为epsilon符号或完全反对称符号</p>
+<script type="math/tex; mode=display">
+\varepsilon_{ijk}=\begin{cases}1\quad ijk=123或偶次交换\\
+-1\quad   ijk=123经奇数次交换\\ 0 \quad  有两个指标相同  \end{cases}</script><p>由此三阶行列式可以表示成</p>
+<script type="math/tex; mode=display">
+\begin{vmatrix}
+  a_1& a_2 & a_3\\
+b_1& b_2 & b_3 \\
+ c_1& c_2 & c_3
+\end{vmatrix}=\varepsilon_{ijk}a_ib_jc_k</script><h1 id="三维情况"><a href="#三维情况" class="headerlink" title="三维情况"></a>三维情况</h1><script type="math/tex; mode=display">
+\vec{a}\cdot \vec{b}=a_ib_j\\
+\vec{a}\times \vec{b}=\vec{e_i}\varepsilon_{ijk}a_jb_k\\
+(\vec{a}\times \vec{b})_i=\varepsilon_{ijk}a_jb_k</script><h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p>标量</p>
+<script type="math/tex; mode=display">
+\varphi(\vec{x})</script><p>矢量</p>
+<script type="math/tex; mode=display">
+\vec{A}(\vec{x})=A_1\vec{e_1}+A_2\vec{e_2}+A_3\vec{e_3}</script><h2 id="算子"><a href="#算子" class="headerlink" title="算子"></a>算子</h2><h3 id="哈密顿算子"><a href="#哈密顿算子" class="headerlink" title="哈密顿算子"></a>哈密顿算子</h3><script type="math/tex; mode=display">
+\nabla=\begin{bmatrix}\frac{\partial }{\partial x_1}
+\frac{\partial}{\partial x_2}
+\cdots
+\frac{\partial }{\partial x_n}\end{bmatrix}=\vec{e_i}\frac{\partial }{\partial x_i}</script><p>方向导数</p>
+<script type="math/tex; mode=display">
+\frac{\partial u}{\partial 
+\vec s}=\lim_{\Delta\vec s\to0}\frac{f(\vec r+\Delta\vec s)-f(\vec r)}{\Delta\vec s}</script><p>方向导数最大为梯度方向</p>
+<script type="math/tex; mode=display">
+\nabla u\cdot \text d \vec s=\text du</script><p>是在$\text d \vec s$方向上的微分变化</p>
+<p>$\nabla u$指的是梯度场</p>
+<h3 id="散度"><a href="#散度" class="headerlink" title="散度"></a>散度</h3><p>对于曲面$\Sigma$，向量场的通量表示为</p>
+<script type="math/tex; mode=display">
+\Phi=\int_\Sigma \vec A\cdot \text d\vec \sigma</script><p>从而有</p>
+<script type="math/tex; mode=display">
+\text{div} \vec A=\lim_{V\to 0}\frac1V\int_{\partial V}\vec A\cdot \text d\vec \sigma</script><p>$\partial V$代表$V$的边界，散度代表单位体积的通量</p>
+<script type="math/tex; mode=display">
+\text{div}\vec A=\nabla\cdot \vec A\\
+\lim_{\Delta V\to 0}(\nabla\cdot \vec A)\cdot \Delta V=\int_{\partial (\Delta V)}\vec A\cdot \text d\vec \sigma</script><p> 两端积分得到散度定理</p>
+<script type="math/tex; mode=display">
+\int_V(\nabla\cdot \vec A)\text d V=\int_{\partial V}\vec A\cdot \text d\vec \sigma</script><p> 说明体积内的散度为边界上的通量</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2023/02/11/%E5%A4%A7%E4%B8%80/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/%E7%A7%AF%E5%88%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2023/02/11/%E5%A4%A7%E4%B8%80/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/%E7%A7%AF%E5%88%86/" itemprop="url">大一/复变函数/积分</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-02-11T21:00:16+08:00">
+                2023-02-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h1><p>考虑复变函数$w(t)$</p>
+<script type="math/tex; mode=display">
+w(t) = u(t) + \text iv(t)</script><p>对其求导得到</p>
+<script type="math/tex; mode=display">
+w'(t) = u'(t) + \text iv'(t)\\
+\frac{\text d} {\text dt }e^{z_0t}=z_0e^{z_0t}</script><p>同理，有</p>
+<script type="math/tex; mode=display">
+\int_a^bw(t)\text dt=\int_a^bu(t)\text dt+\text i\int_a^bv(t)\text dt</script><p>从而我们可以分别对实部和虚部进行积分</p>
+<script type="math/tex; mode=display">
+\Re\int_a^bw(t)\text dt=\int_a^b\Re [w(t)]\text dt\\
+\Im\int_a^bw(t)\text dt=\int_a^b\Im [w(t)]\text dt</script><p>所以微积分基本定理也可以使用</p>
+<script type="math/tex; mode=display">
+\left.{\int_a^bw(t)\text dt=W(t)}\right|_a^b</script><p>如</p>
+<script type="math/tex; mode=display">
+\int_0^{\frac\pi 4}e^{\text it}\text dt=\frac{\sqrt 2}2+\left(1-\frac{\sqrt 2}2\right)\text i</script><p>注意，如积分中值定理不适用于复变函数</p>
+<h1 id="曲线"><a href="#曲线" class="headerlink" title="曲线"></a>曲线</h1><script type="math/tex; mode=display">
+z(t) = x(t) + \text iy(t)\quad (t\in[a,b])</script><p>这就是曲线$C$的方程</p>
+<ul>
+<li>若$z$值没有重复相交则为简单曲线(simple arc)</li>
+<li>只有$z(a)=z(b)$则称为简单封闭曲线(simple closed curve)</li>
+</ul>
+<h2 id="弧微分"><a href="#弧微分" class="headerlink" title="弧微分"></a>弧微分</h2><script type="math/tex; mode=display">
+\text d s=\sqrt{1+y'^2}\text dx=\sqrt{[x'(t)]^2+[y'(t)]^2}\text d t</script><p>所以弧长</p>
+<script type="math/tex; mode=display">
+L=\int_a^b\sqrt{[x'(t)]^2+[y'(t)]^2}\text d t</script><p>对于$\varphi’(\tau)&gt;0$，也可变换</p>
+<script type="math/tex; mode=display">
+Z(t)=z(\varphi(t))</script><p>又因为</p>
+<script type="math/tex; mode=display">
+|z'(t)|=\sqrt{[x'(t)]^2+[y'(t)]^2}\\
+L=\int_\alpha^\beta|z'(\varphi(t))|\varphi'(t)\text d t=\int_\alpha^\beta|Z'(t)|\text d t</script><p>考虑径矢</p>
+<script type="math/tex; mode=display">
+\mathbf{T}=\frac{z'(t)}{|z'(t)|}</script><p>如果$z’(t)$连续且$\ne0$，即$x’(t),y’(t)$不同时为$0$</p>
+<p>则曲线处处有切线可以自由转动，则曲线光滑</p>
+<h2 id="轮廓"><a href="#轮廓" class="headerlink" title="轮廓"></a>轮廓</h2><p>contour通常指的是复平面上的曲线，它可以用于描述复变函数在复平面上的取值和变化情况，用两种方式定义</p>
+<ol>
+<li>参数方程：$z (t)$，其中 $t$ 是在某个区间 $[a,b]$ 上变化的实数。通过让 $t$ 在区间 $[a,b]$ 上遍历，我们就可以得到一条曲线</li>
+<li>等值线方程：$f(z) = c$，其中 $c$ 是一个常数。这个方程表示的是函数 $f(z)$ 在复平面上取值为 $c$ 的所有点</li>
+</ol>
+<h1 id="积分"><a href="#积分" class="headerlink" title="积分"></a>积分</h1><p>对于一个轮廓$C$，积分表示为</p>
+<script type="math/tex; mode=display">
+\int_Cf(z)\text dz\;\;\text{or}\;\;\int_{z_1}^{z_2}f(z)\text dz</script><p>对于由参数定义的$C$</p>
+<script type="math/tex; mode=display">
+\int_Cf(z)\text dz=\int_Cf[z(t)]z'(t)\text dt</script><h2 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h2><p><img src="/2023/02/11/%E5%A4%A7%E4%B8%80/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/%E7%A7%AF%E5%88%86/image-20230227183020559.png" alt="image-20230227183020559" style="zoom: 50%;"></p>
+<p>对于方向相反的轮廓$z(-t)$</p>
+<script type="math/tex; mode=display">
+\int_{-C}f(z)\text dz=-\int_Cf(z)\text dz</script><p>可加性</p>
+<p><img src="/2023/02/11/%E5%A4%A7%E4%B8%80/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/%E7%A7%AF%E5%88%86/image-20230227183446163.png" alt="image-20230227183446163"></p>
+<script type="math/tex; mode=display">
+\int_Cf(z)\text dz=\int_{C_1}f(z)\text dz+\int_{C_2}f(z)\text dz</script>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2023/02/10/%E5%A4%A7%E4%B8%80/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0/%E5%87%BD%E6%95%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1654,8 +1987,10 @@ r = \frac { \sum \limits_ { i = 1 } ^ { n } x _ { i } y _ { i } - n \overline { 
 <script type="math/tex; mode=display">
 S_{xx}=\sum_{i=1}^n(x_i-\overline{x})^2\\
 S_{yy}=\sum_{i=1}^n(y_i-\overline{y})^2\\
-S_{xy}=\sum_{i=1}^n(x_i-\overline{x})(y_i-\overline{y})</script><p>其中$\sigma^2=\text{Var}(\epsilon)$</p>
-<p>因为x_i为人为给定量，y_i为测量值，存在误差</p>
+S_{xy}=\sum_{i=1}^n(x_i-\overline{x})(y_i-\overline{y})</script><p>标准差为</p>
+<script type="math/tex; mode=display">
+\sqrt{\frac{1}{n-1} \sum_{i=1}^{n}\left(x_{i}-\hat{x}_{j}\right)^{2}}</script><p>其中$\sigma^2=\text{Var}(\epsilon)$</p>
+<p>因为$x_i$为人为给定量，$y_i$为测量值，存在误差</p>
 <p>若样本无穷大，有总体回归线</p>
 <script type="math/tex; mode=display">
 Y=\beta_0+\beta_1X+\epsilon</script><p>由方差的性质得到</p>
@@ -1663,7 +1998,8 @@ Y=\beta_0+\beta_1X+\epsilon</script><p>由方差的性质得到</p>
 \text{Var}(\epsilon)=\text{Var}[Y]</script><script type="math/tex; mode=display">
 \text{SE}(\hat{\beta_1})^2=\frac{\sigma^2}{S_{xx}}
 \\
-\text{SE}(\hat{\beta_0})^2=\sigma^2\left(\frac1n+\frac{\overline{x}^2}{S_{xx}}\right)</script><p><strong>RSE：</strong>Residual Standard Error</p>
+\text{SE}(\hat{\beta_0})^2=\sigma^2\left(\frac1n+\frac{\overline{x}^2}{S_{xx}}\right)</script><p>SE(Standard Error)为标准误差</p>
+<p><strong>RSE：</strong>Residual Standard Error</p>
 <script type="math/tex; mode=display">
 \mathrm{RSE}=\sqrt{\frac{1}{n-2} \operatorname{RSS}}=\sqrt{\frac{1}{n-2} \sum_{i=1}^{n}\left(y_{i}-\hat{y}_{j}\right)^{2}}</script><p><strong>RSS：</strong>Residual Sum of Squares</p>
 <p>由误差导致的真实值和估计值之间的偏差平方和</p>
@@ -1907,7 +2243,14 @@ k_{1} y_{1}(x)+k_{2} y_{2}(x)+\cdots+k_{n} y_{n}(x) \equiv 0</script><p>其中$k
 <p>两个非零函数</p>
 <script type="math/tex; mode=display">
 y_1:y_2=C(\ne0)</script><h2 id="常数变易"><a href="#常数变易" class="headerlink" title="常数变易"></a>常数变易</h2><script type="math/tex; mode=display">
-y=C u(x) \to y=v(x)u(x)</script><h2 id="非齐次"><a href="#非齐次" class="headerlink" title="非齐次"></a>非齐次</h2><script type="math/tex; mode=display">
+y=C u(x) \to y=v(x)u(x)</script><h2 id="齐次"><a href="#齐次" class="headerlink" title="齐次"></a>齐次</h2><script type="math/tex; mode=display">
+y''+py'+qy=0</script><p>$\Delta&gt;0$</p>
+<script type="math/tex; mode=display">
+y=C_1e^{r_1x}+C_2e^{r_2x}</script><p>$\Delta=0,r=-\frac p2$</p>
+<script type="math/tex; mode=display">
+y=(C_1+C_2x)e^{rx}</script><p>$\Delta&lt;0,r=a\pm b\mathbf i $</p>
+<script type="math/tex; mode=display">
+y=e^{ax}(C_1\cos bx+C_2\sin bx)</script><h2 id="非齐次"><a href="#非齐次" class="headerlink" title="非齐次"></a>非齐次</h2><script type="math/tex; mode=display">
 y=C_1y_1(x)+C_2y_2(x)+y^*(x)</script><p>$y^*(x)$为非齐次的特解</p>
 <h3 id="形式1"><a href="#形式1" class="headerlink" title="形式1"></a>形式1</h3><script type="math/tex; mode=display">
 y''+py'+qy=f(x)\\
@@ -1935,498 +2278,6 @@ x^3y'''+3x^2y''-2xy'+2y=0</script><p>令$x=e^t$</p>
 <script type="math/tex; mode=display">
 D=\frac{\text{d}}{\text{d}t}\\
 x^ny^{(n)}=D(D-1)\cdots(D-n+1)y</script><p>其中$D^n$称为$n$阶微分算子</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/12/01/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%83%AD%E5%AD%A6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/12/01/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%83%AD%E5%AD%A6/" itemprop="url">大一/物理/热学</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-12-01T18:53:52+08:00">
-                2022-12-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><h2 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h2><p>热力学系统由大量微观粒子组成的系统，与系统发生相互作用的外部环境称为外界</p>
-<ul>
-<li>孤立系统：与外界没有物质和能量的交换</li>
-<li>封闭系统：没有物质的交换，只有能量交换</li>
-<li>开放系统：同时有物质和能量的交换</li>
-</ul>
-<h3 id="状态参量"><a href="#状态参量" class="headerlink" title="状态参量"></a>状态参量</h3><p>分为宏观量和微观量</p>
-<p>每个分子所具有的$v,m_p$为微观量</p>
-<p>气体的宏观状态如$V,p$为宏观量</p>
-<p>其中又分为广延量和强度量，如热量是广延量，温度是强度量</p>
-<h4 id="重要单位"><a href="#重要单位" class="headerlink" title="重要单位"></a>重要单位</h4><script type="math/tex; mode=display">
-1 \rm L=10^{-3}m^3\\
-1atm=1.013\times10^5Pa=760mmHg</script><h2 id="热平衡"><a href="#热平衡" class="headerlink" title="热平衡"></a>热平衡</h2><p>两者之间没有热量的交换，冷热程度不发生改变</p>
-<h2 id="平衡态"><a href="#平衡态" class="headerlink" title="平衡态"></a>平衡态</h2><p>在经过足够长的时间后系统的状态参量不随时间改变，则称该系统达到了平衡态</p>
-<h3 id="弛豫时间"><a href="#弛豫时间" class="headerlink" title="弛豫时间"></a>弛豫时间</h3><p>从初始状态到达到平衡态所需要的时间</p>
-<p>若弛豫时间很短则可近似看作平衡态</p>
-<h2 id="准静态过程"><a href="#准静态过程" class="headerlink" title="准静态过程"></a>准静态过程</h2><p>过程足够缓慢以至于每一个中间态都可以看作平衡态</p>
-<h2 id="温标"><a href="#温标" class="headerlink" title="温标"></a>温标</h2><p>温度的数值表示法</p>
-<p>摄氏温标，用$t$表示，单位为$^\circ \text{C}$</p>
-<p>热力学温标，用$T$表示，开尔文温标，单位为$\text{K}$</p>
-<script type="math/tex; mode=display">
-T/\text{K}=273.15+t/^\circ\text{C}</script><h1 id="热力学定律"><a href="#热力学定律" class="headerlink" title="热力学定律"></a>热力学定律</h1><h2 id="第零定律"><a href="#第零定律" class="headerlink" title="第零定律"></a>第零定律</h2><p>若两个系统分别与第三个系统处于热平衡，则这两个系统必然也处于热平衡</p>
-<h2 id="第一定律"><a href="#第一定律" class="headerlink" title="第一定律"></a>第一定律</h2><p>只要初末两个状态为平衡态</p>
-<script type="math/tex; mode=display">
-E=f(T)
-\\\Delta E= \Delta U=W+Q</script><p>实际上对系统做功和传递热量是等效的，焦耳实验测出了热功当量</p>
-<p>我们需要注意做功和传热是过程量和具体过程有关</p>
-<p>内能的变化量是状态量只和始末状态有关（处于平衡态）</p>
-<script type="math/tex; mode=display">
-J=\frac{2mgh}Q=4.18\text{J}\cdot\text{cal}^{-1}</script><p>对于微小过程(准静态)，有</p>
-<script type="math/tex; mode=display">
-\text{d}E=\text{d}W+\text{d}Q\\
-\Delta E=-\int_{V_1}^{V_2}{p\text{d}V}+\int_{T_1}^{T_2}\frac mMC_m\text{d}T</script><p>其中$C_m=cM$为摩尔热容，对于特殊过程，引入自由度</p>
-<ul>
-<li>$i=3$单原子分子</li>
-<li>$i=5$双原子分子</li>
-<li>$i=6$多原子分子 </li>
-</ul>
-<script type="math/tex; mode=display">
-V=\text{const}:\\
-C_{V,m}=\frac i2R
-\\
-p=\text{const}:\\
-C_{p,m}=\left(\frac i2+1\right)R</script><p>从而有迈耶公式</p>
-<script type="math/tex; mode=display">
-C_{V,m}+R=C_{p,m}</script><p>$R$在数值上等于一摩尔理想气体等压过程升高$1\text{K}$对外做的功</p>
-<p>从定容推出的内能表达式适用于所有过程</p>
-<script type="math/tex; mode=display">
-E=\frac mMC_{V,m}T=\frac mM\frac i2RT</script><h1 id="理想气体物态方程"><a href="#理想气体物态方程" class="headerlink" title="理想气体物态方程"></a>理想气体物态方程</h1><script type="math/tex; mode=display">
-\frac{p_1V_1}{T_1}=\frac{p_2V_2}{T_2}</script><p>标准状态</p>
-<script type="math/tex; mode=display">
-p_0=1 \text{atm},T_0=273.15\text{K},V_m=22.4\text{L/mol}</script><script type="math/tex; mode=display">
-\frac{p_1V_1}{T_1}=\frac mM \frac{p_0V_m}{T_0}=R\frac mM</script><script type="math/tex; mode=display">
-pV=\frac mM  RT</script><p>这就是理想气体状态方程，$R=8.31$为摩尔气体常量</p>
-<script type="math/tex; mode=display">
-p=\frac NV\frac R{N_A}T=nkT</script><p>其中$k=R/N_A$称为玻尔兹曼常量，此式多用于计算分子数密度</p>
-<p>带入标况可得</p>
-<script type="math/tex; mode=display">
-n=2.69\times{10}^{25}\rm m^{-3}</script><p>这个量被称为洛施密特常量</p>
-<h1 id="热力学过程"><a href="#热力学过程" class="headerlink" title="热力学过程"></a>热力学过程</h1><h2 id="等体过程"><a href="#等体过程" class="headerlink" title="等体过程"></a>等体过程</h2><script type="math/tex; mode=display">
-Q_V=\Delta E=\frac mM\frac i2R\Delta T</script><h2 id="等压过程"><a href="#等压过程" class="headerlink" title="等压过程"></a>等压过程</h2><script type="math/tex; mode=display">
-\Delta E=p(V_1-V_2)+\frac mM\left(\frac i2+1\right)R\Delta T</script><h2 id="等温过程"><a href="#等温过程" class="headerlink" title="等温过程"></a>等温过程</h2><script type="math/tex; mode=display">
-p_1V_1=p_2V_2\\
-W=\frac mMRT\ln\frac{V_1}{V_2}=\frac mMRT\ln\frac{p_2}{p_1}=Q_T</script><p>其中摩尔定温热容</p>
-<script type="math/tex; mode=display">
-C_{T,m}=\frac Mm\left(\frac{\text{d}Q}{\text{d}T}\right)_T\to\infty</script><h2 id="绝热过程"><a href="#绝热过程" class="headerlink" title="绝热过程"></a>绝热过程</h2><script type="math/tex; mode=display">
-\Delta E=W,\text{d}E=\frac mMC_V\text{d}T\\
-\text{d}W=-p\text{d}V</script><p>引入绝热指数(摩尔热容比)</p>
-<script type="math/tex; mode=display">
-\gamma=\frac{C_{p,m}}{C_{V,m}}=\frac{i+2}i</script><p>得到绝热方程</p>
-<script type="math/tex; mode=display">
-pV^{\gamma}=C_1\\
-TV^{\gamma-1}=C_2\\
-\frac{T^{\gamma}}{p^{\gamma-1}}=C_3</script><script type="math/tex; mode=display">
-W=\frac1{\gamma-1}(p_2V_2-p_1V_1)=C_V(T_2-T_1)</script><p>在交点处，绝热过程的线更加陡</p>
-<h2 id="多方过程"><a href="#多方过程" class="headerlink" title="多方过程"></a>多方过程</h2><script type="math/tex; mode=display">
-pV^n=C</script><p>做功把绝热过程中的$\gamma\to n$即可，注意</p>
-<script type="math/tex; mode=display">
-C_{n,m}=C_{V,m}+\frac R{1-n}</script><h1 id="循环过程"><a href="#循环过程" class="headerlink" title="循环过程"></a>循环过程</h1><p> 某个状态出发经过一系列过程又回到初始状态的过程</p>
-<p>顺时针为正，逆时针为负</p>
-<p>正循环$W’&gt;0$，逆循环相反</p>
-<h2 id="热机"><a href="#热机" class="headerlink" title="热机"></a>热机</h2><p>吸热为$Q_1$，放热为$Q_2$</p>
-<p><img src="/2022/12/01/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%83%AD%E5%AD%A6/image-20221210192900311.png" alt="image-20221210192900311"></p>
-<script type="math/tex; mode=display">
-\eta=\frac{W}{Q_1}=\frac{Q_1-Q_2}{Q_1}=1-\frac{Q_2}{Q_1}</script><h2 id="制冷机"><a href="#制冷机" class="headerlink" title="制冷机"></a>制冷机</h2><p><img src="/2022/12/01/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%83%AD%E5%AD%A6/image-20221210194905948.png" alt="image-20221210194905948"></p>
-<script type="math/tex; mode=display">
-e=\frac{Q_2}{W}=\frac{Q_2}{Q_1'-Q_2}</script><h2 id="卡诺循环"><a href="#卡诺循环" class="headerlink" title="卡诺循环"></a>卡诺循环</h2><p><img src="/2022/12/01/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E7%83%AD%E5%AD%A6/image-20221210200415903.png" alt="image-20221210200415903"></p>
-<script type="math/tex; mode=display">
-\eta=\frac{T_{1}-T_{2}}{T_{1}}=1-\frac{T_{2}}{T_{1}}</script><script type="math/tex; mode=display">
-\varepsilon=\frac{Q_{2}}{W}=\frac{Q_{2}}{Q_{1}-Q_{2}}=\frac{T_{2}}{T_{1}-T_{2}}</script><h1 id="气体动理论"><a href="#气体动理论" class="headerlink" title="气体动理论"></a>气体动理论</h1><p>分子与分子之间存在着一定的间距</p>
-<p>分子之间存在着相互作用力，注意$r_0$</p>
-<p>分子在不断的做无谓的运动，布朗运动</p>
-<p>利用统计学方法来研究气体</p>
-<h2 id="分布"><a href="#分布" class="headerlink" title="分布"></a>分布</h2><p>速率分布函数</p>
-<script type="math/tex; mode=display">
-f(v)=\lim_{\Delta v\to0}\frac{\Delta N}{N \Delta v}\\
-\int_0^{+\infty}f(v)\text{d}v=1</script><p>只有积分是具有实际意义的，单个值不具有任何意义</p>
-<h2 id="平均速率"><a href="#平均速率" class="headerlink" title="平均速率"></a>平均速率</h2><script type="math/tex; mode=display">
-\overline{v}=\frac{\int v\text{d}N}{N}=\int vf(v)\text{d}v\\=\sqrt{\frac{8RT}{\pi M}}=1.6\sqrt{\frac{RT}{ M}}</script><h2 id="方均根速率"><a href="#方均根速率" class="headerlink" title="方均根速率"></a>方均根速率</h2><script type="math/tex; mode=display">
-\overline{v^2}=\frac{\int v^2\text{d}N}{N}=\int v^2f(v)\text{d}\\\sqrt{\overline{v^2}}=\sqrt{\frac{3RT}{ M}}=1.73\sqrt{\frac{RT}{ M}}</script><h2 id="最概然速率"><a href="#最概然速率" class="headerlink" title="最概然速率"></a>最概然速率</h2><script type="math/tex; mode=display">
-v_p=\sqrt{\frac{2RT}{ M}}=1.41\sqrt{\frac{RT}{ M}}</script><h2 id="气体压强"><a href="#气体压强" class="headerlink" title="气体压强"></a>气体压强</h2><script type="math/tex; mode=display">
-p=\frac23n\overline\varepsilon_k \\
-\overline\varepsilon_k=\frac12m_0\overline{v^2}=\frac32kT\\
-\Rightarrow p=nkT</script>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/11/12/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E6%8C%AF%E5%8A%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/11/12/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E6%8C%AF%E5%8A%A8/" itemprop="url">大一/物理/振动</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-11-12T17:00:21+08:00">
-                2022-11-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="简谐振动"><a href="#简谐振动" class="headerlink" title="简谐振动"></a>简谐振动</h1><h2 id="弹簧振子"><a href="#弹簧振子" class="headerlink" title="弹簧振子"></a>弹簧振子</h2><p><img src="/2022/11/12/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E6%8C%AF%E5%8A%A8/image-20221112170238361.png" alt="image-20221112170238361">对于一个从平衡位置出发的物体，若其受力直接正比于其偏离平衡位置的位移，即满足如下方程</p>
-<script type="math/tex; mode=display">
-\boldsymbol{F}=-k\boldsymbol{x}\\
-\frac{\text{d}^2x}{\text{d}t^2}=-\frac km x=-\omega_0^2x</script><p>则该微分方程的解为</p>
-<script type="math/tex; mode=display">
-x=A\cos(\omega_0t+\varphi)\\
-v=-A\omega_0\sin(\omega_0t+\varphi)\\
-a=-A\omega_0^2\cos(\omega_0t+\varphi)=-\omega_0^2x</script><p>其中$\omega_0$为该简谐振动的角频率</p>
-<p>由机械能守恒两边对时间求导同样可以得到结果</p>
-<h2 id="单摆"><a href="#单摆" class="headerlink" title="单摆"></a>单摆</h2><p><img src="/2022/11/12/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E6%8C%AF%E5%8A%A8/image-20221112171821235.png" alt="image-20221112171821235"></p>
-<p>在角度较小时，由小角度近似$\sin \theta\approx\theta$</p>
-<script type="math/tex; mode=display">
-\frac{\text{d}^2\theta}{\text{d}t^2}=-\frac{g}{L}\theta</script><p>由于$\theta\approx 0$</p>
-<script type="math/tex; mode=display">
-\frac{\text{d}^2x}{\text{d}t^2}=-\frac gL x</script><p>结果为</p>
-<script type="math/tex; mode=display">
-\theta =\theta_0\cos(\omega_0t+\varphi)\\
-\omega_0=\sqrt{\frac gL}\\
-T_0=2\pi\sqrt{\frac Lg}</script><h2 id="重要物理量"><a href="#重要物理量" class="headerlink" title="重要物理量"></a>重要物理量</h2><script type="math/tex; mode=display">
-A=\sqrt{x_0^2+\left(\frac{v_0}{\omega_0}\right)^2}\\
-\varphi=\arctan\left(-\frac{v_0}{\omega_0x_0}\right)</script><p>利用选择矢量法可以方便地求出各物理量</p>
-<h3 id="能量"><a href="#能量" class="headerlink" title="能量"></a>能量</h3><script type="math/tex; mode=display">
-E_p=\frac12kx^2\\
-E=E_p+E_k=\frac12kA^2\\
-\overline{E_k}=\overline{E_p}=\frac14kA^2</script><h1 id="振动的合成"><a href="#振动的合成" class="headerlink" title="振动的合成"></a>振动的合成</h1><h2 id="同频率"><a href="#同频率" class="headerlink" title="同频率"></a>同频率</h2><p>对于两个同频率的简谐振动，运动具有相对静止性</p>
-<script type="math/tex; mode=display">
-\Delta\varphi=\varphi_2-\varphi_1</script><p>若$\Delta\varphi=2k\pi$则为同相，振动加强，振幅最大</p>
-<script type="math/tex; mode=display">
-A=A_1+A_2</script><p>$\Delta\varphi=(2k+1)\pi$则振动削弱，合振幅最小</p>
-<script type="math/tex; mode=display">
-A=|A_1-A_2|</script><p>一般的</p>
-<script type="math/tex; mode=display">
-A=\sqrt{A_1^2+A_2^2+2A_1A_2\cos\Delta\varphi}\\
-\tan\varphi=\frac{A_1\sin\varphi_1+A_2\sin\varphi_2}{A_1\cos\varphi_1+A_2\cos\varphi_2}</script><h2 id="不同频率"><a href="#不同频率" class="headerlink" title="不同频率"></a>不同频率</h2><p>若频率相差不大，则振幅会出现时大时小的现象，称为拍</p>
-<p>若两次重合则为合拍</p>
-<script type="math/tex; mode=display">
-T=\frac{2\pi}{\omega_{\text{raletive}}}=\frac{2\pi}{\omega_2-\omega_1}\\
-\nu=\frac1T=\nu_2-\nu_1</script><p>其中$\nu$称为拍频</p>
-<h2 id="相互垂直的简谐振动"><a href="#相互垂直的简谐振动" class="headerlink" title="相互垂直的简谐振动"></a>相互垂直的简谐振动</h2><p>振动$1$与$x$轴上，振动$2$于$y$轴上</p>
-<p>若$\varphi_2-\varphi_1=2k\pi$</p>
-<p>则$y=\frac{A_2}{A_1}x$为线振动</p>
-<p>若$\varphi_2-\varphi_1=(2k+1)\pi$</p>
-<p>则$y=-\frac{A_2}{A_1}x$为线振动</p>
-<p>若$\varphi_2-\varphi_1=\pm\frac\pi2$</p>
-<script type="math/tex; mode=display">
-\frac{x^2}{A_1^2}+\frac{x^2}{A_1^2}=1</script><h1 id="振动的分解"><a href="#振动的分解" class="headerlink" title="振动的分解"></a>振动的分解</h1><p>利用傅里叶变换可将一个角频率为$\omega$的振动分解为</p>
-<script type="math/tex; mode=display">
-f(t)=A_0+\sum_{n=1}^\infty{A_n\cos(n\omega t+\varphi_n)}</script><p>$\omega$称为基频，$n\omega$称为$n$次谐频</p>
-<h1 id="阻尼振动"><a href="#阻尼振动" class="headerlink" title="阻尼振动"></a>阻尼振动</h1><script type="math/tex; mode=display">
-m\frac{\text{d}^2x}{\text{d}t^2}=-kx-\gamma\frac{\text{d}x}{\text{d}t}</script><p> 令$\omega_0^2=\frac km,2\beta=\frac\gamma m$</p>
-<script type="math/tex; mode=display">
-\frac{\text{d}^2x}{\text{d}t^2}+2\beta\frac{\text{d}x}{\text{d}t}+\omega_0^2x=0</script><p>则为阻尼振动</p>
-<h2 id="小阻尼"><a href="#小阻尼" class="headerlink" title="小阻尼"></a>小阻尼</h2><p><img src="/2022/11/12/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E6%8C%AF%E5%8A%A8/Damped_Free_Vibration.png" alt="Damped_Free_Vibration"></p>
-<script type="math/tex; mode=display">
-x=A_0e^{-\beta t}\cos(\sqrt{\omega_0^2-\beta^2}t+\varphi_0)</script><p>阻尼振动的周期比固有周期要长</p>
-<h2 id="大阻尼"><a href="#大阻尼" class="headerlink" title="大阻尼"></a>大阻尼</h2><script type="math/tex; mode=display">
-\beta>\omega_0</script><p>不能完成一个周期运动，将缓慢移到平衡位置</p>
-<h2 id="临界阻尼"><a href="#临界阻尼" class="headerlink" title="临界阻尼"></a>临界阻尼</h2><p>物体从运动到静止在平衡位置所需时间最短</p>
-<h1 id="受迫振动"><a href="#受迫振动" class="headerlink" title="受迫振动"></a>受迫振动</h1><script type="math/tex; mode=display">
-F=F_0\cos\omega t</script><p>小阻尼下受迫振动为阻尼振动和简谐振动的叠加</p>
-<p>稳定后振动的表达式为</p>
-<script type="math/tex; mode=display">
-x=A\cos(\omega t+\varphi)</script><p>角频率和驱动力频率相等</p>
-<h2 id="共振"><a href="#共振" class="headerlink" title="共振"></a>共振</h2><p><img src="/2022/11/12/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E6%8C%AF%E5%8A%A8/Resonance.png" alt="Resonance"></p>
-<p>当驱动力频率为共振频率时，受迫振动的振幅达到峰值</p>
-<script type="math/tex; mode=display">
-\omega_r=\sqrt{\omega_0^2-2\beta^2}\\
-A_r=\frac{f_0}{2\beta\sqrt{\omega_0^2-\beta^2}}</script><p>若阻尼很小，则振幅趋于无穷大</p>
-<p>当$\omega=\omega_0$时，速度振幅达到最大，称为速度共振</p>
-<h1 id="机械波"><a href="#机械波" class="headerlink" title="机械波"></a>机械波</h1><p>自然界存在两种波</p>
-<p>机械波只有在弹性介质中才能传播，如声波，水波</p>
-<p>电磁波可在真空中传播</p>
-<p>产生波一要有波源，二要有弹性介质</p>
-<h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><p>横波振动方向和波传播方向垂直</p>
-<p>纵波振动方向和波传播方向平行</p>
-<p><img src="/2022/11/12/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E6%8C%AF%E5%8A%A8/Resonance-1668695437511.png" alt="Resonance"></p>
-<p>波速时振动在介质中的传播速度</p>
-<script type="math/tex; mode=display">
-u=\frac{\lambda}T</script><h2 id="平面简谐波"><a href="#平面简谐波" class="headerlink" title="平面简谐波"></a>平面简谐波</h2><script type="math/tex; mode=display">
-\begin{aligned}y(x,t)&=A\cos\left[\omega\left(t-\frac x u\right)+\varphi_0\right]\\
-&=A\cos\left(\omega t-\frac{2\pi x }\lambda +\varphi_0\right)\\
-&=A\cos\left[2\pi\left(\frac tT-\frac x u\right)+\varphi_0\right]\\
-\end{aligned}</script><p>$\Delta t$时间内，整个波向传播方向移动了$u\Delta t$的距离</p>
-<p>这种在空间内行进的波称为行波</p>
-<p>若不在原点，将$x$换为$x-x_0$</p>
-<p>若沿反方向则对称，$x$换为$-x$</p>
-<h2 id="波的能量"><a href="#波的能量" class="headerlink" title="波的能量"></a>波的能量</h2><script type="math/tex; mode=display">
-\text{d}E_k=\text{d}E_p=\frac12\rho A^2\omega^2\sin^2\omega\left(t-\frac x u\right)\text{d}V\\
-\text{d}E=\rho A^2\omega^2\sin^2\omega\left(t-\frac x u\right)\text{d}V</script><p>波的传播过程中，动能和势能变化完全同步</p>
-<p>引入能量密度</p>
-<script type="math/tex; mode=display">
-w=\frac{\text{d}E}{\text{d}V}=\rho A^2\omega^2\sin^2\omega\left(t-\frac x u\right)\\
-\overline{w}=\frac12\rho A^2\omega^2\propto  A^2</script><p>平均能流为单位时间内垂直通过某一面积的平均能量</p>
-<script type="math/tex; mode=display">
-\overline{P}=\overline{w}uS=\frac12\rho A^2\omega^2uS</script><p>单位时间内垂直通过单位面积的平均能量称为流能密度或波的强度</p>
-<script type="math/tex; mode=display">
-I=\frac{\overline{P}}S=\frac12\rho A^2\omega^2u</script><h2 id="声波"><a href="#声波" class="headerlink" title="声波"></a>声波</h2><h3 id="声压"><a href="#声压" class="headerlink" title="声压"></a>声压</h3><script type="math/tex; mode=display">
-p=\rho uv</script><p>声压和速度成正比，故和时间空间作周期性变化</p>
-<p>我们把$Z=\rho u$称为特征阻抗</p>
-<p>阻抗大的为波密介质，反之为波疏介质</p>
-<h3 id="声强"><a href="#声强" class="headerlink" title="声强"></a>声强</h3><script type="math/tex; mode=display">
-I=\frac{\overline{P}}S=\frac12\rho A^2\omega^2u</script><script type="math/tex; mode=display">
-p_{\text{m}}=\rho uv_{\text{m}}=\rho u\omega A\\
-I=\frac12\frac{p_\text{m}}{\rho u}</script><p>对于人耳对声音的主观感受，引入声强级的概念</p>
-<script type="math/tex; mode=display">
-L=\lg \frac I{I_0}</script><p>其中$I_0$为标准声强，单位为贝尔、</p>
-<p>贝尔单位较大，用常用分贝来表示</p>
-<script type="math/tex; mode=display">
-L=10\lg \frac I{I_0}\quad (\text{dB})</script><h1 id="波的干涉"><a href="#波的干涉" class="headerlink" title="波的干涉"></a>波的干涉</h1><p>波有叠加原理，可以单独看每一个波，波之间不会相互影响</p>
-<p>但任一质元的振动是叠加之后的结果</p>
-<p>对于频率，振动方向相同的两列波，称之为相干波</p>
-<p>对于一点$P$距离两个波源的距离分别为$r_1,r_2$</p>
-<script type="math/tex; mode=display">
-y_{1P}=A_1\cos\left(\omega t+\varphi_1-\frac{2\pi r_1}\lambda\right)\\
-y_{2P}=A_2\cos\left(\omega t+\varphi_2-\frac{2\pi r_2}\lambda\right)</script><p>由简谐振动的合成规律知</p>
-<script type="math/tex; mode=display">
-A=\sqrt{A_1^2+A_2^2+2A_1A_2\cos\left[(\varphi_2-\varphi_1)-\frac{2\pi (r_2-r_1)}\lambda\right]}\\
-\tan\varphi=\frac{A_1\sin\left(\varphi_1-\frac{2\pi r_1}\lambda\right)+A_2\sin\left(\varphi_2-\frac{2\pi r_2}\lambda\right)}{A_1\cos\left(\varphi_1-\frac{2\pi r_1}\lambda\right)+A_2\cos\left(\varphi_2-\frac{2\pi r_2}\lambda\right)}</script><p>又因为$I\propto  A^2$</p>
-<script type="math/tex; mode=display">
-I=I_1+I_2+2\sqrt{I_1I_2}\cos\Delta\varphi</script><p>相位差</p>
-<script type="math/tex; mode=display">
-\Delta\varphi=(\varphi_2-\varphi_1)-\frac{2\pi (r_2-r_1)}\lambda</script><p>若</p>
-<script type="math/tex; mode=display">
-\Delta\varphi=2k\pi</script><p>则称这些点为干涉相长点</p>
-<script type="math/tex; mode=display">
-A_{\text{max}}=A_1+A_2\\
-I_{\text{max}}=I_1+I_2+2\sqrt{I_1I_2}</script><p>因为干涉相消而引起振幅和强度减小</p>
-<script type="math/tex; mode=display">
-\Delta\varphi=(2k+1)\pi</script><p>若$\varphi_2=\varphi_1$</p>
-<p>则干涉条件可简化为</p>
-<script type="math/tex; mode=display">
-\delta=r_2-r_1=\begin{cases}\pm k\lambda,A_{\text{max}}=A_1+A_2\\
-\pm \frac12(2k+1)\lambda,A_{\text{max}}=|A_1-A_2|\end{cases}</script><h1 id="驻波"><a href="#驻波" class="headerlink" title="驻波"></a>驻波</h1><p>两列相干波在同一直线上沿相反方向传播时叠加形成的</p>
-<script type="math/tex; mode=display">
-y_{1}=A\cos\left(\omega t-\frac{2\pi x}\lambda\right)\\
-y_{2}=A\cos\left(\omega t+\frac{2\pi x}\lambda\right)</script><p>由和差化积公式</p>
-<script type="math/tex; mode=display">
-\cos\alpha+\cos\beta=2\cos\frac{\alpha+\beta}2\cos\frac{\alpha-\beta}2</script><p>有</p>
-<script type="math/tex; mode=display">
-y=y_1+y_2=2A\cos\left(\frac{2\pi x}\lambda\right)\cos\omega t</script><p>上式被称为驻波方程</p>
-<h2 id="特殊位置"><a href="#特殊位置" class="headerlink" title="特殊位置"></a>特殊位置</h2><script type="math/tex; mode=display">
-\left|\cos\frac{2\pi x}\lambda\right|=1\Rightarrow x= k\frac\lambda2</script><p>振幅最大，称为波腹</p>
-<script type="math/tex; mode=display">
-\left|\cos\frac{2\pi x}\lambda\right|=0\Rightarrow x= (2k+1)\frac\lambda4</script><p>振幅为$0$，称为波节</p>
-<h1 id="惠更斯原理"><a href="#惠更斯原理" class="headerlink" title="惠更斯原理"></a>惠更斯原理</h1><p>波面上任意一点都可看作子波的波源</p>
-<p><img src="/2022/11/12/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E6%8C%AF%E5%8A%A8/Resonance-1668694783853.png" alt="Resonance"></p>
-<h1 id="多普勒效应"><a href="#多普勒效应" class="headerlink" title="多普勒效应"></a>多普勒效应</h1><script type="math/tex; mode=display">
-\nu'=\frac{u+v_o}{u-v_s}\nu</script><p> 其中$v_o$为观察者的速度，$v_s$为波源的速度，相向为正</p>
-<h2 id="马赫锥"><a href="#马赫锥" class="headerlink" title="马赫锥"></a>马赫锥</h2><p><img src="/2022/11/12/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E6%8C%AF%E5%8A%A8/machang.png" alt="machang"></p>
-<script type="math/tex; mode=display">
-\sin\theta=\frac{ut}{v_st}=\frac1{Ma}</script><p>马赫数即为几倍声速</p>
 
           
         
@@ -2512,7 +2363,7 @@ y=y_1+y_2=2A\cos\left(\frac{2\pi x}\lambda\right)\cos\omega t</script><p>上式�
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">86</span>
+                <span class="site-state-item-count">88</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

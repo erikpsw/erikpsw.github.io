@@ -1082,8 +1082,10 @@ r = \frac { \sum \limits_ { i = 1 } ^ { n } x _ { i } y _ { i } - n \overline { 
 <script type="math/tex; mode=display">
 S_{xx}=\sum_{i=1}^n(x_i-\overline{x})^2\\
 S_{yy}=\sum_{i=1}^n(y_i-\overline{y})^2\\
-S_{xy}=\sum_{i=1}^n(x_i-\overline{x})(y_i-\overline{y})</script><p>其中$\sigma^2=\text{Var}(\epsilon)$</p>
-<p>因为x_i为人为给定量，y_i为测量值，存在误差</p>
+S_{xy}=\sum_{i=1}^n(x_i-\overline{x})(y_i-\overline{y})</script><p>标准差为</p>
+<script type="math/tex; mode=display">
+\sqrt{\frac{1}{n-1} \sum_{i=1}^{n}\left(x_{i}-\hat{x}_{j}\right)^{2}}</script><p>其中$\sigma^2=\text{Var}(\epsilon)$</p>
+<p>因为$x_i$为人为给定量，$y_i$为测量值，存在误差</p>
 <p>若样本无穷大，有总体回归线</p>
 <script type="math/tex; mode=display">
 Y=\beta_0+\beta_1X+\epsilon</script><p>由方差的性质得到</p>
@@ -1091,7 +1093,8 @@ Y=\beta_0+\beta_1X+\epsilon</script><p>由方差的性质得到</p>
 \text{Var}(\epsilon)=\text{Var}[Y]</script><script type="math/tex; mode=display">
 \text{SE}(\hat{\beta_1})^2=\frac{\sigma^2}{S_{xx}}
 \\
-\text{SE}(\hat{\beta_0})^2=\sigma^2\left(\frac1n+\frac{\overline{x}^2}{S_{xx}}\right)</script><p><strong>RSE：</strong>Residual Standard Error</p>
+\text{SE}(\hat{\beta_0})^2=\sigma^2\left(\frac1n+\frac{\overline{x}^2}{S_{xx}}\right)</script><p>SE(Standard Error)为标准误差</p>
+<p><strong>RSE：</strong>Residual Standard Error</p>
 <script type="math/tex; mode=display">
 \mathrm{RSE}=\sqrt{\frac{1}{n-2} \operatorname{RSS}}=\sqrt{\frac{1}{n-2} \sum_{i=1}^{n}\left(y_{i}-\hat{y}_{j}\right)^{2}}</script><p><strong>RSS：</strong>Residual Sum of Squares</p>
 <p>由误差导致的真实值和估计值之间的偏差平方和</p>
@@ -2318,7 +2321,14 @@ k_{1} y_{1}(x)+k_{2} y_{2}(x)+\cdots+k_{n} y_{n}(x) \equiv 0</script><p>其中$k
 <p>两个非零函数</p>
 <script type="math/tex; mode=display">
 y_1:y_2=C(\ne0)</script><h2 id="常数变易"><a href="#常数变易" class="headerlink" title="常数变易"></a>常数变易</h2><script type="math/tex; mode=display">
-y=C u(x) \to y=v(x)u(x)</script><h2 id="非齐次"><a href="#非齐次" class="headerlink" title="非齐次"></a>非齐次</h2><script type="math/tex; mode=display">
+y=C u(x) \to y=v(x)u(x)</script><h2 id="齐次"><a href="#齐次" class="headerlink" title="齐次"></a>齐次</h2><script type="math/tex; mode=display">
+y''+py'+qy=0</script><p>$\Delta&gt;0$</p>
+<script type="math/tex; mode=display">
+y=C_1e^{r_1x}+C_2e^{r_2x}</script><p>$\Delta=0,r=-\frac p2$</p>
+<script type="math/tex; mode=display">
+y=(C_1+C_2x)e^{rx}</script><p>$\Delta&lt;0,r=a\pm b\mathbf i $</p>
+<script type="math/tex; mode=display">
+y=e^{ax}(C_1\cos bx+C_2\sin bx)</script><h2 id="非齐次"><a href="#非齐次" class="headerlink" title="非齐次"></a>非齐次</h2><script type="math/tex; mode=display">
 y=C_1y_1(x)+C_2y_2(x)+y^*(x)</script><p>$y^*(x)$为非齐次的特解</p>
 <h3 id="形式1"><a href="#形式1" class="headerlink" title="形式1"></a>形式1</h3><script type="math/tex; mode=display">
 y''+py'+qy=f(x)\\
@@ -2628,7 +2638,10 @@ P=\begin{bmatrix}1&0&0\\0&0&1\\0&1&0\end{bmatrix}</script><h4 id="对称矩阵">
 <script type="math/tex; mode=display">
 \begin{bmatrix}1&2&3\\2&4&5\\3&5&6\end{bmatrix}</script><p>性质$a<em>{ij}=a</em>{ji}$</p>
 <p>反对称$a<em>{ij}=-a</em>{ji}$</p>
-<h2 id="矩阵的基本操作"><a href="#矩阵的基本操作" class="headerlink" title="矩阵的基本操作"></a>矩阵的基本操作</h2><h3 id="加法"><a href="#加法" class="headerlink" title="加法"></a>加法</h3><p>若矩阵$A,B$大小相同，则$C=A+B$为相同大小</p>
+<h4 id="正交矩阵"><a href="#正交矩阵" class="headerlink" title="正交矩阵"></a>正交矩阵</h4><script type="math/tex; mode=display">
+A^T=A^{-1}\\
+AA^T=I</script><script type="math/tex; mode=display">
+1=\text{det}(I)=\text{det}(A^TA)=\text{det}(A)^2</script><h2 id="矩阵的基本操作"><a href="#矩阵的基本操作" class="headerlink" title="矩阵的基本操作"></a>矩阵的基本操作</h2><h3 id="加法"><a href="#加法" class="headerlink" title="加法"></a>加法</h3><p>若矩阵$A,B$大小相同，则$C=A+B$为相同大小</p>
 <script type="math/tex; mode=display">
 c_{ij}=a_{ij}+b_{ij}</script><h4 id="数乘"><a href="#数乘" class="headerlink" title="数乘"></a>数乘</h4><script type="math/tex; mode=display">
 \lambda A=(\lambda a_{ij})</script><p>$\lambda$称为矩阵的一个标量倍数，矩阵的负为$-A(\lambda=-1)$</p>
@@ -2665,13 +2678,19 @@ d
 a x+b y \\
 c x+d y
 \end{array}\right]</script><p><img src="/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/image-20221230133843315.png" alt="image-20221230133843315"></p>
-<p>从而很容易理解旋转矩阵</p>
+<h4 id="变换"><a href="#变换" class="headerlink" title="变换"></a>变换</h4><p>从而很容易理解旋转矩阵</p>
 <p><img src="/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/image-20221230134433897.png" alt="image-20221230134433897"></p>
 <script type="math/tex; mode=display">
 \mathbf{R}_{\theta}=\left[\begin{array}{l}
 \cos \theta & -\sin \theta \\
 \sin \theta & \cos \theta
-\end{array}\right]</script><p>对于直线</p>
+\end{array}\right]</script><p>其中旋转矩阵为正交矩阵</p>
+<p>对于转轴$u$</p>
+<script type="math/tex; mode=display">
+Ru=u
+\\(R-R^T)\vec u=0\\
+\vec u'\times \vec u=0</script><script type="math/tex; mode=display">
+||R\vec x||=||\vec x||</script><p>对于直线</p>
 <script type="math/tex; mode=display">
 M\vec{OR}=M\vec{OA}+tM\vec{AR}</script><p>如果$M\vec{AR}=0$成立，则变化将直线变为一个点</p>
 <p><img src="/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/image-20221230135131766.png" alt="image-20221230135131766"></p>
@@ -2683,7 +2702,10 @@ M=\begin{bmatrix}1&0\\0&0\end{bmatrix}\\</script><figure class="highlight python
 <p>将直线变化为了一个点，整个平面变换成了$y=0$</p>
 <p>一般的，如果一个条直线上的任意$2$个不同的点经过变换后重合</p>
 <p>则该变换为不可逆矩阵</p>
-<h3 id="转置"><a href="#转置" class="headerlink" title="转置"></a>转置</h3><p>交换$A$行和列获得的矩阵为$A$的转置$A^{\text T}$(第几行变为第几列)</p>
+<p>缩放</p>
+<p>对每个分量乘上比例因子</p>
+<script type="math/tex; mode=display">
+P=\begin{bmatrix}s_x&0&0\\0&s_y&0\\0&0&s_z \end{bmatrix}</script><h3 id="转置"><a href="#转置" class="headerlink" title="转置"></a>转置</h3><p>交换$A$行和列获得的矩阵为$A$的转置$A^{\text T}$(第几行变为第几列)</p>
 <script type="math/tex; mode=display">
 A=\left[\begin{array}{l} 1 &2&3\\4&5&6\end{array}\right]
 \\
@@ -2711,7 +2733,7 @@ MM^{-1}=\begin{bmatrix}a&b\\c&d\end{bmatrix}\begin{bmatrix}u&v\\s&t\end{bmatrix}
 \Rightarrow M^{-1}=\begin{bmatrix}\frac d{ad-bc}&\frac {-b}{ad-bc}\\\frac {-c}{ad-bc}&\frac a{ad-bc}\end{bmatrix}</script><h1 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h1><h2 id="范数"><a href="#范数" class="headerlink" title="范数"></a>范数</h2><p>$\rm frobennius$范数</p>
 <script type="math/tex; mode=display">
 ||A||_{\text{Frob}}=\left[\sum_{ij}a_{ij}^2\right]^{\frac12}</script><h2 id="特征向量"><a href="#特征向量" class="headerlink" title="特征向量"></a>特征向量</h2><script type="math/tex; mode=display">
-Ax=\lambda x(x\ne\vec{0})</script><p>表示变换A对于x构成的张成空间没有影响，$\lambda$称为特征值</p>
+Ax=\lambda x(x\ne\vec{0})</script><p>表示变换$A$对于$x$构成的张成空间没有影响，$\lambda$称为特征值</p>
 <p>例如三维旋转矩阵的特征向量和旋转轴共线并且特征值为$1$</p>
 <p>对称矩阵总可以找到特征向量</p>
 <script type="math/tex; mode=display">
@@ -2966,7 +2988,7 @@ f(x)=f(-x)\Rightarrow\\
 <script type="math/tex; mode=display">
 \vec{a}\times\vec{b}=-\vec{b}\times\vec{a}\\
 \vec{k}=\vec{i}\times \vec{j}</script><script type="math/tex; mode=display">
-\vec{a} \times \vec{b}=\left(\begin{array}{c}
+\begin{array}{l}\vec{a} \times \vec{b}&=\left(\begin{array}{c}
 y_{a} z_{b}-y_{b} z_{a} \\
 z_{a} x_{b}-x_{a} z_{b} \\
 x_{a} y_{b}-y_{a} x_{b}
@@ -2974,7 +2996,16 @@ x_{a} y_{b}-y_{a} x_{b}
   i& j & k\\
 x_a  &y_a  &z_a \\
  x_b & y_b &z_b
-\end{vmatrix}</script><h2 id="混合积"><a href="#混合积" class="headerlink" title="混合积"></a>混合积</h2><script type="math/tex; mode=display">
+\end{vmatrix}\\ &=\begin{bmatrix}
+  0& -z_a & y_a\\
+z_a  &0  &-x_a \\
+ y_a & x_a &0
+\end{bmatrix}\begin{bmatrix}
+  x_b\\
+y_b   \\
+ z_b
+\end{bmatrix}=[a]_\times b\end{array}\\
+[a]_\times+[a]_\times^\text T=0</script><h2 id="混合积"><a href="#混合积" class="headerlink" title="混合积"></a>混合积</h2><script type="math/tex; mode=display">
 [\vec{a}\;\vec{b}\; \vec c]=\vec{a}\times\vec{b}\cdot \vec c\\
 =\begin{vmatrix}
   x_c& y_c & z_c\\
@@ -3952,7 +3983,22 @@ f=-k_d\dot{\boldsymbol x}</script><p> 但表示合速度，表示不了弹簧内
 f_a=-k_s\frac{\boldsymbol a-\boldsymbol b}{||\boldsymbol a-\boldsymbol b||}(\dot{\boldsymbol a}-\dot{\boldsymbol b})\cdot\frac{\boldsymbol a-\boldsymbol b}{||\boldsymbol a-\boldsymbol b||}</script><h1 id="流体"><a href="#流体" class="headerlink" title="流体"></a>流体</h1><p>不可压缩流体</p>
 <script type="math/tex; mode=display">
 h_{i}\left(t_{0}+\Delta t\right)=2 h_{i}\left(t_{0}\right)-h_{i}\left(t_{0}-\Delta t\right)+\frac{\Delta t^{2}}{\Delta x^{2} \rho}\left(\left(\frac{h_{i-1}+h_{i}}{2}\right)\left(P_{i-1}-P_{i}\right)+\left(\frac{h_{i+1}+h_{i}}{2}\right)\left(P_{i+1}-P_{i}\right)\right)\\
-h_{i}\left(t_{0}+\Delta t\right)=h_{i}\left(t_{0}\right)+\beta\left(h_{i}\left(t_{0}\right)-h_{i}\left(t_{0}-\Delta t\right)\right)+\alpha\left(h_{i+1}\left(t_{0}\right)+h_{i-1}\left(t_{0}\right)-2 h_{i}\left(t_{0}\right)\right)</script>]]></content>
+h_{i}\left(t_{0}+\Delta t\right)=h_{i}\left(t_{0}\right)+\beta\left(h_{i}\left(t_{0}\right)-h_{i}\left(t_{0}-\Delta t\right)\right)+\alpha\left(h_{i+1}\left(t_{0}\right)+h_{i-1}\left(t_{0}\right)-2 h_{i}\left(t_{0}\right)\right)</script><h1 id="有限元"><a href="#有限元" class="headerlink" title="有限元"></a>有限元</h1><h2 id="形函数"><a href="#形函数" class="headerlink" title="形函数"></a>形函数</h2><script type="math/tex; mode=display">
+\begin{pmatrix}X\\Y\\Z\end{pmatrix}=\sum_{i=0}^{i=3}\begin{pmatrix}X_i\\Y_i\\Z_i\end{pmatrix}\phi_i\left(\mathbf{X}\right)
+\\ \begin{pmatrix}X-X_0\\Y-Y_0\\Z-Z_0\end{pmatrix}=\begin{pmatrix}\Delta X_1&\Delta X_2&\Delta X_3\\\Delta Y_1&\Delta Y_2&\Delta X_3\\\Delta Z_1&\Delta Z_2&\Delta X_3\end{pmatrix}\begin{pmatrix}\phi_1\left(\mathbf{X}\right)\\\phi_2\left(\mathbf{X}\right)\\\phi_3\left(\mathbf{X}\right)\end{pmatrix}</script><p>所以</p>
+<script type="math/tex; mode=display">
+\begin{pmatrix}\phi_1\left(\mathbf{X}\right)\\\phi_2\left(\mathbf{X}\right)\\\phi_3\left(\mathbf{X}\right)\end{pmatrix}=T^{-1}(\mathbf{X}-\mathbf{X}_0)</script><p>齐次坐标</p>
+<h2 id="变换"><a href="#变换" class="headerlink" title="变换"></a>变换</h2><p><img src="/2022/08/07/%E5%A4%A7%E4%B8%80/%E6%9D%82/%E5%9B%BE%E5%BD%A2%E5%AD%A6/image-20230721140114583.png" alt="image-20230721140114583"></p>
+<script type="math/tex; mode=display">
+\mathbf{x}\left(\mathbf{X}\right)=\sum_{i=0}^{i=3}\mathbf{x}_{i}\left(t\right){\phi_{i}\left(\mathbf{X}\right)}\\
+\mathbf{x}\left(\mathbf{X}\right)=\begin{pmatrix}\phi_0\mathbf{I}&\phi_1\mathbf{I}&\phi_2\mathbf{I}&\phi_3\mathbf{I}\end{pmatrix}\begin{pmatrix}\mathbf{x}_0\\\mathbf{x}_1\\\mathbf{x}_2\\\mathbf{x}_3\end{pmatrix}</script><p>求动能</p>
+<script type="math/tex; mode=display">
+\mathbf{v}\left(\mathbf{X}\right)=\dot{\mathbf{x}}\left(\mathbf{X}\right)=\mathbf{N}\left(\mathbf{X}\right)\dot{\mathbf{q}}\\
+\frac12\int_{\Omega}\rho\mathbf{v}^T\mathbf{v}d\Omega =\frac12\int_{\Omega}\rho\left(\dot{\mathbf{q}}^T\mathrm{N}\left(\mathbf{X}\right)^T\mathrm{N}\left(\mathbf{X}\right)\dot{\mathbf{q}}\right)d\Omega</script><p>重组</p>
+<script type="math/tex; mode=display">
+\frac12\dot{\mathbf{q}}^T\left(\int_{\Omega}\rho\mathrm{N}\left(\mathbf{X}\right)^T\mathrm{N}\left(\mathbf{X}\right)d\Omega\right)\dot{\mathbf{q}}=\frac12\dot{\mathbf{q}}^T\mathbf{M}_0\dot{\mathbf{q}}</script><p>$\mathbf{M}_0$为单元的质量矩阵</p>
+<script type="math/tex; mode=display">
+6\rho\cdot\boldsymbol{vol}\cdot\int_0^1\int_0^{1-\phi_1}\int_0^{1-\phi_1-\phi_2}\left(\phi_r\phi_s\right)d\phi_3d\phi_2d\phi_1</script>]]></content>
   </entry>
   <entry>
     <title>大一/杂/瞎几把记</title>
@@ -4985,7 +5031,9 @@ q=\frac1R(\Psi_1-\Psi _2)</script><p>对$\Phi$求导得到两个分量</p>
 M=M_{12}=M_{21}\\
 \mathscr{E}_{12}=-M\frac{\text dI_2}{\text dt}\\
 \mathscr{E}_{21}=-M\frac{\text dI_1}{\text dt}</script><p>自感$L$和互感$M$单位都为亨利</p>
-<h1 id="能量"><a href="#能量" class="headerlink" title="能量"></a>能量</h1><script type="math/tex; mode=display">
+<p>一般的</p>
+<script type="math/tex; mode=display">
+M=k\sqrt{L_1L_2}\quad(k\le1)</script><h1 id="能量"><a href="#能量" class="headerlink" title="能量"></a>能量</h1><script type="math/tex; mode=display">
 W_m=\int_V\frac12\frac{B^2}{\mu}\text dV</script><p>所以有能量密度</p>
 <script type="math/tex; mode=display">
 w_m=\frac12\frac{B^2}{\mu}=\frac12BH</script><p>对于自感，有</p>
@@ -5265,5 +5313,77 @@ a\sin\varphi=k'\lambda</script><p>$\pm k,\pm k’$都为整数</p>
 d\sin\varphi=\lambda\\
 \tan\varphi=\frac{a}{x_2-x_1}\\
 d=\lambda\sqrt{a^2+(x_2-x_1)^2}</script>]]></content>
+  </entry>
+  <entry>
+    <title>大一/物理/近代物理</title>
+    <url>/2023/06/14/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E8%BF%91%E4%BB%A3%E7%89%A9%E7%90%86/</url>
+    <content><![CDATA[<h1 id="黑体辐射"><a href="#黑体辐射" class="headerlink" title="黑体辐射"></a>黑体辐射</h1><p><img src="/2023/06/14/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E8%BF%91%E4%BB%A3%E7%89%A9%E7%90%86/image-20230614223608909.png" alt="image-20230614223608909"></p>
+<p>黑体辐射的两个结论</p>
+<script type="math/tex; mode=display">
+M(T)=\sigma T^4\\
+\lambda_mT=b</script><h2 id="量子化假设"><a href="#量子化假设" class="headerlink" title="量子化假设"></a>量子化假设</h2><p>利用量子化假设可以很好地解决黑体辐射问题</p>
+<script type="math/tex; mode=display">
+\varepsilon_n=nh\nu</script><p>其中$n$称为量子数，$\varepsilon$称为能量子</p>
+<h1 id="光电效应"><a href="#光电效应" class="headerlink" title="光电效应"></a>光电效应</h1><p>见高中</p>
+<h1 id="康普顿效应"><a href="#康普顿效应" class="headerlink" title="康普顿效应"></a>康普顿效应</h1><p>单个光子与自由电子碰撞，从而得到光子波长改变</p>
+<script type="math/tex; mode=display">
+\Delta\lambda=\lambda-\lambda_0=\frac{h}{m_0c}(1-\cos\theta)</script><p>其中康普顿波长为</p>
+<script type="math/tex; mode=display">
+\frac{h}{m_0c}=\lambda_C</script><p>因为核质量太大散射光中存在等于波长等于入射光波长的成分</p>
+<p>所以康普顿散射对原子质量小的物质比较明显</p>
+<h1 id="波尔氢原子模型"><a href="#波尔氢原子模型" class="headerlink" title="波尔氢原子模型"></a>波尔氢原子模型</h1><p>三个假设</p>
+<p>定态，原子中的电子在特定轨道半径才稳定</p>
+<p>当电子从一个轨道向另一个轨道跃迁时会吸收或放出光子</p>
+<p>最后角动量量子化</p>
+<script type="math/tex; mode=display">
+L=m_evr=n\frac{L}{2\pi}</script><p>得到如下结果</p>
+<script type="math/tex; mode=display">
+r_n=r_1n^2</script><p>同时由动能表达式</p>
+<script type="math/tex; mode=display">
+E_k=\frac{e^2}{8\pi\varepsilon_0r_n}\\
+E_p=-\frac{e^2}{4\pi\varepsilon_0r_n}\\
+E_n=-\frac{e^2}{8\pi\varepsilon_0r_n}=\frac{E_1}{n^2}</script><h1 id="不确定性关系"><a href="#不确定性关系" class="headerlink" title="不确定性关系"></a>不确定性关系</h1><script type="math/tex; mode=display">
+\Delta p\Delta x\ge \frac\hbar2 \\
+\Delta E\Delta t\ge \frac\hbar2</script><h1 id="波函数"><a href="#波函数" class="headerlink" title="波函数"></a>波函数</h1><script type="math/tex; mode=display">
+\int|\Psi |^2\text dx=1</script><p>其中$|\Psi |^2$为概率</p>
+<h2 id="一维无限深势阱"><a href="#一维无限深势阱" class="headerlink" title="一维无限深势阱"></a>一维无限深势阱</h2><script type="math/tex; mode=display">
+V(x)=\begin{cases}0\quad(0<x<a)\\
+\infty\quad (x\le0,x\ge a)\end{cases}</script><p>得到</p>
+<script type="math/tex; mode=display">
+\psi(x)=\sqrt{\frac2a}\sin\left(\frac{n\pi}{a}x\right)</script><p>故</p>
+<script type="math/tex; mode=display">
+\psi^2(x)=\frac2a\sin^2\left(\frac{n\pi}{a}x\right)</script><h2 id="一维势垒"><a href="#一维势垒" class="headerlink" title="一维势垒"></a>一维势垒</h2>]]></content>
+  </entry>
+  <entry>
+    <title>大一/理论力学/拉朗贝尔原理</title>
+    <url>/2023/06/03/%E5%A4%A7%E4%B8%80/%E7%90%86%E8%AE%BA%E5%8A%9B%E5%AD%A6/%E6%8B%89%E6%9C%97%E8%B4%9D%E5%B0%94%E5%8E%9F%E7%90%86/</url>
+    <content><![CDATA[<h1 id="动量矩"><a href="#动量矩" class="headerlink" title="动量矩"></a>动量矩</h1><p>转动惯量参见大学物理</p>
+<p>对质心的动量矩全部取用相对物理量</p>
+<script type="math/tex; mode=display">
+L_C=\sum r_i'\times m_iv_{ir}</script><p>从而对于任意固定点，带入绝对速度</p>
+<script type="math/tex; mode=display">
+L_O=\sum r_i\times m_iv_i=r_C\times mv_C+L_C</script><p>表示对任意$O$的动量矩等于质心平移加上相对质心的动量矩</p>
+<h2 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h2><p>类比动量定理有动量矩定理</p>
+<script type="math/tex; mode=display">
+\frac{\text dL_C}{\text dt}=\sum M_C(F_i^{(e)})</script><p>右式为质点系外力对质心的主矩</p>
+<p>从而可得刚体平面微分方程</p>
+<script type="math/tex; mode=display">
+\begin{cases}ma_{Cx}=\sum F_x\\
+ma_{Cy}=\sum F_y\\ J_C\alpha=\sum M_C(F_i^{(e)})\end{cases}</script><h1 id="达朗贝尔原理"><a href="#达朗贝尔原理" class="headerlink" title="达朗贝尔原理"></a>达朗贝尔原理</h1><p>对于单个质点</p>
+<script type="math/tex; mode=display">
+F+F_{内}+F_{I}=0</script><p>其中惯性力$\vec F_I=-m\vec a$</p>
+<p>对于质点系，有</p>
+<script type="math/tex; mode=display">
+\begin{cases}\sum F+F_I=0\\
+M_O(F+\sum F_    {Ii})=0\end{cases}</script><p>从而对于定轴转动，有如下简化</p>
+<p>若为绕质心，则有</p>
+<script type="math/tex; mode=display">
+M_O=-J_C\alpha</script><p>若为一定点，则有</p>
+<script type="math/tex; mode=display">
+M_O=-(J_C+md^2)\alpha</script><p>而对于平动，如果简化中心为质心</p>
+<script type="math/tex; mode=display">
+M_{IC}=0</script><p>否则为</p>
+<script type="math/tex; mode=display">
+-mr_C\times a_C</script>]]></content>
   </entry>
 </search>
