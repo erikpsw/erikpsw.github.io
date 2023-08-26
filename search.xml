@@ -1094,6 +1094,13 @@ Y=\beta_0+\beta_1X+\epsilon</script><p>由方差的性质得到</p>
 \text{SE}(\hat{\beta_1})^2=\frac{\sigma^2}{S_{xx}}
 \\
 \text{SE}(\hat{\beta_0})^2=\sigma^2\left(\frac1n+\frac{\overline{x}^2}{S_{xx}}\right)</script><p>SE(Standard Error)为标准误差</p>
+<p>1、均方差就是标准差，标准差就是均方差</p>
+<p><strong>2、方差</strong> 是各数据偏离<strong>平均值</strong> 差值的平方和 的平均数</p>
+<p>3、<strong>均方误差（MSE）</strong>是各数据偏离<strong>真实值</strong> 差值的平方和 的平均数</p>
+<p>4、方差是平均值，均方误差是真实值</p>
+<blockquote>
+<p><img src="/2023/01/02/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E5%9B%9E%E5%BD%92/image-20230814004951728.png" alt="image-20230814004951728"></p>
+</blockquote>
 <p><strong>RSE：</strong>Residual Standard Error</p>
 <script type="math/tex; mode=display">
 \mathrm{RSE}=\sqrt{\frac{1}{n-2} \operatorname{RSS}}=\sqrt{\frac{1}{n-2} \sum_{i=1}^{n}\left(y_{i}-\hat{y}_{j}\right)^{2}}</script><p><strong>RSS：</strong>Residual Sum of Squares</p>
