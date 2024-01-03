@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/psw.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="线性方程组含有$n$个未知量$m$个方程的线性方程组定义为  \left.\left\{\begin{aligned}a_{11}x_1+a_{12}x_2+\cdots+a_{1n}x_n&amp;&#x3D;b_1\\a_{21}x_1+a_{22}x_2+\cdots+a_{2n}x_n&amp;&#x3D;b_2\\\vdots\\a_{m1}x_1+a_{m2}x_2+\cdots+a_{mn}x_n&amp;&#x3D;b_m\end{a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="大一&#x2F;线性代数&#x2F;线性方程组">
+<meta property="og:url" content="http://yoursite.com/2024/01/03/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/index.html">
+<meta property="og:site_name" content="BLOG">
+<meta property="og:description" content="线性方程组含有$n$个未知量$m$个方程的线性方程组定义为  \left.\left\{\begin{aligned}a_{11}x_1+a_{12}x_2+\cdots+a_{1n}x_n&amp;&#x3D;b_1\\a_{21}x_1+a_{22}x_2+\cdots+a_{2n}x_n&amp;&#x3D;b_2\\\vdots\\a_{m1}x_1+a_{m2}x_2+\cdots+a_{mn}x_n&amp;&#x3D;b_m\end{a">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-01-03T13:51:48.376Z">
+<meta property="article:modified_time" content="2024-01-03T16:28:50.922Z">
+<meta property="article:author" content="Shiwei Pan">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2024/01/03/大一/线性代数/线性方程组/"/>
+
+
+
+
+
+  <title>大一/线性代数/线性方程组 | BLOG</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+<script src="/live2d-widget/autoload.js"></script>
+
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">BLOG</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-mine">
+          <a href="/mine/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Old
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-new">
+          <a href="/new/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Introduction
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2024/01/03/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">大一/线性代数/线性方程组</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2024-01-03T21:51:48+08:00">
+                2024-01-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="线性方程组"><a href="#线性方程组" class="headerlink" title="线性方程组"></a>线性方程组</h1><p>含有$n$个未知量$m$个方程的线性方程组定义为</p>
+<script type="math/tex; mode=display">
+\left.\left\{\begin{aligned}a_{11}x_1+a_{12}x_2+\cdots+a_{1n}x_n&=b_1\\a_{21}x_1+a_{22}x_2+\cdots+a_{2n}x_n&=b_2\\\vdots\\a_{m1}x_1+a_{m2}x_2+\cdots+a_{mn}x_n&=b_m\end{aligned}\right.\right.</script><p>可以写成</p>
+<script type="math/tex; mode=display">
+x_1\vec a_1+x_2\vec a_2+\cdots+x_n\vec a_n=\vec b</script><p>若$\vec b=\vec 0$则为齐次线性方程组</p>
+<h2 id="初等行变换"><a href="#初等行变换" class="headerlink" title="初等行变换"></a>初等行变换</h2><ul>
+<li>$r_i\leftrightarrow r_j$</li>
+<li>$kr_i$</li>
+<li>$r_i+kr_j$</li>
+</ul>
+<h3 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h3><p>行等价，则存在可逆矩阵$P$</p>
+<script type="math/tex; mode=display">
+PA=P(\alpha_1,\cdots,\alpha_n)=B</script><p>列等价</p>
+<script type="math/tex; mode=display">
+AQ=B</script><p>等价，则</p>
+<script type="math/tex; mode=display">
+PAQ=B</script><p>可逆的充要条件为</p>
+<p>$A\sim E$</p>
+<h2 id="增广矩阵"><a href="#增广矩阵" class="headerlink" title="增广矩阵"></a>增广矩阵</h2><script type="math/tex; mode=display">
+[A|b]=\left.\left[\begin{array}{cccc|c}a_{11}&a_{12}&\cdots&a_{1n}&b_{1}\\a_{21}&a_{22}&\cdots&a_{2n}&b_{2}\\\vdots&\vdots&&\vdots&\vdots\\a_{m1}&a_{m2}&\cdots&a_{mn}&b_{m}\end{array}\right.\right]</script><p>利用初等行变换化为阶梯型$[E|x]$</p>
+<p>则方程组的解为</p>
+<script type="math/tex; mode=display">
+x=A^{-1}b</script><h2 id="克拉默法则"><a href="#克拉默法则" class="headerlink" title="克拉默法则"></a>克拉默法则</h2><p>$A_j$是把系数矩阵$A$中的第$j$列元素用方程组右端常数项代替后得到的$n$阶矩阵</p>
+<p>则唯一解</p>
+<script type="math/tex; mode=display">
+x_j=\frac{|A_j|}{|A|}=\frac{1}{|A|}(b_1A_{1j}+\cdots+b_nA_{nj})</script><h2 id="矩阵的秩"><a href="#矩阵的秩" class="headerlink" title="矩阵的秩"></a>矩阵的秩</h2><p>最高阶非零子式的阶数，又因为初等变换不改变秩</p>
+<p>所以秩使用化阶梯型的方式计算</p>
+<script type="math/tex; mode=display">
+x_1\vec a_1+x_2\vec a_2+\cdots+x_n\vec a_n=\vec b</script><p>则方程组有解可以看成</p>
+<script type="math/tex; mode=display">
+R(A|b)=R(A)</script><p>加入$b$不改变列空间的维数</p>
+<p>列空间和行空间的维数都是$R(A)$，列向量组和行向量组的秩都是$R$</p>
+<p>若矩阵列$C$独立则</p>
+<ul>
+<li>$Cx=0$只有零解，0的表示唯一</li>
+<li>若$\beta_1,\cdot\cdot\cdot,\beta_s\in F^{(n)}$ ，线性无关,则 $C\beta_1,\cdot\cdot\cdot,C\beta_s$ 线性无关</li>
+<li>$C$ 有左逆：(即有矩阵 X 使 $XC=I)$</li>
+<li>$C T x=b$ 总有解</li>
+</ul>
+<p>列满秩则有解一定唯一</p>
+<p>行满秩则必定有解，$|A|\ne 0,Ax=0$，则只有零解</p>
+<h3 id="不等式"><a href="#不等式" class="headerlink" title="不等式"></a>不等式</h3><script type="math/tex; mode=display">
+\mathrm{rank(AB)}\leq \min\left\{\mathrm{rank(A)},\mathrm{rank(B)}\right\}</script><script type="math/tex; mode=display">
+\mathrm{rank(A+B)\leq rank(A)+rank(B)}</script><script type="math/tex; mode=display">
+\left.\mathrm{rank}(\mathrm{A}^*)=\left\{\begin{aligned}n.&&\mathrm{rank}(\mathrm{A})&=n\\1.&&\mathrm{rank}(\mathrm{A})&=n-1\\0.&&\mathrm{rank}(\mathrm{A})&<n-1\end{aligned}\right.\right.</script><h2 id="线性相关"><a href="#线性相关" class="headerlink" title="线性相关"></a>线性相关</h2><script type="math/tex; mode=display">
+k_1\vec a_1+k_2\vec a_2+\cdots+k_n\vec a_n=0</script><p>其中$k$至少一个不为$0$</p>
+<p>注意其中一个向量为零向量的情况</p>
+<h3 id="最大线性无关组"><a href="#最大线性无关组" class="headerlink" title="最大线性无关组"></a>最大线性无关组</h3><ul>
+<li>该向量组本身线性无关</li>
+<li>任取一个矩阵中的其他向量, 与该向量组合并, 都会变成线性相关的向量组</li>
+</ul>
+<p>换成行阶梯型看主元列，其他为自由变量</p>
+<p>从而最大线性无关组向量数目$r=R(\alpha_1\cdots \alpha_n)$</p>
+<p>对于线性方程组</p>
+<p>无解，则$b$不在$A$列空间内</p>
+<script type="math/tex; mode=display">
+R(A)<R(A,b)</script><p>小于空间维数则有无穷多解</p>
+<script type="math/tex; mode=display">
+R(A)=R(A,b)<n</script><p>向量组等价</p>
+<script type="math/tex; mode=display">
+R(A)=R(B)=R(A,B)</script><h2 id="解的结构"><a href="#解的结构" class="headerlink" title="解的结构"></a>解的结构</h2><p>齐次线性方程组解满足线性性质</p>
+<p>则非齐次通解为</p>
+<script type="math/tex; mode=display">
+x=k_1\xi_1+\cdots+k_n\xi_n+x_0</script><p>一个特解加通解，而通解由基础解系来表达，基础解系的维数等于零空间的维数</p>
+<script type="math/tex; mode=display">
+R(\xi_1,\cdots,\xi_n)=n-r</script><p>齐次线性方程组同解则零空间等价，$A\sim B$</p>
+<h2 id="向量空间"><a href="#向量空间" class="headerlink" title="向量空间"></a>向量空间</h2><script type="math/tex; mode=display">
+B=(b_1,\cdots,b_n),A=(a_1,\cdots,a_n)\\
+B=AP\\
+Py=x</script><p>其中$y$为向量在$B$下的坐标</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat.jpg" alt="Shiwei Pan wechat" style="width: 200px; max-width: 100%;"/>
+    <div></div>
+</div>
+
+      </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2023/11/15/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E4%BA%BA/%E6%95%B0%E5%AD%A6/" rel="next" title="大二/机器人/数学">
+                <i class="fa fa-chevron-left"></i> 大二/机器人/数学
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2024/01/03/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9B%B8%E4%BC%BC%E7%9F%A9%E9%98%B5%E4%BA%8C%E6%AC%A1%E5%9E%8B/" rel="prev" title="大一/线性代数/相似矩阵二次型">
+                大一/线性代数/相似矩阵二次型 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/mount.png"
+               alt="Shiwei Pan" />
+          <p class="site-author-name" itemprop="name">Shiwei Pan</p>
+           
+              <p class="site-description motion-element" itemprop="description">Open your eyes,look up to the skies</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">91</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/erikpsw" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/pan-shi-wei-91" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                    
+                      知乎
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#线性方程组"><span class="nav-number">1.</span> <span class="nav-text">线性方程组</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#初等行变换"><span class="nav-number">1.1.</span> <span class="nav-text">初等行变换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#性质"><span class="nav-number">1.1.1.</span> <span class="nav-text">性质</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#增广矩阵"><span class="nav-number">1.2.</span> <span class="nav-text">增广矩阵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#克拉默法则"><span class="nav-number">1.3.</span> <span class="nav-text">克拉默法则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#矩阵的秩"><span class="nav-number">1.4.</span> <span class="nav-text">矩阵的秩</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#不等式"><span class="nav-number">1.4.1.</span> <span class="nav-text">不等式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线性相关"><span class="nav-number">1.5.</span> <span class="nav-text">线性相关</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#最大线性无关组"><span class="nav-number">1.5.1.</span> <span class="nav-text">最大线性无关组</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解的结构"><span class="nav-number">1.6.</span> <span class="nav-text">解的结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#向量空间"><span class="nav-number">1.7.</span> <span class="nav-text">向量空间</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2020 - 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Shiwei Pan</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>

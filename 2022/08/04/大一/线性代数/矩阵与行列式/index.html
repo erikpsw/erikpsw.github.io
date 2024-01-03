@@ -94,23 +94,23 @@
 
 
 
-<meta name="description" content="矩阵矩形的数组，如  A&#x3D;\left[\begin{array}{l} a_{11} &amp;a_{12}&amp;a_{13}\\a_{21} &amp;a_{22}&amp;a_{23}\end{array}\right] &#x3D;\left[\begin{array}{l} 1 &amp;2&amp;3\\4&amp;5&amp;6\end{array}\right]是一个$2\times3$的矩阵$A&#x3D;(a_{ij})$其中$i&#x3D;1,2;j&#x3D;1,2,3$">
+<meta name="description" content="行列式定义由小到大为标准次序，$p_1p_2\cdots p_n$为排列，则比$p_i$大且排在其前的元素有$t_i$个，就说这个元素的逆序数是$t_i$ 排列逆序数  t&#x3D;\sum_{i&#x3D;1}^nt_i则行列式  D&#x3D;\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\\a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2n}\\\cdots&amp;\cdots&amp;\cd">
 <meta property="og:type" content="article">
-<meta property="og:title" content="大一&#x2F;线性代数&#x2F;矩阵">
-<meta property="og:url" content="http://yoursite.com/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/index.html">
+<meta property="og:title" content="大一&#x2F;线性代数&#x2F;矩阵与行列式">
+<meta property="og:url" content="http://yoursite.com/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5%E4%B8%8E%E8%A1%8C%E5%88%97%E5%BC%8F/index.html">
 <meta property="og:site_name" content="BLOG">
-<meta property="og:description" content="矩阵矩形的数组，如  A&#x3D;\left[\begin{array}{l} a_{11} &amp;a_{12}&amp;a_{13}\\a_{21} &amp;a_{22}&amp;a_{23}\end{array}\right] &#x3D;\left[\begin{array}{l} 1 &amp;2&amp;3\\4&amp;5&amp;6\end{array}\right]是一个$2\times3$的矩阵$A&#x3D;(a_{ij})$其中$i&#x3D;1,2;j&#x3D;1,2,3$">
+<meta property="og:description" content="行列式定义由小到大为标准次序，$p_1p_2\cdots p_n$为排列，则比$p_i$大且排在其前的元素有$t_i$个，就说这个元素的逆序数是$t_i$ 排列逆序数  t&#x3D;\sum_{i&#x3D;1}^nt_i则行列式  D&#x3D;\begin{vmatrix}a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\\a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2n}\\\cdots&amp;\cdots&amp;\cd">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/image-20221230133843315.png">
-<meta property="og:image" content="http://yoursite.com/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/image-20221230134433897.png">
-<meta property="og:image" content="http://yoursite.com/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/image-20221230135131766.png">
-<meta property="og:image" content="http://yoursite.com/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/image-20221230154855424.png">
-<meta property="og:image" content="http://yoursite.com/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/image-20221230182812507.png">
+<meta property="og:image" content="http://yoursite.com/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5%E4%B8%8E%E8%A1%8C%E5%88%97%E5%BC%8F/image-20221230133843315.png">
+<meta property="og:image" content="http://yoursite.com/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5%E4%B8%8E%E8%A1%8C%E5%88%97%E5%BC%8F/image-20221230134433897.png">
+<meta property="og:image" content="http://yoursite.com/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5%E4%B8%8E%E8%A1%8C%E5%88%97%E5%BC%8F/image-20221230135131766.png">
+<meta property="og:image" content="http://yoursite.com/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5%E4%B8%8E%E8%A1%8C%E5%88%97%E5%BC%8F/image-20221230154855424.png">
+<meta property="og:image" content="http://yoursite.com/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5%E4%B8%8E%E8%A1%8C%E5%88%97%E5%BC%8F/image-20221230182812507.png">
 <meta property="article:published_time" content="2022-08-04T08:41:35.085Z">
-<meta property="article:modified_time" content="2023-07-14T13:16:40.853Z">
+<meta property="article:modified_time" content="2024-01-03T16:28:38.651Z">
 <meta property="article:author" content="Shiwei Pan">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/image-20221230133843315.png">
+<meta name="twitter:image" content="http://yoursite.com/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5%E4%B8%8E%E8%A1%8C%E5%88%97%E5%BC%8F/image-20221230133843315.png">
 
 
 
@@ -139,13 +139,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2022/08/04/大一/线性代数/矩阵/"/>
+  <link rel="canonical" href="http://yoursite.com/2022/08/04/大一/线性代数/矩阵与行列式/"/>
 
 
 
 
 
-  <title>大一/线性代数/矩阵 | BLOG</title>
+  <title>大一/线性代数/矩阵与行列式 | BLOG</title>
   
 
 
@@ -317,7 +317,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5%E4%B8%8E%E8%A1%8C%E5%88%97%E5%BC%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Shiwei Pan">
@@ -334,7 +334,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">大一/线性代数/矩阵</h1>
+          <h1 class="post-title" itemprop="name headline">大一/线性代数/矩阵与行列式</h1>
         
 
         <div class="post-meta">
@@ -384,7 +384,40 @@
       
 
       
-        <h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><p>矩形的数组，如</p>
+        <h1 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>由小到大为标准次序，$p_1p_2\cdots p_n$为排列，则比$p_i$大且排在其前的元素有$t_i$个，就说这个<strong>元素</strong>的逆序数是$t_i$</p>
+<p>排列逆序数</p>
+<script type="math/tex; mode=display">
+t=\sum_{i=1}^nt_i</script><p>则行列式</p>
+<script type="math/tex; mode=display">
+D=\begin{vmatrix}a_{11}&a_{12}&\cdots&a_{1n}\\a_{21}&a_{22}&\cdots&a_{2n}\\\cdots&\cdots&\cdots&\cdots\\a_{n1}&a_{n2}&\cdots&a_{nn}\end{vmatrix}</script><script type="math/tex; mode=display">
+D=\sum(-1)^ta_{1p_1}a_{2p_2}\cdots a_{np_n}\quad(n!项)</script><h3 id="余子式"><a href="#余子式" class="headerlink" title="余子式"></a>余子式</h3><p>去掉$i$行$j$列得到的子行列式$M_{ij}$</p>
+<p>代数余子式</p>
+<script type="math/tex; mode=display">
+A_{ij}=(-1)^{i+j}M_{ij}</script><p>则行列式可以按$i$行展开</p>
+<script type="math/tex; mode=display">
+D=\sum_j^na_{ij}A_{ij}</script><h2 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h2><ul>
+<li>对换行列式的两行或者两列(不需相邻)行列式变号</li>
+<li>行列式与它的转置行列式相等</li>
+<li>行列式中的某一行/列中所有元素乘以同一数$k$等于用数$k$乘以行列式</li>
+<li>行列式中如果有两行/列成比例则行列式为零</li>
+<li>把某一行/列的各元素同乘一个数然后加到另一行/列上行列式不变</li>
+</ul>
+<p>范德蒙德行列式</p>
+<script type="math/tex; mode=display">
+D_n=\begin{vmatrix}1&1&\ldots&1\\x_1&x_2&\ldots&x_n\\\vdots&\vdots&&\vdots\\x_1^{n-1}&x_2^{n-1}&\ldots&x_n^{n-1}\end{vmatrix}=\prod_{1\le i<j\le n}(x_j-x_i)</script><p>爪形</p>
+<script type="math/tex; mode=display">
+\begin{vmatrix}a_0&&1&&1&\cdots&1\\1&&a_1\\1&&&a_2&&\\\vdots&&&&\ddots&\\1&&&&&a_n\end{vmatrix}</script><p>用对角线去消第一行/列</p>
+<p>三对角线行列式递推求解</p>
+<script type="math/tex; mode=display">
+D_n=aD_{n-1}-bcD_{n-2}</script><p>观察并灵活利用拆行 求和 换序 加边升阶等方法</p>
+<script type="math/tex; mode=display">
+A(m\times n),B(n\times m)\\
+\lambda^{n}\mathrm{det}(\lambda I_{m}+AB)=\lambda^{m}\mathrm{det}(\lambda I_{n}+BA)</script><h2 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h2><script type="math/tex; mode=display">
+AB\ne BA\\
+|AB|=|A||B|=|BA|\\
+(AB)^{-1}=B^{-1}A^{-1}</script><script type="math/tex; mode=display">
+|A^{-1}|=\frac1{|A|}\\
+|A^*|=|A|^{n-1}</script><h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><p>矩形的数组，如</p>
 <script type="math/tex; mode=display">
 A=\left[\begin{array}{l} a_{11} &a_{12}&a_{13}\\a_{21} &a_{22}&a_{23}\end{array}\right]
 =\left[\begin{array}{l} 1 &2&3\\4&5&6\end{array}\right]</script><p>是一个$2\times3$的矩阵$A=(a_{ij})$其中$i=1,2;j=1,2,3$</p>
@@ -399,13 +432,23 @@ x^{\text T}=(1,2,3)</script><h2 id="特殊的矩阵"><a href="#特殊的矩阵" 
 <h3 id="方阵"><a href="#方阵" class="headerlink" title="方阵"></a>方阵</h3><p>方阵为$n\times n$矩阵</p>
 <h4 id="对角矩阵"><a href="#对角矩阵" class="headerlink" title="对角矩阵"></a>对角矩阵</h4><p>对角线($\text {diagnoal}$)，其中对于任意$i\ne j,a_{ij}=0$，故只需列出对角线上的元素就可以表示出这个矩阵</p>
 <script type="math/tex; mode=display">
-\text{diag}(a_{11},a_{22},\cdots,a_{nn})=\begin{bmatrix}  
+\Lambda =\text{diag}(a_{11},a_{22},\cdots,a_{nn})=\begin{bmatrix}  
   a_{11} &0& \cdots & 0\\  
   0 &a_{22}&\cdots&0
   \\ \vdots &\vdots& \ddots & \vdots\\
  0 & 0&\cdots & a_{nn}  
-\end{bmatrix}</script><h4 id="单位矩阵"><a href="#单位矩阵" class="headerlink" title="单位矩阵"></a>单位矩阵</h4><script type="math/tex; mode=display">
-I_n=\text{diag}(1,1,\cdots,1)</script><h4 id="三对角矩阵"><a href="#三对角矩阵" class="headerlink" title="三对角矩阵"></a>三对角矩阵</h4><p>对$|i-j|&gt;1,a_{ij}=0$，即矩阵中不为$0$的项只出现在对角线或上下，$i-j$相当于偏移量，类似八皇后问题</p>
+\end{bmatrix}</script><script type="math/tex; mode=display">
+\Lambda^k=\text{diag}(a_{11}^k,a_{22}^k,\cdots,a_{nn}^k)</script><h4 id="单位矩阵"><a href="#单位矩阵" class="headerlink" title="单位矩阵"></a>单位矩阵</h4><script type="math/tex; mode=display">
+I_n=\text{diag}(1,1,\cdots,1)</script><h4 id="逆矩阵"><a href="#逆矩阵" class="headerlink" title="逆矩阵"></a>逆矩阵</h4><p>伴随矩阵</p>
+<script type="math/tex; mode=display">
+A^{*}=\begin{pmatrix}A_{\mathrm{ll}}&A_{21}&\cdots&A_{n1}\\A_{\mathrm{l2}}&A_{22}&\cdots&A_{n2}\\\cdots&\cdots&\cdots&\cdots\\A_{\mathrm{ln}}&A_{2n}&\cdots&A_{nn}\end{pmatrix}</script><p>故</p>
+<script type="math/tex; mode=display">
+A^{-1}=\frac{A^*}{|A|}\\
+(A^{-1})^T=(A^T)^{-1}</script><script type="math/tex; mode=display">
+A=P\Lambda P^{-1}\\
+\varphi(A)=P\varphi(\Lambda) P^{-1}</script><p>二阶矩阵</p>
+<script type="math/tex; mode=display">
+\begin{pmatrix}a&b\\c&d\end{pmatrix}^{-1}=\frac1{ad-bc}\binom{d -b}{-c a}</script><h4 id="三对角矩阵"><a href="#三对角矩阵" class="headerlink" title="三对角矩阵"></a>三对角矩阵</h4><p>对$|i-j|&gt;1,a_{ij}=0$，即矩阵中不为$0$的项只出现在对角线或上下，$i-j$相当于偏移量，类似八皇后问题</p>
 <h4 id="上三角矩阵"><a href="#上三角矩阵" class="headerlink" title="上三角矩阵"></a>上三角矩阵</h4><p>若$i&gt;j,a_{ij}=0$，其对角线以下的元素为$0$</p>
 <script type="math/tex; mode=display">
 U=\left[\begin{array}{ccccc}
@@ -416,7 +459,8 @@ u_{11} & u_{12} & u_{13} & \cdots & u_{1n} \\
 & & & & u_{nn}
 \end{array}\right]</script><p>同理下三角矩阵$L$对角线以上的元素为$0$</p>
 <p>若非零项均为$1$，则为单位三角矩阵</p>
-<h4 id="排列矩阵"><a href="#排列矩阵" class="headerlink" title="排列矩阵"></a>排列矩阵</h4><p>每行每列只有一个1，其余都为0，可以重新排列向量中的元素</p>
+<script type="math/tex; mode=display">
+|U|=|L|=\prod_iu_{ii}</script><h4 id="排列矩阵"><a href="#排列矩阵" class="headerlink" title="排列矩阵"></a>排列矩阵</h4><p>每行每列只有一个1，其余都为0，可以重新排列向量中的元素</p>
 <script type="math/tex; mode=display">
 P=\begin{bmatrix}1&0&0\\0&0&1\\0&1&0\end{bmatrix}</script><h4 id="对称矩阵"><a href="#对称矩阵" class="headerlink" title="对称矩阵"></a>对称矩阵</h4><p>若矩阵$A$满足$A=A^{\text  T}$，则矩阵的元素关于对角线对称</p>
 <script type="math/tex; mode=display">
@@ -425,7 +469,12 @@ P=\begin{bmatrix}1&0&0\\0&0&1\\0&1&0\end{bmatrix}</script><h4 id="对称矩阵">
 <h4 id="正交矩阵"><a href="#正交矩阵" class="headerlink" title="正交矩阵"></a>正交矩阵</h4><script type="math/tex; mode=display">
 A^T=A^{-1}\\
 AA^T=I</script><script type="math/tex; mode=display">
-1=\text{det}(I)=\text{det}(A^TA)=\text{det}(A)^2</script><h2 id="矩阵的基本操作"><a href="#矩阵的基本操作" class="headerlink" title="矩阵的基本操作"></a>矩阵的基本操作</h2><h3 id="加法"><a href="#加法" class="headerlink" title="加法"></a>加法</h3><p>若矩阵$A,B$大小相同，则$C=A+B$为相同大小</p>
+1=\text{det}(I)=\text{det}(A^TA)=\text{det}(A)^2</script><h3 id="分块矩阵"><a href="#分块矩阵" class="headerlink" title="分块矩阵"></a>分块矩阵</h3><p>对角线</p>
+<script type="math/tex; mode=display">
+\begin{vmatrix}A&B\\0&D\end{vmatrix}=\left|A\right|\left|D\right|</script><script type="math/tex; mode=display">
+\begin{bmatrix}A&0\\C&D\end{bmatrix}^{-1}=\begin{bmatrix}A^{-1}&0\\-D^{-1}CA^{-1}&D^{-1}\end{bmatrix}</script><script type="math/tex; mode=display">
+\begin{bmatrix}A&B\\0&D\end{bmatrix}^{-1}=\begin{bmatrix}A^{-1}&-A^{-1}BD^{-1}\\0&D^{-1}\end{bmatrix}</script><script type="math/tex; mode=display">
+C=\begin{pmatrix}A&O\\O&B\end{pmatrix}\quad\text{,则 rank(C)}=\mathrm{rank(A)+rank(B)}</script><h2 id="矩阵的基本操作"><a href="#矩阵的基本操作" class="headerlink" title="矩阵的基本操作"></a>矩阵的基本操作</h2><h3 id="加法"><a href="#加法" class="headerlink" title="加法"></a>加法</h3><p>若矩阵$A,B$大小相同，则$C=A+B$为相同大小</p>
 <script type="math/tex; mode=display">
 c_{ij}=a_{ij}+b_{ij}</script><h4 id="数乘"><a href="#数乘" class="headerlink" title="数乘"></a>数乘</h4><script type="math/tex; mode=display">
 \lambda A=(\lambda a_{ij})</script><p>$\lambda$称为矩阵的一个标量倍数，矩阵的负为$-A(\lambda=-1)$</p>
@@ -461,9 +510,9 @@ d
 \end{array}\right]=\left[\begin{array}{c}
 a x+b y \\
 c x+d y
-\end{array}\right]</script><p><img src="/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/image-20221230133843315.png" alt="image-20221230133843315"></p>
+\end{array}\right]</script><p><img src="/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5%E4%B8%8E%E8%A1%8C%E5%88%97%E5%BC%8F/image-20221230133843315.png" alt="image-20221230133843315"></p>
 <h4 id="变换"><a href="#变换" class="headerlink" title="变换"></a>变换</h4><p>从而很容易理解旋转矩阵</p>
-<p><img src="/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/image-20221230134433897.png" alt="image-20221230134433897"></p>
+<p><img src="/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5%E4%B8%8E%E8%A1%8C%E5%88%97%E5%BC%8F/image-20221230134433897.png" alt="image-20221230134433897"></p>
 <script type="math/tex; mode=display">
 \mathbf{R}_{\theta}=\left[\begin{array}{l}
 \cos \theta & -\sin \theta \\
@@ -477,12 +526,12 @@ Ru=u
 ||R\vec x||=||\vec x||</script><p>对于直线</p>
 <script type="math/tex; mode=display">
 M\vec{OR}=M\vec{OA}+tM\vec{AR}</script><p>如果$M\vec{AR}=0$成立，则变化将直线变为一个点</p>
-<p><img src="/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/image-20221230135131766.png" alt="image-20221230135131766"></p>
+<p><img src="/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5%E4%B8%8E%E8%A1%8C%E5%88%97%E5%BC%8F/image-20221230135131766.png" alt="image-20221230135131766"></p>
 <p>若两个变换后的基向量共线则该变换结果为一维空间(线)</p>
 <p>对于变换</p>
 <script type="math/tex; mode=display">
 M=\begin{bmatrix}1&0\\0&0\end{bmatrix}\\</script><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">x0=<span class="number">1</span></span><br><span class="line">y0=<span class="number">1</span></span><br><span class="line">v1=<span class="number">0</span></span><br><span class="line">v2=<span class="number">1</span></span><br><span class="line">t0=<span class="number">-3</span></span><br><span class="line">t1=<span class="number">1</span></span><br><span class="line">T=np.linspace(t0,t1,<span class="number">100</span>)</span><br><span class="line">X=x0+v1*T</span><br><span class="line">Y=y0+v2*T</span><br><span class="line">M=np.array([[<span class="number">1</span>,<span class="number">0</span>],[<span class="number">0</span>,<span class="number">0</span>]])</span><br><span class="line">L=np.matmul(M,np.array([X,Y]))</span><br><span class="line"></span><br><span class="line">fig=go.Figure()</span><br><span class="line">fig.add_trace(go.Scatter(x=X,y=Y,name=<span class="string">f'原直线'</span>))  </span><br><span class="line">fig.add_trace(go.Scatter(x=L[<span class="number">0</span>],y=L[<span class="number">1</span>],name=<span class="string">f'变换后'</span>))  </span><br><span class="line">fig.update_layout(title=<span class="string">'线性变换'</span>,</span><br><span class="line">                    xaxis_title=<span class="string">'x'</span>,yaxis_title=<span class="string">'y'</span>,xaxis_range=[<span class="number">0</span>,<span class="number">2</span>],yaxis_range=[<span class="number">-3</span>,<span class="number">3</span>])</span><br></pre></td></tr></table></figure>
-<p><img src="/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/image-20221230154855424.png" alt="image-20221230154855424"></p>
+<p><img src="/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5%E4%B8%8E%E8%A1%8C%E5%88%97%E5%BC%8F/image-20221230154855424.png" alt="image-20221230154855424"></p>
 <p>将直线变化为了一个点，整个平面变换成了$y=0$</p>
 <p>一般的，如果一个条直线上的任意$2$个不同的点经过变换后重合</p>
 <p>则该变换为不可逆矩阵</p>
@@ -514,7 +563,7 @@ x=\alpha M^{-1}</script><p>对$M=\begin{bmatrix}a&amp;b\c&amp;d\end{bmatrix}$</p
 <script type="math/tex; mode=display">
 MM^{-1}=\begin{bmatrix}a&b\\c&d\end{bmatrix}\begin{bmatrix}u&v\\s&t\end{bmatrix}=\begin{bmatrix}1&0\\0&1\end{bmatrix}</script><script type="math/tex; mode=display">
 \det M\ne0\\
-\Rightarrow M^{-1}=\begin{bmatrix}\frac d{ad-bc}&\frac {-b}{ad-bc}\\\frac {-c}{ad-bc}&\frac a{ad-bc}\end{bmatrix}</script><h1 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h1><h2 id="范数"><a href="#范数" class="headerlink" title="范数"></a>范数</h2><p>$\rm frobennius$范数</p>
+\Rightarrow M^{-1}=\begin{bmatrix}\frac d{ad-bc}&\frac {-b}{ad-bc}\\\frac {-c}{ad-bc}&\frac a{ad-bc}\end{bmatrix}</script><h1 id="性质-1"><a href="#性质-1" class="headerlink" title="性质"></a>性质</h1><h2 id="范数"><a href="#范数" class="headerlink" title="范数"></a>范数</h2><p>$\rm frobennius$范数</p>
 <script type="math/tex; mode=display">
 ||A||_{\text{Frob}}=\left[\sum_{ij}a_{ij}^2\right]^{\frac12}</script><h2 id="特征向量"><a href="#特征向量" class="headerlink" title="特征向量"></a>特征向量</h2><script type="math/tex; mode=display">
 Ax=\lambda x(x\ne\vec{0})</script><p>表示变换$A$对于$x$构成的张成空间没有影响，$\lambda$称为特征值</p>
@@ -552,7 +601,7 @@ d_i\in\{\text {act}\;1,\text {act}\;2,\cdots,\text {act}\;n\}</script><p>对于�
  q_{11}&q_{12}  & q_{13}\\
  q_{21} & q_{22} & q_{23}\\
  q_{31} &q_{32}  &q_{33}
-\end{pmatrix}}_{d_i}\right\}h_i=(R(d_1),R(d_2),R(d_3))</script><h2 id="决策树"><a href="#决策树" class="headerlink" title="决策树"></a>决策树</h2><p><img src="/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5/image-20221230182812507.png" alt="image-20221230182812507"></p>
+\end{pmatrix}}_{d_i}\right\}h_i=(R(d_1),R(d_2),R(d_3))</script><h2 id="决策树"><a href="#决策树" class="headerlink" title="决策树"></a>决策树</h2><p><img src="/2022/08/04/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A9%E9%98%B5%E4%B8%8E%E8%A1%8C%E5%88%97%E5%BC%8F/image-20221230182812507.png" alt="image-20221230182812507"></p>
 <h2 id="马尔可夫链"><a href="#马尔可夫链" class="headerlink" title="马尔可夫链"></a>马尔可夫链</h2><script type="math/tex; mode=display">
 \left(\begin{array}{l}p_1^{(n+1)}\\p_2^{(n+1)}\end{array}\right )=\left(\begin{array}{l}p_{11}& p_{21}\\p_{12}& p_{22}\end{array}\right )\left(\begin{array}{l}p_1^{(n)}\\p_2^{(n)}\end{array}\right )</script><p>其中</p>
 <script type="math/tex; mode=display">
@@ -712,7 +761,7 @@ w=\left(\begin{array}{l}p_{11}& p_{21}\\p_{12}& p_{22}\end{array}\right )^nw_0</
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">88</span>
+                <span class="site-state-item-count">91</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -775,7 +824,7 @@ w=\left(\begin{array}{l}p_{11}& p_{21}\\p_{12}& p_{22}\end{array}\right )^nw_0</
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#矩阵"><span class="nav-number">1.</span> <span class="nav-text">矩阵</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#向量"><span class="nav-number">1.1.</span> <span class="nav-text">向量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特殊的矩阵"><span class="nav-number">1.2.</span> <span class="nav-text">特殊的矩阵</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#零矩阵"><span class="nav-number">1.2.1.</span> <span class="nav-text">零矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方阵"><span class="nav-number">1.2.2.</span> <span class="nav-text">方阵</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#对角矩阵"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">对角矩阵</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#单位矩阵"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">单位矩阵</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三对角矩阵"><span class="nav-number">1.2.2.3.</span> <span class="nav-text">三对角矩阵</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#上三角矩阵"><span class="nav-number">1.2.2.4.</span> <span class="nav-text">上三角矩阵</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#排列矩阵"><span class="nav-number">1.2.2.5.</span> <span class="nav-text">排列矩阵</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对称矩阵"><span class="nav-number">1.2.2.6.</span> <span class="nav-text">对称矩阵</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#正交矩阵"><span class="nav-number">1.2.2.7.</span> <span class="nav-text">正交矩阵</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#矩阵的基本操作"><span class="nav-number">1.3.</span> <span class="nav-text">矩阵的基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#加法"><span class="nav-number">1.3.1.</span> <span class="nav-text">加法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数乘"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">数乘</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#乘法"><span class="nav-number">1.3.2.</span> <span class="nav-text">乘法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#意义"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">意义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#变换"><span class="nav-number">1.3.2.2.</span> <span class="nav-text">变换</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#转置"><span class="nav-number">1.3.3.</span> <span class="nav-text">转置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#逆"><span class="nav-number">1.3.4.</span> <span class="nav-text">逆</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一般情况"><span class="nav-number">1.3.4.1.</span> <span class="nav-text">一般情况</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#性质"><span class="nav-number">2.</span> <span class="nav-text">性质</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#范数"><span class="nav-number">2.1.</span> <span class="nav-text">范数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特征向量"><span class="nav-number">2.2.</span> <span class="nav-text">特征向量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#特征基"><span class="nav-number">2.2.1.</span> <span class="nav-text">特征基</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#应用"><span class="nav-number">3.</span> <span class="nav-text">应用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#决策树"><span class="nav-number">3.1.</span> <span class="nav-text">决策树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#马尔可夫链"><span class="nav-number">3.2.</span> <span class="nav-text">马尔可夫链</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#行列式"><span class="nav-number">1.</span> <span class="nav-text">行列式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义"><span class="nav-number">1.1.</span> <span class="nav-text">定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#余子式"><span class="nav-number">1.1.1.</span> <span class="nav-text">余子式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#性质"><span class="nav-number">1.2.</span> <span class="nav-text">性质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运算"><span class="nav-number">1.3.</span> <span class="nav-text">运算</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#矩阵"><span class="nav-number">2.</span> <span class="nav-text">矩阵</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#向量"><span class="nav-number">2.1.</span> <span class="nav-text">向量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特殊的矩阵"><span class="nav-number">2.2.</span> <span class="nav-text">特殊的矩阵</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#零矩阵"><span class="nav-number">2.2.1.</span> <span class="nav-text">零矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方阵"><span class="nav-number">2.2.2.</span> <span class="nav-text">方阵</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#对角矩阵"><span class="nav-number">2.2.2.1.</span> <span class="nav-text">对角矩阵</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#单位矩阵"><span class="nav-number">2.2.2.2.</span> <span class="nav-text">单位矩阵</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#逆矩阵"><span class="nav-number">2.2.2.3.</span> <span class="nav-text">逆矩阵</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三对角矩阵"><span class="nav-number">2.2.2.4.</span> <span class="nav-text">三对角矩阵</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#上三角矩阵"><span class="nav-number">2.2.2.5.</span> <span class="nav-text">上三角矩阵</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#排列矩阵"><span class="nav-number">2.2.2.6.</span> <span class="nav-text">排列矩阵</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对称矩阵"><span class="nav-number">2.2.2.7.</span> <span class="nav-text">对称矩阵</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#正交矩阵"><span class="nav-number">2.2.2.8.</span> <span class="nav-text">正交矩阵</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分块矩阵"><span class="nav-number">2.2.3.</span> <span class="nav-text">分块矩阵</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#矩阵的基本操作"><span class="nav-number">2.3.</span> <span class="nav-text">矩阵的基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#加法"><span class="nav-number">2.3.1.</span> <span class="nav-text">加法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数乘"><span class="nav-number">2.3.1.1.</span> <span class="nav-text">数乘</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#乘法"><span class="nav-number">2.3.2.</span> <span class="nav-text">乘法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#意义"><span class="nav-number">2.3.2.1.</span> <span class="nav-text">意义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#变换"><span class="nav-number">2.3.2.2.</span> <span class="nav-text">变换</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#转置"><span class="nav-number">2.3.3.</span> <span class="nav-text">转置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#逆"><span class="nav-number">2.3.4.</span> <span class="nav-text">逆</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一般情况"><span class="nav-number">2.3.4.1.</span> <span class="nav-text">一般情况</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#性质-1"><span class="nav-number">3.</span> <span class="nav-text">性质</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#范数"><span class="nav-number">3.1.</span> <span class="nav-text">范数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特征向量"><span class="nav-number">3.2.</span> <span class="nav-text">特征向量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#特征基"><span class="nav-number">3.2.1.</span> <span class="nav-text">特征基</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#应用"><span class="nav-number">4.</span> <span class="nav-text">应用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#决策树"><span class="nav-number">4.1.</span> <span class="nav-text">决策树</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#马尔可夫链"><span class="nav-number">4.2.</span> <span class="nav-text">马尔可夫链</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -798,7 +847,7 @@ w=\left(\begin{array}{l}p_{11}& p_{21}\\p_{12}& p_{22}\end{array}\right )^nw_0</
         <div class="copyright" >
   
   &copy;  2020 - 
-  <span itemprop="copyrightYear">2023</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
