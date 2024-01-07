@@ -5495,6 +5495,10 @@ P^T=P^{-1}</script><h2 id="正定"><a href="#正定" class="headerlink" title="�
 <h3 id="推论"><a href="#推论" class="headerlink" title="推论"></a>推论</h3><p>看$\lambda$正负</p>
 <p>$A+B$正定，$BAB$正定，$A^{-1},A^*,A^m,kA$正定</p>
 <p>若$AB=BA$则</p>
+<h1 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h1><p>只有对称矩阵，相似一定合同(因为正交相似)</p>
+<p>等价$\Leftrightarrow$秩相等</p>
+<p>像空间的维数用矩阵表示的秩$r$来算</p>
+<p>核空间的维数$n-r$</p>
 ]]></content>
   </entry>
   <entry>
@@ -5598,10 +5602,20 @@ R(A)=R(B)=R(A,B)</script><h2 id="解的结构"><a href="#解的结构" class="he
 x=k_1\xi_1+\cdots+k_n\xi_n+x_0</script><p>一个特解加通解，而通解由基础解系来表达，基础解系的维数等于零空间的维数</p>
 <script type="math/tex; mode=display">
 R(\xi_1,\cdots,\xi_n)=n-r</script><p>齐次线性方程组同解则零空间等价，$A\sim B$</p>
-<h2 id="向量空间"><a href="#向量空间" class="headerlink" title="向量空间"></a>向量空间</h2><script type="math/tex; mode=display">
+<h2 id="向量空间"><a href="#向量空间" class="headerlink" title="向量空间"></a>向量空间</h2><h3 id="线性变换"><a href="#线性变换" class="headerlink" title="线性变换"></a>线性变换</h3><p>满足线性性质</p>
+<script type="math/tex; mode=display">
+T(\lambda_1 x_1+\lambda_2 x_2)=\lambda_1 T(x_1)+\lambda_2 T(x_2)</script><h3 id="转换坐标"><a href="#转换坐标" class="headerlink" title="转换坐标"></a>转换坐标</h3><script type="math/tex; mode=display">
 B=(b_1,\cdots,b_n),A=(a_1,\cdots,a_n)\\
 B=AP\\
 Py=x</script><p>其中$y$为向量在$B$下的坐标</p>
-]]></content>
+<p>同理线性变化也可以用矩阵$A$表示（在$\alpha$基下）</p>
+<p>对于不同基</p>
+<script type="math/tex; mode=display">
+T(\alpha_1,\alpha_2,\cdots,\alpha_n)=(\alpha_1,\alpha_2,\cdots,\alpha_n)A</script><p>则坐标</p>
+<script type="math/tex; mode=display">
+T(\sum_{i=1}^nx_i\alpha_i)=T(\alpha_1,\alpha_2,\cdots,\alpha_n)\left(\begin{array}l x_1\\x_2\\\vdots\\x_n\\\end{array}\right)</script><p>矩阵$A$也可以直接把$T(\alpha_i)$用$(\alpha_1,\alpha_2,\cdots,\alpha_n)$表示写成列向量即可</p>
+<p>若同一个线性变换在不同基下分别表示为$A,B$，变换矩阵为$P$，则有</p>
+<script type="math/tex; mode=display">
+B=P^{-1}AP</script>]]></content>
   </entry>
 </search>
