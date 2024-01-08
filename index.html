@@ -435,9 +435,15 @@ P^T=P^{-1}</script><h2 id="正定"><a href="#正定" class="headerlink" title="�
 <p>$A+B$正定，$BAB$正定，$A^{-1},A^*,A^m,kA$正定</p>
 <p>若$AB=BA$则</p>
 <h1 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h1><p>只有对称矩阵，相似一定合同(因为正交相似)</p>
+<p>对称矩阵可对角化，代数重数=几何重数则可对角化</p>
 <p>等价$\Leftrightarrow$秩相等</p>
+<p>$A\Leftrightarrow B$则对应的齐次线性方程组同解</p>
+<p>$R(A)=R(AA^T)$</p>
 <p>像空间的维数用矩阵表示的秩$r$来算</p>
 <p>核空间的维数$n-r$</p>
+<p>秩一矩阵，各行成比例，则$A=\alpha\beta^T$</p>
+<p>则唯一非零秩为$\text{tr}(A)=\beta^T\alpha$</p>
+<p>可对角化则$\beta^T\alpha\ne0$</p>
 
           
         
@@ -601,7 +607,8 @@ R(A|b)=R(A)</script><p>加入$b$不改变列空间的维数</p>
 <h3 id="不等式"><a href="#不等式" class="headerlink" title="不等式"></a>不等式</h3><script type="math/tex; mode=display">
 \mathrm{rank(AB)}\leq \min\left\{\mathrm{rank(A)},\mathrm{rank(B)}\right\}</script><script type="math/tex; mode=display">
 \mathrm{rank(A+B)\leq rank(A)+rank(B)}</script><script type="math/tex; mode=display">
-\left.\mathrm{rank}(\mathrm{A}^*)=\left\{\begin{aligned}n.&&\mathrm{rank}(\mathrm{A})&=n\\1.&&\mathrm{rank}(\mathrm{A})&=n-1\\0.&&\mathrm{rank}(\mathrm{A})&<n-1\end{aligned}\right.\right.</script><h2 id="线性相关"><a href="#线性相关" class="headerlink" title="线性相关"></a>线性相关</h2><script type="math/tex; mode=display">
+\left.\mathrm{rank}(\mathrm{A}^*)=\left\{\begin{aligned}n.&&\mathrm{rank}(\mathrm{A})&=n\\1.&&\mathrm{rank}(\mathrm{A})&=n-1\\0.&&\mathrm{rank}(\mathrm{A})&<n-1\end{aligned}\right.\right.</script><script type="math/tex; mode=display">
+R(AB)+n\ge R(A)+R(B)\quad\text{(Sylvester)}</script><h2 id="线性相关"><a href="#线性相关" class="headerlink" title="线性相关"></a>线性相关</h2><script type="math/tex; mode=display">
 k_1\vec a_1+k_2\vec a_2+\cdots+k_n\vec a_n=0</script><p>其中$k$至少一个不为$0$</p>
 <p>注意其中一个向量为零向量的情况</p>
 <h3 id="最大线性无关组"><a href="#最大线性无关组" class="headerlink" title="最大线性无关组"></a>最大线性无关组</h3><ul>

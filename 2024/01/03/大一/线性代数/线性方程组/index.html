@@ -102,7 +102,7 @@
 <meta property="og:description" content="线性方程组含有$n$个未知量$m$个方程的线性方程组定义为  \left.\left\{\begin{aligned}a_{11}x_1+a_{12}x_2+\cdots+a_{1n}x_n&amp;&#x3D;b_1\\a_{21}x_1+a_{22}x_2+\cdots+a_{2n}x_n&amp;&#x3D;b_2\\\vdots\\a_{m1}x_1+a_{m2}x_2+\cdots+a_{mn}x_n&amp;&#x3D;b_m\end{a">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-01-03T13:51:48.376Z">
-<meta property="article:modified_time" content="2024-01-07T03:23:03.567Z">
+<meta property="article:modified_time" content="2024-01-08T01:33:15.464Z">
 <meta property="article:author" content="Shiwei Pan">
 <meta name="twitter:card" content="summary">
 
@@ -422,7 +422,8 @@ R(A|b)=R(A)</script><p>加入$b$不改变列空间的维数</p>
 <h3 id="不等式"><a href="#不等式" class="headerlink" title="不等式"></a>不等式</h3><script type="math/tex; mode=display">
 \mathrm{rank(AB)}\leq \min\left\{\mathrm{rank(A)},\mathrm{rank(B)}\right\}</script><script type="math/tex; mode=display">
 \mathrm{rank(A+B)\leq rank(A)+rank(B)}</script><script type="math/tex; mode=display">
-\left.\mathrm{rank}(\mathrm{A}^*)=\left\{\begin{aligned}n.&&\mathrm{rank}(\mathrm{A})&=n\\1.&&\mathrm{rank}(\mathrm{A})&=n-1\\0.&&\mathrm{rank}(\mathrm{A})&<n-1\end{aligned}\right.\right.</script><h2 id="线性相关"><a href="#线性相关" class="headerlink" title="线性相关"></a>线性相关</h2><script type="math/tex; mode=display">
+\left.\mathrm{rank}(\mathrm{A}^*)=\left\{\begin{aligned}n.&&\mathrm{rank}(\mathrm{A})&=n\\1.&&\mathrm{rank}(\mathrm{A})&=n-1\\0.&&\mathrm{rank}(\mathrm{A})&<n-1\end{aligned}\right.\right.</script><script type="math/tex; mode=display">
+R(AB)+n\ge R(A)+R(B)\quad\text{(Sylvester)}</script><h2 id="线性相关"><a href="#线性相关" class="headerlink" title="线性相关"></a>线性相关</h2><script type="math/tex; mode=display">
 k_1\vec a_1+k_2\vec a_2+\cdots+k_n\vec a_n=0</script><p>其中$k$至少一个不为$0$</p>
 <p>注意其中一个向量为零向量的情况</p>
 <h3 id="最大线性无关组"><a href="#最大线性无关组" class="headerlink" title="最大线性无关组"></a>最大线性无关组</h3><ul>
