@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/psw.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="基本概念 应力应变 \sigma&#x3D;\frac F A\\ \varepsilon&#x3D;\lim_{l\to 0}\frac{\Delta l }l\\ \gamma&#x3D;\lim_{l\to 0}\frac{\Delta \gamma }\gamma胡克定律  \sigma&#x3D;E\varepsilon\\ \tau&#x3D;G\gamma关系，泊松比$\nu$ 只在一个方向有线应变有横向变形效应  \sigma_y">
+<meta property="og:type" content="article">
+<meta property="og:title" content="大二&#x2F;材料力学">
+<meta property="og:url" content="http://yoursite.com/2024/01/15/%E5%A4%A7%E4%BA%8C/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/index.html">
+<meta property="og:site_name" content="BLOG">
+<meta property="og:description" content="基本概念 应力应变 \sigma&#x3D;\frac F A\\ \varepsilon&#x3D;\lim_{l\to 0}\frac{\Delta l }l\\ \gamma&#x3D;\lim_{l\to 0}\frac{\Delta \gamma }\gamma胡克定律  \sigma&#x3D;E\varepsilon\\ \tau&#x3D;G\gamma关系，泊松比$\nu$ 只在一个方向有线应变有横向变形效应  \sigma_y">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2024/01/15/%E5%A4%A7%E4%BA%8C/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/image-20240115145258900.png">
+<meta property="og:image" content="http://yoursite.com/2024/01/15/%E5%A4%A7%E4%BA%8C/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/image-20240115151105462.png">
+<meta property="og:image" content="http://yoursite.com/2024/01/15/%E5%A4%A7%E4%BA%8C/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/image-20240115151531211.png">
+<meta property="og:image" content="http://yoursite.com/2024/01/15/%E5%A4%A7%E4%BA%8C/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/image-20240115151752797.png">
+<meta property="og:image" content="http://yoursite.com/2024/01/15/%E5%A4%A7%E4%BA%8C/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/image-20240115152232641.png">
+<meta property="og:image" content="http://yoursite.com/2024/01/15/%E5%A4%A7%E4%BA%8C/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/image-20240115160642130.png">
+<meta property="og:image" content="https://view-cache.book118.com/view19/M03/03/3D/wKh2D2FegPuAeTSfAACBPMePfSk851.png">
+<meta property="og:image" content="http://yoursite.com/2024/01/15/%E5%A4%A7%E4%BA%8C/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/image-20240115162700013.png">
+<meta property="article:published_time" content="2024-01-15T06:50:19.163Z">
+<meta property="article:modified_time" content="2024-01-15T10:50:45.477Z">
+<meta property="article:author" content="Shiwei Pan">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2024/01/15/%E5%A4%A7%E4%BA%8C/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/image-20240115145258900.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2024/01/15/大二/材料力学/"/>
+
+
+
+
+
+  <title>大二/材料力学 | BLOG</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+<script src="/live2d-widget/autoload.js"></script>
+
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">BLOG</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-mine">
+          <a href="/mine/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Old
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-new">
+          <a href="/new/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Introduction
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2024/01/15/%E5%A4%A7%E4%BA%8C/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">大二/材料力学</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2024-01-15T14:50:19+08:00">
+                2024-01-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><p><img src="/2024/01/15/%E5%A4%A7%E4%BA%8C/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/image-20240115145258900.png" alt="image-20240115145258900"></p>
+<h2 id="应力应变"><a href="#应力应变" class="headerlink" title="应力应变"></a>应力应变</h2><script type="math/tex; mode=display">
+\sigma=\frac F A\\
+\varepsilon=\lim_{l\to 0}\frac{\Delta l
+}l\\
+\gamma=\lim_{l\to 0}\frac{\Delta \gamma
+}\gamma</script><p>胡克定律</p>
+<script type="math/tex; mode=display">
+\sigma=E\varepsilon\\
+\tau=G\gamma</script><p>关系，泊松比$\nu$</p>
+<p>只在一个方向有线应变有横向变形效应</p>
+<script type="math/tex; mode=display">
+\sigma_y=-\nu\sigma_x\\G=\frac E{2(1+\nu)}</script><p> 广义胡克定律</p>
+<script type="math/tex; mode=display">
+\varepsilon_x=\frac1E[\sigma_x-\nu(\sigma_y+\sigma_z)]</script><p>特别的，对于平面应力状态，有</p>
+<script type="math/tex; mode=display">
+\varepsilon_\theta=\frac1E[\sigma_\theta-\nu\sigma_{(\theta\pm90^\circ)}]</script><h2 id="许用应力"><a href="#许用应力" class="headerlink" title="许用应力"></a>许用应力</h2><p>衡量材料力学性能的指标</p>
+<script type="math/tex; mode=display">
+[\sigma]=\begin{cases}\frac{\sigma_s}{n_s}或\frac{\sigma_{0.2}}{n_s}\quad 塑性\\
+\frac{\sigma_{b}}{n_b}\quad 脆性\end{cases}</script><h1 id="剪切"><a href="#剪切" class="headerlink" title="剪切"></a>剪切</h1><h2 id="单剪"><a href="#单剪" class="headerlink" title="单剪"></a>单剪</h2><p><img src="/2024/01/15/%E5%A4%A7%E4%BA%8C/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/image-20240115151105462.png" alt="image-20240115151105462"></p>
+<script type="math/tex; mode=display">
+V=F</script><h2 id="双剪"><a href="#双剪" class="headerlink" title="双剪"></a>双剪</h2><p><img src="/2024/01/15/%E5%A4%A7%E4%BA%8C/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/image-20240115151531211.png" alt="image-20240115151531211"></p>
+<p>同时存在挤压</p>
+<p><img src="/2024/01/15/%E5%A4%A7%E4%BA%8C/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/image-20240115151752797.png" alt="image-20240115151752797"></p>
+<p>计算切和压只需要判断力和面积</p>
+<p>剪切：剪力对应接触面积</p>
+<p>挤压：压力对应正交面积</p>
+<h1 id="扭转"><a href="#扭转" class="headerlink" title="扭转"></a>扭转</h1><p>截面上的扭转</p>
+<p><img src="/2024/01/15/%E5%A4%A7%E4%BA%8C/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/image-20240115152232641.png" alt="image-20240115152232641"></p>
+<p>切应力</p>
+<script type="math/tex; mode=display">
+\tau=\frac{T\rho}{I_p}</script><p> 其中$I_p$为截面的极惯性矩</p>
+<p>对于圆</p>
+<script type="math/tex; mode=display">
+I_p=\frac{\pi D^4}{32}</script><p>空心</p>
+<script type="math/tex; mode=display">
+I_p=\frac{\pi D^4}{32}\left(1-\alpha^4\right)</script><p>对于半径处(表面)，截面系数为</p>
+<script type="math/tex; mode=display">
+W_p=\frac{I_p}{D/2}</script><p>单位长度扭转角</p>
+<script type="math/tex; mode=display">
+\frac{\text d\varphi}{\text d x}=\theta=\frac{T}{GI_p}</script><p>单位为弧度，要转角度，则</p>
+<script type="math/tex; mode=display">
+\varphi_{AB}=\frac{Tl_{AB}}{GI_p}\times\frac{180}\pi</script><h2 id="安全条件"><a href="#安全条件" class="headerlink" title="安全条件"></a>安全条件</h2><p>强度条件</p>
+<script type="math/tex; mode=display">
+\tau_{\max}=\frac{T}{W_{p}}\le[\tau]</script><p>刚度条件</p>
+<script type="math/tex; mode=display">
+\frac{T}{GI_p}\times\frac{180}\pi\le[\theta]</script><p>计算时画出扭矩图</p>
+<h1 id="弯曲"><a href="#弯曲" class="headerlink" title="弯曲"></a>弯曲</h1><p>简支梁</p>
+<p>两端分别为固定铰支座和活动铰支座</p>
+<p>悬臂梁</p>
+<p>一端为固定端一端为自由端</p>
+<p>外伸梁</p>
+<p>至少有一个铰支座不在梁端部</p>
+<h2 id="剪力弯矩"><a href="#剪力弯矩" class="headerlink" title="剪力弯矩"></a>剪力弯矩</h2><p>利用力的平衡可以得到剪力和弯矩</p>
+<p>同时注意剪力以顺时针为正</p>
+<p>弯矩以凹为正，同时弯矩图画在拉的那一侧(朝下)</p>
+<p>需要标明正负</p>
+<script type="math/tex; mode=display">
+\frac{\text dF_s}{\text d x}=q\\
+\frac{\text dM}{\text d x}=F_s</script><h2 id="弯曲正应力"><a href="#弯曲正应力" class="headerlink" title="弯曲正应力"></a>弯曲正应力</h2><p>中性层为基准</p>
+<script type="math/tex; mode=display">
+\sigma=\frac{M_z y}{I_z}</script><p>正应力随高度呈线性变化，正比弯矩，反比于形心主惯性矩，两侧正应力一拉一压，总是同时存在</p>
+<p>惯性矩计算</p>
+<p>对矩形截面</p>
+<script type="math/tex; mode=display">
+I_z=\frac{bh^3}{12}</script><p>空心圆形</p>
+<script type="math/tex; mode=display">
+I_z=\frac{\pi D^4}{64}(1-\alpha^4)</script><p>同时利用对称性来计算</p>
+<p>四矩式</p>
+<p><img src="/2024/01/15/%E5%A4%A7%E4%BA%8C/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/image-20240115160642130.png" alt="image-20240115160642130"></p>
+<h2 id="切应力"><a href="#切应力" class="headerlink" title="切应力"></a>切应力</h2><script type="math/tex; mode=display">
+\tau=\frac{F_sS_z^*(y)}{bI_z}</script><p>其中$S_z^*(y)$为静矩</p>
+<script type="math/tex; mode=display">
+S_z^*(y)=S_{y}y_c</script><p>利用形心来计算，$b$为厚度</p>
+<p>掌握计算校核设计截面的方法，分析危险截面</p>
+<h1 id="梁的变形"><a href="#梁的变形" class="headerlink" title="梁的变形"></a>梁的变形</h1><p>挠度$y$，为相对的位置变化</p>
+<script type="math/tex; mode=display">
+y'(x)=\tan\theta</script><p>则利用微分方程得到</p>
+<script type="math/tex; mode=display">
+EIy''=-M(x)</script><p>进行积分，带入边界条件尽可能早的确定常数</p>
+<p>如固定端$\theta,y=0$，铰链左右转角相等  等等</p>
+<p>利用叠加法首先将所有的载荷等效到一段</p>
+<p>用相差一个刚体位移的方法进行计算</p>
+<p><img src="https://view-cache.book118.com/view19/M03/03/3D/wKh2D2FegPuAeTSfAACBPMePfSk851.png" alt="img"></p>
+<h1 id="应力状态分析"><a href="#应力状态分析" class="headerlink" title="应力状态分析"></a>应力状态分析</h1><p><img src="/2024/01/15/%E5%A4%A7%E4%BA%8C/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/image-20240115162700013.png" alt="image-20240115162700013" style="zoom:50%;"></p>
+<p>正应力以拉为正，压为负</p>
+<p>对任意角度，有</p>
+<script type="math/tex; mode=display">
+\sigma_\alpha=\frac{\sigma_x+\sigma_y}2+\frac{\sigma_x-\sigma_y}2\cos2\alpha-\tau_x\sin2\alpha\\
+\tau_\alpha=\frac{\sigma_x-\sigma_y}2\sin2\alpha+\tau_x\cos2\alpha</script><p>则有</p>
+<script type="math/tex; mode=display">
+\sigma_{\theta+90^\circ}+\sigma_\theta=\sigma_x+\sigma_y</script><p>相互垂直截面上的正应力之和为常数</p>
+<h2 id="主平面"><a href="#主平面" class="headerlink" title="主平面"></a>主平面</h2><script type="math/tex; mode=display">
+\tan2\alpha_0=-\frac{2\tau_x}{\sigma_x-\sigma_y}</script><p> 可画出应力圆求解</p>
+<script type="math/tex; mode=display">
+(\sigma_x,\tau_x),(\sigma_y,\tau_y)</script><p>对于切应力极值，与主平面呈45度角，此时正应力为</p>
+<script type="math/tex; mode=display">
+\sigma=\frac{\sigma_x+\sigma_y}2</script><p>对于空间应力，$\sigma_z\ne0,\tau_z=0$</p>
+<p>所以$z$已经是主平面，求处另外两个主应力，画在一起</p>
+<p>为三向应力圆</p>
+<h2 id="强度理论"><a href="#强度理论" class="headerlink" title="强度理论"></a>强度理论</h2><p>主应力按照从大到小的顺序排列后</p>
+<script type="math/tex; mode=display">
+\sigma_1,\sigma_2,\sigma_3</script><p>四个强度理论</p>
+<script type="math/tex; mode=display">
+\sigma_{r1}=\sigma_1\\
+\sigma_{r2}=\sigma_1-\nu(\sigma_2+\sigma_3)\\
+\sigma_{r3}=\sigma_1-\sigma_3\\
+\sigma_{\mathrm{r4}}=\sqrt{\frac{1}{2}[(\sigma_{1}-\sigma_{2})^{2}+(\sigma_{2}-\sigma_{3})^{2}+(\sigma_{3}-\sigma_{1})^{2}]}</script><p>还有莫尔强度理论</p>
+<script type="math/tex; mode=display">
+\sigma_{r3}=\sigma_1-\frac{[\sigma_t
+]}{[\sigma_c]}\sigma_3</script><p>特别的，对于单向</p>
+<script type="math/tex; mode=display">
+\sigma_{\mathrm{r3}}=\sqrt{\sigma^2+4\tau^2}\\
+\sigma_{\mathrm{r4}}=\sqrt{\sigma^2+4\tau^2}</script><p>更特别的</p>
+<script type="math/tex; mode=display">
+\sigma_{r3}=\frac{\sqrt{M^2+T^2}}{W_z}\\ \sigma_{r4}=\frac{\sqrt{M^2+0.75T^2}}{W_z}</script><p>切应力主要为扭矩产生，正应力主要为弯矩产生</p>
+<h1 id="组合变形"><a href="#组合变形" class="headerlink" title="组合变形"></a>组合变形</h1><p>分别在$x,y$方向上画弯矩图</p>
+<p>计算最大应力时，分解后叠加</p>
+<script type="math/tex; mode=display">
+\sigma_{\max}=\frac{M_{y\max}}{W_y}+\frac{M_{z\max}}{W_z}\le[\sigma]</script><p>注意$M_y$为$F_z$产生</p>
+<p>同理挠度也叠加</p>
+<script type="math/tex; mode=display">
+f=\sqrt{f_x^2+f_y^2}</script><h2 id="偏心压缩"><a href="#偏心压缩" class="headerlink" title="偏心压缩"></a>偏心压缩</h2><p>将心的力$F_2$等效成</p>
+<script type="math/tex; mode=display">
+Fe+F</script><p>转换成一个正应力和弯矩</p>
+<h1 id="压杆稳定性"><a href="#压杆稳定性" class="headerlink" title="压杆稳定性"></a>压杆稳定性</h1><p>对于不同支承条件，长度系数不同</p>
+<p>如果两端铰支，都可以转动(角度任意变化)</p>
+<p>或者两端固定另一端可以横向移动</p>
+<script type="math/tex; mode=display">
+\mu=1</script><p>若一端自由另一端固定</p>
+<script type="math/tex; mode=display">
+\mu=2</script><p>两端固定</p>
+<script type="math/tex; mode=display">
+\mu=0.5</script><p>一端固定，一端铰支</p>
+<script type="math/tex; mode=display">
+\mu=0.7</script><p>所以临界压力</p>
+<script type="math/tex; mode=display">
+F_{cr}=\frac{\pi^2EI}{(\mu l)^2}</script><p>引入柔度的概念</p>
+<script type="math/tex; mode=display">
+\lambda=\frac{\mu l}i</script><p>其中$i=\sqrt{\frac {I_z}{A}}$，截面对失稳弯曲时的中性轴的惯性半径</p>
+<p>所以临界应力公式为</p>
+<script type="math/tex; mode=display">
+\sigma_{\mathrm{cr}}=\frac{\pi^2 E}{\lambda^2}\le \sigma_p</script><p>则柔度需要满足</p>
+<script type="math/tex; mode=display">
+\lambda\ge\sqrt{\frac{\pi^2E}{\sigma_p}}</script><p>对于铸铁$\rm Q235$</p>
+<script type="math/tex; mode=display">
+\lambda_p=100</script><p>对于中长杆，可以使用经验公式</p>
+<script type="math/tex; mode=display">
+\sigma_{\rm cr}=a_1-b_1\lambda</script><p>或者</p>
+<script type="math/tex; mode=display">
+\sigma_{\rm cr}=a_1-b_1\lambda^2</script>
+      
+    </div>
+    
+    
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat.jpg" alt="Shiwei Pan wechat" style="width: 200px; max-width: 100%;"/>
+    <div></div>
+</div>
+
+      </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2024/01/03/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9B%B8%E4%BC%BC%E7%9F%A9%E9%98%B5%E4%BA%8C%E6%AC%A1%E5%9E%8B/" rel="next" title="大一/线性代数/相似矩阵二次型">
+                <i class="fa fa-chevron-left"></i> 大一/线性代数/相似矩阵二次型
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/mount.png"
+               alt="Shiwei Pan" />
+          <p class="site-author-name" itemprop="name">Shiwei Pan</p>
+           
+              <p class="site-description motion-element" itemprop="description">Open your eyes,look up to the skies</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">92</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/erikpsw" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/pan-shi-wei-91" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                    
+                      知乎
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基本概念"><span class="nav-number">1.</span> <span class="nav-text">基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#应力应变"><span class="nav-number">1.1.</span> <span class="nav-text">应力应变</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#许用应力"><span class="nav-number">1.2.</span> <span class="nav-text">许用应力</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#剪切"><span class="nav-number">2.</span> <span class="nav-text">剪切</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#单剪"><span class="nav-number">2.1.</span> <span class="nav-text">单剪</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#双剪"><span class="nav-number">2.2.</span> <span class="nav-text">双剪</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#扭转"><span class="nav-number">3.</span> <span class="nav-text">扭转</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安全条件"><span class="nav-number">3.1.</span> <span class="nav-text">安全条件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#弯曲"><span class="nav-number">4.</span> <span class="nav-text">弯曲</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#剪力弯矩"><span class="nav-number">4.1.</span> <span class="nav-text">剪力弯矩</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#弯曲正应力"><span class="nav-number">4.2.</span> <span class="nav-text">弯曲正应力</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#切应力"><span class="nav-number">4.3.</span> <span class="nav-text">切应力</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#梁的变形"><span class="nav-number">5.</span> <span class="nav-text">梁的变形</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#应力状态分析"><span class="nav-number">6.</span> <span class="nav-text">应力状态分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#主平面"><span class="nav-number">6.1.</span> <span class="nav-text">主平面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#强度理论"><span class="nav-number">6.2.</span> <span class="nav-text">强度理论</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#组合变形"><span class="nav-number">7.</span> <span class="nav-text">组合变形</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#偏心压缩"><span class="nav-number">7.1.</span> <span class="nav-text">偏心压缩</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#压杆稳定性"><span class="nav-number">8.</span> <span class="nav-text">压杆稳定性</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2020 - 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Shiwei Pan</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>

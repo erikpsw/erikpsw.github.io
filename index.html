@@ -311,6 +311,275 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2024/01/15/%E5%A4%A7%E4%BA%8C/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2024/01/15/%E5%A4%A7%E4%BA%8C/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/" itemprop="url">大二/材料力学</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2024-01-15T14:50:19+08:00">
+                2024-01-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><p><img src="/2024/01/15/%E5%A4%A7%E4%BA%8C/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/image-20240115145258900.png" alt="image-20240115145258900"></p>
+<h2 id="应力应变"><a href="#应力应变" class="headerlink" title="应力应变"></a>应力应变</h2><script type="math/tex; mode=display">
+\sigma=\frac F A\\
+\varepsilon=\lim_{l\to 0}\frac{\Delta l
+}l\\
+\gamma=\lim_{l\to 0}\frac{\Delta \gamma
+}\gamma</script><p>胡克定律</p>
+<script type="math/tex; mode=display">
+\sigma=E\varepsilon\\
+\tau=G\gamma</script><p>关系，泊松比$\nu$</p>
+<p>只在一个方向有线应变有横向变形效应</p>
+<script type="math/tex; mode=display">
+\sigma_y=-\nu\sigma_x\\G=\frac E{2(1+\nu)}</script><p> 广义胡克定律</p>
+<script type="math/tex; mode=display">
+\varepsilon_x=\frac1E[\sigma_x-\nu(\sigma_y+\sigma_z)]</script><p>特别的，对于平面应力状态，有</p>
+<script type="math/tex; mode=display">
+\varepsilon_\theta=\frac1E[\sigma_\theta-\nu\sigma_{(\theta\pm90^\circ)}]</script><h2 id="许用应力"><a href="#许用应力" class="headerlink" title="许用应力"></a>许用应力</h2><p>衡量材料力学性能的指标</p>
+<script type="math/tex; mode=display">
+[\sigma]=\begin{cases}\frac{\sigma_s}{n_s}或\frac{\sigma_{0.2}}{n_s}\quad 塑性\\
+\frac{\sigma_{b}}{n_b}\quad 脆性\end{cases}</script><h1 id="剪切"><a href="#剪切" class="headerlink" title="剪切"></a>剪切</h1><h2 id="单剪"><a href="#单剪" class="headerlink" title="单剪"></a>单剪</h2><p><img src="/2024/01/15/%E5%A4%A7%E4%BA%8C/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/image-20240115151105462.png" alt="image-20240115151105462"></p>
+<script type="math/tex; mode=display">
+V=F</script><h2 id="双剪"><a href="#双剪" class="headerlink" title="双剪"></a>双剪</h2><p><img src="/2024/01/15/%E5%A4%A7%E4%BA%8C/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/image-20240115151531211.png" alt="image-20240115151531211"></p>
+<p>同时存在挤压</p>
+<p><img src="/2024/01/15/%E5%A4%A7%E4%BA%8C/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/image-20240115151752797.png" alt="image-20240115151752797"></p>
+<p>计算切和压只需要判断力和面积</p>
+<p>剪切：剪力对应接触面积</p>
+<p>挤压：压力对应正交面积</p>
+<h1 id="扭转"><a href="#扭转" class="headerlink" title="扭转"></a>扭转</h1><p>截面上的扭转</p>
+<p><img src="/2024/01/15/%E5%A4%A7%E4%BA%8C/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/image-20240115152232641.png" alt="image-20240115152232641"></p>
+<p>切应力</p>
+<script type="math/tex; mode=display">
+\tau=\frac{T\rho}{I_p}</script><p> 其中$I_p$为截面的极惯性矩</p>
+<p>对于圆</p>
+<script type="math/tex; mode=display">
+I_p=\frac{\pi D^4}{32}</script><p>空心</p>
+<script type="math/tex; mode=display">
+I_p=\frac{\pi D^4}{32}\left(1-\alpha^4\right)</script><p>对于半径处(表面)，截面系数为</p>
+<script type="math/tex; mode=display">
+W_p=\frac{I_p}{D/2}</script><p>单位长度扭转角</p>
+<script type="math/tex; mode=display">
+\frac{\text d\varphi}{\text d x}=\theta=\frac{T}{GI_p}</script><p>单位为弧度，要转角度，则</p>
+<script type="math/tex; mode=display">
+\varphi_{AB}=\frac{Tl_{AB}}{GI_p}\times\frac{180}\pi</script><h2 id="安全条件"><a href="#安全条件" class="headerlink" title="安全条件"></a>安全条件</h2><p>强度条件</p>
+<script type="math/tex; mode=display">
+\tau_{\max}=\frac{T}{W_{p}}\le[\tau]</script><p>刚度条件</p>
+<script type="math/tex; mode=display">
+\frac{T}{GI_p}\times\frac{180}\pi\le[\theta]</script><p>计算时画出扭矩图</p>
+<h1 id="弯曲"><a href="#弯曲" class="headerlink" title="弯曲"></a>弯曲</h1><p>简支梁</p>
+<p>两端分别为固定铰支座和活动铰支座</p>
+<p>悬臂梁</p>
+<p>一端为固定端一端为自由端</p>
+<p>外伸梁</p>
+<p>至少有一个铰支座不在梁端部</p>
+<h2 id="剪力弯矩"><a href="#剪力弯矩" class="headerlink" title="剪力弯矩"></a>剪力弯矩</h2><p>利用力的平衡可以得到剪力和弯矩</p>
+<p>同时注意剪力以顺时针为正</p>
+<p>弯矩以凹为正，同时弯矩图画在拉的那一侧(朝下)</p>
+<p>需要标明正负</p>
+<script type="math/tex; mode=display">
+\frac{\text dF_s}{\text d x}=q\\
+\frac{\text dM}{\text d x}=F_s</script><h2 id="弯曲正应力"><a href="#弯曲正应力" class="headerlink" title="弯曲正应力"></a>弯曲正应力</h2><p>中性层为基准</p>
+<script type="math/tex; mode=display">
+\sigma=\frac{M_z y}{I_z}</script><p>正应力随高度呈线性变化，正比弯矩，反比于形心主惯性矩，两侧正应力一拉一压，总是同时存在</p>
+<p>惯性矩计算</p>
+<p>对矩形截面</p>
+<script type="math/tex; mode=display">
+I_z=\frac{bh^3}{12}</script><p>空心圆形</p>
+<script type="math/tex; mode=display">
+I_z=\frac{\pi D^4}{64}(1-\alpha^4)</script><p>同时利用对称性来计算</p>
+<p>四矩式</p>
+<p><img src="/2024/01/15/%E5%A4%A7%E4%BA%8C/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/image-20240115160642130.png" alt="image-20240115160642130"></p>
+<h2 id="切应力"><a href="#切应力" class="headerlink" title="切应力"></a>切应力</h2><script type="math/tex; mode=display">
+\tau=\frac{F_sS_z^*(y)}{bI_z}</script><p>其中$S_z^*(y)$为静矩</p>
+<script type="math/tex; mode=display">
+S_z^*(y)=S_{y}y_c</script><p>利用形心来计算，$b$为厚度</p>
+<p>掌握计算校核设计截面的方法，分析危险截面</p>
+<h1 id="梁的变形"><a href="#梁的变形" class="headerlink" title="梁的变形"></a>梁的变形</h1><p>挠度$y$，为相对的位置变化</p>
+<script type="math/tex; mode=display">
+y'(x)=\tan\theta</script><p>则利用微分方程得到</p>
+<script type="math/tex; mode=display">
+EIy''=-M(x)</script><p>进行积分，带入边界条件尽可能早的确定常数</p>
+<p>如固定端$\theta,y=0$，铰链左右转角相等  等等</p>
+<p>利用叠加法首先将所有的载荷等效到一段</p>
+<p>用相差一个刚体位移的方法进行计算</p>
+<p><img src="https://view-cache.book118.com/view19/M03/03/3D/wKh2D2FegPuAeTSfAACBPMePfSk851.png" alt="img"></p>
+<h1 id="应力状态分析"><a href="#应力状态分析" class="headerlink" title="应力状态分析"></a>应力状态分析</h1><p><img src="/2024/01/15/%E5%A4%A7%E4%BA%8C/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/image-20240115162700013.png" alt="image-20240115162700013" style="zoom:50%;"></p>
+<p>正应力以拉为正，压为负</p>
+<p>对任意角度，有</p>
+<script type="math/tex; mode=display">
+\sigma_\alpha=\frac{\sigma_x+\sigma_y}2+\frac{\sigma_x-\sigma_y}2\cos2\alpha-\tau_x\sin2\alpha\\
+\tau_\alpha=\frac{\sigma_x-\sigma_y}2\sin2\alpha+\tau_x\cos2\alpha</script><p>则有</p>
+<script type="math/tex; mode=display">
+\sigma_{\theta+90^\circ}+\sigma_\theta=\sigma_x+\sigma_y</script><p>相互垂直截面上的正应力之和为常数</p>
+<h2 id="主平面"><a href="#主平面" class="headerlink" title="主平面"></a>主平面</h2><script type="math/tex; mode=display">
+\tan2\alpha_0=-\frac{2\tau_x}{\sigma_x-\sigma_y}</script><p> 可画出应力圆求解</p>
+<script type="math/tex; mode=display">
+(\sigma_x,\tau_x),(\sigma_y,\tau_y)</script><p>对于切应力极值，与主平面呈45度角，此时正应力为</p>
+<script type="math/tex; mode=display">
+\sigma=\frac{\sigma_x+\sigma_y}2</script><p>对于空间应力，$\sigma_z\ne0,\tau_z=0$</p>
+<p>所以$z$已经是主平面，求处另外两个主应力，画在一起</p>
+<p>为三向应力圆</p>
+<h2 id="强度理论"><a href="#强度理论" class="headerlink" title="强度理论"></a>强度理论</h2><p>主应力按照从大到小的顺序排列后</p>
+<script type="math/tex; mode=display">
+\sigma_1,\sigma_2,\sigma_3</script><p>四个强度理论</p>
+<script type="math/tex; mode=display">
+\sigma_{r1}=\sigma_1\\
+\sigma_{r2}=\sigma_1-\nu(\sigma_2+\sigma_3)\\
+\sigma_{r3}=\sigma_1-\sigma_3\\
+\sigma_{\mathrm{r4}}=\sqrt{\frac{1}{2}[(\sigma_{1}-\sigma_{2})^{2}+(\sigma_{2}-\sigma_{3})^{2}+(\sigma_{3}-\sigma_{1})^{2}]}</script><p>还有莫尔强度理论</p>
+<script type="math/tex; mode=display">
+\sigma_{r3}=\sigma_1-\frac{[\sigma_t
+]}{[\sigma_c]}\sigma_3</script><p>特别的，对于单向</p>
+<script type="math/tex; mode=display">
+\sigma_{\mathrm{r3}}=\sqrt{\sigma^2+4\tau^2}\\
+\sigma_{\mathrm{r4}}=\sqrt{\sigma^2+4\tau^2}</script><p>更特别的</p>
+<script type="math/tex; mode=display">
+\sigma_{r3}=\frac{\sqrt{M^2+T^2}}{W_z}\\ \sigma_{r4}=\frac{\sqrt{M^2+0.75T^2}}{W_z}</script><p>切应力主要为扭矩产生，正应力主要为弯矩产生</p>
+<h1 id="组合变形"><a href="#组合变形" class="headerlink" title="组合变形"></a>组合变形</h1><p>分别在$x,y$方向上画弯矩图</p>
+<p>计算最大应力时，分解后叠加</p>
+<script type="math/tex; mode=display">
+\sigma_{\max}=\frac{M_{y\max}}{W_y}+\frac{M_{z\max}}{W_z}\le[\sigma]</script><p>注意$M_y$为$F_z$产生</p>
+<p>同理挠度也叠加</p>
+<script type="math/tex; mode=display">
+f=\sqrt{f_x^2+f_y^2}</script><h2 id="偏心压缩"><a href="#偏心压缩" class="headerlink" title="偏心压缩"></a>偏心压缩</h2><p>将心的力$F_2$等效成</p>
+<script type="math/tex; mode=display">
+Fe+F</script><p>转换成一个正应力和弯矩</p>
+<h1 id="压杆稳定性"><a href="#压杆稳定性" class="headerlink" title="压杆稳定性"></a>压杆稳定性</h1><p>对于不同支承条件，长度系数不同</p>
+<p>如果两端铰支，都可以转动(角度任意变化)</p>
+<p>或者两端固定另一端可以横向移动</p>
+<script type="math/tex; mode=display">
+\mu=1</script><p>若一端自由另一端固定</p>
+<script type="math/tex; mode=display">
+\mu=2</script><p>两端固定</p>
+<script type="math/tex; mode=display">
+\mu=0.5</script><p>一端固定，一端铰支</p>
+<script type="math/tex; mode=display">
+\mu=0.7</script><p>所以临界压力</p>
+<script type="math/tex; mode=display">
+F_{cr}=\frac{\pi^2EI}{(\mu l)^2}</script><p>引入柔度的概念</p>
+<script type="math/tex; mode=display">
+\lambda=\frac{\mu l}i</script><p>其中$i=\sqrt{\frac {I_z}{A}}$，截面对失稳弯曲时的中性轴的惯性半径</p>
+<p>所以临界应力公式为</p>
+<script type="math/tex; mode=display">
+\sigma_{\mathrm{cr}}=\frac{\pi^2 E}{\lambda^2}\le \sigma_p</script><p>则柔度需要满足</p>
+<script type="math/tex; mode=display">
+\lambda\ge\sqrt{\frac{\pi^2E}{\sigma_p}}</script><p>对于铸铁$\rm Q235$</p>
+<script type="math/tex; mode=display">
+\lambda_p=100</script><p>对于中长杆，可以使用经验公式</p>
+<script type="math/tex; mode=display">
+\sigma_{\rm cr}=a_1-b_1\lambda</script><p>或者</p>
+<script type="math/tex; mode=display">
+\sigma_{\rm cr}=a_1-b_1\lambda^2</script>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2024/01/03/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9B%B8%E4%BC%BC%E7%9F%A9%E9%98%B5%E4%BA%8C%E6%AC%A1%E5%9E%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -434,7 +703,8 @@ P^T=P^{-1}</script><h2 id="正定"><a href="#正定" class="headerlink" title="�
 <h3 id="推论"><a href="#推论" class="headerlink" title="推论"></a>推论</h3><p>看$\lambda$正负</p>
 <p>$A+B$正定，$BAB$正定，$A^{-1},A^*,A^m,kA$正定</p>
 <p>若$AB=BA$则</p>
-<h1 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h1><p>只有对称矩阵，相似一定合同(因为正交相似)</p>
+<script type="math/tex; mode=display">
+AB,BA正定</script><h1 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h1><p>只有对称矩阵，相似一定合同(因为正交相似)</p>
 <p>对称矩阵可对角化，代数重数=几何重数则可对角化</p>
 <p>等价$\Leftrightarrow$秩相等</p>
 <p>$A\Leftrightarrow B$则对应的齐次线性方程组同解</p>
@@ -1985,207 +2255,6 @@ x*h(n)=\sum_{k}x(k)h(n-k)</script>
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2023/03/22/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2023/03/22/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/" itemprop="url">大一/数据科学/数值分析</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-03-22T11:38:32+08:00">
-                2023-03-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="有限差分"><a href="#有限差分" class="headerlink" title="有限差分"></a>有限差分</h1><p>Forward</p>
-<script type="math/tex; mode=display">
-\frac{\text{d}f}{\text dt}=\frac{f(t_0+\Delta t)-f(t_0)}{\Delta t}</script><p>Backward</p>
-<script type="math/tex; mode=display">
-\frac{\text{d}f}{\text dt}=\frac{f(t_0)-f(t-\Delta t)}{\Delta t}</script><p>更精确(二阶)</p>
-<script type="math/tex; mode=display">
-\frac{\text{d}f}{\text dt}=\frac{f(t_0+\Delta t)-f(t_0-\Delta t)}{2\Delta t}</script><p>二阶导数</p>
-<p><img src="/2023/03/22/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/image-20230319213302155.png" alt="    "></p>
-<script type="math/tex; mode=display">
-\frac{\text{d}^2f}{\text dt^2}=\frac{f(t_0+\Delta t)+f(t_0-\Delta t)-2f(t_0)}{\Delta t^2}</script><h2 id="理查森外推公式"><a href="#理查森外推公式" class="headerlink" title="理查森外推公式"></a>理查森外推公式</h2><p>对于某个带误差的式子</p>
-<script type="math/tex; mode=display">
-Q=F(h)+kh^n</script><p>再加入一个方程可以得到</p>
-<script type="math/tex; mode=display">
-Q=\frac{2^nF(h/2)-F(h)}{2^n-1}</script><h1 id="插值"><a href="#插值" class="headerlink" title="插值"></a>插值</h1><h2 id="拉格朗日"><a href="#拉格朗日" class="headerlink" title="拉格朗日"></a>拉格朗日</h2><script type="math/tex; mode=display">
-L_{n-1}(x)=\sum_{k=0}^{n-1}y_k\frac{\displaystyle\prod_{j\ne k}(x-x_j)}{\displaystyle\prod_{j\ne k}(x_k-x_j)}\\
-p(x)=\prod_{j\ne k}(x-x_j)</script><p>缺点：在一堆原始点中，只改变了其中几个点的情况下，所有的基函数和插值曲线都要重新计算</p>
-<h2 id="牛顿"><a href="#牛顿" class="headerlink" title="牛顿"></a>牛顿</h2><p>差商</p>
-<script type="math/tex; mode=display">
-f[x_0]=f(x_0)\\
-f[x_0,x_1]=\frac{f[x_1]-f[x_0]}{x_1-x_1}\\
-f\left[x_{0}, x_{1}, \cdots, x_{n}\right]=\frac{f\left[x_{1}, x_{2}, \cdots, x_{n}\right]-f\left[x_{0}, x_{1}, \cdots, x_{n-1}\right]}{x_{n}-x_{0}}</script><p>则有牛顿插值公式 </p>
-<script type="math/tex; mode=display">
-\begin{array}{l}
-f(x)=f\left[x_{0}\right]+f\left[x_{0}, x_{1}\right]\left(x-x_{0}\right) \\
-+f\left[x_{0}, x_{1}, x_{2}\right]\left(x-x_{0}\right)\left(x-x_{1}\right)+\ldots \\
-+f\left[x_{0}, x_{1}, \ldots, x_{n}\right]\left(x-x_{0}\right)\left(x-x_{1}\right) \ldots\left(x-x_{n-1}\right) 
-\end{array}</script><h1 id="数值积分"><a href="#数值积分" class="headerlink" title="数值积分"></a>数值积分</h1><p><img src="/2023/03/22/%E5%A4%A7%E4%B8%80/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/image-20230325100922762.png" alt="image-20230325100922762"></p>
-<h2 id="Trapezoid"><a href="#Trapezoid" class="headerlink" title="Trapezoid"></a>Trapezoid</h2><p>用四边形进行逼近，如图$(a)$</p>
-<script type="math/tex; mode=display">
-\int_{x_0}^{x_1}f(x)\text dx=h\left [\frac{f(x_1)+f(x_0)}2\right]</script><p>每两个点进行采样，从而有</p>
-<script type="math/tex; mode=display">
-\int_{a}^{b}f(x)\text dx=\frac h2\left [f(a)+f(b)+2\sum_{i=1}^{m-1}f(x_i)\right]-\sum_{i=1}^{m-1}\frac{h^3}{12}f''(c_i)</script><p>由广义介值定理</p>
-<script type="math/tex; mode=display">
-f(x)\sum_{i=1}^na_i=\sum_{i=1}^na_i f(x_i)\\
-\sum_{i=1}^{m-1}\frac{h^3}{12}f''(c_i)=\frac{h^2(b-a)}{12}f''(c)</script><h2 id="Simpson"><a href="#Simpson" class="headerlink" title="Simpson"></a>Simpson</h2><p>用二次函数来插值三个点，积分得</p>
-<script type="math/tex; mode=display">
-\int_{x_0}^{x_2}f(x)\text dx=\frac h3(y_0+4y_1+y_2)-\frac{h^5}{90}f^{(5)}(c)</script><p>从而对于区间$[a,b]$</p>
-<script type="math/tex; mode=display">
-\int_{a}^{b}f(x)\text dx=\frac h3\left [f(x_0)+f(b)+2\sum_{i=1}^{m-1}f(x_{2i})+4\sum_{i=1}^{m}f(x_{2i-1})\right]</script><h2 id="龙贝格"><a href="#龙贝格" class="headerlink" title="龙贝格"></a>龙贝格</h2><p>Romberg Integration</p>
-<p>利用外推公式和增加细分</p>
-<script type="math/tex; mode=display">
-h_j=\frac{b-a}{2^{j-1}}\\
-R_{j,1}=\frac 12R_{j-1,1}+h_j\sum_{i=1}^{2^{j-1}}f[a+(2j-1)h_j]\\
-R_{j,k}=\frac{4^{k-1}R_{j,k-1}-R_{j-1,k-1}}{4^{k-1}-1}</script><h2 id="自适应"><a href="#自适应" class="headerlink" title="自适应"></a>自适应</h2><p>Adaptive Quadrature</p>
-<p>如果使用Simpson方法</p>
-<script type="math/tex; mode=display">
-\text {error}=\frac 1{15}\left[S(a,b)-S\left(a,\frac{a+b}2\right)-S\left(\frac{a+b}2,b\right)\right]</script><h1 id="二维"><a href="#二维" class="headerlink" title="二维"></a>二维</h1><p>用网格来表示</p>
-<h2 id="偏微分方程"><a href="#偏微分方程" class="headerlink" title="偏微分方程"></a>偏微分方程</h2><p>对于$u(x,y)$</p>
-<script type="math/tex; mode=display">
-Au_{x x} + Bu_{x y} + Cu_{yy} + F(u_x ,u_y ,u, x, y) = 0</script><p>利用前面的公式固定一个变量，有</p>
-<script type="math/tex; mode=display">
-u_{x x}(x, t) \approx \frac{1}{h^{2}}(u(x+h, t)-2 u(x, t)+u(x-h, t))</script><p>对于热传导方程，使用Forward Difference Method</p>
-<script type="math/tex; mode=display">
-u_t=Du_{xx}\\\sigma =\frac{Dk}{h^2}\\
-\\w_{i,j+1}=\sigma w_{i+1,j}+(1-2\sigma)w_{i,j}+\sigma w_{i-1,j}</script><p>如果直接能从前面的值推算出后面的值则为显式</p>
-<p>写成矩阵形式$w<em>{j+1} = Aw</em>{j} + s_j$</p>
-<script type="math/tex; mode=display">
-\left[\begin{array}{c}
-w_{1, j+1} \\
-\vdots \\
-w_{m, j+1}
-\end{array}\right]=\left[\begin{array}{ccccc}
-1-2 \sigma & \sigma & 0 & \cdots & 0 \\
-\sigma & 1-2 \sigma & \sigma & \ddots & \vdots \\
-0 & \sigma & 1-2 \sigma & \ddots & 0 \\
-\vdots & \ddots & \ddots & \ddots & \sigma \\
-0 & \cdots & 0 & \sigma & 1-2 \sigma
-\end{array}\right]\left[\begin{array}{c}
-w_{1 j} \\
-\vdots \\
-w_{m j}
-\end{array}\right]+\sigma\left[\begin{array}{c}
-w_{0, j} \\
-0 \\
-\vdots \\
-0 \\
-w_{m+1, j}
-\end{array}\right]</script><p>显式具有不稳定性，误差容易爆炸</p>
-<h3 id="隐式"><a href="#隐式" class="headerlink" title="隐式"></a>隐式</h3><p>使用Backward来计算导数可以得到</p>
-<script type="math/tex; mode=display">
--\sigma w_{i+1,j}-\sigma w_{i-1,j}+(1+2\sigma)w_{i,j}= w_{i,j-1}</script><script type="math/tex; mode=display">
-\left[ \begin{array} { c c c c c } { 1 + 2 \sigma } & { - \sigma } & { 0 } & { \cdots } & { 0 } \\ { - \sigma } & { 1 + 2 \sigma } & { - \sigma } & { \ddots } & { \vdots } \\ { 0 } & { - \sigma } & { 1 + 2 \sigma } & { \ddots } & { 0 } \\ { \vdots } & { \ddots } & { \ddots } & { \ddots } & { - \sigma } \\ { 0 } & { \cdots } & { 0 } & { - \sigma } & { 1 + 2 \sigma } \end{array} \right] \left[ \begin{array} { c } { w _ { 1 j } } \\ { \vdots } \\ { w _ { m j } } \end{array} \right] = \left[ \begin{array} { c } { w _ { 1 , j - 1 } } \\ { \vdots } \\ { w _ { m , j - 1 } } \end{array} \right] + \sigma \left[ \begin{array} { c } { w _ { 0 j } } \\ { 0 } \\ { \vdots } \\ { 0 } \\ { w _ { m + 1 , j } } \end{array} \right]</script><p>$$</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2236,7 +2305,7 @@ w_{m+1, j}
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">91</span>
+                <span class="site-state-item-count">92</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

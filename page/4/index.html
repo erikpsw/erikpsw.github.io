@@ -311,6 +311,190 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/10/06/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%A5%BD%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/10/06/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%A5%BD%E9%A2%98/" itemprop="url">大一/高数/好题</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-10-06T15:32:36+08:00">
+                2022-10-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <script type="math/tex; mode=display">
+\lim_{x\to\frac\pi2}(\sin x)^{\tan x}</script><script type="math/tex; mode=display">
+\begin{aligned}\lim_{x\to\frac\pi2}(\sin x)^{\tan x}
+&=\lim_{x\to\frac\pi2}e^{\tan x\ln\sin x}\\&=\lim_{t\to1^-} e^{\tan x\ln t}\end{aligned}</script><p>法1</p>
+<script type="math/tex; mode=display">
+\begin{aligned}\because\lim_{t\to1^-} {\tan x\ln t}&=\lim_{t\to1^-}\frac{t}{\sqrt{1-t^2}}\ln t \\
+&=\lim_{t\to1^-}t\cdot\lim_{t\to1^-}\frac{t-1}{\sqrt{1-t^2}}\\
+&=1\cdot \lim_{t\to1^-}\sqrt{\frac{(t-1)^2}{1-t^2}}\\
+&=\lim_{t\to1^-}\sqrt{\frac{1-t}{1+t}}\\
+&=0
+\end{aligned}\\
+\therefore 由复合函数的极限运算法则知\\
+\lim_{t\to1^-} e^{\tan x\ln t}=e^{\lim_{t\to1^-} {\tan x\ln t}}=e^0=1</script><p>法2</p>
+<script type="math/tex; mode=display">
+t=x-\frac\pi2\to0,x=\frac\pi2+t\\
+\begin{aligned}\lim_{x\to\frac\pi2}(\sin x)^{\tan x}
+&=\lim_{x\to\frac\pi2}e^{\tan x\ln\sin x}
+
+\\&=\lim_{t\to0} \exp \left \{   
+\frac{\sin \left(\frac\pi2+t \right)\ln\left[\sin \left(\frac\pi2+t \right)\right] }{\cos \left(\frac\pi2+t \right)}\right\}
+
+\\&=\lim_{t\to0} \exp \left \{   
+\frac{\sin \left(\frac\pi2+t \right)\left[\sin \left(\frac\pi2+t \right)-1\right] }{\cos \left(\frac\pi2+t \right)}\right\}
+
+\\&=\lim_{t\to0} \exp \left \{   
+\frac{\cos t (\cos t-1)     }{-\sin t}\right\}
+
+\\&=\lim_{t\to0} \exp \left \{   
+\frac{1\cdot(-\frac12t^2)     }{-t}\right\}
+\\&=\lim_{t\to0} e^{\frac12t}=e^0=1
+\end{aligned}</script><p>简化</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\lim _{x \rightarrow \frac{\pi}{2}}(\sin x)^{\tan x} &=\lim _{x \rightarrow 0}\left[\sin \left(\frac{\pi}{2}-x\right)\right]^{\tan \left(\frac{\pi}{2}-x\right)} \\
+&=\lim _{x \rightarrow 0}(\cos x)^{\frac{1}{\tan x}} \\
+&=\exp \lim _{x \rightarrow 0} \frac{\cos x-1}{\tan x} \\
+& = \exp \lim _{x \rightarrow 0} \frac{-x^{2} / 2}{x}=e^{0}=1
+\end{aligned}</script><script type="math/tex; mode=display">
+\lim_{x\to0}\frac{\cos(\tan x)-\cos x}{x^3\sin x}</script><p>法1</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\quad\,\lim_{x\to0}\frac{\cos(\tan x)-\cos x}{x^4}\\&=
+\lim_{x\to0}\frac{\cos(\tan x)-\cos x}{x^3\sin x}\\
+&=\lim_{x\to0}\frac
+{\frac12(x^2-\tan^2x)+\frac1{24}(\tan^4x-x^4)+o(x^4)}{x^4}\\
+&=\lim_{x\to0}\frac{(x-\tan x)2x[\frac12+\frac1{24} (\tan^2x+x^2)]+o(x^4)}{x^4}
+\\&=\frac{x(-\frac13x^3)}{x^4}=-\frac13
+\end{aligned}</script><p>法2</p>
+<script type="math/tex; mode=display">
+f(x)=\cos x,\frac{\cos (\tan x)-\cos x}{\tan x-x}=f'(\xi),\xi\in(x,\tan  x)\\
+\begin{aligned}
+&\quad\,\lim_{x\to0}\frac{\cos(\tan x)-\cos x}{x^4}\\
+&=\lim_{x\to0}\frac{(\tan x-x)f'(\xi)}{x^3\sin x}\\
+&=\lim_{x\to0}\frac{(\tan x-x)(-\sin \xi)}{x^3\sin x}\\
+&=\lim_{x\to0}-\frac{1}{3}\frac{\sin \xi}{\sin x}=-\frac 13\\
+\end{aligned}</script><script type="math/tex; mode=display">
+\lim_{n\to \infty}\frac1{n^4}\prod_{k=1}^{2n}(n^2+k^2)^{\frac1n}=\lim_{n\to \infty}A</script><script type="math/tex; mode=display">
+\int_0^kf(x)\text{d}x=\lim_{n\to \infty}\frac{k}n\sum_{i=1}^nf\left(\frac {ki}n\right)</script><script type="math/tex; mode=display">
+\begin{aligned}A&=\exp\left [\frac1n\sum_{k=1}^{2n}\ln(n^2+k^2)+2\ln\frac{1}{n^2}\right]\\&=
+\exp\left [\frac1n\sum_{k=1}^{2n}\ln(n^2+k^2)+2n\frac1{n}\ln\frac{1}{n^2}\right]\\
+&=\exp\left [\frac1n\sum_{k=1}^{2n}\ln\left(\frac{n^2+k^2}{n^2}\right)\right]\\
+&=\exp\left [\frac1n\sum_{k=1}^{2n}\ln\left(1+\frac{k^2}{n^2}\right)\right]\\
+\lim_{n\to \infty}A&=\exp \int_0^2\ln(1+x^2)\text{d}x\\
+&=\exp\left\{\left[x\ln(1+x^2)\right]_0^2-\int_0^2\frac{2x^2}{1+x^2}\text{d}x\right\} \\
+&=e^{2(\ln5-2+\arctan 2)}
+\end{aligned}</script>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/10/04/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E7%AD%89%E4%BB%B7%E5%8F%98%E5%BD%A2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1791,297 +1975,6 @@ k=\lim_{x\to \infty}\frac{f(x)}x,b=\lim_{x\to \infty}[f(x)-kx]</script>
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/15/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%AF%BC%E6%95%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/08/15/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%AF%BC%E6%95%B0/" itemprop="url">大一/高数/导数</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-08-15T19:24:31+08:00">
-                2022-08-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="导数"><a href="#导数" class="headerlink" title="导数"></a>导数</h1><h2 id="切线"><a href="#切线" class="headerlink" title="切线"></a>切线</h2><p>本质上是割线两个点趋向一起</p>
-<script type="math/tex; mode=display">
-y-y_0=f'(x_0)(x-x_0)</script><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>若函数$f(x)$在点$x_0$处的某邻域有邻域可导，则</p>
-<script type="math/tex; mode=display">
-\left.\frac{\text{d}f(x)}{\text{d}x}\right|_{x=x_0}=\left.\frac{\text{d}y}{\text{d}x}\right|_{x=x_0}=f'(x_0)
-\\f'(x_0)=\lim_{\Delta x\to0}\frac{f(x_0+\Delta x)-f(x_0)}{\Delta x}</script><p>同理$\Delta x\to0^-/0^+$可用于定义左右导数</p>
-<h3 id="可导"><a href="#可导" class="headerlink" title="可导"></a>可导</h3><p> 左右导数存在且相等(双侧)</p>
-<p>可导一定连续，而连续不一定可导</p>
-<ul>
-<li><p>$y=|x|$有尖点</p>
-</li>
-<li><p>曲线光滑不一定可导</p>
-<p>$y=x^{\frac13},y’=\frac{1}{3x^{\frac23}},x\to0,y’=\infty$</p>
-</li>
-<li><p>导数存在不一定连续可导(导函数连续)</p>
-<script type="math/tex; mode=display">
-f(x)=\begin{cases}x^2\sin \frac1x,x\ne0\\
-0,x=0\end{cases}</script></li>
-</ul>
-<p>$n$阶可导$\Rightarrow$ $n-1$阶连续可导</p>
-<p>上下无穷小必须同阶才可凑出导数形式</p>
-<h3 id="导数极限定理"><a href="#导数极限定理" class="headerlink" title="导数极限定理"></a>导数极限定理</h3><p>如果$ f(x) $在$ x_0 $的邻域内连续，在$ x_0 $的去心领域内可导，且导函数在$ x_0 $出的极限存在，则$ f(x) $在$ x_0 $处的导数也存在并且等于导函数的极限</p>
-<p>导函数左极限存在蕴含左导数存在，导函数右极限存在蕴含右导数存在</p>
-<h2 id="亚导数"><a href="#亚导数" class="headerlink" title="亚导数"></a>亚导数</h2><p>将导数拓展到不可微的函数</p>
-<script type="math/tex; mode=display">
-y=|x|\\
-\frac{\partial|x|}{\partial x}=\left\{\begin{array}{ll}
-1 & \text { if } x>0 \\
--1 & \text { if } x<0 \\
-a & \text { if } x=0,
-\end{array} \quad a \in[-1,1]\right.</script><script type="math/tex; mode=display">
-\frac{\partial}{\partial x}\max(x,0)=\left\{\begin{array}{ll}
-1 & \text { if } x>0 \\
-0 & \text { if } x<0 \\
-a & \text { if } x=0,
-\end{array} \quad a \in[0,1]\right.</script><h2 id="隐函数求导"><a href="#隐函数求导" class="headerlink" title="隐函数求导"></a>隐函数求导</h2><p>等式左右两边看成两个函数</p>
-<script type="math/tex; mode=display">
-f(x)=g(x)\Rightarrow f'(x)=g'(x)</script><h3 id="相关变化率"><a href="#相关变化率" class="headerlink" title="相关变化率"></a>相关变化率</h3><p>两个量具有相关性则它们的变化也具有相关性</p>
-<h2 id="参数方程求导"><a href="#参数方程求导" class="headerlink" title="参数方程求导"></a>参数方程求导</h2><script type="math/tex; mode=display">
-\frac{\text{d}y}{\text{d}x}=\frac{\text{d}y}{\text{d}t}\bigg/\frac{\text{d}x}{\text{d}t}</script><p>结果为关于$t$的函数</p>
-<h3 id="反函数"><a href="#反函数" class="headerlink" title="反函数"></a>反函数</h3><script type="math/tex; mode=display">
-\frac{\text{d}y}{\text{d}x}=1\bigg/\frac{\text{d}x}{\text{d}y}</script><p>结果往往用$y$来表示，但是带入数值结果等价</p>
-<p>(关于$y=x$对称故有此结果)</p>
-<h2 id="高阶导数"><a href="#高阶导数" class="headerlink" title="高阶导数"></a>高阶导数</h2><h3 id="递推定义"><a href="#递推定义" class="headerlink" title="递推定义"></a>递推定义</h3><script type="math/tex; mode=display">
-f^{(n)}(x)=\begin{cases}[f^{(n-1)}(x)]',n\ge 1\\ f(x),n=0\end{cases}</script><script type="math/tex; mode=display">
-(\sin x)^{(n)}=\sin(x+\frac{n\pi}2)\\
-(\cos x)^{(n)}=\cos(x+\frac{n\pi}2)</script><script type="math/tex; mode=display">
-(x^n)^{(n)}=n!,(x^n)^{(n+1)}=0</script><script type="math/tex; mode=display">
-\left(\frac1x\right)^{(n)}=(-1)^n\frac{n!}{x^{n+1}}\\
-\Rightarrow\left(\frac1{ax+b}\right)^{(n)}=({\color{red}{-a}})^n\frac{n!}{(ax+b)^{n+1}}\\</script><h3 id="莱布尼兹公式"><a href="#莱布尼兹公式" class="headerlink" title="莱布尼兹公式"></a>莱布尼兹公式</h3><script type="math/tex; mode=display">
-(uv)^{(n)}=\sum_{i=1}^nC_n^iu^{(n-i)}v^{(i)}</script><p>证明题使用数学归纳法来证明</p>
-<h2 id="相关性质"><a href="#相关性质" class="headerlink" title="相关性质"></a>相关性质</h2><p>$f(x)$可导</p>
-<ul>
-<li>$f(x)$为奇$\Rightarrow f’(x)$为偶(不必要)</li>
-<li>$f(x)$为偶$\Leftrightarrow f’(x)$为奇</li>
-</ul>
-<h1 id="导数公式"><a href="#导数公式" class="headerlink" title="导数公式"></a>导数公式</h1><script type="math/tex; mode=display">
-(x^a)'=ax^{a-1}\\
-(a^x)'=\ln a \cdot a^x
-\\(\log_ax)'=\frac{1}{\ln a\cdot x }\\
-(\sin x)'=\cos x\\
-(\cos x)'=-\sin x</script><script type="math/tex; mode=display">
-[f(x)\pm g(x)]'=f'(x)\pm g'(x) \\
-[f(x)\cdot g(x)]'=f'(x)g(x)+f(x)g'(x)\\
-\left (\frac{f(x)}{g(x)}\right)'=\frac{f'(x)g(x)-f(x)g'(x)}{g^2(x)}\\
-[f(g(x))]'=f'(g(x))\cdot g'(x)</script><script type="math/tex; mode=display">
-\frac {\text{d}}{\text{d}x}(\tan x)=\sec^2x\\
-\frac {\text{d}}{\text{d}x}(\cot x)=-\csc^2x\\
-\frac {\text{d}}{\text{d}x}(\sec x)=\tan x \sec x\\
-\frac {\text{d}}{\text{d}x}(\csc x)=-\cot x \csc x\\</script><script type="math/tex; mode=display">
-\frac {\text{d}}{\text{d}x}(\arcsin x)=\frac1{\sqrt{1-x^2}}\\
-\frac {\text{d}}{\text{d}x}(\arccos x)=-\frac1{\sqrt{1-x^2}}\\
-\frac {\text{d}}{\text{d}x}(\arctan x)=\frac1{1+x^2}\\
-\frac {\text{d}}{\text{d}x}(\text{arccot}  x)=-\frac1{1+x^2}\\
-\frac {\text{d}}{\text{d}x}(\text{arcsec}  x)=\frac1{   { {\color{red}{|x|}}}\sqrt{x^2-1}}\\
-\frac {\text{d}}{\text{d}x}(\text{arccsc}  x)=-\frac1{ {\color{red}{|x|}}\sqrt{x^2-1}}\\
-(\sinh x)'=\left(\frac{e^x-e^{-x}}2\right)'
-=\cosh x\\
-(\cosh x)'=\left(\frac{e^x+e^{-x}}2\right)'
-=\sinh x\\</script><script type="math/tex; mode=display">
-\frac{\text{d}}{\text{d} x} \cosh ^{-1}(x)=\frac{1}{\sqrt{x^{2}-1}}\\
-\frac{\text{d}}{\text{d} x} \sinh ^{-1}(x)=\frac{1}{\sqrt{x^{2}+1}}</script><h1 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h1><h2 id="单调性"><a href="#单调性" class="headerlink" title="单调性"></a>单调性</h2><h3 id="本质定义"><a href="#本质定义" class="headerlink" title="本质定义"></a>本质定义</h3><script type="math/tex; mode=display">
-\forall x_1,x_2\in D,x_1<x_2,f(x_2)-f(x_1)>0\Rightarrow f(x)\uparrow</script><h3 id="充分条件"><a href="#充分条件" class="headerlink" title="充分条件"></a>充分条件</h3><p>若可导函数$f(x)$在$[a,b]$上单调增加，则在区间$(a,b)$上导数$f’(x)&gt;0$</p>
-<p>反过来</p>
-<p>在区间$(a,b)$上导数$f’(x)&gt;0$，则$f(x)$在$[a,b]$上单调增加</p>
-<p>推论只有有限多个导数为$0$的点(驻点)，则这个函数仍单调增加</p>
-<p>讨论三类边界点(驻点，不可导点)</p>
-<p>例$y=(2x-5)\sqrt[3]{x^2}$</p>
-<script type="math/tex; mode=display">
-y'=\frac{10}3\frac{x-1}{\sqrt[3]{x}}</script><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">$x$</th>
-<th style="text-align:center">$(-\infty ,0)$</th>
-<th style="text-align:center">$0$</th>
-<th style="text-align:center">$(0,1)$</th>
-<th style="text-align:center">$1$</th>
-<th style="text-align:center">$(1,\infty)$</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">$f’(x)$</td>
-<td style="text-align:center">$+$</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">$-$</td>
-<td style="text-align:center">$0$</td>
-<td style="text-align:center">$+$</td>
-</tr>
-<tr>
-<td style="text-align:center">$f(x)$</td>
-<td style="text-align:center">$\uparrow$</td>
-<td style="text-align:center">$0$</td>
-<td style="text-align:center">$\downarrow$</td>
-<td style="text-align:center">$-3$</td>
-<td style="text-align:center">$\uparrow$</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h3 id="一般步骤"><a href="#一般步骤" class="headerlink" title="一般步骤"></a>一般步骤</h3><ol>
-<li>求出驻点和不可导点(包括不连续)</li>
-<li>用上述这些点将定义域划分为若干区间</li>
-<li>判断$f’(x)$在每个区间上的符号</li>
-<li>整合结果得到单调性</li>
-</ol>
-<h2 id="凹凸性"><a href="#凹凸性" class="headerlink" title="凹凸性"></a>凹凸性</h2><p><img src="/2022/08/15/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%AF%BC%E6%95%B0/fig4-5-1.png" alt="fig4-5-1"></p>
-<script type="math/tex; mode=display">
-\forall x_1,x_2\in D,f\left(\frac{x_1+x_2}2\right)>\frac{f(x_1)+f(x_2)}2</script><p>则称函数$f(x)$的图像在区间上是凸的或称为凸函数</p>
-<p>推广</p>
-<script type="math/tex; mode=display">
-\forall x_i\in D,f\left(\sum_{i=1}^n\lambda_i x_i\right)>\sum_{i=1}^n\lambda_if(x_i)\quad \sum_{i=1}^n\lambda_i=1</script><h3 id="拐点"><a href="#拐点" class="headerlink" title="拐点"></a>拐点</h3><p>连续曲线上凸弧和凹弧的分界点</p>
-<p><img src="/2022/08/15/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%AF%BC%E6%95%B0/image-20221025112250253.png" alt="image-20221025112250253"></p>
-<p>$f’’(x_0)=0$，则以上点都满足条件</p>
-<p>$ (x_0,f(x_0))$可为有水平切线或为极值点</p>
-<p>在该点不可导但仍可为拐点</p>
-<p>同理$f’’(x_0)=0$还需看三阶导数</p>
-<p>若函数在$x_0$有$2n+1 $阶导数</p>
-<h4 id="第一充分条件"><a href="#第一充分条件" class="headerlink" title="第一充分条件"></a>第一充分条件</h4><p>==$f(x)$在$x_0$处连续==，且在，$\mathring{U}(x_0)$二阶可导</p>
-<script type="math/tex; mode=display">
-x\in\mathring{U}^-(x_0) ,f''(x)>0\\
-x\in\mathring{U}^+(x_0) ,f''(x)<0</script><p>则$ (x_0,f(x_0))$为拐点</p>
-<p>在两侧二阶函数异号</p>
-<h4 id="第二充分条件"><a href="#第二充分条件" class="headerlink" title="第二充分条件"></a>第二充分条件</h4><p>类比$f’’’(x_0)\ne0$</p>
-<h4 id="第三充分条件"><a href="#第三充分条件" class="headerlink" title="第三充分条件"></a>第三充分条件</h4><script type="math/tex; mode=display">
-f'(x_0)=f''(x_0)=\cdots=f^{(2n)}(x_0)=0\\
-f^{(2n+1)}(x_0) <0</script><h2 id="极值"><a href="#极值" class="headerlink" title="极值"></a>极值</h2><p>注意区分费马引理</p>
-<p>若$\exists U(x_0)\subset D$，对于$\forall x\in \mathring{U}(x), f(x_0)&gt;f(x_0)$</p>
-<p>则称$f(x_0)$为函数的一个极大值</p>
-<p>不一定要求连续，有定义就行，例如</p>
-<p><img src="/2022/08/15/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%AF%BC%E6%95%B0/0bd162d9f2d3572c80d42fa39a13632762d0c39f-1667612303206.jpg" alt="0bd162d9f2d3572c80d42fa39a13632762d0c39f"></p>
-<h3 id="极值定理"><a href="#极值定理" class="headerlink" title="极值定理"></a>极值定理</h3><p>$\text{Extreme Value Theorem}$</p>
-<script type="math/tex; mode=display">
-\frac{f(c+h)-f(c)}{h}\\
-A:\lim_{h\to0^+}\cdot\lim_{h\to0^-}<0\\
-B:\lim_{h\to0}=0</script><p>推出若$x_0$为极值点则$f’(x_0)=0$为或不可导</p>
-<h3 id="判别法"><a href="#判别法" class="headerlink" title="判别法"></a>判别法</h3><h4 id="第一充分条件-1"><a href="#第一充分条件-1" class="headerlink" title="第一充分条件"></a>第一充分条件</h4><p>==$f(x)$在$x_0$处连续==，且在，$\mathring{U}(x_0)$可导</p>
-<script type="math/tex; mode=display">
-x\in\mathring{U}^-(x_0) ,f'(x)>0\\
-x\in\mathring{U}^+(x_0) ,f'(x)<0</script><p>在两侧导函数异号</p>
-<h4 id="第二充分条件-1"><a href="#第二充分条件-1" class="headerlink" title="第二充分条件"></a>第二充分条件</h4><p>若函数在$x_0$处有二阶导数</p>
-<script type="math/tex; mode=display">
-f'(x_0)=0,f''(x_0)<0</script><p>则为极大值点</p>
-<h4 id="第三充分条件-1"><a href="#第三充分条件-1" class="headerlink" title="第三充分条件"></a>第三充分条件</h4><script type="math/tex; mode=display">
-f'(x_0)=f''(x_0)=\cdots=f^{(2n-1)}(x_0)=0\\
-f^{(2n)}(x_0) <0</script><p>类比为极小值点</p>
-<h2 id="最值"><a href="#最值" class="headerlink" title="最值"></a>最值</h2><p>在区间$I$上，若对于任意$x\in I$，存在$x_0\in I$，都有$f(x)\le f(x_0)$</p>
-<p>则称$f(x_0)$为函数在该区间上的最大值</p>
-<p>若在闭区间$[a,b]$上连续，有限多个驻点和不可导点</p>
-<p>则计算处各驻点$x_i$和不可导点$x’_j$</p>
-<script type="math/tex; mode=display">
-\max_{x\in[a,b]}f(x)=\max\{f(x_1),\cdots,f(x_i),f(x_1'),\cdots,f(x_j'),f(a),f(b)\}</script>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2132,7 +2025,7 @@ f^{(2n)}(x_0) <0</script><p>类比为极小值点</p>
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">91</span>
+                <span class="site-state-item-count">92</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
