@@ -4088,31 +4088,45 @@ z^n=e^{n\log z}</script><p>$n$可以为复数，即指数为复数</p>
 <p><img src="/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/image-20230209133135226.png" alt="image-20230209133135226"></p>
 <p>对于随机变量$X$和实数$x$，定义事件$X=x$为${s\in S,X(s)=x}$，因此</p>
 <blockquote>
-<p>we will use upper case charactersto denote random variables，and lower case characters to denote real numbers such as the numerical values of a random variable.</p>
+<p>we will use upper case characters to denote random variables， and lower case characters to denote real numbers such as the numerical values of a random variable.</p>
 </blockquote>
 <script type="math/tex; mode=display">
-\Pr\{X=x\}=\sum_{s\in S,X(s)=x}\Pr\{s\}</script><p> 对于随机变量，函数$p_X(x)=\Pr{X=x}$为$X$的概率质量函数PMF</p>
-<p>特别的，对于连续随机变量也称为概率密度函数PDF</p>
+\Pr\{X=x\}=\sum_{s\in S,X(s)=x}\Pr\{s\}</script><p>对于随机变量，函数$p_X(x)=\Pr{X=x}$为$X$的概率质量函数PMF</p>
+<h2 id="PDF"><a href="#PDF" class="headerlink" title="PDF"></a>PDF</h2><p>特别的，对于连续随机变量也称为概率密度函数PDF</p>
 <script type="math/tex; mode=display">
 \Pr\{X\in B\}=\int_Bf_X(x)\text{d}x</script><p>归一化条件为</p>
 <script type="math/tex; mode=display">
 \int_{-\infty}^{+\infty}f_X(x)\text{d}x=1</script><script type="math/tex; mode=display">
 \Pr\{[x,x+\delta ]\}\approx f_X(x)
 \delta</script><p>所以$f_X(x)$可以看成单位长度的概率</p>
-<p>可以把这两种函数整合成一个函数CDF(cumulative distribution function)</p>
+<p>可以把这两种函数整合成一个函数</p>
+<p>即为累积分布函数CDF(cumulative distribution function)</p>
 <script type="math/tex; mode=display">
 F_x(x)=\text{Pr}\{X\le x\}=\begin{cases}\displaystyle\sum_{k\le x}p_X(k) \\\displaystyle\int_{-\infty}^xf_X(x)\text{d}x\end{cases}</script><p><img src="/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/image-20230209223350322.png" alt="image-20230209223350322"></p>
 <p><img src="/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/image-20230209223424967.png" alt="image-20230209223424967" style="zoom:100%;"></p>
-<p> 可以类比积分上限函数，通过差分和求导可以还原</p>
-<p>若有若干个随机变量，则函数</p>
+<p>可以类比积分上限函数，通过差分和求导可以还原</p>
+<p>若有若干个随机变量，即为多维随机变量</p>
+<p>则有联合PMF</p>
 <script type="math/tex; mode=display">
-p_{X,Y}(x,y)=\Pr\{X=x且Y=y\}</script><p>为$X$与$Y$的联合概率密度函数，性质同理，如</p>
+p_{X,Y}(x,y)=\Pr\{X=x且Y=y\}\\
+p_{X}(x)=\Pr\{X[1]=x[1],\cdots,X[d]=x[d]\}\\
+\sum_{x[1]\in X_1}\sum_{x[2]\in X_2} \cdots\sum_{x[d]\in X_d}=1</script><p>为$X$与$Y$的联合概率密度函数，性质同理，</p>
+<p>如边缘$\rm PMF$</p>
 <script type="math/tex; mode=display">
 \begin{aligned}\Pr\{Y=y\}&=\sum_x\Pr\{X=x且Y=y\}(y为定值)\\&=\sum _xp_{X,Y}(x,y)\end{aligned}\\</script><script type="math/tex; mode=display">
 p_Z(z)=\sum_{\{z|z=g(x,y)\}}p_{X,Y}(x,y)\\
 \text{E}[g(X, Y)]=\sum_{x} \sum_{y} g(x, y) p_{X, Y}(x, y)</script><h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><script type="math/tex; mode=display">
 Y=g(X)\\p_Y(y)=\sum_{\{x|g(x)=y\}}p_X(x)</script><p><img src="/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/image-20230209180813949.png" alt="image-20230209180813949"></p>
-<h2 id="随机变量的期望值"><a href="#随机变量的期望值" class="headerlink" title="随机变量的期望值"></a>随机变量的期望值</h2><script type="math/tex; mode=display">
+<h3 id="边缘函数"><a href="#边缘函数" class="headerlink" title="边缘函数"></a>边缘函数</h3><p>设$(X,Y)$的联合分布为$F(X,Y)$则</p>
+<script type="math/tex; mode=display">
+F_X(x)=P(X\le x)</script><p>为随机变量$X$的边缘分布函数</p>
+<script type="math/tex; mode=display">
+f_X(x)=\int_{-\infty}^{+\infty}f(x,y)\text dy</script><p>为边缘密度函数</p>
+<p>利用定义可以求$Z=g(X,Y)$的分布</p>
+<script type="math/tex; mode=display">
+F_Z(z)=\iint_{g(x,y)\le z}f(x,y)\text dx\text dy</script><p>从而有</p>
+<script type="math/tex; mode=display">
+f_Z(z)=\frac{\text d F_Z(z)}{\text d z}</script><h2 id="随机变量的期望值"><a href="#随机变量的期望值" class="headerlink" title="随机变量的期望值"></a>随机变量的期望值</h2><script type="math/tex; mode=display">
 \text E[X]=\sum_xx\cdot\Pr\{X=x\}\\
 \text E[g(X)]=\sum_xg(x)\cdot\Pr\{X=x\}\\</script><p>对于连续的随机变量</p>
 <script type="math/tex; mode=display">
@@ -4125,7 +4139,8 @@ Y=g(X)\\p_Y(y)=\sum_{\{x|g(x)=y\}}p_X(x)</script><p><img src="/2022/07/23/%E5%A4
 \text{Var}[X]=\text{E}[(X-\text{E}[X])^2]=\text{E}[X^2]-\text{E}^2[X]\\
 \text{Var}[aX+b]=a^2\text{Var}[X]</script><p>对于连续的随机变量</p>
 <script type="math/tex; mode=display">
-\text{Var}[X]=\int_{-\infty}^{+\infty}(x-\text{E}[X])^2f_X(x)\text{d}x\\</script><p>若相互独立</p>
+\text{Var}[X]=\int_{-\infty}^{+\infty}(x-\text{E}[X])^2f_X(x)\text{d}x\\</script><script type="math/tex; mode=display">
+\text{Var}[X\pm Y]=\text{Var}[X]+\text{Var}[Y]\pm2E[(X-E[X])(Y-E[Y])]</script><p>若相互独立</p>
 <script type="math/tex; mode=display">
 \text{Var}[X+Y]=\text{Var}[X]+\text{Var}[Y]\\
 \text{Var}[\sum_{i=1}^nX_i]=\sum_{i=1}^n\text{Var}[X_i]</script><script type="math/tex; mode=display">
@@ -4134,35 +4149,140 @@ Y=g(X)\\p_Y(y)=\sum_{\{x|g(x)=y\}}p_X(x)</script><p><img src="/2022/07/23/%E5%A4
 &=\text{Var}[X]\text{Var}[Y]+\text{E}^2[Y]\text{Var}[X]+\text{E}^2[X]\text{Var}[Y]
 \end{aligned}</script><p> 标准差</p>
 <script type="math/tex; mode=display">
-\sigma_X=\sqrt{\text{var}(X) }</script><h2 id="条件"><a href="#条件" class="headerlink" title="条件"></a>条件</h2><p>conditional PMF</p>
+\sigma_X=\sqrt{\text{var}(X) }</script><h3 id="矩"><a href="#矩" class="headerlink" title="矩"></a>矩</h3><p>随机变量使用概率密度函数描述，概率密度函数具有一个特性，称为 <strong>矩 Moment</strong>，矩是随机变量幂的期望。我们重点关注两种矩：</p>
+<ul>
+<li>$k$阶原点矩，$\text E\left[ X^{k} \right]$</li>
+<li>$k$阶中心距，$\text E\left[ (X-\text E[x]) \right]^{k}$</li>
+</ul>
+<h2 id="随机矩阵"><a href="#随机矩阵" class="headerlink" title="随机矩阵"></a>随机矩阵</h2><p>对于矩阵$\tilde{X}(d_1,d_2)$，其均值为</p>
+<script type="math/tex; mode=display">
+\mathrm{E}(\tilde{X}):=\begin{bmatrix}\mathrm{E}\left(\tilde{X}[1,1]\right)&\mathrm{E}\left(\tilde{X}[1,2]\right)&\cdots&\mathrm{E}\left(\tilde{X}[1,d_2]\right)\\\mathrm{E}\left(\tilde{X}[2,1]\right)&\mathrm{E}\left(\tilde{X}[2,2]\right)&\cdots&\mathrm{E}\left(\tilde{X}[2,d_2]\right)\\&&\cdots\\\mathrm{E}\left(\tilde{X}[d_1,1]\right)&\mathrm{E}\left(\tilde{X}[d_1,2]\right)&\cdots&\mathrm{E}\left(\tilde{X}[d_1,d_2]\right)\end{bmatrix}</script><p>线性性质</p>
+<script type="math/tex; mode=display">
+\mathrm{E}(A\tilde x+B)=A\mathrm{E}(\tilde x) +B</script><h2 id="独立"><a href="#独立" class="headerlink" title="独立"></a>独立</h2><p>若对于一切$x,y$</p>
+<script type="math/tex; mode=display">
+F(x,y)=F_X(x)F_Y(y)</script><p>则称两随机变量相互独立</p>
+<h3 id="卷积"><a href="#卷积" class="headerlink" title="卷积"></a>卷积</h3><script type="math/tex; mode=display">
+Z=X+Y</script><p>则有</p>
+<script type="math/tex; mode=display">
+f_Z(z)=\int_{-\infty}^\infty f_X(x)f_{Y}(z-x)\text dx</script><h3 id="协方差"><a href="#协方差" class="headerlink" title="协方差"></a>协方差</h3><script type="math/tex; mode=display">
+\mathbf{Cov}(X,Y)=E\{[X-E(X)][Y-E[Y]]\}</script><p>类比有</p>
+<script type="math/tex; mode=display">
+\mathbf{Cov}(X,Y)=E(XY)-E(X)E(Y)</script><p>相关系数</p>
+<script type="math/tex; mode=display">
+\mathbf{Corr}(X,Y)=\frac{\mathbf{Cov}(X,Y)}{\sqrt{\mathbf{Var}(X)}\sqrt{\mathbf{Var}(Y)}}</script><h2 id="条件"><a href="#条件" class="headerlink" title="条件"></a>条件</h2><p>conditional PMF</p>
 <script type="math/tex; mode=display">
 p_{X|A}=\frac{\text{Pr}\{\{X=x\}\cap A \}}{\text{Pr}\{A\}}</script><p><img src="/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/image-20230209195032570.png" alt="image-20230209195032570"></p>
 <p>可以将A推广为一个随机变量</p>
 <script type="math/tex; mode=display">
 p_{X|Y}(x,y)=\frac{p_{X,Y}(x,y)}{p_Y(y)}</script><p><img src="/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/image-20230209195505072.png" alt="image-20230209195505072"></p>
 <script type="math/tex; mode=display">
-\sum_{x} p_{X \mid Y}(x \mid y)=1</script><h2 id="分布"><a href="#分布" class="headerlink" title="分布"></a>分布</h2><h3 id="几何分布"><a href="#几何分布" class="headerlink" title="几何分布"></a>几何分布</h3><p>前面一直没有成功直到第n次才成功</p>
+\sum_{x} p_{X \mid Y}(x \mid y)=1</script><h2 id="分布"><a href="#分布" class="headerlink" title="分布"></a>分布</h2><h3 id="离散"><a href="#离散" class="headerlink" title="离散"></a>离散</h3><h4 id="几何分布"><a href="#几何分布" class="headerlink" title="几何分布"></a>几何分布</h4><p>前面一直没有成功直到第n次才成功</p>
 <p><img src="/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/image-20230209135132169.png" alt="image-20230209135132169"></p>
 <script type="math/tex; mode=display">
 \Pr\{X=k\}=(1-p)^{n-1}p\\
-\text E[x]=\sum_{k=1}^\infty(1-p)^{k-1}pk=1/p</script><h3 id="二项分布"><a href="#二项分布" class="headerlink" title="二项分布"></a>二项分布</h3><p>区别于国内表达，组合数记为</p>
+\text E[x]=\sum_{k=1}^\infty(1-p)^{k-1}pk=1/p</script><h4 id="二项分布"><a href="#二项分布" class="headerlink" title="二项分布"></a>二项分布</h4><p>区别于国内表达，组合数记为</p>
 <script type="math/tex; mode=display">
 \left(\begin{array}{l}n\\k\end{array}\right)=C_n^k</script><p>读作$n$取$k$</p>
 <script type="math/tex; mode=display">
 \Pr\{X=k\}=\left(\begin{array}{l}n\\k\end{array}\right)p^k(1-p)^{n-k}\\
 \text E[X]=np\\
-\text{Var}[X]=np(1-p)</script><h3 id="泊松分布"><a href="#泊松分布" class="headerlink" title="泊松分布"></a>泊松分布</h3><script type="math/tex; mode=display">
+\text{Var}[X]=np(1-p)</script><h4 id="泊松分布"><a href="#泊松分布" class="headerlink" title="泊松分布"></a>泊松分布</h4><p>在某段时间内事件发生的概率为</p>
+<script type="math/tex; mode=display">
+p=\lambda t</script><p>则$t=0\to1$发生的次数可以表示为</p>
+<p><img src="/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/image-20240129160556102.png" alt="image-20240129160556102"></p>
+<script type="math/tex; mode=display">
 p_X(k)=e^{-\lambda}\frac{\lambda^k}{k!}\\
-\sum_{k=0}^{\infty} e^{-\lambda} \frac{\lambda^{k}}{k !}=e^{-\lambda}\left(1+\lambda+\frac{\lambda^{2}}{2 !}+\frac{\lambda^{3}}{3 !}+\cdots\right)=e^{-\lambda} e^{\lambda}=1\\
-EX=\lambda</script><h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><h3 id="指数随机变量"><a href="#指数随机变量" class="headerlink" title="指数随机变量"></a>指数随机变量</h3><script type="math/tex; mode=display">
- f_{X}(x)=\left\{\begin{array}{ll}
+\sum_{k=0}^{\infty} e^{-\lambda} \frac{\lambda^{k}}{k !}=e^{-\lambda}\left(1+\lambda+\frac{\lambda^{2}}{2 !}+\frac{\lambda^{3}}{3 !}+\cdots\right)=e^{-\lambda} e^{\lambda}=1\\</script><h3 id="连续"><a href="#连续" class="headerlink" title="连续"></a>连续</h3><h4 id="均匀分布"><a href="#均匀分布" class="headerlink" title="均匀分布"></a>均匀分布</h4><p><img src="/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/image-20240628110619661.png" alt="image-20240628110619661"></p>
+<script type="math/tex; mode=display">
+f_X(x)=\begin{cases}\frac{1}{b-a},&a\leq x\leq b,\\0,&\text{otherwise,}\end{cases}</script><p>记为$X\sim U(a,b)$</p>
+<p>则可以写出分布的期望和方差</p>
+<script type="math/tex; mode=display">
+\mathbf{E}[X]=\frac{a+b}{2}\\
+\mathbf{Var}[X]=\frac{(b-a)^2}{12}</script><h4 id="指数分布"><a href="#指数分布" class="headerlink" title="指数分布"></a>指数分布</h4><script type="math/tex; mode=display">
+f_{X}(x)=\left\{\begin{array}{ll}
 \lambda e^{-\lambda x}, & \text { if } x \geq 0 \\
 0, & \text { otherwise }
-\end{array}\right.</script><script type="math/tex; mode=display">
-\text{E}[X]=\frac{1}{\lambda}, \quad \operatorname{Var}(X)=\frac{1}{\lambda^{2}}</script><p>其中$\lambda$是参数可以用来调控均值，这个模型用途很广</p>
-<h3 id="正态随机变量"><a href="#正态随机变量" class="headerlink" title="正态随机变量"></a>正态随机变量</h3><script type="math/tex; mode=display">
+\end{array}\right.</script><p>记为$X\sim E(\lambda)$</p>
+<p>其中$\lambda$是参数可以用来调控均值，这个模型用途很广</p>
+<p><img src="/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/image-20240129222957601.png" alt="image-20240129222957601"></p>
+<p>类似与几何分布的情况，只不过用到了泊松分布的假设</p>
+<script type="math/tex; mode=display">
+\mathbf{E}(X)=\frac1\lambda,\text{var}=\frac1{\lambda^2}</script><h4 id="正态分布"><a href="#正态分布" class="headerlink" title="正态分布"></a>正态分布</h4><p>自然界许多现象都遵循 <strong>正态分布 Normal Distribution</strong>。正态分布又称为 <strong>高斯分布 Gaussian Distribution</strong> （纪念著名数学家卡尔·弗莱德利希·高斯），其表达式如下：</p>
+<script type="math/tex; mode=display">
+f \left( x; \mu , \sigma ^{2} \right) = \frac{1}{\sqrt[]{2 \pi  \sigma ^{2}}}e^{\frac{- \left( x- \mu  \right) ^{2}}{2 \sigma ^{2}}}</script><p><img src="/2022/07/23/%E5%A4%A7%E4%B8%80/%E6%A6%82%E7%8E%87%E8%AE%BA/%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/image-20240123220759348.png" alt="image-20240123220759348"></p>
+<p>记为$X\sim N(\mu,\sigma^2)$，若$\mu=\sigma=1$则为标准正态分布</p>
+<script type="math/tex; mode=display">
 f_X(x)=\frac1{\sqrt{2\pi}\sigma}e^{-(x-\mu)^2/2\sigma^2}</script><script type="math/tex; mode=display">
-\text{E}[X]=\mu, \quad \operatorname{Var}(X)=\sigma^{2}</script>]]></content>
+\text{E}[X]=\mu, \quad \operatorname{Var}(X)=\sigma^{2}</script><p>可以利用标准正态分布函数来计算概率</p>
+<script type="math/tex; mode=display">
+P(a<X<b)=\Phi\left(\frac{b-\mu}\sigma\right)-\Phi\left(\frac{a-\mu}\sigma\right)</script><p>可加性</p>
+<script type="math/tex; mode=display">
+kX+lY\sim N(k\mu_1+l\mu_2,k^2\sigma_1^2+l^2\sigma_2^2)</script><h5 id="分位数"><a href="#分位数" class="headerlink" title="分位数"></a>分位数</h5><script type="math/tex; mode=display">
+\Phi(u_p)=P(X\le u_p)=p</script><p> 则称$u_p$为标准正态分布的$p$分位数</p>
+<script type="math/tex; mode=display">
+\Phi(-u_p)=1-p</script><h4 id="最值"><a href="#最值" class="headerlink" title="最值"></a>最值</h4><p>$X_i$服从同一分布，则</p>
+<script type="math/tex; mode=display">
+U=\max\{X_i\},V=\min\{X_i\}\\
+f_U(x)=n[f(x)]^{n-1}f(x)\\
+f_V(x)=n[1-f(x)]^{n-1}f(x)</script><h3 id="数字特征"><a href="#数字特征" class="headerlink" title="数字特征"></a>数字特征</h3><h4 id="偏度"><a href="#偏度" class="headerlink" title="偏度"></a>偏度</h4><script type="math/tex; mode=display">
+\beta_s(X)=\frac{E\{[X-\mathbf E(X)]^3\}}{[\mathbf{Var}[X]]^{3/2}}</script><p>$\beta_s(X)&lt;0$为左偏，左侧有较长的尾部，反之同理</p>
+<h4 id="峰度"><a href="#峰度" class="headerlink" title="峰度"></a>峰度</h4><script type="math/tex; mode=display">
+\beta_k(X)=\frac{E\{[X-\mathbf E(X)]^4\}}{[\mathbf{Var}[X]]^{2}}-3</script><p>峰度和正态分布比较</p>
+<h4 id="变异系数"><a href="#变异系数" class="headerlink" title="变异系数"></a>变异系数</h4><script type="math/tex; mode=display">
+C_v(X)=\frac{\sigma(X)}{|E(X)|}</script><p>用均值标准化</p>
+<h2 id="中心极限定理"><a href="#中心极限定理" class="headerlink" title="中心极限定理"></a>中心极限定理</h2><p>样本均值</p>
+<script type="math/tex; mode=display">
+\overline{X}=\frac1n\sum_{i=1}^nX_i\sim N\left(\mu,\frac{\sigma^2}n\right)\\
+\overline{Y_n}=\frac{\overline{X}-\mu}{\frac{\sigma}{\sqrt{n}}}\sim N(0,1)</script><h3 id="chi-2-分布"><a href="#chi-2-分布" class="headerlink" title="$\chi ^2$分布"></a>$\chi ^2$分布</h3><p>若$X_i$服从标准正态，则$U$服从自由度为$n$的$\chi ^2$分布</p>
+<script type="math/tex; mode=display">
+U=\sum_{i=1}^nX_i^2\sim\chi^2(n)\\
+\mathbf E(U)=n,\mathbf{Var}(U)=2n</script><p>样本方差</p>
+<script type="math/tex; mode=display">
+S^2=\frac1{n-1}\sum_{i=1}^n(X_i-\overline X)^2\\\frac{(n-1)S^2}{\sigma^2}\sim\chi^2(n-1)</script><p>$\overline X$和$S^2$相互独立</p>
+<p>可加性</p>
+<script type="math/tex; mode=display">
+U_1\sim \chi^2(m),U_2\sim \chi^2(n)\\
+U_1+U_2\sim \chi^2(m+n)</script><h3 id="t-分布"><a href="#t-分布" class="headerlink" title="$t$分布"></a>$t$分布</h3><p>若$X\sim N(0,1),Y\sim \chi^2(n)$</p>
+<script type="math/tex; mode=display">
+T= \frac{X}{\sqrt{Y/n}}\sim t(n)</script><h3 id="F分布"><a href="#F分布" class="headerlink" title="F分布"></a>F分布</h3><script type="math/tex; mode=display">
+U\sim\chi^2(m),V\sim\chi^2(n)
+\\F=\frac{U/m}{V/n}\sim F(m,n)</script><h2 id="参数估计"><a href="#参数估计" class="headerlink" title="参数估计"></a>参数估计</h2><h3 id="矩估计"><a href="#矩估计" class="headerlink" title="矩估计"></a>矩估计</h3><p>用样本矩来估计总体矩</p>
+<script type="math/tex; mode=display">
+a_k=\frac1n\sum_{j=1}^nx_j^k</script><h3 id="最大似然估计"><a href="#最大似然估计" class="headerlink" title="最大似然估计"></a>最大似然估计</h3><script type="math/tex; mode=display">
+L(\theta)=\prod_{i=1}^nf(x_i;\theta)</script><p>最大化</p>
+<script type="math/tex; mode=display">
+\frac{\text d}{\text d\theta }\ln L(\theta)=0</script><h3 id="评选标准"><a href="#评选标准" class="headerlink" title="评选标准"></a>评选标准</h3><p>无偏</p>
+<script type="math/tex; mode=display">
+E[\hat{\theta}(X_i)]=\theta</script><p>渐近无偏</p>
+<script type="math/tex; mode=display">
+\lim_{n\to\infty}E[\hat{\theta}(X_i)]=\theta</script><p>相合</p>
+<p>无偏或渐近无偏且</p>
+<script type="math/tex; mode=display">
+\lim_{n\to\infty}\mathbf{Var}[\hat{\theta}(X_i)]=0</script><h3 id="置信区间"><a href="#置信区间" class="headerlink" title="置信区间"></a>置信区间</h3><p>枢轴变量</p>
+<script type="math/tex; mode=display">
+G=\frac{\sqrt{n}(\overline{X}-\mu)}\sigma\sim N(0,1)</script><p>若方差已知，双侧</p>
+<script type="math/tex; mode=display">
+\left[\overline{X}-u_{1-\frac{\alpha}{2}}\frac{\sigma }{\sqrt{n}}
+,
+\overline{X}+u_{1-\frac{\alpha}{2}}\frac{\sigma }{\sqrt{n}}\right]</script><p>单侧</p>
+<script type="math/tex; mode=display">
+\left[\overline{X}-u_{1-\alpha}\frac{\sigma }{\sqrt{n}}
+,
++\infty\right)</script><p>方差未知，用样本来估计</p>
+<script type="math/tex; mode=display">
+\left[\overline{X}-t_{1-\frac{\alpha}{2}}(n-1)\frac{S }{\sqrt{n}}
+,
+\overline{X}+t_{1-\frac{\alpha}{2}}(n-1)\frac{S }{\sqrt{n}}\right]</script><p>方差置信区间</p>
+<script type="math/tex; mode=display">
+\frac{1}{\sigma^2}\sum\limits_{i=1}^n(X_i-\mu)^2 \sim \chi^2(n)</script><p>可得</p>
+<script type="math/tex; mode=display">
+\left[\frac{\sum\limits_{i=1}^n(X_i-\mu)^2}{\chi^2_{1-\frac{\alpha}{2}}(n)}
+,
+\frac{\sum\limits_{i=1}^n(X_i-\mu)^2}{\chi^2_{\frac{\alpha}{2}}(n)}\right]</script><p>若方差未知则</p>
+<script type="math/tex; mode=display">
+\left[\frac{(n-1)S^2}{\chi^2_{1-\frac{\alpha}{2}}(n-1)}
+,
+\frac{(n-1)S^2}{\chi^2_{\frac{\alpha}{2}}(n-1)}\right]</script>]]></content>
   </entry>
   <entry>
     <title>大一/复变函数/积分</title>
@@ -5519,8 +5639,23 @@ AB,BA正定</script><h1 id="结论"><a href="#结论" class="headerlink" title="
 \left.\mathbf{q}=\left[\begin{array}{cccc}q_0&&q_1&&q_2&&q_3\end{array}\right.\right]^T</script><p>定义$\psi$, $\theta$, $\phi$分别为绕Z轴、Y轴、X轴的旋转角度</p>
 <p>称为欧拉角</p>
 <script type="math/tex; mode=display">
-\left.\left[\begin{array}{c}\phi\\\theta\\\psi\end{array}\right.\right]=\left[\begin{array}{c}\arctan\frac{2(q_0q_1+q_2q_3)}{1-2(q_1^2+q_2^2)}\\\arcsin(2(q_0q_2-q_3q_1))\\\arctan\frac{2(q_0q_3+q_1q_2)}{1-2(q_2^2+q_3^2)}\end{array}\right]</script><h1 id="DH"><a href="#DH" class="headerlink" title="DH"></a>DH</h1><script type="math/tex; mode=display">
-\begin{aligned}&_{i-1}\mathbf{T}_i=\mathbf{D}_{z_i-1},_{d_i}\mathbf{R}_{z_i-1},_{\theta_i}\mathbf{D}_{x_i-1},_{a_i}\mathbf{R}_{x_i-1},_{\alpha_i}=\begin{pmatrix}\cos\theta_i&-\sin\theta_i\cos\alpha_i&\sin\theta_i\sin\alpha_i&a_i\cos\theta_i\\\sin\theta_i&\cos\theta_i\cos\alpha_i&-\cos\theta_i\sin\alpha_i&a_i\sin\theta_i\\0&\sin\alpha_i&\cos a_i&d_i\\0&0&0&1\end{pmatrix}\end{aligned}</script><script type="math/tex; mode=display">
+\left.\left[\begin{array}{c}\phi\\\theta\\\psi\end{array}\right.\right]=\left[\begin{array}{c}\arctan\frac{2(q_0q_1+q_2q_3)}{1-2(q_1^2+q_2^2)}\\\arcsin(2(q_0q_2-q_3q_1))\\\arctan\frac{2(q_0q_3+q_1q_2)}{1-2(q_2^2+q_3^2)}\end{array}\right]</script><p>欧拉角转四元数</p>
+<script type="math/tex; mode=display">
+\begin{cases}z=\sin\left(\frac\theta2\right)\\
+w=\cos\left(\frac\theta2\right)\end{cases}</script><script type="math/tex; mode=display">
+\mathbf{q}=\begin{bmatrix}\cos\frac \theta2\\\mathbf{u}\mathrm{sin}\frac \theta2\end{bmatrix},\mathbf{u}=\begin{bmatrix}
+ 1\\0
+ \\0
+
+\end{bmatrix}</script><p>四元数旋转公式</p>
+<script type="math/tex; mode=display">
+\mathbf{v}^{\prime}=\mathbf{qvq}^{*}</script><p>复合性质</p>
+<script type="math/tex; mode=display">
+\begin{array}{b}\mathbf{v}^{\prime\prime}&=\mathbf{q}_{2}\left(\mathbf{q}_{1}\mathbf{v}\mathbf{q}_{1}^{*}\right)\mathbf{q}_{2}{}^{*}\\
+&=\left(\mathbf{q}_2\mathbf{q}_1\right)\mathbf{v}\left(\mathbf{q}_2\mathbf{q}_1\right)^*\end{array}</script><script type="math/tex; mode=display">
+\mathbf{q}_{\mathrm{d}}=\Delta\mathbf{q}\cdot\mathbf{q}_{\mathrm{s}}\\
+\mathbf{q}_\mathrm{d}\cdot\left(\mathbf{q}_\mathrm{s}\right)^{-1}=\Delta\mathbf{q}\cdot\mathbf{q}_\mathrm{s}\cdot\left(\mathbf{q}_\mathrm{s}\right)^{-1}\\\Delta\mathbf{q}=\mathbf{q}_\mathrm{d}\cdot\left(\mathbf{q}_\mathrm{s}\right)^{-1}</script><h1 id="DH"><a href="#DH" class="headerlink" title="DH"></a>DH</h1><script type="math/tex; mode=display">
+_{i-1}\mathbf{T}_i=\mathbf{D}_{z_i-1},_{d_i}\mathbf{R}_{z_i-1},_{\theta_i}\mathbf{D}_{x_i-1},_{a_i}\mathbf{R}_{x_i-1},_{\alpha_i}=\begin{pmatrix}\cos\theta_i&-\sin\theta_i\cos\alpha_i&\sin\theta_i\sin\alpha_i&a_i\cos\theta_i\\\sin\theta_i&\cos\theta_i\cos\alpha_i&-\cos\theta_i\sin\alpha_i&a_i\sin\theta_i\\0&\sin\alpha_i&\cos a_i&d_i\\0&0&0&1\end{pmatrix}</script><script type="math/tex; mode=display">
 \begin{array}{cccc}
 \text{Joint} & \theta & d & a & \alpha \\
 \hline
@@ -5530,7 +5665,16 @@ AB,BA正定</script><h1 id="结论"><a href="#结论" class="headerlink" title="
 4 & 0 & 0 & 0.1075 & 0 \\
 5 & 0 & 0 & 0.074 & -\frac{\pi}{2} \\
 6 & 0 & 0.05 & 0 & 0 \\
-\end{array}</script><h1 id="3R机械臂"><a href="#3R机械臂" class="headerlink" title="3R机械臂"></a>3R机械臂</h1><p><img src="/2023/11/15/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E4%BA%BA/%E6%95%B0%E5%AD%A6/image-20231118102420171.png" alt="image-20231118102420171" style="zoom:67%;"></p>
+\end{array}</script><h2 id="5dof"><a href="#5dof" class="headerlink" title="5dof"></a>5dof</h2><script type="math/tex; mode=display">
+\begin{array}{cccc}
+\text{Joint} & \theta & d & a & \alpha \\
+\hline
+0 & \theta_0 & 0 & 0 & \frac{\pi}{2} \\
+1 & \theta_1 & 0 & L_1 & 0 \\
+2 & \theta_2 & 0 & L_2 & 0 \\
+3 & \theta_3 & 0 & L_3 & 0 \\
+4 & \theta_4 & 0 & 0 & \frac{\pi}{2} \\
+\end{array}</script><h1 id="3dof机械臂"><a href="#3dof机械臂" class="headerlink" title="3dof机械臂"></a>3dof机械臂</h1><p><img src="/2023/11/15/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E4%BA%BA/%E6%95%B0%E5%AD%A6/image-20231118102420171.png" alt="image-20231118102420171" style="zoom:67%;"></p>
 <script type="math/tex; mode=display">
 \begin{align*}
 B_x &= x - L_3\cos(\gamma) \\
@@ -5539,7 +5683,7 @@ B_y &= y - L_3\sin(\gamma) \\
 \alpha &= \operatorname{atan2}(B_y, B_x)\\
 \theta_1&=\alpha\pm\beta\\
 \gamma&= \theta_1 + \theta_2 +\theta_3
-\end{align*}</script><h3 id="雅可比矩阵"><a href="#雅可比矩阵" class="headerlink" title="雅可比矩阵"></a>雅可比矩阵</h3><script type="math/tex; mode=display">
+\end{align*}</script><h2 id="雅可比矩阵"><a href="#雅可比矩阵" class="headerlink" title="雅可比矩阵"></a>雅可比矩阵</h2><script type="math/tex; mode=display">
 J_i=\begin{bmatrix}\hat z\times \vec d[:2]\\1\end{bmatrix}\\
 \begin{bmatrix}v_x\\v_y\\ \omega\end{bmatrix}=J\begin{bmatrix}\dot q_1\\\dot q_2\\ \dot q_3\end{bmatrix}</script><script type="math/tex; mode=display">
 \begin{bmatrix}\text d  q_1\\\text d q_2\\ \text d q_3\end{bmatrix}=J^{-1}\begin{bmatrix}\text dv_x\\\text dv_y\\ \text d\omega\end{bmatrix}</script>]]></content>
@@ -5716,9 +5860,10 @@ EIy''=-M(x)</script><p>进行积分，带入边界条件尽可能早的确定常
 <p>如固定端$\theta,y=0$，铰链左右转角相等  等等</p>
 <p>利用叠加法首先将所有的载荷等效到一段</p>
 <p>用相差一个刚体位移的方法进行计算</p>
-<p><img src="https://view-cache.book118.com/view19/M03/03/3D/wKh2D2FegPuAeTSfAACBPMePfSk851.png" alt="img"></p>
+<p><img src="/2024/01/15/%E5%A4%A7%E4%BA%8C/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/image-20240116150852591.png" alt="image-20240116150852591"></p>
 <h1 id="应力状态分析"><a href="#应力状态分析" class="headerlink" title="应力状态分析"></a>应力状态分析</h1><p><img src="/2024/01/15/%E5%A4%A7%E4%BA%8C/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/image-20240115162700013.png" alt="image-20240115162700013" style="zoom:50%;"></p>
 <p>正应力以拉为正，压为负</p>
+<p>切应力以外法线顺时针旋转</p>
 <p>对任意角度，有</p>
 <script type="math/tex; mode=display">
 \sigma_\alpha=\frac{\sigma_x+\sigma_y}2+\frac{\sigma_x-\sigma_y}2\cos2\alpha-\tau_x\sin2\alpha\\
@@ -5730,7 +5875,8 @@ EIy''=-M(x)</script><p>进行积分，带入边界条件尽可能早的确定常
 <script type="math/tex; mode=display">
 (\sigma_x,\tau_x),(\sigma_y,\tau_y)</script><p>对于切应力极值，与主平面呈45度角，此时正应力为</p>
 <script type="math/tex; mode=display">
-\sigma=\frac{\sigma_x+\sigma_y}2</script><p>对于空间应力，$\sigma_z\ne0,\tau_z=0$</p>
+\sigma_O=\frac{\sigma_x+\sigma_y}2\\
+R=\sqrt{\left(\frac{\sigma_x-\sigma_y}2\right)^2+\tau_x^2}</script><p>对于空间应力，$\sigma_z\ne0,\tau_z=0$</p>
 <p>所以$z$已经是主平面，求处另外两个主应力，画在一起</p>
 <p>为三向应力圆</p>
 <h2 id="强度理论"><a href="#强度理论" class="headerlink" title="强度理论"></a>强度理论</h2><p>主应力按照从大到小的顺序排列后</p>
@@ -5746,7 +5892,7 @@ EIy''=-M(x)</script><p>进行积分，带入边界条件尽可能早的确定常
 ]}{[\sigma_c]}\sigma_3</script><p>特别的，对于单向</p>
 <script type="math/tex; mode=display">
 \sigma_{\mathrm{r3}}=\sqrt{\sigma^2+4\tau^2}\\
-\sigma_{\mathrm{r4}}=\sqrt{\sigma^2+4\tau^2}</script><p>更特别的</p>
+\sigma_{\mathrm{r4}}=\sqrt{\sigma^2+3\tau^2}</script><p>更特别的</p>
 <script type="math/tex; mode=display">
 \sigma_{r3}=\frac{\sqrt{M^2+T^2}}{W_z}\\ \sigma_{r4}=\frac{\sqrt{M^2+0.75T^2}}{W_z}</script><p>切应力主要为扭矩产生，正应力主要为弯矩产生</p>
 <h1 id="组合变形"><a href="#组合变形" class="headerlink" title="组合变形"></a>组合变形</h1><p>分别在$x,y$方向上画弯矩图</p>
@@ -5784,5 +5930,126 @@ F_{cr}=\frac{\pi^2EI}{(\mu l)^2}</script><p>引入柔度的概念</p>
 \sigma_{\rm cr}=a_1-b_1\lambda</script><p>或者</p>
 <script type="math/tex; mode=display">
 \sigma_{\rm cr}=a_1-b_1\lambda^2</script>]]></content>
+  </entry>
+  <entry>
+    <title>大二/机器人/isaac sim</title>
+    <url>/2024/04/19/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E4%BA%BA/isaac%20sim/</url>
+    <content><![CDATA[<h1 id="Api"><a href="#Api" class="headerlink" title="Api"></a>Api</h1><h3 id="World"><a href="#World" class="headerlink" title="World"></a>World</h3><p>World is the core class that enables you to interact with the simulator in an easy and modular way. It takes care of many time-related events such as adding callbacks, stepping physics, resetting the scene, adding tasks, etc. The World class is a Singleton which means ==only one World can exist== while running Omniverse Isaac Sim. Query the World for information about the simulation from different extensions.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> omni.isaac.examples.base_sample <span class="keyword">import</span> BaseSample <span class="comment">#boiler plate of a robotics extension application</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span><span class="params">(BaseSample)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span> -&gt; <span class="keyword">None</span>:</span></span><br><span class="line">        super().__init__()</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># This function is called to setup the assets in the scene for the first time</span></span><br><span class="line">    <span class="comment"># Class variables should not be assigned here, since this function is not called</span></span><br><span class="line">    <span class="comment"># after a hot-reload, its only called to load the world starting from an EMPTY stage</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">setup_scene</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment"># A world is defined in the BaseSample, can be accessed everywhere EXCEPT __init__</span></span><br><span class="line">        world = self.get_world()</span><br><span class="line">        <span class="keyword">return</span></span><br></pre></td></tr></table></figure>
+<h3 id="Dynamic-Control"><a href="#Dynamic-Control" class="headerlink" title="Dynamic Control"></a>Dynamic Control</h3><p>The Dynamic Control extension is a set of utilities to control physics objects. It provides opaque handles for different physics objects that remain valid between PhysX scene resets, which occur whenever play or stop is pressed.</p>
+<p>用于运动控制</p>
+<h3 id="Scene"><a href="#Scene" class="headerlink" title="Scene"></a>Scene</h3><p>A world contains an instance of a Scene, think about it as a scene management class that manages the assets of interest in the USD stage. It provides an easy api to add, manipulate and inspect different USD assets in the stage as well as setting its default reset states. Many of the object classes available which could be added to a Scene usually takes an already existing USD prim in stage or creates a new USD prim, thus providing an easy way to set/ get its common properties.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">world.scene.add_default_ground_plane() <span class="comment"># adds a default ground plane to the scene</span></span><br></pre></td></tr></table></figure>
+<h3 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h3><p>The Task class in <code>omni.isaac.core</code> provides a way to ==modularize== the scene creation, information retrieval, calculating metrics and creating more complex scenes with more involved logic.</p>
+<p>GPU并行仿真</p>
+<h4 id="BaseTask"><a href="#BaseTask" class="headerlink" title="BaseTask"></a>BaseTask</h4><p>This class provides a way to set up a task in a scene and modularize adding objects to stage, getting observations needed for the behavioral layer, calculating metrics needed about the task, calling certain things pre-stepping, creating multiple tasks at the same time and much more.</p>
+<h3 id="Articulation"><a href="#Articulation" class="headerlink" title="Articulation"></a>Articulation</h3><p>一堆关节构成</p>
+<p>An articulated robot is ==a robot with rotary joints== (e.g: a legged robot, a manipulator or a wheeled robot). In <code>omni.isaac.core</code> extension in Omniverse Isaac Sim there exists an Articulation class which enables the interaction with articulations that exists in a USD stage in an easy way.</p>
+<blockquote>
+<p>Robots are constructed of physically accurate articulated joints.</p>
+</blockquote>
+<h4 id="ArticulationView"><a href="#ArticulationView" class="headerlink" title="ArticulationView"></a>ArticulationView</h4><p>High-level wrapper to deal with prims (==one or many==) that have the Root Articulation API applied and their attributes/properties</p>
+<p>This class wraps all matching articulations found at the regex provided at the <code>prim_paths_expr</code> argument</p>
+<p>匹配多个</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>大二/机器人/逆运动学</title>
+    <url>/2024/03/08/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E4%BA%BA/%E9%80%86%E8%BF%90%E5%8A%A8%E5%AD%A6/</url>
+    <content><![CDATA[<h1 id="逆运动学"><a href="#逆运动学" class="headerlink" title="逆运动学"></a>逆运动学</h1><p><img src="/2024/03/08/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E4%BA%BA/%E9%80%86%E8%BF%90%E5%8A%A8%E5%AD%A6/image-20240308121931856.png" alt="image-20240308121931856"></p>
+<script type="math/tex; mode=display">
+\rm DOF=3\quad(\theta_1,\theta_2,\theta_3)</script><p>所以可以控制三个关节的转角来使得机械臂末端$X_4$运动到</p>
+<script type="math/tex; mode=display">
+(x,y,\alpha)</script><p>求解过程</p>
+<script type="math/tex; mode=display">
+\begin{cases}X_{3x}=X_{4x}-L_3\cos\alpha\\X_{3y}=X_{4y}-L_3\sin\alpha\end{cases}</script><p>利用余弦定理求解$\theta_1,\theta_2$</p>
+<p><img src="/2024/03/08/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E4%BA%BA/%E9%80%86%E8%BF%90%E5%8A%A8%E5%AD%A6/image-20240308122148220.png" alt="image-20240308122148220" style="zoom:33%;"></p>
+<script type="math/tex; mode=display">
+\theta_1=\beta\pm\gamma\\
+\tan\beta=\frac{X_{3y}}{X_{3x}}</script><p>在三角形内使用余弦定理</p>
+<script type="math/tex; mode=display">
+\cos\theta_2=\frac{(X_{3y}^2+X_{3x}^2)-L_1^2-L_2^2}{2L_1L_2}\\
+\cos\gamma=\frac{(X_{3y}^2+X_{3x}^2)+L_1^2-L_2^2}{2L_1\sqrt{X_{3y}^2+X_{3x}^2}}</script><p>所以</p>
+<script type="math/tex; mode=display">
+\theta_3=\alpha-\theta_2-\theta_2</script><p>由于自由度受限，故空间内机械臂规划只考虑</p>
+<p>$\alpha=90^\circ$，即垂直抓取的情况，考虑俯视图</p>
+<p>砖块处在相对$X_0$，$(x,y)$的位置，位姿为$\theta$</p>
+<p>云台转角为$\theta_0$，夹爪的转角为$\theta_4$</p>
+<p><img src="/2024/03/08/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E4%BA%BA/%E9%80%86%E8%BF%90%E5%8A%A8%E5%AD%A6/image-20240308123949922.png" alt="image-20240308123949922" style="zoom: 25%;"></p>
+<script type="math/tex; mode=display">
+\sqrt{x^2+y^2}=X_{4x}\\
+\tan\theta_0=\frac {x}{y}\\
+\theta=\theta_0+\theta_4</script><p>通过这些方程可以求解出$\theta_0,\theta_1,\theta_2,\theta_3,\theta_4$</p>
+<p>再通过$\theta_5$控制夹爪的张开与夹紧就可实现完整的抓取</p>
+<h1 id="轨迹生成"><a href="#轨迹生成" class="headerlink" title="轨迹生成"></a>轨迹生成</h1><p>贝塞尔曲线具有良好的空间连续性,采用空间贝塞尔曲线的路径,不仅可有效增加空间曲线的平滑性并可通过更改控制点修改局部速度及加速度值,同时可通过控制点修改曲线形状,并且具有较高的计算效率。</p>
+<p>Bernstein基函数</p>
+<script type="math/tex; mode=display">
+B_i^{(n)}(t)={n\choose i}t^i(1-t)^{n-i}</script><p>Bezier曲线的表达式</p>
+<script type="math/tex; mode=display">
+f(t)=\sum_{i=1}^nb_i(t)\boldsymbol{p}_i</script><p>在计算机图形学常用De Casteljau来对贝塞尔曲线进行求值</p>
+<p>算法利用如下递归表达式来实现</p>
+<script type="math/tex; mode=display">
+\boldsymbol{b}_i^{(r)}=(1-t)\boldsymbol{b}_i^{(r-1)}+t\boldsymbol{b}_{i+1}^{(r-1)}</script><p>轨迹设计</p>
+<p>由于我们需要将砖块一块一块砌筑，并且需要保证尽可能垂直向下放置砖块，从而能利用榫卯结构让两砖块之间能够贴合且不发生碰撞，所以为简单起见采用三个点作为控制顶点，分别是机械臂末端起点，终点，和终点正上方$d$处的控制点，利用贝塞尔曲线的端点性质，保证接近终点时速度一定垂直向下。</p>
+<p>由于对于轨迹上的任意一点$(x,y,z,\alpha)$，我们需要确定$\alpha$的取值使得和机械臂的四个关节角度$(\theta_0,\theta_1,\theta_2,\theta_3)$一一对应从而求解，我们采用一种启发式的方式来设定$\alpha_t$，设当前进度为$t,t\in[0,1]$，则</p>
+<script type="math/tex; mode=display">
+\alpha_t=t\alpha_e+(1-t)\alpha_0</script><p>再利用搜索的方式找到离$\alpha_t$最近且使得逆运动学有解的$\alpha$，从而求解四个关节角度。</p>
+<p>由于当关节角度$\theta=0$时，存在奇异点，末端执行器的一点微小变化会导致机械臂角度剧烈变化，产生震荡，所以在保证终点处不会存在角度为$0$后，我们可以对求解出角度小于某个设定阈值的部分不采用这段轨迹，并对关节角度利用线性插值的方式来生成新轨迹，使得轨迹更加稳定。</p>
+<p>但由于局部突然用线性插值来替代，导致轨迹不够平滑，衔接处加速度过大，所以采用Savitzky-Golay滤波对新轨迹进行平滑，从而得到更加自然，加速度更小的轨迹</p>
+<p>we need to lay bricks one by one and ensure that they are placed as vertically as possible to utilize the mortise and tenon structure to ensure that the bricks can fit together without colliding, three points are chosen as control vertices for simplicity. These points are the starting point of the robotic arm end effector, the endpoint, and a control point $d$ directly above the endpoint. Using the endpoint property of the Bézier curve, it ensures that the speed is strictly vertical as it approaches the endpoint.</p>
+<p>For any point $(x, y, z, \alpha)$ on the trajectory, we need to determine the value of $\alpha$ so that it corresponds to the four joint angles $(\theta_0, \theta_1, \theta_2, \theta_3)$ of the robotic arm. We use a heuristic method to set $\alpha_t$. Let the current progress be $t, t \in [0, 1]$, then</p>
+<script type="math/tex; mode=display">
+\alpha_t=t\alpha_e+(1-t)\alpha_0</script><p>Then, by searching for the closest $\alpha$ to $\alpha_t$ that allows for solvable inverse kinematics, the four joint angles can be solved.</p>
+<p>Since there are singular points when the joint angle $\theta = 0$, a slight change in the end effector will cause drastic changes in the angles of the robotic arm, resulting in oscillations. Therefore, after ensuring that there are no angles equal to $0$ at the endpoint, we can discard the portion of the trajectory where the angles are less than a certain threshold and use linear interpolation for the joint angles to generate a new trajectory, making the trajectory more stable.</p>
+<p>However, abruptly replacing parts of the trajectory with linear interpolation makes it less smooth, with excessive acceleration at the junctions. Hence, we use Savitzky-Golay filtering to smooth the new trajectory, resulting in a more natural trajectory with lower acceleration.</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>大二/机器学习/Transformer</title>
+    <url>/2024/01/19/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Transformer/</url>
+    <content><![CDATA[<h1 id="网络整体架构"><a href="#网络整体架构" class="headerlink" title="网络整体架构"></a>网络整体架构</h1><p><img src="/2024/01/19/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Transformer/image-20240119112445496.png" alt="image-20240119112445496"></p>
+<h2 id="Encoder"><a href="#Encoder" class="headerlink" title="Encoder"></a>Encoder</h2><h3 id="注意力机制"><a href="#注意力机制" class="headerlink" title="注意力机制"></a>注意力机制</h3><p><img src="/2024/01/19/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Transformer/image-20240119112615620.png" alt="image-20240119112615620"></p>
+<script type="math/tex; mode=display">
+\text{Attention(}Q,K,V)=\text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V\\
+Q(n\times d_k),K(m,d_k),V(m,d_v)</script><p>何为自注意力，就是输入为自己</p>
+<p>利用$FC$层编码信息后</p>
+<script type="math/tex; mode=display">
+v^i=W^va^i\\
+k^i=W^ka^i\\
+q^i=W^qa^i</script><p>利用余弦相似度进行判断</p>
+<p>利用$\text{softmax}$得到概率分布，最后得到输出</p>
+<p><img src="/2024/01/19/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Transformer/image-20240119113118185.png" alt="image-20240119113118185"></p>
+<p>输出为类似加权平均的形式，是$Q$的编码结果</p>
+<p>其中$W$为权重矩阵，通过训练得出</p>
+<h3 id="多头"><a href="#多头" class="headerlink" title="多头"></a>多头</h3><p><img src="/2024/01/19/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Transformer/image-20240119113628698.png" alt="image-20240119113628698"></p>
+<p>相关性也有不同的种类</p>
+<p>利用$FC$将数据进行特征分离，并行$h$头</p>
+<h3 id="位置编码"><a href="#位置编码" class="headerlink" title="位置编码"></a>位置编码</h3><p>为了学习序列的位置信息，使用位置向量$e^i$</p>
+<p><img src="/2024/01/19/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Transformer/image-20240119120825747-1705639072346.png" alt="image-20240119120825747"></p>
+<script type="math/tex; mode=display">
+PE(pos,2i)=\sin(pos/10000^{2i/d_{\text{model}}})</script><p>手工设定，或者直接学习</p>
+<h3 id="Layer-Norm"><a href="#Layer-Norm" class="headerlink" title="Layer Norm"></a>Layer Norm</h3><p>对不同的特征计算</p>
+<script type="math/tex; mode=display">
+x'_i=\frac{x_i-m}\sigma</script><p><img src="/2024/01/19/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Transformer/image-20240119122333051-1705639072346.png" alt="image-20240119122333051"></p>
+<p>常常对最后一个维度进行，对多头即为</p>
+<script type="math/tex; mode=display">
+d_{\text{model}}/h</script><h3 id="残差连接"><a href="#残差连接" class="headerlink" title="残差连接"></a>残差连接</h3><script type="math/tex; mode=display">
+x_{l+1}=x_l+F(x_l,W_l)</script><p>训练的过程中<strong>始终保留了原始信息</strong>，还增加了网络中获取的<strong>新知识</strong></p>
+<p>$F(x_l,W_l)$为残差</p>
+<p>由损失函数的梯度计算结果可知，网络在进行反向传播时，<strong>错误信号可以不经过任何中间权重矩阵变换直接传播到低层，一定程度上可以缓解梯度弥散(梯度消失)问题（即便中间层矩阵权重很小，梯度也基本不会消失）</strong></p>
+<p>其中前馈层为</p>
+<script type="math/tex; mode=display">
+\text{FFN}(x)=\max(0,xW_1+b_1)W_2+b_2</script><p>这个前馈层的作用是引入非线性映射$(\rm ReLU)$，通过两个线性变换和激活函数，对输入进行复杂的非线性变换。这有助于模型学习更加复杂的函数关系。在 Transformer 模型中，每个位置都有独立的前馈层，这使得模型能够在不同位置学习不同的表示。</p>
+<h2 id="decoder"><a href="#decoder" class="headerlink" title="decoder"></a>decoder</h2><p>将<strong>Encoder</strong>编码的信息进行解码转换</p>
+<p><img src="/2024/01/19/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Transformer/image-20240119123351071-1705639072347.png" alt="image-20240119123351071"></p>
+<p>输入用$\text{One Hot}$进行编码，向量大小为输出集的大小</p>
+<h3 id="Masked自注意力"><a href="#Masked自注意力" class="headerlink" title="Masked自注意力"></a>Masked自注意力</h3><p>只把过去的output来作为$\text{keys,values}$</p>
+<p>训练时每次把未来的输入$\rm Mask$一下</p>
+<p>每次只query$t$时刻的输出，同时decoder放入$1\sim t$的输出</p>
+<p>从而得到$t+1$时刻的输出</p>
+<p><img src="/2024/01/19/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Transformer/image-20240119132440053.png" alt="image-20240119132440053" style="zoom:67%;"></p>
+<h3 id="cross-attention"><a href="#cross-attention" class="headerlink" title="cross-attention"></a>cross-attention</h3><p><img src="/2024/01/19/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Transformer/image-20240119140756520.png" alt="image-20240119140756520"></p>
+<p>$K,V$来自Encoder而$Q$来自Decoder</p>
+]]></content>
   </entry>
 </search>

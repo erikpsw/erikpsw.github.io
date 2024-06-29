@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/psw.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="网络整体架构 Encoder注意力机制  \text{Attention(}Q,K,V)&#x3D;\text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V\\ Q(n\times d_k),K(m,d_k),V(m,d_v)何为自注意力，就是输入为自己 利用$FC$层编码信息后  v^i&#x3D;W^va^i\\ k^i&#x3D;W^ka^i\\ q^i&#x3D;W^qa^i利用余弦">
+<meta property="og:type" content="article">
+<meta property="og:title" content="大二&#x2F;机器学习&#x2F;Transformer">
+<meta property="og:url" content="http://yoursite.com/2024/01/19/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Transformer/index.html">
+<meta property="og:site_name" content="BLOG">
+<meta property="og:description" content="网络整体架构 Encoder注意力机制  \text{Attention(}Q,K,V)&#x3D;\text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V\\ Q(n\times d_k),K(m,d_k),V(m,d_v)何为自注意力，就是输入为自己 利用$FC$层编码信息后  v^i&#x3D;W^va^i\\ k^i&#x3D;W^ka^i\\ q^i&#x3D;W^qa^i利用余弦">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2024/01/19/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Transformer/image-20240119112445496.png">
+<meta property="og:image" content="http://yoursite.com/2024/01/19/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Transformer/image-20240119112615620.png">
+<meta property="og:image" content="http://yoursite.com/2024/01/19/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Transformer/image-20240119113118185.png">
+<meta property="og:image" content="http://yoursite.com/2024/01/19/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Transformer/image-20240119113628698.png">
+<meta property="og:image" content="http://yoursite.com/2024/01/19/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Transformer/image-20240119120825747-1705639072346.png">
+<meta property="og:image" content="http://yoursite.com/2024/01/19/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Transformer/image-20240119122333051-1705639072346.png">
+<meta property="og:image" content="http://yoursite.com/2024/01/19/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Transformer/image-20240119123351071-1705639072347.png">
+<meta property="og:image" content="http://yoursite.com/2024/01/19/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Transformer/image-20240119132440053.png">
+<meta property="og:image" content="http://yoursite.com/2024/01/19/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Transformer/image-20240119140756520.png">
+<meta property="article:published_time" content="2024-01-19T03:16:55.239Z">
+<meta property="article:modified_time" content="2024-01-19T11:27:31.956Z">
+<meta property="article:author" content="Shiwei Pan">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2024/01/19/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Transformer/image-20240119112445496.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2024/01/19/大二/机器学习/Transformer/"/>
+
+
+
+
+
+  <title>大二/机器学习/Transformer | BLOG</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+<script src="/live2d-widget/autoload.js"></script>
+
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">BLOG</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-mine">
+          <a href="/mine/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Old
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-new">
+          <a href="/new/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            Introduction
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2024/01/19/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Transformer/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">大二/机器学习/Transformer</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2024-01-19T11:16:55+08:00">
+                2024-01-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="网络整体架构"><a href="#网络整体架构" class="headerlink" title="网络整体架构"></a>网络整体架构</h1><p><img src="/2024/01/19/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Transformer/image-20240119112445496.png" alt="image-20240119112445496"></p>
+<h2 id="Encoder"><a href="#Encoder" class="headerlink" title="Encoder"></a>Encoder</h2><h3 id="注意力机制"><a href="#注意力机制" class="headerlink" title="注意力机制"></a>注意力机制</h3><p><img src="/2024/01/19/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Transformer/image-20240119112615620.png" alt="image-20240119112615620"></p>
+<script type="math/tex; mode=display">
+\text{Attention(}Q,K,V)=\text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V\\
+Q(n\times d_k),K(m,d_k),V(m,d_v)</script><p>何为自注意力，就是输入为自己</p>
+<p>利用$FC$层编码信息后</p>
+<script type="math/tex; mode=display">
+v^i=W^va^i\\
+k^i=W^ka^i\\
+q^i=W^qa^i</script><p>利用余弦相似度进行判断</p>
+<p>利用$\text{softmax}$得到概率分布，最后得到输出</p>
+<p><img src="/2024/01/19/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Transformer/image-20240119113118185.png" alt="image-20240119113118185"></p>
+<p>输出为类似加权平均的形式，是$Q$的编码结果</p>
+<p>其中$W$为权重矩阵，通过训练得出</p>
+<h3 id="多头"><a href="#多头" class="headerlink" title="多头"></a>多头</h3><p><img src="/2024/01/19/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Transformer/image-20240119113628698.png" alt="image-20240119113628698"></p>
+<p>相关性也有不同的种类</p>
+<p>利用$FC$将数据进行特征分离，并行$h$头</p>
+<h3 id="位置编码"><a href="#位置编码" class="headerlink" title="位置编码"></a>位置编码</h3><p>为了学习序列的位置信息，使用位置向量$e^i$</p>
+<p><img src="/2024/01/19/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Transformer/image-20240119120825747-1705639072346.png" alt="image-20240119120825747"></p>
+<script type="math/tex; mode=display">
+PE(pos,2i)=\sin(pos/10000^{2i/d_{\text{model}}})</script><p>手工设定，或者直接学习</p>
+<h3 id="Layer-Norm"><a href="#Layer-Norm" class="headerlink" title="Layer Norm"></a>Layer Norm</h3><p>对不同的特征计算</p>
+<script type="math/tex; mode=display">
+x'_i=\frac{x_i-m}\sigma</script><p><img src="/2024/01/19/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Transformer/image-20240119122333051-1705639072346.png" alt="image-20240119122333051"></p>
+<p>常常对最后一个维度进行，对多头即为</p>
+<script type="math/tex; mode=display">
+d_{\text{model}}/h</script><h3 id="残差连接"><a href="#残差连接" class="headerlink" title="残差连接"></a>残差连接</h3><script type="math/tex; mode=display">
+x_{l+1}=x_l+F(x_l,W_l)</script><p>训练的过程中<strong>始终保留了原始信息</strong>，还增加了网络中获取的<strong>新知识</strong></p>
+<p>$F(x_l,W_l)$为残差</p>
+<p>由损失函数的梯度计算结果可知，网络在进行反向传播时，<strong>错误信号可以不经过任何中间权重矩阵变换直接传播到低层，一定程度上可以缓解梯度弥散(梯度消失)问题（即便中间层矩阵权重很小，梯度也基本不会消失）</strong></p>
+<p>其中前馈层为</p>
+<script type="math/tex; mode=display">
+\text{FFN}(x)=\max(0,xW_1+b_1)W_2+b_2</script><p>这个前馈层的作用是引入非线性映射$(\rm ReLU)$，通过两个线性变换和激活函数，对输入进行复杂的非线性变换。这有助于模型学习更加复杂的函数关系。在 Transformer 模型中，每个位置都有独立的前馈层，这使得模型能够在不同位置学习不同的表示。</p>
+<h2 id="decoder"><a href="#decoder" class="headerlink" title="decoder"></a>decoder</h2><p>将<strong>Encoder</strong>编码的信息进行解码转换</p>
+<p><img src="/2024/01/19/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Transformer/image-20240119123351071-1705639072347.png" alt="image-20240119123351071"></p>
+<p>输入用$\text{One Hot}$进行编码，向量大小为输出集的大小</p>
+<h3 id="Masked自注意力"><a href="#Masked自注意力" class="headerlink" title="Masked自注意力"></a>Masked自注意力</h3><p>只把过去的output来作为$\text{keys,values}$</p>
+<p>训练时每次把未来的输入$\rm Mask$一下</p>
+<p>每次只query$t$时刻的输出，同时decoder放入$1\sim t$的输出</p>
+<p>从而得到$t+1$时刻的输出</p>
+<p><img src="/2024/01/19/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Transformer/image-20240119132440053.png" alt="image-20240119132440053" style="zoom:67%;"></p>
+<h3 id="cross-attention"><a href="#cross-attention" class="headerlink" title="cross-attention"></a>cross-attention</h3><p><img src="/2024/01/19/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Transformer/image-20240119140756520.png" alt="image-20240119140756520"></p>
+<p>$K,V$来自Encoder而$Q$来自Decoder</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat.jpg" alt="Shiwei Pan wechat" style="width: 200px; max-width: 100%;"/>
+    <div></div>
+</div>
+
+      </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2024/01/15/%E5%A4%A7%E4%BA%8C/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/" rel="next" title="大二/材料力学">
+                <i class="fa fa-chevron-left"></i> 大二/材料力学
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2024/03/08/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E4%BA%BA/%E9%80%86%E8%BF%90%E5%8A%A8%E5%AD%A6/" rel="prev" title="大二/机器人/逆运动学">
+                大二/机器人/逆运动学 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/mount.png"
+               alt="Shiwei Pan" />
+          <p class="site-author-name" itemprop="name">Shiwei Pan</p>
+           
+              <p class="site-description motion-element" itemprop="description">Open your eyes,look up to the skies</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">95</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/erikpsw" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/pan-shi-wei-91" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                    
+                      知乎
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#网络整体架构"><span class="nav-number">1.</span> <span class="nav-text">网络整体架构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Encoder"><span class="nav-number">1.1.</span> <span class="nav-text">Encoder</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注意力机制"><span class="nav-number">1.1.1.</span> <span class="nav-text">注意力机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多头"><span class="nav-number">1.1.2.</span> <span class="nav-text">多头</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#位置编码"><span class="nav-number">1.1.3.</span> <span class="nav-text">位置编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Layer-Norm"><span class="nav-number">1.1.4.</span> <span class="nav-text">Layer Norm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#残差连接"><span class="nav-number">1.1.5.</span> <span class="nav-text">残差连接</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#decoder"><span class="nav-number">1.2.</span> <span class="nav-text">decoder</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Masked自注意力"><span class="nav-number">1.2.1.</span> <span class="nav-text">Masked自注意力</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cross-attention"><span class="nav-number">1.2.2.</span> <span class="nav-text">cross-attention</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2020 - 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Shiwei Pan</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>

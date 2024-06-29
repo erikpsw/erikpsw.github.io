@@ -107,10 +107,10 @@
 <meta property="og:image" content="http://yoursite.com/2024/01/15/%E5%A4%A7%E4%BA%8C/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/image-20240115151752797.png">
 <meta property="og:image" content="http://yoursite.com/2024/01/15/%E5%A4%A7%E4%BA%8C/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/image-20240115152232641.png">
 <meta property="og:image" content="http://yoursite.com/2024/01/15/%E5%A4%A7%E4%BA%8C/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/image-20240115160642130.png">
-<meta property="og:image" content="https://view-cache.book118.com/view19/M03/03/3D/wKh2D2FegPuAeTSfAACBPMePfSk851.png">
+<meta property="og:image" content="http://yoursite.com/2024/01/15/%E5%A4%A7%E4%BA%8C/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/image-20240116150852591.png">
 <meta property="og:image" content="http://yoursite.com/2024/01/15/%E5%A4%A7%E4%BA%8C/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/image-20240115162700013.png">
 <meta property="article:published_time" content="2024-01-15T06:50:19.163Z">
-<meta property="article:modified_time" content="2024-01-15T10:50:45.477Z">
+<meta property="article:modified_time" content="2024-01-17T04:34:16.508Z">
 <meta property="article:author" content="Shiwei Pan">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/2024/01/15/%E5%A4%A7%E4%BA%8C/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/image-20240115145258900.png">
@@ -470,9 +470,10 @@ EIy''=-M(x)</script><p>进行积分，带入边界条件尽可能早的确定常
 <p>如固定端$\theta,y=0$，铰链左右转角相等  等等</p>
 <p>利用叠加法首先将所有的载荷等效到一段</p>
 <p>用相差一个刚体位移的方法进行计算</p>
-<p><img src="https://view-cache.book118.com/view19/M03/03/3D/wKh2D2FegPuAeTSfAACBPMePfSk851.png" alt="img"></p>
+<p><img src="/2024/01/15/%E5%A4%A7%E4%BA%8C/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/image-20240116150852591.png" alt="image-20240116150852591"></p>
 <h1 id="应力状态分析"><a href="#应力状态分析" class="headerlink" title="应力状态分析"></a>应力状态分析</h1><p><img src="/2024/01/15/%E5%A4%A7%E4%BA%8C/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6/image-20240115162700013.png" alt="image-20240115162700013" style="zoom:50%;"></p>
 <p>正应力以拉为正，压为负</p>
+<p>切应力以外法线顺时针旋转</p>
 <p>对任意角度，有</p>
 <script type="math/tex; mode=display">
 \sigma_\alpha=\frac{\sigma_x+\sigma_y}2+\frac{\sigma_x-\sigma_y}2\cos2\alpha-\tau_x\sin2\alpha\\
@@ -484,7 +485,8 @@ EIy''=-M(x)</script><p>进行积分，带入边界条件尽可能早的确定常
 <script type="math/tex; mode=display">
 (\sigma_x,\tau_x),(\sigma_y,\tau_y)</script><p>对于切应力极值，与主平面呈45度角，此时正应力为</p>
 <script type="math/tex; mode=display">
-\sigma=\frac{\sigma_x+\sigma_y}2</script><p>对于空间应力，$\sigma_z\ne0,\tau_z=0$</p>
+\sigma_O=\frac{\sigma_x+\sigma_y}2\\
+R=\sqrt{\left(\frac{\sigma_x-\sigma_y}2\right)^2+\tau_x^2}</script><p>对于空间应力，$\sigma_z\ne0,\tau_z=0$</p>
 <p>所以$z$已经是主平面，求处另外两个主应力，画在一起</p>
 <p>为三向应力圆</p>
 <h2 id="强度理论"><a href="#强度理论" class="headerlink" title="强度理论"></a>强度理论</h2><p>主应力按照从大到小的顺序排列后</p>
@@ -500,7 +502,7 @@ EIy''=-M(x)</script><p>进行积分，带入边界条件尽可能早的确定常
 ]}{[\sigma_c]}\sigma_3</script><p>特别的，对于单向</p>
 <script type="math/tex; mode=display">
 \sigma_{\mathrm{r3}}=\sqrt{\sigma^2+4\tau^2}\\
-\sigma_{\mathrm{r4}}=\sqrt{\sigma^2+4\tau^2}</script><p>更特别的</p>
+\sigma_{\mathrm{r4}}=\sqrt{\sigma^2+3\tau^2}</script><p>更特别的</p>
 <script type="math/tex; mode=display">
 \sigma_{r3}=\frac{\sqrt{M^2+T^2}}{W_z}\\ \sigma_{r4}=\frac{\sqrt{M^2+0.75T^2}}{W_z}</script><p>切应力主要为扭矩产生，正应力主要为弯矩产生</p>
 <h1 id="组合变形"><a href="#组合变形" class="headerlink" title="组合变形"></a>组合变形</h1><p>分别在$x,y$方向上画弯矩图</p>
@@ -578,6 +580,10 @@ F_{cr}=\frac{\pi^2EI}{(\mu l)^2}</script><p>引入柔度的概念</p>
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2024/01/19/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/Transformer/" rel="prev" title="大二/机器学习/Transformer">
+                大二/机器学习/Transformer <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -677,7 +683,7 @@ F_{cr}=\frac{\pi^2EI}{(\mu l)^2}</script><p>引入柔度的概念</p>
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">92</span>
+                <span class="site-state-item-count">95</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
