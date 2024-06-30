@@ -4142,7 +4142,7 @@ f_Z(z)=\frac{\text d F_Z(z)}{\text d z}</script><h2 id="随机变量的期望值
 \text{Var}[X]=\int_{-\infty}^{+\infty}(x-\text{E}[X])^2f_X(x)\text{d}x\\</script><script type="math/tex; mode=display">
 \text{Var}[X\pm Y]=\text{Var}[X]+\text{Var}[Y]\pm2E[(X-E[X])(Y-E[Y])]</script><p>若相互独立</p>
 <script type="math/tex; mode=display">
-\text{Var}[X+Y]=\text{Var}[X]+\text{Var}[Y]\\
+\text{Var}[X\pm Y]=\text{Var}[X]+\text{Var}[Y]\\
 \text{Var}[\sum_{i=1}^nX_i]=\sum_{i=1}^n\text{Var}[X_i]</script><script type="math/tex; mode=display">
 \begin{aligned}\text{Var}[XY]&=\text{E}^2[Y]\text{Var}[X]+\text{E}[X^2]\text{Var}[Y]\\
 &=\text{E}[Y]^2\text{Var}[X]+\text{E}^2[X]\text{Var}[Y]\\
@@ -4230,10 +4230,16 @@ f_V(x)=n[1-f(x)]^{n-1}f(x)</script><h3 id="数字特征"><a href="#数字特征"
 \beta_k(X)=\frac{E\{[X-\mathbf E(X)]^4\}}{[\mathbf{Var}[X]]^{2}}-3</script><p>峰度和正态分布比较</p>
 <h4 id="变异系数"><a href="#变异系数" class="headerlink" title="变异系数"></a>变异系数</h4><script type="math/tex; mode=display">
 C_v(X)=\frac{\sigma(X)}{|E(X)|}</script><p>用均值标准化</p>
-<h2 id="中心极限定理"><a href="#中心极限定理" class="headerlink" title="中心极限定理"></a>中心极限定理</h2><p>样本均值</p>
+<h2 id="中心极限定理"><a href="#中心极限定理" class="headerlink" title="中心极限定理"></a>中心极限定理</h2><p>切比雪夫不等式，若$E(X^2)&lt;+\infty$</p>
+<script type="math/tex; mode=display">
+P(|X-E(X)|\ge \varepsilon)\le\frac{\mathbf{Var}(X)}{\varepsilon^2}</script><p>马尔可夫不等式，若$E(|X|^p)&lt;+\infty$</p>
+<script type="math/tex; mode=display">
+P(|X|\ge \varepsilon)\le\frac{E(|X|^p)}{\varepsilon^p}</script><p>样本均值</p>
 <script type="math/tex; mode=display">
 \overline{X}=\frac1n\sum_{i=1}^nX_i\sim N\left(\mu,\frac{\sigma^2}n\right)\\
-\overline{Y_n}=\frac{\overline{X}-\mu}{\frac{\sigma}{\sqrt{n}}}\sim N(0,1)</script><h3 id="chi-2-分布"><a href="#chi-2-分布" class="headerlink" title="$\chi ^2$分布"></a>$\chi ^2$分布</h3><p>若$X_i$服从标准正态，则$U$服从自由度为$n$的$\chi ^2$分布</p>
+\overline{Y_n}=\frac{\overline{X}-\mu}{\frac{\sigma}{\sqrt{n}}}\sim N(0,1)</script><p>或者</p>
+<script type="math/tex; mode=display">
+\sum_{i=1}^nX_i\sim N\left(n\mu,n\sigma^2\right)</script><h3 id="chi-2-分布"><a href="#chi-2-分布" class="headerlink" title="$\chi ^2$分布"></a>$\chi ^2$分布</h3><p>若$X_i$服从标准正态，则$U$服从自由度为$n$的$\chi ^2$分布</p>
 <script type="math/tex; mode=display">
 U=\sum_{i=1}^nX_i^2\sim\chi^2(n)\\
 \mathbf E(U)=n,\mathbf{Var}(U)=2n</script><p>样本方差</p>
