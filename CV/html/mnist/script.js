@@ -19,7 +19,40 @@ $(function(){
       list=$(".bar")
       numbers=$(".number")
       index=ans.reduce((iMax, x, i, ans) => x > ans[iMax] ? i : iMax, 0)
-      for(i=0;i<10;i++){ p="ans[i]/sum" $(list[i]).css("height",`${p*10}em`) $(numbers[i]).css("color",`rgb(${p*127},${p*255},${p*212})`) } $(numbers[pvindex]).css("font-weight","normal") pvindex="index" $(numbers[index]).css("font-weight","bolder") console.log(ans) catch (e) { console.log(e); var canvas="document.getElementById("myCanvas");" ctx="canvas.getContext("2d",{willReadFrequently:" true}); ctx.strokestyle="black" ; ctx.fillstyle="black" ctx.linewidth="3;" isdrawing="false;" r="15" canvas_width="Number(getComputedStyle($("#myCanvas")[0]).width.match(/\d+/)[0])" 正方形 times="10//canvas_width/28" canvas.onmousedown="function(e)" pvx="e.clientX" - canvas.offsetleft; pvy="e.clientY" canvas.offsettop; }; imagedata="Float32Array.from({" length: 28*28 }, ()> Math.random())
+      for(i=0;i<10;i++){
+        p=ans[i]/sum
+        $(list[i]).css("height",`${p*10}em`)
+        $(numbers[i]).css("color",`rgb(${p*127},${p*255},${p*212})`)
+      }
+      $(numbers[pvindex]).css("font-weight","normal")
+      pvindex=index
+      $(numbers[index]).css("font-weight","bolder")
+      console.log(ans)
+    } catch (e) {
+      console.log(e);
+    }
+  }
+
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d",{willReadFrequently: true});
+ctx.strokeStyle = "black";
+ctx.fillStyle="black"
+ctx.lineWidth = 3;
+var isDrawing = false;
+var pvindex = 0;
+r=15
+
+canvas_width=Number(getComputedStyle($("#myCanvas")[0]).width.match(/\d+/)[0])
+//正方形
+times=10//canvas_width/28
+
+canvas.onmousedown = function(e) {
+  isDrawing = true;
+  pvx = e.clientX - canvas.offsetLeft;
+  pvy = e.clientY - canvas.offsetTop;
+};
+
+imagedata= Float32Array.from({ length: 28*28 }, () => Math.random())
 canvas.onmousemove = function(e) {
   if (isDrawing) {
     x=e.clientX - canvas.offsetLeft
@@ -45,13 +78,36 @@ canvas.onmousemove = function(e) {
 }
 
 function get_image(canvas){
-  for(let i=0;i<28;i++){ 横向遍历 index="y*width+x" for(m="0;m<28;m++){" tmp="0" for(let j="0;j<10;j++){" k="0;k<10;k++){" tmp+="canvas[40*i+4*j+1120*k+11200*m+3]" } imagedata[i+28*m]="tmp/25500" }} canvas.onmouseup="function()" { isdrawing="false;" }; $(".clear").mousedown( ()>{
+  for(let i=0;i<28;i++){//横向遍历 index=y*width+x
+    for(m=0;m<28;m++){
+      tmp=0
+      for(let j=0;j<10;j++){
+          for(let k=0;k<10;k++){
+            tmp+=canvas[40*i+4*j+1120*k+11200*m+3]
+        }
+      }
+      imagedata[i+28*m]=tmp/25500
+    }
+  }}
+
+canvas.onmouseup = function() {
+  isDrawing = false;
+};
+
+$(".clear").mousedown( ()=>{
   $(".clear").css("border-style","inset")
   ctx.clearRect(0, 0, canvas_width, canvas_width)
-  for(i=0;i<10;i++){ p="ans[i]/sum" $(list[i]).css("height",`0em`) $(numbers[i]).css("color","black") } $(numbers[pvindex]).css("font-weight","normal") }) $(".clear").mouseup( ()>{
+  for(i=0;i<10;i++){
+    p=ans[i]/sum
+    $(list[i]).css("height",`0em`)
+    $(numbers[i]).css("color","black")
+  }
+  $(numbers[pvindex]).css("font-weight","normal")
+})
+$(".clear").mouseup( ()=>{
   $(".clear").css("border-style","outset")
 })
 
 })
 
-   </10;i++){></28;i++){></10;i++){>
+   
