@@ -311,6 +311,550 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/09/29/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%BE%AE%E5%88%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/09/29/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%BE%AE%E5%88%86/" itemprop="url">大一/高数/微分</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-09-29T16:25:30+08:00">
+                2022-09-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="微分的概念"><a href="#微分的概念" class="headerlink" title="微分的概念"></a>微分的概念</h1><p>函数值的变化量</p>
+<script type="math/tex; mode=display">
+\Delta y=f(x_0+\Delta x)-f(x_0)</script><p>对于复杂函数，$\Delta y$比较复杂</p>
+<p>故我们将变化量线性化，定义为微分</p>
+<p>若函数在某邻域有定义</p>
+<p>$\Delta y=A\Delta x+o(\Delta x),\Delta x\to0$</p>
+<p>则称$f(x)$在该领域可微，$\Delta y$的线性主部$A\Delta x$</p>
+<p>为函数的微分，记为$\text{d} y|_{x=x_0}(\Delta x=\text{d} x)$</p>
+<h2 id="与导数的关系"><a href="#与导数的关系" class="headerlink" title="与导数的关系"></a>与导数的关系</h2><p>可导$\Leftrightarrow$可微$\Rightarrow A=f’(x_0)$</p>
+<h2 id="微分形式不变性"><a href="#微分形式不变性" class="headerlink" title="微分形式不变性"></a>微分形式不变性</h2><script type="math/tex; mode=display">
+\text{d} y=f'(u)\text{d} u</script><p>不论$u$是自变量还是函数都成立</p>
+<h1 id="微分中值定理"><a href="#微分中值定理" class="headerlink" title="微分中值定理"></a>微分中值定理</h1><h2 id="费马引理"><a href="#费马引理" class="headerlink" title="费马引理"></a>费马引理</h2><p>若函数在某邻域$U(x_0)$有定义，且在$x_0$处可导，则若对于任意$x\in U(x_0)$，有 $f(x)\le f(x_0)$</p>
+<script type="math/tex; mode=display">
+\Rightarrow f'(x_0)=0</script><p>利用极限的保号性和夹逼</p>
+<h2 id="罗尔定理"><a href="#罗尔定理" class="headerlink" title="罗尔定理"></a>罗尔定理</h2><p>若函数在闭区间$[a,b]$上连续，在开区间$(a,b)$上可导</p>
+<p>若有$f(a)=f(b)$则</p>
+<script type="math/tex; mode=display">
+\exists \xi\in(a,b)\quad\text{s.t.}f'(\xi)=0</script><h2 id="拉格朗日中值定理"><a href="#拉格朗日中值定理" class="headerlink" title="拉格朗日中值定理"></a>拉格朗日中值定理</h2><p>若函数在闭区间$[a,b]$上连续，在开区间$(a,b)$上可导</p>
+<p>则有</p>
+<script type="math/tex; mode=display">
+\exists \xi\in(a,b)\quad\text{s.t.}f'(\xi)=\frac {f(b)-f(a)}{b-a}</script><h3 id="有限增量定理"><a href="#有限增量定理" class="headerlink" title="有限增量定理"></a>有限增量定理</h3><p>若函数在闭区间$[x,x+\Delta x]$上连续，在开区间$(x,x+\Delta x)$上可导，则</p>
+<script type="math/tex; mode=display">
+\exists \xi\in(a,b)\\ \text{s.t.}f'(x+\theta \Delta x)\Delta x=f(x+\Delta x)-f(x)</script><h3 id="推论"><a href="#推论" class="headerlink" title="推论"></a>推论</h3><p>若$f(x)$在区间$I$上的导数恒为$0$，则在该区间上为常函数</p>
+<h2 id="柯西中值定理"><a href="#柯西中值定理" class="headerlink" title="柯西中值定理"></a>柯西中值定理</h2><p>若函数$f(x),g(x)$在闭区间$[a,b]$上连续，在开区间$(a,b)$上可导，且$g’(x)\ne0$</p>
+<p>则有</p>
+<script type="math/tex; mode=display">
+\exists \xi\in(a,b)\\ \text{s.t.} 
+\frac{f'(\xi)}{g'(\xi)}=\frac {f(b)-f(a)}{g(b)-g(a)}</script><h3 id="达布中值定理"><a href="#达布中值定理" class="headerlink" title="达布中值定理"></a>达布中值定理</h3><p>$f(x)$在$[a,b]$上连续</p>
+<p>则导函数具有介值性，即可以取到$f’(a)$和$f’(b)$之间的一切值</p>
+<p>同时导函数不具有第一类间断点3</p>
+<h1 id="泰勒公式"><a href="#泰勒公式" class="headerlink" title="泰勒公式"></a>泰勒公式</h1><p>若函数$f(x)$在$I=(a,b),x_0\in I$处有$n(n\ge1)$阶导数，则</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+f(x)&= f\left(x_{0}\right)+\frac{f^{\prime}\left(x_{0}\right)}{1 !}\left(x-x_{0}\right)+\frac{f^{\prime \prime}\left(x_{0}\right)}{2 !}\left(x-x_{0}\right)^{2}+\cdots \\
+&+\frac{f^{(n)}\left(x_{0}\right)}{n !}\left(x-x_{0}\right)^{n}+o\left(\left(x-x_{0}\right)^{n}\right)\\
+&=\sum_{i=0}^n\frac{f^{(n)}\left(x_{0}\right)}{n !}\left(x-x_{0}\right)^{n}+o\left(\left(x-x_{0}\right)^{n}\right)
+\end{aligned}</script><p>$ o\left(\left(x-x_{0}\right)^{n}\right) $为佩亚诺余项，在某邻域上使用</p>
+<h2 id="泰勒中值定理"><a href="#泰勒中值定理" class="headerlink" title="泰勒中值定理"></a>泰勒中值定理</h2><p>若函数$f(x)$在$I=(a,b),x_0\in I$处有$n+4(n\ge1)$阶导数，则</p>
+<script type="math/tex; mode=display">
+f(x)=\sum_{i=0}^n\frac{f^{(n)}\left(x_{0}\right)}{n !}\left(x-x_{0}\right)^{n}+R_n(x)\\
+R_n(x)=\frac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)^{n+1}\\
+\xi \in(x_0,x)</script><p> $R_n(x)$称为拉格朗日余项，在区间上使用</p>
+<h3 id="麦克劳林公式"><a href="#麦克劳林公式" class="headerlink" title="麦克劳林公式"></a>麦克劳林公式</h3><p>若$x_0=0,\xi =\theta x$</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+f(x)&=f(0)+f^{\prime}(0) x+\frac{f^{\prime \prime}(0)}{2 !} x^{2}+ \\
+\quad &\cdots+\frac{f^{(n)}(0)}{n !} x^{n}+\frac{f^{(n+1)}(\theta x)}{(n+1) !} x^{n+1} \quad(0<\theta<1) .
+\end{aligned}</script><p>$|f^{(n+1)}(\xi)|\le M$则有</p>
+<script type="math/tex; mode=display">
+|R_n(x)|\le\frac{M}{(n+1)!}|x|^{n+1}</script><p>例</p>
+<script type="math/tex; mode=display">
+e^x=1+x+\frac1{2!}x^2+\cdots+\frac{e^{\theta x}}{(n+1)!}|x|^{n+1}</script><h3 id="常用"><a href="#常用" class="headerlink" title="常用"></a>常用</h3><script type="math/tex; mode=display">
+\sin x = x - \frac{1}{3!} x^3 + \frac{1}{5!} x^5 - \frac{1}{7!} x^7 \ldots
+\qquad (x \in \mathbb R)\\
+\cos x = 1 - \frac{1}{2!} x^2 + \frac{1}{4!} x^4 -\frac{1}{6!} x^6 \ldots
+\qquad (x \in \mathbb R)\\
+\mathrm{e} ^x =1 + x + \frac{1}{2!} x^2 + \frac{1}{3!} x^3  \ldots
+\qquad (x \in \mathbb R)\\
+\ln\left(1+x\right)  = x - \frac12 x^2 + \frac13 x^3 - \frac14 x^4 \ldots
+\qquad (-1 < x < 1)\\
+\frac{1}{1 \pm x} = 1 \mp x + x^2 \mp x^3 + x^4 \ldots
+\qquad (-1 < x < 1)\\
+\sqrt{1\pm x} = 1 \pm \frac12 x - \frac18 x^2 \pm \frac{1}{16} x^3 - \frac{5}{128}x^4 \ldots
+\qquad (-1 < x < 1)\\
+\tan x=x+\frac{x^3}3+\frac{2}{15}x^5\ldots\\
+(1+x)^\alpha=1+\alpha x+\frac{\alpha(\alpha-1)}2 x^2+\cdots+\frac{\alpha(\alpha-1)\cdots(\alpha-n+1)}{n!}x^n\ldots</script><p>拓展</p>
+<script type="math/tex; mode=display">
+\frac1{1+x^2}=\sum_{i=0}^n(-1)^ix^{2i}+o(x^{2n+1})\\
+\begin{aligned}
+\arctan x&=\sum_{i=0}^{2n}\frac{f ^{(i)}(0)}
+{i!}x^{i}\\&=\sum_{i=0}^n\frac{1}{(2i+1)!}\left.\left(\frac1{x^2+1}\right)^{(2i)}\right|_{x=0}x^{2i+1}\\
+\\&=\int \frac1{1+x^2}\text{d}x\\
+&=\sum_{i=0}^n\frac{(-1)^i}{2i+1} x^{2i+1}+ o(x^{2n+1})\end{aligned}</script><p>泰勒展开没有普遍规律，但关键看余项的阶数，能够消掉余项就行</p>
+<p>分式先看哪个好确定阶数，再上下同阶</p>
+<h1 id="洛必达法则"><a href="#洛必达法则" class="headerlink" title="洛必达法则"></a>洛必达法则</h1><h2 id="frac00-型"><a href="#frac00-型" class="headerlink" title="$\frac00$型"></a>$\frac00$型</h2><ul>
+<li><script type="math/tex; mode=display">
+\lim _{x \rightarrow a} f(x)=\lim _{x \rightarrow a} g(x)=0</script></li>
+<li><script type="math/tex; mode=display">
+g^{\prime}(x) \neq 0, \forall x \in \mathring{U}(a, \delta),f(x),g(x)可导</script></li>
+<li><script type="math/tex; mode=display">
+\lim _{x \rightarrow a} \frac{f^{\prime}(x)}{g^{\prime}(x)}=l(l \text { 为有限数或 } \pm \infty)</script></li>
+</ul>
+<script type="math/tex; mode=display">
+\lim _{x \rightarrow a} \frac{f(x)}{g(x)}=\lim _{x \rightarrow a} \frac{f^{\prime}(x)}{g^{\prime}(x)}=l</script><p> 洛必达法则为后验的，上下求导极限不存在而不能说明原极限不存在</p>
+<h2 id="frac-infty-infty-型"><a href="#frac-infty-infty-型" class="headerlink" title="$\frac\infty\infty$型"></a>$\frac\infty\infty$型</h2><ul>
+<li><script type="math/tex; mode=display">
+\lim _{x \rightarrow a} f(x)=\lim _{x \rightarrow a} g(x)=\infty</script></li>
+<li><script type="math/tex; mode=display">
+g^{\prime}(x) \neq 0,\forall x \in \mathring{U}(a, \delta),f(x),g(x)可导</script></li>
+<li><script type="math/tex; mode=display">
+\lim _{x \rightarrow a} \frac{f^{\prime}(x)}{g^{\prime}(x)}=l(l \text { 为有限数或 } \pm \infty)</script><script type="math/tex; mode=display">
+\lim _{x \rightarrow a} \frac{f(x)}{g(x)}=\lim _{x \rightarrow a} \frac{f^{\prime}(x)}{g^{\prime}(x)}=l</script></li>
+</ul>
+<p>其他类型同样可以通过化简变形可转化为上面两类</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/09/02/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E6%9E%81%E9%99%90/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/09/02/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E6%9E%81%E9%99%90/" itemprop="url">大一/高数/极限</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-09-02T08:51:13+08:00">
+                2022-09-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="varepsilon-N-定义"><a href="#varepsilon-N-定义" class="headerlink" title="$\varepsilon -N$定义"></a>$\varepsilon -N$定义</h1><p>描述性定义：要多接近，有多接近</p>
+<p>用$|a-b|$来描述距离</p>
+<p>设${a_n}$为一个数列，$A$为某一常数，若对任意$\varepsilon&gt;$0，都存在$N,N\in\mathrm{N}^+$使得当$n&gt;N$时</p>
+<script type="math/tex; mode=display">
+|a_n-A|<\varepsilon</script><p>称$A$为${a_n}$趋于正无穷的极限，或${a_n}$称收敛于$A$</p>
+<script type="math/tex; mode=display">
+\lim_{n\to\infty}a_n=A</script><h1 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h1><h2 id="唯一性"><a href="#唯一性" class="headerlink" title="唯一性"></a>唯一性</h2><p>若数列${a_n}$收敛，则它的极限唯一</p>
+<h2 id="子数列的性质"><a href="#子数列的性质" class="headerlink" title="子数列的性质"></a>子数列的性质</h2><p>对任意一个子数列${a_{n{_k}}}$</p>
+<script type="math/tex; mode=display">
+\lim_{n_k\to\infty}a_{n_k}=\lim_{n\to\infty}a_n</script><h3 id="逆否命题"><a href="#逆否命题" class="headerlink" title="逆否命题"></a>逆否命题</h3><p>若存在两个子数列不收敛与同一常数，则原数列必发散</p>
+<ul>
+<li>收敛于不同常数$(-1)^n$</li>
+<li>至少有一个发散</li>
+</ul>
+<h2 id="有界性"><a href="#有界性" class="headerlink" title="有界性"></a>有界性</h2><p>对任意$n\in \mathrm{N}^+$，$\exists M&gt;0$</p>
+<script type="math/tex; mode=display">
+|a_n|\le M</script><p>有界$\Leftrightarrow$同时有上界和下界 </p>
+<h3 id="关系"><a href="#关系" class="headerlink" title="关系"></a>关系</h3><p>若数列收敛则必有界，反之未必成立</p>
+<h2 id="保号性"><a href="#保号性" class="headerlink" title="保号性"></a>保号性</h2><p>若$\lim_{n\to\infty}a_n&gt;0$，则$\exists N&gt;0,n&gt;N$时，有</p>
+<script type="math/tex; mode=display">
+a_n>/<0</script><h3 id="加强形式"><a href="#加强形式" class="headerlink" title="加强形式"></a>加强形式</h3><p>从某项起有$a_n&gt;0$，则</p>
+<script type="math/tex; mode=display">
+\lim_{n\to\infty}a_n\ge0</script><h1 id="审敛准则"><a href="#审敛准则" class="headerlink" title="审敛准则"></a>审敛准则</h1><h2 id="夹逼定理"><a href="#夹逼定理" class="headerlink" title="夹逼定理"></a>夹逼定理</h2><blockquote>
+<p>the sandwich principle(also known as the “squeeze principle”).</p>
+</blockquote>
+<p>若$a_n\le b_n\le c_n$</p>
+<script type="math/tex; mode=display">
+\lim_{n\to\infty}a_n=\lim_{n\to\infty}c_n=A\\
+\Rightarrow\lim_{n\to\infty}b_n=A</script><h2 id="单调有界准则"><a href="#单调有界准则" class="headerlink" title="单调有界准则"></a>单调有界准则</h2><p>单调有界数列必有极限</p>
+<p> 如${a_n}\uparrow$，则$a_1$为下界，若有上界则收敛，反之发散</p>
+<h1 id="运算法则"><a href="#运算法则" class="headerlink" title="运算法则"></a>运算法则</h1><p>四则注意分母不为$0$</p>
+<p>一定要两个极限都存在才可计算</p>
+<script type="math/tex; mode=display">
+\lim_{x\to\infty}x-\lim_{x\to\infty}x\ne\lim_{x\to\infty}(x-x)</script><p>还有子极限必须要存在，如</p>
+<script type="math/tex; mode=display">
+\exists\lim _{h \rightarrow 0} \frac{f\left(x_{0}+2 h\right)-f\left(x_{0}-3 h\right)}{h}</script><p>子极限不一定存在故不一定可导</p>
+<p>反推可能有错误</p>
+<h1 id="重要极限"><a href="#重要极限" class="headerlink" title="重要极限"></a>重要极限</h1><script type="math/tex; mode=display">
+\because x\ge0,\sin x\le x\le \tan x\\
+\therefore1\le \frac x{\sin x}\le \frac1{\cos x}\\
+\because\lim_{x\to0}\frac1{\cos x}=1\\
+\therefore\lim_{x\to0}\frac x{\sin x}=1</script><script type="math/tex; mode=display">
+\lim_{x\to \infty}\left(1+\frac1x\right)^x=e</script><h2 id="无穷小"><a href="#无穷小" class="headerlink" title="无穷小"></a>无穷小</h2><p>在某一个极限过程中$(x\to x_0/\infty)$，$ \lim\alpha (x)=0$</p>
+<p>则称$\alpha (x)$为$(x\to x_0/\infty)$的无穷小</p>
+<p>无穷小可以与极限相互转化</p>
+<script type="math/tex; mode=display">
+\lim f(x)=A\Leftrightarrow \lim(f(x)-A)=\alpha</script><h3 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h3><p>有限个无穷小之和是无穷小，有界函数与无穷小之积是无穷小</p>
+<h3 id="等价无穷小"><a href="#等价无穷小" class="headerlink" title="等价无穷小"></a>等价无穷小</h3><p>若$\alpha,\beta$为同一变化过程的两个无穷小，$\lim\frac\beta \alpha$为这个过程的极限</p>
+<ul>
+<li>$\lim\frac\beta \alpha=0$，则$\beta$为$\alpha$的高阶无穷小，记为$\beta=o(\alpha)$</li>
+<li>$\lim\frac\beta \alpha=c$为同阶无穷小$c\ne 0$</li>
+<li>$\lim\frac\beta \alpha=1$则为等价无穷小，记为$\beta\sim\alpha$</li>
+<li>$\lim\frac\beta {\alpha^k}=c(c\ne 0)$则称$\beta$为关于$\alpha$的$k$阶无穷小</li>
+</ul>
+<p>特别的，对于等价无穷小$\beta\sim\alpha$，有</p>
+<script type="math/tex; mode=display">
+\beta=\alpha+o(\alpha)</script><p>代换原则，乘积可代换，加减若上下同阶可代换</p>
+<script type="math/tex; mode=display">
+\sin x \sim x  \sim \tan x  \sim\arcsin x  \sim \arctan x\\ 1-\cos ^mx \sim \frac{mx^{2}}{2}, \ln (1+x) \sim x\\
+e^x-1\sim x,\frac{a^x-1}x\sim\ln a\\
+\tan x-x\sim\frac13x^3\sim x-\arctan x\\
+x-\sin x\sim\frac16x^3\sim\arcsin x-x\\
+x-\ln(x+1)\sim\frac12x^2\\(1+x)^\alpha-1\sim +\alpha x</script><h2 id="渐近线"><a href="#渐近线" class="headerlink" title="渐近线"></a>渐近线</h2><script type="math/tex; mode=display">
+\lim_{x\to \infty}f(x)=A\Rightarrow y=A为水平渐近线\\
+\lim_{x\to x_0^+/x_0^-}f(x)=\infty\Rightarrow x=x_0为铅直渐近线\\
+k=\lim_{x\to \infty}\frac{f(x)}x,b=\lim_{x\to \infty}[f(x)-kx]</script>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/29/%E5%A4%A7%E4%B8%80/%E6%9D%82/adobe/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/08/29/%E5%A4%A7%E4%B8%80/%E6%9D%82/adobe/" itemprop="url">大一/杂/adobe</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-08-29T23:09:09+08:00">
+                2022-08-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="PS"><a href="#PS" class="headerlink" title="PS"></a>PS</h1><h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>限制比例shift</p>
+<p>Ctrl+Alt+R选择并遮住</p>
+<p>通过拷贝建立一个图层 【Ctrl】+【J】(如选择了区域)</p>
+<p>ctrl+d取消选择</p>
+<p>删除delete</p>
+<p>Alt + 鼠标右击 调整画笔大小，alt取色</p>
+<p>按住V后可用鼠标拖动图片</p>
+<p>Alt+Del键即可把该颜色填充入当前图层（另外Ctrl+Del键是填充背景色）</p>
+<h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><h3 id="蒙版"><a href="#蒙版" class="headerlink" title="蒙版"></a>蒙版</h3><p>下方有蒙版选项黑色隐藏白色显示</p>
+<p>蒙版和图像关联，所以对蒙版操作会影响图像</p>
+<p>混合模式两个图层的混合</p>
+<p>图像 调整 调色ctrl+u</p>
+<p>减去前面的形状 用于反选</p>
+<p>变换用于调整形状</p>
+<h1 id="AE"><a href="#AE" class="headerlink" title="AE"></a>AE</h1><h2 id="快捷键-1"><a href="#快捷键-1" class="headerlink" title="快捷键"></a>快捷键</h2><p>剃刀工具ctrl+shift+D</p>
+<p>下一帧PgDn</p>
+<p>缓入缓出型关键帧F9</p>
+<p>帧入点关键帧可以按键盘shift+F9实现,出点是ctrl+shift+F9实现</p>
+<p>CapsLK刷新控制</p>
+<p>CTRL+K打开合成设置</p>
+<p>按住Ctrl，鼠标点住左键往左拖动笔刷变小；往右拖动笔刷变大。</p>
+<h1 id="pr"><a href="#pr" class="headerlink" title="pr"></a>pr</h1><p> 上下 切换轨道</p>
+<p>源浏览器中有仅添加音频和视频</p>
+<p>用音轨选择器来调整音量</p>
+<p>在“Effect Controls”（效果控制）面板中，在“Opacity”（不透明度）下的“Blend Mode”（混合模式）菜单中选择一种混合模式</p>
+<p>shift 多选</p>
+<p>交叉溶解yyds</p>
+<p>在关键帧右键贝塞尔曲线</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/22/%E5%A4%A7%E4%B8%80/python/basis/class/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1493,567 +2037,6 @@ f^{(2n)}(x_0) <0</script><p>类比为极小值点</p>
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/10/%E5%A4%A7%E4%B8%80/python/taichi/%E6%95%B0%E6%8D%AE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/08/10/%E5%A4%A7%E4%B8%80/python/taichi/%E6%95%B0%E6%8D%AE/" itemprop="url">大一/python/taichi/数据</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-08-10T12:53:53+08:00">
-                2022-08-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> taichi <span class="keyword">as</span> ti</span><br><span class="line">ti.init(arch=ti.gpu)</span><br></pre></td></tr></table></figure>
-<h2 id="修饰"><a href="#修饰" class="headerlink" title="修饰"></a>修饰</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@ti.kernel#某个函数</span></span><br><span class="line"><span class="comment">#最外层才会并行</span></span><br></pre></td></tr></table></figure>
-<h2 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">cast<span class="comment">#i32/i64/f32/f64</span></span><br><span class="line">b=ti.cast(a,ti.i32)<span class="comment">#转换</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#大写</span></span><br><span class="line">a=ti.Vector([<span class="number">0.0</span>,<span class="number">0.0</span>,<span class="number">0.0</span>])</span><br><span class="line">B=ti.Matrix([<span class="number">1.5</span>,<span class="number">1.4</span>],[<span class="number">1.3</span>,<span class="number">1.2</span>])</span><br><span class="line">B[<span class="number">1</span>,<span class="number">0</span>] </span><br><span class="line">r=ti.Struct(v1=a,v2=<span class="number">0</span>)<span class="comment">#结构体</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#N-d array(global)</span></span><br><span class="line">c=ti.field(dtype=ti.f32,shape=(<span class="number">256</span>,<span class="number">256</span>))</span><br><span class="line"><span class="comment">#shape=4 -vector</span></span><br><span class="line"><span class="comment">#shape=() [None]</span></span><br><span class="line">vf=ti.Vector.field(n=<span class="number">3</span>,shape=<span class="number">4</span>)<span class="comment">#m每个元素为(3*1)的小向量</span></span><br><span class="line"><span class="comment">#m=2(3*2)</span></span><br></pre></td></tr></table></figure>
-<h2 id="计算"><a href="#计算" class="headerlink" title="计算"></a>计算</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">+=/ti.atomic_add(a,b)</span><br><span class="line"><span class="comment">#防止数据征用</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">import taichi as ti</span><br><span class="line">ti.init(ti.gpu)</span><br><span class="line"></span><br><span class="line">N&#x3D;2</span><br><span class="line">vol&#x3D;ti.Vector.field(2,ti.f32,N)#二维向量</span><br><span class="line">acc&#x3D;ti.Vector.field(2,ti.f32,N)</span><br><span class="line">pos&#x3D;ti.Vector.field(2,ti.f32,N)</span><br><span class="line">substepping&#x3D;10</span><br><span class="line"></span><br><span class="line">@ti.kernel</span><br><span class="line">def initialize():</span><br><span class="line">    for i in range(N):</span><br><span class="line">        pos[i]&#x3D;[ti.random(),ti.random()]</span><br><span class="line">        vol[i]&#x3D;[ti.random(),ti.random()]</span><br><span class="line"></span><br><span class="line">gui&#x3D;ti.GUI(&quot;n body problem&quot;,(512,512))</span><br><span class="line">           </span><br><span class="line">while(gui.running):</span><br><span class="line">    # for i in range(substepping):</span><br><span class="line">    gui.circle(pos.to_numpy(),color&#x3D;0xFFFFFF,radius&#x3D;2)</span><br><span class="line">    gui.show()</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/07/%E5%A4%A7%E4%B8%80/%E6%9D%82/%E5%9B%BE%E5%BD%A2%E5%AD%A6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/08/07/%E5%A4%A7%E4%B8%80/%E6%9D%82/%E5%9B%BE%E5%BD%A2%E5%AD%A6/" itemprop="url">大一/杂/图形学</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-08-07T17:33:32+08:00">
-                2022-08-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="欧拉方法"><a href="#欧拉方法" class="headerlink" title="欧拉方法"></a>欧拉方法</h1><h2 id="显式欧拉方法"><a href="#显式欧拉方法" class="headerlink" title="显式欧拉方法"></a>显式欧拉方法</h2><script type="math/tex; mode=display">
-\begin{cases}\vec{v}\left(t_{1}\right)=\vec{v}\left(t_{0}\right)+M^{-1} \vec{F}\left(t_{0}\right)\Delta t \\
-\vec{x}\left(t_{1}\right)=\vec{x}\left(t_{0}\right)+\vec{v}\left(t_{0}\right) \Delta t\end{cases}</script><p>用当前的状态计算速度和加速度$(\text{Forward} )$</p>
-<p>能量增加，开放的系统</p>
-<p><img src="/2022/08/07/%E5%A4%A7%E4%B8%80/%E6%9D%82/%E5%9B%BE%E5%BD%A2%E5%AD%A6/image-20230213110541464.png" alt="image-20230213110541464" style="zoom:50%;"></p>
-<script type="math/tex; mode=display">
-\int_{t^{[0]}}^{t^{[1]}}\boldsymbol v(t)\text dt=\boldsymbol v(t^{[0]})\Delta t</script><h2 id="隐式欧拉方法"><a href="#隐式欧拉方法" class="headerlink" title="隐式欧拉方法"></a>隐式欧拉方法</h2><script type="math/tex; mode=display">
-\vec{v}\left(t_{1}\right)=\lambda(\vec{v}\left(t_{0}\right)+M^{-1} \vec{F}\left(t_{1}\right)\Delta t) \\
-\vec{x}\left(t_{1}\right)=\vec{x}\left(t_{0}\right)+\vec{v}\left(t_{1}\right) \Delta t</script><p>用未来的状态去计算速度和加速度再来更新$(\text{Backward} )$</p>
-<script type="math/tex; mode=display">
-\int_{t^{[0]}}^{t^{[1]}}\boldsymbol v(t)\text dt=\boldsymbol v(t^{[1]})\Delta t</script><h2 id="中点方法"><a href="#中点方法" class="headerlink" title="中点方法"></a>中点方法</h2><p><img src="/2022/08/07/%E5%A4%A7%E4%B8%80/%E6%9D%82/%E5%9B%BE%E5%BD%A2%E5%AD%A6/image-20230213111225564.png" alt="image-20230213111225564" style="zoom:50%;"></p>
-<script type="math/tex; mode=display">
-\int_{t^{[0]}}^{t^{[1]}}\boldsymbol v(t)\text dt=\boldsymbol v(t^{[0.5]})\Delta t</script><p>二阶准确</p>
-<h2 id="半隐式欧拉方法"><a href="#半隐式欧拉方法" class="headerlink" title="半隐式欧拉方法"></a>半隐式欧拉方法</h2><script type="math/tex; mode=display">
-\vec{v}\left(t_{1}\right)=\vec{v}\left(t_{0}\right)+M^{-1} \vec{F}\left(t_{0}\right)\Delta t \\
-\vec{x}\left(t_{1}\right)=\vec{x}\left(t_{0}\right)+\vec{v}\left(t_{1}\right) \Delta t</script><p>本质上为显式方法</p>
-<h1 id="旋转"><a href="#旋转" class="headerlink" title="旋转"></a>旋转</h1><h2 id="欧拉角"><a href="#欧拉角" class="headerlink" title="欧拉角"></a>欧拉角</h2><script type="math/tex; mode=display">
-\mathbf{R}_{x y z}(\alpha, \beta, \gamma)=\mathbf{R}_{x}(\alpha) \mathbf{R}_{y}(\beta) \mathbf{R}_{z}(\gamma)</script><p>任意旋转都可以分解为绕$x,y,z$三个轴的旋转</p>
-<p>顺序非常重要</p>
-<script type="math/tex; mode=display">
-\mathbf{R}_{x}(\alpha) \mathbf{R}_{y}(\beta) \mathbf{R}_{z}(\gamma)\ne\mathbf{R}_{x}(\alpha)\mathbf{R}_{z}(\gamma) \mathbf{R}_{y}(\beta)</script><p><img src="/2022/08/07/%E5%A4%A7%E4%B8%80/%E6%9D%82/%E5%9B%BE%E5%BD%A2%E5%AD%A6/image-20230120142858751.png" alt="image-20230120142858751"></p>
-<p><strong>飞机滚转（Roll）；飞机俯仰（Pitch）；飞机偏航（Yaw）</strong></p>
-<p>罗德里格斯旋转公式</p>
-<script type="math/tex; mode=display">
-\mathbf{R}(\mathbf{n}, \alpha)=\cos (\alpha) \mathbf{I}+(1-\cos (\alpha)) \mathbf{n} \mathbf{n}^{T}+\sin (\alpha) \underbrace{\left(\begin{array}{ccc}
-0 & -n_{z} & n_{y} \\
-n_{z} & 0 & -n_{x} \\
--n_{y} & n_{x} & 0
-\end{array}\right)}_{\mathbf{N}}</script><h2 id="四元数"><a href="#四元数" class="headerlink" title="四元数"></a>四元数</h2><script type="math/tex; mode=display">
-q=(q_1, q_ 2, q _3, q _4)=\left(\cos \left(\frac{\theta}{2}\right), \sin \left(\frac{\theta}{2}\right) n_ x, \sin \left(\frac{\theta}{2}\right) n_ y, \sin \left(\frac{\theta}{2}\right)n_  z\right)</script><p>对应于绕$\mathbf{n}$的旋转</p>
-<script type="math/tex; mode=display">
-p'=qpq^{-1}</script><h1 id="质点弹簧系统"><a href="#质点弹簧系统" class="headerlink" title="质点弹簧系统"></a>质点弹簧系统</h1><p><img src="/2022/08/07/%E5%A4%A7%E4%B8%80/%E6%9D%82/%E5%9B%BE%E5%BD%A2%E5%AD%A6/image-20230212182413373.png" alt="image-20230212182413373"></p>
-<p>$f_{a\to b}$为弹簧作用在$a$上的力</p>
-<h2 id="能量耗散"><a href="#能量耗散" class="headerlink" title="能量耗散"></a>能量耗散</h2><p>引入阻力</p>
-<script type="math/tex; mode=display">
-f=-k_d\dot{\boldsymbol x}</script><p> 但表示合速度，表示不了弹簧内部的损耗</p>
-<script type="math/tex; mode=display">
-f_a=-k_s\frac{\boldsymbol a-\boldsymbol b}{||\boldsymbol a-\boldsymbol b||}(\dot{\boldsymbol a}-\dot{\boldsymbol b})\cdot\frac{\boldsymbol a-\boldsymbol b}{||\boldsymbol a-\boldsymbol b||}</script><h1 id="流体"><a href="#流体" class="headerlink" title="流体"></a>流体</h1><p>不可压缩流体</p>
-<script type="math/tex; mode=display">
-h_{i}\left(t_{0}+\Delta t\right)=2 h_{i}\left(t_{0}\right)-h_{i}\left(t_{0}-\Delta t\right)+\frac{\Delta t^{2}}{\Delta x^{2} \rho}\left(\left(\frac{h_{i-1}+h_{i}}{2}\right)\left(P_{i-1}-P_{i}\right)+\left(\frac{h_{i+1}+h_{i}}{2}\right)\left(P_{i+1}-P_{i}\right)\right)\\
-h_{i}\left(t_{0}+\Delta t\right)=h_{i}\left(t_{0}\right)+\beta\left(h_{i}\left(t_{0}\right)-h_{i}\left(t_{0}-\Delta t\right)\right)+\alpha\left(h_{i+1}\left(t_{0}\right)+h_{i-1}\left(t_{0}\right)-2 h_{i}\left(t_{0}\right)\right)</script><h1 id="有限元"><a href="#有限元" class="headerlink" title="有限元"></a>有限元</h1><h2 id="形函数"><a href="#形函数" class="headerlink" title="形函数"></a>形函数</h2><script type="math/tex; mode=display">
-\begin{pmatrix}X\\Y\\Z\end{pmatrix}=\sum_{i=0}^{i=3}\begin{pmatrix}X_i\\Y_i\\Z_i\end{pmatrix}\phi_i\left(\mathbf{X}\right)
-\\ \begin{pmatrix}X-X_0\\Y-Y_0\\Z-Z_0\end{pmatrix}=\begin{pmatrix}\Delta X_1&\Delta X_2&\Delta X_3\\\Delta Y_1&\Delta Y_2&\Delta X_3\\\Delta Z_1&\Delta Z_2&\Delta X_3\end{pmatrix}\begin{pmatrix}\phi_1\left(\mathbf{X}\right)\\\phi_2\left(\mathbf{X}\right)\\\phi_3\left(\mathbf{X}\right)\end{pmatrix}</script><p>所以</p>
-<script type="math/tex; mode=display">
-\begin{pmatrix}\phi_1\left(\mathbf{X}\right)\\\phi_2\left(\mathbf{X}\right)\\\phi_3\left(\mathbf{X}\right)\end{pmatrix}=T^{-1}(\mathbf{X}-\mathbf{X}_0)</script><p>齐次坐标</p>
-<h2 id="变换"><a href="#变换" class="headerlink" title="变换"></a>变换</h2><p><img src="/2022/08/07/%E5%A4%A7%E4%B8%80/%E6%9D%82/%E5%9B%BE%E5%BD%A2%E5%AD%A6/image-20230721140114583.png" alt="image-20230721140114583"></p>
-<script type="math/tex; mode=display">
-\mathbf{x}\left(\mathbf{X}\right)=\sum_{i=0}^{i=3}\mathbf{x}_{i}\left(t\right){\phi_{i}\left(\mathbf{X}\right)}\\
-\mathbf{x}\left(\mathbf{X}\right)=\begin{pmatrix}\phi_0\mathbf{I}&\phi_1\mathbf{I}&\phi_2\mathbf{I}&\phi_3\mathbf{I}\end{pmatrix}\begin{pmatrix}\mathbf{x}_0\\\mathbf{x}_1\\\mathbf{x}_2\\\mathbf{x}_3\end{pmatrix}</script><p>求动能</p>
-<script type="math/tex; mode=display">
-\mathbf{v}\left(\mathbf{X}\right)=\dot{\mathbf{x}}\left(\mathbf{X}\right)=\mathbf{N}\left(\mathbf{X}\right)\dot{\mathbf{q}}\\
-\frac12\int_{\Omega}\rho\mathbf{v}^T\mathbf{v}d\Omega =\frac12\int_{\Omega}\rho\left(\dot{\mathbf{q}}^T\mathrm{N}\left(\mathbf{X}\right)^T\mathrm{N}\left(\mathbf{X}\right)\dot{\mathbf{q}}\right)d\Omega</script><p>重组</p>
-<script type="math/tex; mode=display">
-\frac12\dot{\mathbf{q}}^T\left(\int_{\Omega}\rho\mathrm{N}\left(\mathbf{X}\right)^T\mathrm{N}\left(\mathbf{X}\right)d\Omega\right)\dot{\mathbf{q}}=\frac12\dot{\mathbf{q}}^T\mathbf{M}_0\dot{\mathbf{q}}</script><p>$\mathbf{M}_0$为单元的质量矩阵</p>
-<script type="math/tex; mode=display">
-6\rho\cdot\boldsymbol{vol}\cdot\int_0^1\int_0^{1-\phi_1}\int_0^{1-\phi_1-\phi_2}\left(\phi_r\phi_s\right)d\phi_3d\phi_2d\phi_1</script>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/07/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E5%90%91%E9%87%8F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/08/07/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E5%90%91%E9%87%8F/" itemprop="url">大一/线性代数/向量</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-08-07T12:24:39+08:00">
-                2022-08-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="向量"><a href="#向量" class="headerlink" title="向量"></a>向量</h1><p>$\rm vector$ 表示</p>
-<script type="math/tex; mode=display">
-\vec{a}/\mathbf{a}</script><p>$||\vec{a}||$为向量的长度</p>
-<p>在直角坐标系中</p>
-<script type="math/tex; mode=display">
-||\vec{a}||=\sqrt{x^2+y^2}\\
-单位向量\hat{a}=\vec{a}/||\vec{a}||</script><p>两向量之间的夹角为$0\le\left \langle \alpha,\beta \right \rangle \le \pi$</p>
-<h2 id="点乘"><a href="#点乘" class="headerlink" title="点乘"></a>点乘</h2><p>$\rm Dot\;Product$</p>
-<script type="math/tex; mode=display">
-\vec{a} \cdot \vec{b}=\|\vec{a}\|\|\vec{b}\| \cos \theta 
-=x_1x_2+y_1y_2
-\\
-\cos \theta=\frac{\vec{a} \cdot \vec{b}}{\|\vec{a}\|\|\vec{b}\|}\\
-\theta=\arccos (\hat{a}\cdot\hat{b})</script><p>矩阵</p>
-<script type="math/tex; mode=display">
-\vec{a} \cdot \vec{b}=a^Tb</script><p>运算性质</p>
-<script type="math/tex; mode=display">
-交换律：\vec{a} \cdot \vec{b}=\vec{b} \cdot \vec{a} \\
-分配律：\vec{a} \cdot(\vec{b}+\vec{c})=\vec{a} \cdot \vec{b}+\vec{a} \cdot \vec{c} \\
-(k \vec{a}) \cdot \vec{b}=\vec{a} \cdot(k \vec{b})=k(\vec{a} \cdot \vec{b})</script><h2 id="叉乘"><a href="#叉乘" class="headerlink" title="叉乘"></a>叉乘</h2><p>$\rm Cross \;Product$</p>
-<script type="math/tex; mode=display">
-||\vec{a}\times\vec{b}||=||\vec{a}||||\vec{b}||\sin\theta</script><p>运算性质</p>
-<script type="math/tex; mode=display">
-\vec{a}\times\vec{b}=-\vec{b}\times\vec{a}\\
-\vec{k}=\vec{i}\times \vec{j}</script><script type="math/tex; mode=display">
-\begin{array}{l}\vec{a} \times \vec{b}&=\left(\begin{array}{c}
-y_{a} z_{b}-y_{b} z_{a} \\
-z_{a} x_{b}-x_{a} z_{b} \\
-x_{a} y_{b}-y_{a} x_{b}
-\end{array}\right)=\begin{vmatrix}
-  i& j & k\\
-x_a  &y_a  &z_a \\
- x_b & y_b &z_b
-\end{vmatrix}\\ &=\begin{bmatrix}
-  0& -z_a & y_a\\
-z_a  &0  &-x_a \\
- y_a & x_a &0
-\end{bmatrix}\begin{bmatrix}
-  x_b\\
-y_b   \\
- z_b
-\end{bmatrix}=[a]_\times b\end{array}\\
-[a]_\times+[a]_\times^\text T=0</script><h2 id="混合积"><a href="#混合积" class="headerlink" title="混合积"></a>混合积</h2><script type="math/tex; mode=display">
-[\vec{a}\;\vec{b}\; \vec c]=\vec{a}\times\vec{b}\cdot \vec c\\
-=\begin{vmatrix}
-  x_c& y_c & z_c\\
-x_a  &y_a  &z_a \\
- x_b & y_b &z_b
-\end{vmatrix}</script><p>根据Levi-Civita</p>
-<script type="math/tex; mode=display">
-\vec{a}\times\vec{b}\cdot \vec c=\vec{b}\times\vec{c}\cdot \vec a=\vec{c}\times\vec{a}\cdot \vec b</script><h2 id="范数"><a href="#范数" class="headerlink" title="范数"></a>范数</h2><script type="math/tex; mode=display">
-||\vec{x}||_p=\sqrt[p]{\sum_{i=1}^n|x_i|}</script><script type="math/tex; mode=display">
-\|x\|_{1}=\left|x_{1}\right|+\cdots+\left|x_{n}\right| \\
-\|x\|_{2}=\sqrt{\left|x_{1}\right|^{2}+\cdots+\left|x_{n}\right|^{2}}=\sqrt{x^{H} x} \\
-\|x\|_{\infty}= \underset{1 \leq i \leq n}\max|x_{i}|</script><h1 id="表示"><a href="#表示" class="headerlink" title="表示"></a>表示</h1><p>根据三角形法则，对于任何一个向量</p>
-<p>都可以分解为两个基向量的线性组合</p>
-<script type="math/tex; mode=display">
-\vec{OP}=x\boldsymbol{i}+y\boldsymbol{j}</script><p>所有线性组合构成集合$\text{span}(\boldsymbol{i},\boldsymbol{j})$，称为张成空间</p>
-<p>这就是向量的坐标表示法</p>
-<script type="math/tex; mode=display">
-\vec{OP}=\left(\begin{array}l x\\y\end{array}\right)\\
-\boldsymbol{i}=\left(\begin{array}l 1\\0\end{array}\right),\boldsymbol{j}=\left(\begin{array}l 0\\1\end{array}\right)</script><h2 id="直线的向量方程"><a href="#直线的向量方程" class="headerlink" title="直线的向量方程"></a>直线的向量方程</h2><p>对于直线，有如下关系</p>
-<p><img src="/2022/08/07/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E5%90%91%E9%87%8F/image-20221230132600024.png" alt="image-20221230132600024"></p>
-<script type="math/tex; mode=display">
-\vec{OR}=\vec{OA}+t\vec{AR}\quad(t\in \mathbf{R})</script><p>其中非零向量$\vec{AR}$为该直线的方向向量</p>
-<p>写成坐标形式，可得</p>
-<script type="math/tex; mode=display">
-\left(\begin{array}l x\\y\end{array}\right)=\left(\begin{array}l x_0\\y_0\end{array}\right)+t\left(\begin{array}l v_1\\v_2\end{array}\right)</script><h1 id="导数"><a href="#导数" class="headerlink" title="导数"></a>导数</h1><p>求导的本质只是把标量求导的结果排列起来，至于是按行排列还是按列排列都是可以的</p>
-<p>最基本的求导布局有两个：</p>
-<p><strong>分子布局(numerator layout)</strong>和<strong>分母布局(denominator layout )</strong></p>
-<p>机器学习主要为分子布局</p>
-<blockquote>
-<p>分子布局：分子为列向量，分母为行向量</p>
-</blockquote>
-<script type="math/tex; mode=display">
-\mathbf{x}=\begin{bmatrix}x_1\\x_2\\ \vdots \\x_n\end{bmatrix}
-\\\frac{\partial y}{\partial \mathbf{x}}=\begin{bmatrix}\frac{\partial y}{\partial x_1}
-\frac{\partial y}{\partial x_2}
-\cdots
-\frac{\partial y}{\partial x_n}
-\end{bmatrix}</script><p>方向导数，定义的$\rm shape$，例</p>
-<script type="math/tex; mode=display">
-\frac{\partial}{\partial \mathbf{x}}(x_1^2+2x_2^2)=[2x_1,4x_2]</script><p>求导运算是线性算子</p>
-<script type="math/tex; mode=display">
-\mathbf{y}=\left[\begin{array}{c}
-y_{1} \\
-y_{2} \\
-\vdots \\
-y_{m}
-\end{array}\right] \quad \frac{\partial \mathbf{y}}{\partial x}=\left[\begin{array}{c}
-\frac{\partial y_{1}}{\partial x} \\
-\frac{\partial y_{2}}{\partial x} \\
-\vdots \\
-\frac{\partial y_{m}}{\partial x}
-\end{array}\right]</script><h2 id="雅可比矩阵"><a href="#雅可比矩阵" class="headerlink" title="雅可比矩阵"></a>雅可比矩阵</h2><script type="math/tex; mode=display">
-\text{jacobi matrix}
-\\\frac{\partial \mathbf{y}}{\partial \mathbf{x}}=\left[\begin{array}{c}
-\frac{\partial y_{1}}{\partial \mathbf{x}} \\
-\frac{\partial y_{2}}{\partial \mathbf{x}} \\
-\vdots \\
-\frac{\partial y_{m}}{\partial \mathbf{x}}
-\end{array}\right]=\left[\begin{array}{c}
-\frac{\partial y_{1}}{\partial x_{1}}, \frac{\partial y_{1}}{\partial x_{2}}, \ldots, \frac{\partial y_{1}}{\partial x_{n}} \\
-\frac{\partial y_{2}}{\partial x_{1}}, \frac{\partial y_{2}}{\partial x_{2}}, \ldots, \frac{\partial y_{2}}{\partial x_{n}} \\
-\vdots \\
-\frac{\partial y_{m}}{\partial x_{1}}, \frac{\partial y_{m}}{\partial x_{2}}, \ldots, \frac{\partial y_{m}}{\partial x_{n}}
-\end{array}\right]</script><h2 id="线性回归"><a href="#线性回归" class="headerlink" title="线性回归"></a>线性回归</h2><script type="math/tex; mode=display">
-x , w \in \mathbf{R }^ { n } , y \in \mathbf{R }  \\  z = (\left \langle  \mathbf{x}  ,\mathbf{w} \right \rangle - y ) ^ { 2 }</script><script type="math/tex; mode=display">
-\begin{aligned}\frac{\partial z}{\partial \mathbf{w}}\end{aligned}=2(\left \langle  \mathbf{x}  ,\mathbf{w} \right \rangle - y )\mathbf{w}^{\rm T}</script><h2 id="求导"><a href="#求导" class="headerlink" title="求导"></a>求导</h2><p>采用分子布局</p>
-<script type="math/tex; mode=display">
-\frac{\partial A x}{\partial x}=A\\
-\frac{\partial A x}{\partial x^{T}}=A^{T} \\
-
-\frac{\partial x^{T} A}{\partial x}=A^{T}</script><p><img src="/2022/08/07/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E5%90%91%E9%87%8F/ca965b6eb9595c5542db8fa385d9d58a.png" alt="ca965b6eb9595c5542db8fa385d9d58a"></p>
-<h1 id="场论"><a href="#场论" class="headerlink" title="场论"></a>场论</h1><script type="math/tex; mode=display">
-\vec{F}(x,y,z)=f_x(x,y,z)\mathbf{i}+f_y(x,y,z)\mathbf{j}+f_z(x,y,z)\mathbf{k}</script><h2 id="梯度"><a href="#梯度" class="headerlink" title="梯度"></a>梯度</h2><script type="math/tex; mode=display">
-(x',y')=F(x,y)</script><p>向量场里每个点赋予一个向量</p>
-<script type="math/tex; mode=display">
-\nabla=\begin{bmatrix}\frac{\partial }{\partial x_1}
-\frac{\partial}{\partial x_2}
-\cdots
-\frac{\partial }{\partial x_n}\end{bmatrix}</script><h2 id="散度"><a href="#散度" class="headerlink" title="散度"></a>散度</h2><script type="math/tex; mode=display">
-\text{div}F(x,y)=\nabla\cdot F</script><p>描述净流量，若流入大于流出则为负</p>
-<p>$(x,y)$点生成的流量</p>
-<p>例如对于不可压缩的流体</p>
-<script type="math/tex; mode=display">
-\text{div}V=0</script><h2 id="旋度"><a href="#旋度" class="headerlink" title="旋度"></a>旋度</h2><script type="math/tex; mode=display">
-\text{curl}F(x,y)     =\nabla\times F</script><p><img src="/2022/08/07/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E5%90%91%E9%87%8F/image-20230119093040237.png" alt="image-20230119093040237"></p>
-<script type="math/tex; mode=display">
-\begin{array}{l}\nabla\cdot  F=
-{\left[\begin{array}{c}
-\frac{\partial}{\partial x} \\
-\frac{\partial}{\partial y}
-\end{array}\right] \cdot\left[\begin{array}{c}
-\mathbf{F}_{x} \\
-\mathbf{F}_{y}
-\end{array}\right]=\frac{\partial F_{x}}{\partial x}+\frac{\partial F_{y}}{\partial y}} \\
-{\nabla\times F=\left[\begin{array}{c}
-\frac{\partial}{\partial x} \\
-\frac{\partial}{\partial y}
-\end{array}\right] \times\left[\begin{array}{c}
- \mathbf{F}_x \\
-\mathbf{F}_{y}
-\end{array}\right]=\frac{\partial F_{y}}{\partial x}-\frac{\partial F_{x}}{\partial y}}
-\end{array}</script>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2104,7 +2087,7 @@ x , w \in \mathbf{R }^ { n } , y \in \mathbf{R }  \\  z = (\left \langle  \mathb
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">95</span>
+                <span class="site-state-item-count">98</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -2133,12 +2116,12 @@ x , w \in \mathbf{R }^ { n } , y \in \mathbf{R }  \\  z = (\left \langle  \mathb
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://www.zhihu.com/people/pan-shi-wei-91" target="_blank" title="知乎">
+                <a href="https://www.linkedin.com/in/erik-pan-7b88a4190/" target="_blank" title="LinkedIn">
                   
                     <i class="fa fa-fw fa-globe"></i>
                   
                     
-                      知乎
+                      LinkedIn
                     
                 </a>
               </span>

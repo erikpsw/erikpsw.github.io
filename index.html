@@ -311,6 +311,511 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2024/11/18/%E5%A4%A7%E4%B8%89/%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2024/11/18/%E5%A4%A7%E4%B8%89/%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90/" itemprop="url">大三/控制系统分析</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2024-11-18T19:16:16+08:00">
+                2024-11-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="时域分析"><a href="#时域分析" class="headerlink" title="时域分析"></a>时域分析</h1><h2 id="时域瞬态响应"><a href="#时域瞬态响应" class="headerlink" title="时域瞬态响应"></a>时域瞬态响应</h2><p>时间响应，在数学上就是系统动力学方程的解</p>
+<h3 id="一阶系统"><a href="#一阶系统" class="headerlink" title="一阶系统"></a>一阶系统</h3><p><img src="/2024/11/18/%E5%A4%A7%E4%B8%89/%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90/20200823215451.png" alt="20200823215451" style="zoom: 50%;"></p>
+<p>$t_s$为调整时间$3T\to 95\%,4T\to98\%$</p>
+<p>一阶系统在阶跃输入下达到稳态的 $(1-\Delta)$ 时所用的时间 （ $\Delta$ 为容许误差）</p>
+<p>$t_s$ 反应系统的快速性，T越大，调整时间越大，响应速度越慢</p>
+<h3 id="二阶系统"><a href="#二阶系统" class="headerlink" title="二阶系统"></a>二阶系统</h3><p>对 $G(s)=\frac{\omega_n^2}{s^2+2\xi\omega_n s+\omega_n^2}$ 来说：</p>
+<p>特征方程：${s^2+2\xi\omega_n s+\omega_n^2}$</p>
+<p>特征根：$s=\xi\omega_n\pm\omega_n\sqrt{1-\xi^2}$</p>
+<ul>
+<li>$\omega_n$ 为无阻尼固有频率，令 $\omega_d=\omega_n\sqrt{1-\xi^2}$ ，称为有阻尼固有频率</li>
+<li>$\xi=0$ ，系统为无阻尼系统，等幅振荡</li>
+<li>$0&lt;\xi&lt;1$ ，系统为欠阻尼系统，振荡收敛</li>
+<li>$\xi=1$，系统为临界阻尼系统，不振荡收敛</li>
+<li>$\xi&gt;1$ ，系统为过阻尼系统，不振荡收敛</li>
+</ul>
+<p><img src="/2024/11/18/%E5%A4%A7%E4%B8%89/%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90/image-20241118195142799.png" alt="image-20241118195142799" style="zoom: 33%;"></p>
+<ul>
+<li><p>上升时间$t_r$ ：系统第一次到达稳态的时间</p>
+</li>
+<li><p>峰值时间$t_p$：系统第一次到达峰值的时间</p>
+</li>
+<li><p>最大超调量$M_p$：(峰值 - 稳态)/峰值%</p>
+</li>
+<li><p>调整时间$t_s$，当 $0&lt;\xi&lt;0.7$ 时</p>
+</li>
+</ul>
+<blockquote>
+<ul>
+<li>$\xi$ 主要与震荡性（稳定性）正相关，$\omega_n$ 主要与快速性正相关。</li>
+<li>系统的响应速度往往与震荡性能之间是矛盾的</li>
+</ul>
+</blockquote>
+<h2 id="稳态响应"><a href="#稳态响应" class="headerlink" title="稳态响应"></a>稳态响应</h2><p>对于一阶惯性系统，输入正弦信号$\sin(\omega t)$</p>
+<script type="math/tex; mode=display">
+U_o(s)=\frac1{Ts+1}\frac{\omega}{s^2+\omega^2}</script><p>分解</p>
+<script type="math/tex; mode=display">
+U_o(s)=\frac{T^2\omega}{1+T^2\omega^2}\frac1{Ts+1}+\frac1{Tj\omega+1}\frac{\omega}{s^2+\omega^2}</script><p>根据时移特性拉氏反变换，得到</p>
+<script type="math/tex; mode=display">
+u_o(t)=\frac{T\omega}{1+T^2\omega^2}e^{-\frac tT}+\frac1{\sqrt{(\omega T)^2+1}}\sin(\omega t-\arctan(\omega T))</script><p>所以稳态之后的信号也为正弦，幅值和相位的求法是把$s=j\omega$带入传递函数</p>
+<script type="math/tex; mode=display">
+G(j\omega)=U(\omega)+jV(\omega)</script><p>从而有时频特性和相频特性</p>
+<script type="math/tex; mode=display">
+\begin{cases}A(\omega)=\sqrt{[U(\omega)]^2+[V(\omega)]^2}\\
+\phi(\omega)=\arctan\left[\frac{V(\omega)}{U(\omega)}\right]\end{cases}</script><h1 id="频域分析"><a href="#频域分析" class="headerlink" title="频域分析"></a>频域分析</h1>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2024/11/18/%E5%A4%A7%E4%B8%89/%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%9E%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2024/11/18/%E5%A4%A7%E4%B8%89/%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%9E%8B/" itemprop="url">大三/控制系统数学模型</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2024-11-18T16:21:54+08:00">
+                2024-11-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="信号的表示"><a href="#信号的表示" class="headerlink" title="信号的表示"></a>信号的表示</h1><p>需要把$x_o(t)$用数学的方式表达</p>
+<h2 id="单位阶跃信号"><a href="#单位阶跃信号" class="headerlink" title="单位阶跃信号"></a>单位阶跃信号</h2><script type="math/tex; mode=display">
+u(t)=\left\{\begin{array}{l}1 \text { for } t \geq 0 \\ 0 \text { for } t<0\end{array}\right.</script><h2 id="单位脉冲信号"><a href="#单位脉冲信号" class="headerlink" title="单位脉冲信号"></a>单位脉冲信号</h2><p>奇异函数</p>
+<script type="math/tex; mode=display">
+\int_{-\infty}^{\infty} x(t) \delta(t) d t=x(0)=1</script><h2 id="三角信号"><a href="#三角信号" class="headerlink" title="三角信号"></a>三角信号</h2><script type="math/tex; mode=display">
+x(t)=A \cos (\omega t+\theta) \quad  \quad y(t)=B \cos (\omega t+\phi)</script><h2 id="复指数信号"><a href="#复指数信号" class="headerlink" title="复指数信号"></a>复指数信号</h2><p>指数信号的因子是复数</p>
+<script type="math/tex; mode=display">
+x(t)=Ke^{st}</script><p>一个复指数信号可以分解为实部$\cos$和虚部$\sin$，满足</p>
+<script type="math/tex; mode=display">
+\left\{
+\begin{array}{l}
+e^{i\theta}=\cos \theta+i\sin\theta\\
+e^{-i\theta}=\cos\theta-i\sin\theta
+\end{array}
+\right. ⇒ 
+\left\{
+\begin{array}{l}
+\cos\theta=\frac{e^{i\theta}+e^{-i\theta}}{2}\\
+\sin\theta=\frac{e^{i\theta}-e^{-i\theta}}{2i}
+\end{array}
+\right.</script><p>借助这个关系就能方便的对正弦信号进行升维到复数域，让信号理论更加优雅，便于分析</p>
+<p>有重要的两个参数：振幅和相位，复数相乘，模相乘辐角相加</p>
+<h1 id="系统的数学模型"><a href="#系统的数学模型" class="headerlink" title="系统的数学模型"></a>系统的数学模型</h1><p>对于单输入单输出的控制系统，我们用微分方程来描述</p>
+<script type="math/tex; mode=display">
+\begin{align}&a_0x_o^{(n)}(t)+a_1x_o^{(n-1)}(t)+\cdots+a_nx_o(t)\\ &=b_0x_i^{(n)}(t)+b_1x_i^{(n-1)}(t)+\cdots+b_nx_i(t)\end{align}</script><p>但解微分方程太过繁琐，引入复数后就可以用拉氏变换来简化</p>
+<h2 id="拉氏变换"><a href="#拉氏变换" class="headerlink" title="拉氏变换"></a>拉氏变换</h2><script type="math/tex; mode=display">
+X(s)=L[x(t)]=\int_0^\infty x(t)e^{-st}\text{d}t</script><p>由微分性质得到</p>
+<script type="math/tex; mode=display">
+L\left[\frac{\text d^n x}{\text dt^n}x(t)\right]=s^nX(s)-s^{n-1}x(0^+)-\cdots-x^{(n-1)}(0^+)</script><p>若零初始条件则有</p>
+<script type="math/tex; mode=display">
+\frac{\text d^n x}{\text dt^n}x(t)\Leftrightarrow s^nX(s)</script><p>这样方程就不含微分项，将微分方程变成了代数方程</p>
+<h3 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h3><p>积分</p>
+<script type="math/tex; mode=display">
+\int\cdots\int x(t)(\text dt)^n\Leftrightarrow \frac{X(s)}{s^n}</script><p>时移</p>
+<script type="math/tex; mode=display">
+L[x(t-a)]=e^{-as}X(s)\\L[e^{-at}x(t)]=X(s+a)</script><p>初值定理</p>
+<script type="math/tex; mode=display">
+\lim_{t\to0^+}x(t)=\lim_{s\to\infty}sX(s)</script><p>终值定理</p>
+<script type="math/tex; mode=display">
+\lim_{t\to \infty}x(t)=\lim_{t\to 0}sX(s)</script><h2 id="拉氏反变换"><a href="#拉氏反变换" class="headerlink" title="拉氏反变换"></a>拉氏反变换</h2><p>求解出的频域信号需要转换回时域</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">$f(t)$</th>
+<th style="text-align:center">$L[f(t)]$</th>
+<th style="text-align:center">$f(t)$</th>
+<th style="text-align:center">$L[f(t)]$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$1$</td>
+<td style="text-align:center">$\frac1s$</td>
+<td style="text-align:center">$t$</td>
+<td style="text-align:center">$\frac{n!}{s^{n+1}}$</td>
+</tr>
+<tr>
+<td style="text-align:center">$e^{at}$</td>
+<td style="text-align:center">$\frac1{s-a}$</td>
+<td style="text-align:center">$\sin\omega t$</td>
+<td style="text-align:center">$\frac{\omega}{s^2+\omega^2}$</td>
+</tr>
+<tr>
+<td style="text-align:center">$\cos\omega t$</td>
+<td style="text-align:center">$\frac{s}{s^2+\omega^2}$</td>
+<td style="text-align:center">$te^{-at}$</td>
+<td style="text-align:center">$\frac1{(s+a)^2}$</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>由分解定理，一般常见的有理分式</p>
+<script type="math/tex; mode=display">
+X(s)=\frac{b_0s^m+b_1s^{m-1}+\cdots +b_m}{s^n+a_1s^{n-1}+\cdots +a_n}</script><p>可以分解为不同单极点$(e^{-at})$的形式，和共轭复数极点$(\sin/ \cos)$</p>
+<h1 id="传递函数"><a href="#传递函数" class="headerlink" title="传递函数"></a>传递函数</h1><p>根据上面的分析，我们可以将系统里面常见的组件抽象成频域里面的函数</p>
+<script type="math/tex; mode=display">
+G(s)=\frac{X_o(s)}{X_{i}(s)}</script><p>假设系统有极点，复零点$(s^2+w^2)$，极点，复极点，则传递函数可以写成</p>
+<script type="math/tex; mode=display">
+G(s)=\frac{\displaystyle K\prod_{i=1}^b(\tau_is+1)\prod_{l=1}^c(\tau_l^2s^2+2\zeta _l\tau_ls+1)}{\displaystyle s^v\prod_{j=1}^d(T_js+1)\prod_{k=1}^e(T_k^2s^2+2\zeta _kT_ks+1)}</script><p>可以看出有多种环节，如比例环节</p>
+<h2 id="微分环节"><a href="#微分环节" class="headerlink" title="微分环节"></a>微分环节</h2><p>理想微分</p>
+<script type="math/tex; mode=display">
+x_o(t)=kx^\prime_i(t)
+\\G(s)=ks</script><p>一阶微分</p>
+<script type="math/tex; mode=display">
+\tau s+1</script><p>二阶微分</p>
+<script type="math/tex; mode=display">
+\tau^2 s^2+2\xi\tau s+1</script><h2 id="惯性环节"><a href="#惯性环节" class="headerlink" title="惯性环节"></a>惯性环节</h2><p>阻尼</p>
+<script type="math/tex; mode=display">
+Tx^\prime_o(t)+x_o(t)=x_i(t)</script><p>故一阶惯性为</p>
+<script type="math/tex; mode=display">
+G(s)=\frac1{Ts+1}</script><p>二阶振荡</p>
+<script type="math/tex; mode=display">
+\frac1{T^2s^2+2\xi Ts+1}</script><p><img src="/2024/11/18/%E5%A4%A7%E4%B8%89/%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%9E%8B/image-20241118194645653.png" alt="image-20241118194645653" style="zoom: 33%;"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2024/11/18/%E5%A4%A7%E4%B8%89/%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E4%BB%8B%E7%BB%8D/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2024/11/18/%E5%A4%A7%E4%B8%89/%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E4%BB%8B%E7%BB%8D/" itemprop="url">大三/控制系统介绍</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2024-11-18T16:02:19+08:00">
+                2024-11-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="控制系统"><a href="#控制系统" class="headerlink" title="控制系统"></a>控制系统</h1><p>自动控制，就是在没有人为干预的条件下，使目标的某些物理量准确地按照预期变化</p>
+<h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><p><img src="/2024/11/18/%E5%A4%A7%E4%B8%89/%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E4%BB%8B%E7%BB%8D/image-20241118160821027.png" alt="image-20241118160821027"></p>
+<p>按照有没有反馈测量装置分为闭环系统和开环系统</p>
+<p>例如简单的电机转速控制系统根据电压来控制转速，是开环</p>
+<p>还分为模拟控制系统和数字控制系统；若保持恒定则为恒值调节系统，若变化则为随动系统。</p>
+<p>可用线性微分方程描述的称为线性控制系统，反之为非线性系统。</p>
+<h2 id="闭环控制"><a href="#闭环控制" class="headerlink" title="闭环控制"></a>闭环控制</h2><blockquote>
+<p>执行元件 Actuator Device that provides motive power to the process<br>比较元件 Comparator Computes the difference between the desired and actual output<br>控制器 Controller Device that computes the control signal. Composed of comparator<br>and compensator<br>输出 Output The output of the system to be controlled<br>设备 Plant Combination of the actuator and the system under control<br>控制对象 Process System or device, whose output is to be controlled<br>参考输入 Reference input The desired output of the system. Also called set point or input</p>
+<p>传感器 Sensor Device that detects and measures some physical effect and generates a<br>signal proportional to the effect<br>传递函数 Transfer function Ratio of the transforms of system output and input. That is,<br>the transform of the input multiplied by the transfer function is the output in the<br>transform domain</p>
+</blockquote>
+<p>还有放大元件，校正元件（反馈校正和串联校正）</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2024/04/19/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E4%BA%BA/isaac%20sim/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1584,490 +2089,6 @@ J_i=\begin{bmatrix}\hat z\times \vec d[:2]\\1\end{bmatrix}\\
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2023/06/14/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E8%BF%91%E4%BB%A3%E7%89%A9%E7%90%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2023/06/14/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E8%BF%91%E4%BB%A3%E7%89%A9%E7%90%86/" itemprop="url">大一/物理/近代物理</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-06-14T22:27:30+08:00">
-                2023-06-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="黑体辐射"><a href="#黑体辐射" class="headerlink" title="黑体辐射"></a>黑体辐射</h1><p><img src="/2023/06/14/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E8%BF%91%E4%BB%A3%E7%89%A9%E7%90%86/image-20230614223608909.png" alt="image-20230614223608909"></p>
-<p>黑体辐射的两个结论</p>
-<script type="math/tex; mode=display">
-M(T)=\sigma T^4\\
-\lambda_mT=b</script><h2 id="量子化假设"><a href="#量子化假设" class="headerlink" title="量子化假设"></a>量子化假设</h2><p>利用量子化假设可以很好地解决黑体辐射问题</p>
-<script type="math/tex; mode=display">
-\varepsilon_n=nh\nu</script><p>其中$n$称为量子数，$\varepsilon$称为能量子</p>
-<h1 id="光电效应"><a href="#光电效应" class="headerlink" title="光电效应"></a>光电效应</h1><p>见高中</p>
-<h1 id="康普顿效应"><a href="#康普顿效应" class="headerlink" title="康普顿效应"></a>康普顿效应</h1><p>单个光子与自由电子碰撞，从而得到光子波长改变</p>
-<script type="math/tex; mode=display">
-\Delta\lambda=\lambda-\lambda_0=\frac{h}{m_0c}(1-\cos\theta)</script><p>其中康普顿波长为</p>
-<script type="math/tex; mode=display">
-\frac{h}{m_0c}=\lambda_C</script><p>因为核质量太大散射光中存在等于波长等于入射光波长的成分</p>
-<p>所以康普顿散射对原子质量小的物质比较明显</p>
-<h1 id="波尔氢原子模型"><a href="#波尔氢原子模型" class="headerlink" title="波尔氢原子模型"></a>波尔氢原子模型</h1><p>三个假设</p>
-<p>定态，原子中的电子在特定轨道半径才稳定</p>
-<p>当电子从一个轨道向另一个轨道跃迁时会吸收或放出光子</p>
-<p>最后角动量量子化</p>
-<script type="math/tex; mode=display">
-L=m_evr=n\frac{L}{2\pi}</script><p>得到如下结果</p>
-<script type="math/tex; mode=display">
-r_n=r_1n^2</script><p>同时由动能表达式</p>
-<script type="math/tex; mode=display">
-E_k=\frac{e^2}{8\pi\varepsilon_0r_n}\\
-E_p=-\frac{e^2}{4\pi\varepsilon_0r_n}\\
-E_n=-\frac{e^2}{8\pi\varepsilon_0r_n}=\frac{E_1}{n^2}</script><h1 id="不确定性关系"><a href="#不确定性关系" class="headerlink" title="不确定性关系"></a>不确定性关系</h1><script type="math/tex; mode=display">
-\Delta p\Delta x\ge \frac\hbar2 \\
-\Delta E\Delta t\ge \frac\hbar2</script><h1 id="波函数"><a href="#波函数" class="headerlink" title="波函数"></a>波函数</h1><script type="math/tex; mode=display">
-\int|\Psi |^2\text dx=1</script><p>其中$|\Psi |^2$为概率</p>
-<h2 id="一维无限深势阱"><a href="#一维无限深势阱" class="headerlink" title="一维无限深势阱"></a>一维无限深势阱</h2><script type="math/tex; mode=display">
-V(x)=\begin{cases}0\quad(0<x<a)\\
-\infty\quad (x\le0,x\ge a)\end{cases}</script><p>得到</p>
-<script type="math/tex; mode=display">
-\psi(x)=\sqrt{\frac2a}\sin\left(\frac{n\pi}{a}x\right)</script><p>故</p>
-<script type="math/tex; mode=display">
-\psi^2(x)=\frac2a\sin^2\left(\frac{n\pi}{a}x\right)</script><h2 id="一维势垒"><a href="#一维势垒" class="headerlink" title="一维势垒"></a>一维势垒</h2>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2023/06/03/%E5%A4%A7%E4%B8%80/%E7%90%86%E8%AE%BA%E5%8A%9B%E5%AD%A6/%E6%8B%89%E6%9C%97%E8%B4%9D%E5%B0%94%E5%8E%9F%E7%90%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2023/06/03/%E5%A4%A7%E4%B8%80/%E7%90%86%E8%AE%BA%E5%8A%9B%E5%AD%A6/%E6%8B%89%E6%9C%97%E8%B4%9D%E5%B0%94%E5%8E%9F%E7%90%86/" itemprop="url">大一/理论力学/拉朗贝尔原理</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-06-03T16:57:25+08:00">
-                2023-06-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="动量矩"><a href="#动量矩" class="headerlink" title="动量矩"></a>动量矩</h1><p>转动惯量参见大学物理</p>
-<p>对质心的动量矩全部取用相对物理量</p>
-<script type="math/tex; mode=display">
-L_C=\sum r_i'\times m_iv_{ir}</script><p>从而对于任意固定点，带入绝对速度</p>
-<script type="math/tex; mode=display">
-L_O=\sum r_i\times m_iv_i=r_C\times mv_C+L_C</script><p>表示对任意$O$的动量矩等于质心平移加上相对质心的动量矩</p>
-<h2 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h2><p>类比动量定理有动量矩定理</p>
-<script type="math/tex; mode=display">
-\frac{\text dL_C}{\text dt}=\sum M_C(F_i^{(e)})</script><p>右式为质点系外力对质心的主矩</p>
-<p>从而可得刚体平面微分方程</p>
-<script type="math/tex; mode=display">
-\begin{cases}ma_{Cx}=\sum F_x\\
-ma_{Cy}=\sum F_y\\ J_C\alpha=\sum M_C(F_i^{(e)})\end{cases}</script><h1 id="达朗贝尔原理"><a href="#达朗贝尔原理" class="headerlink" title="达朗贝尔原理"></a>达朗贝尔原理</h1><p>对于单个质点</p>
-<script type="math/tex; mode=display">
-F+F_{内}+F_{I}=0</script><p>其中惯性力$\vec F_I=-m\vec a$</p>
-<p>对于质点系，有</p>
-<script type="math/tex; mode=display">
-\begin{cases}\sum F+F_I=0\\
-M_O(F+\sum F_    {Ii})=0\end{cases}</script><p>从而对于定轴转动，有如下简化</p>
-<p>若为绕质心，则有</p>
-<script type="math/tex; mode=display">
-M_O=-J_C\alpha</script><p>若为一定点，则有</p>
-<script type="math/tex; mode=display">
-M_O=-(J_C+md^2)\alpha</script><p>而对于平动，如果简化中心为质心</p>
-<script type="math/tex; mode=display">
-M_{IC}=0</script><p>否则为</p>
-<script type="math/tex; mode=display">
--mr_C\times a_C</script>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2023/05/18/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E6%B3%A2%E5%8A%A8%E5%85%89%E5%AD%A6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2023/05/18/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E6%B3%A2%E5%8A%A8%E5%85%89%E5%AD%A6/" itemprop="url">大一/物理/波动光学</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-05-18T22:32:32+08:00">
-                2023-05-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="杨氏双缝干涉"><a href="#杨氏双缝干涉" class="headerlink" title="杨氏双缝干涉"></a>杨氏双缝干涉</h1><h2 id="发光"><a href="#发光" class="headerlink" title="发光"></a>发光</h2><p>原子在能级之间跃迁时会发出一列有限长度的光波称为光波列</p>
-<script type="math/tex; mode=display">
-l=c\Delta t</script><p>普通光源由于跃迁的随机性所以不满足干涉条件</p>
-<p>现代技术可以实现相干光的产生，能产生的光源称为相干光源‘</p>
-<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p><img src="/2023/05/18/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E6%B3%A2%E5%8A%A8%E5%85%89%E5%AD%A6/image-20230518235646004.png" alt="image-20230518235646004"></p>
-<p>干涉极大和极小的条件分别为</p>
-<script type="math/tex; mode=display">
-\delta=r_2-r_1=\pm k\lambda/\pm(2k-1)\frac\lambda2</script><p>利用几何关系 ,可得亮纹位置</p>
-<script type="math/tex; mode=display">
-x=\pm k\frac{D\lambda}d</script><p>暗纹位置</p>
-<script type="math/tex; mode=display">
-x=\pm (2k-1)\frac{D\lambda}d</script><p>从而得到相邻两明或暗纹的间距为</p>
-<script type="math/tex; mode=display">
-\Delta x=\frac{D\lambda}d</script><h3 id="光程"><a href="#光程" class="headerlink" title="光程"></a>光程</h3><p>由于光在不同介质中传播的速度不同，有光程$nr$</p>
-<script type="math/tex; mode=display">
-\delta=n_1r_1-n_2r_2</script><p>注意薄透镜不会引起附加的光程差</p>
-<h1 id="薄膜干涉"><a href="#薄膜干涉" class="headerlink" title="薄膜干涉"></a>薄膜干涉</h1><p><img src="/2023/05/18/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E6%B3%A2%E5%8A%A8%E5%85%89%E5%AD%A6/image-20230518235708139.png" alt="image-20230518235708139" style="zoom:50%;"></p>
-<p>薄膜，两波的光程差不是很大，两束光出自同一波列</p>
-<script type="math/tex; mode=display">
-\delta=n_2(AB+BC)-n_1 CD</script><p>借助折射定律和几何关系</p>
-<script type="math/tex; mode=display">
-\begin{array}{l}\delta&=2d\sqrt{n_2^2-n_1^2\sin^2i}\\
-&=2dn_2\cos r\end{array}</script><p>增反膜和增透膜</p>
-<h1 id="等厚干涉"><a href="#等厚干涉" class="headerlink" title="等厚干涉"></a>等厚干涉</h1><p><img src="/2023/05/18/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E6%B3%A2%E5%8A%A8%E5%85%89%E5%AD%A6/image-20230518235932636.png" alt="image-20230518235932636" style="zoom:50%;"></p>
-<p>通过劈尖可以将长度转为高度</p>
-<script type="math/tex; mode=display">
-\Delta d=d_{k+1}-d_k=\frac\lambda{2n}</script><p>则条纹间距为</p>
-<script type="math/tex; mode=display">
-l=\frac\lambda{2n\sin\theta}\approx\frac\lambda{2n\theta}</script><p>利用这种可以检测厚度等微小物理量</p>
-<h1 id="牛顿环"><a href="#牛顿环" class="headerlink" title="牛顿环"></a>牛顿环</h1><p><img src="/2023/05/18/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E6%B3%A2%E5%8A%A8%E5%85%89%E5%AD%A6/image-20230519000702872.png" alt="image-20230519000702872"></p>
-<p>明纹</p>
-<script type="math/tex; mode=display">
-r=\sqrt{(2k-1)\frac{R\lambda}{2n}}</script><p>暗纹</p>
-<script type="math/tex; mode=display">
-r=\sqrt{\frac{kR\lambda}n}</script><h1 id="迈克尔逊干涉仪"><a href="#迈克尔逊干涉仪" class="headerlink" title="迈克尔逊干涉仪"></a>迈克尔逊干涉仪</h1><p><img src="/2023/05/18/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E6%B3%A2%E5%8A%A8%E5%85%89%E5%AD%A6/image-20230519001349294.png" alt="image-20230519001349294"></p>
-<p>利用等效原理，可以把$M_1,M_2’$看成两个面</p>
-<p>则若有夹角称为等厚干涉，平行称为等倾干涉</p>
-<p>若为空气则调整间距可以得到</p>
-<script type="math/tex; mode=display">
-d=N\frac\lambda2</script><h1 id="衍射"><a href="#衍射" class="headerlink" title="衍射"></a>衍射</h1><p><img src="/2023/05/18/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E6%B3%A2%E5%8A%A8%E5%85%89%E5%AD%A6/image-20230522091516879.png" alt="image-20230522091516879" style="zoom:50%;"></p>
-<p>单缝夫琅禾夫衍射，使用菲涅尔半波带法</p>
-<script type="math/tex; mode=display">
-a \sin \varphi=\left\{\begin{array}{l} 
-\pm k \lambda, k=1,2,3, \ldots \\
-\pm(2 k+1) \frac{\lambda}{2}, k=1,2,3, \ldots
-\end{array}\right.</script><p>注意不能带入$\lambda=0$，没有相消</p>
-<script type="math/tex; mode=display">
--\lambda<a\sin\varphi<\lambda</script><p>这个范围对应中央明纹，不能分析非整数倍</p>
-<script type="math/tex; mode=display">
-l_0\approx2\frac{\lambda}b</script><p>暗纹精确成立，明纹近似成立亮度$(\frac{1}{N-1})$</p>
-<h2 id="多缝"><a href="#多缝" class="headerlink" title="多缝"></a>多缝</h2><p><img src="/2023/05/18/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E6%B3%A2%E5%8A%A8%E5%85%89%E5%AD%A6/image-20230522091332974.png" alt="image-20230522091332974" style="zoom:33%;"></p>
-<p>光栅方程</p>
-<script type="math/tex; mode=display">
-d\sin\varphi=k\lambda\\
-|\sin\varphi|<1\\
-(a+b)\sin\varphi=k\lambda  \;(k=0,\pm1,\cdots,\pm\left \lfloor  \frac{a+b}\lambda\right \rfloor )\\</script><p>用来计算主极大条纹的位置</p>
-<h3 id="缺级"><a href="#缺级" class="headerlink" title="缺级"></a>缺级</h3><script type="math/tex; mode=display">
-(a+b)\sin\varphi=k\lambda\\
-a\sin\varphi=k'\lambda</script><p>$\pm k,\pm k’$都为整数</p>
-<p><img src="/2023/05/18/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E6%B3%A2%E5%8A%A8%E5%85%89%E5%AD%A6/image-20230522093021386.png" alt="image-20230522093021386"></p>
-<p>$N$条光栅，有$N-1$条暗纹，$N-2$条次极大</p>
-<p>设$a$为第一明纹和中心之间的距离，$x_2-x_1$为光屏到光栅之间的距离，则由光栅方程</p>
-<script type="math/tex; mode=display">
-d\sin\varphi=\lambda\\
-\tan\varphi=\frac{a}{x_2-x_1}\\
-d=\lambda\sqrt{a^2+(x_2-x_1)^2}</script>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2118,7 +2139,7 @@ d=\lambda\sqrt{a^2+(x_2-x_1)^2}</script>
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">95</span>
+                <span class="site-state-item-count">98</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -2147,12 +2168,12 @@ d=\lambda\sqrt{a^2+(x_2-x_1)^2}</script>
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://www.zhihu.com/people/pan-shi-wei-91" target="_blank" title="知乎">
+                <a href="https://www.linkedin.com/in/erik-pan-7b88a4190/" target="_blank" title="LinkedIn">
                   
                     <i class="fa fa-fw fa-globe"></i>
                   
                     
-                      知乎
+                      LinkedIn
                     
                 </a>
               </span>
