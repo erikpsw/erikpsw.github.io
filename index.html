@@ -425,7 +425,43 @@ u_o(t)=\frac{T\omega}{1+T^2\omega^2}e^{-\frac tT}+\frac1{\sqrt{(\omega T)^2+1}}\
 G(j\omega)=U(\omega)+jV(\omega)</script><p>从而有时频特性和相频特性</p>
 <script type="math/tex; mode=display">
 \begin{cases}A(\omega)=\sqrt{[U(\omega)]^2+[V(\omega)]^2}\\
-\phi(\omega)=\arctan\left[\frac{V(\omega)}{U(\omega)}\right]\end{cases}</script><h1 id="频域分析"><a href="#频域分析" class="headerlink" title="频域分析"></a>频域分析</h1>
+\phi(\omega)=\arctan\left[\frac{V(\omega)}{U(\omega)}\right]\end{cases}</script><h1 id="频域分析"><a href="#频域分析" class="headerlink" title="频域分析"></a>频域分析</h1><h2 id="乃氏图"><a href="#乃氏图" class="headerlink" title="乃氏图"></a>乃氏图</h2><p>根据上面的每个$\omega$的幅值和相位可以确定一个点，绘制纵$0\to \infty$的曲线即为奈奎斯特图。</p>
+<h3 id="绘制"><a href="#绘制" class="headerlink" title="绘制"></a>绘制</h3><p>用极限的方法</p>
+<script type="math/tex; mode=display">
+\omega\to+\infty,G(j\omega)=0\angle-90^\circ</script><p>或者复数相乘，模相乘辐角相加原理，用常见的叠加得到</p>
+<h2 id="伯德图"><a href="#伯德图" class="headerlink" title="伯德图"></a>伯德图</h2><p>即对数坐标图，纵坐标取对数，横坐标采用10倍频程比值缩放$\text{(dec)}$</p>
+<p>（坐标轴仍任显示原值，只是计算斜率时使用）</p>
+<script type="math/tex; mode=display">
+n(\text{dB})=20\lg N\\
+\omega'=\lg \omega</script><p>斜率</p>
+<script type="math/tex; mode=display">
+[-40]=40\text{dB/dec}=\frac{L-0}{\lg5-\lg1}</script><h3 id="绘制-1"><a href="#绘制-1" class="headerlink" title="绘制"></a>绘制</h3><p>可以直接用斜率近似计算，也可以利用</p>
+<script type="math/tex; mode=display">
+\left|\frac{j\omega\tau+1}{j\omega T+1}\right|=\frac{\sqrt{(\omega\tau)^2+1}}{\sqrt{(\omega T)^2+1}}</script><p>直接计算关键点</p>
+<h2 id="常见的环节"><a href="#常见的环节" class="headerlink" title="常见的环节"></a>常见的环节</h2><h3 id="比例环节"><a href="#比例环节" class="headerlink" title="比例环节"></a>比例环节</h3><p>比例环节的频率特性是与频率无关的常数，在奈奎斯特图上表现为实轴上一个点，在伯德图中表现为与频率无关的两条直线</p>
+<p><img src="/2024/11/18/%E5%A4%A7%E4%B8%89/%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90/image-20241123211251772.png" alt="image-20241123211251772" style="zoom: 33%;"></p>
+<h3 id="积分环节"><a href="#积分环节" class="headerlink" title="积分环节"></a>积分环节</h3><p>积分环节的输出量是其输入量对时间的积分。奈奎斯特图是虚轴上从负无穷到原点的一条直线，相角恒为$-90^\circ$。对数幅频特性是一条$[-20]$斜率的直线，相角保持$-90^\circ$不变。</p>
+<p><img src="/2024/11/18/%E5%A4%A7%E4%B8%89/%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90/image-20241123211346676.png" alt="image-20241123211346676" style="zoom:33%;"></p>
+<h3 id="微分环节"><a href="#微分环节" class="headerlink" title="微分环节"></a>微分环节</h3><p>微分环节的输出量是其输入量对时间的微分。奈奎斯特图是虚轴上从原点到正无穷的一条直线，相角恒为90°。对数幅频特性是一条$[+20]$斜率的直线，相角保持90°不变。</p>
+<p><img src="/2024/11/18/%E5%A4%A7%E4%B8%89/%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90/image-20241123211433925.png" alt="image-20241123211433925" style="zoom:33%;"></p>
+<h3 id="惯性环节"><a href="#惯性环节" class="headerlink" title="惯性环节"></a>惯性环节</h3><p>惯性环节的奈奎斯特图是一个半圆（数学上可证明）。在伯德图中，转折频率之后的对数幅频特性为一条$[-20]$斜率的直线（近似，实际上在转折频率处衰减了3dB）。相角变化从0°到-90°。</p>
+<p><img src="/2024/11/18/%E5%A4%A7%E4%B8%89/%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90/image-20241123211507853.png" alt="image-20241123211507853" style="zoom:33%;"></p>
+<h3 id="一阶微分环节"><a href="#一阶微分环节" class="headerlink" title="一阶微分环节"></a>一阶微分环节</h3><p>一阶微分环节的输出量取决于其输入量及一阶微分。它的奈奎斯特图相当于微分环节的图像向右平移了一个单位。它的对数频率特性与惯性环节相差一个负号，所以它们的对数频率特性关于横轴对称。</p>
+<p><img src="/2024/11/18/%E5%A4%A7%E4%B8%89/%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90/image-20241123211539775.png" alt="image-20241123211539775" style="zoom:33%;"></p>
+<h3 id="振荡环节"><a href="#振荡环节" class="headerlink" title="振荡环节"></a>振荡环节</h3><p>振荡环节的图像应该是由不同阻尼比的情况下组成的一簇曲线，它们的奈奎斯特图起于实轴1处的点，终于原点。转折频率后的模值以40dB的速度衰减。相角从0°变化到-180°。</p>
+<p><img src="/2024/11/18/%E5%A4%A7%E4%B8%89/%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90/image-20241123211610067.png" alt="image-20241123211610067" style="zoom:33%;"></p>
+<h1 id="稳定性分析"><a href="#稳定性分析" class="headerlink" title="稳定性分析"></a>稳定性分析</h1><p>控制系统在任何足够小的初始偏移下，过渡过程随着时间的推移逐渐衰减为0，则为稳定系统</p>
+<p>对典型系统求单位脉冲响应，对得到的时域表达式进行分析得到</p>
+<p>闭环传递函数的极点全部都在$s$平面的左半平面</p>
+<h2 id="代数稳定判据"><a href="#代数稳定判据" class="headerlink" title="代数稳定判据"></a>代数稳定判据</h2><p>根据根与系数的关系，可以得到劳斯阵列</p>
+<p><img src="/2024/11/18/%E5%A4%A7%E4%B8%89/%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90/image-20241123212217936.png" alt="image-20241123212217936" style="zoom:33%;"></p>
+<p>其中有递推公式</p>
+<script type="math/tex; mode=display">
+b_1=\frac{a_{n-1}a_{n-2}-a_na_{n-3}}{a_{n-1}}\\
+b_2=\frac{a_{n-1}a_{n-4}-a_na_{n-5}}{a_{n-1}}</script><p>若计算得到的第一列全为正数则稳定，否则符号变化几次就有几个根在左半平面</p>
+<p>对于三阶多项式，可以得到</p>
+<script type="math/tex; mode=display">
+\begin{cases}a_i>0\\ a_1a_2>a_0a_3\end{cases}</script>
           
         
       
