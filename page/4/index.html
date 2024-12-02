@@ -414,12 +414,45 @@ E=f(T)
 J=\frac{2mgh}Q=4.18\text{J}\cdot\text{cal}^{-1}</script><p>对于微小过程(准静态)，有</p>
 <script type="math/tex; mode=display">
 \text{d}E=\text{d}W+\text{d}Q\\
-\Delta E=-\int_{V_1}^{V_2}{p\text{d}V}+\int_{T_1}^{T_2}\frac mMC_m\text{d}T</script><p>其中$C_m=cM$为摩尔热容，对于特殊过程，引入自由度</p>
+\Delta E=-\int_{V_1}^{V_2}{p\text{d}V}+\int_{T_1}^{T_2}\frac mMC_m\text{d}T</script><h3 id="闭口系统"><a href="#闭口系统" class="headerlink" title="闭口系统"></a>闭口系统</h3><p>上面的功定义为气体对外做的膨胀功$W$，则</p>
+<script type="math/tex; mode=display">
+Q=W+\Delta U\\
+\delta Q=\delta U+\delta W</script><p>用比表示也即</p>
+<script type="math/tex; mode=display">
+q=\Delta u+w\\
+\delta q=\delta u+\delta w</script><p>上面的式子适用于一切过程，不受过程性质和工质性质限制</p>
+<p>对于可逆过程，上面有</p>
+<script type="math/tex; mode=display">
+q=\Delta u +\int_1^2p\text dv\\
+\delta q=\delta u +p\delta v</script><h3 id="开口系统"><a href="#开口系统" class="headerlink" title="开口系统"></a>开口系统</h3><p> 对于稳定流动，维持需要流动功和推动功</p>
+<script type="math/tex; mode=display">
+\delta W_f=pA\text d x=p\text d V=pv\text d m\\
+w_f=pv</script><p>流动功不是工质本身的能量</p>
+<p>所以对于开口系统，定义焓</p>
+<script type="math/tex; mode=display">
+\Delta H =\Delta U +p\Delta V</script><p>和工质通过机轴对外输出的功$W_s$，和流速$c_f$，根据能量守恒</p>
+<script type="math/tex; mode=display">
+Q=\Delta H+\frac12m\Delta c_f^2+mg\Delta z+W_s</script><p>单位工质</p>
+<script type="math/tex; mode=display">
+q=\Delta h+\frac12m\Delta c_f^2+g\Delta z+ w_s</script><p>技术功（工程上可以直接利用的功）</p>
+<script type="math/tex; mode=display">
+w_t=\frac12m\Delta c_f^2+g\Delta z+ w_s</script><p>再进行变形，定义膨胀功$w$</p>
+<script type="math/tex; mode=display">
+w_t=w-(p_2v_2-p_1v_1)</script><p>技术功等于膨胀功减去净流动功</p>
+<p>对于可逆过程，可以把技术功表示为</p>
+<script type="math/tex; mode=display">
+w_t=-\int_1^2v\text dp</script><p>为与$p$轴围成的面积</p>
+<h1 id="理想气体"><a href="#理想气体" class="headerlink" title="理想气体"></a>理想气体</h1><h2 id="热容"><a href="#热容" class="headerlink" title="热容"></a>热容</h2><p>可以看出热容的定义为</p>
+<script type="math/tex; mode=display">
+C=\frac{\delta Q}{\delta t}</script><p>上面换成比热得到比热容</p>
+<script type="math/tex; mode=display">
+c=\frac{\delta q}{\delta t}</script><p>其中$C_m=cM$为摩尔热容，对于特殊过程，引入自由度</p>
 <ul>
 <li>$i=3$单原子分子</li>
 <li>$i=5$双原子分子</li>
 <li>$i=6$多原子分子 </li>
 </ul>
+<p>从而有定压热容和定容热容</p>
 <script type="math/tex; mode=display">
 V=\text{const}:\\
 C_{V,m}=\frac i2R
@@ -427,15 +460,25 @@ C_{V,m}=\frac i2R
 p=\text{const}:\\
 C_{p,m}=\left(\frac i2+1\right)R</script><p>从而有迈耶公式</p>
 <script type="math/tex; mode=display">
-C_{V,m}+R=C_{p,m}</script><p>$R$在数值上等于一摩尔理想气体等压过程升高$1\text{K}$对外做的功</p>
-<p>从定容推出的内能表达式适用于所有过程</p>
+C_{V,m}+R=C_{p,m}</script><p>$R$在数值上等于一摩尔理想气体等压过程升高$1\text{K}$对外做的功（克服外力膨胀）</p>
+<p>定义比热容比</p>
 <script type="math/tex; mode=display">
-E=\frac mMC_{V,m}T=\frac mM\frac i2RT</script><h1 id="理想气体物态方程"><a href="#理想气体物态方程" class="headerlink" title="理想气体物态方程"></a>理想气体物态方程</h1><script type="math/tex; mode=display">
+\gamma=c_p/c_v>1</script><p>带入上面的关系得到</p>
+<script type="math/tex; mode=display">
+c_p=\frac\gamma{\gamma-1}R_g\\c_v=\frac1{\gamma-1}R_g</script><p>从定容推出的内能表达式适用于所有过程</p>
+<script type="math/tex; mode=display">
+E=\frac mMC_{V,m}T=\frac mM\frac i2RT</script><h2 id="物态方程"><a href="#物态方程" class="headerlink" title="物态方程"></a>物态方程</h2><script type="math/tex; mode=display">
 \frac{p_1V_1}{T_1}=\frac{p_2V_2}{T_2}</script><p>标准状态</p>
 <script type="math/tex; mode=display">
 p_0=1 \text{atm},T_0=273.15\text{K},V_m=22.4\text{L/mol}</script><script type="math/tex; mode=display">
 \frac{p_1V_1}{T_1}=\frac mM \frac{p_0V_m}{T_0}=R\frac mM</script><script type="math/tex; mode=display">
 pV=\frac mM  RT</script><p>这就是理想气体状态方程，$R=8.31$为摩尔气体常量</p>
+<p>对方程进行变化，令</p>
+<script type="math/tex; mode=display">
+\frac{R}{M}=R_g</script><p>则得到了气体常数（只和气体种类有关，和状态无关）</p>
+<p> 再用比体积（单位质量）替代体积，得到</p>
+<script type="math/tex; mode=display">
+pv=R_gT</script><p>称为理想气体状态方程式（克拉贝龙方程式）</p>
 <script type="math/tex; mode=display">
 p=\frac NV\frac R{N_A}T=nkT</script><p>其中$k=R/N_A$称为玻尔兹曼常量，此式多用于计算分子数密度</p>
 <p>带入标况可得</p>

@@ -3351,12 +3351,45 @@ E=f(T)
 J=\frac{2mgh}Q=4.18\text{J}\cdot\text{cal}^{-1}</script><p>对于微小过程(准静态)，有</p>
 <script type="math/tex; mode=display">
 \text{d}E=\text{d}W+\text{d}Q\\
-\Delta E=-\int_{V_1}^{V_2}{p\text{d}V}+\int_{T_1}^{T_2}\frac mMC_m\text{d}T</script><p>其中$C_m=cM$为摩尔热容，对于特殊过程，引入自由度</p>
+\Delta E=-\int_{V_1}^{V_2}{p\text{d}V}+\int_{T_1}^{T_2}\frac mMC_m\text{d}T</script><h3 id="闭口系统"><a href="#闭口系统" class="headerlink" title="闭口系统"></a>闭口系统</h3><p>上面的功定义为气体对外做的膨胀功$W$，则</p>
+<script type="math/tex; mode=display">
+Q=W+\Delta U\\
+\delta Q=\delta U+\delta W</script><p>用比表示也即</p>
+<script type="math/tex; mode=display">
+q=\Delta u+w\\
+\delta q=\delta u+\delta w</script><p>上面的式子适用于一切过程，不受过程性质和工质性质限制</p>
+<p>对于可逆过程，上面有</p>
+<script type="math/tex; mode=display">
+q=\Delta u +\int_1^2p\text dv\\
+\delta q=\delta u +p\delta v</script><h3 id="开口系统"><a href="#开口系统" class="headerlink" title="开口系统"></a>开口系统</h3><p> 对于稳定流动，维持需要流动功和推动功</p>
+<script type="math/tex; mode=display">
+\delta W_f=pA\text d x=p\text d V=pv\text d m\\
+w_f=pv</script><p>流动功不是工质本身的能量</p>
+<p>所以对于开口系统，定义焓</p>
+<script type="math/tex; mode=display">
+\Delta H =\Delta U +p\Delta V</script><p>和工质通过机轴对外输出的功$W_s$，和流速$c_f$，根据能量守恒</p>
+<script type="math/tex; mode=display">
+Q=\Delta H+\frac12m\Delta c_f^2+mg\Delta z+W_s</script><p>单位工质</p>
+<script type="math/tex; mode=display">
+q=\Delta h+\frac12m\Delta c_f^2+g\Delta z+ w_s</script><p>技术功（工程上可以直接利用的功）</p>
+<script type="math/tex; mode=display">
+w_t=\frac12m\Delta c_f^2+g\Delta z+ w_s</script><p>再进行变形，定义膨胀功$w$</p>
+<script type="math/tex; mode=display">
+w_t=w-(p_2v_2-p_1v_1)</script><p>技术功等于膨胀功减去净流动功</p>
+<p>对于可逆过程，可以把技术功表示为</p>
+<script type="math/tex; mode=display">
+w_t=-\int_1^2v\text dp</script><p>为与$p$轴围成的面积</p>
+<h1 id="理想气体"><a href="#理想气体" class="headerlink" title="理想气体"></a>理想气体</h1><h2 id="热容"><a href="#热容" class="headerlink" title="热容"></a>热容</h2><p>可以看出热容的定义为</p>
+<script type="math/tex; mode=display">
+C=\frac{\delta Q}{\delta t}</script><p>上面换成比热得到比热容</p>
+<script type="math/tex; mode=display">
+c=\frac{\delta q}{\delta t}</script><p>其中$C_m=cM$为摩尔热容，对于特殊过程，引入自由度</p>
 <ul>
 <li>$i=3$单原子分子</li>
 <li>$i=5$双原子分子</li>
 <li>$i=6$多原子分子 </li>
 </ul>
+<p>从而有定压热容和定容热容</p>
 <script type="math/tex; mode=display">
 V=\text{const}:\\
 C_{V,m}=\frac i2R
@@ -3364,15 +3397,25 @@ C_{V,m}=\frac i2R
 p=\text{const}:\\
 C_{p,m}=\left(\frac i2+1\right)R</script><p>从而有迈耶公式</p>
 <script type="math/tex; mode=display">
-C_{V,m}+R=C_{p,m}</script><p>$R$在数值上等于一摩尔理想气体等压过程升高$1\text{K}$对外做的功</p>
-<p>从定容推出的内能表达式适用于所有过程</p>
+C_{V,m}+R=C_{p,m}</script><p>$R$在数值上等于一摩尔理想气体等压过程升高$1\text{K}$对外做的功（克服外力膨胀）</p>
+<p>定义比热容比</p>
 <script type="math/tex; mode=display">
-E=\frac mMC_{V,m}T=\frac mM\frac i2RT</script><h1 id="理想气体物态方程"><a href="#理想气体物态方程" class="headerlink" title="理想气体物态方程"></a>理想气体物态方程</h1><script type="math/tex; mode=display">
+\gamma=c_p/c_v>1</script><p>带入上面的关系得到</p>
+<script type="math/tex; mode=display">
+c_p=\frac\gamma{\gamma-1}R_g\\c_v=\frac1{\gamma-1}R_g</script><p>从定容推出的内能表达式适用于所有过程</p>
+<script type="math/tex; mode=display">
+E=\frac mMC_{V,m}T=\frac mM\frac i2RT</script><h2 id="物态方程"><a href="#物态方程" class="headerlink" title="物态方程"></a>物态方程</h2><script type="math/tex; mode=display">
 \frac{p_1V_1}{T_1}=\frac{p_2V_2}{T_2}</script><p>标准状态</p>
 <script type="math/tex; mode=display">
 p_0=1 \text{atm},T_0=273.15\text{K},V_m=22.4\text{L/mol}</script><script type="math/tex; mode=display">
 \frac{p_1V_1}{T_1}=\frac mM \frac{p_0V_m}{T_0}=R\frac mM</script><script type="math/tex; mode=display">
 pV=\frac mM  RT</script><p>这就是理想气体状态方程，$R=8.31$为摩尔气体常量</p>
+<p>对方程进行变化，令</p>
+<script type="math/tex; mode=display">
+\frac{R}{M}=R_g</script><p>则得到了气体常数（只和气体种类有关，和状态无关）</p>
+<p> 再用比体积（单位质量）替代体积，得到</p>
+<script type="math/tex; mode=display">
+pv=R_gT</script><p>称为理想气体状态方程式（克拉贝龙方程式）</p>
 <script type="math/tex; mode=display">
 p=\frac NV\frac R{N_A}T=nkT</script><p>其中$k=R/N_A$称为玻尔兹曼常量，此式多用于计算分子数密度</p>
 <p>带入标况可得</p>
@@ -6140,7 +6183,105 @@ b_1=\frac{a_{n-1}a_{n-2}-a_na_{n-3}}{a_{n-1}}\\
 b_2=\frac{a_{n-1}a_{n-4}-a_na_{n-5}}{a_{n-1}}</script><p>若计算得到的第一列全为正数则稳定，否则符号变化几次就有几个根在左半平面</p>
 <p>对于三阶多项式，可以得到</p>
 <script type="math/tex; mode=display">
-\begin{cases}a_i>0\\ a_1a_2>a_0a_3\end{cases}</script>]]></content>
+\begin{cases}a_i>0\\ a_1a_2>a_0a_3\end{cases}</script><h2 id="奈奎斯特判据"><a href="#奈奎斯特判据" class="headerlink" title="奈奎斯特判据"></a>奈奎斯特判据</h2><p>开环传递函数$G(s)H(s)$从$-\infty j\to \infty j$包围$(-1,j0)$点的圈数</p>
+<p>$G(s)H(s)$是实系数有理分式函数，由于对称性，一般只绘制$0\to \infty j$的图线</p>
+<h3 id="R-P-Z"><a href="#R-P-Z" class="headerlink" title="R=P-Z"></a>R=P-Z</h3><p>辐角原理，参考</p>
+<blockquote>
+<p><a href="https://blog.csdn.net/weixin_46664967/article/details/113208585" target="_blank" rel="noopener">https://blog.csdn.net/weixin_46664967/article/details/113208585</a></p>
+</blockquote>
+<p>$F(s)$绕平面原点的圈数只和$F(s)$被闭合曲线$ Γ$（取成整个右半平面） 包围$F(s)$的零点和极点的代数和有关</p>
+<script type="math/tex; mode=display">
+R=P−Z</script><p>R：R等于$ΓGH $逆时针<strong>包围F(s)平面上点 </strong>$(-1 , j0)$的圈数<br>P：开环传递函数在右半平面内的<strong>极点</strong>数，<strong>P是已知的</strong><br>Z：闭环传递函数在右半平面内的<strong>极点</strong>数，<strong>若Z = 0 系统稳定</strong></p>
+<p>通过平移即可得到</p>
+<h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><p>作出开环系统的奈奎斯特曲线</p>
+<p><img src="/2024/11/18/%E5%A4%A7%E4%B8%89/%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90/image-20241130163622571.png" alt="image-20241130163622571" style="zoom:33%;"></p>
+<p>若不完整需要补圆</p>
+<p>若有$(1/s)^v$项，则以奈奎斯特曲线的起始位置为起点，<strong>逆时针画 $v\times 90°$ 半径无穷大</strong>的圆弧，但该圆弧的方向为<strong>顺时针</strong></p>
+<script type="math/tex; mode=display">
+R=2(N_+−N_−)</script><p>在 (-1,j0) 左侧 正穿越 的次数 <strong>(从上往下)</strong> ，N-为￥左侧 负穿越的次数 <strong>(从下往上)</strong></p>
+<p><strong>R</strong> 表示开环系统 G(s)H(s) 逆时针绕点(-1,j0)的圈数，等价于1+G(s)H(s) 顺时针绕原点的圈数</p>
+<p><strong>N+</strong> 表示点 (-1,j0) 左侧正穿越的次数（从上向下穿越）</p>
+<p><strong>N-</strong> 表示 点 (-1,j0) 左侧负穿越的次数（从下向上穿越）</p>
+<p>只看左侧</p>
+<p>P为开环传递函数在右半平面极点数</p>
+<h1 id="误差分析"><a href="#误差分析" class="headerlink" title="误差分析"></a>误差分析</h1><p>理想输出和实际输出量之差为误差$e(t)$，象函数为$E(s)$，误差信号的稳态分量（静态误差），记作$e_{\text{ss}}$</p>
+<p>输入信号和反馈信号比较后的信号$\varepsilon (t)$称为偏差</p>
+<script type="math/tex; mode=display">
+E(s)=\mu(s)X_i(s)-X_o(s)\\
+\varepsilon(s)=X_i(s)-Y(s)</script><p>考虑偏差趋近于0，理想输出传递回来偏差为0，故</p>
+<script type="math/tex; mode=display">
+Y(s)=H(s)X_o(s)\\
+\mu(s)=\frac1{H(s)}</script><p>故</p>
+<script type="math/tex; mode=display">
+\varepsilon(s)=H(s)E(s)</script><h2 id="输入引起的稳态分析"><a href="#输入引起的稳态分析" class="headerlink" title="输入引起的稳态分析"></a>输入引起的稳态分析</h2><p>对于单位反馈系统，误差等于偏差</p>
+<script type="math/tex; mode=display">
+X_o(s)=\frac{G(s)}{1+G(s)}X_i(s)\\
+E(s)=X_i(s)-X_o(s)=\frac1{1+G(s)}X_i(s)</script><p>所以误差传递函数为</p>
+<script type="math/tex; mode=display">
+\frac{E(s)}{X_i(s)}=\frac1{1+G(s)}</script><p>根据终值定理</p>
+<script type="math/tex; mode=display">
+e_{\text{ss}}=\lim_{s\to 0}sE(s)=\lim_{s\to 0} s\frac1{1+G(s)}X_i(s)</script><p>对于非单位反馈系统</p>
+<script type="math/tex; mode=display">
+\varepsilon(s)=\frac1{1+G(s)H(s)}X_i(s)</script><p>稳态偏差为</p>
+<script type="math/tex; mode=display">
+\varepsilon_{\text{ss}}=\lim_{s\to 0}s\frac1{1+G(s)H(s)}X_i(s)\\
+e_{\text{ss}}=\lim_{s\to 0}s\frac1{H(s)}\frac1{1+G(s)H(s)}X_i(s)</script><p>一般$H(s)$为常数，故</p>
+<script type="math/tex; mode=display">
+e_{\text{ss}}=\frac{\varepsilon_{\text{ss}}}{H}</script><h2 id="静态误差系数"><a href="#静态误差系数" class="headerlink" title="静态误差系数"></a>静态误差系数</h2><p>对于单位阶跃响应</p>
+<script type="math/tex; mode=display">
+X_i(s)=\frac1s</script><p>稳态偏差为</p>
+<script type="math/tex; mode=display">
+\varepsilon_{\text{ss}}=\lim_{s\to 0}s\frac1{1+G(s)H(s)}\frac1s=\lim_{s\to 0}\frac1{1+G(s)H(s)}\\</script><p>可以定义静态误差系数为</p>
+<script type="math/tex; mode=display">
+K_p=\lim_{s\to0}G(s)H(s)=G(0)H(0)\\
+\varepsilon_{\text{ss}}=\frac1{1+K_p}</script><p>对于$0$型而言</p>
+<script type="math/tex; mode=display">
+K_p=K\\ \varepsilon_{\text{ss}}=\frac1{1+K}</script><p>对于高于$\rm I$型的系统，分母$s\to 0$</p>
+<script type="math/tex; mode=display">
+K_p= \infty,\;\; \varepsilon_{\text{ss}}=0</script><h3 id="静态速度加速度误差系数"><a href="#静态速度加速度误差系数" class="headerlink" title="静态速度加速度误差系数"></a>静态速度加速度误差系数</h3><p>对于单位斜坡输入</p>
+<script type="math/tex; mode=display">
+\varepsilon_{\text{ss}}=\lim_{s\to 0}s\frac1{1+G(s)H(s)}\frac1{s^2}=\lim_{s\to 0}\frac1{sG(s)H(s)}
+\\K_v=\lim_{s\to0}sG(s)H(s)\\
+\varepsilon_{\text{ss}}=\frac1{K_v}</script><p>同理对于单位加速度输入，也有静态加速度系数</p>
+<script type="math/tex; mode=display">
+K_a=\lim_{s\to0}s^2G(s)H(s)\\
+\varepsilon_{\text{ss}}=\frac1{K_a}</script><p>总结如下表</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">系统类别</th>
+<th style="text-align:center">单位阶跃</th>
+<th style="text-align:center">等速输入</th>
+<th style="text-align:center">等加速输入</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0型系统</td>
+<td style="text-align:center">$\frac1{1+K}$</td>
+<td style="text-align:center">$\infty$</td>
+<td style="text-align:center">$\infty$</td>
+</tr>
+<tr>
+<td style="text-align:center">I型系统</td>
+<td style="text-align:center">$0$</td>
+<td style="text-align:center">$\frac1K$</td>
+<td style="text-align:center">$\infty$</td>
+</tr>
+<tr>
+<td style="text-align:center">II型系统</td>
+<td style="text-align:center">$0$</td>
+<td style="text-align:center">$0$</td>
+<td style="text-align:center">$\frac1K$</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="干扰引起的误差"><a href="#干扰引起的误差" class="headerlink" title="干扰引起的误差"></a>干扰引起的误差</h2><p>忽略输入，只计算干扰</p>
+<script type="math/tex; mode=display">
+\varepsilon(s)=\frac{-G_2(s)H(s)}{1+G_2(s)G_1(s)H(s)}N(s)</script><p>之后可以用叠加原理计算总误差</p>
+]]></content>
   </entry>
   <entry>
     <title>大三/控制系统数学模型</title>
@@ -6225,6 +6366,7 @@ X(s)=\frac{b_0s^m+b_1s^{m-1}+\cdots +b_m}{s^n+a_1s^{n-1}+\cdots +a_n}</script><p
 G(s)=\frac{X_o(s)}{X_{i}(s)}</script><p>假设系统有极点，复零点$(s^2+w^2)$，极点，复极点，则传递函数可以写成</p>
 <script type="math/tex; mode=display">
 G(s)=\frac{\displaystyle K\prod_{i=1}^b(\tau_is+1)\prod_{l=1}^c(\tau_l^2s^2+2\zeta _l\tau_ls+1)}{\displaystyle s^v\prod_{j=1}^d(T_js+1)\prod_{k=1}^e(T_k^2s^2+2\zeta _kT_ks+1)}</script><p>可以看出有多种环节，如比例环节</p>
+<p>所以分母系数$s$上面次数代表为$v$阶系统</p>
 <h2 id="微分环节"><a href="#微分环节" class="headerlink" title="微分环节"></a>微分环节</h2><p>理想微分</p>
 <script type="math/tex; mode=display">
 x_o(t)=kx^\prime_i(t)
