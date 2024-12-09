@@ -311,6 +311,395 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/12/%E5%A4%A7%E4%B8%80/web/js/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/08/12/%E5%A4%A7%E4%B8%80/web/js/" itemprop="url">大一/web/js</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-08-12T13:17:08+08:00">
+                2022-08-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p>$\rm Javascript$中的函数和$\rm Python$中极其相似</p>
+<h2 id="函数表达式"><a href="#函数表达式" class="headerlink" title="函数表达式"></a><strong>函数表达式</strong></h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> sayHi = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  alert( <span class="string">"Hello"</span> );</span><br><span class="line">&#125;;<span class="comment">//可以匿名</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(sayHi)<span class="comment">//打印出函数的代码</span></span><br></pre></td></tr></table></figure>
+<p>函数表达式可作为参数传递(称为回调函数)</p>
+<p>rest参数(形式为’…变量名’)，rest参数只能作为最后一个参数，相当于*args</p>
+<h2 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> func = <span class="function"><span class="keyword">function</span>(<span class="params">arg1, arg2, ..., argN</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> expression;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//等价于</span></span><br><span class="line"><span class="keyword">let</span> func = <span class="function">(<span class="params">arg1, arg2, ..., argN</span>) =&gt;</span> expression;</span><br><span class="line"><span class="comment">//若无参数()=&gt;</span></span><br></pre></td></tr></table></figure>
+<h1 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h1><h2 id="或运算"><a href="#或运算" class="headerlink" title="或运算"></a>或运算</h2><p>寻找第一个真值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">result = value1 || value2 || value3;</span><br></pre></td></tr></table></figure>
+<p>若value1，value2都为null则返回value3(非空)</p>
+<h2 id="与运算"><a href="#与运算" class="headerlink" title="与运算"></a>与运算</h2><p>寻找第一个假值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 如果第一个操作数是真值，</span></span><br><span class="line"><span class="comment">// 与运算返回第二个操作数：</span></span><br><span class="line">alert( <span class="number">1</span> &amp;&amp; <span class="number">0</span> ); <span class="comment">// 0</span></span><br><span class="line">alert( <span class="number">1</span> &amp;&amp; <span class="number">5</span> ); <span class="comment">// 5</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 如果第一个操作数是假值，</span></span><br><span class="line"><span class="comment">// 与运算将直接返回它。第二个操作数会被忽略</span></span><br><span class="line">alert( <span class="literal">null</span> &amp;&amp; <span class="number">5</span> ); <span class="comment">// null</span></span><br><span class="line">alert( <span class="number">0</span> &amp;&amp; <span class="string">"no matter what"</span> ); <span class="comment">// 0</span></span><br></pre></td></tr></table></figure>
+<h2 id="…扩展运算符"><a href="#…扩展运算符" class="headerlink" title="…扩展运算符"></a>…扩展运算符</h2><p>相当于python的解包*</p>
+<h2 id="模板字符串"><a href="#模板字符串" class="headerlink" title="模板字符串"></a>模板字符串</h2><p>反引号``</p>
+<blockquote>
+<p>除了作为普通字符串，还可以用来定义多行字符串，还可以在字符串中加入变量和表达式</p>
+</blockquote>
+<h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> re = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">'ab+c'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 等价于</span></span><br><span class="line"><span class="keyword">let</span> re = <span class="regexp">/ab+c/</span>;</span><br></pre></td></tr></table></figure>
+<h1 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h1><p>文档对象模型，每个 HTML 标签都是一个对象</p>
+<p>从而有利于js对HTML元素进行修改</p>
+<p>window.onload与$(document).ready()</p>
+<p>一个是需要网页全部加载完(包括图片)</p>
+<p>第二个只要DOM树加载完就行</p>
+<h1 id="Event"><a href="#Event" class="headerlink" title="Event"></a>Event</h1><p>Event 对象代表事件的状态，比如事件在其中发生的元素、键盘按键的状态、鼠标的位置、鼠标按钮的状态</p>
+<h2 id="事件监听"><a href="#事件监听" class="headerlink" title="事件监听"></a>事件监听</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.addEveantListener(eventType, (event)=&gt;&#123;&#125;, <span class="literal">false</span>)</span><br></pre></td></tr></table></figure>
+<p><strong>事件由子元素传递到父元素</strong>的过程叫做冒泡（false）</p>
+<p><strong>事件由父元素传递到子元素</strong>的过程叫做事件捕获（ture）</p>
+<p><code>false</code>表示事件冒泡,为<code>true</code>表示事件捕获</p>
+<p>事件捕获和事件触发(冒泡)是相反的,也就是说,当用户触发了一个事件的时候,这个事件是从DOM树的最上层开始触发一直到捕获到事件源</p>
+<p><img src="/2022/08/12/%E5%A4%A7%E4%B8%80/web/js/image-20230106213824890.png" alt="image-20230106213824890"></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">属性</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">altKey</td>
+<td style="text-align:center">返回当事件被触发时，”ALT” 是否被按下。</td>
+</tr>
+<tr>
+<td style="text-align:center">button</td>
+<td style="text-align:center">返回当事件被触发时，哪个鼠标按钮被点击。</td>
+</tr>
+<tr>
+<td style="text-align:center">clientX</td>
+<td style="text-align:center">返回当事件被触发时，鼠标指针的水平坐标。</td>
+</tr>
+<tr>
+<td style="text-align:center">clientY</td>
+<td style="text-align:center">返回当事件被触发时，鼠标指针的垂直坐标。</td>
+</tr>
+<tr>
+<td style="text-align:center">ctrlKey</td>
+<td style="text-align:center">返回当事件被触发时，”CTRL” 键是否被按下。</td>
+</tr>
+<tr>
+<td style="text-align:center">metaKey</td>
+<td style="text-align:center">返回当事件被触发时，”meta” 键是否被按下。</td>
+</tr>
+<tr>
+<td style="text-align:center">relatedTarget</td>
+<td style="text-align:center">返回与事件的目标节点相关的节点。</td>
+</tr>
+<tr>
+<td style="text-align:center">screenX</td>
+<td style="text-align:center">返回当某个事件被触发时，鼠标指针的水平坐标。</td>
+</tr>
+<tr>
+<td style="text-align:center">screenY</td>
+<td style="text-align:center">返回当某个事件被触发时，鼠标指针的垂直坐标。</td>
+</tr>
+<tr>
+<td style="text-align:center">shiftKey</td>
+<td style="text-align:center">返回当事件被触发时，”SHIFT” 键是否被按下。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th><strong><code>cancelable</code></strong></th>
+<th><strong>返回布尔值，指示事件是否可拥可取消的默认动作。</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>currentTarget</code></strong></td>
+<td><strong>返回其事件监听器触发该事件的元素。</strong></td>
+</tr>
+<tr>
+<td><strong>eventPhase</strong></td>
+<td><strong>返回事件传播的当前阶段。</strong></td>
+</tr>
+<tr>
+<td><strong><code>target</code></strong></td>
+<td><strong>返回触发此事件的元素（事件的目标节点）。</strong></td>
+</tr>
+<tr>
+<td><strong>timeStamp</strong></td>
+<td><strong>返回事件生成的日期和时间。</strong></td>
+</tr>
+<tr>
+<td><strong><code>type</code></strong></td>
+<td><strong>返回当前 Event 对象表示的事件的名称。</strong></td>
+</tr>
+<tr>
+<td><strong>initEvent()</strong></td>
+<td><strong>初始化新创建的 Event 对象的属性。</strong></td>
+</tr>
+<tr>
+<td><strong><code>preventDefault()</code></strong></td>
+<td><strong>通知浏览器不要执行与事件关联的默认动作。</strong></td>
+</tr>
+<tr>
+<td><code>stopPropagation()</code></td>
+<td>不再派发事件，阻止冒泡</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>target：触发事件的元素。<br>currentTarget：事件绑定的元素</p>
+<blockquote>
+<p>比如说现在有A和B，A包含B， A监听鼠标点击事件 那么当点击B时，target是B，currentTarget是A 也就是说，currentTarget始终是监听事件者，而target是事件的真正发出者</p>
+</blockquote>
+<p>比如有两个div</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"div_1"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"div_2"</span>&gt;</span></span><br><span class="line">click here</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"div_2"</span>).addEventListener(<span class="string">"click"</span>,(event)=&gt;&#123;</span><br><span class="line">    tar=event.target</span><br><span class="line">    tar.style.background=<span class="string">"red"</span></span><br></pre></td></tr></table></figure>
+<p>点div_2时</p>
+<p><img src="/2022/08/12/%E5%A4%A7%E4%B8%80/web/js/image-20230107092340379.png" alt="image-20230107092340379"></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"div_1"</span>).addEventListener(<span class="string">"click"</span>,(event)=&gt;&#123;</span><br><span class="line">    tar=event.target</span><br><span class="line">    tar.style.background=<span class="string">"red"</span></span><br></pre></td></tr></table></figure>
+<p>点哪个哪个变红</p>
+<p><img src="/2022/08/12/%E5%A4%A7%E4%B8%80/web/js/image-20230107092435426.png" alt="image-20230107092435426"></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"div_2"</span>).addEventListener(<span class="string">"click"</span>,(event)=&gt;&#123;</span><br><span class="line">    tar=event.currentTarget</span><br><span class="line">    tar.style.background=<span class="string">"red"</span></span><br></pre></td></tr></table></figure>
+<p>始终都是大的都变红</p>
+<h1 id="数据传输"><a href="#数据传输" class="headerlink" title="数据传输"></a>数据传输</h1><p>跨源读取阻止 (CORB) 是一种浏览器功能，旨在防止攻击者通过欺骗用户的方式获取敏感信息。 它通过阻止浏览器向具有不同域的服务器发送请求，并将其响应内容作为 text/html 解析来实现。</p>
+<p>例如，假设你有一个页面，其中包含一个带有恶意内容的 iframe。 如果你的浏览器没有 CORB 功能，则可能会被攻击者欺骗，将恶意信息发送到服务器，而不知道这是在发生什么。 但是，如果你的浏览器具有 CORB 功能，则浏览器会阻止请求，并告诉你发生了什么。</p>
+<ul>
+<li><strong>GET</strong> – 从指定的资源请求数据。</li>
+<li><strong>POST</strong> – 向指定的资源提交要被处理的数据。</li>
+</ul>
+<p>get 可以直接从地址栏提交</p>
+<p>post需要用到相关插件</p>
+<h1 id="获取坐标"><a href="#获取坐标" class="headerlink" title="获取坐标"></a>获取坐标</h1><p><img src="https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect/element-box-diagram.png" alt="DOMRect object that is the smallest rectangle containing the entire element."></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">var</span> rect=element.getBoundingClientRect()</span><br><span class="line"> <span class="keyword">var</span> x=rect.left<span class="comment">//相对于窗口来说</span></span><br><span class="line"> </span><br><span class="line"><span class="built_in">window</span>.scrollY滚动了多少</span><br><span class="line"><span class="keyword">var</span> width = <span class="built_in">window</span>.innerWidth;</span><br><span class="line"><span class="keyword">var</span> height = <span class="built_in">window</span>.innerHeight;</span><br><span class="line">获取当前窗口的长宽</span><br><span class="line">$(ele)[<span class="number">0</span>].offsetHeight</span><br><span class="line">获取高</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/10/%E5%A4%A7%E4%B8%80/python/taichi/%E6%93%8D%E4%BD%9C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2022/08/10/%E5%A4%A7%E4%B8%80/python/taichi/%E6%93%8D%E4%BD%9C/" itemprop="url">大一/python/taichi/操作</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-08-10T13:25:32+08:00">
+                2022-08-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="For"><a href="#For" class="headerlink" title="For"></a>For</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i,j <span class="keyword">in</span> field:</span><br><span class="line">	fielf[i,j]=<span class="number">1</span></span><br><span class="line">    <span class="comment">#二维遍历</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span><span class="params">(vx:ti.f32,vy:f64)</span> -&gt; ti.i32#int32</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">ti.func#只能在ti.kernel</span></span><br><span class="line"><span class="function">#无需声明类型(inline)</span></span><br></pre></td></tr></table></figure>
+<h1 id="print"><a href="#print" class="headerlink" title="print"></a>print</h1><script type="math/tex; mode=display">
+\rm print(arg1,sep=\text{' '},end=\text{'\n'})</script><h1 id="GUI"><a href="#GUI" class="headerlink" title="GUI"></a>GUI</h1><script type="math/tex; mode=display">
+\rm gui=ti.GUI(\text{my title},(512,512))</script>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/08/10/%E5%A4%A7%E4%B8%80/python/taichi/%E6%95%B0%E6%8D%AE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1872,352 +2261,6 @@ f(x)=\begin{cases}\frac1x,x\ne0\\
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/07/24/%E5%A4%A7%E4%B8%80/c%E8%AF%AD%E8%A8%80/%E6%95%B0%E6%8D%AE%E7%9A%84%E5%AD%98%E5%82%A8%E4%B8%8E%E8%AF%BB%E5%85%A5/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/07/24/%E5%A4%A7%E4%B8%80/c%E8%AF%AD%E8%A8%80/%E6%95%B0%E6%8D%AE%E7%9A%84%E5%AD%98%E5%82%A8%E4%B8%8E%E8%AF%BB%E5%85%A5/" itemprop="url">大一/c语言/数据的存储与读入</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-07-24T17:38:18+08:00">
-                2022-07-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">数据类型</th>
-<th style="text-align:center">解释</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">int</td>
-<td style="text-align:center">$-2^{31}\sim2^{31}-1$</td>
-</tr>
-<tr>
-<td style="text-align:center">short</td>
-<td style="text-align:center">$-2^{15}\sim2^{15}-1$</td>
-</tr>
-<tr>
-<td style="text-align:center">long long</td>
-<td style="text-align:center">$-2^{63}\sim2^{63}-1$</td>
-</tr>
-<tr>
-<td style="text-align:center">float</td>
-<td style="text-align:center">7位有效数字</td>
-</tr>
-<tr>
-<td style="text-align:center">double</td>
-<td style="text-align:center">15位有效数字</td>
-</tr>
-<tr>
-<td style="text-align:center">char []</td>
-<td style="text-align:center">字符数组(c)</td>
-</tr>
-<tr>
-<td style="text-align:center">string</td>
-<td style="text-align:center">字符串(c++)</td>
-</tr>
-<tr>
-<td style="text-align:center">bool</td>
-<td style="text-align:center">布尔类型(0/1)</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>用$\rm sizeof(element)$来显示字节数</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(<span class="keyword">int</span>)a;</span><br><span class="line">(<span class="keyword">int</span>)(x+y); 强制类型转换,运算必须同类型</span><br><span class="line">    </span><br><span class="line"><span class="keyword">char</span> c风格字符串 <span class="string">''</span></span><br><span class="line">string c++风格字符串 ""</span><br></pre></td></tr></table></figure>
-<h2 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">\f 换页</span><br><span class="line">\n 换行,下一行首</span><br><span class="line">\r 回车,留在当前行首</span><br><span class="line">\t Tab</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"shiwei\rpsw"</span>);</span><br><span class="line">result: pswwei </span><br><span class="line">\\ 代表<span class="string">'\'</span></span><br><span class="line">同理\",\?,\'</span><br></pre></td></tr></table></figure>
-<h2 id="流"><a href="#流" class="headerlink" title="流"></a>流</h2><h3 id="c"><a href="#c" class="headerlink" title="c"></a>c</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line">f(format)格式</span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"s ss%f"</span>,<span class="number">5.0</span>/<span class="number">3.0</span>)</span><br><span class="line">s ss1<span class="number">.666667</span><span class="comment">//空格也算</span></span><br><span class="line">   %d 十进制有符号整数</span><br><span class="line">　　%u 十进制无符号整数</span><br><span class="line">　　%f 浮点数</span><br><span class="line">   %lf <span class="keyword">double</span>浮点数</span><br><span class="line">　　%s 字符串</span><br><span class="line">　　%c 单个字符</span><br><span class="line">　　%p 指针的值</span><br><span class="line">　　%e 指数形式的浮点数</span><br><span class="line">　　%x, %X 无符号以十六进制表示的整数</span><br><span class="line">%% 百分号</span><br><span class="line">可以在<span class="string">"%"</span>和字母之间的数字表示最大场宽。</span><br><span class="line">例如: %<span class="number">3</span>d 表示输出<span class="number">3</span>位整型数, 不够<span class="number">3</span>位右对齐</span><br><span class="line"><span class="keyword">int</span> v=<span class="number">25</span>;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%8d"</span>,v);</span><br><span class="line">      <span class="number">25</span></span><br><span class="line">%<span class="number">9.2f</span> 表示输出场宽为<span class="number">9</span>的浮点数, 其中小数位为<span class="number">2</span>, 整数位为<span class="number">6</span>, 小数点占一位, 不够<span class="number">9</span>位右对齐(包括小数点)</span><br><span class="line">%<span class="number">.0</span>f  四舍五入保留整数     </span><br><span class="line">%<span class="number">8</span>s 表示输出<span class="number">8</span>个字符的字符串, 不够<span class="number">8</span>个字符右对齐。 </span><br><span class="line">输出 <span class="built_in">string</span> 对象中的字符串，可以使用 <span class="built_in">string</span> 的成员函数 c_str() ，该函数返回字符串的首字符的地址</span><br><span class="line"><span class="built_in">string</span> v=<span class="string">"psw"</span>;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%8s"</span>,v.c_str());</span><br><span class="line">    psw</span><br><span class="line"><span class="keyword">char</span> v[<span class="number">10</span>]=<span class="string">"psw"</span>; 字符数组</span><br><span class="line">如果需要用<span class="number">0</span>补位的话，这样写</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%03d"</span>,a);</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;a,&amp;b)</span><br><span class="line">    &amp;是取址运算符,告诉变量存在哪里</span><br></pre></td></tr></table></figure>
-<h3 id="c-1"><a href="#c-1" class="headerlink" title="c++"></a>c++</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> a;</span><br><span class="line"><span class="built_in">cin</span>&gt;&gt;a;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;a;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">cin</span>,<span class="built_in">cout</span>输入输出流</span><br><span class="line">	&gt;&gt;提取 &lt;&lt;插入</span><br><span class="line">   	\<span class="built_in">endl</span>换行</span><br></pre></td></tr></table></figure>
-<h2 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="number">8</span>/<span class="number">3</span>;</span><br><span class="line">	<span class="number">5</span></span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="number">8.0</span>/<span class="number">3</span></span><br><span class="line">    <span class="number">2.66667</span></span><br><span class="line">stream manipulator操作器,操纵符</span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iomanip&gt;	</span></span></span><br><span class="line">        setbase(n)	 设置整数为n进制(n=<span class="number">8</span>,<span class="number">10</span>,<span class="number">16</span>)</span><br><span class="line">        </span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;setprecision(<span class="number">8</span>)&lt;&lt;<span class="number">8.0</span>/<span class="number">3</span>;</span><br><span class="line"><span class="number">2.6666667</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;fixed&lt;&lt;setprecision(<span class="number">8</span>)&lt;&lt;<span class="number">8.0</span>/<span class="number">3</span>;</span><br><span class="line"><span class="number">2.66666667</span>\\八位小数</span><br><span class="line"></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="built_in">std</span>::setw(<span class="number">3</span>) &lt;&lt; x &lt;&lt; <span class="string">'\n'</span>;<span class="comment">//set width</span></span><br><span class="line"><span class="built_in">cout</span>.imbue(locale(<span class="string">""</span>));<span class="comment">//1,000,000,000</span></span><br><span class="line"><span class="comment">//括号内的为国家(按国家习惯输出)</span></span><br><span class="line">%取模</span><br></pre></td></tr></table></figure>
-<script type="math/tex; mode=display">
-\rm << 左移(二进制表示)=\times 2\\
->>右移=/2(floor)\\
-\sim    按位非\quad        遇1则0,遇0则1\\
-\& :  按位与  \quad      全1才1，否则为0\\
-|:按位或\quad 有1就为1\\
-^\wedge :按位异或\quad 相同为1</script><p>位运算可和数字和bool一起，而逻辑运算只有bool</p>
-<h2 id="赋值"><a href="#赋值" class="headerlink" title="赋值"></a>赋值</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a,b;</span><br><span class="line">a=b=<span class="number">3</span>;;简单赋值</span><br><span class="line"></span><br><span class="line">+= -= *= /=(复合算术赋值)</span><br><span class="line">&amp;= |= ^\ &gt;&gt;= &lt;&lt;=(复合位运算赋值)</span><br><span class="line">i++/++i(先自增再运算)</span><br><span class="line"></span><br><span class="line">常量</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> X=<span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">char</span> i1=<span class="string">'i'</span>;</span><br><span class="line">    i1-=<span class="number">32</span>;</span><br><span class="line">    i=<span class="string">'i'</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;i&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;i1;</span><br><span class="line"><span class="number">-32</span>变大写</span><br><span class="line">输出ASCII码(哈希表)</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0/" itemprop="url">高中/数学/三角函数</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-07-23T21:10:03+08:00">
-                2022-07-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><img src="/2022/07/23/%E9%AB%98%E4%B8%AD/%E6%95%B0%E5%AD%A6/%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0/image-20210523081833552.png" alt="image-20210523081833552"></p>
-<script type="math/tex; mode=display">
-r=\sqrt{x^{2}+y^{2}}</script><script type="math/tex; mode=display">
-\begin{array}{|c|c|}
-\hline   \sin\theta&\cos\theta&\tan\theta&\cot\theta\\
-\hline y/r& x/r&y/x&x/y \\
-\hline 
-
-\end{array}</script><h1 id="同角三角函数"><a href="#同角三角函数" class="headerlink" title="同角三角函数"></a>同角三角函数</h1><script type="math/tex; mode=display">
-\tan \alpha=\frac{\sin \alpha}{\cos \alpha}, \cot \alpha=\frac{\cos \alpha}{\sin \alpha}</script><script type="math/tex; mode=display">
-\boxed{\sin ^{2} \alpha+\cos ^{2} \alpha=1}</script><h1 id="两角"><a href="#两角" class="headerlink" title="两角"></a>两角</h1><script type="math/tex; mode=display">
-\sin (\alpha\pm\beta)=\sin \alpha \cdot \cos \beta\pm\cos \alpha \cdot \sin \beta \\
-
-\cos (\alpha\pm\beta)=\cos \alpha \cdot \cos \beta\mp\sin \alpha \cdot \sin \beta \\
- \\
-\tan (\alpha+\beta)=\frac{\tan \alpha+\tan \beta}{1-\tan \alpha \cdot \tan \beta} \\
-\tan (\alpha-\beta)=\frac{\tan \alpha-\tan \beta}{1+\tan \alpha \cdot \tan \beta}</script><h2 id="倍角"><a href="#倍角" class="headerlink" title="倍角"></a>倍角</h2><script type="math/tex; mode=display">
-\sin 2 \alpha=2 \sin \alpha \cos \alpha \\
-\begin{aligned}
-\cos 2 \alpha&=\cos ^{2} \alpha-\sin ^{2} \alpha\\&=2 \cos ^{2} \alpha-1\\&=1-2 \sin ^{2} \alpha\end{aligned}</script><h2 id="半角"><a href="#半角" class="headerlink" title="半角"></a>半角</h2><script type="math/tex; mode=display">
-\cos ^{2} \alpha=\frac{1+\cos 2 \alpha}{2}</script><script type="math/tex; mode=display">
-\sin ^{2} \alpha=\frac{1+\sin 2 \alpha}{2}=\frac{1-\cos 2 \alpha}{2}</script><script type="math/tex; mode=display">
-\begin{array}{l} \tan \alpha&=\frac{\sin \alpha}{\cos \alpha}\\&
-=\frac{\sin^2\alpha}{\cos \alpha\sin  \alpha}=\frac{1-\cos 2 \alpha}{\sin 2 \alpha}\\&
-=\frac{\sin\alpha\cos\alpha}{\cos^2 \alpha}
-=\frac{\sin 2 \alpha}{1+\cos 2\alpha}\end{array}</script><script type="math/tex; mode=display">
-{\begin{aligned}\tan \frac {\theta }{2}&=\pm \,{\sqrt {1-\cos \theta  \over 1+\cos \theta }}\\&=\frac {\sin \theta }{1+\cos \theta }\\&=\frac {1-\cos \theta }{\sin \theta }\\&=\frac {\cos \theta +\sin \theta -1}{\cos \theta -\sin \theta +1}\end{aligned}}</script><h2 id="万能"><a href="#万能" class="headerlink" title="万能"></a>万能</h2><script type="math/tex; mode=display">
-\boxed{\sin 2 \alpha=\frac{2 \tan \alpha}{1+\tan ^{2} \alpha}, \quad \cos 2 \alpha=\frac{1-\tan ^{2} \alpha}{1+\tan ^{2} \alpha}, \quad \tan 2 \alpha=\frac{2 \tan \alpha}{1-\tan ^{2} \alpha} }</script><script type="math/tex; mode=display">
-\sin \alpha=\frac{2 \sin \frac{\alpha}{2} \cos \frac{\alpha}{2}}{\sin ^{2} \frac{\alpha}{2}+\cos ^{2} \frac{\alpha}{2}}=\frac{2 \tan \frac{\alpha}{2}}{1+\tan ^{2} \frac{\alpha}{2}}=\frac{2 t}{1+t^{2}}\\
-\cos \alpha=\frac{\cos ^{2} \frac{\alpha}{2}-\sin ^{2} \frac{\alpha}{2}}{\cos ^{2} \frac{\alpha}{2}+\sin ^{2} \frac{\alpha}{2}}=\frac{1-\tan ^{2} \frac{\alpha}{2}}{1+\tan ^{2} \frac{\alpha}{2}}=\frac{1-t^{2}}{1+t^{2}}\\\tan \alpha=\frac{\sin \alpha}{\cos \alpha}=\frac{2 \tan \frac{\alpha}{2}}{1-\tan ^{2} \frac{\alpha}{2}}=\frac{2 t}{1-t^{2}}</script><h2 id="和差化积"><a href="#和差化积" class="headerlink" title="和差化积"></a>和差化积</h2><script type="math/tex; mode=display">
-\begin{array}{l}
-\sin \alpha+\sin \beta=2 \sin \frac{\alpha+\beta}{2} \cos \frac{\alpha-\beta}{2}\\
-\sin \alpha-\sin \beta=2 \cos \frac{\alpha+\beta}{2} \sin \frac{\alpha-\beta}{2}\\
-\cos \alpha+\cos \beta=2 \cos \frac{\alpha+\beta}{2} \cos \frac{\alpha-\beta}{2}\\
-\cos \alpha-\cos \beta=-2 \sin \frac{\alpha+\beta}{2} \sin \frac{\alpha-\beta}{2}
-\end{array}</script><h2 id="积化和差"><a href="#积化和差" class="headerlink" title="积化和差"></a>积化和差</h2><script type="math/tex; mode=display">
-\begin{array}{l}
-\sin \alpha \cos \beta=\frac{1}{2}[\sin (\alpha+\beta)+\sin (\alpha-\beta)] \\
-\cos \alpha \sin \beta=\frac{1}{2}[\sin (\alpha+\beta)-\sin (\alpha-\beta)] \\
-\cos \alpha \cos \beta=\frac{1}{2}[\cos (\alpha-\beta)+\cos (\alpha+\beta)] \\
-\sin \alpha \sin \beta=\frac{1}{2}[\cos (\alpha-\beta)-\cos (\alpha+\beta)]
-\end{array}</script><h2 id="辅助角"><a href="#辅助角" class="headerlink" title="辅助角"></a>辅助角</h2><script type="math/tex; mode=display">
-a \sin \alpha \pm b \cos \alpha=\sqrt{a^{2}+b^{2}} \sin (\alpha \pm \varphi) \text { 其中 } \tan \varphi=\frac{b}{a}(a \neq 0)\\
-\sin \varphi=\frac{b}{\sqrt{a^{2}+b^{2}}}, \cos \varphi=\frac{a}{\sqrt{a^{2}+b^{2}}}</script><h3 id="解三角形"><a href="#解三角形" class="headerlink" title="解三角形"></a>解三角形</h3><script type="math/tex; mode=display">
-\cos C = \frac{a^2} + {b^2} - {c^2}{2ab} = \frac{\overrightarrow a  \cdot \overrightarrow b }{|a| \cdot |b|}\\
-\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R\\
-{S_{\triangle} = \frac{1}{2}xh = \frac{1}{2}ab\sin C =\frac{1}{2}Cr}</script><script type="math/tex; mode=display">
-\tan \alpha=\frac{\sin \alpha}{\cos \alpha}, \cot \alpha=\frac{\cos \alpha}{\sin \alpha}\\
-\\\sin 2 \alpha=2 \sin \alpha \cos \alpha \\\boxed{\sin ^{2} \alpha+\cos ^{2} \alpha=1}\\
-\begin{aligned}
-\cos 2 \alpha&=\cos ^{2} \alpha-\sin ^{2} \alpha\\&=2 \cos ^{2} \alpha-1\\&=1-2 \sin ^{2} \alpha\end{aligned}</script>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2268,7 +2311,7 @@ a \sin \alpha \pm b \cos \alpha=\sqrt{a^{2}+b^{2}} \sin (\alpha \pm \varphi) \te
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">98</span>
+                <span class="site-state-item-count">100</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

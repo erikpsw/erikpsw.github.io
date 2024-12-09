@@ -311,6 +311,376 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2024/01/03/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2024/01/03/%E5%A4%A7%E4%B8%80/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%BA%BF%E6%80%A7%E6%96%B9%E7%A8%8B%E7%BB%84/" itemprop="url">大一/线性代数/线性方程组</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2024-01-03T21:51:48+08:00">
+                2024-01-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="线性方程组"><a href="#线性方程组" class="headerlink" title="线性方程组"></a>线性方程组</h1><p>含有$n$个未知量$m$个方程的线性方程组定义为</p>
+<script type="math/tex; mode=display">
+\left.\left\{\begin{aligned}a_{11}x_1+a_{12}x_2+\cdots+a_{1n}x_n&=b_1\\a_{21}x_1+a_{22}x_2+\cdots+a_{2n}x_n&=b_2\\\vdots\\a_{m1}x_1+a_{m2}x_2+\cdots+a_{mn}x_n&=b_m\end{aligned}\right.\right.</script><p>可以写成</p>
+<script type="math/tex; mode=display">
+x_1\vec a_1+x_2\vec a_2+\cdots+x_n\vec a_n=\vec b</script><p>若$\vec b=\vec 0$则为齐次线性方程组</p>
+<h2 id="初等行变换"><a href="#初等行变换" class="headerlink" title="初等行变换"></a>初等行变换</h2><ul>
+<li>$r_i\leftrightarrow r_j$</li>
+<li>$kr_i$</li>
+<li>$r_i+kr_j$</li>
+</ul>
+<h3 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h3><p>行等价，则存在可逆矩阵$P$</p>
+<script type="math/tex; mode=display">
+PA=P(\alpha_1,\cdots,\alpha_n)=B</script><p>列等价</p>
+<script type="math/tex; mode=display">
+AQ=B</script><p>等价，则</p>
+<script type="math/tex; mode=display">
+PAQ=B</script><p>可逆的充要条件为</p>
+<p>$A\sim E$</p>
+<h2 id="增广矩阵"><a href="#增广矩阵" class="headerlink" title="增广矩阵"></a>增广矩阵</h2><script type="math/tex; mode=display">
+[A|b]=\left.\left[\begin{array}{cccc|c}a_{11}&a_{12}&\cdots&a_{1n}&b_{1}\\a_{21}&a_{22}&\cdots&a_{2n}&b_{2}\\\vdots&\vdots&&\vdots&\vdots\\a_{m1}&a_{m2}&\cdots&a_{mn}&b_{m}\end{array}\right.\right]</script><p>利用初等行变换化为阶梯型$[E|x]$</p>
+<p>则方程组的解为</p>
+<script type="math/tex; mode=display">
+x=A^{-1}b</script><h2 id="克拉默法则"><a href="#克拉默法则" class="headerlink" title="克拉默法则"></a>克拉默法则</h2><p>$A_j$是把系数矩阵$A$中的第$j$列元素用方程组右端常数项代替后得到的$n$阶矩阵</p>
+<p>则唯一解</p>
+<script type="math/tex; mode=display">
+x_j=\frac{|A_j|}{|A|}=\frac{1}{|A|}(b_1A_{1j}+\cdots+b_nA_{nj})</script><h2 id="矩阵的秩"><a href="#矩阵的秩" class="headerlink" title="矩阵的秩"></a>矩阵的秩</h2><p>最高阶非零子式的阶数，又因为初等变换不改变秩</p>
+<p>所以秩使用化阶梯型的方式计算</p>
+<script type="math/tex; mode=display">
+x_1\vec a_1+x_2\vec a_2+\cdots+x_n\vec a_n=\vec b</script><p>则方程组有解可以看成</p>
+<script type="math/tex; mode=display">
+R(A|b)=R(A)</script><p>加入$b$不改变列空间的维数</p>
+<p>列空间和行空间的维数都是$R(A)$，列向量组和行向量组的秩都是$R$</p>
+<p>若矩阵列$C$独立则</p>
+<ul>
+<li>$Cx=0$只有零解，0的表示唯一</li>
+<li>若$\beta_1,\cdot\cdot\cdot,\beta_s\in F^{(n)}$ ，线性无关,则 $C\beta_1,\cdot\cdot\cdot,C\beta_s$ 线性无关</li>
+<li>$C$ 有左逆：(即有矩阵 X 使 $XC=I)$</li>
+<li>$C T x=b$ 总有解</li>
+</ul>
+<p>列满秩则有解一定唯一</p>
+<p>行满秩则必定有解，$|A|\ne 0,Ax=0$，则只有零解</p>
+<h3 id="不等式"><a href="#不等式" class="headerlink" title="不等式"></a>不等式</h3><script type="math/tex; mode=display">
+\mathrm{rank(AB)}\leq \min\left\{\mathrm{rank(A)},\mathrm{rank(B)}\right\}</script><script type="math/tex; mode=display">
+\mathrm{rank(A+B)\leq rank(A)+rank(B)}</script><script type="math/tex; mode=display">
+\left.\mathrm{rank}(\mathrm{A}^*)=\left\{\begin{aligned}n.&&\mathrm{rank}(\mathrm{A})&=n\\1.&&\mathrm{rank}(\mathrm{A})&=n-1\\0.&&\mathrm{rank}(\mathrm{A})&<n-1\end{aligned}\right.\right.</script><script type="math/tex; mode=display">
+R(AB)+n\ge R(A)+R(B)\quad\text{(Sylvester)}</script><h2 id="线性相关"><a href="#线性相关" class="headerlink" title="线性相关"></a>线性相关</h2><script type="math/tex; mode=display">
+k_1\vec a_1+k_2\vec a_2+\cdots+k_n\vec a_n=0</script><p>其中$k$至少一个不为$0$</p>
+<p>注意其中一个向量为零向量的情况</p>
+<h3 id="最大线性无关组"><a href="#最大线性无关组" class="headerlink" title="最大线性无关组"></a>最大线性无关组</h3><ul>
+<li>该向量组本身线性无关</li>
+<li>任取一个矩阵中的其他向量, 与该向量组合并, 都会变成线性相关的向量组</li>
+</ul>
+<p>换成行阶梯型看主元列，其他为自由变量</p>
+<p>从而最大线性无关组向量数目$r=R(\alpha_1\cdots \alpha_n)$</p>
+<p>对于线性方程组</p>
+<p>无解，则$b$不在$A$列空间内</p>
+<script type="math/tex; mode=display">
+R(A)<R(A,b)</script><p>小于空间维数则有无穷多解</p>
+<script type="math/tex; mode=display">
+R(A)=R(A,b)<n</script><p>向量组等价</p>
+<script type="math/tex; mode=display">
+R(A)=R(B)=R(A,B)</script><h2 id="解的结构"><a href="#解的结构" class="headerlink" title="解的结构"></a>解的结构</h2><p>齐次线性方程组解满足线性性质</p>
+<p>则非齐次通解为</p>
+<script type="math/tex; mode=display">
+x=k_1\xi_1+\cdots+k_n\xi_n+x_0</script><p>一个特解加通解，而通解由基础解系来表达，基础解系的维数等于零空间的维数</p>
+<script type="math/tex; mode=display">
+R(\xi_1,\cdots,\xi_n)=n-r</script><p>齐次线性方程组同解则零空间等价，$A\sim B$</p>
+<h2 id="向量空间"><a href="#向量空间" class="headerlink" title="向量空间"></a>向量空间</h2><h3 id="线性变换"><a href="#线性变换" class="headerlink" title="线性变换"></a>线性变换</h3><p>满足线性性质</p>
+<script type="math/tex; mode=display">
+T(\lambda_1 x_1+\lambda_2 x_2)=\lambda_1 T(x_1)+\lambda_2 T(x_2)</script><h3 id="转换坐标"><a href="#转换坐标" class="headerlink" title="转换坐标"></a>转换坐标</h3><script type="math/tex; mode=display">
+B=(b_1,\cdots,b_n),A=(a_1,\cdots,a_n)\\
+B=AP\\
+Py=x</script><p>其中$y$为向量在$B$下的坐标</p>
+<p>同理线性变化也可以用矩阵$A$表示（在$\alpha$基下）</p>
+<p>对于不同基</p>
+<script type="math/tex; mode=display">
+T(\alpha_1,\alpha_2,\cdots,\alpha_n)=(\alpha_1,\alpha_2,\cdots,\alpha_n)A</script><p>则坐标</p>
+<script type="math/tex; mode=display">
+T(\sum_{i=1}^nx_i\alpha_i)=T(\alpha_1,\alpha_2,\cdots,\alpha_n)\left(\begin{array}l x_1\\x_2\\\vdots\\x_n\\\end{array}\right)</script><p>矩阵$A$也可以直接把$T(\alpha_i)$用$(\alpha_1,\alpha_2,\cdots,\alpha_n)$表示写成列向量即可</p>
+<p>若同一个线性变换在不同基下分别表示为$A,B$，变换矩阵为$P$，则有</p>
+<script type="math/tex; mode=display">
+B=P^{-1}AP</script>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2023/11/15/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E4%BA%BA/%E6%95%B0%E5%AD%A6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shiwei Pan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mount.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2023/11/15/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E4%BA%BA/%E6%95%B0%E5%AD%A6/" itemprop="url">大二/机器人/数学</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-11-15T09:49:28+08:00">
+                2023-11-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="四元数"><a href="#四元数" class="headerlink" title="四元数"></a>四元数</h1><script type="math/tex; mode=display">
+\left.\mathbf{q}=\left[\begin{array}{cccc}q_0&&q_1&&q_2&&q_3\end{array}\right.\right]^T</script><p>定义$\psi$, $\theta$, $\phi$分别为绕Z轴、Y轴、X轴的旋转角度</p>
+<p>称为欧拉角</p>
+<script type="math/tex; mode=display">
+\left.\left[\begin{array}{c}\phi\\\theta\\\psi\end{array}\right.\right]=\left[\begin{array}{c}\arctan\frac{2(q_0q_1+q_2q_3)}{1-2(q_1^2+q_2^2)}\\\arcsin(2(q_0q_2-q_3q_1))\\\arctan\frac{2(q_0q_3+q_1q_2)}{1-2(q_2^2+q_3^2)}\end{array}\right]</script><p>欧拉角转四元数</p>
+<script type="math/tex; mode=display">
+\begin{cases}z=\sin\left(\frac\theta2\right)\\
+w=\cos\left(\frac\theta2\right)\end{cases}</script><script type="math/tex; mode=display">
+\mathbf{q}=\begin{bmatrix}\cos\frac \theta2\\\mathbf{u}\mathrm{sin}\frac \theta2\end{bmatrix},\mathbf{u}=\begin{bmatrix}
+ 1\\0
+ \\0
+
+\end{bmatrix}</script><p>四元数旋转公式</p>
+<script type="math/tex; mode=display">
+\mathbf{v}^{\prime}=\mathbf{qvq}^{*}</script><p>复合性质</p>
+<script type="math/tex; mode=display">
+\begin{array}{b}\mathbf{v}^{\prime\prime}&=\mathbf{q}_{2}\left(\mathbf{q}_{1}\mathbf{v}\mathbf{q}_{1}^{*}\right)\mathbf{q}_{2}{}^{*}\\
+&=\left(\mathbf{q}_2\mathbf{q}_1\right)\mathbf{v}\left(\mathbf{q}_2\mathbf{q}_1\right)^*\end{array}</script><script type="math/tex; mode=display">
+\mathbf{q}_{\mathrm{d}}=\Delta\mathbf{q}\cdot\mathbf{q}_{\mathrm{s}}\\
+\mathbf{q}_\mathrm{d}\cdot\left(\mathbf{q}_\mathrm{s}\right)^{-1}=\Delta\mathbf{q}\cdot\mathbf{q}_\mathrm{s}\cdot\left(\mathbf{q}_\mathrm{s}\right)^{-1}\\\Delta\mathbf{q}=\mathbf{q}_\mathrm{d}\cdot\left(\mathbf{q}_\mathrm{s}\right)^{-1}</script><h1 id="DH"><a href="#DH" class="headerlink" title="DH"></a>DH</h1><script type="math/tex; mode=display">
+_{i-1}\mathbf{T}_i=\mathbf{D}_{z_i-1},_{d_i}\mathbf{R}_{z_i-1},_{\theta_i}\mathbf{D}_{x_i-1},_{a_i}\mathbf{R}_{x_i-1},_{\alpha_i}=\begin{pmatrix}\cos\theta_i&-\sin\theta_i\cos\alpha_i&\sin\theta_i\sin\alpha_i&a_i\cos\theta_i\\\sin\theta_i&\cos\theta_i\cos\alpha_i&-\cos\theta_i\sin\alpha_i&a_i\sin\theta_i\\0&\sin\alpha_i&\cos a_i&d_i\\0&0&0&1\end{pmatrix}</script><script type="math/tex; mode=display">
+\begin{array}{cccc}
+\text{Joint} & \theta & d & a & \alpha \\
+\hline
+1 & 0 & 0.156 & 0 & \frac{\pi}{2} \\
+2 & \frac{\pi}{2} & 0 & 0.0815 & 0 \\
+3 & 0 & 0 & 0.127 & 0 \\
+4 & 0 & 0 & 0.1075 & 0 \\
+5 & 0 & 0 & 0.074 & -\frac{\pi}{2} \\
+6 & 0 & 0.05 & 0 & 0 \\
+\end{array}</script><h2 id="5dof"><a href="#5dof" class="headerlink" title="5dof"></a>5dof</h2><script type="math/tex; mode=display">
+\begin{array}{cccc}
+\text{Joint} & \theta & d & a & \alpha \\
+\hline
+0 & \theta_0 & 0 & 0 & \frac{\pi}{2} \\
+1 & \theta_1 & 0 & L_1 & 0 \\
+2 & \theta_2 & 0 & L_2 & 0 \\
+3 & \theta_3 & 0 & L_3 & 0 \\
+4 & \theta_4 & 0 & 0 & \frac{\pi}{2} \\
+\end{array}</script><h1 id="3dof机械臂"><a href="#3dof机械臂" class="headerlink" title="3dof机械臂"></a>3dof机械臂</h1><p><img src="/2023/11/15/%E5%A4%A7%E4%BA%8C/%E6%9C%BA%E5%99%A8%E4%BA%BA/%E6%95%B0%E5%AD%A6/image-20231118102420171.png" alt="image-20231118102420171" style="zoom:67%;"></p>
+<script type="math/tex; mode=display">
+\begin{align*}
+B_x &= x - L_3\cos(\gamma) \\
+B_y &= y - L_3\sin(\gamma) \\
+\beta &= \cos^{-1}\left(\frac{B_x^2 + B_y^2 + L_1^2 - L_2^2}{2L_1\sqrt{B_x^2 + B_y^2}}\right) \ \\
+\alpha &= \operatorname{atan2}(B_y, B_x)\\
+\theta_1&=\alpha\pm\beta\\
+\gamma&= \theta_1 + \theta_2 +\theta_3
+\end{align*}</script><h2 id="雅可比矩阵"><a href="#雅可比矩阵" class="headerlink" title="雅可比矩阵"></a>雅可比矩阵</h2><script type="math/tex; mode=display">
+J_i=\begin{bmatrix}\hat z\times \vec d[:2]\\1\end{bmatrix}\\
+\begin{bmatrix}v_x\\v_y\\ \omega\end{bmatrix}=J\begin{bmatrix}\dot q_1\\\dot q_2\\ \dot q_3\end{bmatrix}</script><script type="math/tex; mode=display">
+\begin{bmatrix}\text d  q_1\\\text d q_2\\ \text d q_3\end{bmatrix}=J^{-1}\begin{bmatrix}\text dv_x\\\text dv_y\\ \text d\omega\end{bmatrix}</script>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2023/06/14/%E5%A4%A7%E4%B8%80/%E7%89%A9%E7%90%86/%E8%BF%91%E4%BB%A3%E7%89%A9%E7%90%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1812,385 +2182,6 @@ d=\frac{M_{O}\sin\theta}{F_R}</script><p><img src="/2023/03/20/%E5%A4%A7%E4%B8%8
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2023/02/21/%E5%A4%A7%E4%B8%80/%E7%90%86%E8%AE%BA%E5%8A%9B%E5%AD%A6/%E5%9F%BA%E7%A1%80/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2023/02/21/%E5%A4%A7%E4%B8%80/%E7%90%86%E8%AE%BA%E5%8A%9B%E5%AD%A6/%E5%9F%BA%E7%A1%80/" itemprop="url">大一/理论力学/基础</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-02-21T15:53:24+08:00">
-                2023-02-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="公理"><a href="#公理" class="headerlink" title="公理"></a>公理</h1><h2 id="力的平行四边形法则"><a href="#力的平行四边形法则" class="headerlink" title="力的平行四边形法则"></a>力的平行四边形法则</h2><p><img src="/2023/02/21/%E5%A4%A7%E4%B8%80/%E7%90%86%E8%AE%BA%E5%8A%9B%E5%AD%A6/%E5%9F%BA%E7%A1%80/image-20230221160435565.png" alt="image-20230221160435565"></p>
-<script type="math/tex; mode=display">
-\vec{F_R}=\vec{F_1}+\vec{F_2}</script><h2 id="二力平衡"><a href="#二力平衡" class="headerlink" title="二力平衡"></a>二力平衡</h2><p>作用在刚体上的两个力，使刚体保持平衡的条件为两个力大小相等方向相反作用在同一条直线上</p>
-<script type="math/tex; mode=display">
-\vec{F_1}=-\vec{F_2}</script><h2 id="加减平衡力系原理"><a href="#加减平衡力系原理" class="headerlink" title="加减平衡力系原理"></a>加减平衡力系原理</h2><p>在已知力系上加上或减去任意的平衡力系不改变作用效果</p>
-<h3 id="力的可传性"><a href="#力的可传性" class="headerlink" title="力的可传性"></a>力的可传性</h3><p><img src="/2023/02/21/%E5%A4%A7%E4%B8%80/%E7%90%86%E8%AE%BA%E5%8A%9B%E5%AD%A6/%E5%9F%BA%E7%A1%80/image-20230221161015745.png" alt="image-20230221161015745"></p>
-<p>作用于某刚体上的力可以沿作用线移动到刚体内部任意一点，力为滑移矢</p>
-<h3 id="三力平衡汇交定理"><a href="#三力平衡汇交定理" class="headerlink" title="三力平衡汇交定理"></a><strong>三力平衡汇交定理</strong></h3><p>由可传性可以推广到一般情况，若三力平衡则必共点且共面</p>
-<h2 id="牛三"><a href="#牛三" class="headerlink" title="牛三"></a>牛三</h2><p>作用力和反作用力等值反向共线作用在相互作用的两个物体上</p>
-<h2 id="刚化原理"><a href="#刚化原理" class="headerlink" title="刚化原理"></a>刚化原理</h2><p>变形体在力作用下平衡后如果把变形体变回刚体则状态不会改变</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2023/02/15/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%A4%9A%E5%85%83%E5%BE%AE%E5%88%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shiwei Pan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/mount.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="BLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2023/02/15/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%A4%9A%E5%85%83%E5%BE%AE%E5%88%86/" itemprop="url">大一/高数/多元微分</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-02-15T19:41:27+08:00">
-                2023-02-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p>多元函数</p>
-<script type="math/tex; mode=display">
-w=f(x_1,x_2,\dots,x_n)</script><p>二元函数</p>
-<script type="math/tex; mode=display">
-f(x,y)</script><h2 id="定义域"><a href="#定义域" class="headerlink" title="定义域"></a>定义域</h2><script type="math/tex; mode=display">
-w=\sqrt{y-x^2},y\ge x^2</script><p>去心邻域</p>
-<script type="math/tex; mode=display">
-\mathring{U}(P_0,\delta)=\{P|0<|PP_0|<\delta\}</script><p>若存在某邻域使得$U(P)\subset R$则为内点，反之为外点</p>
-<p><img src="/2023/02/15/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%A4%9A%E5%85%83%E5%BE%AE%E5%88%86/image-20230215201804307.png" alt="image-20230215201804307" style="zoom:25%;"></p>
-<p>若有一部分属于，一部分不属于则为边界点</p>
-<p>若所有的点都为内点则为开集，若边界$\partial R\subset R$则为闭集</p>
-<p><img src="/2023/02/15/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%A4%9A%E5%85%83%E5%BE%AE%E5%88%86/image-20230215202754874.png" alt="image-20230215202754874"></p>
-<p>若存在$r&gt;0$使得</p>
-<script type="math/tex; mode=display">
-R\subset U(O,r)</script><p>则为有界集</p>
-<p>$y\ge x^2$为封闭无界集</p>
-<p>满足$f(x,y)=c$的线为等值线(Level Curve)</p>
-<p><img src="/2023/02/15/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%A4%9A%E5%85%83%E5%BE%AE%E5%88%86/image-20230215212318586.png" alt="image-20230215212318586" style="zoom:50%;"></p>
-<p>满足$f(x,y,z)=c$的面为等值面(Level Surface)</p>
-<h1 id="微分"><a href="#微分" class="headerlink" title="微分"></a>微分</h1><h2 id="偏导数"><a href="#偏导数" class="headerlink" title="偏导数"></a>偏导数</h2><p>固定一个然后求导</p>
-<blockquote>
-<p>To distinguish partial derivatives from ordinary derivatives we use the symbol $\partial$ rather than the $\text d$ previously used</p>
-</blockquote>
-<p><img src="/2023/02/15/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%A4%9A%E5%85%83%E5%BE%AE%E5%88%86/image-20230215215605914.png" alt="image-20230215215605914"></p>
-<script type="math/tex; mode=display">
-\frac{\partial f}{\partial x}=\lim _{\Delta x \rightarrow 0} \frac{f\left(x_{0}+\Delta x, y_{0}\right)-f\left(x_{0}, y_{0}\right)}{\Delta x}</script><p>高阶</p>
-<script type="math/tex; mode=display">
-\frac{\partial^{2} f}{\partial x^{2}}=\frac{\partial}{\partial x}\left(\frac{\partial f}{\partial x}\right), \quad \frac{\partial^{2} f}{\partial x \partial y}=\frac{\partial}{\partial x}\left(\frac{\partial f}{\partial y}\right)</script><p>杨氏定理(Young’s theorem)，二阶偏微分连续，二阶混合偏导数相等</p>
-<script type="math/tex; mode=display">
-\frac{\partial^{2} f}{\partial x \partial y}=\frac{\partial^{2} f}{\partial y \partial x}</script><p>可偏(有偏导数)不代表有全微分形式</p>
-<h2 id="全微分"><a href="#全微分" class="headerlink" title="全微分"></a>全微分</h2><script type="math/tex; mode=display">
-\text{d}z=\frac{\partial f}{\partial x}\text{d}x+\frac{\partial f}{\partial y}\text{d}y</script><p>从而有标准线性近似</p>
-<script type="math/tex; mode=display">
-f(x,y)\approx f(x_0,y_0)+f_x(x_0,y_0)(x-x_0)+f_y(x_0,y_0)(y-y_0)=L(x,y)</script><p>对于误差$E(x,y)=f(x,y)-L(x,y)$</p>
-<script type="math/tex; mode=display">
-|E(x,y)|\le\frac12M(|x-x_0|+|y-y_0|)^2\\
-M=\max\{|f_{xx}|,|f_{yy}|,|f_{xy}|\}</script><h3 id="链式法则"><a href="#链式法则" class="headerlink" title="链式法则"></a>链式法则</h3><p>复合函数</p>
-<script type="math/tex; mode=display">
-x\overset{f_0 }{\rightarrow}x^1\to\cdots\overset{f_k }{\rightarrow}y\\
-f=f_k^{\circ}f_{k-1}^{\circ}\dots^{\circ}f_0</script><p>利用全微分可以得到链式法则</p>
-<script type="math/tex; mode=display">
-w=f(x(t),y(t))\\
-\frac{\partial w}{\partial t}=\frac{\partial f}{\partial x}\frac{\partial f}{\partial t}+\frac{\partial f}{\partial y}\frac{\partial y}{\partial t}</script><p>更一般的</p>
-<p><img src="/2023/02/15/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%A4%9A%E5%85%83%E5%BE%AE%E5%88%86/image-20230216140235918.png" alt="image-20230216140235918"></p>
-<script type="math/tex; mode=display">
-\frac{\partial w}{\partial r}=\frac{\partial w}{\partial x} \frac{\partial x}{\partial r}+\frac{\partial w}{\partial y} \frac{\partial y}{\partial r}+\frac{\partial w}{\partial z} \frac{\partial z}{\partial r} \\
-\frac{\partial w}{\partial s}=\frac{\partial w}{\partial x} \frac{\partial x}{\partial s}+\frac{\partial w}{\partial y} \frac{\partial y}{\partial s}+\frac{\partial w}{\partial z} \frac{\partial z}{\partial s}</script><h2 id="隐函数"><a href="#隐函数" class="headerlink" title="隐函数"></a>隐函数</h2><p>首先，有方程</p>
-<script type="math/tex; mode=display">
-F(x,y,z)=0</script><p>从而若$F_z\ne 0$可以确定一个函数$z(x,y)$</p>
-<p>由方程推导法(两边直接对$x,y$求导)</p>
-<p>或用公式</p>
-<script type="math/tex; mode=display">
-\frac{\partial z}{\partial x}=-\frac{F_x}{F_z} \\
-\frac{\partial z}{\partial y}=-\frac{F_y}{F_z}</script><p>利用全微分可以将两个导数同时求出</p>
-<h3 id="方程组"><a href="#方程组" class="headerlink" title="方程组"></a>方程组</h3><script type="math/tex; mode=display">
-\begin{cases}F(x,y,u,v)=0\\
-G(x,y,u,v)=0\end{cases}</script><p>如果</p>
-<script type="math/tex; mode=display">
-J=\frac{\partial(F,G)}{\partial(u,v)}=\begin{vmatrix}\frac{\partial F}{\partial u}&\frac{\partial F}{\partial v}\\\frac{\partial G}{\partial u}&\frac{\partial G}{\partial v}\end{vmatrix} \ne0</script><p> 则可以确定$u(x,y)$和$v(x,y)$，一个方程确定一个因变量</p>
-<p>将要求的因变量用自变量替换得到</p>
-<script type="math/tex; mode=display">
-\frac{\partial u}{\partial x}=-\frac1J\frac{\partial(F,G)}{\partial(x,v)}=-\frac1J\begin{vmatrix}\frac{\partial F}{\partial x}&\frac{\partial F}{\partial v}\\\frac{\partial G}{\partial x}&\frac{\partial G}{\partial v}\end{vmatrix}</script><p>同理也有方程推导法和微分法</p>
-<p>根据克拉姆法则，对于一个$n$元线性方程组，如果它的系数矩阵的行列式不等于零，则可以使用如下公式求解：</p>
-<script type="math/tex; mode=display">
-x_i = \Delta_i / \Delta</script><p>其中，$x_i$是第$i$个未知数的值，$\Delta_i$是将系数矩阵中第$i$列替换为常数矩阵后的行列式值，$\Delta$是系数矩阵的行列式值。</p>
-<h2 id="方向导数"><a href="#方向导数" class="headerlink" title="方向导数"></a>方向导数</h2><p>方向导数为函数在某一方向(正反都可以)上的变化率</p>
-<p><img src="/2023/02/15/%E5%A4%A7%E4%B8%80/%E9%AB%98%E6%95%B0/%E5%A4%9A%E5%85%83%E5%BE%AE%E5%88%86/image-20230216180930645.png" alt="image-20230216180930645" style="zoom:50%;"></p>
-<script type="math/tex; mode=display">
-\frac{\partial f}{\partial l}=\lim _{s \rightarrow 0} \frac{f\left(x_{0}+sl_x, y_{0}+sl_y\right)-f\left(x_{0}, y_{0}\right)}{s}</script><p>定义$l$的方向余弦为</p>
-<script type="math/tex; mode=display">
-\cos\alpha=\frac{\Delta x}{\Delta l},\cos\alpha=\frac{\Delta y}{\Delta l}</script><p>由全微分公式将导数沿方向分解，得到</p>
-<script type="math/tex; mode=display">
-\left. \frac{\partial f}{\partial l}\right|_{x_0,y_0}=\frac{\partial f}{\partial x}\cos\alpha+\frac{\partial f}{\partial y}\cos\beta\\
-\text d f=(\nabla f\cdot \vec l)\text d s</script><h3 id="梯度"><a href="#梯度" class="headerlink" title="梯度"></a>梯度</h3><p>定义梯度，Nabla算子</p>
-<script type="math/tex; mode=display">
-\text{grad}f=\nabla  f(x,y)=\left(\frac{\partial f}{\partial x},\frac{\partial f}{\partial y}\right)</script><p>利用辅助角公式得出梯度方向的方向导数最大，或</p>
-<script type="math/tex; mode=display">
-\left. \frac{\partial f}{\partial l}\right|_{x_0,y_0}=\nabla  f(x,y)\cdot(\cos\alpha,\cos\beta)</script><p>所以梯度指向上升最快的方向</p>
-<p>可以看出梯度向量垂直于等高线的切线</p>
-<script type="math/tex; mode=display">
-\nabla (kf)=k\nabla f\\
-\nabla(f\pm g)=\nabla f\pm \nabla g\\
-\nabla (fg)=\nabla fg+f\nabla g\\
-\nabla\left(\frac fg\right)=\frac{\nabla fg-f\nabla g}{g^2}</script><h3 id="切线和法线"><a href="#切线和法线" class="headerlink" title="切线和法线"></a>切线和法线</h3><p>引入等值面$f(x,y)=c$，对于空间曲线引入参数$t$后得到</p>
-<script type="math/tex; mode=display">
-\left(\frac{\partial f}{\partial x},\frac{\partial f}{\partial y}\right)\cdot\left(\frac{\partial x}{\partial t},\frac{\partial y}{\partial t}\right)=2 \frac{\partial f}{\partial t}=0</script><p>梯度向量垂直于等值面，梯度的模为沿梯度方向的方向导数</p>
-<p>对于切线</p>
-<script type="math/tex; mode=display">
-\frac{x-x_0}{\varphi'(t_0)}=\frac{y-y_0}{\phi'(t_0)}=\frac{z-z_0}{\omega'(t_0)}</script><p>法平面为与切线垂直的面</p>
-<script type="math/tex; mode=display">
-{\varphi'(t_0)}(x-x_0)={\phi'(t_0)}(y-y_0)={\omega'(t_0)}(z-z_0)</script><p>对于由方程确定的曲线</p>
-<script type="math/tex; mode=display">
-\begin{cases}F(x,y,z)=0\\
-G(x,y,z)=0\end{cases}\\
-J=\frac{\partial(F,G)}{\partial(y,z)}</script><p>则以$x$为参数可以写成</p>
-<script type="math/tex; mode=display">
-\begin{cases}x=x\\
-y=y(x)\\z=z(x)\end{cases}</script><p>解出</p>
-<script type="math/tex; mode=display">
-T=(1,y_x,z_x)</script><p>整理得轮换对称式</p>
-<script type="math/tex; mode=display">
-T=\left(\begin{vmatrix}F_y&F_z\\ G_y& G_z\end{vmatrix}_M,\begin{vmatrix}F_z&F_x\\ G_z& G_x\end{vmatrix}_M,\begin{vmatrix}F_x&F_y\\ G_x& G_y\end{vmatrix}_M\right)</script><p>推广到三维空间，切向量</p>
-<script type="math/tex; mode=display">
-T=(F_x,F_y,F_z)=(-z_x,-z_y,1)</script><p>切平面</p>
-<script type="math/tex; mode=display">
-f_{x}\left(P_{0}\right)\left(x-x_{0}\right)+f_{y}\left(P_{0}\right)\left(y-y_{0}\right)+f_{z}\left(P_{0}\right)\left(z-z_{0}\right)=0</script><p>法线</p>
-<script type="math/tex; mode=display">
-x=x_{0}+f_{x}\left(P_{0}\right) t, \quad y=y_{0}+f_{y}\left(P_{0}\right) t, \quad z=z_{0}+f_{z}\left(P_{0}\right) t</script><p>可以方便地使用全微分公式得到</p>
-<h1 id="极值和最值"><a href="#极值和最值" class="headerlink" title="极值和最值"></a>极值和最值</h1><p>$n$ 元函数 $f(x_1,x_2,\ldots,x_n)$，若存在某个自变量取值的去心邻域，在该邻域内函数值不小于（或不大于）该自变量取值处的函数值，则称该自变量取值处为函数的极大值点（或极小值点）</p>
-<h2 id="必要条件"><a href="#必要条件" class="headerlink" title="必要条件"></a>必要条件</h2><p>一阶偏导数都为$0$</p>
-<script type="math/tex; mode=display">
-f_x(x,y)=0,f_y(x,y)=0</script><h2 id="充分条件"><a href="#充分条件" class="headerlink" title="充分条件"></a>充分条件</h2><p>引入Hessian 矩阵</p>
-<script type="math/tex; mode=display">
-H=\begin{bmatrix}
-\frac{\partial^2 f}{\partial x_1^2} & \frac{\partial^2 f}{\partial x_1 \partial x_2} & \cdots & \frac{\partial^2 f}{\partial x_1 \partial x_n}\\
-\frac{\partial^2 f}{\partial x_2 \partial x_1} & \frac{\partial^2 f}{\partial x_2^2} & \cdots & \frac{\partial^2 f}{\partial x_2 \partial x_n}\\
-\vdots & \vdots & \ddots & \vdots\\
-\frac{\partial^2 f}{\partial x_n \partial x_1} & \frac{\partial^2 f}{\partial x_n \partial x_2} & \cdots & \frac{\partial^2 f}{\partial x_n^2}
-\end{bmatrix}</script><p>对于二元</p>
-<script type="math/tex; mode=display">
-f_{xx}=A,f_{xy}=B,f_{yy}=C</script><p>若$AC-B^2&gt;0$则有极值，$A/C&gt;0$则为极小值</p>
-<p>若$AC-B^2&lt;0$则无极值，$AC-B^2=0$则可能有</p>
-<h2 id="拉格朗日函数"><a href="#拉格朗日函数" class="headerlink" title="拉格朗日函数"></a>拉格朗日函数</h2><p>对于约束条件$g(x_1,x_2,\dots,x_n)=0$，可以构造拉格朗日函数 $L(x_1,x_2,\dots,x_n)=f(x_1,x_2,\dots,x_n)+\lambda g(x_1,x_2,\dots,x_n)$</p>
-<script type="math/tex; mode=display">
-\begin{cases} \frac{\partial L}{\partial x_1} = 0\\
-\frac{\partial L}{\partial x_2} = 0\\
-\cdots\\
-\frac{\partial L}{\partial x_n} = 0\\
-\frac{\partial L}{\partial \lambda} = 0\\
-
-\end{cases}</script><p>需要注意的是，拉格朗日乘数法并不适用于所有类型的优化问题，有些问题可能存在多个局部极小值或不可导等情况，需要根据具体问题进行分析</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2241,7 +2232,7 @@ f_{xx}=A,f_{xy}=B,f_{yy}=C</script><p>若$AC-B^2&gt;0$则有极值，$A/C&gt;0$�
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">98</span>
+                <span class="site-state-item-count">100</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

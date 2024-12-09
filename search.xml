@@ -6399,4 +6399,39 @@ G(s)=\frac1{Ts+1}</script><p>二阶振荡</p>
 <p>还有放大元件，校正元件（反馈校正和串联校正）</p>
 ]]></content>
   </entry>
+  <entry>
+    <title>大三/传热学</title>
+    <url>/2024/12/09/%E5%A4%A7%E4%B8%89/%E4%BC%A0%E7%83%AD%E5%AD%A6/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>大三/传热</title>
+    <url>/2024/12/09/%E5%A4%A7%E4%B8%89/%E4%BC%A0%E7%83%AD/</url>
+    <content><![CDATA[<h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><h2 id="傅里叶定律"><a href="#傅里叶定律" class="headerlink" title="傅里叶定律"></a>傅里叶定律</h2><script type="math/tex; mode=display">
+q=-\lambda\text{grad} t=-\lambda\frac{\partial t}
+{\partial n}n</script><p>导热热流密度的大小与温度梯度的绝对值成正比其方向与温度梯度的方向相反</p>
+<p>从而可以导出热导率</p>
+<script type="math/tex; mode=display">
+\lambda=\frac{q}{|\text{grad}t |}</script><h2 id="导热微分方程"><a href="#导热微分方程" class="headerlink" title="导热微分方程"></a>导热微分方程</h2><p>假设热导率为常数</p>
+<script type="math/tex; mode=display">
+{\partial t\over \partial \tau} =
+\frac\lambda{\rho c}\left({\partial^2 u\over \partial x^2 } +
+{\partial^2 u\over \partial y^2 } +
+{\partial^2 u\over \partial z^2 }\right)+\frac{\dot{\Phi}}{\rho c}</script><p>$\Phi$为内热源强度，定义热扩散率，也称导温系数</p>
+<script type="math/tex; mode=display">
+a=\frac\lambda{\rho c}</script><h2 id="边界条件"><a href="#边界条件" class="headerlink" title="边界条件"></a>边界条件</h2><h3 id="第一类"><a href="#第一类" class="headerlink" title="第一类"></a>第一类</h3><p>边界温度为常数，为恒壁温边界条件</p>
+<script type="math/tex; mode=display">
+t_w=\text{Const}</script><h3 id="第二类"><a href="#第二类" class="headerlink" title="第二类"></a>第二类</h3><p>给定法线方向的温度变化率，为恒热流边界条件</p>
+<script type="math/tex; mode=display">
+\frac{\partial t}
+{\partial n}=-\frac{q_w}{\lambda}</script><p> 若$q_w=0$则为绝热条件</p>
+<h3 id="第三类"><a href="#第三类" class="headerlink" title="第三类"></a>第三类</h3><p>给出传热系数$h$和温度$t_f$，由牛顿冷却定律和傅里叶定律，可得对流边界条件</p>
+<script type="math/tex; mode=display">
+-\lambda\frac{\partial t}
+{\partial n}=h(t_w-t_f)</script><h1 id="热电比拟"><a href="#热电比拟" class="headerlink" title="热电比拟"></a>热电比拟</h1><h2 id="热阻"><a href="#热阻" class="headerlink" title="热阻"></a>热阻</h2><p>平壁一维导热热阻</p>
+<script type="math/tex; mode=display">
+R_\lambda=\frac{\delta}{A\lambda}</script><p>对流换热热阻</p>
+<script type="math/tex; mode=display">
+R_{\text{rad}}=\frac1{hA}</script>]]></content>
+  </entry>
 </search>
