@@ -56,7 +56,7 @@ I am especially interested in building deployable intelligent systems that conne
 
 # Publications
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Robotica 2025</div><img src='images/publication-placeholder.png' alt="Robotica publication" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">Robotica 2025</div><img src='images/cover.jpg' alt="Robotica publication" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 **Efficient Trajectory Planning for a 4-DOF Robotic Arm with Curve Interpolation and Gaussian Process Inference for Pick-and-Place Manipulation Tasks**
@@ -75,21 +75,21 @@ I am especially interested in building deployable intelligent systems that conne
 
 # Industry Experience
 
-**Digital Product Manager, Hesai Technology**  
+**Digital Product Manager, [Hesai Technology](https://www.hesaitech.com/)**  
 *Shanghai, China, Jan 2026 - Apr 2026*
 
 - Digitalized the MES equipment inspection lifecycle, including configurable inspection templates, automated task creation and assignment, formula-driven validation against thresholds, and structured review-and-approval flows.
 - Modeled parallel electrical testing routes for the Sharpa dexterous hand in MES, reducing monthly idle waiting time by 15 hours and improving line throughput.
 - Developed an AI-driven CRM automation module for natural-language order, shipment, and delivery-status queries.
 
-**Digital Transformation Intern, Maersk**  
+**Digital Transformation Intern, [Maersk](https://www.maersk.com/)**  
 *Shanghai, China, Jun 2025 - Dec 2025*
 
 - Developed an AI-driven procurement analysis pipeline using LLM-based workflows to extract structured data from supplier quotations and integrated ChromaDB for semantic retrieval.
 - Applied Total Cost of Ownership modeling for supplier evaluation, contributing to a 15% improvement in procurement decision efficiency.
 - Built automated feedback and analytics workflows in Power Automate and Power BI to support data-driven supply-chain monitoring.
 
-**Data Project Manager, Sapien AI**  
+**Data Project Manager, [Sapien AI](https://www.sapien.io/)**  
 *Beijing, China, Dec 2023 - Sep 2024*
 
 - Managed large-scale AI data projects, including MathGPT and autonomous-driving point-cloud annotation.
